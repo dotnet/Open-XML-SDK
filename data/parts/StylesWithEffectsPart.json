@@ -1,0 +1,12 @@
+{
+  "Name": "StylesWithEffectsPart",
+  "Base": "StylesPart",
+  "ContentType": "application/vnd.ms-word.stylesWithEffects\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/stylesWithEffects",
+  "Target": "stylesWithEffects",
+  "RootElement": "styles",
+  "Paths": {
+    "General": "."
+  },
+  "Version": "Office2010"
+}

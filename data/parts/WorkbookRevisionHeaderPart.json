@@ -1,0 +1,20 @@
+{
+  "Root": "x:CT_RevisionHeaders",
+  "Name": "WorkbookRevisionHeaderPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionHeaders\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionHeaders",
+  "Target": "revisionHeaders",
+  "RootElement": "headers",
+  "Paths": {
+    "General": "revisions"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "WorkbookRevisionLogParts",
+      "Name": "WorkbookRevisionLogPart",
+      "HasFixedContent": true
+    }
+  ]
+}

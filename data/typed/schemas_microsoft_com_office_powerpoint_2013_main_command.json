@@ -1,0 +1,94 @@
+[
+  {
+    "Name": "pc:CT_AnimationEffectMonikerList/",
+    "ClassName": "OpenXmlAnimationEffectMonikerListElement"
+  },
+  {
+    "Name": "pc:CT_AnimationEffectMonikerList/pc:animEffectMkLst",
+    "ClassName": "AnimEffectMkLstAnimationEffectMonikerList"
+  },
+  {
+    "Name": "pc:CT_AnimationEffectMonikerList/pc:animEffectParentMkLst",
+    "ClassName": "AnimEffectParentMkLstAnimationEffectMonikerList"
+  },
+  {
+    "Name": "pc:CT_CommentAuthorMonikerList/pc:cmAuthorMkLst",
+    "ClassName": "CommentAuthorMonikerList"
+  },
+  {
+    "Name": "pc:CT_CommentMonikerList/pc:cmMkLst",
+    "ClassName": "CommentMonikerList"
+  },
+  {
+    "Name": "pc:CT_CustomShowMonikerList/pc:custShowMkLst",
+    "ClassName": "CustomShowMonikerList"
+  },
+  {
+    "Name": "pc:CT_CustomXmlPartMonikerList/pc:cXmlMkLst",
+    "ClassName": "CustomXmlPartMonikerList"
+  },
+  {
+    "Name": "pc:CT_DesignerTagMonikerList/pc:designTagMkLst",
+    "ClassName": "DesignerTagMonikerList"
+  },
+  {
+    "Name": "pc:CT_DocumentMonikerList/pc:docMkLst",
+    "ClassName": "DocumentMonikerList"
+  },
+  {
+    "Name": "pc:CT_HandoutMonikerList/pc:handoutMkLst",
+    "ClassName": "HandoutMonikerList"
+  },
+  {
+    "Name": "pc:CT_NotesMasterMonikerList/pc:notesMasterMkLst",
+    "ClassName": "NotesMasterMonikerList"
+  },
+  {
+    "Name": "pc:CT_NotesMonikerList/pc:notesMkLst",
+    "ClassName": "NotesMonikerList"
+  },
+  {
+    "Name": "pc:CT_NotesTextMonikerList/pc:notesTxtMkLst",
+    "ClassName": "NotesTextMonikerList"
+  },
+  {
+    "Name": "pc:CT_SectionLinkObjMonikerList/pc:sectionLnkObjMkLst",
+    "ClassName": "SectionLinkObjMonikerList"
+  },
+  {
+    "Name": "pc:CT_SectionMonikerList/pc:sectionMkLst",
+    "ClassName": "SectionMonikerList"
+  },
+  {
+    "Name": "pc:CT_SlideBaseMonikerList/pc:sldBaseMkLst",
+    "ClassName": "SlideBaseMonikerList"
+  },
+  {
+    "Name": "pc:CT_SlideLayoutMonikerList/pc:sldLayoutMkLst",
+    "ClassName": "SlideLayoutMonikerList"
+  },
+  {
+    "Name": "pc:CT_MainMasterMonikerList/pc:sldMasterMkLst",
+    "ClassName": "MainMasterMonikerList"
+  },
+  {
+    "Name": "pc:CT_SlideMonikerList/pc:sldMkLst",
+    "ClassName": "SlideMonikerList"
+  },
+  {
+    "Name": "pc:CT_SlidePosMonikerList/pc:sldPosMkLst",
+    "ClassName": "SlidePosMonikerList"
+  },
+  {
+    "Name": "pc:CT_StringTagMonikerList/pc:tagMkLst",
+    "ClassName": "StringTagMonikerList"
+  },
+  {
+    "Name": "pc:CT_OsfTaskPaneAppMonikerList/pc:tkAppMkLst",
+    "ClassName": "OsfTaskPaneAppMonikerList"
+  },
+  {
+    "Name": "pc:CT_SummaryZoomMonikerList/pc:tocMkLst",
+    "ClassName": "SummaryZoomMonikerList"
+  }
+]

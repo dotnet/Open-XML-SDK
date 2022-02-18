@@ -1,0 +1,20 @@
+{
+  "Root": "we:CT_OsfWebExtension",
+  "Name": "WebExtensionPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-office.webextension\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/webextension",
+  "Target": "webextension",
+  "RootElement": "webextension",
+  "Paths": {
+    "General": "../webextensions"
+  },
+  "Version": "Office2013",
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    }
+  ]
+}

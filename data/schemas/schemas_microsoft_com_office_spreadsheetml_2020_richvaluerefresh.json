@@ -1,0 +1,64 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh",
+  "Types": [
+    {
+      "Name": "xlrvr:CT_RichValueRefreshIntervals/xlrvr:refreshIntervals",
+      "ClassName": "RichValueRefreshIntervals",
+      "Summary": "Defines the RichValueRefreshIntervals Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "xlrvr:CT_RichValueRefreshInterval/xlrvr:refreshInterval"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrvr:CT_RichValueRefreshInterval/xlrvr:refreshInterval",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrvr:CT_RichValueRefreshInterval/xlrvr:refreshInterval",
+      "ClassName": "RichValueRefreshInterval",
+      "Summary": "Defines the RichValueRefreshInterval Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":resourceIdInt",
+          "Type": "Int32Value",
+          "Version": "Office2021",
+          "PropertyComments": "resourceIdInt"
+        },
+        {
+          "QName": ":resourceIdStr",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "resourceIdStr"
+        },
+        {
+          "QName": ":interval",
+          "Type": "Int32Value",
+          "Version": "Office2021",
+          "PropertyComments": "interval",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2017/03/chart",
+  "Types": [
+    {
+      "Name": "c16r3:CT_DataDisplayOptions16/c16r3:dataDisplayOptions16",
+      "ClassName": "DataDisplayOptions16",
+      "Summary": "Defines the DataDisplayOptions16 Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "c16r3:CT_BooleanFalse/c16r3:dispNaAsBlank",
+          "PropertyName": "BooleanFalse"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c16r3:CT_BooleanFalse/c16r3:dispNaAsBlank",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c16r3:CT_BooleanFalse/c16r3:dispNaAsBlank",
+      "ClassName": "BooleanFalse",
+      "Summary": "Defines the BooleanFalse Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": "c16r3:val",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2019"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

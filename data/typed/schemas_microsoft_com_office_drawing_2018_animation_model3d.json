@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "aanim:CT_AnimationProperties/a3danim:animPr",
+    "ClassName": "AnimationProperties"
+  },
+  {
+    "Name": "a3danim:CT_EmbeddedAnimation/a3danim:embedAnim",
+    "ClassName": "EmbeddedAnimation"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/a3danim:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "a3danim:CT_PosterFrame/a3danim:posterFrame",
+    "ClassName": "PosterFrame"
+  }
+]

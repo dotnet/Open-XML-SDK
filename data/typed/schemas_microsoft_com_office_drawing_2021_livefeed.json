@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "alf:CT_LiveFeedBackgroundProperties/alf:backgroundProps",
+    "ClassName": "LiveFeedBackgroundProperties"
+  },
+  {
+    "Name": "alf:CT_BackgroundBlurProperties/alf:Blur",
+    "ClassName": "BackgroundBlurProperties"
+  },
+  {
+    "Name": "alf:CT_BackgroundCustomProperties/alf:Custom",
+    "ClassName": "BackgroundCustomProperties"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/alf:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "alf:CT_LiveFeedProperties/alf:liveFeedProps",
+    "ClassName": "LiveFeedProperties"
+  },
+  {
+    "Name": "alf:CT_BackgroundNormalProperties/alf:Normal",
+    "ClassName": "BackgroundNormalProperties"
+  },
+  {
+    "Name": "alf:CT_BackgroundRemovedProperties/alf:Removed",
+    "ClassName": "BackgroundRemovedProperties"
+  }
+]

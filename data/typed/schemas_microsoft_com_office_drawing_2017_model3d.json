@@ -1,0 +1,146 @@
+[
+  {
+    "Name": "a:CT_Point3D/",
+    "ClassName": "OpenXmlPoint3DElement"
+  },
+  {
+    "Name": "am3d:CT_PositiveRatio/",
+    "ClassName": "OpenXmlPositiveRatioElement"
+  },
+  {
+    "Name": "am3d:CT_AmbientLight/am3d:ambientLight",
+    "ClassName": "AmbientLight"
+  },
+  {
+    "Name": "a1611:CT_PictureAttributionSourceURL/am3d:attrSrcUrl",
+    "ClassName": "PictureAttributionSourceURL"
+  },
+  {
+    "Name": "a:CT_Blip/am3d:blip",
+    "ClassName": "Blip"
+  },
+  {
+    "Name": "am3d:CT_Model3DCamera/am3d:camera",
+    "ClassName": "Model3DCamera"
+  },
+  {
+    "Name": "a:CT_Color/am3d:clr",
+    "ClassName": "ColorType"
+  },
+  {
+    "Name": "am3d:CT_DirectionalLight/am3d:dirLight",
+    "ClassName": "DirectionalLight"
+  },
+  {
+    "Name": "am3d:CT_Model3DExtension/am3d:ext",
+    "ClassName": "Model3DExtension"
+  },
+  {
+    "Name": "am3d:CT_Model3DExtensionList/am3d:extLst",
+    "ClassName": "Model3DExtensionList"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "am3d:CT_PositiveRatio/am3d:illuminance",
+    "ClassName": "IlluminancePositiveRatio"
+  },
+  {
+    "Name": "am3d:CT_PositiveRatio/am3d:intensity",
+    "ClassName": "IntensityPositiveRatio"
+  },
+  {
+    "Name": "a:CT_Point3D/am3d:lookAt",
+    "ClassName": "LookAtPoint3D"
+  },
+  {
+    "Name": "am3d:CT_PositiveRatio/am3d:meterPerModelUnit",
+    "ClassName": "MeterPerModelUnitPositiveRatio"
+  },
+  {
+    "Name": "am3d:CT_Model3D/am3d:model3d",
+    "ClassName": "Model3D"
+  },
+  {
+    "Name": "am3d:CT_ObjectViewport/am3d:objViewport",
+    "ClassName": "ObjectViewport"
+  },
+  {
+    "Name": "am3d:CT_OrthographicProjection/am3d:orthographic",
+    "ClassName": "OrthographicProjection"
+  },
+  {
+    "Name": "am3d:CT_PerspectiveProjection/am3d:perspective",
+    "ClassName": "PerspectiveProjection"
+  },
+  {
+    "Name": "a:CT_Point3D/am3d:pos",
+    "ClassName": "PosPoint3D"
+  },
+  {
+    "Name": "a:CT_Vector3D/am3d:postTrans",
+    "ClassName": "PostTransVector3D"
+  },
+  {
+    "Name": "a:CT_Vector3D/am3d:preTrans",
+    "ClassName": "PreTransVector3D"
+  },
+  {
+    "Name": "am3d:CT_PointLight/am3d:ptLight",
+    "ClassName": "PointLight"
+  },
+  {
+    "Name": "am3d:CT_Model3DRaster/am3d:raster",
+    "ClassName": "Model3DRaster"
+  },
+  {
+    "Name": "am3d:CT_Rotate3D/am3d:rot",
+    "ClassName": "Rotate3D"
+  },
+  {
+    "Name": "am3d:CT_Scale3D/am3d:scale",
+    "ClassName": "Scale3D"
+  },
+  {
+    "Name": "am3d:CT_SpotLight/am3d:spotLight",
+    "ClassName": "SpotLight"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/am3d:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "a:CT_Ratio/am3d:sx",
+    "ClassName": "SxRatio"
+  },
+  {
+    "Name": "a:CT_Ratio/am3d:sy",
+    "ClassName": "SyRatio"
+  },
+  {
+    "Name": "am3d:CT_PositiveRatio/am3d:sz",
+    "ClassName": "SzPositiveRatio"
+  },
+  {
+    "Name": "a:CT_Ratio/am3d:sz",
+    "ClassName": "SzRatio"
+  },
+  {
+    "Name": "am3d:CT_Model3DTransform/am3d:trans",
+    "ClassName": "Model3DTransform"
+  },
+  {
+    "Name": "am3d:CT_UnknownLight/am3d:unkLight",
+    "ClassName": "UnknownLight"
+  },
+  {
+    "Name": "a:CT_Vector3D/am3d:up",
+    "ClassName": "UpVector3D"
+  },
+  {
+    "Name": "am3d:CT_WindowViewport/am3d:winViewport",
+    "ClassName": "WindowViewport"
+  }
+]

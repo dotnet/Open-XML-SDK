@@ -1,0 +1,71 @@
+[
+  {
+    "Name": "dsp:CT_GroupShape/",
+    "ClassName": "GroupShapeType"
+  },
+  {
+    "Name": "a:CT_NonVisualGroupDrawingShapeProps/dsp:cNvGrpSpPr",
+    "ClassName": "NonVisualGroupDrawingShapeProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/dsp:cNvPr",
+    "ClassName": "NonVisualDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingShapeProps/dsp:cNvSpPr",
+    "ClassName": "NonVisualDrawingShapeProperties"
+  },
+  {
+    "Name": "dsp:CT_DataModelExtBlock/dsp:dataModelExt",
+    "ClassName": "DataModelExtensionBlock"
+  },
+  {
+    "Name": "dsp:CT_Drawing/dsp:drawing",
+    "ClassName": "Drawing",
+    "PartClassName": "DiagramPersistLayoutPart"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/dsp:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "dsp:CT_GroupShape/dsp:grpSp",
+    "ClassName": "GroupShape"
+  },
+  {
+    "Name": "a:CT_GroupShapeProperties/dsp:grpSpPr",
+    "ClassName": "GroupShapeProperties"
+  },
+  {
+    "Name": "dsp:CT_GroupShapeNonVisual/dsp:nvGrpSpPr",
+    "ClassName": "GroupShapeNonVisualProperties"
+  },
+  {
+    "Name": "dsp:CT_ShapeNonVisual/dsp:nvSpPr",
+    "ClassName": "ShapeNonVisualProperties"
+  },
+  {
+    "Name": "dsp:CT_Shape/dsp:sp",
+    "ClassName": "Shape"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/dsp:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "dsp:CT_GroupShape/dsp:spTree",
+    "ClassName": "ShapeTree"
+  },
+  {
+    "Name": "a:CT_ShapeStyle/dsp:style",
+    "ClassName": "ShapeStyle"
+  },
+  {
+    "Name": "a:CT_TextBody/dsp:txBody",
+    "ClassName": "TextBody"
+  },
+  {
+    "Name": "a:CT_Transform2D/dsp:txXfrm",
+    "ClassName": "Transform2D"
+  }
+]

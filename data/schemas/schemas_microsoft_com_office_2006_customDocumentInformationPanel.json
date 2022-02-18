@@ -1,0 +1,135 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/2006/customDocumentInformationPanel",
+  "Types": [
+    {
+      "Name": "cdip:CT_CustomPropertyEditors/cdip:customPropertyEditors",
+      "ClassName": "CustomPropertyEditors",
+      "Summary": "Defines the CustomPropertyEditors Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "xsd:boolean/cdip:showOnOpen",
+          "PropertyName": "ShowOnOpen"
+        },
+        {
+          "Name": "xsd:anyURI/cdip:defaultPropertyEditorNamespace",
+          "PropertyName": "DefaultPropertyEditorNamespace"
+        },
+        {
+          "Name": "cdip:CT_CustomPropertyEditor/cdip:customPropertyEditor"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xsd:boolean/cdip:showOnOpen"
+          },
+          {
+            "Name": "xsd:anyURI/cdip:defaultPropertyEditorNamespace"
+          },
+          {
+            "Name": "cdip:CT_CustomPropertyEditor/cdip:customPropertyEditor",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xsd:anyURI/cdip:XMLNamespace",
+      "ClassName": "PropertyEditorNamespace",
+      "Summary": "Defines the PropertyEditorNamespace Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Boolean",
+              "Name": "IsUri",
+              "Value": "True"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:anyURI/cdip:defaultPropertyEditorNamespace",
+      "ClassName": "DefaultPropertyEditorNamespace",
+      "Summary": "Defines the DefaultPropertyEditorNamespace Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Boolean",
+              "Name": "IsUri",
+              "Value": "True"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:string/cdip:XSNLocation",
+      "ClassName": "XsnFileLocation",
+      "Summary": "Defines the XsnFileLocation Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:boolean/cdip:showOnOpen",
+      "ClassName": "ShowOnOpen",
+      "Summary": "Defines the ShowOnOpen Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:boolean",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "cdip:CT_CustomPropertyEditor/cdip:customPropertyEditor",
+      "ClassName": "CustomPropertyEditor",
+      "Summary": "Defines the CustomPropertyEditor Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "xsd:anyURI/cdip:XMLNamespace",
+          "PropertyName": "PropertyEditorNamespace"
+        },
+        {
+          "Name": "xsd:string/cdip:XSNLocation",
+          "PropertyName": "XsnFileLocation"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xsd:anyURI/cdip:XMLNamespace"
+          },
+          {
+            "Name": "xsd:string/cdip:XSNLocation"
+          }
+        ]
+      }
+    }
+  ]
+}

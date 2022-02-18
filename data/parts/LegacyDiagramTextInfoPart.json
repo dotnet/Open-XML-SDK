@@ -1,0 +1,11 @@
+{
+  "Name": "LegacyDiagramTextInfoPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-office.legacyDocTextInfo",
+  "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/legacyDocTextInfo",
+  "Target": "legacyDocTextInfo",
+  "Extension": ".bin",
+  "Paths": {
+    "General": "."
+  }
+}

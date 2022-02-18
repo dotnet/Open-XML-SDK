@@ -1,0 +1,361 @@
+{
+  "TargetNamespace": "http://schemas.openxmlformats.org/officeDocument/2006/custom-properties",
+  "Types": [
+    {
+      "Name": "op:CT_Properties/op:Properties",
+      "ClassName": "Properties",
+      "Summary": "Custom File Properties.",
+      "Part": "CustomFilePropertiesPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "op:CT_Property/op:property"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "op:CT_Property/op:property",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "op:CT_Property/op:property",
+      "ClassName": "CustomDocumentProperty",
+      "Summary": "Custom File Property.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":fmtid",
+          "PropertyName": "FormatId",
+          "Type": "StringValue",
+          "PropertyComments": "Format ID",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":pid",
+          "PropertyName": "PropertyId",
+          "Type": "Int32Value",
+          "PropertyComments": "Property ID",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "Custom File Property Name"
+        },
+        {
+          "QName": ":linkTarget",
+          "PropertyName": "LinkTarget",
+          "Type": "StringValue",
+          "PropertyComments": "Bookmark Link Target"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "vt:CT_Vector/vt:vector",
+          "PropertyName": "VTVector",
+          "PropertyComments": "Vector"
+        },
+        {
+          "Name": "vt:CT_Array/vt:array",
+          "PropertyName": "VTArray",
+          "PropertyComments": "Array"
+        },
+        {
+          "Name": "xsd:base64Binary/vt:blob",
+          "PropertyName": "VTBlob",
+          "PropertyComments": "Binary Blob"
+        },
+        {
+          "Name": "xsd:base64Binary/vt:oblob",
+          "PropertyName": "VTOBlob",
+          "PropertyComments": "Binary Blob Object"
+        },
+        {
+          "Name": "vt:CT_Empty/vt:empty",
+          "PropertyName": "VTEmpty",
+          "PropertyComments": "Empty"
+        },
+        {
+          "Name": "vt:CT_Null/vt:null",
+          "PropertyName": "VTNull",
+          "PropertyComments": "Null"
+        },
+        {
+          "Name": "xsd:byte/vt:i1",
+          "PropertyName": "VTByte",
+          "PropertyComments": "1-Byte Signed Integer"
+        },
+        {
+          "Name": "xsd:short/vt:i2",
+          "PropertyName": "VTShort",
+          "PropertyComments": "2-Byte Signed Integer"
+        },
+        {
+          "Name": "xsd:int/vt:i4",
+          "PropertyName": "VTInt32",
+          "PropertyComments": "4-Byte Signed Integer"
+        },
+        {
+          "Name": "xsd:long/vt:i8",
+          "PropertyName": "VTInt64",
+          "PropertyComments": "8-Byte Signed Integer"
+        },
+        {
+          "Name": "xsd:int/vt:int",
+          "PropertyName": "VTInteger",
+          "PropertyComments": "Integer"
+        },
+        {
+          "Name": "xsd:unsignedByte/vt:ui1",
+          "PropertyName": "VTUnsignedByte",
+          "PropertyComments": "1-Byte Unsigned Integer"
+        },
+        {
+          "Name": "xsd:unsignedShort/vt:ui2",
+          "PropertyName": "VTUnsignedShort",
+          "PropertyComments": "2-Byte Unsigned Integer"
+        },
+        {
+          "Name": "xsd:unsignedInt/vt:ui4",
+          "PropertyName": "VTUnsignedInt32",
+          "PropertyComments": "4-Byte Unsigned Integer"
+        },
+        {
+          "Name": "xsd:unsignedLong/vt:ui8",
+          "PropertyName": "VTUnsignedInt64",
+          "PropertyComments": "8-Byte Unsigned Integer"
+        },
+        {
+          "Name": "xsd:unsignedInt/vt:uint",
+          "PropertyName": "VTUnsignedInteger",
+          "PropertyComments": "Unsigned Integer"
+        },
+        {
+          "Name": "xsd:float/vt:r4",
+          "PropertyName": "VTFloat",
+          "PropertyComments": "4-Byte Real Number"
+        },
+        {
+          "Name": "xsd:double/vt:r8",
+          "PropertyName": "VTDouble",
+          "PropertyComments": "8-Byte Real Number"
+        },
+        {
+          "Name": "xsd:decimal/vt:decimal",
+          "PropertyName": "VTDecimal",
+          "PropertyComments": "Decimal"
+        },
+        {
+          "Name": "xsd:string/vt:lpstr",
+          "PropertyName": "VTLPSTR",
+          "PropertyComments": "LPSTR"
+        },
+        {
+          "Name": "xsd:string/vt:lpwstr",
+          "PropertyName": "VTLPWSTR",
+          "PropertyComments": "LPWSTR"
+        },
+        {
+          "Name": "xsd:string/vt:bstr",
+          "PropertyName": "VTBString",
+          "PropertyComments": "Basic String"
+        },
+        {
+          "Name": "xsd:dateTime/vt:date",
+          "PropertyName": "VTDate",
+          "PropertyComments": "Date and Time"
+        },
+        {
+          "Name": "xsd:dateTime/vt:filetime",
+          "PropertyName": "VTFileTime",
+          "PropertyComments": "File Time"
+        },
+        {
+          "Name": "xsd:boolean/vt:bool",
+          "PropertyName": "VTBool",
+          "PropertyComments": "Boolean"
+        },
+        {
+          "Name": "vt:ST_Cy/vt:cy",
+          "PropertyName": "VTCurrency",
+          "PropertyComments": "Currency"
+        },
+        {
+          "Name": "vt:ST_Error/vt:error",
+          "PropertyName": "VTError",
+          "PropertyComments": "Error Status Code"
+        },
+        {
+          "Name": "xsd:base64Binary/vt:stream",
+          "PropertyName": "VTStreamData",
+          "PropertyComments": "Binary Stream"
+        },
+        {
+          "Name": "xsd:base64Binary/vt:ostream",
+          "PropertyName": "VTOStreamData",
+          "PropertyComments": "Binary Stream Object"
+        },
+        {
+          "Name": "xsd:base64Binary/vt:storage",
+          "PropertyName": "VTStorage",
+          "PropertyComments": "Binary Storage"
+        },
+        {
+          "Name": "xsd:base64Binary/vt:ostorage",
+          "PropertyName": "VTOStorage",
+          "PropertyComments": "Binary Storage Object"
+        },
+        {
+          "Name": "vt:CT_Vstream/vt:vstream",
+          "PropertyName": "VTVStreamData",
+          "PropertyComments": "Binary Versioned Stream"
+        },
+        {
+          "Name": "vt:ST_Clsid/vt:clsid",
+          "PropertyName": "VTClassId",
+          "PropertyComments": "Class ID"
+        },
+        {
+          "Name": "vt:CT_Cf/vt:cf",
+          "PropertyName": "VTClipboardData",
+          "PropertyComments": "Clipboard Data"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "vt:CT_Vector/vt:vector"
+          },
+          {
+            "Name": "vt:CT_Array/vt:array"
+          },
+          {
+            "Name": "xsd:base64Binary/vt:blob"
+          },
+          {
+            "Name": "xsd:base64Binary/vt:oblob"
+          },
+          {
+            "Name": "vt:CT_Empty/vt:empty"
+          },
+          {
+            "Name": "vt:CT_Null/vt:null"
+          },
+          {
+            "Name": "xsd:byte/vt:i1"
+          },
+          {
+            "Name": "xsd:short/vt:i2"
+          },
+          {
+            "Name": "xsd:int/vt:i4"
+          },
+          {
+            "Name": "xsd:long/vt:i8"
+          },
+          {
+            "Name": "xsd:int/vt:int"
+          },
+          {
+            "Name": "xsd:unsignedByte/vt:ui1"
+          },
+          {
+            "Name": "xsd:unsignedShort/vt:ui2"
+          },
+          {
+            "Name": "xsd:unsignedInt/vt:ui4"
+          },
+          {
+            "Name": "xsd:unsignedLong/vt:ui8"
+          },
+          {
+            "Name": "xsd:unsignedInt/vt:uint"
+          },
+          {
+            "Name": "xsd:float/vt:r4"
+          },
+          {
+            "Name": "xsd:double/vt:r8"
+          },
+          {
+            "Name": "xsd:decimal/vt:decimal"
+          },
+          {
+            "Name": "xsd:string/vt:lpstr"
+          },
+          {
+            "Name": "xsd:string/vt:lpwstr"
+          },
+          {
+            "Name": "xsd:string/vt:bstr"
+          },
+          {
+            "Name": "xsd:dateTime/vt:date"
+          },
+          {
+            "Name": "xsd:dateTime/vt:filetime"
+          },
+          {
+            "Name": "xsd:boolean/vt:bool"
+          },
+          {
+            "Name": "vt:ST_Cy/vt:cy"
+          },
+          {
+            "Name": "vt:ST_Error/vt:error"
+          },
+          {
+            "Name": "xsd:base64Binary/vt:stream"
+          },
+          {
+            "Name": "xsd:base64Binary/vt:ostream"
+          },
+          {
+            "Name": "xsd:base64Binary/vt:storage"
+          },
+          {
+            "Name": "xsd:base64Binary/vt:ostorage"
+          },
+          {
+            "Name": "vt:CT_Vstream/vt:vstream"
+          },
+          {
+            "Name": "vt:ST_Clsid/vt:clsid"
+          },
+          {
+            "Name": "vt:CT_Cf/vt:cf"
+          }
+        ]
+      }
+    }
+  ]
+}

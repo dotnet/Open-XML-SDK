@@ -1,0 +1,13 @@
+{
+  "Root": "x14:CT_FormControlPr",
+  "Name": "ControlPropertiesPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.controlproperties\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp",
+  "Target": "ctrlProp",
+  "RootElement": "formControlPr",
+  "Paths": {
+    "General": "../ctrlProps"
+  },
+  "Version": "Office2010"
+}

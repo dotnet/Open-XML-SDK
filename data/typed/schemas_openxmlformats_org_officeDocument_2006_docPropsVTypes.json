@@ -1,0 +1,142 @@
+[
+  {
+    "Name": "vt:CT_Array/vt:array",
+    "ClassName": "VTArray"
+  },
+  {
+    "Name": "xsd:base64Binary/vt:blob",
+    "ClassName": "VTBlob"
+  },
+  {
+    "Name": "xsd:boolean/vt:bool",
+    "ClassName": "VTBool"
+  },
+  {
+    "Name": "xsd:string/vt:bstr",
+    "ClassName": "VTBString"
+  },
+  {
+    "Name": "vt:CT_Cf/vt:cf",
+    "ClassName": "VTClipboardData"
+  },
+  {
+    "Name": "vt:ST_Clsid/vt:clsid",
+    "ClassName": "VTClassId"
+  },
+  {
+    "Name": "vt:ST_Cy/vt:cy",
+    "ClassName": "VTCurrency"
+  },
+  {
+    "Name": "xsd:dateTime/vt:date",
+    "ClassName": "VTDate"
+  },
+  {
+    "Name": "xsd:decimal/vt:decimal",
+    "ClassName": "VTDecimal"
+  },
+  {
+    "Name": "vt:CT_Empty/vt:empty",
+    "ClassName": "VTEmpty"
+  },
+  {
+    "Name": "vt:ST_Error/vt:error",
+    "ClassName": "VTError"
+  },
+  {
+    "Name": "xsd:dateTime/vt:filetime",
+    "ClassName": "VTFileTime"
+  },
+  {
+    "Name": "xsd:byte/vt:i1",
+    "ClassName": "VTByte"
+  },
+  {
+    "Name": "xsd:short/vt:i2",
+    "ClassName": "VTShort"
+  },
+  {
+    "Name": "xsd:int/vt:i4",
+    "ClassName": "VTInt32"
+  },
+  {
+    "Name": "xsd:long/vt:i8",
+    "ClassName": "VTInt64"
+  },
+  {
+    "Name": "xsd:int/vt:int",
+    "ClassName": "VTInteger"
+  },
+  {
+    "Name": "xsd:string/vt:lpstr",
+    "ClassName": "VTLPSTR"
+  },
+  {
+    "Name": "xsd:string/vt:lpwstr",
+    "ClassName": "VTLPWSTR"
+  },
+  {
+    "Name": "vt:CT_Null/vt:null",
+    "ClassName": "VTNull"
+  },
+  {
+    "Name": "xsd:base64Binary/vt:oblob",
+    "ClassName": "VTOBlob"
+  },
+  {
+    "Name": "xsd:base64Binary/vt:ostorage",
+    "ClassName": "VTOStorage"
+  },
+  {
+    "Name": "xsd:base64Binary/vt:ostream",
+    "ClassName": "VTOStreamData"
+  },
+  {
+    "Name": "xsd:float/vt:r4",
+    "ClassName": "VTFloat"
+  },
+  {
+    "Name": "xsd:double/vt:r8",
+    "ClassName": "VTDouble"
+  },
+  {
+    "Name": "xsd:base64Binary/vt:storage",
+    "ClassName": "VTStorage"
+  },
+  {
+    "Name": "xsd:base64Binary/vt:stream",
+    "ClassName": "VTStreamData"
+  },
+  {
+    "Name": "xsd:unsignedByte/vt:ui1",
+    "ClassName": "VTUnsignedByte"
+  },
+  {
+    "Name": "xsd:unsignedShort/vt:ui2",
+    "ClassName": "VTUnsignedShort"
+  },
+  {
+    "Name": "xsd:unsignedInt/vt:ui4",
+    "ClassName": "VTUnsignedInt32"
+  },
+  {
+    "Name": "xsd:unsignedLong/vt:ui8",
+    "ClassName": "VTUnsignedInt64"
+  },
+  {
+    "Name": "xsd:unsignedInt/vt:uint",
+    "ClassName": "VTUnsignedInteger"
+  },
+  {
+    "Name": "vt:CT_Variant/vt:variant",
+    "ClassName": "Variant"
+  },
+  {
+    "Name": "vt:CT_Vector/vt:vector",
+    "ClassName": "VTVector"
+  },
+  {
+    "Name": "vt:CT_Vstream/vt:vstream",
+    "ClassName": "VTVStreamData"
+  }
+]

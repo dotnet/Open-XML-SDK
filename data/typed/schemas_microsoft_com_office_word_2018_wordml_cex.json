@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "w16cex:CT_CommentExtensible/w16cex:commentExtensible",
+    "ClassName": "CommentExtensible"
+  },
+  {
+    "Name": "w16cex:CT_CommentsExtensible/w16cex:commentsExtensible",
+    "ClassName": "CommentsExtensible",
+    "PartClassName": "WordCommentsExtensiblePart"
+  },
+  {
+    "Name": "w16cur:CT_ExtensionList/w16cex:extLst",
+    "ClassName": "ExtensionList"
+  }
+]

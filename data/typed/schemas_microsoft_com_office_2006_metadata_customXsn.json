@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "xsd:string/ntns:cached",
+    "ClassName": "CachedView"
+  },
+  {
+    "Name": "ntns:CT_CustomXsn/ntns:customXsn",
+    "ClassName": "CustomXsn"
+  },
+  {
+    "Name": "xsd:string/ntns:openByDefault",
+    "ClassName": "OpenByDefault"
+  },
+  {
+    "Name": "xsd:string/ntns:xsnLocation",
+    "ClassName": "XsnLocation"
+  },
+  {
+    "Name": "xsd:string/ntns:xsnScope",
+    "ClassName": "Scope"
+  }
+]

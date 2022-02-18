@@ -1,0 +1,542 @@
+[
+  {
+    "Prefix": "xml",
+    "Namespace": "DocumentFormat.OpenXml"
+  },
+  {
+    "Prefix": "ac",
+    "Namespace": "DocumentFormat.OpenXml.AdditionalCharacteristics"
+  },
+  {
+    "Prefix": "b",
+    "Namespace": "DocumentFormat.OpenXml.Bibliography"
+  },
+  {
+    "Prefix": "op",
+    "Namespace": "DocumentFormat.OpenXml.CustomProperties"
+  },
+  {
+    "Prefix": "ds",
+    "Namespace": "DocumentFormat.OpenXml.CustomXmlDataProperties"
+  },
+  {
+    "Prefix": "sl",
+    "Namespace": "DocumentFormat.OpenXml.CustomXmlSchemaReferences"
+  },
+  {
+    "Prefix": "a",
+    "Namespace": "DocumentFormat.OpenXml.Drawing"
+  },
+  {
+    "Prefix": "cdr",
+    "Namespace": "DocumentFormat.OpenXml.Drawing.ChartDrawing"
+  },
+  {
+    "Prefix": "c",
+    "Namespace": "DocumentFormat.OpenXml.Drawing.Charts"
+  },
+  {
+    "Prefix": "dgm",
+    "Namespace": "DocumentFormat.OpenXml.Drawing.Diagrams"
+  },
+  {
+    "Prefix": "comp",
+    "Namespace": "DocumentFormat.OpenXml.Drawing.LegacyCompatibility"
+  },
+  {
+    "Prefix": "lc",
+    "Namespace": "DocumentFormat.OpenXml.Drawing.LockedCanvas"
+  },
+  {
+    "Prefix": "pic",
+    "Namespace": "DocumentFormat.OpenXml.Drawing.Pictures"
+  },
+  {
+    "Prefix": "xdr",
+    "Namespace": "DocumentFormat.OpenXml.Drawing.Spreadsheet"
+  },
+  {
+    "Prefix": "wp",
+    "Namespace": "DocumentFormat.OpenXml.Drawing.Wordprocessing"
+  },
+  {
+    "Prefix": "emma",
+    "Namespace": "DocumentFormat.OpenXml.EMMA"
+  },
+  {
+    "Prefix": "ap",
+    "Namespace": "DocumentFormat.OpenXml.ExtendedProperties"
+  },
+  {
+    "Prefix": "inkml",
+    "Namespace": "DocumentFormat.OpenXml.InkML"
+  },
+  {
+    "Prefix": "m",
+    "Namespace": "DocumentFormat.OpenXml.Math"
+  },
+  {
+    "Prefix": "ax",
+    "Namespace": "DocumentFormat.OpenXml.Office.ActiveX"
+  },
+  {
+    "Prefix": "ct",
+    "Namespace": "DocumentFormat.OpenXml.Office.ContentType"
+  },
+  {
+    "Prefix": "cppr",
+    "Namespace": "DocumentFormat.OpenXml.Office.CoverPageProps"
+  },
+  {
+    "Prefix": "cdip",
+    "Namespace": "DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel"
+  },
+  {
+    "Prefix": "mso",
+    "Namespace": "DocumentFormat.OpenXml.Office.CustomUI"
+  },
+  {
+    "Prefix": "ntns",
+    "Namespace": "DocumentFormat.OpenXml.Office.CustomXsn"
+  },
+  {
+    "Prefix": "dsp",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing"
+  },
+  {
+    "Prefix": "aoe",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed"
+  },
+  {
+    "Prefix": "asl",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink"
+  },
+  {
+    "Prefix": "xne",
+    "Namespace": "DocumentFormat.OpenXml.Office.Excel"
+  },
+  {
+    "Prefix": "lp",
+    "Namespace": "DocumentFormat.OpenXml.Office.LongProperties"
+  },
+  {
+    "Prefix": "ma",
+    "Namespace": "DocumentFormat.OpenXml.Office.MetaAttributes"
+  },
+  {
+    "Prefix": "p216",
+    "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main"
+  },
+  {
+    "Prefix": "wne",
+    "Namespace": "DocumentFormat.OpenXml.Office.Word"
+  },
+  {
+    "Prefix": "woe",
+    "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed"
+  },
+  {
+    "Prefix": "mso14",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.CustomUI"
+  },
+  {
+    "Prefix": "a14",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing"
+  },
+  {
+    "Prefix": "cdr14",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing"
+  },
+  {
+    "Prefix": "c14",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing.Charts"
+  },
+  {
+    "Prefix": "dgm14",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing.Diagram"
+  },
+  {
+    "Prefix": "com14",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility"
+  },
+  {
+    "Prefix": "pic14",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing.Pictures"
+  },
+  {
+    "Prefix": "sle",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing.Slicer"
+  },
+  {
+    "Prefix": "x14",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Excel"
+  },
+  {
+    "Prefix": "xdr14",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Excel.Drawing"
+  },
+  {
+    "Prefix": "x12ac",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.ExcelAc"
+  },
+  {
+    "Prefix": "msink",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Ink"
+  },
+  {
+    "Prefix": "p14",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.PowerPoint"
+  },
+  {
+    "Prefix": "w14",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Word"
+  },
+  {
+    "Prefix": "wp14",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Word.Drawing"
+  },
+  {
+    "Prefix": "wpc",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas"
+  },
+  {
+    "Prefix": "wpg",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Word.DrawingGroup"
+  },
+  {
+    "Prefix": "wps",
+    "Namespace": "DocumentFormat.OpenXml.Office2010.Word.DrawingShape"
+  },
+  {
+    "Prefix": "a15",
+    "Namespace": "DocumentFormat.OpenXml.Office2013.Drawing"
+  },
+  {
+    "Prefix": "c15",
+    "Namespace": "DocumentFormat.OpenXml.Office2013.Drawing.Chart"
+  },
+  {
+    "Prefix": "cs",
+    "Namespace": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle"
+  },
+  {
+    "Prefix": "tsle",
+    "Namespace": "DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer"
+  },
+  {
+    "Prefix": "x15",
+    "Namespace": "DocumentFormat.OpenXml.Office2013.Excel"
+  },
+  {
+    "Prefix": "x15ac",
+    "Namespace": "DocumentFormat.OpenXml.Office2013.ExcelAc"
+  },
+  {
+    "Prefix": "p15",
+    "Namespace": "DocumentFormat.OpenXml.Office2013.PowerPoint"
+  },
+  {
+    "Prefix": "pRoam",
+    "Namespace": "DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming"
+  },
+  {
+    "Prefix": "thm15",
+    "Namespace": "DocumentFormat.OpenXml.Office2013.Theme"
+  },
+  {
+    "Prefix": "we",
+    "Namespace": "DocumentFormat.OpenXml.Office2013.WebExtension"
+  },
+  {
+    "Prefix": "wetp",
+    "Namespace": "DocumentFormat.OpenXml.Office2013.WebExtentionPane"
+  },
+  {
+    "Prefix": "w15",
+    "Namespace": "DocumentFormat.OpenXml.Office2013.Word"
+  },
+  {
+    "Prefix": "wp15",
+    "Namespace": "DocumentFormat.OpenXml.Office2013.Word.Drawing"
+  },
+  {
+    "Prefix": "a16",
+    "Namespace": "DocumentFormat.OpenXml.Office2016.Drawing"
+  },
+  {
+    "Prefix": "cx",
+    "Namespace": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing"
+  },
+  {
+    "Prefix": "c16",
+    "Namespace": "DocumentFormat.OpenXml.Office2016.Drawing.Charts"
+  },
+  {
+    "Prefix": "c16ac",
+    "Namespace": "DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc"
+  },
+  {
+    "Prefix": "oac",
+    "Namespace": "DocumentFormat.OpenXml.Office2016.Drawing.Command"
+  },
+  {
+    "Prefix": "xr",
+    "Namespace": "DocumentFormat.OpenXml.Office2016.Excel"
+  },
+  {
+    "Prefix": "x16r2",
+    "Namespace": "DocumentFormat.OpenXml.Office2016.Excel2"
+  },
+  {
+    "Prefix": "x16",
+    "Namespace": "DocumentFormat.OpenXml.Office2016.ExcelAc"
+  },
+  {
+    "Prefix": "p16",
+    "Namespace": "DocumentFormat.OpenXml.Office2016.Presentation"
+  },
+  {
+    "Prefix": "pc",
+    "Namespace": "DocumentFormat.OpenXml.Office2016.Presentation.Command"
+  },
+  {
+    "Prefix": "w16se",
+    "Namespace": "DocumentFormat.OpenXml.Office2016.Word.Symex"
+  },
+  {
+    "Prefix": "a1611",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Drawing"
+  },
+  {
+    "Prefix": "adec",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Drawing"
+  },
+  {
+    "Prefix": "aanim",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Drawing.Animation"
+  },
+  {
+    "Prefix": "a3danim",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D"
+  },
+  {
+    "Prefix": "c16r3",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Drawing.Chart"
+  },
+  {
+    "Prefix": "dgm1611",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Drawing.Diagram11"
+  },
+  {
+    "Prefix": "dgm1612",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Drawing.Diagram12"
+  },
+  {
+    "Prefix": "ahyp",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor"
+  },
+  {
+    "Prefix": "aink",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Drawing.Ink"
+  },
+  {
+    "Prefix": "am3d",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D"
+  },
+  {
+    "Prefix": "asvg",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Drawing.SVG"
+  },
+  {
+    "Prefix": "xlPr",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel"
+  },
+  {
+    "Prefix": "xcalcf",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures"
+  },
+  {
+    "Prefix": "xda",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel.DynamicArray"
+  },
+  {
+    "Prefix": "xpdl",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout"
+  },
+  {
+    "Prefix": "xr10",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel.Revision10"
+  },
+  {
+    "Prefix": "xr16",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel.Revision16"
+  },
+  {
+    "Prefix": "xr2",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel.Revision2"
+  },
+  {
+    "Prefix": "xr3",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel.Revision3"
+  },
+  {
+    "Prefix": "xr5",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel.Revision5"
+  },
+  {
+    "Prefix": "xr6",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel.Revision6"
+  },
+  {
+    "Prefix": "xr9",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel.Revision9"
+  },
+  {
+    "Prefix": "xlrd",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel.RichData"
+  },
+  {
+    "Prefix": "xlrd2",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel.RichData2"
+  },
+  {
+    "Prefix": "xltc",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments"
+  },
+  {
+    "Prefix": "p1710",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Presentation"
+  },
+  {
+    "Prefix": "p173",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Presentation"
+  },
+  {
+    "Prefix": "p184",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Presentation"
+  },
+  {
+    "Prefix": "w16cid",
+    "Namespace": "DocumentFormat.OpenXml.Office2019.Word.Cid"
+  },
+  {
+    "Prefix": "t",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.DocumentTasks"
+  },
+  {
+    "Prefix": "aclsh",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification"
+  },
+  {
+    "Prefix": "alf",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.Drawing.Livefeed"
+  },
+  {
+    "Prefix": "ask",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes"
+  },
+  {
+    "Prefix": "x16r3",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.Excel"
+  },
+  {
+    "Prefix": "xxlnp",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.Excel.ExternalLinks"
+  },
+  {
+    "Prefix": "xnsv",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews"
+  },
+  {
+    "Prefix": "xxpim",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.Excel.Pivot"
+  },
+  {
+    "Prefix": "xlrdwi",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage"
+  },
+  {
+    "Prefix": "xlrvr",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals"
+  },
+  {
+    "Prefix": "xltc2",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2"
+  },
+  {
+    "Prefix": "clbl",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.MipLabelMetaData"
+  },
+  {
+    "Prefix": "oel",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.OfficeExtLst"
+  },
+  {
+    "Prefix": "p188",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.PowerPoint.Comment"
+  },
+  {
+    "Prefix": "p202",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.PowerPoint.Designer"
+  },
+  {
+    "Prefix": "p1912",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks"
+  },
+  {
+    "Prefix": "w16cex",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.Word.CommentsExt"
+  },
+  {
+    "Prefix": "w16cur",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.Word.ExtensionList"
+  },
+  {
+    "Prefix": "w16sdtdh",
+    "Namespace": "DocumentFormat.OpenXml.Office2021.Word.SdtDataHash"
+  },
+  {
+    "Prefix": "p",
+    "Namespace": "DocumentFormat.OpenXml.Presentation"
+  },
+  {
+    "Prefix": "r",
+    "Namespace": "DocumentFormat.OpenXml.Relationships"
+  },
+  {
+    "Prefix": "x",
+    "Namespace": "DocumentFormat.OpenXml.Spreadsheet"
+  },
+  {
+    "Prefix": "vt",
+    "Namespace": "DocumentFormat.OpenXml.VariantTypes"
+  },
+  {
+    "Prefix": "v",
+    "Namespace": "DocumentFormat.OpenXml.Vml"
+  },
+  {
+    "Prefix": "o",
+    "Namespace": "DocumentFormat.OpenXml.Vml.Office"
+  },
+  {
+    "Prefix": "pvml",
+    "Namespace": "DocumentFormat.OpenXml.Vml.Presentation"
+  },
+  {
+    "Prefix": "xvml",
+    "Namespace": "DocumentFormat.OpenXml.Vml.Spreadsheet"
+  },
+  {
+    "Prefix": "w10",
+    "Namespace": "DocumentFormat.OpenXml.Vml.Wordprocessing"
+  },
+  {
+    "Prefix": "w",
+    "Namespace": "DocumentFormat.OpenXml.Wordprocessing"
+  },
+  {
+    "Prefix": "mc",
+    "Namespace": "Microsoft.Office.DocumentFormat.OpenXml.MetroVer"
+  }
+]

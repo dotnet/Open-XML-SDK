@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "a:CT_OfficeArtExtensionList/thm15:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "thm15:CT_ThemeFamily/thm15:themeFamily",
+    "ClassName": "ThemeFamily"
+  },
+  {
+    "Name": "thm15:CT_ThemeVariant/thm15:themeVariant",
+    "ClassName": "ThemeVariant"
+  },
+  {
+    "Name": "thm15:CT_ThemeVariantList/thm15:themeVariantLst",
+    "ClassName": "ThemeVariantList"
+  }
+]

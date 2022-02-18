@@ -1,0 +1,132 @@
+{
+  "Root": "x:CT_Worksheet",
+  "Name": "WorksheetPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet",
+  "Target": "sheet",
+  "RootElement": "worksheet",
+  "Paths": {
+    "General": "worksheets"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "SpreadsheetPrinterSettingsParts",
+      "Name": "SpreadsheetPrinterSettingsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "DrawingsPart",
+      "Name": "DrawingsPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "VmlDrawingParts",
+      "Name": "VmlDrawingPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "WorksheetCommentsPart",
+      "Name": "WorksheetCommentsPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "PivotTableParts",
+      "Name": "PivotTablePart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "SingleCellTablePart",
+      "Name": "SingleCellTablePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "TableDefinitionParts",
+      "Name": "TableDefinitionPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedControlPersistenceParts",
+      "Name": "EmbeddedControlPersistencePart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ControlPropertiesParts",
+      "Name": "ControlPropertiesPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedObjectParts",
+      "Name": "EmbeddedObjectPart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedPackageParts",
+      "Name": "EmbeddedPackagePart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "CustomPropertyParts",
+      "Name": "CustomPropertyPart"
+    },
+    {
+      "ApiName": "WorksheetSortMapPart",
+      "Name": "WorksheetSortMapPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "QueryTableParts",
+      "Name": "QueryTablePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedControlPersistenceBinaryDataParts",
+      "Name": "EmbeddedControlPersistenceBinaryDataPart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "SlicersParts",
+      "Name": "SlicersPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "TimeLineParts",
+      "Name": "TimeLinePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "WorksheetThreadedCommentsParts",
+      "Name": "WorksheetThreadedCommentsPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "Model3DReferenceRelationshipParts",
+      "Name": "Model3DReferenceRelationshipPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "NamedSheetViewsParts",
+      "Name": "NamedSheetViewsPart",
+      "HasFixedContent": true
+    }
+  ]
+}

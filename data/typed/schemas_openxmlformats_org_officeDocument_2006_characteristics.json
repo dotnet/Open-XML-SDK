@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "ac:CT_AdditionalCharacteristics/ac:additionalCharacteristics",
+    "ClassName": "AdditionalCharacteristicsInfo"
+  },
+  {
+    "Name": "ac:CT_Characteristic/ac:characteristic",
+    "ClassName": "Characteristic"
+  }
+]

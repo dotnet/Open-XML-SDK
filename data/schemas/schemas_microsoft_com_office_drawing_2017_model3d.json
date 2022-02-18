@@ -1,0 +1,1924 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2017/model3d",
+  "Types": [
+    {
+      "Name": "am3d:CT_Model3D/am3d:model3d",
+      "ClassName": "Model3D",
+      "Summary": "Defines the Model3D Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": "r:embed",
+          "PropertyName": "Embed",
+          "Type": "StringValue",
+          "PropertyComments": "Embedded Picture Reference"
+        },
+        {
+          "QName": "r:link",
+          "PropertyName": "Link",
+          "Type": "StringValue",
+          "PropertyComments": "Linked Picture Reference"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_ShapeProperties/am3d:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "am3d:CT_Model3DCamera/am3d:camera",
+          "PropertyName": "Model3DCamera"
+        },
+        {
+          "Name": "am3d:CT_Model3DTransform/am3d:trans",
+          "PropertyName": "Model3DTransform"
+        },
+        {
+          "Name": "a1611:CT_PictureAttributionSourceURL/am3d:attrSrcUrl",
+          "PropertyName": "PictureAttributionSourceURL",
+          "PropertyComments": "Optional source attribution URL describes from whence the 3D model came."
+        },
+        {
+          "Name": "am3d:CT_Model3DRaster/am3d:raster",
+          "PropertyName": "Model3DRaster"
+        },
+        {
+          "Name": "am3d:CT_Model3DExtensionList/am3d:extLst",
+          "PropertyName": "Model3DExtensionList",
+          "PropertyComments": "Future Model3D extensions"
+        },
+        {
+          "Name": "am3d:CT_ObjectViewport/am3d:objViewport"
+        },
+        {
+          "Name": "am3d:CT_WindowViewport/am3d:winViewport"
+        },
+        {
+          "Name": "am3d:CT_AmbientLight/am3d:ambientLight"
+        },
+        {
+          "Name": "am3d:CT_PointLight/am3d:ptLight"
+        },
+        {
+          "Name": "am3d:CT_SpotLight/am3d:spotLight"
+        },
+        {
+          "Name": "am3d:CT_DirectionalLight/am3d:dirLight"
+        },
+        {
+          "Name": "am3d:CT_UnknownLight/am3d:unkLight"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_ShapeProperties/am3d:spPr",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "am3d:CT_Model3DCamera/am3d:camera",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "am3d:CT_Model3DTransform/am3d:trans",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a1611:CT_PictureAttributionSourceURL/am3d:attrSrcUrl",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "am3d:CT_Model3DRaster/am3d:raster",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "am3d:CT_Model3DExtensionList/am3d:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "am3d:CT_ObjectViewport/am3d:objViewport",
+                "InitialVersion": "Office2019"
+              },
+              {
+                "Name": "am3d:CT_WindowViewport/am3d:winViewport",
+                "InitialVersion": "Office2019"
+              }
+            ]
+          },
+          {
+            "Name": "am3d:CT_AmbientLight/am3d:ambientLight",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Name": "am3d:CT_PointLight/am3d:ptLight",
+                "InitialVersion": "Office2019"
+              },
+              {
+                "Name": "am3d:CT_SpotLight/am3d:spotLight",
+                "InitialVersion": "Office2019"
+              },
+              {
+                "Name": "am3d:CT_DirectionalLight/am3d:dirLight",
+                "InitialVersion": "Office2019"
+              },
+              {
+                "Name": "am3d:CT_UnknownLight/am3d:unkLight",
+                "InitialVersion": "Office2019"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_Ratio/am3d:sx",
+      "ClassName": "SxRatio",
+      "Summary": "Defines the SxRatio Class.",
+      "BaseClass": "RatioType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "a:CT_Ratio/am3d:sy",
+      "ClassName": "SyRatio",
+      "Summary": "Defines the SyRatio Class.",
+      "BaseClass": "RatioType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "a:CT_Ratio/am3d:sz",
+      "ClassName": "SzRatio",
+      "Summary": "Defines the SzRatio Class.",
+      "BaseClass": "RatioType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "a:CT_Ratio/",
+      "ClassName": "RatioType",
+      "Summary": "Defines the RatioType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":n",
+          "PropertyName": "Numerator",
+          "Type": "Int32Value",
+          "PropertyComments": "Numerator",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":d",
+          "PropertyName": "Denominator",
+          "Type": "Int32Value",
+          "PropertyComments": "Denominator",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "am3d:CT_PositiveRatio/am3d:meterPerModelUnit",
+      "ClassName": "MeterPerModelUnitPositiveRatio",
+      "Summary": "Defines the MeterPerModelUnitPositiveRatio Class.",
+      "BaseClass": "OpenXmlPositiveRatioElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "am3d:CT_PositiveRatio/am3d:sz",
+      "ClassName": "SzPositiveRatio",
+      "Summary": "Defines the SzPositiveRatio Class.",
+      "BaseClass": "OpenXmlPositiveRatioElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "am3d:CT_PositiveRatio/am3d:illuminance",
+      "ClassName": "IlluminancePositiveRatio",
+      "Summary": "Defines the IlluminancePositiveRatio Class.",
+      "BaseClass": "OpenXmlPositiveRatioElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "am3d:CT_PositiveRatio/am3d:intensity",
+      "ClassName": "IntensityPositiveRatio",
+      "Summary": "Defines the IntensityPositiveRatio Class.",
+      "BaseClass": "OpenXmlPositiveRatioElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "am3d:CT_PositiveRatio/",
+      "ClassName": "OpenXmlPositiveRatioElement",
+      "Summary": "Defines the OpenXmlPositiveRatioElement Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":n",
+          "Type": "UInt64Value",
+          "Version": "Office2019",
+          "PropertyComments": "n",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":d",
+          "Type": "UInt64Value",
+          "Version": "Office2019",
+          "PropertyComments": "d",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_Vector3D/am3d:preTrans",
+      "ClassName": "PreTransVector3D",
+      "Summary": "Defines the PreTransVector3D Class.",
+      "BaseClass": "Vector3DType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "a:CT_Vector3D/am3d:postTrans",
+      "ClassName": "PostTransVector3D",
+      "Summary": "Defines the PostTransVector3D Class.",
+      "BaseClass": "Vector3DType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "a:CT_Vector3D/am3d:up",
+      "ClassName": "UpVector3D",
+      "Summary": "Defines the UpVector3D Class.",
+      "BaseClass": "Vector3DType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "a:CT_Vector3D/",
+      "ClassName": "Vector3DType",
+      "Summary": "Defines the Vector3DType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":dx",
+          "PropertyName": "Dx",
+          "Type": "Int64Value",
+          "PropertyComments": "Distance along X-axis in 3D",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":dy",
+          "PropertyName": "Dy",
+          "Type": "Int64Value",
+          "PropertyComments": "Distance along Y-axis in 3D",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":dz",
+          "PropertyName": "Dz",
+          "Type": "Int64Value",
+          "PropertyComments": "Distance along Z-axis in 3D",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "am3d:CT_Scale3D/am3d:scale",
+      "ClassName": "Scale3D",
+      "Summary": "Defines the Scale3D Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "a:CT_Ratio/am3d:sx",
+          "PropertyName": "SxRatio"
+        },
+        {
+          "Name": "a:CT_Ratio/am3d:sy",
+          "PropertyName": "SyRatio"
+        },
+        {
+          "Name": "a:CT_Ratio/am3d:sz",
+          "PropertyName": "SzRatio"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Ratio/am3d:sx",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_Ratio/am3d:sy",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_Ratio/am3d:sz",
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "am3d:CT_Rotate3D/am3d:rot",
+      "ClassName": "Rotate3D",
+      "Summary": "Defines the Rotate3D Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":ax",
+          "Type": "Int32Value",
+          "Version": "Office2019",
+          "PropertyComments": "ax"
+        },
+        {
+          "QName": ":ay",
+          "Type": "Int32Value",
+          "Version": "Office2019",
+          "PropertyComments": "ay"
+        },
+        {
+          "QName": ":az",
+          "Type": "Int32Value",
+          "Version": "Office2019",
+          "PropertyComments": "az"
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_Point3D/am3d:pos",
+      "ClassName": "PosPoint3D",
+      "Summary": "Defines the PosPoint3D Class.",
+      "BaseClass": "OpenXmlPoint3DElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "a:CT_Point3D/am3d:lookAt",
+      "ClassName": "LookAtPoint3D",
+      "Summary": "Defines the LookAtPoint3D Class.",
+      "BaseClass": "OpenXmlPoint3DElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "a:CT_Point3D/",
+      "ClassName": "OpenXmlPoint3DElement",
+      "Summary": "Defines the OpenXmlPoint3DElement Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":x",
+          "PropertyName": "X",
+          "Type": "Int64Value",
+          "PropertyComments": "X-Coordinate in 3D",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":y",
+          "PropertyName": "Y",
+          "Type": "Int64Value",
+          "PropertyComments": "Y-Coordinate in 3D",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":z",
+          "PropertyName": "Z",
+          "Type": "Int64Value",
+          "PropertyComments": "Z-Coordinate in 3D",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "am3d:CT_OrthographicProjection/am3d:orthographic",
+      "ClassName": "OrthographicProjection",
+      "Summary": "Defines the OrthographicProjection Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "am3d:CT_PositiveRatio/am3d:sz",
+          "PropertyName": "SzPositiveRatio"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "am3d:CT_PositiveRatio/am3d:sz",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "am3d:CT_PerspectiveProjection/am3d:perspective",
+      "ClassName": "PerspectiveProjection",
+      "Summary": "Defines the PerspectiveProjection Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":fov",
+          "Type": "Int32Value",
+          "Version": "Office2019",
+          "PropertyComments": "fov",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10800000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_Blip/am3d:blip",
+      "ClassName": "Blip",
+      "Summary": "Defines the Blip Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": "r:embed",
+          "PropertyName": "Embed",
+          "Type": "StringValue",
+          "PropertyComments": "Embedded Picture Reference"
+        },
+        {
+          "QName": "r:link",
+          "PropertyName": "Link",
+          "Type": "StringValue",
+          "PropertyComments": "Linked Picture Reference"
+        },
+        {
+          "QName": ":cstate",
+          "PropertyName": "CompressionState",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlipCompressionValues\u003E",
+          "PropertyComments": "Compression state for blips.",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_AlphaBiLevelEffect/a:alphaBiLevel"
+        },
+        {
+          "Name": "a:CT_AlphaCeilingEffect/a:alphaCeiling"
+        },
+        {
+          "Name": "a:CT_AlphaFloorEffect/a:alphaFloor"
+        },
+        {
+          "Name": "a:CT_AlphaInverseEffect/a:alphaInv"
+        },
+        {
+          "Name": "a:CT_AlphaModulateEffect/a:alphaMod"
+        },
+        {
+          "Name": "a:CT_AlphaModulateFixedEffect/a:alphaModFix"
+        },
+        {
+          "Name": "a:CT_AlphaReplaceEffect/a:alphaRepl"
+        },
+        {
+          "Name": "a:CT_BiLevelEffect/a:biLevel"
+        },
+        {
+          "Name": "a:CT_BlurEffect/a:blur"
+        },
+        {
+          "Name": "a:CT_ColorChangeEffect/a:clrChange"
+        },
+        {
+          "Name": "a:CT_ColorReplaceEffect/a:clrRepl"
+        },
+        {
+          "Name": "a:CT_DuotoneEffect/a:duotone"
+        },
+        {
+          "Name": "a:CT_FillOverlayEffect/a:fillOverlay"
+        },
+        {
+          "Name": "a:CT_GrayscaleEffect/a:grayscl"
+        },
+        {
+          "Name": "a:CT_HSLEffect/a:hsl"
+        },
+        {
+          "Name": "a:CT_LuminanceEffect/a:lum"
+        },
+        {
+          "Name": "a:CT_TintEffect/a:tint"
+        },
+        {
+          "Name": "a:CT_BlipExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Name": "a:CT_AlphaBiLevelEffect/a:alphaBiLevel"
+              },
+              {
+                "Name": "a:CT_AlphaCeilingEffect/a:alphaCeiling"
+              },
+              {
+                "Name": "a:CT_AlphaFloorEffect/a:alphaFloor"
+              },
+              {
+                "Name": "a:CT_AlphaInverseEffect/a:alphaInv"
+              },
+              {
+                "Name": "a:CT_AlphaModulateEffect/a:alphaMod"
+              },
+              {
+                "Name": "a:CT_AlphaModulateFixedEffect/a:alphaModFix"
+              },
+              {
+                "Name": "a:CT_AlphaReplaceEffect/a:alphaRepl"
+              },
+              {
+                "Name": "a:CT_BiLevelEffect/a:biLevel"
+              },
+              {
+                "Name": "a:CT_BlurEffect/a:blur"
+              },
+              {
+                "Name": "a:CT_ColorChangeEffect/a:clrChange"
+              },
+              {
+                "Name": "a:CT_ColorReplaceEffect/a:clrRepl"
+              },
+              {
+                "Name": "a:CT_DuotoneEffect/a:duotone"
+              },
+              {
+                "Name": "a:CT_FillOverlayEffect/a:fillOverlay"
+              },
+              {
+                "Name": "a:CT_GrayscaleEffect/a:grayscl"
+              },
+              {
+                "Name": "a:CT_HSLEffect/a:hsl"
+              },
+              {
+                "Name": "a:CT_LuminanceEffect/a:lum"
+              },
+              {
+                "Name": "a:CT_TintEffect/a:tint"
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_BlipExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_Color/am3d:clr",
+      "ClassName": "ColorType",
+      "Summary": "Defines the ColorType Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "a:CT_ScRgbColor/a:scrgbClr",
+          "PropertyName": "RgbColorModelPercentage",
+          "PropertyComments": "RGB Color Model - Percentage Variant"
+        },
+        {
+          "Name": "a:CT_SRgbColor/a:srgbClr",
+          "PropertyName": "RgbColorModelHex",
+          "PropertyComments": "RGB Color Model - Hex Variant"
+        },
+        {
+          "Name": "a:CT_HslColor/a:hslClr",
+          "PropertyName": "HslColor",
+          "PropertyComments": "Hue, Saturation, Luminance Color Model"
+        },
+        {
+          "Name": "a:CT_SystemColor/a:sysClr",
+          "PropertyName": "SystemColor",
+          "PropertyComments": "System Color"
+        },
+        {
+          "Name": "a:CT_SchemeColor/a:schemeClr",
+          "PropertyName": "SchemeColor",
+          "PropertyComments": "Scheme Color"
+        },
+        {
+          "Name": "a:CT_PresetColor/a:prstClr",
+          "PropertyName": "PresetColor",
+          "PropertyComments": "Preset Color"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_ScRgbColor/a:scrgbClr"
+                  },
+                  {
+                    "Name": "a:CT_SRgbColor/a:srgbClr"
+                  },
+                  {
+                    "Name": "a:CT_HslColor/a:hslClr"
+                  },
+                  {
+                    "Name": "a:CT_SystemColor/a:sysClr"
+                  },
+                  {
+                    "Name": "a:CT_SchemeColor/a:schemeClr"
+                  },
+                  {
+                    "Name": "a:CT_PresetColor/a:prstClr"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "am3d:CT_Model3DExtension/am3d:ext",
+      "ClassName": "Model3DExtension",
+      "Summary": "Defines the Model3DExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a3danim:CT_EmbeddedAnimation/a3danim:embedAnim",
+          "PropertyName": "EmbeddedAnimation"
+        },
+        {
+          "Name": "a3danim:CT_PosterFrame/a3danim:posterFrame",
+          "PropertyName": "PosterFrame"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "a3danim:CT_EmbeddedAnimation/a3danim:embedAnim",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a3danim:CT_PosterFrame/a3danim:posterFrame",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_ShapeProperties/am3d:spPr",
+      "ClassName": "ShapeProperties",
+      "Summary": "Defines the ShapeProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":bwMode",
+          "PropertyName": "BlackWhiteMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "PropertyComments": "Black and White Mode",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Transform2D/a:xfrm",
+          "PropertyName": "Transform2D",
+          "PropertyComments": "2D Transform for Individual Objects"
+        },
+        {
+          "Name": "a:CT_CustomGeometry2D/a:custGeom"
+        },
+        {
+          "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+        },
+        {
+          "Name": "a:CT_NoFillProperties/a:noFill"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+        },
+        {
+          "Name": "a:CT_GradientFillProperties/a:gradFill"
+        },
+        {
+          "Name": "a:CT_BlipFillProperties/a:blipFill"
+        },
+        {
+          "Name": "a:CT_PatternFillProperties/a:pattFill"
+        },
+        {
+          "Name": "a:CT_GroupFillProperties/a:grpFill"
+        },
+        {
+          "Name": "a:CT_LineProperties/a:ln"
+        },
+        {
+          "Name": "a:CT_EffectList/a:effectLst"
+        },
+        {
+          "Name": "a:CT_EffectContainer/a:effectDag"
+        },
+        {
+          "Name": "a:CT_Scene3D/a:scene3d"
+        },
+        {
+          "Name": "a:CT_Shape3D/a:sp3d"
+        },
+        {
+          "Name": "a:CT_ShapePropertiesExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Transform2D/a:xfrm",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_CustomGeometry2D/a:custGeom"
+                  },
+                  {
+                    "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_NoFillProperties/a:noFill"
+                  },
+                  {
+                    "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+                  },
+                  {
+                    "Name": "a:CT_GradientFillProperties/a:gradFill"
+                  },
+                  {
+                    "Name": "a:CT_BlipFillProperties/a:blipFill"
+                  },
+                  {
+                    "Name": "a:CT_PatternFillProperties/a:pattFill"
+                  },
+                  {
+                    "Name": "a:CT_GroupFillProperties/a:grpFill"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_LineProperties/a:ln",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_EffectList/a:effectLst"
+                  },
+                  {
+                    "Name": "a:CT_EffectContainer/a:effectDag"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Scene3D/a:scene3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Shape3D/a:sp3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_ShapePropertiesExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "am3d:CT_Model3DCamera/am3d:camera",
+      "ClassName": "Model3DCamera",
+      "Summary": "Defines the Model3DCamera Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "a:CT_Point3D/am3d:pos",
+          "PropertyName": "PosPoint3D"
+        },
+        {
+          "Name": "a:CT_Vector3D/am3d:up",
+          "PropertyName": "UpVector3D"
+        },
+        {
+          "Name": "a:CT_Point3D/am3d:lookAt",
+          "PropertyName": "LookAtPoint3D"
+        },
+        {
+          "Name": "am3d:CT_OrthographicProjection/am3d:orthographic"
+        },
+        {
+          "Name": "am3d:CT_PerspectiveProjection/am3d:perspective"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/am3d:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Point3D/am3d:pos",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_Vector3D/am3d:up",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_Point3D/am3d:lookAt",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "am3d:CT_OrthographicProjection/am3d:orthographic",
+                "InitialVersion": "Office2019"
+              },
+              {
+                "Name": "am3d:CT_PerspectiveProjection/am3d:perspective",
+                "InitialVersion": "Office2019"
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "am3d:CT_Model3DTransform/am3d:trans",
+      "ClassName": "Model3DTransform",
+      "Summary": "Defines the Model3DTransform Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "am3d:CT_PositiveRatio/am3d:meterPerModelUnit",
+          "PropertyName": "MeterPerModelUnitPositiveRatio"
+        },
+        {
+          "Name": "a:CT_Vector3D/am3d:preTrans",
+          "PropertyName": "PreTransVector3D"
+        },
+        {
+          "Name": "am3d:CT_Scale3D/am3d:scale",
+          "PropertyName": "Scale3D"
+        },
+        {
+          "Name": "am3d:CT_Rotate3D/am3d:rot",
+          "PropertyName": "Rotate3D"
+        },
+        {
+          "Name": "a:CT_Vector3D/am3d:postTrans",
+          "PropertyName": "PostTransVector3D"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "am3d:CT_PositiveRatio/am3d:meterPerModelUnit",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_Vector3D/am3d:preTrans",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "am3d:CT_Scale3D/am3d:scale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "am3d:CT_Rotate3D/am3d:rot",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_Vector3D/am3d:postTrans",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a1611:CT_PictureAttributionSourceURL/am3d:attrSrcUrl",
+      "ClassName": "PictureAttributionSourceURL",
+      "Summary": "Optional source attribution URL describes from whence the 3D model came..",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "am3d:CT_Model3DRaster/am3d:raster",
+      "ClassName": "Model3DRaster",
+      "Summary": "Defines the Model3DRaster Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":rName",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "rName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":rVer",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "rVer",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Blip/am3d:blip",
+          "PropertyName": "Blip"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Blip/am3d:blip",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "am3d:CT_Model3DExtensionList/am3d:extLst",
+      "ClassName": "Model3DExtensionList",
+      "Summary": "Future Model3D extensions.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "am3d:CT_Model3DExtension/am3d:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "am3d:CT_Model3DExtension/am3d:ext",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "am3d:CT_ObjectViewport/am3d:objViewport",
+      "ClassName": "ObjectViewport",
+      "Summary": "Defines the ObjectViewport Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":viewportSz",
+          "Type": "Int64Value",
+          "Version": "Office2019",
+          "PropertyComments": "viewportSz",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "am3d:CT_WindowViewport/am3d:winViewport",
+      "ClassName": "WindowViewport",
+      "Summary": "Defines the WindowViewport Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "am3d:CT_AmbientLight/am3d:ambientLight",
+      "ClassName": "AmbientLight",
+      "Summary": "Ambient light in a scene.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":enabled",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "enabled"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Color/am3d:clr",
+          "PropertyName": "ColorType"
+        },
+        {
+          "Name": "am3d:CT_PositiveRatio/am3d:illuminance",
+          "PropertyName": "IlluminancePositiveRatio"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Color/am3d:clr",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "am3d:CT_PositiveRatio/am3d:illuminance",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "am3d:CT_PointLight/am3d:ptLight",
+      "ClassName": "PointLight",
+      "Summary": "Defines the PointLight Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":enabled",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "enabled"
+        },
+        {
+          "QName": ":rad",
+          "Type": "Int64Value",
+          "Version": "Office2019",
+          "PropertyComments": "rad",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Color/am3d:clr",
+          "PropertyName": "ColorType"
+        },
+        {
+          "Name": "am3d:CT_PositiveRatio/am3d:intensity",
+          "PropertyName": "IntensityPositiveRatio"
+        },
+        {
+          "Name": "a:CT_Point3D/am3d:pos",
+          "PropertyName": "PosPoint3D"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Color/am3d:clr",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "am3d:CT_PositiveRatio/am3d:intensity",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_Point3D/am3d:pos",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "am3d:CT_SpotLight/am3d:spotLight",
+      "ClassName": "SpotLight",
+      "Summary": "Defines the SpotLight Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":enabled",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "enabled"
+        },
+        {
+          "QName": ":rad",
+          "Type": "Int64Value",
+          "Version": "Office2019",
+          "PropertyComments": "rad",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":spotAng",
+          "Type": "Int32Value",
+          "Version": "Office2019",
+          "PropertyComments": "spotAng",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10800000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Color/am3d:clr",
+          "PropertyName": "ColorType"
+        },
+        {
+          "Name": "am3d:CT_PositiveRatio/am3d:intensity",
+          "PropertyName": "IntensityPositiveRatio"
+        },
+        {
+          "Name": "a:CT_Point3D/am3d:pos",
+          "PropertyName": "PosPoint3D"
+        },
+        {
+          "Name": "a:CT_Point3D/am3d:lookAt",
+          "PropertyName": "LookAtPoint3D"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Color/am3d:clr",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "am3d:CT_PositiveRatio/am3d:intensity",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_Point3D/am3d:pos",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_Point3D/am3d:lookAt",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "am3d:CT_DirectionalLight/am3d:dirLight",
+      "ClassName": "DirectionalLight",
+      "Summary": "Defines the DirectionalLight Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":enabled",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "enabled"
+        },
+        {
+          "QName": ":angularRad",
+          "Type": "Int32Value",
+          "Version": "Office2019",
+          "PropertyComments": "angularRad",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "5400000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Color/am3d:clr",
+          "PropertyName": "ColorType"
+        },
+        {
+          "Name": "am3d:CT_PositiveRatio/am3d:illuminance",
+          "PropertyName": "IlluminancePositiveRatio"
+        },
+        {
+          "Name": "a:CT_Point3D/am3d:pos",
+          "PropertyName": "PosPoint3D"
+        },
+        {
+          "Name": "a:CT_Point3D/am3d:lookAt",
+          "PropertyName": "LookAtPoint3D"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Color/am3d:clr",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "am3d:CT_PositiveRatio/am3d:illuminance",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_Point3D/am3d:pos",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_Point3D/am3d:lookAt",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/am3d:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "am3d:CT_UnknownLight/am3d:unkLight",
+      "ClassName": "UnknownLight",
+      "Summary": "Defines the UnknownLight Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019"
+    }
+  ]
+}

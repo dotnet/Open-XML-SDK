@@ -1,0 +1,21 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2015/main",
+  "Types": [
+    {
+      "Name": "p16:CT_DesignElement/p16:designElem",
+      "ClassName": "DesignElement",
+      "Summary": "Defines the DesignElement Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "val"
+        }
+      ]
+    }
+  ]
+}

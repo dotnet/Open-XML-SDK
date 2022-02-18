@@ -1,0 +1,12 @@
+{
+  "Root": "x:CT_Metadata",
+  "Name": "CellMetadataPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheetMetadata\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sheetMetadata",
+  "Target": "metadata",
+  "RootElement": "metadata",
+  "Paths": {
+    "General": "."
+  }
+}

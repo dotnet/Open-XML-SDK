@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "a:CT_OfficeArtExtensionList/wetp:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "wetp:CT_OsfTaskpane/wetp:taskpane",
+    "ClassName": "WebExtensionTaskpane"
+  },
+  {
+    "Name": "wetp:CT_OsfTaskpanes/wetp:taskpanes",
+    "ClassName": "Taskpanes",
+    "PartClassName": "WebExTaskpanesPart"
+  },
+  {
+    "Name": "we:CT_WebExtensionPartRef/wetp:webextensionref",
+    "ClassName": "WebExtensionPartReference"
+  }
+]

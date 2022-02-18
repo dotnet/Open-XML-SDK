@@ -1,0 +1,308 @@
+[
+  {
+    "Name": "x:CT_PivotCaches/",
+    "ClassName": "OpenXmlPivotCachesElement"
+  },
+  {
+    "Name": "x15:CT_SurveyElementPr/",
+    "ClassName": "OpenXmlSurveyElementPrElement"
+  },
+  {
+    "Name": "x15:CT_TimelineRange/",
+    "ClassName": "TimelineRange"
+  },
+  {
+    "Name": "x15:CT_FieldListActiveTabTopLevelEntity/x15:activeTabTopLevelEntity",
+    "ClassName": "FieldListActiveTabTopLevelEntity"
+  },
+  {
+    "Name": "x:CT_AutoFilter/x15:autoFilter",
+    "ClassName": "AutoFilter"
+  },
+  {
+    "Name": "x15:CT_TimelineRange/x15:bounds",
+    "ClassName": "BoundsTimelineRange"
+  },
+  {
+    "Name": "x15:CT_PivotValueCell/x15:c",
+    "ClassName": "PivotValueCell"
+  },
+  {
+    "Name": "x15:CT_CachedUniqueName/x15:cachedUniqueName",
+    "ClassName": "CachedUniqueName"
+  },
+  {
+    "Name": "x15:CT_CachedUniqueNames/x15:cachedUniqueNames",
+    "ClassName": "CachedUniqueNames"
+  },
+  {
+    "Name": "x15:CT_CacheHierarchy/x15:cacheHierarchy",
+    "ClassName": "CacheHierarchy"
+  },
+  {
+    "Name": "x15:CT_CalculatedMember/x15:calculatedMember",
+    "ClassName": "CalculatedMember"
+  },
+  {
+    "Name": "x15:CT_Connection/x15:connection",
+    "ClassName": "Connection"
+  },
+  {
+    "Name": "x15:CT_DataFeedPr/x15:dataFeedPr",
+    "ClassName": "DataFeedProperties"
+  },
+  {
+    "Name": "x15:CT_DataField/x15:dataField",
+    "ClassName": "DataField"
+  },
+  {
+    "Name": "x15:CT_DataModel/x15:dataModel",
+    "ClassName": "DataModel"
+  },
+  {
+    "Name": "x15:CT_DbCommand/x15:dbCommand",
+    "ClassName": "DbCommand"
+  },
+  {
+    "Name": "x15:CT_DbTable/x15:dbTable",
+    "ClassName": "DbTable"
+  },
+  {
+    "Name": "x15:CT_DbTables/x15:dbTables",
+    "ClassName": "DbTables"
+  },
+  {
+    "Name": "x15:CT_SurveyElementPr/x15:descriptionPr",
+    "ClassName": "DescriptionPrSurveyElementPr"
+  },
+  {
+    "Name": "x:CT_Dxfs/x15:dxfs",
+    "ClassName": "DifferentialFormats"
+  },
+  {
+    "Name": "x:CT_ExtensionList/x15:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "x15:CT_ModelRelationship/x15:modelRelationship",
+    "ClassName": "ModelRelationship"
+  },
+  {
+    "Name": "x15:CT_ModelRelationships/x15:modelRelationships",
+    "ClassName": "ModelRelationships"
+  },
+  {
+    "Name": "x15:CT_ModelTable/x15:modelTable",
+    "ClassName": "ModelTable"
+  },
+  {
+    "Name": "x15:CT_ModelTables/x15:modelTables",
+    "ClassName": "ModelTables"
+  },
+  {
+    "Name": "x15:CT_ModelTextPr/x15:modelTextPr",
+    "ClassName": "ModelTextProperties"
+  },
+  {
+    "Name": "x15:CT_MovingPeriodState/x15:movingPeriodState",
+    "ClassName": "MovingPeriodState"
+  },
+  {
+    "Name": "x15:CT_OledbPr/x15:oledbPr",
+    "ClassName": "OleDbPrpoperties"
+  },
+  {
+    "Name": "x15:CT_PivotCacheDecoupled/x15:pivotCacheDecoupled",
+    "ClassName": "PivotCacheDecoupled"
+  },
+  {
+    "Name": "x15:CT_PivotCacheIdVersion/x15:pivotCacheIdVersion",
+    "ClassName": "PivotCacheIdVersion"
+  },
+  {
+    "Name": "x:CT_PivotCaches/x15:pivotCaches",
+    "ClassName": "PivotCaches"
+  },
+  {
+    "Name": "x15:CT_PivotFilter/x15:pivotFilter",
+    "ClassName": "PivotFilter"
+  },
+  {
+    "Name": "x15:CT_PivotRow/x15:pivotRow",
+    "ClassName": "PivotRow"
+  },
+  {
+    "Name": "x15:CT_TimelineCachePivotTable/x15:pivotTable",
+    "ClassName": "TimelineCachePivotTable"
+  },
+  {
+    "Name": "x15:CT_PivotTableData/x15:pivotTableData",
+    "ClassName": "PivotTableData"
+  },
+  {
+    "Name": "x15:CT_PivotTableReference/x15:pivotTableReference",
+    "ClassName": "PivotTableReference"
+  },
+  {
+    "Name": "x15:CT_PivotTableReferences/x15:pivotTableReferences",
+    "ClassName": "PivotTableReferences"
+  },
+  {
+    "Name": "x15:CT_TimelineCachePivotTables/x15:pivotTables",
+    "ClassName": "TimelineCachePivotTables"
+  },
+  {
+    "Name": "x15:CT_PivotTableServerFormats/x15:pivotTableServerFormats",
+    "ClassName": "PivotTableServerFormats"
+  },
+  {
+    "Name": "x15:CT_PivotTableUISettings/x15:pivotTableUISettings",
+    "ClassName": "PivotTableUISettings"
+  },
+  {
+    "Name": "x15:CT_QueryTable/x15:queryTable",
+    "ClassName": "QueryTable"
+  },
+  {
+    "Name": "x15:CT_SurveyQuestion/x15:question",
+    "ClassName": "SurveyQuestion"
+  },
+  {
+    "Name": "x15:CT_SurveyElementPr/x15:questionPr",
+    "ClassName": "QuestionPrSurveyElementPr"
+  },
+  {
+    "Name": "x15:CT_SurveyQuestions/x15:questions",
+    "ClassName": "SurveyQuestions"
+  },
+  {
+    "Name": "x15:CT_SurveyElementPr/x15:questionsPr",
+    "ClassName": "QuestionsPrSurveyElementPr"
+  },
+  {
+    "Name": "x15:CT_RangePr/x15:rangePr",
+    "ClassName": "RangeProperties"
+  },
+  {
+    "Name": "x15:CT_TimelineRange/x15:selection",
+    "ClassName": "SelectionTimelineRange"
+  },
+  {
+    "Name": "x:CT_ServerFormat/x15:serverFormat",
+    "ClassName": "ServerFormat"
+  },
+  {
+    "Name": "x15:CT_SlicerCacheHideNoData/x15:slicerCacheHideItemsWithNoData",
+    "ClassName": "SlicerCacheHideItemsWithNoData"
+  },
+  {
+    "Name": "x15:CT_SlicerCacheOlapLevelName/x15:slicerCacheOlapLevelName",
+    "ClassName": "SlicerCacheOlapLevelName"
+  },
+  {
+    "Name": "x14:CT_SlicerCachePivotTables/x15:slicerCachePivotTables",
+    "ClassName": "SlicerCachePivotTables"
+  },
+  {
+    "Name": "x14:CT_SlicerCaches/x15:slicerCaches",
+    "ClassName": "SlicerCaches"
+  },
+  {
+    "Name": "x15:CT_TimelineState/x15:state",
+    "ClassName": "TimelineState"
+  },
+  {
+    "Name": "x15:CT_Survey/x15:survey",
+    "ClassName": "Survey"
+  },
+  {
+    "Name": "x15:CT_SurveyElementPr/x15:surveyPr",
+    "ClassName": "SurveyPrSurveyElementPr"
+  },
+  {
+    "Name": "x15:CT_TableSlicerCache/x15:tableSlicerCache",
+    "ClassName": "TableSlicerCache"
+  },
+  {
+    "Name": "x:CT_TextPr/x15:textPr",
+    "ClassName": "TextProperties"
+  },
+  {
+    "Name": "x15:CT_Timeline/x15:timeline",
+    "ClassName": "Timeline"
+  },
+  {
+    "Name": "x15:CT_TimelineCacheDefinition/x15:timelineCacheDefinition",
+    "ClassName": "TimelineCacheDefinition",
+    "PartClassName": "TimeLineCachePart"
+  },
+  {
+    "Name": "x:CT_PivotCaches/x15:timelineCachePivotCaches",
+    "ClassName": "TimelineCachePivotCaches"
+  },
+  {
+    "Name": "x15:CT_TimelineCacheRef/x15:timelineCacheRef",
+    "ClassName": "TimelineCacheReference"
+  },
+  {
+    "Name": "x15:CT_TimelineCacheRefs/x15:timelineCacheRefs",
+    "ClassName": "TimelineCacheReferences"
+  },
+  {
+    "Name": "x15:CT_TimelinePivotCacheDefinition/x15:timelinePivotCacheDefinition",
+    "ClassName": "TimelinePivotCacheDefinition"
+  },
+  {
+    "Name": "x15:CT_TimelineRef/x15:timelineRef",
+    "ClassName": "TimelineReference"
+  },
+  {
+    "Name": "x15:CT_TimelineRefs/x15:timelineRefs",
+    "ClassName": "TimelineReferences"
+  },
+  {
+    "Name": "x15:CT_Timelines/x15:timelines",
+    "ClassName": "Timelines",
+    "PartClassName": "TimeLinePart"
+  },
+  {
+    "Name": "x15:CT_TimelineStyle/x15:timelineStyle",
+    "ClassName": "TimelineStyle"
+  },
+  {
+    "Name": "x15:CT_TimelineStyleElement/x15:timelineStyleElement",
+    "ClassName": "TimelineStyleElement"
+  },
+  {
+    "Name": "x15:CT_TimelineStyleElements/x15:timelineStyleElements",
+    "ClassName": "TimelineStyleElements"
+  },
+  {
+    "Name": "x15:CT_TimelineStyles/x15:timelineStyles",
+    "ClassName": "TimelineStyles"
+  },
+  {
+    "Name": "x15:CT_SurveyElementPr/x15:titlePr",
+    "ClassName": "TitlePrSurveyElementPr"
+  },
+  {
+    "Name": "x:ST_Xstring/x15:v",
+    "ClassName": "Xstring"
+  },
+  {
+    "Name": "x15:CT_WebExtension/x15:webExtension",
+    "ClassName": "WebExtension"
+  },
+  {
+    "Name": "x15:CT_WebExtensions/x15:webExtensions",
+    "ClassName": "WebExtensions"
+  },
+  {
+    "Name": "x15:CT_WorkbookPr/x15:workbookPr",
+    "ClassName": "WorkbookProperties"
+  },
+  {
+    "Name": "x15:CT_PivotValueCellExtra/x15:x",
+    "ClassName": "PivotValueCellExtra"
+  }
+]

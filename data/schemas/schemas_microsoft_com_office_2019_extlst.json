@@ -1,0 +1,41 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/2019/extlst",
+  "Types": [
+    {
+      "Name": "oel:CT_Extension/oel:ext",
+      "ClassName": "Extension",
+      "Summary": "Defines the Extension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "uri",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any"
+          }
+        ]
+      }
+    }
+  ]
+}

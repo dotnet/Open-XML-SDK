@@ -1,0 +1,11 @@
+{
+  "Name": "StyleDefinitionsPart",
+  "Base": "StylesPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.styles\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles",
+  "Target": "styles",
+  "RootElement": "styles",
+  "Paths": {
+    "General": "."
+  }
+}

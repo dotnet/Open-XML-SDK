@@ -1,0 +1,38 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2010/compatibility",
+  "Types": [
+    {
+      "Name": "com14:CT_CompatShape/com14:compatSp",
+      "ClassName": "CompatibilityShape",
+      "Summary": "Defines the CompatibilityShape Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":spid",
+          "PropertyName": "ShapeId",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "spid",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

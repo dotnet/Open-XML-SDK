@@ -1,0 +1,19 @@
+{
+  "TargetNamespace": "http://www.w3.org/XML/1998/namespace",
+  "Enums": [
+    {
+      "Type": "xml:ST_Space",
+      "Name": "SpaceProcessingModeValues",
+      "Facets": [
+        {
+          "Value": "default",
+          "Name": "Default"
+        },
+        {
+          "Value": "preserve",
+          "Name": "Preserve"
+        }
+      ]
+    }
+  ]
+}

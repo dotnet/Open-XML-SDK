@@ -1,0 +1,82 @@
+[
+  {
+    "Name": "wp:ST_AlignH/wp:align",
+    "ClassName": "HorizontalAlignment"
+  },
+  {
+    "Name": "wp:ST_AlignV/wp:align",
+    "ClassName": "VerticalAlignment"
+  },
+  {
+    "Name": "wp:CT_Anchor/wp:anchor",
+    "ClassName": "Anchor"
+  },
+  {
+    "Name": "a:CT_NonVisualGraphicFrameProperties/wp:cNvGraphicFramePr",
+    "ClassName": "NonVisualGraphicFrameDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/wp:docPr",
+    "ClassName": "DocProperties"
+  },
+  {
+    "Name": "wp:CT_EffectExtent/wp:effectExtent",
+    "ClassName": "EffectExtent"
+  },
+  {
+    "Name": "a:CT_PositiveSize2D/wp:extent",
+    "ClassName": "Extent"
+  },
+  {
+    "Name": "wp:CT_Inline/wp:inline",
+    "ClassName": "Inline"
+  },
+  {
+    "Name": "a:CT_Point2D/wp:lineTo",
+    "ClassName": "LineTo"
+  },
+  {
+    "Name": "wp:CT_PosH/wp:positionH",
+    "ClassName": "HorizontalPosition"
+  },
+  {
+    "Name": "wp:CT_PosV/wp:positionV",
+    "ClassName": "VerticalPosition"
+  },
+  {
+    "Name": "wp:ST_PositionOffset/wp:posOffset",
+    "ClassName": "PositionOffset"
+  },
+  {
+    "Name": "a:CT_Point2D/wp:simplePos",
+    "ClassName": "SimplePosition"
+  },
+  {
+    "Name": "a:CT_Point2D/wp:start",
+    "ClassName": "StartPoint"
+  },
+  {
+    "Name": "wp:CT_WrapNone/wp:wrapNone",
+    "ClassName": "WrapNone"
+  },
+  {
+    "Name": "wp:CT_WrapPath/wp:wrapPolygon",
+    "ClassName": "WrapPolygon"
+  },
+  {
+    "Name": "wp:CT_WrapSquare/wp:wrapSquare",
+    "ClassName": "WrapSquare"
+  },
+  {
+    "Name": "wp:CT_WrapThrough/wp:wrapThrough",
+    "ClassName": "WrapThrough"
+  },
+  {
+    "Name": "wp:CT_WrapTight/wp:wrapTight",
+    "ClassName": "WrapTight"
+  },
+  {
+    "Name": "wp:CT_WrapTopBottom/wp:wrapTopAndBottom",
+    "ClassName": "WrapTopBottom"
+  }
+]

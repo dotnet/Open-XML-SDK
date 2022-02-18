@@ -1,0 +1,1602 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2",
+  "Types": [
+    {
+      "Name": "xlrd2:CT_RichFilterColumn/xlrd2:filterColumn",
+      "ClassName": "RichFilterColumn",
+      "Summary": "Defines the RichFilterColumn Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xlrd2:CT_RichFilters/xlrd2:filters",
+          "PropertyName": "RichFilters"
+        },
+        {
+          "Name": "xlrd2:CT_RichTop10/xlrd2:top10",
+          "PropertyName": "RichTop10"
+        },
+        {
+          "Name": "xlrd2:CT_CustomRichFilters/xlrd2:customFilters",
+          "PropertyName": "CustomRichFilters"
+        },
+        {
+          "Name": "xlrd2:CT_DynamicRichFilter/xlrd2:dynamicFilter",
+          "PropertyName": "DynamicRichFilter"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlrd2:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {
+            "Max": 1
+          }
+        ],
+        "Items": [
+          {
+            "Name": "xlrd2:CT_RichFilters/xlrd2:filters",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "xlrd2:CT_RichTop10/xlrd2:top10",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "xlrd2:CT_CustomRichFilters/xlrd2:customFilters",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "xlrd2:CT_DynamicRichFilter/xlrd2:dynamicFilter",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xlrd2:extLst",
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichSortCondition/xlrd2:richSortCondition",
+      "ClassName": "RichSortCondition",
+      "Summary": "Defines the RichSortCondition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":richSortKey",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "richSortKey"
+        },
+        {
+          "QName": ":descending",
+          "PropertyName": "Descending",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "descending"
+        },
+        {
+          "QName": ":sortBy",
+          "PropertyName": "SortBy",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SortByValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "sortBy"
+        },
+        {
+          "QName": ":ref",
+          "PropertyName": "Reference",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "ref",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":customList",
+          "PropertyName": "CustomList",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "customList"
+        },
+        {
+          "QName": ":dxfId",
+          "PropertyName": "FormatId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "dxfId"
+        },
+        {
+          "QName": ":iconSet",
+          "PropertyName": "IconSet",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "iconSet"
+        },
+        {
+          "QName": ":iconId",
+          "PropertyName": "IconId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "iconId"
+        }
+      ]
+    },
+    {
+      "Name": "xlrd2:CT_SupportingPropertyBags/xlrd2:supportingPropertyBags",
+      "ClassName": "SupportingPropertyBags",
+      "Summary": "Defines the SupportingPropertyBags Class.",
+      "Part": "RdSupportingPropertyBagPart",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xlrd2:CT_SupportingPropertyBagArrayData/xlrd2:spbArrays",
+          "PropertyName": "SupportingPropertyBagArrayData"
+        },
+        {
+          "Name": "xlrd2:CT_SupportingPropertyBagData/xlrd2:spbData",
+          "PropertyName": "SupportingPropertyBagData"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_SupportingPropertyBagArrayData/xlrd2:spbArrays",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "xlrd2:CT_SupportingPropertyBagData/xlrd2:spbData",
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_SupportingPropertyBagStructures/xlrd2:spbStructures",
+      "ClassName": "SupportingPropertyBagStructures",
+      "Summary": "Defines the SupportingPropertyBagStructures Class.",
+      "Part": "RdSupportingPropertyBagStructurePart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "count",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xlrd2:CT_SupportingPropertyBagStructure/xlrd2:s"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlrd2:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_SupportingPropertyBagStructure/xlrd2:s",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xlrd2:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_ArrayData/xlrd2:arrayData",
+      "ClassName": "ArrayData",
+      "Summary": "Defines the ArrayData Class.",
+      "Part": "RdArrayPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "count",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xlrd2:CT_Array/xlrd2:a"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlrd2:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_Array/xlrd2:a",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xlrd2:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichStylesheet/xlrd2:richStyleSheet",
+      "ClassName": "RichStylesheet",
+      "Summary": "Defines the RichStylesheet Class.",
+      "Part": "RichStylesPart",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "x:CT_Dxfs/xlrd2:dxfs",
+          "PropertyName": "Dxfs"
+        },
+        {
+          "Name": "xlrd2:CT_RichFormatProperties/xlrd2:richProperties",
+          "PropertyName": "RichFormatProperties"
+        },
+        {
+          "Name": "xlrd2:CT_RichStyles/xlrd2:richStyles",
+          "PropertyName": "RichStyles"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlrd2:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_Dxfs/xlrd2:dxfs",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "xlrd2:CT_RichFormatProperties/xlrd2:richProperties",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "xlrd2:CT_RichStyles/xlrd2:richStyles",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xlrd2:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichValueTypesInfo/xlrd2:rvTypesInfo",
+      "ClassName": "RichValueTypesInfo",
+      "Summary": "Defines the RichValueTypesInfo Class.",
+      "Part": "RdRichValueTypesPart",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xlrd2:CT_RichValueGlobalType/xlrd2:global",
+          "PropertyName": "RichValueGlobalType"
+        },
+        {
+          "Name": "xlrd2:CT_RichValueTypes/xlrd2:types",
+          "PropertyName": "RichValueTypes"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlrd2:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_RichValueGlobalType/xlrd2:global",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "xlrd2:CT_RichValueTypes/xlrd2:types",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xlrd2:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichFilters/xlrd2:filters",
+      "ClassName": "RichFilters",
+      "Summary": "Defines the RichFilters Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xlrd2:CT_RichFilter/xlrd2:filter"
+        },
+        {
+          "Name": "xlrd2:CT_RichDateGroupItem/xlrd2:dateGroupItem"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlrd2:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_RichFilter/xlrd2:filter",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "xlrd2:CT_RichDateGroupItem/xlrd2:dateGroupItem",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xlrd2:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichTop10/xlrd2:top10",
+      "ClassName": "RichTop10",
+      "Summary": "Defines the RichTop10 Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":key",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "key"
+        },
+        {
+          "QName": ":top",
+          "PropertyName": "Top",
+          "Type": "BooleanValue",
+          "PropertyComments": "Top"
+        },
+        {
+          "QName": ":percent",
+          "PropertyName": "Percent",
+          "Type": "BooleanValue",
+          "PropertyComments": "Filter by Percent"
+        },
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "DoubleValue",
+          "PropertyComments": "Top or Bottom Value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":filterVal",
+          "PropertyName": "FilterValue",
+          "Type": "DoubleValue",
+          "PropertyComments": "Filter Value"
+        }
+      ]
+    },
+    {
+      "Name": "xlrd2:CT_CustomRichFilters/xlrd2:customFilters",
+      "ClassName": "CustomRichFilters",
+      "Summary": "Defines the CustomRichFilters Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":and",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "and"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xlrd2:CT_CustomRichFilter/xlrd2:customFilter"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlrd2:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {
+                "Min": 1,
+                "Max": 2
+              }
+            ],
+            "Items": [
+              {
+                "Name": "xlrd2:CT_CustomRichFilter/xlrd2:customFilter",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ],
+                "InitialVersion": "Office2019"
+              },
+              {
+                "Name": "x:CT_ExtensionList/xlrd2:extLst",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ],
+                "InitialVersion": "Office2019"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_DynamicRichFilter/xlrd2:dynamicFilter",
+      "ClassName": "DynamicRichFilter",
+      "Summary": "Defines the DynamicRichFilter Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":key",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "key"
+        },
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues\u003E",
+          "PropertyComments": "Dynamic filter type",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "DoubleValue",
+          "PropertyComments": "Value"
+        },
+        {
+          "QName": ":maxVal",
+          "PropertyName": "MaxVal",
+          "Type": "DoubleValue",
+          "PropertyComments": "Max Value"
+        },
+        {
+          "QName": ":valIso",
+          "PropertyName": "ValIso",
+          "Type": "DateTimeValue",
+          "Version": "Office2010",
+          "PropertyComments": "valIso",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":maxValIso",
+          "PropertyName": "MaxValIso",
+          "Type": "DateTimeValue",
+          "Version": "Office2010",
+          "PropertyComments": "maxValIso",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "x:CT_ExtensionList/xlrd2:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "x:CT_Extension/x:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "x:CT_Extension/x:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichFilter/xlrd2:filter",
+      "ClassName": "RichFilter",
+      "Summary": "Defines the RichFilter Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":key",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "key"
+        },
+        {
+          "QName": ":val",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "val"
+        },
+        {
+          "QName": ":blank",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "blank"
+        },
+        {
+          "QName": ":nodata",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "nodata"
+        }
+      ]
+    },
+    {
+      "Name": "xlrd2:CT_RichDateGroupItem/xlrd2:dateGroupItem",
+      "ClassName": "RichDateGroupItem",
+      "Summary": "Defines the RichDateGroupItem Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":key",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "key"
+        },
+        {
+          "QName": ":year",
+          "PropertyName": "Year",
+          "Type": "UInt16Value",
+          "PropertyComments": "Year",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":month",
+          "PropertyName": "Month",
+          "Type": "UInt16Value",
+          "PropertyComments": "Month"
+        },
+        {
+          "QName": ":day",
+          "PropertyName": "Day",
+          "Type": "UInt16Value",
+          "PropertyComments": "Day"
+        },
+        {
+          "QName": ":hour",
+          "PropertyName": "Hour",
+          "Type": "UInt16Value",
+          "PropertyComments": "Hour"
+        },
+        {
+          "QName": ":minute",
+          "PropertyName": "Minute",
+          "Type": "UInt16Value",
+          "PropertyComments": "Minute"
+        },
+        {
+          "QName": ":second",
+          "PropertyName": "Second",
+          "Type": "UInt16Value",
+          "PropertyComments": "Second"
+        },
+        {
+          "QName": ":dateTimeGrouping",
+          "PropertyName": "DateTimeGrouping",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues\u003E",
+          "PropertyComments": "Date Time Grouping",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xlrd2:CT_CustomRichFilter/xlrd2:customFilter",
+      "ClassName": "CustomRichFilter",
+      "Summary": "Defines the CustomRichFilter Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":key",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "key"
+        },
+        {
+          "QName": ":operator",
+          "PropertyName": "Operator",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues\u003E",
+          "PropertyComments": "Filter Comparison Operator"
+        },
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "StringValue",
+          "PropertyComments": "Top or Bottom Value"
+        }
+      ]
+    },
+    {
+      "Name": "xlrd2:CT_SupportingPropertyBagArrayData/xlrd2:spbArrays",
+      "ClassName": "SupportingPropertyBagArrayData",
+      "Summary": "Defines the SupportingPropertyBagArrayData Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "count",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xlrd2:CT_SupportingPropertyBagArray/xlrd2:a"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlrd2:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_SupportingPropertyBagArray/xlrd2:a",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xlrd2:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_SupportingPropertyBagData/xlrd2:spbData",
+      "ClassName": "SupportingPropertyBagData",
+      "Summary": "Defines the SupportingPropertyBagData Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "count",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xlrd2:CT_SupportingPropertyBag/xlrd2:spb"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlrd2:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_SupportingPropertyBag/xlrd2:spb",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xlrd2:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_SupportingPropertyBag/xlrd2:spb",
+      "ClassName": "SupportingPropertyBag",
+      "Summary": "Defines the SupportingPropertyBag Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":s",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "s",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xlrd2:CT_SupportingPropertyBagValue/xlrd2:v"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_SupportingPropertyBagValue/xlrd2:v",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_SupportingPropertyBagValue/xlrd2:v",
+      "ClassName": "SupportingPropertyBagValue",
+      "Summary": "Defines the SupportingPropertyBagValue Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "xlrd2:CT_SupportingPropertyBagStructure/xlrd2:s",
+      "ClassName": "SupportingPropertyBagStructure",
+      "Summary": "Defines the SupportingPropertyBagStructure Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xlrd2:CT_SupportingPropertyBagKey/xlrd2:k"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_SupportingPropertyBagKey/xlrd2:k",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_SupportingPropertyBagKey/xlrd2:k",
+      "ClassName": "SupportingPropertyBagKey",
+      "Summary": "Defines the SupportingPropertyBagKey Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":n",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "n",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":t",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValueType\u003E",
+          "Version": "Office2019",
+          "PropertyComments": "t"
+        }
+      ]
+    },
+    {
+      "Name": "xlrd2:CT_SupportingPropertyBagArray/xlrd2:a",
+      "ClassName": "SupportingPropertyBagArray",
+      "Summary": "Defines the SupportingPropertyBagArray Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "count",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xlrd2:CT_SupportingPropertyBagArrayValue/xlrd2:v"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_SupportingPropertyBagArrayValue/xlrd2:v",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_SupportingPropertyBagArrayValue/xlrd2:v",
+      "ClassName": "SupportingPropertyBagArrayValue",
+      "Summary": "Defines the SupportingPropertyBagArrayValue Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":t",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValueType\u003E",
+          "Version": "Office2019",
+          "PropertyComments": "t"
+        }
+      ]
+    },
+    {
+      "Name": "xlrd2:CT_Array/xlrd2:a",
+      "ClassName": "Array",
+      "Summary": "Defines the Array Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":r",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "r",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":c",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "c"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xlrd2:CT_ArrayValue/xlrd2:v"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_ArrayValue/xlrd2:v",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_ArrayValue/xlrd2:v",
+      "ClassName": "ArrayValue",
+      "Summary": "Defines the ArrayValue Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":t",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValueType\u003E",
+          "Version": "Office2019",
+          "PropertyComments": "t"
+        }
+      ]
+    },
+    {
+      "Name": "x:CT_Dxfs/xlrd2:dxfs",
+      "ClassName": "Dxfs",
+      "Summary": "Defines the Dxfs Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Format Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_Dxf/x:dxf"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_Dxf/x:dxf",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichFormatProperties/xlrd2:richProperties",
+      "ClassName": "RichFormatProperties",
+      "Summary": "Defines the RichFormatProperties Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xlrd2:CT_RichFormatProperty/xlrd2:rPr"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_RichFormatProperty/xlrd2:rPr",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichStyles/xlrd2:richStyles",
+      "ClassName": "RichStyles",
+      "Summary": "Defines the RichStyles Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xlrd2:CT_RichStyle/xlrd2:rSty"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_RichStyle/xlrd2:rSty",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichFormatProperty/xlrd2:rPr",
+      "ClassName": "RichFormatProperty",
+      "Summary": "Defines the RichFormatProperty Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":n",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "n",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":t",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatPropertyType\u003E",
+          "Version": "Office2019",
+          "PropertyComments": "t",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xlrd2:CT_RichStyle/xlrd2:rSty",
+      "ClassName": "RichStyle",
+      "Summary": "Defines the RichStyle Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":dxfid",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "dxfid"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xlrd2:CT_RichStylePropertyValue/xlrd2:rpv"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_RichStylePropertyValue/xlrd2:rpv",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichStylePropertyValue/xlrd2:rpv",
+      "ClassName": "RichStylePropertyValue",
+      "Summary": "Defines the RichStylePropertyValue Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":i",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "i",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xlrd2:CT_RichValueGlobalType/xlrd2:global",
+      "ClassName": "RichValueGlobalType",
+      "Summary": "Defines the RichValueGlobalType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xlrd2:CT_RichValueTypeKeyFlags/xlrd2:keyFlags",
+          "PropertyName": "RichValueTypeKeyFlags"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlrd2:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_RichValueTypeKeyFlags/xlrd2:keyFlags",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xlrd2:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichValueTypes/xlrd2:types",
+      "ClassName": "RichValueTypes",
+      "Summary": "Defines the RichValueTypes Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xlrd2:CT_RichValueType/xlrd2:type"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_RichValueType/xlrd2:type",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichValueType/xlrd2:type",
+      "ClassName": "RichValueType",
+      "Summary": "Defines the RichValueType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xlrd2:CT_RichValueTypeKeyFlags/xlrd2:keyFlags",
+          "PropertyName": "RichValueTypeKeyFlags"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlrd2:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_RichValueTypeKeyFlags/xlrd2:keyFlags",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xlrd2:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichValueTypeKeyFlags/xlrd2:keyFlags",
+      "ClassName": "RichValueTypeKeyFlags",
+      "Summary": "Defines the RichValueTypeKeyFlags Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xlrd2:CT_RichValueTypeReservedKey/xlrd2:key"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_RichValueTypeReservedKey/xlrd2:key",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichValueTypeReservedKey/xlrd2:key",
+      "ClassName": "RichValueTypeReservedKey",
+      "Summary": "Defines the RichValueTypeReservedKey Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xlrd2:CT_RichValueTypeReservedKeyFlag/xlrd2:flag"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrd2:CT_RichValueTypeReservedKeyFlag/xlrd2:flag",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrd2:CT_RichValueTypeReservedKeyFlag/xlrd2:flag",
+      "ClassName": "RichValueTypeReservedKeyFlag",
+      "Summary": "Defines the RichValueTypeReservedKeyFlag Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":value",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "xlrd2:ST_SupportingPropertyBagValueType",
+      "Name": "SupportingPropertyBagValueType",
+      "Facets": [
+        {
+          "Version": "Office2019",
+          "Value": "d"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "i"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "b"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "s"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "spb"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "spba"
+        }
+      ],
+      "Version": "Office2019"
+    },
+    {
+      "Type": "xlrd2:ST_SupportingPropertyBagArrayValueType",
+      "Name": "SupportingPropertyBagArrayValueType",
+      "Facets": [
+        {
+          "Version": "Office2019",
+          "Value": "d"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "i"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "b"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "s"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "spb"
+        }
+      ],
+      "Version": "Office2019"
+    },
+    {
+      "Type": "xlrd2:ST_ArrayValueType",
+      "Name": "ArrayValueType",
+      "Facets": [
+        {
+          "Version": "Office2019",
+          "Value": "d"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "i"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "b"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "e"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "s"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "r"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "a"
+        }
+      ],
+      "Version": "Office2019"
+    },
+    {
+      "Type": "xlrd2:ST_RichFormatPropertyType",
+      "Name": "RichFormatPropertyType",
+      "Facets": [
+        {
+          "Version": "Office2019",
+          "Value": "b"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "n"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "i"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "s"
+        }
+      ],
+      "Version": "Office2019"
+    }
+  ]
+}

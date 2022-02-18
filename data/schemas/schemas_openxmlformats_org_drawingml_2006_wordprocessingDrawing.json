@@ -1,0 +1,1525 @@
+{
+  "TargetNamespace": "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing",
+  "Types": [
+    {
+      "Name": "wp:CT_WrapNone/wp:wrapNone",
+      "ClassName": "WrapNone",
+      "Summary": "No Text Wrapping.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true
+    },
+    {
+      "Name": "wp:CT_WrapSquare/wp:wrapSquare",
+      "ClassName": "WrapSquare",
+      "Summary": "Square Wrapping.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":wrapText",
+          "PropertyName": "WrapText",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues\u003E",
+          "PropertyComments": "Text Wrapping Location",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":distT",
+          "PropertyName": "DistanceFromTop",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text (Top)"
+        },
+        {
+          "QName": ":distB",
+          "PropertyName": "DistanceFromBottom",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Bottom Edge"
+        },
+        {
+          "QName": ":distL",
+          "PropertyName": "DistanceFromLeft",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Left Edge"
+        },
+        {
+          "QName": ":distR",
+          "PropertyName": "DistanceFromRight",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Right Edge"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "wp:CT_EffectExtent/wp:effectExtent",
+          "PropertyName": "EffectExtent",
+          "PropertyComments": "Object Extents Including Effects"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wp:CT_EffectExtent/wp:effectExtent",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wp:CT_WrapTight/wp:wrapTight",
+      "ClassName": "WrapTight",
+      "Summary": "Tight Wrapping.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":wrapText",
+          "PropertyName": "WrapText",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues\u003E",
+          "PropertyComments": "Text Wrapping Location",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":distL",
+          "PropertyName": "DistanceFromLeft",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Test on Left Edge"
+        },
+        {
+          "QName": ":distR",
+          "PropertyName": "DistanceFromRight",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Right Edge"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "wp:CT_WrapPath/wp:wrapPolygon",
+          "PropertyName": "WrapPolygon",
+          "PropertyComments": "Tight Wrapping Extents Polygon"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wp:CT_WrapPath/wp:wrapPolygon"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wp:CT_WrapThrough/wp:wrapThrough",
+      "ClassName": "WrapThrough",
+      "Summary": "Through Wrapping.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":wrapText",
+          "PropertyName": "WrapText",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues\u003E",
+          "PropertyComments": "Text Wrapping Location",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":distL",
+          "PropertyName": "DistanceFromLeft",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Left Edge"
+        },
+        {
+          "QName": ":distR",
+          "PropertyName": "DistanceFromRight",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Right Edge"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "wp:CT_WrapPath/wp:wrapPolygon",
+          "PropertyName": "WrapPolygon",
+          "PropertyComments": "Wrapping Polygon"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wp:CT_WrapPath/wp:wrapPolygon"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wp:CT_WrapTopBottom/wp:wrapTopAndBottom",
+      "ClassName": "WrapTopBottom",
+      "Summary": "Top and Bottom Wrapping.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":distT",
+          "PropertyName": "DistanceFromTop",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Top Edge"
+        },
+        {
+          "QName": ":distB",
+          "PropertyName": "DistanceFromBottom",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Bottom Edge"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "wp:CT_EffectExtent/wp:effectExtent",
+          "PropertyName": "EffectExtent",
+          "PropertyComments": "Wrapping Boundaries"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wp:CT_EffectExtent/wp:effectExtent",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wp:CT_Inline/wp:inline",
+      "ClassName": "Inline",
+      "Summary": "Inline DrawingML Object.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":distT",
+          "PropertyName": "DistanceFromTop",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Top Edge"
+        },
+        {
+          "QName": ":distB",
+          "PropertyName": "DistanceFromBottom",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Bottom Edge"
+        },
+        {
+          "QName": ":distL",
+          "PropertyName": "DistanceFromLeft",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Left Edge"
+        },
+        {
+          "QName": ":distR",
+          "PropertyName": "DistanceFromRight",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Right Edge"
+        },
+        {
+          "QName": "wp14:anchorId",
+          "Type": "HexBinaryValue",
+          "Version": "Office2010",
+          "PropertyComments": "anchorId",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "4"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "wp14:editId",
+          "PropertyName": "EditId",
+          "Type": "HexBinaryValue",
+          "Version": "Office2010",
+          "PropertyComments": "editId",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "4"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_PositiveSize2D/wp:extent",
+          "PropertyName": "Extent",
+          "PropertyComments": "Drawing Object Size"
+        },
+        {
+          "Name": "wp:CT_EffectExtent/wp:effectExtent",
+          "PropertyName": "EffectExtent",
+          "PropertyComments": "Inline Wrapping Extent"
+        },
+        {
+          "Name": "a:CT_NonVisualDrawingProps/wp:docPr",
+          "PropertyName": "DocProperties",
+          "PropertyComments": "Drawing Object Non-Visual Properties"
+        },
+        {
+          "Name": "a:CT_NonVisualGraphicFrameProperties/wp:cNvGraphicFramePr",
+          "PropertyName": "NonVisualGraphicFrameDrawingProperties",
+          "PropertyComments": "Common DrawingML Non-Visual Properties"
+        },
+        {
+          "Name": "a:CT_GraphicalObject/a:graphic",
+          "PropertyName": "Graphic"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_PositiveSize2D/wp:extent"
+          },
+          {
+            "Name": "wp:CT_EffectExtent/wp:effectExtent",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_NonVisualDrawingProps/wp:docPr"
+          },
+          {
+            "Name": "a:CT_NonVisualGraphicFrameProperties/wp:cNvGraphicFramePr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_GraphicalObject/a:graphic"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wp:CT_Anchor/wp:anchor",
+      "ClassName": "Anchor",
+      "Summary": "Anchor for Floating DrawingML Object.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":distT",
+          "PropertyName": "DistanceFromTop",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Top Edge"
+        },
+        {
+          "QName": ":distB",
+          "PropertyName": "DistanceFromBottom",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Bottom Edge"
+        },
+        {
+          "QName": ":distL",
+          "PropertyName": "DistanceFromLeft",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Left Edge"
+        },
+        {
+          "QName": ":distR",
+          "PropertyName": "DistanceFromRight",
+          "Type": "UInt32Value",
+          "PropertyComments": "Distance From Text on Right Edge"
+        },
+        {
+          "QName": ":simplePos",
+          "PropertyName": "SimplePos",
+          "Type": "BooleanValue",
+          "PropertyComments": "Page Positioning"
+        },
+        {
+          "QName": ":relativeHeight",
+          "PropertyName": "RelativeHeight",
+          "Type": "UInt32Value",
+          "PropertyComments": "Relative Z-Ordering Position",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":behindDoc",
+          "PropertyName": "BehindDoc",
+          "Type": "BooleanValue",
+          "PropertyComments": "Display Behind Document Text",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":locked",
+          "PropertyName": "Locked",
+          "Type": "BooleanValue",
+          "PropertyComments": "Lock Anchor",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":layoutInCell",
+          "PropertyName": "LayoutInCell",
+          "Type": "BooleanValue",
+          "PropertyComments": "Layout In Table Cell",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":hidden",
+          "PropertyName": "Hidden",
+          "Type": "BooleanValue",
+          "PropertyComments": "Hidden"
+        },
+        {
+          "QName": ":allowOverlap",
+          "PropertyName": "AllowOverlap",
+          "Type": "BooleanValue",
+          "PropertyComments": "Allow Objects to Overlap",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": "wp14:editId",
+          "PropertyName": "EditId",
+          "Type": "HexBinaryValue",
+          "Version": "Office2010",
+          "PropertyComments": "editId",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "4"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "wp14:anchorId",
+          "Type": "HexBinaryValue",
+          "Version": "Office2010",
+          "PropertyComments": "anchorId",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "4"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Point2D/wp:simplePos",
+          "PropertyName": "SimplePosition",
+          "PropertyComments": "Simple Positioning Coordinates"
+        },
+        {
+          "Name": "wp:CT_PosH/wp:positionH",
+          "PropertyName": "HorizontalPosition",
+          "PropertyComments": "Horizontal Positioning"
+        },
+        {
+          "Name": "wp:CT_PosV/wp:positionV",
+          "PropertyName": "VerticalPosition",
+          "PropertyComments": "Vertical Positioning"
+        },
+        {
+          "Name": "a:CT_PositiveSize2D/wp:extent",
+          "PropertyName": "Extent",
+          "PropertyComments": "Inline Drawing Object Extents"
+        },
+        {
+          "Name": "wp:CT_EffectExtent/wp:effectExtent",
+          "PropertyName": "EffectExtent"
+        },
+        {
+          "Name": "wp:CT_WrapNone/wp:wrapNone"
+        },
+        {
+          "Name": "wp:CT_WrapSquare/wp:wrapSquare"
+        },
+        {
+          "Name": "wp:CT_WrapTight/wp:wrapTight"
+        },
+        {
+          "Name": "wp:CT_WrapThrough/wp:wrapThrough"
+        },
+        {
+          "Name": "wp:CT_WrapTopBottom/wp:wrapTopAndBottom"
+        },
+        {
+          "Name": "a:CT_NonVisualDrawingProps/wp:docPr"
+        },
+        {
+          "Name": "a:CT_NonVisualGraphicFrameProperties/wp:cNvGraphicFramePr"
+        },
+        {
+          "Name": "a:CT_GraphicalObject/a:graphic"
+        },
+        {
+          "Name": "wp14:CT_SizeRelH/wp14:sizeRelH"
+        },
+        {
+          "Name": "wp14:CT_SizeRelV/wp14:sizeRelV"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Point2D/wp:simplePos"
+          },
+          {
+            "Name": "wp:CT_PosH/wp:positionH"
+          },
+          {
+            "Name": "wp:CT_PosV/wp:positionV"
+          },
+          {
+            "Name": "a:CT_PositiveSize2D/wp:extent"
+          },
+          {
+            "Name": "wp:CT_EffectExtent/wp:effectExtent",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Kind": "Choice",
+                    "Items": [
+                      {
+                        "Name": "wp:CT_WrapNone/wp:wrapNone"
+                      },
+                      {
+                        "Name": "wp:CT_WrapSquare/wp:wrapSquare"
+                      },
+                      {
+                        "Name": "wp:CT_WrapTight/wp:wrapTight"
+                      },
+                      {
+                        "Name": "wp:CT_WrapThrough/wp:wrapThrough"
+                      },
+                      {
+                        "Name": "wp:CT_WrapTopBottom/wp:wrapTopAndBottom"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_NonVisualDrawingProps/wp:docPr"
+          },
+          {
+            "Name": "a:CT_NonVisualGraphicFrameProperties/wp:cNvGraphicFramePr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_GraphicalObject/a:graphic"
+          },
+          {
+            "Name": "wp14:CT_SizeRelH/wp14:sizeRelH",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "wp14:CT_SizeRelV/wp14:sizeRelV",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_Point2D/wp:start",
+      "ClassName": "StartPoint",
+      "Summary": "Wrapping Polygon Start.",
+      "BaseClass": "Point2DType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "a:CT_Point2D/wp:lineTo",
+      "ClassName": "LineTo",
+      "Summary": "Wrapping Polygon Line End Position.",
+      "BaseClass": "Point2DType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "a:CT_Point2D/wp:simplePos",
+      "ClassName": "SimplePosition",
+      "Summary": "Simple Positioning Coordinates.",
+      "BaseClass": "Point2DType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "a:CT_Point2D/",
+      "ClassName": "Point2DType",
+      "Summary": "Defines the Point2DType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":x",
+          "PropertyName": "X",
+          "Type": "Int64Value",
+          "PropertyComments": "X-Axis Coordinate",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":y",
+          "PropertyName": "Y",
+          "Type": "Int64Value",
+          "PropertyComments": "Y-Axis Coordinate",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "wp:CT_EffectExtent/wp:effectExtent",
+      "ClassName": "EffectExtent",
+      "Summary": "Object Extents Including Effects.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":l",
+          "PropertyName": "LeftEdge",
+          "Type": "Int64Value",
+          "PropertyComments": "Additional Extent on Left Edge",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":t",
+          "PropertyName": "TopEdge",
+          "Type": "Int64Value",
+          "PropertyComments": "Additional Extent on Top Edge",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":r",
+          "PropertyName": "RightEdge",
+          "Type": "Int64Value",
+          "PropertyComments": "Additional Extent on Right Edge",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":b",
+          "PropertyName": "BottomEdge",
+          "Type": "Int64Value",
+          "PropertyComments": "Additional Extent on Bottom Edge",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "wp:CT_WrapPath/wp:wrapPolygon",
+      "ClassName": "WrapPolygon",
+      "Summary": "Tight Wrapping Extents Polygon.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":edited",
+          "PropertyName": "Edited",
+          "Type": "BooleanValue",
+          "PropertyComments": "Wrapping Points Modified"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Point2D/wp:start",
+          "PropertyName": "StartPoint",
+          "PropertyComments": "Wrapping Polygon Start"
+        },
+        {
+          "Name": "a:CT_Point2D/wp:lineTo"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Point2D/wp:start"
+          },
+          {
+            "Name": "a:CT_Point2D/wp:lineTo",
+            "Occurs": [
+              {
+                "Min": 2
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wp:CT_PosH/wp:positionH",
+      "ClassName": "HorizontalPosition",
+      "Summary": "Horizontal Positioning.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":relativeFrom",
+          "PropertyName": "RelativeFrom",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues\u003E",
+          "PropertyComments": "Horizontal Position Relative Base",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "wp:ST_AlignH/wp:align",
+          "PropertyName": "HorizontalAlignment",
+          "PropertyComments": "Relative Horizontal Alignment"
+        },
+        {
+          "Name": "wp:ST_PositionOffset/wp:posOffset",
+          "PropertyName": "PositionOffset",
+          "PropertyComments": "Absolute Position Offset"
+        },
+        {
+          "Name": "a:ST_Percentage/wp14:pctPosHOffset",
+          "PropertyName": "PercentagePositionHeightOffset"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "wp:ST_AlignH/wp:align"
+              },
+              {
+                "Name": "wp:ST_PositionOffset/wp:posOffset"
+              },
+              {
+                "Name": "a:ST_Percentage/wp14:pctPosHOffset",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ],
+                "InitialVersion": "Office2010"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wp:CT_PosV/wp:positionV",
+      "ClassName": "VerticalPosition",
+      "Summary": "Vertical Positioning.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":relativeFrom",
+          "PropertyName": "RelativeFrom",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues\u003E",
+          "PropertyComments": "Vertical Position Relative Base",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "wp:ST_AlignV/wp:align",
+          "PropertyName": "VerticalAlignment",
+          "PropertyComments": "Relative Vertical Alignment"
+        },
+        {
+          "Name": "wp:ST_PositionOffset/wp:posOffset",
+          "PropertyName": "PositionOffset"
+        },
+        {
+          "Name": "a:ST_Percentage/wp14:pctPosVOffset",
+          "PropertyName": "PercentagePositionVerticalOffset"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "wp:ST_AlignV/wp:align"
+              },
+              {
+                "Name": "wp:ST_PositionOffset/wp:posOffset"
+              },
+              {
+                "Name": "a:ST_Percentage/wp14:pctPosVOffset",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ],
+                "InitialVersion": "Office2010"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_PositiveSize2D/wp:extent",
+      "ClassName": "Extent",
+      "Summary": "Inline Drawing Object Extents.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":cx",
+          "PropertyName": "Cx",
+          "Type": "Int64Value",
+          "PropertyComments": "Extent Length",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":cy",
+          "PropertyName": "Cy",
+          "Type": "Int64Value",
+          "PropertyComments": "Extent Width",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_NonVisualDrawingProps/wp:docPr",
+      "ClassName": "DocProperties",
+      "Summary": "Drawing Object Non-Visual Properties.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "UInt32Value",
+          "PropertyComments": "Application defined unique identifier.",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "Name compatible with Object Model (non-unique).",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":descr",
+          "PropertyName": "Description",
+          "Type": "StringValue",
+          "PropertyComments": "Description of the drawing element."
+        },
+        {
+          "QName": ":hidden",
+          "PropertyName": "Hidden",
+          "Type": "BooleanValue",
+          "PropertyComments": "Flag determining to show or hide this element."
+        },
+        {
+          "QName": ":title",
+          "PropertyName": "Title",
+          "Type": "StringValue",
+          "PropertyComments": "Title"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Hyperlink/a:hlinkClick",
+          "PropertyName": "HyperlinkOnClick",
+          "PropertyComments": "Hyperlink associated with clicking or selecting the element."
+        },
+        {
+          "Name": "a:CT_Hyperlink/a:hlinkHover",
+          "PropertyName": "HyperlinkOnHover",
+          "PropertyComments": "Hyperlink associated with hovering over the element."
+        },
+        {
+          "Name": "a:CT_NonVisualDrawingPropsExtensionList/a:extLst",
+          "PropertyName": "NonVisualDrawingPropertiesExtensionList",
+          "PropertyComments": "Future extension"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Hyperlink/a:hlinkClick",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Hyperlink/a:hlinkHover",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_NonVisualDrawingPropsExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_NonVisualGraphicFrameProperties/wp:cNvGraphicFramePr",
+      "ClassName": "NonVisualGraphicFrameDrawingProperties",
+      "Summary": "Defines the NonVisualGraphicFrameDrawingProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_GraphicalObjectFrameLocking/a:graphicFrameLocks",
+          "PropertyName": "GraphicFrameLocks",
+          "PropertyComments": "Graphic Frame Locks"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_GraphicalObjectFrameLocking/a:graphicFrameLocks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wp:ST_AlignV/wp:align",
+      "ClassName": "VerticalAlignment",
+      "Summary": "Relative Vertical Alignment.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Boolean",
+              "Name": "IsToken",
+              "Value": "True"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        },
+        {
+          "Name": "EnumValidator",
+          "Type": "wp:ST_AlignV"
+        }
+      ]
+    },
+    {
+      "Name": "wp:ST_PositionOffset/wp:posOffset",
+      "ClassName": "PositionOffset",
+      "Summary": "Defines the PositionOffset Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "wp:ST_PositionOffset",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "wp:ST_AlignH/wp:align",
+      "ClassName": "HorizontalAlignment",
+      "Summary": "Relative Horizontal Alignment.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Boolean",
+              "Name": "IsToken",
+              "Value": "True"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        },
+        {
+          "Name": "EnumValidator",
+          "Type": "wp:ST_AlignH"
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "wp:ST_WrapText",
+      "Name": "WrapTextValues",
+      "Summary": "Text Wrapping Location",
+      "Facets": [
+        {
+          "Comments": "Both Sides",
+          "Value": "bothSides",
+          "Name": "BothSides"
+        },
+        {
+          "Comments": "Left Side Only",
+          "Value": "left",
+          "Name": "Left"
+        },
+        {
+          "Comments": "Right Side Only",
+          "Value": "right",
+          "Name": "Right"
+        },
+        {
+          "Comments": "Largest Side Only",
+          "Value": "largest",
+          "Name": "Largest"
+        }
+      ]
+    },
+    {
+      "Type": "wp:ST_AlignH",
+      "Name": "HorizontalAlignmentValues",
+      "Summary": "Relative Horizontal Alignment Positions",
+      "Facets": [
+        {
+          "Comments": "Left Alignment",
+          "Value": "left",
+          "Name": "Left"
+        },
+        {
+          "Comments": "Right Alignment",
+          "Value": "right",
+          "Name": "Right"
+        },
+        {
+          "Comments": "Center Alignment",
+          "Value": "center",
+          "Name": "Center"
+        },
+        {
+          "Comments": "Inside",
+          "Value": "inside",
+          "Name": "Inside"
+        },
+        {
+          "Comments": "Outside",
+          "Value": "outside",
+          "Name": "Outside"
+        }
+      ]
+    },
+    {
+      "Type": "wp:ST_RelFromH",
+      "Name": "HorizontalRelativePositionValues",
+      "Summary": "Horizontal Relative Positioning",
+      "Facets": [
+        {
+          "Comments": "Page Margin",
+          "Value": "margin",
+          "Name": "Margin"
+        },
+        {
+          "Comments": "Page Edge",
+          "Value": "page",
+          "Name": "Page"
+        },
+        {
+          "Comments": "Column",
+          "Value": "column",
+          "Name": "Column"
+        },
+        {
+          "Comments": "Character",
+          "Value": "character",
+          "Name": "Character"
+        },
+        {
+          "Comments": "Left Margin",
+          "Value": "leftMargin",
+          "Name": "LeftMargin"
+        },
+        {
+          "Comments": "Right Margin",
+          "Value": "rightMargin",
+          "Name": "RightMargin"
+        },
+        {
+          "Comments": "Inside Margin",
+          "Value": "insideMargin",
+          "Name": "InsideMargin"
+        },
+        {
+          "Comments": "Outside Margin",
+          "Value": "outsideMargin",
+          "Name": "OutsideMargin"
+        }
+      ]
+    },
+    {
+      "Type": "wp:ST_AlignV",
+      "Name": "VerticalAlignmentValues",
+      "Summary": "Vertical Alignment Definition",
+      "Facets": [
+        {
+          "Comments": "Top",
+          "Value": "top",
+          "Name": "Top"
+        },
+        {
+          "Comments": "Bottom",
+          "Value": "bottom",
+          "Name": "Bottom"
+        },
+        {
+          "Comments": "Center Alignment",
+          "Value": "center",
+          "Name": "Center"
+        },
+        {
+          "Comments": "Inside",
+          "Value": "inside",
+          "Name": "Inside"
+        },
+        {
+          "Comments": "Outside",
+          "Value": "outside",
+          "Name": "Outside"
+        }
+      ]
+    },
+    {
+      "Type": "wp:ST_RelFromV",
+      "Name": "VerticalRelativePositionValues",
+      "Summary": "Vertical Relative Positioning",
+      "Facets": [
+        {
+          "Comments": "Page Margin",
+          "Value": "margin",
+          "Name": "Margin"
+        },
+        {
+          "Comments": "Page Edge",
+          "Value": "page",
+          "Name": "Page"
+        },
+        {
+          "Comments": "Paragraph",
+          "Value": "paragraph",
+          "Name": "Paragraph"
+        },
+        {
+          "Comments": "Line",
+          "Value": "line",
+          "Name": "Line"
+        },
+        {
+          "Comments": "Top Margin",
+          "Value": "topMargin",
+          "Name": "TopMargin"
+        },
+        {
+          "Comments": "Bottom Margin",
+          "Value": "bottomMargin",
+          "Name": "BottomMargin"
+        },
+        {
+          "Comments": "Inside Margin",
+          "Value": "insideMargin",
+          "Name": "InsideMargin"
+        },
+        {
+          "Comments": "Outside Margin",
+          "Value": "outsideMargin",
+          "Name": "OutsideMargin"
+        }
+      ]
+    }
+  ]
+}

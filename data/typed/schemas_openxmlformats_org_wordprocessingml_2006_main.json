@@ -1,0 +1,2917 @@
+[
+  {
+    "Name": "w:CT_Body/",
+    "ClassName": "BodyType"
+  },
+  {
+    "Name": "w:CT_Border/",
+    "ClassName": "BorderType"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/",
+    "ClassName": "DecimalNumberType"
+  },
+  {
+    "Name": "w:CT_Divs/",
+    "ClassName": "DivsType"
+  },
+  {
+    "Name": "w:CT_Empty/",
+    "ClassName": "EmptyType"
+  },
+  {
+    "Name": "w:CT_FontRel/",
+    "ClassName": "FontRelationshipType"
+  },
+  {
+    "Name": "w:CT_FtnEdn/",
+    "ClassName": "FootnoteEndnoteType"
+  },
+  {
+    "Name": "w:CT_FtnEdnRef/",
+    "ClassName": "FootnoteEndnoteReferenceType"
+  },
+  {
+    "Name": "w:CT_FtnEdnSepRef/",
+    "ClassName": "FootnoteEndnoteSeparatorReferenceType"
+  },
+  {
+    "Name": "w:CT_HdrFtr/",
+    "ClassName": "HeaderFooterType"
+  },
+  {
+    "Name": "w:CT_HdrFtrRef/",
+    "ClassName": "HeaderFooterReferenceType"
+  },
+  {
+    "Name": "w:CT_HpsMeasure/",
+    "ClassName": "HpsMeasureType"
+  },
+  {
+    "Name": "w:CT_Language/",
+    "ClassName": "LanguageType"
+  },
+  {
+    "Name": "w:CT_LongHexNumber/",
+    "ClassName": "LongHexNumberType"
+  },
+  {
+    "Name": "w:CT_MacroName/",
+    "ClassName": "MacroNameType"
+  },
+  {
+    "Name": "w:CT_Markup/",
+    "ClassName": "MarkupType"
+  },
+  {
+    "Name": "w:CT_MarkupRange/",
+    "ClassName": "MarkupRangeType"
+  },
+  {
+    "Name": "w:CT_MathCtrlMove/",
+    "ClassName": "MathControlMoveType"
+  },
+  {
+    "Name": "w:CT_MoveBookmark/",
+    "ClassName": "MoveBookmarkType"
+  },
+  {
+    "Name": "w:CT_NonNegativeDecimalNumber/",
+    "ClassName": "NonNegativeDecimalNumberType"
+  },
+  {
+    "Name": "w:CT_NonNegativeShort/",
+    "ClassName": "NonNegativeShortType"
+  },
+  {
+    "Name": "w:CT_OnOff/",
+    "ClassName": "OnOffType"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/",
+    "ClassName": "OnOffOnlyType"
+  },
+  {
+    "Name": "w:CT_PixelsMeasure/",
+    "ClassName": "PixelsMeasureType"
+  },
+  {
+    "Name": "w:CT_Rel/",
+    "ClassName": "RelationshipType"
+  },
+  {
+    "Name": "w:CT_RubyContent/",
+    "ClassName": "RubyContentType"
+  },
+  {
+    "Name": "w:CT_RunTrackChange/",
+    "ClassName": "RunTrackChangeType"
+  },
+  {
+    "Name": "w:CT_SdtDocPart/",
+    "ClassName": "SdtDocPartType"
+  },
+  {
+    "Name": "w:CT_ShapeDefaults/",
+    "ClassName": "ShapeDefaultsType"
+  },
+  {
+    "Name": "w:CT_SignedTwipsMeasure/",
+    "ClassName": "SignedTwipsMeasureType"
+  },
+  {
+    "Name": "w:CT_String/",
+    "ClassName": "StringType"
+  },
+  {
+    "Name": "w:CT_String253/",
+    "ClassName": "String253Type"
+  },
+  {
+    "Name": "w:CT_String255/",
+    "ClassName": "String255Type"
+  },
+  {
+    "Name": "w:CT_TblWidth/",
+    "ClassName": "TableWidthType"
+  },
+  {
+    "Name": "w:CT_TblWidthDxaNil/",
+    "ClassName": "TableWidthDxaNilType"
+  },
+  {
+    "Name": "w:CT_Text/",
+    "ClassName": "TextType"
+  },
+  {
+    "Name": "w:CT_TrackChange/",
+    "ClassName": "TrackChangeType"
+  },
+  {
+    "Name": "w:CT_TwipsMeasure/",
+    "ClassName": "TwipsMeasureType"
+  },
+  {
+    "Name": "w:CT_UnsignedDecimalNumber/",
+    "ClassName": "UnsignedDecimalNumberType"
+  },
+  {
+    "Name": "w:CT_UnsignedDecimalNumberMax3/",
+    "ClassName": "UnsignedDecimalNumberMax3Type"
+  },
+  {
+    "Name": "w:CT_UnsignedInt7/",
+    "ClassName": "UnsignedInt7Type"
+  },
+  {
+    "Name": "w:CT_AbstractNum/w:abstractNum",
+    "ClassName": "AbstractNum"
+  },
+  {
+    "Name": "w:CT_NonNegativeDecimalNumber/w:abstractNumId",
+    "ClassName": "AbstractNumId"
+  },
+  {
+    "Name": "w:CT_OnOff/w:active",
+    "ClassName": "Active"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w:activeRecord",
+    "ClassName": "ActiveRecord"
+  },
+  {
+    "Name": "w:CT_WritingStyle/w:activeWritingStyle",
+    "ClassName": "ActiveWritingStyle"
+  },
+  {
+    "Name": "w:CT_String/w:addressFieldName",
+    "ClassName": "AddressFieldName"
+  },
+  {
+    "Name": "w:CT_OnOff/w:adjustLineHeightInTable",
+    "ClassName": "AdjustLineHeightInTable"
+  },
+  {
+    "Name": "w:CT_OnOff/w:adjustRightInd",
+    "ClassName": "AdjustRightIndent"
+  },
+  {
+    "Name": "w:CT_String/w:alias",
+    "ClassName": "SdtAlias"
+  },
+  {
+    "Name": "w:CT_String253/w:aliases",
+    "ClassName": "Aliases"
+  },
+  {
+    "Name": "w:CT_OnOff/w:alignBordersAndEdges",
+    "ClassName": "AlignBorderAndEdges"
+  },
+  {
+    "Name": "w:CT_OnOff/w:alignTablesRowByRow",
+    "ClassName": "AlignTablesRowByRow"
+  },
+  {
+    "Name": "w:CT_OnOff/w:allowPNG",
+    "ClassName": "AllowPNG"
+  },
+  {
+    "Name": "w:CT_OnOff/w:allowSpaceOfSameStyleInTable",
+    "ClassName": "AllowSpaceOfSameStyleInTable"
+  },
+  {
+    "Name": "w:CT_AltChunk/w:altChunk",
+    "ClassName": "AltChunk"
+  },
+  {
+    "Name": "w:CT_AltChunkPr/w:altChunkPr",
+    "ClassName": "AltChunkProperties"
+  },
+  {
+    "Name": "w:CT_String/w:altName",
+    "ClassName": "AltName"
+  },
+  {
+    "Name": "w:CT_OnOff/w:alwaysMergeEmptyNamespace",
+    "ClassName": "AlwaysMergeEmptyNamespace"
+  },
+  {
+    "Name": "w:CT_OnOff/w:alwaysShowPlaceholderText",
+    "ClassName": "AlwaysShowPlaceholderText"
+  },
+  {
+    "Name": "w:CT_Empty/w:annotationRef",
+    "ClassName": "AnnotationReferenceMark"
+  },
+  {
+    "Name": "w:CT_OnOff/w:applyBreakingRules",
+    "ClassName": "ApplyBreakingRules"
+  },
+  {
+    "Name": "w:CT_String/w:attachedSchema",
+    "ClassName": "AttachedSchema"
+  },
+  {
+    "Name": "w:CT_Rel/w:attachedTemplate",
+    "ClassName": "AttachedTemplate"
+  },
+  {
+    "Name": "w:CT_XmlAttr/w:attr",
+    "ClassName": "CustomXmlAttribute"
+  },
+  {
+    "Name": "w:CT_AutoCaption/w:autoCaption",
+    "ClassName": "AutoCaption"
+  },
+  {
+    "Name": "w:CT_AutoCaptions/w:autoCaptions",
+    "ClassName": "AutoCaptions"
+  },
+  {
+    "Name": "w:CT_OnOff/w:autofitToFirstFixedWidthCell",
+    "ClassName": "AutofitToFirstFixedWidthCell"
+  },
+  {
+    "Name": "w:CT_OnOff/w:autoFormatOverride",
+    "ClassName": "AutoFormatOverride"
+  },
+  {
+    "Name": "w:CT_OnOff/w:autoHyphenation",
+    "ClassName": "AutoHyphenation"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:autoRedefine",
+    "ClassName": "AutoRedefine"
+  },
+  {
+    "Name": "w:CT_OnOff/w:autoSpaceDE",
+    "ClassName": "AutoSpaceDE"
+  },
+  {
+    "Name": "w:CT_OnOff/w:autoSpaceDN",
+    "ClassName": "AutoSpaceDN"
+  },
+  {
+    "Name": "w:CT_OnOff/w:autoSpaceLikeWord95",
+    "ClassName": "AutoSpaceLikeWord95"
+  },
+  {
+    "Name": "w:CT_OnOff/w:b",
+    "ClassName": "Bold"
+  },
+  {
+    "Name": "w:CT_Background/w:background",
+    "ClassName": "DocumentBackground"
+  },
+  {
+    "Name": "w:CT_OnOff/w:balanceSingleByteDoubleByteWidth",
+    "ClassName": "BalanceSingleByteDoubleByteWidth"
+  },
+  {
+    "Name": "w:CT_Border/w:bar",
+    "ClassName": "BarBorder"
+  },
+  {
+    "Name": "w:CT_String253/w:basedOn",
+    "ClassName": "BasedOn"
+  },
+  {
+    "Name": "w:CT_OnOff/w:bCs",
+    "ClassName": "BoldComplexScript"
+  },
+  {
+    "Name": "w:CT_BdoContentRun/w:bdo",
+    "ClassName": "BidirectionalOverride"
+  },
+  {
+    "Name": "w:CT_Border/w:bdr",
+    "ClassName": "Border"
+  },
+  {
+    "Name": "w:CT_DocPartBehavior/w:behavior",
+    "ClassName": "Behavior"
+  },
+  {
+    "Name": "w:CT_DocPartBehaviors/w:behaviors",
+    "ClassName": "Behaviors"
+  },
+  {
+    "Name": "w:CT_Border/w:between",
+    "ClassName": "BetweenBorder"
+  },
+  {
+    "Name": "w:CT_Empty/w:bibliography",
+    "ClassName": "SdtContentBibliography"
+  },
+  {
+    "Name": "w:CT_OnOff/w:bidi",
+    "ClassName": "BiDi"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:bidiVisual",
+    "ClassName": "BiDiVisual"
+  },
+  {
+    "Name": "w:CT_OnOff/w:blockQuote",
+    "ClassName": "BlockQuote"
+  },
+  {
+    "Name": "w:CT_Body/w:body",
+    "ClassName": "Body"
+  },
+  {
+    "Name": "w:CT_OnOff/w:bodyDiv",
+    "ClassName": "BodyDiv"
+  },
+  {
+    "Name": "w:CT_OnOff/w:bookFoldPrinting",
+    "ClassName": "BookFoldPrinting"
+  },
+  {
+    "Name": "w:CT_NonNegativeShort/w:bookFoldPrintingSheets",
+    "ClassName": "BookFoldPrintingSheets"
+  },
+  {
+    "Name": "w:CT_OnOff/w:bookFoldRevPrinting",
+    "ClassName": "BookFoldReversePrinting"
+  },
+  {
+    "Name": "w:CT_MarkupRange/w:bookmarkEnd",
+    "ClassName": "BookmarkEnd"
+  },
+  {
+    "Name": "w:CT_Bookmark/w:bookmarkStart",
+    "ClassName": "BookmarkStart"
+  },
+  {
+    "Name": "w:CT_OnOff/w:bordersDoNotSurroundFooter",
+    "ClassName": "BordersDoNotSurroundFooter"
+  },
+  {
+    "Name": "w:CT_OnOff/w:bordersDoNotSurroundHeader",
+    "ClassName": "BordersDoNotSurroundHeader"
+  },
+  {
+    "Name": "w:CT_Border/w:bottom",
+    "ClassName": "BottomBorder"
+  },
+  {
+    "Name": "w:CT_TblWidth/w:bottom",
+    "ClassName": "BottomMargin"
+  },
+  {
+    "Name": "w:CT_Br/w:br",
+    "ClassName": "Break"
+  },
+  {
+    "Name": "w:CT_OnOff/w:cachedColBalance",
+    "ClassName": "CachedColumnBalance"
+  },
+  {
+    "Name": "w:CT_OnOff/w:calcOnExit",
+    "ClassName": "CalculateOnExit"
+  },
+  {
+    "Name": "w:CT_CalendarType/w:calendar",
+    "ClassName": "Calendar"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:cantSplit",
+    "ClassName": "CantSplit"
+  },
+  {
+    "Name": "w:CT_OnOff/w:caps",
+    "ClassName": "Caps"
+  },
+  {
+    "Name": "w:CT_Caption/w:caption",
+    "ClassName": "Caption"
+  },
+  {
+    "Name": "w:CT_Captions/w:captions",
+    "ClassName": "Captions"
+  },
+  {
+    "Name": "w:CT_DocPartCategory/w:category",
+    "ClassName": "Category"
+  },
+  {
+    "Name": "w:CT_TrackChange/w:cellDel",
+    "ClassName": "CellDeletion"
+  },
+  {
+    "Name": "w:CT_TrackChange/w:cellIns",
+    "ClassName": "CellInsertion"
+  },
+  {
+    "Name": "w:CT_CellMergeTrackChange/w:cellMerge",
+    "ClassName": "CellMerge"
+  },
+  {
+    "Name": "w:CT_CharacterSpacing/w:characterSpacingControl",
+    "ClassName": "CharacterSpacingControl"
+  },
+  {
+    "Name": "w:CT_CharacterSet/w:charset",
+    "ClassName": "FontCharSet"
+  },
+  {
+    "Name": "w:CT_FFCheckBox/w:checkBox",
+    "ClassName": "CheckBox"
+  },
+  {
+    "Name": "w:CT_OnOff/w:checked",
+    "ClassName": "Checked"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w:checkErrors",
+    "ClassName": "CheckErrors"
+  },
+  {
+    "Name": "w:CT_Empty/w:citation",
+    "ClassName": "SdtContentCitation"
+  },
+  {
+    "Name": "w:CT_String253/w:clickAndTypeStyle",
+    "ClassName": "ClickAndTypeStyle"
+  },
+  {
+    "Name": "w:CT_ColorSchemeMapping/w:clrSchemeMapping",
+    "ClassName": "ColorSchemeMapping"
+  },
+  {
+    "Name": "w:CT_Cnf/w:cnfStyle",
+    "ClassName": "ConditionalFormatStyle"
+  },
+  {
+    "Name": "w:CT_Column/w:col",
+    "ClassName": "Column"
+  },
+  {
+    "Name": "w:CT_UnsignedDecimalNumber/w:colDelim",
+    "ClassName": "ColumnDelimiter"
+  },
+  {
+    "Name": "w:CT_Color/w:color",
+    "ClassName": "Color"
+  },
+  {
+    "Name": "w:CT_Columns/w:cols",
+    "ClassName": "Columns"
+  },
+  {
+    "Name": "w:CT_UnsignedDecimalNumber/w:column",
+    "ClassName": "ColumnIndex"
+  },
+  {
+    "Name": "w:CT_SdtComboBox/w:comboBox",
+    "ClassName": "SdtContentComboBox"
+  },
+  {
+    "Name": "w:CT_Comment/w:comment",
+    "ClassName": "Comment"
+  },
+  {
+    "Name": "w:CT_MarkupRange/w:commentRangeEnd",
+    "ClassName": "CommentRangeEnd"
+  },
+  {
+    "Name": "w:CT_MarkupRange/w:commentRangeStart",
+    "ClassName": "CommentRangeStart"
+  },
+  {
+    "Name": "w:CT_Markup/w:commentReference",
+    "ClassName": "CommentReference"
+  },
+  {
+    "Name": "w:CT_Comments/w:comments",
+    "ClassName": "Comments",
+    "PartClassName": "WordprocessingCommentsPart"
+  },
+  {
+    "Name": "w:CT_Compat/w:compat",
+    "ClassName": "Compatibility"
+  },
+  {
+    "Name": "w:CT_CompatSetting/w:compatSetting",
+    "ClassName": "CompatibilitySetting"
+  },
+  {
+    "Name": "w:CT_String/w:connectString",
+    "ClassName": "ConnectString"
+  },
+  {
+    "Name": "w:CT_UnsignedShortNumber/w:consecutiveHyphenLimit",
+    "ClassName": "ConsecutiveHyphenLimit"
+  },
+  {
+    "Name": "w:CT_ContentPart/w:contentPart",
+    "ClassName": "ContentPart"
+  },
+  {
+    "Name": "w:CT_OnOff/w:contextualSpacing",
+    "ClassName": "ContextualSpacing"
+  },
+  {
+    "Name": "w:CT_Empty/w:continuationSeparator",
+    "ClassName": "ContinuationSeparatorMark"
+  },
+  {
+    "Name": "w:CT_Control/w:control",
+    "ClassName": "Control"
+  },
+  {
+    "Name": "w:CT_OnOff/w:convMailMergeEsc",
+    "ClassName": "ConvertMailMergeEscape"
+  },
+  {
+    "Name": "w:CT_Empty/w:cr",
+    "ClassName": "CarriageReturn"
+  },
+  {
+    "Name": "w:CT_OnOff/w:cs",
+    "ClassName": "ComplexScript"
+  },
+  {
+    "Name": "w:CT_CustomXmlBlock/w:customXml",
+    "ClassName": "CustomXmlBlock"
+  },
+  {
+    "Name": "w:CT_CustomXmlCell/w:customXml",
+    "ClassName": "CustomXmlCell"
+  },
+  {
+    "Name": "w:CT_CustomXmlRow/w:customXml",
+    "ClassName": "CustomXmlRow"
+  },
+  {
+    "Name": "w:CT_CustomXmlRuby/w:customXml",
+    "ClassName": "CustomXmlRuby"
+  },
+  {
+    "Name": "w:CT_CustomXmlRun/w:customXml",
+    "ClassName": "CustomXmlRun"
+  },
+  {
+    "Name": "w:CT_Markup/w:customXmlDelRangeEnd",
+    "ClassName": "CustomXmlDelRangeEnd"
+  },
+  {
+    "Name": "w:CT_TrackChange/w:customXmlDelRangeStart",
+    "ClassName": "CustomXmlDelRangeStart"
+  },
+  {
+    "Name": "w:CT_Markup/w:customXmlInsRangeEnd",
+    "ClassName": "CustomXmlInsRangeEnd"
+  },
+  {
+    "Name": "w:CT_TrackChange/w:customXmlInsRangeStart",
+    "ClassName": "CustomXmlInsRangeStart"
+  },
+  {
+    "Name": "w:CT_Markup/w:customXmlMoveFromRangeEnd",
+    "ClassName": "CustomXmlMoveFromRangeEnd"
+  },
+  {
+    "Name": "w:CT_TrackChange/w:customXmlMoveFromRangeStart",
+    "ClassName": "CustomXmlMoveFromRangeStart"
+  },
+  {
+    "Name": "w:CT_Markup/w:customXmlMoveToRangeEnd",
+    "ClassName": "CustomXmlMoveToRangeEnd"
+  },
+  {
+    "Name": "w:CT_TrackChange/w:customXmlMoveToRangeStart",
+    "ClassName": "CustomXmlMoveToRangeStart"
+  },
+  {
+    "Name": "w:CT_CustomXmlPr/w:customXmlPr",
+    "ClassName": "CustomXmlProperties"
+  },
+  {
+    "Name": "w:CT_DataBinding/w:dataBinding",
+    "ClassName": "DataBinding"
+  },
+  {
+    "Name": "w:CT_Rel/w:dataSource",
+    "ClassName": "DataSourceReference"
+  },
+  {
+    "Name": "w:CT_MailMergeDataType/w:dataType",
+    "ClassName": "DataType"
+  },
+  {
+    "Name": "w:CT_SdtDate/w:date",
+    "ClassName": "SdtContentDate"
+  },
+  {
+    "Name": "w:CT_String/w:dateFormat",
+    "ClassName": "DateFormat"
+  },
+  {
+    "Name": "w:CT_Empty/w:dayLong",
+    "ClassName": "DayLong"
+  },
+  {
+    "Name": "w:CT_Empty/w:dayShort",
+    "ClassName": "DayShort"
+  },
+  {
+    "Name": "w:CT_FFDDList/w:ddList",
+    "ClassName": "DropDownListFormField"
+  },
+  {
+    "Name": "w:CT_String/w:decimalSymbol",
+    "ClassName": "DecimalSymbol"
+  },
+  {
+    "Name": "w:CT_OnOff/w:default",
+    "ClassName": "DefaultCheckBoxFormFieldState"
+  },
+  {
+    "Name": "w:CT_String255/w:default",
+    "ClassName": "DefaultTextBoxFormFieldString"
+  },
+  {
+    "Name": "w:CT_UnsignedDecimalNumberMax24/w:default",
+    "ClassName": "DefaultDropDownListItemIndex"
+  },
+  {
+    "Name": "w:CT_String253/w:defaultTableStyle",
+    "ClassName": "DefaultTableStyle"
+  },
+  {
+    "Name": "w:CT_NonNegativeShort/w:defaultTabStop",
+    "ClassName": "DefaultTabStop"
+  },
+  {
+    "Name": "w:CT_MathCtrlDel/w:del",
+    "ClassName": "DeletedMathControl"
+  },
+  {
+    "Name": "w:CT_RunTrackChange/w:del",
+    "ClassName": "DeletedRun"
+  },
+  {
+    "Name": "w:CT_TrackChange/w:del",
+    "ClassName": "Deleted"
+  },
+  {
+    "Name": "w:CT_Text/w:delInstrText",
+    "ClassName": "DeletedFieldCode"
+  },
+  {
+    "Name": "w:CT_Text/w:delText",
+    "ClassName": "DeletedText"
+  },
+  {
+    "Name": "w:CT_String/w:description",
+    "ClassName": "Description"
+  },
+  {
+    "Name": "w:CT_MailMergeDest/w:destination",
+    "ClassName": "Destination"
+  },
+  {
+    "Name": "w:CT_DirContentRun/w:dir",
+    "ClassName": "BidirectionalEmbedding"
+  },
+  {
+    "Name": "w:CT_OnOff/w:dirty",
+    "ClassName": "Dirty"
+  },
+  {
+    "Name": "w:CT_OnOff/w:displayBackgroundShape",
+    "ClassName": "DisplayBackgroundShape"
+  },
+  {
+    "Name": "w:CT_OnOff/w:displayHangulFixedWidth",
+    "ClassName": "DisplayHangulFixedWidth"
+  },
+  {
+    "Name": "w:CT_UnsignedInt7/w:displayHorizontalDrawingGridEvery",
+    "ClassName": "DisplayHorizontalDrawingGrid"
+  },
+  {
+    "Name": "w:CT_UnsignedInt7/w:displayVerticalDrawingGridEvery",
+    "ClassName": "DisplayVerticalDrawingGrid"
+  },
+  {
+    "Name": "w:CT_Div/w:div",
+    "ClassName": "Div"
+  },
+  {
+    "Name": "w:CT_DivBdr/w:divBdr",
+    "ClassName": "DivBorder"
+  },
+  {
+    "Name": "w:CT_NonZeroDecimalNumber/w:divId",
+    "ClassName": "DivId"
+  },
+  {
+    "Name": "w:CT_Divs/w:divs",
+    "ClassName": "Divs"
+  },
+  {
+    "Name": "w:CT_Divs/w:divsChild",
+    "ClassName": "DivsChild"
+  },
+  {
+    "Name": "w:CT_DocDefaults/w:docDefaults",
+    "ClassName": "DocDefaults"
+  },
+  {
+    "Name": "w:CT_DocGrid/w:docGrid",
+    "ClassName": "DocGrid"
+  },
+  {
+    "Name": "w:CT_DocPart/w:docPart",
+    "ClassName": "DocPart"
+  },
+  {
+    "Name": "w:CT_String/w:docPart",
+    "ClassName": "DocPartReference"
+  },
+  {
+    "Name": "w:CT_Body/w:docPartBody",
+    "ClassName": "DocPartBody"
+  },
+  {
+    "Name": "w:CT_String/w:docPartCategory",
+    "ClassName": "DocPartCategory"
+  },
+  {
+    "Name": "w:CT_String/w:docPartGallery",
+    "ClassName": "DocPartGallery"
+  },
+  {
+    "Name": "w:CT_SdtDocPart/w:docPartList",
+    "ClassName": "SdtContentDocPartList"
+  },
+  {
+    "Name": "w:CT_SdtDocPart/w:docPartObj",
+    "ClassName": "SdtContentDocPartObject"
+  },
+  {
+    "Name": "w:CT_DocPartPr/w:docPartPr",
+    "ClassName": "DocPartProperties"
+  },
+  {
+    "Name": "w:CT_DocParts/w:docParts",
+    "ClassName": "DocParts"
+  },
+  {
+    "Name": "w:CT_OnOff/w:docPartUnique",
+    "ClassName": "DocPartUnique"
+  },
+  {
+    "Name": "w:CT_Document/w:document",
+    "ClassName": "Document",
+    "PartClassName": "MainDocumentPart"
+  },
+  {
+    "Name": "w:CT_DocProtect/w:documentProtection",
+    "ClassName": "DocumentProtection"
+  },
+  {
+    "Name": "w:CT_DocType/w:documentType",
+    "ClassName": "DocumentType"
+  },
+  {
+    "Name": "w:CT_DocVar/w:docVar",
+    "ClassName": "DocumentVariable"
+  },
+  {
+    "Name": "w:CT_DocVars/w:docVars",
+    "ClassName": "DocumentVariables"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotAutoCompressPictures",
+    "ClassName": "DoNotAutoCompressPictures"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotAutofitConstrainedTables",
+    "ClassName": "DoNotAutofitConstrainedTables"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotBreakConstrainedForcedTable",
+    "ClassName": "DoNotBreakConstrainedForcedTable"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotBreakWrappedTables",
+    "ClassName": "DoNotBreakWrappedTables"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotDemarcateInvalidXml",
+    "ClassName": "DoNotDemarcateInvalidXml"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotDisplayPageBoundaries",
+    "ClassName": "DoNotDisplayPageBoundaries"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotExpandShiftReturn",
+    "ClassName": "DoNotExpandShiftReturn"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotHyphenateCaps",
+    "ClassName": "DoNotHyphenateCaps"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotIncludeSubdocsInStats",
+    "ClassName": "DoNotIncludeSubdocsInStats"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotLeaveBackslashAlone",
+    "ClassName": "DoNotLeaveBackslashAlone"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotOrganizeInFolder",
+    "ClassName": "DoNotOrganizeInFolder"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotRelyOnCSS",
+    "ClassName": "DoNotRelyOnCSS"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotSaveAsSingleFile",
+    "ClassName": "DoNotSaveAsSingleFile"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotShadeFormData",
+    "ClassName": "DoNotShadeFormData"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotSnapToGridInCell",
+    "ClassName": "DoNotSnapToGridInCell"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotSuppressBlankLines",
+    "ClassName": "DoNotSuppressBlankLines"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotSuppressIndentation",
+    "ClassName": "DoNotSuppressIndentation"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotSuppressParagraphBorders",
+    "ClassName": "DoNotSuppressParagraphBorders"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotTrackFormatting",
+    "ClassName": "DoNotTrackFormatting"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotTrackMoves",
+    "ClassName": "DoNotTrackMoves"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotUseEastAsianBreakRules",
+    "ClassName": "DoNotUseEastAsianBreakRules"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotUseHTMLParagraphAutoSpacing",
+    "ClassName": "DoNotUseHTMLParagraphAutoSpacing"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotUseIndentAsNumberingTabStop",
+    "ClassName": "DoNotUseIndentAsNumberingTabStop"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotUseLongFileNames",
+    "ClassName": "DoNotUseLongFileNames"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotUseMarginsForDrawingGridOrigin",
+    "ClassName": "DoNotUseMarginsForDrawingGridOrigin"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotValidateAgainstSchema",
+    "ClassName": "DoNotValidateAgainstSchema"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotVertAlignCellWithSp",
+    "ClassName": "DoNotVerticallyAlignCellWithShape"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotVertAlignInTxbx",
+    "ClassName": "DoNotVerticallyAlignInTextBox"
+  },
+  {
+    "Name": "w:CT_OnOff/w:doNotWrapTextWithPunct",
+    "ClassName": "DoNotWrapTextWithPunctuation"
+  },
+  {
+    "Name": "w:CT_Drawing/w:drawing",
+    "ClassName": "Drawing"
+  },
+  {
+    "Name": "w:CT_TwipsMeasure/w:drawingGridHorizontalOrigin",
+    "ClassName": "DrawingGridHorizontalOrigin"
+  },
+  {
+    "Name": "w:CT_TwipsMeasure/w:drawingGridHorizontalSpacing",
+    "ClassName": "DrawingGridHorizontalSpacing"
+  },
+  {
+    "Name": "w:CT_TwipsMeasure/w:drawingGridVerticalOrigin",
+    "ClassName": "DrawingGridVerticalOrigin"
+  },
+  {
+    "Name": "w:CT_TwipsMeasure/w:drawingGridVerticalSpacing",
+    "ClassName": "DrawingGridVerticalSpacing"
+  },
+  {
+    "Name": "w:CT_SdtDropDownList/w:dropDownList",
+    "ClassName": "SdtContentDropDownList"
+  },
+  {
+    "Name": "w:CT_OnOff/w:dstrike",
+    "ClassName": "DoubleStrike"
+  },
+  {
+    "Name": "w:CT_OnOff/w:dynamicAddress",
+    "ClassName": "DynamicAddress"
+  },
+  {
+    "Name": "w:CT_EastAsianLayout/w:eastAsianLayout",
+    "ClassName": "EastAsianLayout"
+  },
+  {
+    "Name": "w:CT_TextEffect/w:effect",
+    "ClassName": "TextEffect"
+  },
+  {
+    "Name": "w:CT_Em/w:em",
+    "ClassName": "Emphasis"
+  },
+  {
+    "Name": "w:CT_FontRel/w:embedBold",
+    "ClassName": "EmbedBoldFont"
+  },
+  {
+    "Name": "w:CT_FontRel/w:embedBoldItalic",
+    "ClassName": "EmbedBoldItalicFont"
+  },
+  {
+    "Name": "w:CT_FontRel/w:embedItalic",
+    "ClassName": "EmbedItalicFont"
+  },
+  {
+    "Name": "w:CT_FontRel/w:embedRegular",
+    "ClassName": "EmbedRegularFont"
+  },
+  {
+    "Name": "w:CT_OnOff/w:embedSystemFonts",
+    "ClassName": "EmbedSystemFonts"
+  },
+  {
+    "Name": "w:CT_OnOff/w:embedTrueTypeFonts",
+    "ClassName": "EmbedTrueTypeFonts"
+  },
+  {
+    "Name": "w:CT_OnOff/w:emboss",
+    "ClassName": "Emboss"
+  },
+  {
+    "Name": "w:CT_OnOff/w:enabled",
+    "ClassName": "Enabled"
+  },
+  {
+    "Name": "w:CT_String/w:encoding",
+    "ClassName": "WebPageEncoding"
+  },
+  {
+    "Name": "w:CT_Border/w:end",
+    "ClassName": "EndBorder"
+  },
+  {
+    "Name": "w:CT_TblWidth/w:end",
+    "ClassName": "EndMargin"
+  },
+  {
+    "Name": "w:CT_FtnEdn/w:endnote",
+    "ClassName": "Endnote"
+  },
+  {
+    "Name": "w:CT_FtnEdnSepRef/w:endnote",
+    "ClassName": "EndnoteSpecialReference"
+  },
+  {
+    "Name": "w:CT_EdnDocProps/w:endnotePr",
+    "ClassName": "EndnoteDocumentWideProperties"
+  },
+  {
+    "Name": "w:CT_EdnProps/w:endnotePr",
+    "ClassName": "EndnoteProperties"
+  },
+  {
+    "Name": "w:CT_Empty/w:endnoteRef",
+    "ClassName": "EndnoteReferenceMark"
+  },
+  {
+    "Name": "w:CT_FtnEdnRef/w:endnoteReference",
+    "ClassName": "EndnoteReference"
+  },
+  {
+    "Name": "w:CT_Endnotes/w:endnotes",
+    "ClassName": "Endnotes",
+    "PartClassName": "EndnotesPart"
+  },
+  {
+    "Name": "w:CT_MacroName/w:entryMacro",
+    "ClassName": "EntryMacro"
+  },
+  {
+    "Name": "w:CT_Empty/w:equation",
+    "ClassName": "SdtContentEquation"
+  },
+  {
+    "Name": "w:CT_OnOff/w:evenAndOddHeaders",
+    "ClassName": "EvenAndOddHeaders"
+  },
+  {
+    "Name": "w:CT_MacroName/w:exitMacro",
+    "ClassName": "ExitMacro"
+  },
+  {
+    "Name": "w:CT_FontFamily/w:family",
+    "ClassName": "FontFamily"
+  },
+  {
+    "Name": "w:CT_FFData/w:ffData",
+    "ClassName": "FormFieldData"
+  },
+  {
+    "Name": "w:CT_OnOff/w:fHdr",
+    "ClassName": "FirstRowHeader"
+  },
+  {
+    "Name": "w:CT_OdsoFieldMapData/w:fieldMapData",
+    "ClassName": "FieldMapData"
+  },
+  {
+    "Name": "w:CT_FitText/w:fitText",
+    "ClassName": "FitText"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:flatBorders",
+    "ClassName": "FlatBorders"
+  },
+  {
+    "Name": "w:CT_FldChar/w:fldChar",
+    "ClassName": "FieldChar"
+  },
+  {
+    "Name": "w:CT_Base64BinaryText/w:fldData",
+    "ClassName": "FieldData"
+  },
+  {
+    "Name": "w:CT_SimpleField/w:fldSimple",
+    "ClassName": "SimpleField"
+  },
+  {
+    "Name": "w:CT_SimpleFieldRuby/w:fldSimple",
+    "ClassName": "SimpleFieldRuby"
+  },
+  {
+    "Name": "w:CT_Font/w:font",
+    "ClassName": "Font"
+  },
+  {
+    "Name": "w:CT_FontsList/w:fonts",
+    "ClassName": "Fonts",
+    "PartClassName": "FontTablePart"
+  },
+  {
+    "Name": "w:CT_HdrFtrRef/w:footerReference",
+    "ClassName": "FooterReference"
+  },
+  {
+    "Name": "w:CT_FtnEdn/w:footnote",
+    "ClassName": "Footnote"
+  },
+  {
+    "Name": "w:CT_FtnEdnSepRef/w:footnote",
+    "ClassName": "FootnoteSpecialReference"
+  },
+  {
+    "Name": "w:CT_OnOff/w:footnoteLayoutLikeWW8",
+    "ClassName": "FootnoteLayoutLikeWord8"
+  },
+  {
+    "Name": "w:CT_FtnDocProps/w:footnotePr",
+    "ClassName": "FootnoteDocumentWideProperties"
+  },
+  {
+    "Name": "w:CT_FtnProps/w:footnotePr",
+    "ClassName": "FootnoteProperties"
+  },
+  {
+    "Name": "w:CT_Empty/w:footnoteRef",
+    "ClassName": "FootnoteReferenceMark"
+  },
+  {
+    "Name": "w:CT_FtnEdnRef/w:footnoteReference",
+    "ClassName": "FootnoteReference"
+  },
+  {
+    "Name": "w:CT_Footnotes/w:footnotes",
+    "ClassName": "Footnotes",
+    "PartClassName": "FootnotesPart"
+  },
+  {
+    "Name": "w:CT_Empty/w:forceUpgrade",
+    "ClassName": "ForceUpgrade"
+  },
+  {
+    "Name": "w:CT_OnOff/w:forgetLastTabAlignment",
+    "ClassName": "ForgetLastTabAlignment"
+  },
+  {
+    "Name": "w:CT_String64/w:format",
+    "ClassName": "Format"
+  },
+  {
+    "Name": "w:CT_OnOff/w:formProt",
+    "ClassName": "FormProtection"
+  },
+  {
+    "Name": "w:CT_OnOff/w:formsDesign",
+    "ClassName": "FormsDesign"
+  },
+  {
+    "Name": "w:CT_Frame/w:frame",
+    "ClassName": "Frame"
+  },
+  {
+    "Name": "w:CT_FrameLayout/w:frameLayout",
+    "ClassName": "FrameLayout"
+  },
+  {
+    "Name": "w:CT_FramePr/w:framePr",
+    "ClassName": "FrameProperties"
+  },
+  {
+    "Name": "w:CT_Frameset/w:frameset",
+    "ClassName": "Frameset"
+  },
+  {
+    "Name": "w:CT_FramesetSplitbar/w:framesetSplitbar",
+    "ClassName": "FramesetSplitbar"
+  },
+  {
+    "Name": "w:CT_HdrFtr/w:ftr",
+    "ClassName": "Footer",
+    "PartClassName": "FooterPart"
+  },
+  {
+    "Name": "w:CT_DocPartGallery/w:gallery",
+    "ClassName": "Gallery"
+  },
+  {
+    "Name": "w:CT_GlossaryDocument/w:glossaryDocument",
+    "ClassName": "GlossaryDocument",
+    "PartClassName": "GlossaryDocumentPart"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w:gridAfter",
+    "ClassName": "GridAfter"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w:gridBefore",
+    "ClassName": "GridBefore"
+  },
+  {
+    "Name": "w:CT_TblGridCol/w:gridCol",
+    "ClassName": "GridColumn"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w:gridSpan",
+    "ClassName": "GridSpan"
+  },
+  {
+    "Name": "w:CT_Empty/w:group",
+    "ClassName": "SdtContentGroup"
+  },
+  {
+    "Name": "w:CT_OnOff/w:growAutofit",
+    "ClassName": "GrowAutofit"
+  },
+  {
+    "Name": "w:CT_Guid/w:guid",
+    "ClassName": "DocPartId"
+  },
+  {
+    "Name": "w:CT_OnOff/w:gutterAtTop",
+    "ClassName": "GutterAtTop"
+  },
+  {
+    "Name": "w:CT_HdrFtr/w:hdr",
+    "ClassName": "Header",
+    "PartClassName": "HeaderPart"
+  },
+  {
+    "Name": "w:CT_ShapeDefaults/w:hdrShapeDefaults",
+    "ClassName": "HeaderShapeDefaults"
+  },
+  {
+    "Name": "w:CT_HdrFtrRef/w:headerReference",
+    "ClassName": "HeaderReference"
+  },
+  {
+    "Name": "w:CT_Rel/w:headerSource",
+    "ClassName": "HeaderSource"
+  },
+  {
+    "Name": "w:CT_FFHelpText/w:helpText",
+    "ClassName": "HelpText"
+  },
+  {
+    "Name": "w:CT_OnOff/w:hidden",
+    "ClassName": "Hidden"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:hidden",
+    "ClassName": "StyleHidden"
+  },
+  {
+    "Name": "w:CT_OnOff/w:hideGrammaticalErrors",
+    "ClassName": "HideGrammaticalErrors"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:hideMark",
+    "ClassName": "HideMark"
+  },
+  {
+    "Name": "w:CT_OnOff/w:hideSpellingErrors",
+    "ClassName": "HideSpellingErrors"
+  },
+  {
+    "Name": "w:CT_Highlight/w:highlight",
+    "ClassName": "Highlight"
+  },
+  {
+    "Name": "w:CT_HMerge/w:hMerge",
+    "ClassName": "HorizontalMerge"
+  },
+  {
+    "Name": "w:CT_HpsMeasure/w:hps",
+    "ClassName": "PhoneticGuideTextFontSize"
+  },
+  {
+    "Name": "w:CT_HpsMeasure/w:hpsBaseText",
+    "ClassName": "PhoneticGuideBaseTextSize"
+  },
+  {
+    "Name": "w:CT_HpsRaise/w:hpsRaise",
+    "ClassName": "PhoneticGuideRaise"
+  },
+  {
+    "Name": "w:CT_Hyperlink/w:hyperlink",
+    "ClassName": "Hyperlink"
+  },
+  {
+    "Name": "w:CT_HyperlinkRuby/w:hyperlink",
+    "ClassName": "HyperlinkRuby"
+  },
+  {
+    "Name": "w:CT_TwipsMeasure/w:hyphenationZone",
+    "ClassName": "HyphenationZone"
+  },
+  {
+    "Name": "w:CT_OnOff/w:i",
+    "ClassName": "Italic"
+  },
+  {
+    "Name": "w:CT_OnOff/w:iCs",
+    "ClassName": "ItalicComplexScript"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w:id",
+    "ClassName": "SdtId"
+  },
+  {
+    "Name": "w:CT_OnOff/w:ignoreMixedContent",
+    "ClassName": "IgnoreMixedContent"
+  },
+  {
+    "Name": "w:CT_NonNegativeDecimalNumber255/w:ilvl",
+    "ClassName": "NumberingLevelReference"
+  },
+  {
+    "Name": "w:CT_OnOff/w:imprint",
+    "ClassName": "Imprint"
+  },
+  {
+    "Name": "w:CT_Ind/w:ind",
+    "ClassName": "Indentation"
+  },
+  {
+    "Name": "w:CT_MathCtrlIns/w:ins",
+    "ClassName": "InsertedMathControl"
+  },
+  {
+    "Name": "w:CT_RunTrackChange/w:ins",
+    "ClassName": "InsertedRun"
+  },
+  {
+    "Name": "w:CT_TrackChange/w:ins",
+    "ClassName": "Inserted"
+  },
+  {
+    "Name": "w:CT_Border/w:insideH",
+    "ClassName": "InsideHorizontalBorder"
+  },
+  {
+    "Name": "w:CT_Border/w:insideV",
+    "ClassName": "InsideVerticalBorder"
+  },
+  {
+    "Name": "w:CT_Text/w:instrText",
+    "ClassName": "FieldCode"
+  },
+  {
+    "Name": "w:CT_OnOff/w:isLgl",
+    "ClassName": "IsLegalNumberingStyle"
+  },
+  {
+    "Name": "w:CT_Jc/w:jc",
+    "ClassName": "Justification"
+  },
+  {
+    "Name": "w:CT_TblJc/w:jc",
+    "ClassName": "TableJustification"
+  },
+  {
+    "Name": "w:CT_OnOff/w:keepLines",
+    "ClassName": "KeepLines"
+  },
+  {
+    "Name": "w:CT_OnOff/w:keepNext",
+    "ClassName": "KeepNext"
+  },
+  {
+    "Name": "w:CT_HpsKern/w:kern",
+    "ClassName": "Kern"
+  },
+  {
+    "Name": "w:CT_OnOff/w:kinsoku",
+    "ClassName": "Kinsoku"
+  },
+  {
+    "Name": "w:CT_Language/w:lang",
+    "ClassName": "Languages"
+  },
+  {
+    "Name": "w:CT_Empty/w:lastRenderedPageBreak",
+    "ClassName": "LastRenderedPageBreak"
+  },
+  {
+    "Name": "w:CT_LatentStyles/w:latentStyles",
+    "ClassName": "LatentStyles"
+  },
+  {
+    "Name": "w:CT_OnOff/w:layoutRawTableWidth",
+    "ClassName": "LayoutRawTableWidth"
+  },
+  {
+    "Name": "w:CT_OnOff/w:layoutTableRowsApart",
+    "ClassName": "LayoutTableRowsApart"
+  },
+  {
+    "Name": "w:CT_Border/w:left",
+    "ClassName": "LeftBorder"
+  },
+  {
+    "Name": "w:CT_TblWidth/w:left",
+    "ClassName": "LeftMargin"
+  },
+  {
+    "Name": "w:CT_TblWidthDxaNil/w:left",
+    "ClassName": "TableCellLeftMargin"
+  },
+  {
+    "Name": "w:CT_LvlLegacy/w:legacy",
+    "ClassName": "LegacyNumbering"
+  },
+  {
+    "Name": "w:CT_Lang/w:lid",
+    "ClassName": "LanguageId"
+  },
+  {
+    "Name": "w:CT_OnOff/w:lineWrapLikeWord6",
+    "ClassName": "LineWrapLikeWord6"
+  },
+  {
+    "Name": "w:CT_String253/w:link",
+    "ClassName": "LinkedStyle"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:linkedToFile",
+    "ClassName": "LinkedToFile"
+  },
+  {
+    "Name": "w:CT_OnOff/w:linkStyles",
+    "ClassName": "LinkStyles"
+  },
+  {
+    "Name": "w:CT_OnOff/w:linkToQuery",
+    "ClassName": "LinkToQuery"
+  },
+  {
+    "Name": "w:CT_String255/w:listEntry",
+    "ClassName": "ListEntryFormField"
+  },
+  {
+    "Name": "w:CT_SdtListItem/w:listItem",
+    "ClassName": "ListItem"
+  },
+  {
+    "Name": "w:CT_String/w:listSeparator",
+    "ClassName": "ListSeparator"
+  },
+  {
+    "Name": "w:CT_LineNumber/w:lnNumType",
+    "ClassName": "LineNumberType"
+  },
+  {
+    "Name": "w:CT_Lock/w:lock",
+    "ClassName": "Lock"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:locked",
+    "ClassName": "Locked"
+  },
+  {
+    "Name": "w:CT_LsdException/w:lsdException",
+    "ClassName": "LatentStyleExceptionInfo"
+  },
+  {
+    "Name": "w:CT_Lvl/w:lvl",
+    "ClassName": "Level"
+  },
+  {
+    "Name": "w:CT_LevelJustification/w:lvlJc",
+    "ClassName": "LevelJustification"
+  },
+  {
+    "Name": "w:CT_NumLvl/w:lvlOverride",
+    "ClassName": "LevelOverride"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w:lvlPicBulletId",
+    "ClassName": "LevelPictureBulletId"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w:lvlRestart",
+    "ClassName": "LevelRestart"
+  },
+  {
+    "Name": "w:CT_LevelText/w:lvlText",
+    "ClassName": "LevelText"
+  },
+  {
+    "Name": "w:CT_OnOff/w:mailAsAttachment",
+    "ClassName": "MailAsAttachment"
+  },
+  {
+    "Name": "w:CT_MailMerge/w:mailMerge",
+    "ClassName": "MailMerge"
+  },
+  {
+    "Name": "w:CT_String/w:mailSubject",
+    "ClassName": "MailSubject"
+  },
+  {
+    "Name": "w:CT_MailMergeDocType/w:mainDocumentType",
+    "ClassName": "MainDocumentType"
+  },
+  {
+    "Name": "w:CT_String/w:mappedName",
+    "ClassName": "MappedName"
+  },
+  {
+    "Name": "w:CT_SignedTwipsMeasure/w:marBottom",
+    "ClassName": "BottomMarginDiv"
+  },
+  {
+    "Name": "w:CT_PixelsMeasure/w:marH",
+    "ClassName": "MarginHeight"
+  },
+  {
+    "Name": "w:CT_SignedTwipsMeasure/w:marLeft",
+    "ClassName": "LeftMarginDiv"
+  },
+  {
+    "Name": "w:CT_SignedTwipsMeasure/w:marRight",
+    "ClassName": "RightMarginDiv"
+  },
+  {
+    "Name": "w:CT_SignedTwipsMeasure/w:marTop",
+    "ClassName": "TopMarginDiv"
+  },
+  {
+    "Name": "w:CT_PixelsMeasure/w:marW",
+    "ClassName": "MarginWidth"
+  },
+  {
+    "Name": "w:CT_OnOff/w:matchSrc",
+    "ClassName": "MatchSource"
+  },
+  {
+    "Name": "w:CT_PositiveShort/w:maxLength",
+    "ClassName": "MaxLength"
+  },
+  {
+    "Name": "w:CT_OnOff/w:mirrorIndents",
+    "ClassName": "MirrorIndents"
+  },
+  {
+    "Name": "w:CT_OnOff/w:mirrorMargins",
+    "ClassName": "MirrorMargins"
+  },
+  {
+    "Name": "w:CT_Empty/w:monthLong",
+    "ClassName": "MonthLong"
+  },
+  {
+    "Name": "w:CT_Empty/w:monthShort",
+    "ClassName": "MonthShort"
+  },
+  {
+    "Name": "w:CT_MathCtrlMove/w:moveFrom",
+    "ClassName": "MoveFromMathControl"
+  },
+  {
+    "Name": "w:CT_RunTrackChange/w:moveFrom",
+    "ClassName": "MoveFromRun"
+  },
+  {
+    "Name": "w:CT_TrackChange/w:moveFrom",
+    "ClassName": "MoveFrom"
+  },
+  {
+    "Name": "w:CT_MarkupRange/w:moveFromRangeEnd",
+    "ClassName": "MoveFromRangeEnd"
+  },
+  {
+    "Name": "w:CT_MoveBookmark/w:moveFromRangeStart",
+    "ClassName": "MoveFromRangeStart"
+  },
+  {
+    "Name": "w:CT_MathCtrlMove/w:moveTo",
+    "ClassName": "MoveToMathControl"
+  },
+  {
+    "Name": "w:CT_RunTrackChange/w:moveTo",
+    "ClassName": "MoveToRun"
+  },
+  {
+    "Name": "w:CT_TrackChange/w:moveTo",
+    "ClassName": "MoveTo"
+  },
+  {
+    "Name": "w:CT_MarkupRange/w:moveToRangeEnd",
+    "ClassName": "MoveToRangeEnd"
+  },
+  {
+    "Name": "w:CT_MoveBookmark/w:moveToRangeStart",
+    "ClassName": "MoveToRangeStart"
+  },
+  {
+    "Name": "w:CT_Rel/w:movie",
+    "ClassName": "MovieReference"
+  },
+  {
+    "Name": "w:CT_MultiLevelType/w:multiLevelType",
+    "ClassName": "MultiLevelType"
+  },
+  {
+    "Name": "w:CT_OnOff/w:mwSmallCaps",
+    "ClassName": "MacWordSmallCaps"
+  },
+  {
+    "Name": "w:CT_DocPartName/w:name",
+    "ClassName": "DocPartName"
+  },
+  {
+    "Name": "w:CT_FFName/w:name",
+    "ClassName": "FormFieldName"
+  },
+  {
+    "Name": "w:CT_String/w:name",
+    "ClassName": "Name"
+  },
+  {
+    "Name": "w:CT_String253/w:name",
+    "ClassName": "AbstractNumDefinitionName"
+  },
+  {
+    "Name": "w:CT_String255/w:name",
+    "ClassName": "FrameName"
+  },
+  {
+    "Name": "w:CT_StyleName/w:name",
+    "ClassName": "StyleName"
+  },
+  {
+    "Name": "w:CT_String253/w:next",
+    "ClassName": "NextParagraphStyle"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:noBorder",
+    "ClassName": "NoBorder"
+  },
+  {
+    "Name": "w:CT_Empty/w:noBreakHyphen",
+    "ClassName": "NoBreakHyphen"
+  },
+  {
+    "Name": "w:CT_OnOff/w:noColumnBalance",
+    "ClassName": "NoColumnBalance"
+  },
+  {
+    "Name": "w:CT_OnOff/w:noEndnote",
+    "ClassName": "NoEndnote"
+  },
+  {
+    "Name": "w:CT_OnOff/w:noExtraLineSpacing",
+    "ClassName": "NoExtraLineSpacing"
+  },
+  {
+    "Name": "w:CT_OnOff/w:noLeading",
+    "ClassName": "NoLeading"
+  },
+  {
+    "Name": "w:CT_KinsokuAfter/w:noLineBreaksAfter",
+    "ClassName": "NoLineBreaksAfterKinsoku"
+  },
+  {
+    "Name": "w:CT_KinsokuBefore/w:noLineBreaksBefore",
+    "ClassName": "NoLineBreaksBeforeKinsoku"
+  },
+  {
+    "Name": "w:CT_OnOff/w:noProof",
+    "ClassName": "NoProof"
+  },
+  {
+    "Name": "w:CT_OnOff/w:noPunctuationKerning",
+    "ClassName": "NoPunctuationKerning"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:noResizeAllowed",
+    "ClassName": "NoResizeAllowed"
+  },
+  {
+    "Name": "w:CT_OnOff/w:noSpaceRaiseLower",
+    "ClassName": "NoSpaceRaiseLower"
+  },
+  {
+    "Name": "w:CT_OnOff/w:noTabHangInd",
+    "ClassName": "NoTabHangIndent"
+  },
+  {
+    "Name": "w:CT_OnOff/w:notTrueType",
+    "ClassName": "NotTrueType"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:noWrap",
+    "ClassName": "NoWrap"
+  },
+  {
+    "Name": "w:CT_LongHexNumber/w:nsid",
+    "ClassName": "Nsid"
+  },
+  {
+    "Name": "w:CT_Num/w:num",
+    "ClassName": "NumberingInstance"
+  },
+  {
+    "Name": "w:CT_Numbering/w:numbering",
+    "ClassName": "Numbering",
+    "PartClassName": "NumberingDefinitionsPart"
+  },
+  {
+    "Name": "w:CT_TrackChangeNumbering/w:numberingChange",
+    "ClassName": "NumberingChange"
+  },
+  {
+    "Name": "w:CT_NumFmt/w:numFmt",
+    "ClassName": "NumberingFormat"
+  },
+  {
+    "Name": "w:CT_NonNegativeDecimalNumber/w:numId",
+    "ClassName": "NumberingId"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w:numIdMacAtCleanup",
+    "ClassName": "NumberingIdMacAtCleanup"
+  },
+  {
+    "Name": "w:CT_NumPicBullet/w:numPicBullet",
+    "ClassName": "NumberingPictureBullet"
+  },
+  {
+    "Name": "w:CT_NumPr/w:numPr",
+    "ClassName": "NumberingProperties"
+  },
+  {
+    "Name": "w:CT_NumRestart/w:numRestart",
+    "ClassName": "NumberingRestart"
+  },
+  {
+    "Name": "w:CT_FtnEdnNumStart/w:numStart",
+    "ClassName": "NumberingStart"
+  },
+  {
+    "Name": "w:CT_String253/w:numStyleLink",
+    "ClassName": "NumberingStyleLink"
+  },
+  {
+    "Name": "w:CT_Object/w:object",
+    "ClassName": "EmbeddedObject"
+  },
+  {
+    "Name": "w:CT_ObjectEmbed/w:objectEmbed",
+    "ClassName": "ObjectEmbed"
+  },
+  {
+    "Name": "w:CT_ObjectLink/w:objectLink",
+    "ClassName": "ObjectLink"
+  },
+  {
+    "Name": "w:CT_Odso/w:odso",
+    "ClassName": "DataSourceObject"
+  },
+  {
+    "Name": "w:CT_OnOff/w:oMath",
+    "ClassName": "OfficeMath"
+  },
+  {
+    "Name": "w:CT_OnOff/w:optimizeForBrowser",
+    "ClassName": "OptimizeForBrowser"
+  },
+  {
+    "Name": "w:CT_OnOff/w:outline",
+    "ClassName": "Outline"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w:outlineLvl",
+    "ClassName": "OutlineLevel"
+  },
+  {
+    "Name": "w:CT_OnOff/w:overflowPunct",
+    "ClassName": "OverflowPunctuation"
+  },
+  {
+    "Name": "w:CT_P/w:p",
+    "ClassName": "Paragraph"
+  },
+  {
+    "Name": "w:CT_OnOff/w:pageBreakBefore",
+    "ClassName": "PageBreakBefore"
+  },
+  {
+    "Name": "w:CT_Panose/w:panose1",
+    "ClassName": "Panose1Number"
+  },
+  {
+    "Name": "w:CT_PaperSource/w:paperSrc",
+    "ClassName": "PaperSource"
+  },
+  {
+    "Name": "w:CT_PBdr/w:pBdr",
+    "ClassName": "ParagraphBorders"
+  },
+  {
+    "Name": "w:CT_Perm/w:permEnd",
+    "ClassName": "PermEnd"
+  },
+  {
+    "Name": "w:CT_PermStart/w:permStart",
+    "ClassName": "PermStart"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:personal",
+    "ClassName": "Personal"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:personalCompose",
+    "ClassName": "PersonalCompose"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:personalReply",
+    "ClassName": "PersonalReply"
+  },
+  {
+    "Name": "w:CT_PageBorders/w:pgBorders",
+    "ClassName": "PageBorders"
+  },
+  {
+    "Name": "w:CT_PageMar/w:pgMar",
+    "ClassName": "PageMargin"
+  },
+  {
+    "Name": "w:CT_Empty/w:pgNum",
+    "ClassName": "PageNumber"
+  },
+  {
+    "Name": "w:CT_PageNumber/w:pgNumType",
+    "ClassName": "PageNumberType"
+  },
+  {
+    "Name": "w:CT_PageSz/w:pgSz",
+    "ClassName": "PageSize"
+  },
+  {
+    "Name": "w:CT_Picture/w:pict",
+    "ClassName": "Picture"
+  },
+  {
+    "Name": "w:CT_PictureBulletBase/w:pict",
+    "ClassName": "PictureBulletBase"
+  },
+  {
+    "Name": "w:CT_Empty/w:picture",
+    "ClassName": "SdtContentPicture"
+  },
+  {
+    "Name": "w:CT_Pitch/w:pitch",
+    "ClassName": "Pitch"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w:pixelsPerInch",
+    "ClassName": "PixelsPerInch"
+  },
+  {
+    "Name": "w:CT_Placeholder/w:placeholder",
+    "ClassName": "SdtPlaceholder"
+  },
+  {
+    "Name": "w:CT_String/w:placeholder",
+    "ClassName": "CustomXmlPlaceholder"
+  },
+  {
+    "Name": "w:CT_EdnPos/w:pos",
+    "ClassName": "EndnotePosition"
+  },
+  {
+    "Name": "w:CT_FtnPos/w:pos",
+    "ClassName": "FootnotePosition"
+  },
+  {
+    "Name": "w:CT_SignedHpsMeasure/w:position",
+    "ClassName": "Position"
+  },
+  {
+    "Name": "w:CT_PPr/w:pPr",
+    "ClassName": "ParagraphProperties"
+  },
+  {
+    "Name": "w:CT_PPrBase/w:pPr",
+    "ClassName": "PreviousParagraphProperties"
+  },
+  {
+    "Name": "w:CT_PPrBaseStyleable/w:pPr",
+    "ClassName": "ParagraphPropertiesBaseStyle"
+  },
+  {
+    "Name": "w:CT_PPrExtended/w:pPr",
+    "ClassName": "ParagraphPropertiesExtended"
+  },
+  {
+    "Name": "w:CT_PPrStyle/w:pPr",
+    "ClassName": "StyleParagraphProperties"
+  },
+  {
+    "Name": "w:CT_PPrChange/w:pPrChange",
+    "ClassName": "ParagraphPropertiesChange"
+  },
+  {
+    "Name": "w:CT_PPrDefault/w:pPrDefault",
+    "ClassName": "ParagraphPropertiesDefault"
+  },
+  {
+    "Name": "w:CT_OnOff/w:printBodyTextBeforeHeader",
+    "ClassName": "PrintBodyTextBeforeHeader"
+  },
+  {
+    "Name": "w:CT_OnOff/w:printColBlack",
+    "ClassName": "PrintColorBlackWhite"
+  },
+  {
+    "Name": "w:CT_Rel/w:printerSettings",
+    "ClassName": "PrinterSettingsReference"
+  },
+  {
+    "Name": "w:CT_OnOff/w:printFormsData",
+    "ClassName": "PrintFormsData"
+  },
+  {
+    "Name": "w:CT_OnOff/w:printFractionalCharacterWidth",
+    "ClassName": "PrintFractionalCharacterWidth"
+  },
+  {
+    "Name": "w:CT_OnOff/w:printPostScriptOverText",
+    "ClassName": "PrintPostScriptOverText"
+  },
+  {
+    "Name": "w:CT_OnOff/w:printTwoOnOne",
+    "ClassName": "PrintTwoOnOne"
+  },
+  {
+    "Name": "w:CT_ProofErr/w:proofErr",
+    "ClassName": "ProofError"
+  },
+  {
+    "Name": "w:CT_Proof/w:proofState",
+    "ClassName": "ProofState"
+  },
+  {
+    "Name": "w:CT_String/w:pStyle",
+    "ClassName": "ParagraphStyleId"
+  },
+  {
+    "Name": "w:CT_String253/w:pStyle",
+    "ClassName": "ParagraphStyleIdInLevel"
+  },
+  {
+    "Name": "w:CT_PTab/w:ptab",
+    "ClassName": "PositionalTab"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:qFormat",
+    "ClassName": "PrimaryStyle"
+  },
+  {
+    "Name": "w:CT_String/w:query",
+    "ClassName": "Query"
+  },
+  {
+    "Name": "w:CT_R/w:r",
+    "ClassName": "Run"
+  },
+  {
+    "Name": "w:CT_ReadingModeInkLockDown/w:readModeInkLockDown",
+    "ClassName": "ReadModeInkLockDown"
+  },
+  {
+    "Name": "w:CT_RecipientData/w:recipientData",
+    "ClassName": "RecipientData"
+  },
+  {
+    "Name": "w:CT_Rel/w:recipientData",
+    "ClassName": "RecipientDataReference"
+  },
+  {
+    "Name": "w:CT_Recipients/w:recipients",
+    "ClassName": "Recipients"
+  },
+  {
+    "Name": "w:CT_OnOff/w:relyOnVML",
+    "ClassName": "RelyOnVML"
+  },
+  {
+    "Name": "w:CT_OnOff/w:removeDateAndTime",
+    "ClassName": "RemoveDateAndTime"
+  },
+  {
+    "Name": "w:CT_OnOff/w:removePersonalInformation",
+    "ClassName": "RemovePersonalInformation"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w:result",
+    "ClassName": "DropDownListSelection"
+  },
+  {
+    "Name": "w:CT_TrackChangesView/w:revisionView",
+    "ClassName": "RevisionView"
+  },
+  {
+    "Name": "w:CT_Fonts/w:rFonts",
+    "ClassName": "RunFonts"
+  },
+  {
+    "Name": "w:CT_Empty/w:richText",
+    "ClassName": "SdtContentRichText"
+  },
+  {
+    "Name": "w:CT_Border/w:right",
+    "ClassName": "RightBorder"
+  },
+  {
+    "Name": "w:CT_TblWidth/w:right",
+    "ClassName": "RightMargin"
+  },
+  {
+    "Name": "w:CT_TblWidthDxaNil/w:right",
+    "ClassName": "TableCellRightMargin"
+  },
+  {
+    "Name": "w:CT_ParaRPr/w:rPr",
+    "ClassName": "ParagraphMarkRunProperties"
+  },
+  {
+    "Name": "w:CT_ParaRPrOriginal/w:rPr",
+    "ClassName": "PreviousParagraphMarkRunProperties"
+  },
+  {
+    "Name": "w:CT_RPr/w:rPr",
+    "ClassName": "RunProperties"
+  },
+  {
+    "Name": "w:CT_RPrBaseStyleable/w:rPr",
+    "ClassName": "RunPropertiesBaseStyle"
+  },
+  {
+    "Name": "w:CT_RPrList/w:rPr",
+    "ClassName": "NumberingSymbolRunProperties"
+  },
+  {
+    "Name": "w:CT_RPrOriginal/w:rPr",
+    "ClassName": "PreviousRunProperties"
+  },
+  {
+    "Name": "w:CT_RPrStyle/w:rPr",
+    "ClassName": "StyleRunProperties"
+  },
+  {
+    "Name": "w:CT_ParaRPrChange/w:rPrChange",
+    "ClassName": "ParagraphMarkRunPropertiesChange"
+  },
+  {
+    "Name": "w:CT_RPrChange/w:rPrChange",
+    "ClassName": "RunPropertiesChange"
+  },
+  {
+    "Name": "w:CT_RPrDefault/w:rPrDefault",
+    "ClassName": "RunPropertiesDefault"
+  },
+  {
+    "Name": "w:CT_LongHexNumber/w:rsid",
+    "ClassName": "Rsid"
+  },
+  {
+    "Name": "w:CT_LongHexNumber/w:rsidRoot",
+    "ClassName": "RsidRoot"
+  },
+  {
+    "Name": "w:CT_DocRsids/w:rsids",
+    "ClassName": "Rsids"
+  },
+  {
+    "Name": "w:CT_String253/w:rStyle",
+    "ClassName": "RunStyle"
+  },
+  {
+    "Name": "w:CT_RubyContent/w:rt",
+    "ClassName": "RubyContent"
+  },
+  {
+    "Name": "w:CT_OnOff/w:rtl",
+    "ClassName": "RightToLeftText"
+  },
+  {
+    "Name": "w:CT_OnOff/w:rtlGutter",
+    "ClassName": "GutterOnRight"
+  },
+  {
+    "Name": "w:CT_Ruby/w:ruby",
+    "ClassName": "Ruby"
+  },
+  {
+    "Name": "w:CT_RubyAlign/w:rubyAlign",
+    "ClassName": "RubyAlign"
+  },
+  {
+    "Name": "w:CT_RubyContent/w:rubyBase",
+    "ClassName": "RubyBase"
+  },
+  {
+    "Name": "w:CT_RubyPr/w:rubyPr",
+    "ClassName": "RubyProperties"
+  },
+  {
+    "Name": "w:CT_OnOff/w:saveFormsData",
+    "ClassName": "SaveFormsData"
+  },
+  {
+    "Name": "w:CT_OnOff/w:saveInvalidXml",
+    "ClassName": "SaveInvalidXml"
+  },
+  {
+    "Name": "w:CT_OnOff/w:savePreviewPicture",
+    "ClassName": "SavePreviewPicture"
+  },
+  {
+    "Name": "w:CT_OnOff/w:saveSubsetFonts",
+    "ClassName": "SaveSubsetFonts"
+  },
+  {
+    "Name": "w:CT_SaveThroughXslt/w:saveThroughXslt",
+    "ClassName": "SaveThroughXslt"
+  },
+  {
+    "Name": "w:CT_OnOff/w:saveXmlDataOnly",
+    "ClassName": "SaveXmlDataOnly"
+  },
+  {
+    "Name": "w:CT_FrameScrollbar/w:scrollbar",
+    "ClassName": "ScrollbarVisibility"
+  },
+  {
+    "Name": "w:CT_SdtBlock/w:sdt",
+    "ClassName": "SdtBlock"
+  },
+  {
+    "Name": "w:CT_SdtCell/w:sdt",
+    "ClassName": "SdtCell"
+  },
+  {
+    "Name": "w:CT_SdtRow/w:sdt",
+    "ClassName": "SdtRow"
+  },
+  {
+    "Name": "w:CT_SdtRun/w:sdt",
+    "ClassName": "SdtRun"
+  },
+  {
+    "Name": "w:CT_SdtRunRuby/w:sdt",
+    "ClassName": "SdtRunRuby"
+  },
+  {
+    "Name": "w:CT_SdtContentBlock/w:sdtContent",
+    "ClassName": "SdtContentBlock"
+  },
+  {
+    "Name": "w:CT_SdtContentCell/w:sdtContent",
+    "ClassName": "SdtContentCell"
+  },
+  {
+    "Name": "w:CT_SdtContentRow/w:sdtContent",
+    "ClassName": "SdtContentRow"
+  },
+  {
+    "Name": "w:CT_SdtContentRun/w:sdtContent",
+    "ClassName": "SdtContentRun"
+  },
+  {
+    "Name": "w:CT_SdtContentRunRuby/w:sdtContent",
+    "ClassName": "SdtContentRunRuby"
+  },
+  {
+    "Name": "w:CT_SdtEndPr/w:sdtEndPr",
+    "ClassName": "SdtEndCharProperties"
+  },
+  {
+    "Name": "w:CT_SdtPr/w:sdtPr",
+    "ClassName": "SdtProperties"
+  },
+  {
+    "Name": "w:CT_SectPr/w:sectPr",
+    "ClassName": "SectionProperties"
+  },
+  {
+    "Name": "w:CT_SectPrBase/w:sectPr",
+    "ClassName": "PreviousSectionProperties"
+  },
+  {
+    "Name": "w:CT_SectPrChange/w:sectPrChange",
+    "ClassName": "SectionPropertiesChange"
+  },
+  {
+    "Name": "w:CT_OnOff/w:selectFldWithFirstOrLastChar",
+    "ClassName": "SelectFieldWithFirstOrLastChar"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:semiHidden",
+    "ClassName": "SemiHidden"
+  },
+  {
+    "Name": "w:CT_Empty/w:separator",
+    "ClassName": "SeparatorMark"
+  },
+  {
+    "Name": "w:CT_Settings/w:settings",
+    "ClassName": "Settings",
+    "PartClassName": "DocumentSettingsPart"
+  },
+  {
+    "Name": "w:CT_OnOff/w:shadow",
+    "ClassName": "Shadow"
+  },
+  {
+    "Name": "w:CT_ShapeDefaults/w:shapeDefaults",
+    "ClassName": "ShapeDefaults"
+  },
+  {
+    "Name": "w:CT_OnOff/w:shapeLayoutLikeWW8",
+    "ClassName": "ShapeLayoutLikeWord8"
+  },
+  {
+    "Name": "w:CT_Shd/w:shd",
+    "ClassName": "Shading"
+  },
+  {
+    "Name": "w:CT_OnOff/w:showBreaksInFrames",
+    "ClassName": "ShowBreaksInFrames"
+  },
+  {
+    "Name": "w:CT_OnOff/w:showEnvelope",
+    "ClassName": "ShowEnvelope"
+  },
+  {
+    "Name": "w:CT_OnOff/w:showingPlcHdr",
+    "ClassName": "ShowingPlaceholder"
+  },
+  {
+    "Name": "w:CT_OnOff/w:showXMLTags",
+    "ClassName": "ShowXmlTags"
+  },
+  {
+    "Name": "w:CT_FontSig/w:sig",
+    "ClassName": "FontSignature"
+  },
+  {
+    "Name": "w:CT_HpsMeasure/w:size",
+    "ClassName": "FormFieldSize"
+  },
+  {
+    "Name": "w:CT_OnOff/w:sizeAuto",
+    "ClassName": "AutomaticallySizeFormField"
+  },
+  {
+    "Name": "w:CT_OnOff/w:smallCaps",
+    "ClassName": "SmallCaps"
+  },
+  {
+    "Name": "w:CT_OnOff/w:snapToGrid",
+    "ClassName": "SnapToGrid"
+  },
+  {
+    "Name": "w:CT_Empty/w:softHyphen",
+    "ClassName": "SoftHyphen"
+  },
+  {
+    "Name": "w:CT_Rel/w:sourceFileName",
+    "ClassName": "SourceFileReference"
+  },
+  {
+    "Name": "w:CT_OnOff/w:spaceForUL",
+    "ClassName": "SpaceForUnderline"
+  },
+  {
+    "Name": "w:CT_ShortTwipsMeasure/w:spacing",
+    "ClassName": "Spacing"
+  },
+  {
+    "Name": "w:CT_Spacing/w:spacing",
+    "ClassName": "SpacingBetweenLines"
+  },
+  {
+    "Name": "w:CT_OnOff/w:spacingInWholePoints",
+    "ClassName": "SpacingInWholePoints"
+  },
+  {
+    "Name": "w:CT_OnOff/w:specVanish",
+    "ClassName": "SpecVanish"
+  },
+  {
+    "Name": "w:CT_OnOff/w:splitPgBreakAndParaMark",
+    "ClassName": "SplitPageBreakAndParagraphMark"
+  },
+  {
+    "Name": "w:CT_Rel/w:src",
+    "ClassName": "SourceReference"
+  },
+  {
+    "Name": "w:CT_Border/w:start",
+    "ClassName": "StartBorder"
+  },
+  {
+    "Name": "w:CT_NonNegativeDecimalNumber/w:start",
+    "ClassName": "StartNumberingValue"
+  },
+  {
+    "Name": "w:CT_TblWidth/w:start",
+    "ClassName": "StartMargin"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w:startOverride",
+    "ClassName": "StartOverrideNumberingValue"
+  },
+  {
+    "Name": "w:CT_FFStatusText/w:statusText",
+    "ClassName": "StatusText"
+  },
+  {
+    "Name": "w:CT_SdtDateMappingType/w:storeMappedDataAs",
+    "ClassName": "SdtDateMappingType"
+  },
+  {
+    "Name": "w:CT_OnOff/w:strictFirstAndLastChars",
+    "ClassName": "StrictFirstAndLastChars"
+  },
+  {
+    "Name": "w:CT_OnOff/w:strike",
+    "ClassName": "Strike"
+  },
+  {
+    "Name": "w:CT_String/w:style",
+    "ClassName": "StyleId"
+  },
+  {
+    "Name": "w:CT_Style/w:style",
+    "ClassName": "Style"
+  },
+  {
+    "Name": "w:CT_String253/w:styleLink",
+    "ClassName": "StyleLink"
+  },
+  {
+    "Name": "w:CT_OnOff/w:styleLockQFSet",
+    "ClassName": "StyleLockStylesPart"
+  },
+  {
+    "Name": "w:CT_OnOff/w:styleLockTheme",
+    "ClassName": "StyleLockThemesPart"
+  },
+  {
+    "Name": "w:CT_StylePaneFormatFilter/w:stylePaneFormatFilter",
+    "ClassName": "StylePaneFormatFilter"
+  },
+  {
+    "Name": "w:CT_StylePaneSortMethods/w:stylePaneSortMethod",
+    "ClassName": "StylePaneSortMethods"
+  },
+  {
+    "Name": "w:CT_Styles/w:styles",
+    "ClassName": "Styles"
+  },
+  {
+    "Name": "w:CT_Rel/w:subDoc",
+    "ClassName": "SubDocumentReference"
+  },
+  {
+    "Name": "w:CT_OnOff/w:subFontBySize",
+    "ClassName": "SubFontBySize"
+  },
+  {
+    "Name": "w:CT_LevelSuffix/w:suff",
+    "ClassName": "LevelSuffix"
+  },
+  {
+    "Name": "w:CT_UnsignedInt100/w:summaryLength",
+    "ClassName": "SummaryLength"
+  },
+  {
+    "Name": "w:CT_OnOff/w:suppressAutoHyphens",
+    "ClassName": "SuppressAutoHyphens"
+  },
+  {
+    "Name": "w:CT_OnOff/w:suppressBottomSpacing",
+    "ClassName": "SuppressBottomSpacing"
+  },
+  {
+    "Name": "w:CT_OnOff/w:suppressLineNumbers",
+    "ClassName": "SuppressLineNumbers"
+  },
+  {
+    "Name": "w:CT_OnOff/w:suppressOverlap",
+    "ClassName": "SuppressOverlap"
+  },
+  {
+    "Name": "w:CT_OnOff/w:suppressSpacingAtTopOfPage",
+    "ClassName": "SuppressSpacingAtTopOfPage"
+  },
+  {
+    "Name": "w:CT_OnOff/w:suppressSpBfAfterPgBrk",
+    "ClassName": "SuppressSpacingBeforeAfterPageBreak"
+  },
+  {
+    "Name": "w:CT_OnOff/w:suppressTopSpacing",
+    "ClassName": "SuppressTopSpacing"
+  },
+  {
+    "Name": "w:CT_OnOff/w:suppressTopSpacingWP",
+    "ClassName": "SuppressTopSpacingWordPerfect"
+  },
+  {
+    "Name": "w:CT_OnOff/w:swapBordersFacingPages",
+    "ClassName": "SwapBordersFacingPages"
+  },
+  {
+    "Name": "w:CT_Sym/w:sym",
+    "ClassName": "SymbolChar"
+  },
+  {
+    "Name": "w:CT_HpsMeasure/w:sz",
+    "ClassName": "FontSize"
+  },
+  {
+    "Name": "w:CT_String/w:sz",
+    "ClassName": "FrameSize"
+  },
+  {
+    "Name": "w:CT_HpsMeasure/w:szCs",
+    "ClassName": "FontSizeComplexScript"
+  },
+  {
+    "Name": "w:CT_Text/w:t",
+    "ClassName": "Text"
+  },
+  {
+    "Name": "w:CT_Empty/w:tab",
+    "ClassName": "TabChar"
+  },
+  {
+    "Name": "w:CT_TabStop/w:tab",
+    "ClassName": "TabStop"
+  },
+  {
+    "Name": "w:CT_String/w:table",
+    "ClassName": "DataSourceTableName"
+  },
+  {
+    "Name": "w:CT_Tabs/w:tabs",
+    "ClassName": "Tabs"
+  },
+  {
+    "Name": "w:CT_String/w:tag",
+    "ClassName": "Tag"
+  },
+  {
+    "Name": "w:CT_TargetScreenSz/w:targetScreenSz",
+    "ClassName": "TargetScreenSize"
+  },
+  {
+    "Name": "w:CT_Tbl/w:tbl",
+    "ClassName": "Table"
+  },
+  {
+    "Name": "w:CT_TblBorders/w:tblBorders",
+    "ClassName": "TableBorders"
+  },
+  {
+    "Name": "w:CT_String/w:tblCaption",
+    "ClassName": "TableCaption"
+  },
+  {
+    "Name": "w:CT_TblCellMar/w:tblCellMar",
+    "ClassName": "TableCellMarginDefault"
+  },
+  {
+    "Name": "w:CT_TblWidth/w:tblCellSpacing",
+    "ClassName": "TableCellSpacing"
+  },
+  {
+    "Name": "w:CT_String/w:tblDescription",
+    "ClassName": "TableDescription"
+  },
+  {
+    "Name": "w:CT_TblGrid/w:tblGrid",
+    "ClassName": "TableGrid"
+  },
+  {
+    "Name": "w:CT_TblGridBase/w:tblGrid",
+    "ClassName": "PreviousTableGrid"
+  },
+  {
+    "Name": "w:CT_TblGridChange/w:tblGridChange",
+    "ClassName": "TableGridChange"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:tblHeader",
+    "ClassName": "TableHeader"
+  },
+  {
+    "Name": "w:CT_TblWidthShort/w:tblInd",
+    "ClassName": "TableIndentation"
+  },
+  {
+    "Name": "w:CT_TblLayoutType/w:tblLayout",
+    "ClassName": "TableLayout"
+  },
+  {
+    "Name": "w:CT_TblLook/w:tblLook",
+    "ClassName": "TableLook"
+  },
+  {
+    "Name": "w:CT_TblOverlap/w:tblOverlap",
+    "ClassName": "TableOverlap"
+  },
+  {
+    "Name": "w:CT_TblPPr/w:tblpPr",
+    "ClassName": "TablePositionProperties"
+  },
+  {
+    "Name": "w:CT_TblPr/w:tblPr",
+    "ClassName": "TableProperties"
+  },
+  {
+    "Name": "w:CT_TblPrBase/w:tblPr",
+    "ClassName": "PreviousTableProperties"
+  },
+  {
+    "Name": "w:CT_TblPrStyle/w:tblPr",
+    "ClassName": "StyleTableProperties"
+  },
+  {
+    "Name": "w:CT_TblPrStyleOverride/w:tblPr",
+    "ClassName": "TableStyleConditionalFormattingTableProperties"
+  },
+  {
+    "Name": "w:CT_TblPrChange/w:tblPrChange",
+    "ClassName": "TablePropertiesChange"
+  },
+  {
+    "Name": "w:CT_TblPrEx/w:tblPrEx",
+    "ClassName": "TablePropertyExceptions"
+  },
+  {
+    "Name": "w:CT_TblPrExBase/w:tblPrEx",
+    "ClassName": "PreviousTablePropertyExceptions"
+  },
+  {
+    "Name": "w:CT_TblPrExChange/w:tblPrExChange",
+    "ClassName": "TablePropertyExceptionsChange"
+  },
+  {
+    "Name": "w:CT_String253/w:tblStyle",
+    "ClassName": "TableStyle"
+  },
+  {
+    "Name": "w:CT_UnsignedDecimalNumberMax3/w:tblStyleColBandSize",
+    "ClassName": "TableStyleColumnBandSize"
+  },
+  {
+    "Name": "w:CT_TblStylePr/w:tblStylePr",
+    "ClassName": "TableStyleProperties"
+  },
+  {
+    "Name": "w:CT_UnsignedDecimalNumberMax3/w:tblStyleRowBandSize",
+    "ClassName": "TableStyleRowBandSize"
+  },
+  {
+    "Name": "w:CT_TblWidth/w:tblW",
+    "ClassName": "TableWidth"
+  },
+  {
+    "Name": "w:CT_Tc/w:tc",
+    "ClassName": "TableCell"
+  },
+  {
+    "Name": "w:CT_TcBorders/w:tcBorders",
+    "ClassName": "TableCellBorders"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:tcFitText",
+    "ClassName": "TableCellFitText"
+  },
+  {
+    "Name": "w:CT_TcMar/w:tcMar",
+    "ClassName": "TableCellMargin"
+  },
+  {
+    "Name": "w:CT_TcPr/w:tcPr",
+    "ClassName": "TableCellProperties"
+  },
+  {
+    "Name": "w:CT_TcPrInner/w:tcPr",
+    "ClassName": "PreviousTableCellProperties"
+  },
+  {
+    "Name": "w:CT_TcPrStyle/w:tcPr",
+    "ClassName": "StyleTableCellProperties"
+  },
+  {
+    "Name": "w:CT_TcPrStyleOverride/w:tcPr",
+    "ClassName": "TableStyleConditionalFormattingTableCellProperties"
+  },
+  {
+    "Name": "w:CT_TcPrChange/w:tcPrChange",
+    "ClassName": "TableCellPropertiesChange"
+  },
+  {
+    "Name": "w:CT_TblWidth/w:tcW",
+    "ClassName": "TableCellWidth"
+  },
+  {
+    "Name": "w:CT_OnOff/w:temporary",
+    "ClassName": "TemporarySdt"
+  },
+  {
+    "Name": "w:CT_SdtText/w:text",
+    "ClassName": "SdtContentText"
+  },
+  {
+    "Name": "w:CT_TextAlignment/w:textAlignment",
+    "ClassName": "TextAlignment"
+  },
+  {
+    "Name": "w:CT_TextboxTightWrap/w:textboxTightWrap",
+    "ClassName": "TextBoxTightWrap"
+  },
+  {
+    "Name": "w:CT_TextDirection/w:textDirection",
+    "ClassName": "TextDirection"
+  },
+  {
+    "Name": "w:CT_FFTextInput/w:textInput",
+    "ClassName": "TextInput"
+  },
+  {
+    "Name": "w:CT_Language/w:themeFontLang",
+    "ClassName": "ThemeFontLanguages"
+  },
+  {
+    "Name": "w:CT_OnOff/w:titlePg",
+    "ClassName": "TitlePage"
+  },
+  {
+    "Name": "w:CT_Border/w:tl2br",
+    "ClassName": "TopLeftToBottomRightCellBorder"
+  },
+  {
+    "Name": "w:CT_LongHexNumber/w:tmpl",
+    "ClassName": "TemplateCode"
+  },
+  {
+    "Name": "w:CT_Border/w:top",
+    "ClassName": "TopBorder"
+  },
+  {
+    "Name": "w:CT_TblWidth/w:top",
+    "ClassName": "TopMargin"
+  },
+  {
+    "Name": "w:CT_OnOff/w:topLinePunct",
+    "ClassName": "TopLinePunctuation"
+  },
+  {
+    "Name": "w:CT_Row/w:tr",
+    "ClassName": "TableRow"
+  },
+  {
+    "Name": "w:CT_Border/w:tr2bl",
+    "ClassName": "TopRightToBottomLeftCellBorder"
+  },
+  {
+    "Name": "w:CT_OnOff/w:trackRevisions",
+    "ClassName": "TrackRevisions"
+  },
+  {
+    "Name": "w:CT_Height/w:trHeight",
+    "ClassName": "TableRowHeight"
+  },
+  {
+    "Name": "w:CT_TrPr/w:trPr",
+    "ClassName": "TableRowProperties"
+  },
+  {
+    "Name": "w:CT_TrPrBase/w:trPr",
+    "ClassName": "PreviousTableRowProperties"
+  },
+  {
+    "Name": "w:CT_TrPrBaseStyleable/w:trPr",
+    "ClassName": "TableStyleConditionalFormattingTableRowProperties"
+  },
+  {
+    "Name": "w:CT_TrPrChange/w:trPrChange",
+    "ClassName": "TableRowPropertiesChange"
+  },
+  {
+    "Name": "w:CT_OnOff/w:truncateFontHeightsLikeWP6",
+    "ClassName": "TruncateFontHeightsLikeWordPerfect"
+  },
+  {
+    "Name": "w:CT_TxbxContent/w:txbxContent",
+    "ClassName": "TextBoxContent"
+  },
+  {
+    "Name": "w:CT_DocPartType/w:type",
+    "ClassName": "DocPartType"
+  },
+  {
+    "Name": "w:CT_FFTextType/w:type",
+    "ClassName": "TextBoxFormFieldType"
+  },
+  {
+    "Name": "w:CT_MailMergeOdsoFMDFieldType/w:type",
+    "ClassName": "MailMergeFieldType"
+  },
+  {
+    "Name": "w:CT_MailMergeSourceType/w:type",
+    "ClassName": "MailMergeSource"
+  },
+  {
+    "Name": "w:CT_SectType/w:type",
+    "ClassName": "SectionType"
+  },
+  {
+    "Name": "w:CT_DocPartTypes/w:types",
+    "ClassName": "DocPartTypes"
+  },
+  {
+    "Name": "w:CT_Underline/w:u",
+    "ClassName": "Underline"
+  },
+  {
+    "Name": "w:CT_String/w:udl",
+    "ClassName": "UdlConnectionString"
+  },
+  {
+    "Name": "w:CT_OnOff/w:uiCompat97To2003",
+    "ClassName": "UICompatibleWith97To2003"
+  },
+  {
+    "Name": "w:CT_UiPriority/w:uiPriority",
+    "ClassName": "UIPriority"
+  },
+  {
+    "Name": "w:CT_OnOff/w:ulTrailSpace",
+    "ClassName": "UnderlineTrailingSpaces"
+  },
+  {
+    "Name": "w:CT_OnOff/w:underlineTabInNumList",
+    "ClassName": "UnderlineTabInNumberingList"
+  },
+  {
+    "Name": "w:CT_OnOffOnly/w:unhideWhenUsed",
+    "ClassName": "UnhideWhenUsed"
+  },
+  {
+    "Name": "w:CT_Base64Binary/w:uniqueTag",
+    "ClassName": "UniqueTag"
+  },
+  {
+    "Name": "w:CT_OnOff/w:updateFields",
+    "ClassName": "UpdateFieldsOnOpen"
+  },
+  {
+    "Name": "w:CT_OnOff/w:useAltKinsokuLineBreakRules",
+    "ClassName": "UseAltKinsokuLineBreakRules"
+  },
+  {
+    "Name": "w:CT_OnOff/w:useAnsiKerningPairs",
+    "ClassName": "UseAnsiKerningPairs"
+  },
+  {
+    "Name": "w:CT_OnOff/w:useFELayout",
+    "ClassName": "UseFarEastLayout"
+  },
+  {
+    "Name": "w:CT_OnOff/w:useNormalStyleForList",
+    "ClassName": "UseNormalStyleForList"
+  },
+  {
+    "Name": "w:CT_OnOff/w:usePrinterMetrics",
+    "ClassName": "UsePrinterMetrics"
+  },
+  {
+    "Name": "w:CT_OnOff/w:useSingleBorderforContiguousCells",
+    "ClassName": "UseSingleBorderForContiguousCells"
+  },
+  {
+    "Name": "w:CT_OnOff/w:useWord2002TableStyleRules",
+    "ClassName": "UseWord2002TableStyleRules"
+  },
+  {
+    "Name": "w:CT_OnOff/w:useWord97LineBreakRules",
+    "ClassName": "UseWord97LineBreakRules"
+  },
+  {
+    "Name": "w:CT_OnOff/w:useXSLTWhenSaving",
+    "ClassName": "UseXsltWhenSaving"
+  },
+  {
+    "Name": "w:CT_VerticalJc/w:vAlign",
+    "ClassName": "VerticalTextAlignmentOnPage"
+  },
+  {
+    "Name": "w:CT_VerticalTblJc/w:vAlign",
+    "ClassName": "TableCellVerticalAlignment"
+  },
+  {
+    "Name": "w:CT_OnOff/w:vanish",
+    "ClassName": "Vanish"
+  },
+  {
+    "Name": "w:CT_VerticalAlignRun/w:vertAlign",
+    "ClassName": "VerticalTextAlignment"
+  },
+  {
+    "Name": "w:CT_View/w:view",
+    "ClassName": "View"
+  },
+  {
+    "Name": "w:CT_OnOff/w:viewMergedData",
+    "ClassName": "ViewMergedData"
+  },
+  {
+    "Name": "w:CT_VMerge/w:vMerge",
+    "ClassName": "VerticalMerge"
+  },
+  {
+    "Name": "w:CT_TextScale/w:w",
+    "ClassName": "CharacterScale"
+  },
+  {
+    "Name": "w:CT_TwipsMeasure/w:w",
+    "ClassName": "Width"
+  },
+  {
+    "Name": "w:CT_TblWidth/w:wAfter",
+    "ClassName": "WidthAfterTableRow"
+  },
+  {
+    "Name": "w:CT_TblWidth/w:wBefore",
+    "ClassName": "WidthBeforeTableRow"
+  },
+  {
+    "Name": "w:CT_OnOff/w:webHidden",
+    "ClassName": "WebHidden"
+  },
+  {
+    "Name": "w:CT_WebSettings/w:webSettings",
+    "ClassName": "WebSettings",
+    "PartClassName": "WebSettingsPart"
+  },
+  {
+    "Name": "w:CT_OnOff/w:widowControl",
+    "ClassName": "WidowControl"
+  },
+  {
+    "Name": "w:CT_OnOff/w:wordWrap",
+    "ClassName": "WordWrap"
+  },
+  {
+    "Name": "w:CT_OnOff/w:wpJustification",
+    "ClassName": "WordPerfectJustification"
+  },
+  {
+    "Name": "w:CT_OnOff/w:wpSpaceWidth",
+    "ClassName": "WordPerfectSpaceWidth"
+  },
+  {
+    "Name": "w:CT_OnOff/w:wrapTrailSpaces",
+    "ClassName": "WrapTrailSpaces"
+  },
+  {
+    "Name": "w:CT_WriteProtection/w:writeProtection",
+    "ClassName": "WriteProtection"
+  },
+  {
+    "Name": "w:CT_Empty/w:yearLong",
+    "ClassName": "YearLong"
+  },
+  {
+    "Name": "w:CT_Empty/w:yearShort",
+    "ClassName": "YearShort"
+  },
+  {
+    "Name": "w:CT_Zoom/w:zoom",
+    "ClassName": "Zoom"
+  }
+]

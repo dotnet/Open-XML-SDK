@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "xsd:string/pRoam:key",
+    "ClassName": "Key"
+  },
+  {
+    "Name": "pRoam:CT_RoamingProperty/pRoam:props",
+    "ClassName": "RoamingProperty"
+  },
+  {
+    "Name": "xsd:string/pRoam:value",
+    "ClassName": "Value"
+  }
+]

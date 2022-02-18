@@ -1,0 +1,26 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2017/10/main",
+  "Types": [
+    {
+      "Name": "p1710:CT_ReadonlyRecommended/p1710:readonlyRecommended",
+      "ClassName": "ReadonlyRecommended",
+      "Summary": "Defines the ReadonlyRecommended Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "xda:CT_DynamicArrayProperties/xda:dynamicArrayProperties",
+    "ClassName": "DynamicArrayProperties"
+  },
+  {
+    "Name": "x:CT_ExtensionList/xda:extLst",
+    "ClassName": "ExtensionList"
+  }
+]

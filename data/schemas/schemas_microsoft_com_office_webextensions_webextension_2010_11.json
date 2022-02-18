@@ -1,0 +1,567 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/webextensions/webextension/2010/11",
+  "Types": [
+    {
+      "Name": "we:CT_OsfWebExtension/we:webextension",
+      "ClassName": "WebExtension",
+      "Summary": "Defines the WebExtension Class.",
+      "Part": "WebExtensionPart",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":frozen",
+          "PropertyName": "Frozen",
+          "Type": "BooleanValue",
+          "Version": "Office2013",
+          "PropertyComments": "frozen"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "we:CT_OsfWebExtensionReference/we:reference",
+          "PropertyName": "WebExtensionStoreReference"
+        },
+        {
+          "Name": "we:CT_OsfWebExtensionReferenceList/we:alternateReferences",
+          "PropertyName": "WebExtensionReferenceList"
+        },
+        {
+          "Name": "we:CT_OsfWebExtensionPropertyBag/we:properties",
+          "PropertyName": "WebExtensionPropertyBag"
+        },
+        {
+          "Name": "we:CT_OsfWebExtensionBindingList/we:bindings",
+          "PropertyName": "WebExtensionBindingList"
+        },
+        {
+          "Name": "a:CT_Blip/we:snapshot",
+          "PropertyName": "Snapshot"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/we:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "we:CT_OsfWebExtensionReference/we:reference",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "we:CT_OsfWebExtensionReferenceList/we:alternateReferences",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "we:CT_OsfWebExtensionPropertyBag/we:properties",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "we:CT_OsfWebExtensionBindingList/we:bindings",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_Blip/we:snapshot",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/we:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "we:CT_WebExtensionPartRef/we:webextensionref",
+      "ClassName": "WebExtensionReference",
+      "Summary": "Defines the WebExtensionReference Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "we:CT_OsfWebExtensionProperty/we:property",
+      "ClassName": "WebExtensionProperty",
+      "Summary": "Defines the WebExtensionProperty Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":value",
+          "PropertyName": "Value",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/we:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "we:CT_OsfWebExtensionBinding/we:binding",
+      "ClassName": "WebExtensionBinding",
+      "Summary": "Defines the WebExtensionBinding Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "type",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":appref",
+          "PropertyName": "AppReference",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "appref",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/we:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/we:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "we:CT_OsfWebExtensionReference/we:reference",
+      "ClassName": "WebExtensionStoreReference",
+      "Summary": "Defines the WebExtensionStoreReference Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":version",
+          "PropertyName": "Version",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "version",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":store",
+          "PropertyName": "Store",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "store"
+        },
+        {
+          "QName": ":storeType",
+          "PropertyName": "StoreType",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "storeType"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/we:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/we:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "we:CT_OsfWebExtensionReferenceList/we:alternateReferences",
+      "ClassName": "WebExtensionReferenceList",
+      "Summary": "Defines the WebExtensionReferenceList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "we:CT_OsfWebExtensionReference/we:reference"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "we:CT_OsfWebExtensionReference/we:reference",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "we:CT_OsfWebExtensionPropertyBag/we:properties",
+      "ClassName": "WebExtensionPropertyBag",
+      "Summary": "Defines the WebExtensionPropertyBag Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "we:CT_OsfWebExtensionProperty/we:property"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "we:CT_OsfWebExtensionProperty/we:property",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "we:CT_OsfWebExtensionBindingList/we:bindings",
+      "ClassName": "WebExtensionBindingList",
+      "Summary": "Defines the WebExtensionBindingList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "we:CT_OsfWebExtensionBinding/we:binding"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "we:CT_OsfWebExtensionBinding/we:binding",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_Blip/we:snapshot",
+      "ClassName": "Snapshot",
+      "Summary": "Defines the Snapshot Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": "r:embed",
+          "PropertyName": "Embed",
+          "Type": "StringValue",
+          "PropertyComments": "Embedded Picture Reference"
+        },
+        {
+          "QName": "r:link",
+          "PropertyName": "Link",
+          "Type": "StringValue",
+          "PropertyComments": "Linked Picture Reference"
+        },
+        {
+          "QName": ":cstate",
+          "PropertyName": "CompressionState",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlipCompressionValues\u003E",
+          "PropertyComments": "Compression state for blips.",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_AlphaBiLevelEffect/a:alphaBiLevel"
+        },
+        {
+          "Name": "a:CT_AlphaCeilingEffect/a:alphaCeiling"
+        },
+        {
+          "Name": "a:CT_AlphaFloorEffect/a:alphaFloor"
+        },
+        {
+          "Name": "a:CT_AlphaInverseEffect/a:alphaInv"
+        },
+        {
+          "Name": "a:CT_AlphaModulateEffect/a:alphaMod"
+        },
+        {
+          "Name": "a:CT_AlphaModulateFixedEffect/a:alphaModFix"
+        },
+        {
+          "Name": "a:CT_AlphaReplaceEffect/a:alphaRepl"
+        },
+        {
+          "Name": "a:CT_BiLevelEffect/a:biLevel"
+        },
+        {
+          "Name": "a:CT_BlurEffect/a:blur"
+        },
+        {
+          "Name": "a:CT_ColorChangeEffect/a:clrChange"
+        },
+        {
+          "Name": "a:CT_ColorReplaceEffect/a:clrRepl"
+        },
+        {
+          "Name": "a:CT_DuotoneEffect/a:duotone"
+        },
+        {
+          "Name": "a:CT_FillOverlayEffect/a:fillOverlay"
+        },
+        {
+          "Name": "a:CT_GrayscaleEffect/a:grayscl"
+        },
+        {
+          "Name": "a:CT_HSLEffect/a:hsl"
+        },
+        {
+          "Name": "a:CT_LuminanceEffect/a:lum"
+        },
+        {
+          "Name": "a:CT_TintEffect/a:tint"
+        },
+        {
+          "Name": "a:CT_BlipExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Name": "a:CT_AlphaBiLevelEffect/a:alphaBiLevel"
+              },
+              {
+                "Name": "a:CT_AlphaCeilingEffect/a:alphaCeiling"
+              },
+              {
+                "Name": "a:CT_AlphaFloorEffect/a:alphaFloor"
+              },
+              {
+                "Name": "a:CT_AlphaInverseEffect/a:alphaInv"
+              },
+              {
+                "Name": "a:CT_AlphaModulateEffect/a:alphaMod"
+              },
+              {
+                "Name": "a:CT_AlphaModulateFixedEffect/a:alphaModFix"
+              },
+              {
+                "Name": "a:CT_AlphaReplaceEffect/a:alphaRepl"
+              },
+              {
+                "Name": "a:CT_BiLevelEffect/a:biLevel"
+              },
+              {
+                "Name": "a:CT_BlurEffect/a:blur"
+              },
+              {
+                "Name": "a:CT_ColorChangeEffect/a:clrChange"
+              },
+              {
+                "Name": "a:CT_ColorReplaceEffect/a:clrRepl"
+              },
+              {
+                "Name": "a:CT_DuotoneEffect/a:duotone"
+              },
+              {
+                "Name": "a:CT_FillOverlayEffect/a:fillOverlay"
+              },
+              {
+                "Name": "a:CT_GrayscaleEffect/a:grayscl"
+              },
+              {
+                "Name": "a:CT_HSLEffect/a:hsl"
+              },
+              {
+                "Name": "a:CT_LuminanceEffect/a:lum"
+              },
+              {
+                "Name": "a:CT_TintEffect/a:tint"
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_BlipExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

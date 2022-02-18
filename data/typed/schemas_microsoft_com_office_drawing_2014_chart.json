@@ -1,0 +1,94 @@
+[
+  {
+    "Name": "c16:CT_ChartUniqueID/",
+    "ClassName": "UniqueIDChart"
+  },
+  {
+    "Name": "c:CT_Boolean/c16:bubble3D",
+    "ClassName": "Bubble3DBoolean"
+  },
+  {
+    "Name": "c16:CT_CategoryFilterException/c16:categoryFilterException",
+    "ClassName": "CategoryFilterException"
+  },
+  {
+    "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+    "ClassName": "CategoryFilterExceptions"
+  },
+  {
+    "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+    "ClassName": "ChartDataPointUniqueIDMap"
+  },
+  {
+    "Name": "c:CT_DLbl/c16:dLbl",
+    "ClassName": "DLbl"
+  },
+  {
+    "Name": "c:CT_UnsignedInt/c16:explosion",
+    "ClassName": "UnsignedIntegerType"
+  },
+  {
+    "Name": "c16:CT_MultiLvlStrFilteredLiteralCache/c16:filteredLitCache",
+    "ClassName": "MultiLvlStrFilteredLiteralCache"
+  },
+  {
+    "Name": "c16:CT_NumFilteredLiteralCache/c16:filteredLitCache",
+    "ClassName": "NumFilteredLiteralCache"
+  },
+  {
+    "Name": "c16:CT_StrFilteredLiteralCache/c16:filteredLitCache",
+    "ClassName": "StrFilteredLiteralCache"
+  },
+  {
+    "Name": "c:CT_Boolean/c16:invertIfNegative",
+    "ClassName": "InvertIfNegativeBoolean"
+  },
+  {
+    "Name": "c16:CT_LiteralDataChart/c16:literalDataChart",
+    "ClassName": "LiteralDataChart"
+  },
+  {
+    "Name": "c:CT_Marker/c16:marker",
+    "ClassName": "Marker"
+  },
+  {
+    "Name": "c:CT_MultiLvlStrData/c16:multiLvlStrCache",
+    "ClassName": "MultiLvlStrData"
+  },
+  {
+    "Name": "c:CT_NumData/c16:numCache",
+    "ClassName": "NumberDataType"
+  },
+  {
+    "Name": "c16:CT_PivotOptions16/c16:pivotOptions16",
+    "ClassName": "PivotOptions16"
+  },
+  {
+    "Name": "c16:CT_ChartDataPointUniqueIDMapEntry/c16:ptentry",
+    "ClassName": "ChartDataPointUniqueIDMapEntry"
+  },
+  {
+    "Name": "xsd:unsignedInt/c16:ptidx",
+    "ClassName": "XsdunsignedInt"
+  },
+  {
+    "Name": "c16:CT_BooleanFalse/c16:showExpandCollapseFieldButtons",
+    "ClassName": "BooleanFalse"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/c16:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "c:CT_StrData/c16:strCache",
+    "ClassName": "StringDataType"
+  },
+  {
+    "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+    "ClassName": "UniqueIdChartUniqueID"
+  },
+  {
+    "Name": "c16:CT_ChartUniqueID/c16:uniqueID",
+    "ClassName": "UniqueID"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "lp:CT_LongProp/lp:LongProp",
+    "ClassName": "LongProperty"
+  },
+  {
+    "Name": "lp:CT_LongProperties/lp:LongProperties",
+    "ClassName": "LongProperties"
+  }
+]

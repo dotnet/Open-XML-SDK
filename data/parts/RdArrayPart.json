@@ -1,0 +1,13 @@
+{
+  "Root": "xlrd2:CT_ArrayData",
+  "Name": "RdArrayPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.rdarray\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdArray",
+  "Target": "rdarray",
+  "RootElement": "arrayData",
+  "Paths": {
+    "General": "richData"
+  },
+  "Version": "Office2019"
+}

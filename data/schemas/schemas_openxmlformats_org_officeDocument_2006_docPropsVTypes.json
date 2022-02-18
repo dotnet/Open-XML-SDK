@@ -1,0 +1,1316 @@
+{
+  "TargetNamespace": "http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes",
+  "Types": [
+    {
+      "Name": "vt:CT_Variant/vt:variant",
+      "ClassName": "Variant",
+      "Summary": "Variant.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "vt:CT_Variant/vt:variant",
+          "PropertyName": "InnerVariant",
+          "PropertyComments": "Variant"
+        },
+        {
+          "Name": "vt:CT_Vector/vt:vector",
+          "PropertyName": "VTVector",
+          "PropertyComments": "Vector"
+        },
+        {
+          "Name": "vt:CT_Array/vt:array",
+          "PropertyName": "VTArray",
+          "PropertyComments": "Array"
+        },
+        {
+          "Name": "xsd:base64Binary/vt:blob",
+          "PropertyName": "VTBlob",
+          "PropertyComments": "Binary Blob"
+        },
+        {
+          "Name": "xsd:base64Binary/vt:oblob",
+          "PropertyName": "VTOBlob",
+          "PropertyComments": "Binary Blob Object"
+        },
+        {
+          "Name": "vt:CT_Empty/vt:empty",
+          "PropertyName": "VTEmpty",
+          "PropertyComments": "Empty"
+        },
+        {
+          "Name": "vt:CT_Null/vt:null",
+          "PropertyName": "VTNull",
+          "PropertyComments": "Null"
+        },
+        {
+          "Name": "xsd:byte/vt:i1",
+          "PropertyName": "VTByte",
+          "PropertyComments": "1-Byte Signed Integer"
+        },
+        {
+          "Name": "xsd:short/vt:i2",
+          "PropertyName": "VTShort",
+          "PropertyComments": "2-Byte Signed Integer"
+        },
+        {
+          "Name": "xsd:int/vt:i4",
+          "PropertyName": "VTInt32",
+          "PropertyComments": "4-Byte Signed Integer"
+        },
+        {
+          "Name": "xsd:long/vt:i8",
+          "PropertyName": "VTInt64",
+          "PropertyComments": "8-Byte Signed Integer"
+        },
+        {
+          "Name": "xsd:int/vt:int",
+          "PropertyName": "VTInteger",
+          "PropertyComments": "Integer"
+        },
+        {
+          "Name": "xsd:unsignedByte/vt:ui1",
+          "PropertyName": "VTUnsignedByte",
+          "PropertyComments": "1-Byte Unsigned Integer"
+        },
+        {
+          "Name": "xsd:unsignedShort/vt:ui2",
+          "PropertyName": "VTUnsignedShort",
+          "PropertyComments": "2-Byte Unsigned Integer"
+        },
+        {
+          "Name": "xsd:unsignedInt/vt:ui4",
+          "PropertyName": "VTUnsignedInt32",
+          "PropertyComments": "4-Byte Unsigned Integer"
+        },
+        {
+          "Name": "xsd:unsignedLong/vt:ui8",
+          "PropertyName": "VTUnsignedInt64",
+          "PropertyComments": "8-Byte Unsigned Integer"
+        },
+        {
+          "Name": "xsd:unsignedInt/vt:uint",
+          "PropertyName": "VTUnsignedInteger",
+          "PropertyComments": "Unsigned Integer"
+        },
+        {
+          "Name": "xsd:float/vt:r4",
+          "PropertyName": "VTFloat",
+          "PropertyComments": "4-Byte Real Number"
+        },
+        {
+          "Name": "xsd:double/vt:r8",
+          "PropertyName": "VTDouble",
+          "PropertyComments": "8-Byte Real Number"
+        },
+        {
+          "Name": "xsd:decimal/vt:decimal",
+          "PropertyName": "VTDecimal",
+          "PropertyComments": "Decimal"
+        },
+        {
+          "Name": "xsd:string/vt:lpstr",
+          "PropertyName": "VTLPSTR",
+          "PropertyComments": "LPSTR"
+        },
+        {
+          "Name": "xsd:string/vt:lpwstr",
+          "PropertyName": "VTLPWSTR",
+          "PropertyComments": "LPWSTR"
+        },
+        {
+          "Name": "xsd:string/vt:bstr",
+          "PropertyName": "VTBString",
+          "PropertyComments": "Basic String"
+        },
+        {
+          "Name": "xsd:dateTime/vt:date",
+          "PropertyName": "VTDate",
+          "PropertyComments": "Date and Time"
+        },
+        {
+          "Name": "xsd:dateTime/vt:filetime",
+          "PropertyName": "VTFileTime",
+          "PropertyComments": "File Time"
+        },
+        {
+          "Name": "xsd:boolean/vt:bool",
+          "PropertyName": "VTBool",
+          "PropertyComments": "Boolean"
+        },
+        {
+          "Name": "vt:ST_Cy/vt:cy",
+          "PropertyName": "VTCurrency",
+          "PropertyComments": "Currency"
+        },
+        {
+          "Name": "vt:ST_Error/vt:error",
+          "PropertyName": "VTError",
+          "PropertyComments": "Error Status Code"
+        },
+        {
+          "Name": "xsd:base64Binary/vt:stream",
+          "PropertyName": "VTStreamData",
+          "PropertyComments": "Binary Stream"
+        },
+        {
+          "Name": "xsd:base64Binary/vt:ostream",
+          "PropertyName": "VTOStreamData",
+          "PropertyComments": "Binary Stream Object"
+        },
+        {
+          "Name": "xsd:base64Binary/vt:storage",
+          "PropertyName": "VTStorage",
+          "PropertyComments": "Binary Storage"
+        },
+        {
+          "Name": "xsd:base64Binary/vt:ostorage",
+          "PropertyName": "VTOStorage",
+          "PropertyComments": "Binary Storage Object"
+        },
+        {
+          "Name": "vt:CT_Vstream/vt:vstream",
+          "PropertyName": "VTVStreamData",
+          "PropertyComments": "Binary Versioned Stream"
+        },
+        {
+          "Name": "vt:ST_Clsid/vt:clsid",
+          "PropertyName": "VTClassId",
+          "PropertyComments": "Class ID"
+        },
+        {
+          "Name": "vt:CT_Cf/vt:cf",
+          "PropertyName": "VTClipboardData",
+          "PropertyComments": "Clipboard Data"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "vt:CT_Variant/vt:variant"
+          },
+          {
+            "Name": "vt:CT_Vector/vt:vector"
+          },
+          {
+            "Name": "vt:CT_Array/vt:array"
+          },
+          {
+            "Name": "xsd:base64Binary/vt:blob"
+          },
+          {
+            "Name": "xsd:base64Binary/vt:oblob"
+          },
+          {
+            "Name": "vt:CT_Empty/vt:empty"
+          },
+          {
+            "Name": "vt:CT_Null/vt:null"
+          },
+          {
+            "Name": "xsd:byte/vt:i1"
+          },
+          {
+            "Name": "xsd:short/vt:i2"
+          },
+          {
+            "Name": "xsd:int/vt:i4"
+          },
+          {
+            "Name": "xsd:long/vt:i8"
+          },
+          {
+            "Name": "xsd:int/vt:int"
+          },
+          {
+            "Name": "xsd:unsignedByte/vt:ui1"
+          },
+          {
+            "Name": "xsd:unsignedShort/vt:ui2"
+          },
+          {
+            "Name": "xsd:unsignedInt/vt:ui4"
+          },
+          {
+            "Name": "xsd:unsignedLong/vt:ui8"
+          },
+          {
+            "Name": "xsd:unsignedInt/vt:uint"
+          },
+          {
+            "Name": "xsd:float/vt:r4"
+          },
+          {
+            "Name": "xsd:double/vt:r8"
+          },
+          {
+            "Name": "xsd:decimal/vt:decimal"
+          },
+          {
+            "Name": "xsd:string/vt:lpstr"
+          },
+          {
+            "Name": "xsd:string/vt:lpwstr"
+          },
+          {
+            "Name": "xsd:string/vt:bstr"
+          },
+          {
+            "Name": "xsd:dateTime/vt:date"
+          },
+          {
+            "Name": "xsd:dateTime/vt:filetime"
+          },
+          {
+            "Name": "xsd:boolean/vt:bool"
+          },
+          {
+            "Name": "vt:ST_Cy/vt:cy"
+          },
+          {
+            "Name": "vt:ST_Error/vt:error"
+          },
+          {
+            "Name": "xsd:base64Binary/vt:stream"
+          },
+          {
+            "Name": "xsd:base64Binary/vt:ostream"
+          },
+          {
+            "Name": "xsd:base64Binary/vt:storage"
+          },
+          {
+            "Name": "xsd:base64Binary/vt:ostorage"
+          },
+          {
+            "Name": "vt:CT_Vstream/vt:vstream"
+          },
+          {
+            "Name": "vt:ST_Clsid/vt:clsid"
+          },
+          {
+            "Name": "vt:CT_Cf/vt:cf"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "vt:CT_Vector/vt:vector",
+      "ClassName": "VTVector",
+      "Summary": "Vector.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":baseType",
+          "PropertyName": "BaseType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.VariantTypes.VectorBaseValues\u003E",
+          "PropertyComments": "Vector Base Type",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":size",
+          "PropertyName": "Size",
+          "Type": "UInt32Value",
+          "PropertyComments": "Vector Size",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "vt:CT_Variant/vt:variant"
+        },
+        {
+          "Name": "xsd:byte/vt:i1"
+        },
+        {
+          "Name": "xsd:short/vt:i2"
+        },
+        {
+          "Name": "xsd:int/vt:i4"
+        },
+        {
+          "Name": "xsd:long/vt:i8"
+        },
+        {
+          "Name": "xsd:unsignedByte/vt:ui1"
+        },
+        {
+          "Name": "xsd:unsignedShort/vt:ui2"
+        },
+        {
+          "Name": "xsd:unsignedInt/vt:ui4"
+        },
+        {
+          "Name": "xsd:unsignedLong/vt:ui8"
+        },
+        {
+          "Name": "xsd:float/vt:r4"
+        },
+        {
+          "Name": "xsd:double/vt:r8"
+        },
+        {
+          "Name": "xsd:string/vt:lpstr"
+        },
+        {
+          "Name": "xsd:string/vt:lpwstr"
+        },
+        {
+          "Name": "xsd:string/vt:bstr"
+        },
+        {
+          "Name": "xsd:dateTime/vt:date"
+        },
+        {
+          "Name": "xsd:dateTime/vt:filetime"
+        },
+        {
+          "Name": "xsd:boolean/vt:bool"
+        },
+        {
+          "Name": "vt:ST_Cy/vt:cy"
+        },
+        {
+          "Name": "vt:ST_Error/vt:error"
+        },
+        {
+          "Name": "vt:ST_Clsid/vt:clsid"
+        },
+        {
+          "Name": "vt:CT_Cf/vt:cf"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {
+            "Min": 1
+          }
+        ],
+        "Items": [
+          {
+            "Name": "vt:CT_Variant/vt:variant"
+          },
+          {
+            "Name": "xsd:byte/vt:i1"
+          },
+          {
+            "Name": "xsd:short/vt:i2"
+          },
+          {
+            "Name": "xsd:int/vt:i4"
+          },
+          {
+            "Name": "xsd:long/vt:i8"
+          },
+          {
+            "Name": "xsd:unsignedByte/vt:ui1"
+          },
+          {
+            "Name": "xsd:unsignedShort/vt:ui2"
+          },
+          {
+            "Name": "xsd:unsignedInt/vt:ui4"
+          },
+          {
+            "Name": "xsd:unsignedLong/vt:ui8"
+          },
+          {
+            "Name": "xsd:float/vt:r4"
+          },
+          {
+            "Name": "xsd:double/vt:r8"
+          },
+          {
+            "Name": "xsd:string/vt:lpstr"
+          },
+          {
+            "Name": "xsd:string/vt:lpwstr"
+          },
+          {
+            "Name": "xsd:string/vt:bstr"
+          },
+          {
+            "Name": "xsd:dateTime/vt:date"
+          },
+          {
+            "Name": "xsd:dateTime/vt:filetime"
+          },
+          {
+            "Name": "xsd:boolean/vt:bool"
+          },
+          {
+            "Name": "vt:ST_Cy/vt:cy"
+          },
+          {
+            "Name": "vt:ST_Error/vt:error"
+          },
+          {
+            "Name": "vt:ST_Clsid/vt:clsid"
+          },
+          {
+            "Name": "vt:CT_Cf/vt:cf"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "vt:CT_Array/vt:array",
+      "ClassName": "VTArray",
+      "Summary": "Array.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":lBound",
+          "PropertyName": "LowerBounds",
+          "Type": "Int32Value",
+          "PropertyComments": "Array Lower Bounds Attribute",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":uBound",
+          "PropertyName": "UpperBounds",
+          "Type": "Int32Value",
+          "PropertyComments": "Array Upper Bounds Attribute",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":baseType",
+          "PropertyName": "BaseType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.VariantTypes.ArrayBaseValues\u003E",
+          "PropertyComments": "Array Base Type",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "vt:CT_Variant/vt:variant"
+        },
+        {
+          "Name": "xsd:byte/vt:i1"
+        },
+        {
+          "Name": "xsd:short/vt:i2"
+        },
+        {
+          "Name": "xsd:int/vt:i4"
+        },
+        {
+          "Name": "xsd:int/vt:int"
+        },
+        {
+          "Name": "xsd:unsignedByte/vt:ui1"
+        },
+        {
+          "Name": "xsd:unsignedShort/vt:ui2"
+        },
+        {
+          "Name": "xsd:unsignedInt/vt:ui4"
+        },
+        {
+          "Name": "xsd:unsignedInt/vt:uint"
+        },
+        {
+          "Name": "xsd:float/vt:r4"
+        },
+        {
+          "Name": "xsd:double/vt:r8"
+        },
+        {
+          "Name": "xsd:decimal/vt:decimal"
+        },
+        {
+          "Name": "xsd:string/vt:bstr"
+        },
+        {
+          "Name": "xsd:dateTime/vt:date"
+        },
+        {
+          "Name": "xsd:boolean/vt:bool"
+        },
+        {
+          "Name": "vt:ST_Error/vt:error"
+        },
+        {
+          "Name": "vt:ST_Cy/vt:cy"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {
+            "Min": 1
+          }
+        ],
+        "Items": [
+          {
+            "Name": "vt:CT_Variant/vt:variant"
+          },
+          {
+            "Name": "xsd:byte/vt:i1"
+          },
+          {
+            "Name": "xsd:short/vt:i2"
+          },
+          {
+            "Name": "xsd:int/vt:i4"
+          },
+          {
+            "Name": "xsd:int/vt:int"
+          },
+          {
+            "Name": "xsd:unsignedByte/vt:ui1"
+          },
+          {
+            "Name": "xsd:unsignedShort/vt:ui2"
+          },
+          {
+            "Name": "xsd:unsignedInt/vt:ui4"
+          },
+          {
+            "Name": "xsd:unsignedInt/vt:uint"
+          },
+          {
+            "Name": "xsd:float/vt:r4"
+          },
+          {
+            "Name": "xsd:double/vt:r8"
+          },
+          {
+            "Name": "xsd:decimal/vt:decimal"
+          },
+          {
+            "Name": "xsd:string/vt:bstr"
+          },
+          {
+            "Name": "xsd:dateTime/vt:date"
+          },
+          {
+            "Name": "xsd:boolean/vt:bool"
+          },
+          {
+            "Name": "vt:ST_Error/vt:error"
+          },
+          {
+            "Name": "vt:ST_Cy/vt:cy"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xsd:base64Binary/vt:blob",
+      "ClassName": "VTBlob",
+      "Summary": "Binary Blob.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:base64Binary",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:base64Binary/vt:oblob",
+      "ClassName": "VTOBlob",
+      "Summary": "Binary Blob Object.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:base64Binary",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:base64Binary/vt:stream",
+      "ClassName": "VTStreamData",
+      "Summary": "Binary Stream.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:base64Binary",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:base64Binary/vt:ostream",
+      "ClassName": "VTOStreamData",
+      "Summary": "Binary Stream Object.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:base64Binary",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:base64Binary/vt:storage",
+      "ClassName": "VTStorage",
+      "Summary": "Binary Storage.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:base64Binary",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:base64Binary/vt:ostorage",
+      "ClassName": "VTOStorage",
+      "Summary": "Binary Storage Object.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:base64Binary",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "vt:CT_Empty/vt:empty",
+      "ClassName": "VTEmpty",
+      "Summary": "Empty.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true
+    },
+    {
+      "Name": "vt:CT_Null/vt:null",
+      "ClassName": "VTNull",
+      "Summary": "Null.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true
+    },
+    {
+      "Name": "xsd:byte/vt:i1",
+      "ClassName": "VTByte",
+      "Summary": "1-Byte Signed Integer.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:byte",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:short/vt:i2",
+      "ClassName": "VTShort",
+      "Summary": "2-Byte Signed Integer.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:short",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:int/vt:i4",
+      "ClassName": "VTInt32",
+      "Summary": "4-Byte Signed Integer.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:int/vt:int",
+      "ClassName": "VTInteger",
+      "Summary": "Integer.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:long/vt:i8",
+      "ClassName": "VTInt64",
+      "Summary": "8-Byte Signed Integer.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:long",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:unsignedByte/vt:ui1",
+      "ClassName": "VTUnsignedByte",
+      "Summary": "1-Byte Unsigned Integer.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:unsignedByte",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:unsignedShort/vt:ui2",
+      "ClassName": "VTUnsignedShort",
+      "Summary": "2-Byte Unsigned Integer.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:unsignedShort",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:unsignedInt/vt:ui4",
+      "ClassName": "VTUnsignedInt32",
+      "Summary": "4-Byte Unsigned Integer.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:unsignedInt",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:unsignedInt/vt:uint",
+      "ClassName": "VTUnsignedInteger",
+      "Summary": "Unsigned Integer.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:unsignedInt",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:unsignedLong/vt:ui8",
+      "ClassName": "VTUnsignedInt64",
+      "Summary": "8-Byte Unsigned Integer.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:unsignedLong",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:float/vt:r4",
+      "ClassName": "VTFloat",
+      "Summary": "4-Byte Real Number.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:float",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:double/vt:r8",
+      "ClassName": "VTDouble",
+      "Summary": "8-Byte Real Number.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:double",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:decimal/vt:decimal",
+      "ClassName": "VTDecimal",
+      "Summary": "Decimal.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:decimal",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:string/vt:lpstr",
+      "ClassName": "VTLPSTR",
+      "Summary": "LPSTR.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/vt:lpwstr",
+      "ClassName": "VTLPWSTR",
+      "Summary": "LPWSTR.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/vt:bstr",
+      "ClassName": "VTBString",
+      "Summary": "Basic String.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:dateTime/vt:date",
+      "ClassName": "VTDate",
+      "Summary": "Date and Time.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:dateTime",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:dateTime/vt:filetime",
+      "ClassName": "VTFileTime",
+      "Summary": "File Time.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:dateTime",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:boolean/vt:bool",
+      "ClassName": "VTBool",
+      "Summary": "Boolean.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:boolean",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "vt:ST_Cy/vt:cy",
+      "ClassName": "VTCurrency",
+      "Summary": "Currency.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "String",
+              "Name": "Pattern",
+              "Value": "\\s*[0-9]*\\.[0-9]{4}\\s*"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "vt:ST_Error/vt:error",
+      "ClassName": "VTError",
+      "Summary": "Error Status Code.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "String",
+              "Name": "Pattern",
+              "Value": "0x[0-9A-Fa-f]{8}"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "vt:CT_Vstream/vt:vstream",
+      "ClassName": "VTVStreamData",
+      "Summary": "Binary Versioned Stream.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Attributes": [
+        {
+          "QName": ":version",
+          "PropertyName": "Version",
+          "Type": "StringValue",
+          "PropertyComments": "VSTREAM Version Attribute",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "vt:ST_Clsid/vt:clsid",
+      "ClassName": "VTClassId",
+      "Summary": "Class ID.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "String",
+              "Name": "Pattern",
+              "Value": "\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "vt:CT_Cf/vt:cf",
+      "ClassName": "VTClipboardData",
+      "Summary": "Clipboard Data.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Attributes": [
+        {
+          "QName": ":format",
+          "PropertyName": "Format",
+          "Type": "Int32Value",
+          "PropertyComments": "Format Attribute",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-3"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":size",
+          "PropertyName": "Size",
+          "Type": "UInt32Value",
+          "PropertyComments": "size",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "vt:ST_VectorBaseType",
+      "Name": "VectorBaseValues",
+      "Summary": "Vector Base Type Simple Type",
+      "Facets": [
+        {
+          "Comments": "Variant Base Type",
+          "Value": "variant",
+          "Name": "Variant"
+        },
+        {
+          "Comments": "Vector Base Type Enumeration Value",
+          "Value": "i1",
+          "Name": "OneByteSignedInteger"
+        },
+        {
+          "Comments": "2-Byte Signed Integer Base Type",
+          "Value": "i2",
+          "Name": "TwoBytesSignedInteger"
+        },
+        {
+          "Comments": "4-Byte Signed Integer Base Type",
+          "Value": "i4",
+          "Name": "FourBytesSignedInteger"
+        },
+        {
+          "Comments": "8-Byte Signed Integer Base Type",
+          "Value": "i8",
+          "Name": "EightBytesSignedInteger"
+        },
+        {
+          "Comments": "1-Byte Unsigned Integer Base Type",
+          "Value": "ui1",
+          "Name": "OneByteUnsignedInteger"
+        },
+        {
+          "Comments": "2-Byte Unsigned Integer Base Type",
+          "Value": "ui2",
+          "Name": "TwoBytesUnsignedInteger"
+        },
+        {
+          "Comments": "4-Byte Unsigned Integer Base Type",
+          "Value": "ui4",
+          "Name": "FourBytesUnsignedInteger"
+        },
+        {
+          "Comments": "8-Byte Unsigned Integer Base Type",
+          "Value": "ui8",
+          "Name": "EightBytesUnsignedInteger"
+        },
+        {
+          "Comments": "4-Byte Real Number Base Type",
+          "Value": "r4",
+          "Name": "FourBytesReal"
+        },
+        {
+          "Comments": "8-Byte Real Number Base Type",
+          "Value": "r8",
+          "Name": "EightBytesReal"
+        },
+        {
+          "Comments": "LPSTR Base Type",
+          "Value": "lpstr",
+          "Name": "Lpstr"
+        },
+        {
+          "Comments": "LPWSTR Base Type",
+          "Value": "lpwstr",
+          "Name": "Lpwstr"
+        },
+        {
+          "Comments": "Basic String Base Type",
+          "Value": "bstr",
+          "Name": "Bstr"
+        },
+        {
+          "Comments": "Date and Time Base Type",
+          "Value": "date",
+          "Name": "Date"
+        },
+        {
+          "Comments": "File Time Base Type",
+          "Value": "filetime",
+          "Name": "Filetime"
+        },
+        {
+          "Comments": "Boolean Base Type",
+          "Value": "bool",
+          "Name": "Bool"
+        },
+        {
+          "Comments": "Currency Base Type",
+          "Value": "cy",
+          "Name": "Currency"
+        },
+        {
+          "Comments": "Error Status Code Base Type",
+          "Value": "error",
+          "Name": "Error"
+        },
+        {
+          "Comments": "Class ID Base Type",
+          "Value": "clsid",
+          "Name": "ClassId"
+        },
+        {
+          "Comments": "Clipboard Data Base Type",
+          "Value": "cf",
+          "Name": "ClipboardData"
+        }
+      ]
+    },
+    {
+      "Type": "vt:ST_ArrayBaseType",
+      "Name": "ArrayBaseValues",
+      "Summary": "Array Base Type Simple Type",
+      "Facets": [
+        {
+          "Comments": "Variant Base Type",
+          "Value": "variant",
+          "Name": "Variant"
+        },
+        {
+          "Comments": "1-Byte Signed Integer Base Type",
+          "Value": "i1",
+          "Name": "OneByteSignedInteger"
+        },
+        {
+          "Comments": "2-Byte Signed Integer Base Type",
+          "Value": "i2",
+          "Name": "TwoBytesSignedInteger"
+        },
+        {
+          "Comments": "4-Byte Signed Integer Base Type",
+          "Value": "i4",
+          "Name": "FourBytesSignedInteger"
+        },
+        {
+          "Comments": "Integer Base Type",
+          "Value": "int",
+          "Name": "Integer"
+        },
+        {
+          "Comments": "1-Byte Unsigned Integer Base Type",
+          "Value": "ui1",
+          "Name": "OneByteUnsignedInteger"
+        },
+        {
+          "Comments": "2-Byte Unsigned Integer Base Type",
+          "Value": "ui2",
+          "Name": "TwoBytesUnsignedInteger"
+        },
+        {
+          "Comments": "4-Byte Unsigned Integer Base Type",
+          "Value": "ui4",
+          "Name": "FourBytesUnsignedInteger"
+        },
+        {
+          "Comments": "Unsigned Integer Base Type",
+          "Value": "uint",
+          "Name": "UnsignedInteger"
+        },
+        {
+          "Comments": "4-Byte Real Number Base Type",
+          "Value": "r4",
+          "Name": "FourBytesReal"
+        },
+        {
+          "Comments": "8-Byte Real Number Base Type",
+          "Value": "r8",
+          "Name": "EightBytesReal"
+        },
+        {
+          "Comments": "Decimal Base Type",
+          "Value": "decimal",
+          "Name": "Decimal"
+        },
+        {
+          "Comments": "Basic String Base Type",
+          "Value": "bstr",
+          "Name": "Bstr"
+        },
+        {
+          "Comments": "Date and Time Base Type",
+          "Value": "date",
+          "Name": "Date"
+        },
+        {
+          "Comments": "Boolean Base Type",
+          "Value": "bool",
+          "Name": "Bool"
+        },
+        {
+          "Comments": "Currency Base Type",
+          "Value": "cy",
+          "Name": "Currency"
+        },
+        {
+          "Comments": "Error Status Code Base Type",
+          "Value": "error",
+          "Name": "Error"
+        }
+      ]
+    }
+  ]
+}

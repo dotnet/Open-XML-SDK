@@ -1,0 +1,73 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020",
+  "Types": [
+    {
+      "Name": "xsd:boolean/xxpim:implicitMeasureSupport",
+      "ClassName": "Xsdboolean",
+      "Summary": "Defines the Xsdboolean Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2021",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:boolean",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xxpim:CT_Ignorable/xxpim:ignorableAfterVersion",
+      "ClassName": "Ignorable",
+      "Summary": "Defines the Ignorable Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":version",
+          "Type": "ByteValue",
+          "Version": "Office2021",
+          "PropertyComments": "version",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xxpim:CT_DataFieldFutureData/xxpim:dataFieldFutureData",
+      "ClassName": "DataFieldFutureData",
+      "Summary": "Defines the DataFieldFutureData Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":version",
+          "Type": "ByteValue",
+          "Version": "Office2021",
+          "PropertyComments": "version",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":sourceField",
+          "Type": "UInt32Value",
+          "Version": "Office2021",
+          "PropertyComments": "sourceField",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

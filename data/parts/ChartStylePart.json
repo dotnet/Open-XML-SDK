@@ -1,0 +1,13 @@
+{
+  "Root": "cs:CT_ChartStyle",
+  "Name": "ChartStylePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-office.chartstyle\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/chartStyle",
+  "Target": "style",
+  "RootElement": "chartStyle",
+  "Paths": {
+    "General": "."
+  },
+  "Version": "Office2013"
+}

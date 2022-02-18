@@ -1,0 +1,20 @@
+{
+  "Root": "x14:CT_DatastoreItem",
+  "Name": "CustomDataPropertiesPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.customDataProperties\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/customDataProps",
+  "Target": "customDataProps",
+  "RootElement": "datastoreItem",
+  "Paths": {
+    "General": "customData"
+  },
+  "Version": "Office2010",
+  "Children": [
+    {
+      "ApiName": "CustomDataPart",
+      "Name": "CustomDataPart",
+      "HasFixedContent": true
+    }
+  ]
+}

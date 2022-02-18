@@ -1,0 +1,94 @@
+[
+  {
+    "Name": "v:CT_Arc/v:arc",
+    "ClassName": "Arc"
+  },
+  {
+    "Name": "v:CT_Background/v:background",
+    "ClassName": "Background"
+  },
+  {
+    "Name": "v:CT_Curve/v:curve",
+    "ClassName": "Curve"
+  },
+  {
+    "Name": "v:CT_F/v:f",
+    "ClassName": "Formula"
+  },
+  {
+    "Name": "v:CT_Fill/v:fill",
+    "ClassName": "Fill"
+  },
+  {
+    "Name": "v:CT_Formulas/v:formulas",
+    "ClassName": "Formulas"
+  },
+  {
+    "Name": "v:CT_Group/v:group",
+    "ClassName": "Group"
+  },
+  {
+    "Name": "v:CT_H/v:h",
+    "ClassName": "ShapeHandle"
+  },
+  {
+    "Name": "v:CT_Handles/v:handles",
+    "ClassName": "ShapeHandles"
+  },
+  {
+    "Name": "v:CT_Image/v:image",
+    "ClassName": "ImageFile"
+  },
+  {
+    "Name": "v:CT_ImageData/v:imagedata",
+    "ClassName": "ImageData"
+  },
+  {
+    "Name": "v:CT_Line/v:line",
+    "ClassName": "Line"
+  },
+  {
+    "Name": "v:CT_Oval/v:oval",
+    "ClassName": "Oval"
+  },
+  {
+    "Name": "v:CT_Path/v:path",
+    "ClassName": "Path"
+  },
+  {
+    "Name": "v:CT_PolyLine/v:polyline",
+    "ClassName": "PolyLine"
+  },
+  {
+    "Name": "v:CT_Rect/v:rect",
+    "ClassName": "Rectangle"
+  },
+  {
+    "Name": "v:CT_RoundRect/v:roundrect",
+    "ClassName": "RoundRectangle"
+  },
+  {
+    "Name": "v:CT_Shadow/v:shadow",
+    "ClassName": "Shadow"
+  },
+  {
+    "Name": "v:CT_Shape/v:shape",
+    "ClassName": "Shape"
+  },
+  {
+    "Name": "v:CT_Shapetype/v:shapetype",
+    "ClassName": "Shapetype"
+  },
+  {
+    "Name": "v:CT_Stroke/v:stroke",
+    "ClassName": "Stroke"
+  },
+  {
+    "Name": "v:CT_Textbox/v:textbox",
+    "ClassName": "TextBox"
+  },
+  {
+    "Name": "v:CT_TextPath/v:textpath",
+    "ClassName": "TextPath"
+  }
+]

@@ -1,0 +1,153 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2017/3/main",
+  "Types": [
+    {
+      "Name": "p173:CT_TracksInfo/p173:tracksInfo",
+      "ClassName": "TracksInfo",
+      "Summary": "Defines the TracksInfo Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":displayLoc",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2019.Presentation.DisplayLocation\u003E",
+          "Version": "Office2019",
+          "PropertyComments": "displayLoc",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "p173:CT_TrackList/p173:trackLst",
+          "PropertyName": "TrackList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p173:CT_TrackList/p173:trackLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p173:CT_Track/p173:track",
+      "ClassName": "Track",
+      "Summary": "Defines the Track Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":label",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "label",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":lang",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "lang"
+        },
+        {
+          "QName": "r:embed",
+          "PropertyName": "Embed",
+          "Type": "StringValue",
+          "PropertyComments": "Embedded Picture Reference"
+        },
+        {
+          "QName": "r:link",
+          "PropertyName": "Link",
+          "Type": "StringValue",
+          "PropertyComments": "Linked Picture Reference"
+        }
+      ]
+    },
+    {
+      "Name": "p173:CT_TrackList/p173:trackLst",
+      "ClassName": "TrackList",
+      "Summary": "Defines the TrackList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "p173:CT_Track/p173:track"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p173:CT_Track/p173:track",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "p173:ST_DisplayLocation",
+      "Name": "DisplayLocation",
+      "Facets": [
+        {
+          "Version": "Office2019",
+          "Value": "media"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "slide"
+        }
+      ],
+      "Version": "Office2019"
+    }
+  ]
+}

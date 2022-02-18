@@ -1,0 +1,190 @@
+[
+  {
+    "Name": "c:CT_Boolean/c15:autoCat",
+    "ClassName": "AutoGeneneratedCategories"
+  },
+  {
+    "Name": "c:CT_Boolean/c15:bubble3D",
+    "ClassName": "Bubble3D"
+  },
+  {
+    "Name": "c:CT_AxDataSource/c15:cat",
+    "ClassName": "AxisDataSourceType"
+  },
+  {
+    "Name": "c15:CT_CategoryFilterException/c15:categoryFilterException",
+    "ClassName": "CategoryFilterException"
+  },
+  {
+    "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+    "ClassName": "CategoryFilterExceptions"
+  },
+  {
+    "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+    "ClassName": "DataLabelsRange"
+  },
+  {
+    "Name": "c:CT_DLbl/c15:dLbl",
+    "ClassName": "DataLabel"
+  },
+  {
+    "Name": "c15:CT_DataLabelFieldTable/c15:dlblFieldTable",
+    "ClassName": "DataLabelFieldTable"
+  },
+  {
+    "Name": "c:CT_StrData/c15:dlblFieldTableCache",
+    "ClassName": "DataLabelFieldTableCache"
+  },
+  {
+    "Name": "c15:CT_DataLabelFieldTableEntry/c15:dlblFTEntry",
+    "ClassName": "DataLabelFieldTableEntry"
+  },
+  {
+    "Name": "c:CT_StrData/c15:dlblRangeCache",
+    "ClassName": "DataLabelsRangeChache"
+  },
+  {
+    "Name": "c:CT_UnsignedInt/c15:explosion",
+    "ClassName": "Explosion"
+  },
+  {
+    "Name": "xsd:string/c15:f",
+    "ClassName": "Formula"
+  },
+  {
+    "Name": "c15:CT_FilteredAreaSer/c15:filteredAreaSeries",
+    "ClassName": "FilteredAreaSeries"
+  },
+  {
+    "Name": "c15:CT_FilteredBarSer/c15:filteredBarSeries",
+    "ClassName": "FilteredBarSeries"
+  },
+  {
+    "Name": "c15:CT_FilteredBubbleSer/c15:filteredBubbleSeries",
+    "ClassName": "FilteredBubbleSeries"
+  },
+  {
+    "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+    "ClassName": "FilteredCategoryTitle"
+  },
+  {
+    "Name": "c15:CT_FilteredLineSer/c15:filteredLineSeries",
+    "ClassName": "FilteredLineSeriesExtension"
+  },
+  {
+    "Name": "c15:CT_FilteredPieSer/c15:filteredPieSeries",
+    "ClassName": "FilteredPieSeries"
+  },
+  {
+    "Name": "c15:CT_FilteredRadarSer/c15:filteredRadarSeries",
+    "ClassName": "FilteredRadarSeries"
+  },
+  {
+    "Name": "c15:CT_FilteredScatterSer/c15:filteredScatterSeries",
+    "ClassName": "FilteredScatterSeries"
+  },
+  {
+    "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+    "ClassName": "FilteredSeriesTitle"
+  },
+  {
+    "Name": "c15:CT_FilteredSurfaceSer/c15:filteredSurfaceSeries",
+    "ClassName": "FilteredSurfaceSeries"
+  },
+  {
+    "Name": "c15:CT_FormulaRef/c15:formulaRef",
+    "ClassName": "FormulaReference"
+  },
+  {
+    "Name": "c15:CT_FullRef/c15:fullRef",
+    "ClassName": "FullReference"
+  },
+  {
+    "Name": "c:CT_Boolean/c15:invertIfNegative",
+    "ClassName": "InvertIfNegativeBoolean"
+  },
+  {
+    "Name": "c:CT_Layout/c15:layout",
+    "ClassName": "Layout"
+  },
+  {
+    "Name": "c:CT_ChartLines/c15:leaderLines",
+    "ClassName": "LeaderLines"
+  },
+  {
+    "Name": "c15:CT_LevelRef/c15:levelRef",
+    "ClassName": "LevelReference"
+  },
+  {
+    "Name": "c:CT_Marker/c15:marker",
+    "ClassName": "Marker"
+  },
+  {
+    "Name": "c:CT_NumFmt/c15:numFmt",
+    "ClassName": "NumberingFormat"
+  },
+  {
+    "Name": "c:CT_PivotSource/c15:pivotSource",
+    "ClassName": "PivotSource"
+  },
+  {
+    "Name": "c:CT_AreaSer/c15:ser",
+    "ClassName": "AreaChartSeries"
+  },
+  {
+    "Name": "c:CT_BarSer/c15:ser",
+    "ClassName": "BarChartSeries"
+  },
+  {
+    "Name": "c:CT_BubbleSer/c15:ser",
+    "ClassName": "BubbleChartSeries"
+  },
+  {
+    "Name": "c:CT_LineSer/c15:ser",
+    "ClassName": "LineChartSeries"
+  },
+  {
+    "Name": "c:CT_PieSer/c15:ser",
+    "ClassName": "PieChartSeries"
+  },
+  {
+    "Name": "c:CT_RadarSer/c15:ser",
+    "ClassName": "RadarChartSeries"
+  },
+  {
+    "Name": "c:CT_ScatterSer/c15:ser",
+    "ClassName": "ScatterChartSeries"
+  },
+  {
+    "Name": "c:CT_SurfaceSer/c15:ser",
+    "ClassName": "SurfaceChartSeries"
+  },
+  {
+    "Name": "c:CT_Boolean/c15:showDataLabelsRange",
+    "ClassName": "ShowDataLabelsRange"
+  },
+  {
+    "Name": "c:CT_Boolean/c15:showLeaderLines",
+    "ClassName": "ShowLeaderLines"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/c15:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "xsd:string/c15:sqref",
+    "ClassName": "SequenceOfReferences"
+  },
+  {
+    "Name": "c:CT_Tx/c15:tx",
+    "ClassName": "ChartText"
+  },
+  {
+    "Name": "xsd:string/c15:txfldGUID",
+    "ClassName": "TextFieldGuid"
+  },
+  {
+    "Name": "c:CT_Boolean/c15:xForSave",
+    "ClassName": "ExceptionForSave"
+  }
+]

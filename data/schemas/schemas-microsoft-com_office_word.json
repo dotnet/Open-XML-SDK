@@ -1,0 +1,365 @@
+{
+  "TargetNamespace": "urn:schemas-microsoft-com:office:word",
+  "Types": [
+    {
+      "Name": "w10:CT_Border/w10:bordertop",
+      "ClassName": "TopBorder",
+      "Summary": "Top Border.",
+      "BaseClass": "BorderType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "w10:CT_Border/w10:borderleft",
+      "ClassName": "LeftBorder",
+      "Summary": "Left Border.",
+      "BaseClass": "BorderType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "w10:CT_Border/w10:borderright",
+      "ClassName": "RightBorder",
+      "Summary": "Right Border.",
+      "BaseClass": "BorderType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "w10:CT_Border/w10:borderbottom",
+      "ClassName": "BottomBorder",
+      "Summary": "Bottom Border.",
+      "BaseClass": "BorderType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "w10:CT_Border/",
+      "ClassName": "BorderType",
+      "Summary": "Defines the BorderType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues\u003E",
+          "PropertyComments": "Border Style"
+        },
+        {
+          "QName": ":width",
+          "PropertyName": "Width",
+          "Type": "IntegerValue",
+          "PropertyComments": "Border Width",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsPositive",
+                  "Value": "True"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":shadow",
+          "PropertyName": "Shadow",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Border shadow"
+        }
+      ]
+    },
+    {
+      "Name": "w10:CT_Wrap/w10:wrap",
+      "ClassName": "TextWrap",
+      "Summary": "Text Wrapping.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues\u003E",
+          "PropertyComments": "Wrapping type"
+        },
+        {
+          "QName": ":side",
+          "PropertyName": "Side",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues\u003E",
+          "PropertyComments": "Wrapping side"
+        },
+        {
+          "QName": ":anchorx",
+          "PropertyName": "AnchorX",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues\u003E",
+          "PropertyComments": "Horizontal Positioning Base"
+        },
+        {
+          "QName": ":anchory",
+          "PropertyName": "AnchorY",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues\u003E",
+          "PropertyComments": "Vertical Positioning Base"
+        }
+      ]
+    },
+    {
+      "Name": "w10:CT_AnchorLock/w10:anchorlock",
+      "ClassName": "AnchorLock",
+      "Summary": "Anchor Location Is Locked.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "w10:ST_BorderType",
+      "Name": "BorderValues",
+      "Summary": "Border Type",
+      "Facets": [
+        {
+          "Comments": "No Border",
+          "Value": "none",
+          "Name": "None"
+        },
+        {
+          "Comments": "Single Line Border",
+          "Value": "single",
+          "Name": "Single"
+        },
+        {
+          "Comments": "Thick Line Border",
+          "Value": "thick",
+          "Name": "Thick"
+        },
+        {
+          "Comments": "Double Line Border",
+          "Value": "double",
+          "Name": "Double"
+        },
+        {
+          "Comments": "Hairline Border",
+          "Value": "hairline",
+          "Name": "Hairline"
+        },
+        {
+          "Comments": "Dotted Border",
+          "Value": "dot",
+          "Name": "Dot"
+        },
+        {
+          "Comments": "pecifies a line border consisting of a dashed line around the parent object.",
+          "Value": "dash",
+          "Name": "Dash"
+        },
+        {
+          "Comments": "Dot Dash Border",
+          "Value": "dotDash",
+          "Name": "DotDash"
+        },
+        {
+          "Comments": "Dash Dot Dot Border",
+          "Value": "dashDotDot",
+          "Name": "DashDotDot"
+        },
+        {
+          "Comments": "Triple Line Border",
+          "Value": "triple",
+          "Name": "Triple"
+        },
+        {
+          "Comments": "Thin Thick Small Gap Border",
+          "Value": "thinThickSmall",
+          "Name": "ThinThickSmall"
+        },
+        {
+          "Comments": "Small thick-thin lines border",
+          "Value": "thickThinSmall",
+          "Name": "ThickThinSmall"
+        },
+        {
+          "Comments": "Small thin-thick-thin Lines Border",
+          "Value": "thickBetweenThinSmall",
+          "Name": "ThickBetweenThinSmall"
+        },
+        {
+          "Comments": "Thin Thick Line Border",
+          "Value": "thinThick",
+          "Name": "ThinThick"
+        },
+        {
+          "Comments": "Thick Thin Line Border",
+          "Value": "thickThin",
+          "Name": "ThickThin"
+        },
+        {
+          "Comments": "Thin-thick-thin Border",
+          "Value": "thickBetweenThin",
+          "Name": "ThickBetweenThin"
+        },
+        {
+          "Comments": "Thin Thick Large Gap Border",
+          "Value": "thinThickLarge",
+          "Name": "ThinThickLarge"
+        },
+        {
+          "Comments": "Thick Thin Large Gap Border",
+          "Value": "thickThinLarge",
+          "Name": "ThickThinLarge"
+        },
+        {
+          "Comments": "Large thin-thick-thin Border",
+          "Value": "thickBetweenThinLarge",
+          "Name": "ThickBetweenThinLarge"
+        },
+        {
+          "Comments": "Wavy Border",
+          "Value": "wave",
+          "Name": "Wave"
+        },
+        {
+          "Comments": "Double Wavy Lines Border",
+          "Value": "doubleWave",
+          "Name": "DoubleWave"
+        },
+        {
+          "Comments": "Small Dash Border",
+          "Value": "dashedSmall",
+          "Name": "DashedSmall"
+        },
+        {
+          "Comments": "Stroked Dash Dot Border",
+          "Value": "dashDotStroked",
+          "Name": "DashDotStroked"
+        },
+        {
+          "Comments": "3D Embossed Border",
+          "Value": "threeDEmboss",
+          "Name": "ThreeDEmboss"
+        },
+        {
+          "Comments": "3D Engraved Border",
+          "Value": "threeDEngrave",
+          "Name": "ThreeDEngrave"
+        },
+        {
+          "Comments": "Outset Border",
+          "Value": "HTMLOutset",
+          "Name": "HTMLOutset"
+        },
+        {
+          "Comments": "Inset Border",
+          "Value": "HTMLInset",
+          "Name": "HTMLInset"
+        }
+      ]
+    },
+    {
+      "Type": "w10:ST_WrapType",
+      "Name": "WrapValues",
+      "Summary": "Text Wrapping Type",
+      "Facets": [
+        {
+          "Comments": "Top and bottom wrapping",
+          "Value": "topAndBottom",
+          "Name": "TopAndBottom"
+        },
+        {
+          "Comments": "Square wrapping",
+          "Value": "square",
+          "Name": "Square"
+        },
+        {
+          "Comments": "No wrapping",
+          "Value": "none",
+          "Name": "None"
+        },
+        {
+          "Comments": "Tight wrapping",
+          "Value": "tight",
+          "Name": "Tight"
+        },
+        {
+          "Comments": "Through wrapping",
+          "Value": "through",
+          "Name": "Through"
+        }
+      ]
+    },
+    {
+      "Type": "w10:ST_WrapSide",
+      "Name": "WrapSideValues",
+      "Summary": "Text Wrapping Side",
+      "Facets": [
+        {
+          "Comments": "Both sides",
+          "Value": "both",
+          "Name": "Both"
+        },
+        {
+          "Comments": "Left side",
+          "Value": "left",
+          "Name": "Left"
+        },
+        {
+          "Comments": "Right side",
+          "Value": "right",
+          "Name": "Right"
+        },
+        {
+          "Comments": "Largest side",
+          "Value": "largest",
+          "Name": "Largest"
+        }
+      ]
+    },
+    {
+      "Type": "w10:ST_HorizontalAnchor",
+      "Name": "HorizontalAnchorValues",
+      "Summary": "Horizontal Anchor Type",
+      "Facets": [
+        {
+          "Comments": "Margin",
+          "Value": "margin",
+          "Name": "Margin"
+        },
+        {
+          "Comments": "Page",
+          "Value": "page",
+          "Name": "Page"
+        },
+        {
+          "Comments": "Text",
+          "Value": "text",
+          "Name": "Text"
+        }
+      ]
+    },
+    {
+      "Type": "w10:ST_VerticalAnchor",
+      "Name": "VerticalAnchorValues",
+      "Summary": "Vertical Anchor Type",
+      "Facets": [
+        {
+          "Comments": "Margin",
+          "Value": "margin",
+          "Name": "Margin"
+        },
+        {
+          "Comments": "Page",
+          "Value": "page",
+          "Name": "Page"
+        },
+        {
+          "Comments": "Text",
+          "Value": "text",
+          "Name": "Text"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "Root": "t:CT_Tasks",
+  "Name": "DocumentTasksPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-office.documenttasks\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2019/05/relationships/documenttasks",
+  "Target": "tasks",
+  "RootElement": "Tasks",
+  "Paths": {
+    "General": "."
+  },
+  "Version": "Office2021"
+}

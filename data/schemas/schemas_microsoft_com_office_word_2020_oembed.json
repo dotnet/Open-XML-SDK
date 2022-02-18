@@ -1,0 +1,43 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/word/2020/oembed",
+  "Types": [
+    {
+      "Name": "woe:CT_OEmbed/woe:oembed",
+      "ClassName": "OEmbed",
+      "Summary": "Defines the OEmbed Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":oEmbedUrl",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "oEmbedUrl",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":mediaType",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "mediaType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":picLocksAutoForOEmbed",
+          "Type": "BooleanValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "picLocksAutoForOEmbed"
+        }
+      ]
+    }
+  ]
+}

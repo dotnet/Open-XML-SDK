@@ -1,0 +1,36 @@
+{
+  "TargetNamespace": "http://schemas.openxmlformats.org/drawingml/2006/compatibility",
+  "Types": [
+    {
+      "Name": "comp:CT_Compat/comp:legacyDrawing",
+      "ClassName": "LegacyDrawing",
+      "Summary": "Legacy Drawing Object.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":spid",
+          "PropertyName": "ShapeId",
+          "Type": "StringValue",
+          "PropertyComments": "Shape ID",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

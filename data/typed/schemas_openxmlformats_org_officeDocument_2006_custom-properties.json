@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "op:CT_Properties/op:Properties",
+    "ClassName": "Properties",
+    "PartClassName": "CustomFilePropertiesPart"
+  },
+  {
+    "Name": "op:CT_Property/op:property",
+    "ClassName": "CustomDocumentProperty"
+  }
+]

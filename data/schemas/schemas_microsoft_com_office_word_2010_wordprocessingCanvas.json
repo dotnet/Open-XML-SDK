@@ -1,0 +1,339 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas",
+  "Types": [
+    {
+      "Name": "wpc:CT_WordprocessingCanvas/wpc:wpc",
+      "ClassName": "WordprocessingCanvas",
+      "Summary": "Defines the WordprocessingCanvas Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_BackgroundFormatting/wpc:bg",
+          "PropertyName": "BackgroundFormatting"
+        },
+        {
+          "Name": "a:CT_WholeE2oFormatting/wpc:whole",
+          "PropertyName": "WholeFormatting"
+        },
+        {
+          "Name": "wps:CT_WordprocessingShape/wps:wsp"
+        },
+        {
+          "Name": "pic:CT_Picture/pic:pic"
+        },
+        {
+          "Name": "w14:CT_WordContentPart/w14:contentPart"
+        },
+        {
+          "Name": "wpg:CT_WordprocessingGroup/wpg:wgp"
+        },
+        {
+          "Name": "wpg:CT_GraphicFrame/wpc:graphicFrame"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/wpc:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_BackgroundFormatting/wpc:bg",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a:CT_WholeE2oFormatting/wpc:whole",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Name": "wps:CT_WordprocessingShape/wps:wsp",
+                "InitialVersion": "Office2010"
+              },
+              {
+                "Name": "pic:CT_Picture/pic:pic"
+              },
+              {
+                "Name": "w14:CT_WordContentPart/w14:contentPart",
+                "InitialVersion": "Office2010"
+              },
+              {
+                "Name": "wpg:CT_WordprocessingGroup/wpg:wgp",
+                "InitialVersion": "Office2010"
+              },
+              {
+                "Name": "wpg:CT_GraphicFrame/wpc:graphicFrame",
+                "InitialVersion": "Office2010"
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/wpc:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_BackgroundFormatting/wpc:bg",
+      "ClassName": "BackgroundFormatting",
+      "Summary": "Defines the BackgroundFormatting Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_NoFillProperties/a:noFill"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+        },
+        {
+          "Name": "a:CT_GradientFillProperties/a:gradFill"
+        },
+        {
+          "Name": "a:CT_BlipFillProperties/a:blipFill"
+        },
+        {
+          "Name": "a:CT_PatternFillProperties/a:pattFill"
+        },
+        {
+          "Name": "a:CT_GroupFillProperties/a:grpFill"
+        },
+        {
+          "Name": "a:CT_EffectList/a:effectLst"
+        },
+        {
+          "Name": "a:CT_EffectContainer/a:effectDag"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_NoFillProperties/a:noFill"
+                  },
+                  {
+                    "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+                  },
+                  {
+                    "Name": "a:CT_GradientFillProperties/a:gradFill"
+                  },
+                  {
+                    "Name": "a:CT_BlipFillProperties/a:blipFill"
+                  },
+                  {
+                    "Name": "a:CT_PatternFillProperties/a:pattFill"
+                  },
+                  {
+                    "Name": "a:CT_GroupFillProperties/a:grpFill"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_EffectList/a:effectLst"
+                  },
+                  {
+                    "Name": "a:CT_EffectContainer/a:effectDag"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_WholeE2oFormatting/wpc:whole",
+      "ClassName": "WholeFormatting",
+      "Summary": "Defines the WholeFormatting Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_LineProperties/a:ln",
+          "PropertyName": "Outline",
+          "PropertyComments": "Outline"
+        },
+        {
+          "Name": "a:CT_EffectList/a:effectLst"
+        },
+        {
+          "Name": "a:CT_EffectContainer/a:effectDag"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_LineProperties/a:ln",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_EffectList/a:effectLst"
+                  },
+                  {
+                    "Name": "a:CT_EffectContainer/a:effectDag"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wpg:CT_GraphicFrame/wpc:graphicFrame",
+      "ClassName": "GraphicFrameType",
+      "Summary": "Defines the GraphicFrameType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_NonVisualDrawingProps/wpg:cNvPr",
+          "PropertyName": "NonVisualDrawingProperties"
+        },
+        {
+          "Name": "a:CT_NonVisualGraphicFrameProperties/wpg:cNvFrPr",
+          "PropertyName": "NonVisualGraphicFrameProperties"
+        },
+        {
+          "Name": "a:CT_Transform2D/wpg:xfrm",
+          "PropertyName": "Transform2D"
+        },
+        {
+          "Name": "a:CT_GraphicalObject/a:graphic",
+          "PropertyName": "Graphic"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/wpg:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_NonVisualDrawingProps/wpg:cNvPr",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a:CT_NonVisualGraphicFrameProperties/wpg:cNvFrPr",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a:CT_Transform2D/wpg:xfrm",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a:CT_GraphicalObject/a:graphic"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/wpg:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/wpc:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

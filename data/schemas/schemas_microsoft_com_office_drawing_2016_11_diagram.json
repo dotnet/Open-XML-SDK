@@ -1,0 +1,171 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2016/11/diagram",
+  "Types": [
+    {
+      "Name": "dgm1611:CT_NumberDiagramInfoList/dgm1611:autoBuNodeInfoLst",
+      "ClassName": "NumberDiagramInfoList",
+      "Summary": "Defines the NumberDiagramInfoList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "dgm1611:CT_NumberDiagramInfo/dgm1611:autoBuNodeInfo"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "dgm1611:CT_NumberDiagramInfo/dgm1611:autoBuNodeInfo",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "dgm1611:CT_DiagramAutoBullet/dgm1611:buPr",
+      "ClassName": "DiagramAutoBullet",
+      "Summary": "Defines the DiagramAutoBullet Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":prefix",
+          "PropertyName": "AutoBulletPrefix",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "prefix"
+        },
+        {
+          "QName": ":leadZeros",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "leadZeros"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_TextNoBullet/a:buNone",
+          "PropertyName": "NoBullet",
+          "PropertyComments": "No Bullet"
+        },
+        {
+          "Name": "a:CT_TextAutonumberBullet/a:buAutoNum",
+          "PropertyName": "AutoNumberedBullet",
+          "PropertyComments": "Auto-Numbered Bullet"
+        },
+        {
+          "Name": "a:CT_TextCharBullet/a:buChar",
+          "PropertyName": "CharacterBullet",
+          "PropertyComments": "Character Bullet"
+        },
+        {
+          "Name": "a:CT_TextBlipBullet/a:buBlip",
+          "PropertyName": "PictureBullet",
+          "PropertyComments": "Picture Bullet"
+        }
+      ],
+      "Particle": {
+        "Kind": "Group",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "a:CT_TextNoBullet/a:buNone"
+              },
+              {
+                "Name": "a:CT_TextAutonumberBullet/a:buAutoNum"
+              },
+              {
+                "Name": "a:CT_TextCharBullet/a:buChar"
+              },
+              {
+                "Name": "a:CT_TextBlipBullet/a:buBlip"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "dgm1611:CT_NumberDiagramInfo/dgm1611:autoBuNodeInfo",
+      "ClassName": "NumberDiagramInfo",
+      "Summary": "Defines the NumberDiagramInfo Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":lvl",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "lvl",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":ptType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2019.Drawing.Diagram11.STorageType\u003E",
+          "Version": "Office2019",
+          "PropertyComments": "ptType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "dgm1611:CT_DiagramAutoBullet/dgm1611:buPr",
+          "PropertyName": "DiagramAutoBullet"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "dgm1611:CT_DiagramAutoBullet/dgm1611:buPr",
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "dgm1611:ST_STorageType",
+      "Name": "STorageType",
+      "Facets": [
+        {
+          "Version": "Office2019",
+          "Value": "sibTrans"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "parTrans"
+        }
+      ],
+      "Version": "Office2019"
+    }
+  ]
+}

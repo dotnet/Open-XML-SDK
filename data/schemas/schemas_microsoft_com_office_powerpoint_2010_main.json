@@ -1,0 +1,2096 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2010/main",
+  "Types": [
+    {
+      "Name": "p14:CT_ContentPartNonVisual/p14:nvContentPartPr",
+      "ClassName": "NonVisualContentPartProperties",
+      "Summary": "Defines the NonVisualContentPartProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_NonVisualDrawingProps/p14:cNvPr",
+          "PropertyName": "NonVisualDrawingProperties"
+        },
+        {
+          "Name": "a14:CT_NonVisualInkContentPartProperties/p14:cNvContentPartPr",
+          "PropertyName": "NonVisualInkContentPartProperties"
+        },
+        {
+          "Name": "p:CT_ApplicationNonVisualDrawingProps/p14:nvPr",
+          "PropertyName": "ApplicationNonVisualDrawingProperties"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_NonVisualDrawingProps/p14:cNvPr",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_NonVisualInkContentPartProperties/p14:cNvContentPartPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "p:CT_ApplicationNonVisualDrawingProps/p14:nvPr",
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_Transform2D/p14:xfrm",
+      "ClassName": "Transform2D",
+      "Summary": "Defines the Transform2D Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":rot",
+          "PropertyName": "Rotation",
+          "Type": "Int32Value",
+          "PropertyComments": "Rotation"
+        },
+        {
+          "QName": ":flipH",
+          "PropertyName": "HorizontalFlip",
+          "Type": "BooleanValue",
+          "PropertyComments": "Horizontal Flip"
+        },
+        {
+          "QName": ":flipV",
+          "PropertyName": "VerticalFlip",
+          "Type": "BooleanValue",
+          "PropertyComments": "Vertical Flip"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Point2D/a:off",
+          "PropertyName": "Offset",
+          "PropertyComments": "Offset"
+        },
+        {
+          "Name": "a:CT_PositiveSize2D/a:ext",
+          "PropertyName": "Extents",
+          "PropertyComments": "Extents"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Point2D/a:off",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_PositiveSize2D/a:ext",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p:CT_ExtensionListModify/p14:extLst",
+      "ClassName": "ExtensionListModify",
+      "Summary": "Defines the ExtensionListModify Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":mod",
+          "PropertyName": "Modify",
+          "Type": "BooleanValue",
+          "PropertyComments": "Modify"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "p:CT_Extension/p:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "p:CT_Extension/p:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p14:CT_Media/p14:media",
+      "ClassName": "Media",
+      "Summary": "Defines the Media Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "r:embed",
+          "PropertyName": "Embed",
+          "Type": "StringValue",
+          "PropertyComments": "Embedded Picture Reference"
+        },
+        {
+          "QName": "r:link",
+          "PropertyName": "Link",
+          "Type": "StringValue",
+          "PropertyComments": "Linked Picture Reference"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "p14:CT_MediaTrim/p14:trim",
+          "PropertyName": "MediaTrim"
+        },
+        {
+          "Name": "p14:CT_MediaFade/p14:fade",
+          "PropertyName": "MediaFade"
+        },
+        {
+          "Name": "p14:CT_MediaBookmarkList/p14:bmkLst",
+          "PropertyName": "MediaBookmarkList"
+        },
+        {
+          "Name": "p:CT_ExtensionList/p14:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p14:CT_MediaTrim/p14:trim",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "p14:CT_MediaFade/p14:fade",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "p14:CT_MediaBookmarkList/p14:bmkLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "p:CT_ExtensionList/p14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p:CT_SideDirectionTransition/p14:vortex",
+      "ClassName": "VortexTransition",
+      "Summary": "Defines the VortexTransition Class.",
+      "BaseClass": "SideDirectionTransitionType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p:CT_SideDirectionTransition/p14:pan",
+      "ClassName": "PanTransition",
+      "Summary": "Defines the PanTransition Class.",
+      "BaseClass": "SideDirectionTransitionType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p:CT_SideDirectionTransition/",
+      "ClassName": "SideDirectionTransitionType",
+      "Summary": "Defines the SideDirectionTransitionType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":dir",
+          "PropertyName": "Direction",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues\u003E",
+          "PropertyComments": "Direction",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_LeftRightDirectionTransition/p14:switch",
+      "ClassName": "SwitchTransition",
+      "Summary": "Defines the SwitchTransition Class.",
+      "BaseClass": "LeftRightDirectionTransitionType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p14:CT_LeftRightDirectionTransition/p14:flip",
+      "ClassName": "FlipTransition",
+      "Summary": "Defines the FlipTransition Class.",
+      "BaseClass": "LeftRightDirectionTransitionType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p14:CT_LeftRightDirectionTransition/p14:ferris",
+      "ClassName": "FerrisTransition",
+      "Summary": "Defines the FerrisTransition Class.",
+      "BaseClass": "LeftRightDirectionTransitionType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p14:CT_LeftRightDirectionTransition/p14:gallery",
+      "ClassName": "GalleryTransition",
+      "Summary": "Defines the GalleryTransition Class.",
+      "BaseClass": "LeftRightDirectionTransitionType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p14:CT_LeftRightDirectionTransition/p14:conveyor",
+      "ClassName": "ConveyorTransition",
+      "Summary": "Defines the ConveyorTransition Class.",
+      "BaseClass": "LeftRightDirectionTransitionType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p14:CT_LeftRightDirectionTransition/",
+      "ClassName": "LeftRightDirectionTransitionType",
+      "Summary": "Defines the LeftRightDirectionTransitionType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":dir",
+          "PropertyName": "Direction",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "dir",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_RippleTransition/p14:ripple",
+      "ClassName": "RippleTransition",
+      "Summary": "Defines the RippleTransition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":dir",
+          "PropertyName": "Direction",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "dir",
+          "Validators": [
+            {
+              "Name": "EnumValidator",
+              "Type": "p:ST_TransitionCornerDirectionType",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "p14:ST_TransitionCenterDirectionType",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p:CT_Empty/p14:honeycomb",
+      "ClassName": "HoneycombTransition",
+      "Summary": "Defines the HoneycombTransition Class.",
+      "BaseClass": "EmptyType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p:CT_Empty/p14:flash",
+      "ClassName": "FlashTransition",
+      "Summary": "Defines the FlashTransition Class.",
+      "BaseClass": "EmptyType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p:CT_Empty/",
+      "ClassName": "EmptyType",
+      "Summary": "Defines the EmptyType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "p14:CT_PrismTransition/p14:prism",
+      "ClassName": "PrismTransition",
+      "Summary": "Defines the PrismTransition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":dir",
+          "PropertyName": "Direction",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "dir",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":isContent",
+          "PropertyName": "IsContent",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "isContent"
+        },
+        {
+          "QName": ":isInverted",
+          "PropertyName": "IsInverted",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "isInverted"
+        }
+      ]
+    },
+    {
+      "Name": "p:CT_OrientationTransition/p14:doors",
+      "ClassName": "DoorsTransition",
+      "Summary": "Defines the DoorsTransition Class.",
+      "BaseClass": "OrientationTransitionType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p:CT_OrientationTransition/p14:window",
+      "ClassName": "WindowTransition",
+      "Summary": "Defines the WindowTransition Class.",
+      "BaseClass": "OrientationTransitionType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p:CT_OrientationTransition/",
+      "ClassName": "OrientationTransitionType",
+      "Summary": "Defines the OrientationTransitionType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":dir",
+          "PropertyName": "Direction",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.DirectionValues\u003E",
+          "PropertyComments": "Transition Direction",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_GlitterTransition/p14:glitter",
+      "ClassName": "GlitterTransition",
+      "Summary": "Defines the GlitterTransition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":dir",
+          "PropertyName": "Direction",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "dir",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":pattern",
+          "PropertyName": "Pattern",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "pattern",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p:CT_InOutTransition/p14:warp",
+      "ClassName": "WarpTransition",
+      "Summary": "Defines the WarpTransition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":dir",
+          "PropertyName": "Direction",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues\u003E",
+          "PropertyComments": "Direction",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_FlyThroughTransition/p14:flythrough",
+      "ClassName": "FlythroughTransition",
+      "Summary": "Defines the FlythroughTransition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":dir",
+          "PropertyName": "Direction",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "dir",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":hasBounce",
+          "PropertyName": "HasBounce",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "hasBounce"
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_ShredTransition/p14:shred",
+      "ClassName": "ShredTransition",
+      "Summary": "Defines the ShredTransition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":pattern",
+          "PropertyName": "Pattern",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "pattern",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":dir",
+          "PropertyName": "Direction",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "dir",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_RevealTransition/p14:reveal",
+      "ClassName": "RevealTransition",
+      "Summary": "Defines the RevealTransition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":thruBlk",
+          "PropertyName": "ThroughBlack",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "thruBlk"
+        },
+        {
+          "QName": ":dir",
+          "PropertyName": "Direction",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "dir",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p:CT_WheelTransition/p14:wheelReverse",
+      "ClassName": "WheelReverseTransition",
+      "Summary": "Defines the WheelReverseTransition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":spokes",
+          "PropertyName": "Spokes",
+          "Type": "UInt32Value",
+          "PropertyComments": "Spokes"
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_MediaBookmarkTarget/p14:bmkTgt",
+      "ClassName": "BookmarkTarget",
+      "Summary": "Defines the BookmarkTarget Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":spid",
+          "PropertyName": "ShapeId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "spid",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":bmkName",
+          "PropertyName": "BookmarkName",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "bmkName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_SectionProperties/p14:sectionPr",
+      "ClassName": "SectionProperties",
+      "Summary": "Defines the SectionProperties Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "p14:CT_SectionOld/p14:section"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p14:CT_SectionOld/p14:section",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p14:CT_SectionList/p14:sectionLst",
+      "ClassName": "SectionList",
+      "Summary": "Defines the SectionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "p14:CT_Section/p14:section"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p14:CT_Section/p14:section",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p14:CT_BrowseMode/p14:browseMode",
+      "ClassName": "BrowseMode",
+      "Summary": "Defines the BrowseMode Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":showStatus",
+          "PropertyName": "ShowStatus",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "showStatus"
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_Color/p14:laserClr",
+      "ClassName": "LaserColor",
+      "Summary": "Defines the LaserColor Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_ScRgbColor/a:scrgbClr",
+          "PropertyName": "RgbColorModelPercentage",
+          "PropertyComments": "RGB Color Model - Percentage Variant"
+        },
+        {
+          "Name": "a:CT_SRgbColor/a:srgbClr",
+          "PropertyName": "RgbColorModelHex",
+          "PropertyComments": "RGB Color Model - Hex Variant"
+        },
+        {
+          "Name": "a:CT_HslColor/a:hslClr",
+          "PropertyName": "HslColor",
+          "PropertyComments": "Hue, Saturation, Luminance Color Model"
+        },
+        {
+          "Name": "a:CT_SystemColor/a:sysClr",
+          "PropertyName": "SystemColor",
+          "PropertyComments": "System Color"
+        },
+        {
+          "Name": "a:CT_SchemeColor/a:schemeClr",
+          "PropertyName": "SchemeColor",
+          "PropertyComments": "Scheme Color"
+        },
+        {
+          "Name": "a:CT_PresetColor/a:prstClr",
+          "PropertyName": "PresetColor",
+          "PropertyComments": "Preset Color"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_ScRgbColor/a:scrgbClr"
+                  },
+                  {
+                    "Name": "a:CT_SRgbColor/a:srgbClr"
+                  },
+                  {
+                    "Name": "a:CT_HslColor/a:hslClr"
+                  },
+                  {
+                    "Name": "a:CT_SystemColor/a:sysClr"
+                  },
+                  {
+                    "Name": "a:CT_SchemeColor/a:schemeClr"
+                  },
+                  {
+                    "Name": "a:CT_PresetColor/a:prstClr"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p14:CT_DefaultImageDpi/p14:defaultImageDpi",
+      "ClassName": "DefaultImageDpi",
+      "Summary": "Defines the DefaultImageDpi Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_DiscardImageEditData/p14:discardImageEditData",
+      "ClassName": "DiscardImageEditData",
+      "Summary": "Defines the DiscardImageEditData Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_ShowMediaControls/p14:showMediaCtrls",
+      "ClassName": "ShowMediaControls",
+      "Summary": "Defines the ShowMediaControls Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_LaserTraceList/p14:laserTraceLst",
+      "ClassName": "LaserTraceList",
+      "Summary": "Defines the LaserTraceList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "p14:CT_LaserTrace/p14:tracePtLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p14:CT_LaserTrace/p14:tracePtLst",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p14:CT_RandomId/p14:creationId",
+      "ClassName": "CreationId",
+      "Summary": "Defines the CreationId Class.",
+      "BaseClass": "RandomIdType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p14:CT_RandomId/p14:modId",
+      "ClassName": "ModificationId",
+      "Summary": "Defines the ModificationId Class.",
+      "BaseClass": "RandomIdType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p14:CT_RandomId/",
+      "ClassName": "RandomIdType",
+      "Summary": "Defines the RandomIdType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_ShowEventRecordList/p14:showEvtLst",
+      "ClassName": "ShowEventRecordList",
+      "Summary": "Defines the ShowEventRecordList Class.",
+      "CompositeType": "OneAll",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "p14:CT_TriggerEventRecord/p14:triggerEvt",
+          "PropertyName": "TriggerEventRecord"
+        },
+        {
+          "Name": "p14:CT_MediaPlaybackEventRecord/p14:playEvt",
+          "PropertyName": "PlayEventRecord"
+        },
+        {
+          "Name": "p14:CT_MediaPlaybackEventRecord/p14:stopEvt",
+          "PropertyName": "StopEventRecord"
+        },
+        {
+          "Name": "p14:CT_MediaPlaybackEventRecord/p14:pauseEvt",
+          "PropertyName": "PauseEventRecord"
+        },
+        {
+          "Name": "p14:CT_MediaPlaybackEventRecord/p14:resumeEvt",
+          "PropertyName": "ResumeEventRecord"
+        },
+        {
+          "Name": "p14:CT_MediaSeekEventRecord/p14:seekEvt",
+          "PropertyName": "SeekEventRecord"
+        },
+        {
+          "Name": "p14:CT_NullEventRecord/p14:nullEvt",
+          "PropertyName": "NullEventRecord"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Name": "p14:CT_TriggerEventRecord/p14:triggerEvt",
+                "InitialVersion": "Office2010"
+              },
+              {
+                "Name": "p14:CT_MediaPlaybackEventRecord/p14:playEvt",
+                "InitialVersion": "Office2010"
+              },
+              {
+                "Name": "p14:CT_MediaPlaybackEventRecord/p14:stopEvt",
+                "InitialVersion": "Office2010"
+              },
+              {
+                "Name": "p14:CT_MediaPlaybackEventRecord/p14:pauseEvt",
+                "InitialVersion": "Office2010"
+              },
+              {
+                "Name": "p14:CT_MediaPlaybackEventRecord/p14:resumeEvt",
+                "InitialVersion": "Office2010"
+              },
+              {
+                "Name": "p14:CT_MediaSeekEventRecord/p14:seekEvt",
+                "InitialVersion": "Office2010"
+              },
+              {
+                "Name": "p14:CT_NullEventRecord/p14:nullEvt",
+                "InitialVersion": "Office2010"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_NonVisualDrawingProps/p14:cNvPr",
+      "ClassName": "NonVisualDrawingProperties",
+      "Summary": "Defines the NonVisualDrawingProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "UInt32Value",
+          "PropertyComments": "Application defined unique identifier.",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "Name compatible with Object Model (non-unique).",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":descr",
+          "PropertyName": "Description",
+          "Type": "StringValue",
+          "PropertyComments": "Description of the drawing element."
+        },
+        {
+          "QName": ":hidden",
+          "PropertyName": "Hidden",
+          "Type": "BooleanValue",
+          "PropertyComments": "Flag determining to show or hide this element."
+        },
+        {
+          "QName": ":title",
+          "PropertyName": "Title",
+          "Type": "StringValue",
+          "PropertyComments": "Title"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Hyperlink/a:hlinkClick",
+          "PropertyName": "HyperlinkOnClick",
+          "PropertyComments": "Hyperlink associated with clicking or selecting the element."
+        },
+        {
+          "Name": "a:CT_Hyperlink/a:hlinkHover",
+          "PropertyName": "HyperlinkOnHover",
+          "PropertyComments": "Hyperlink associated with hovering over the element."
+        },
+        {
+          "Name": "a:CT_NonVisualDrawingPropsExtensionList/a:extLst",
+          "PropertyName": "NonVisualDrawingPropertiesExtensionList",
+          "PropertyComments": "Future extension"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Hyperlink/a:hlinkClick",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Hyperlink/a:hlinkHover",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_NonVisualDrawingPropsExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a14:CT_NonVisualInkContentPartProperties/p14:cNvContentPartPr",
+      "ClassName": "NonVisualInkContentPartProperties",
+      "Summary": "Defines the NonVisualInkContentPartProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":isComment",
+          "PropertyName": "IsComment",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "isComment"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a14:CT_ContentPartLocking/a14:cpLocks",
+          "PropertyName": "ContentPartLocks"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a14:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a14:CT_ContentPartLocking/a14:cpLocks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p:CT_ApplicationNonVisualDrawingProps/p14:nvPr",
+      "ClassName": "ApplicationNonVisualDrawingProperties",
+      "Summary": "Defines the ApplicationNonVisualDrawingProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":isPhoto",
+          "PropertyName": "IsPhoto",
+          "Type": "BooleanValue",
+          "PropertyComments": "Is a Photo Album"
+        },
+        {
+          "QName": ":userDrawn",
+          "PropertyName": "UserDrawn",
+          "Type": "BooleanValue",
+          "PropertyComments": "Is User Drawn"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "p:CT_Placeholder/p:ph",
+          "PropertyName": "PlaceholderShape",
+          "PropertyComments": "Placeholder Shape"
+        },
+        {
+          "Name": "a:CT_AudioCD/a:audioCd"
+        },
+        {
+          "Name": "a:CT_EmbeddedWAVAudioFile/a:wavAudioFile"
+        },
+        {
+          "Name": "a:CT_AudioFile/a:audioFile"
+        },
+        {
+          "Name": "a:CT_VideoFile/a:videoFile"
+        },
+        {
+          "Name": "a:CT_QuickTimeFile/a:quickTimeFile"
+        },
+        {
+          "Name": "p:CT_CustomerDataList/p:custDataLst"
+        },
+        {
+          "Name": "p:CT_ApplicationNonVisualDrawingPropsExtensionList/p:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p:CT_Placeholder/p:ph",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_AudioCD/a:audioCd"
+                  },
+                  {
+                    "Name": "a:CT_EmbeddedWAVAudioFile/a:wavAudioFile"
+                  },
+                  {
+                    "Name": "a:CT_AudioFile/a:audioFile"
+                  },
+                  {
+                    "Name": "a:CT_VideoFile/a:videoFile"
+                  },
+                  {
+                    "Name": "a:CT_QuickTimeFile/a:quickTimeFile"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "p:CT_CustomerDataList/p:custDataLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "p:CT_ApplicationNonVisualDrawingPropsExtensionList/p:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p14:CT_MediaBookmark/p14:bmk",
+      "ClassName": "MediaBookmark",
+      "Summary": "Defines the MediaBookmark Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "name"
+        },
+        {
+          "QName": ":time",
+          "PropertyName": "Time",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "time"
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_MediaTrim/p14:trim",
+      "ClassName": "MediaTrim",
+      "Summary": "Defines the MediaTrim Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":st",
+          "PropertyName": "Start",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "st"
+        },
+        {
+          "QName": ":end",
+          "PropertyName": "End",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "end"
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_MediaFade/p14:fade",
+      "ClassName": "MediaFade",
+      "Summary": "Defines the MediaFade Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":in",
+          "PropertyName": "InDuration",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "in"
+        },
+        {
+          "QName": ":out",
+          "PropertyName": "OutDuration",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "out"
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_MediaBookmarkList/p14:bmkLst",
+      "ClassName": "MediaBookmarkList",
+      "Summary": "Defines the MediaBookmarkList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "p14:CT_MediaBookmark/p14:bmk"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p14:CT_MediaBookmark/p14:bmk",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p:CT_ExtensionList/p14:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "p:CT_Extension/p:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "p:CT_Extension/p:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p14:CT_SectionOld/p14:section",
+      "ClassName": "SectionOld",
+      "Summary": "Defines the SectionOld Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "name"
+        },
+        {
+          "QName": ":slideIdLst",
+          "PropertyName": "SlideIdList",
+          "Type": "ListValue\u003CUInt32Value\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "slideIdLst",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "2147483648"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "256"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "p:CT_ExtensionList/p14:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p:CT_ExtensionList/p14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p14:CT_SectionSlideIdListEntry/p14:sldId",
+      "ClassName": "SectionSlideIdListEntry",
+      "Summary": "Defines the SectionSlideIdListEntry Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "2147483648"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "256"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_SectionSlideIdList/p14:sldIdLst",
+      "ClassName": "SectionSlideIdList",
+      "Summary": "Defines the SectionSlideIdList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "p14:CT_SectionSlideIdListEntry/p14:sldId"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p14:CT_SectionSlideIdListEntry/p14:sldId",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p14:CT_Section/p14:section",
+      "ClassName": "Section",
+      "Summary": "Defines the Section Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "name"
+        },
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "p14:CT_SectionSlideIdList/p14:sldIdLst",
+          "PropertyName": "SectionSlideIdList"
+        },
+        {
+          "Name": "p:CT_ExtensionList/p14:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p14:CT_SectionSlideIdList/p14:sldIdLst",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "p:CT_ExtensionList/p14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p14:CT_LaserTracePoint/p14:tracePt",
+      "ClassName": "TracePoint",
+      "Summary": "Defines the TracePoint Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":t",
+          "PropertyName": "Time",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "t",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":x",
+          "PropertyName": "XCoordinate",
+          "Type": "Int64Value",
+          "Version": "Office2010",
+          "PropertyComments": "x",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":y",
+          "PropertyName": "YCoordinate",
+          "Type": "Int64Value",
+          "Version": "Office2010",
+          "PropertyComments": "y",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_LaserTrace/p14:tracePtLst",
+      "ClassName": "TracePointList",
+      "Summary": "Defines the TracePointList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "p14:CT_LaserTracePoint/p14:tracePt"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p14:CT_LaserTracePoint/p14:tracePt",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p14:CT_TriggerEventRecord/p14:triggerEvt",
+      "ClassName": "TriggerEventRecord",
+      "Summary": "Defines the TriggerEventRecord Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TriggerEventValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "type",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":time",
+          "PropertyName": "Time",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "time",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":objId",
+          "PropertyName": "ObjectId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "objId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_MediaPlaybackEventRecord/p14:playEvt",
+      "ClassName": "PlayEventRecord",
+      "Summary": "Defines the PlayEventRecord Class.",
+      "BaseClass": "MediaPlaybackEventRecordType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p14:CT_MediaPlaybackEventRecord/p14:stopEvt",
+      "ClassName": "StopEventRecord",
+      "Summary": "Defines the StopEventRecord Class.",
+      "BaseClass": "MediaPlaybackEventRecordType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p14:CT_MediaPlaybackEventRecord/p14:pauseEvt",
+      "ClassName": "PauseEventRecord",
+      "Summary": "Defines the PauseEventRecord Class.",
+      "BaseClass": "MediaPlaybackEventRecordType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p14:CT_MediaPlaybackEventRecord/p14:resumeEvt",
+      "ClassName": "ResumeEventRecord",
+      "Summary": "Defines the ResumeEventRecord Class.",
+      "BaseClass": "MediaPlaybackEventRecordType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "p14:CT_MediaPlaybackEventRecord/",
+      "ClassName": "MediaPlaybackEventRecordType",
+      "Summary": "Defines the MediaPlaybackEventRecordType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":time",
+          "PropertyName": "Time",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "time",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":objId",
+          "PropertyName": "ObjectId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "objId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_MediaSeekEventRecord/p14:seekEvt",
+      "ClassName": "SeekEventRecord",
+      "Summary": "Defines the SeekEventRecord Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":time",
+          "PropertyName": "Time",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "time",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":objId",
+          "PropertyName": "ObjectId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "objId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":seek",
+          "PropertyName": "Seek",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "seek",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p14:CT_NullEventRecord/p14:nullEvt",
+      "ClassName": "NullEventRecord",
+      "Summary": "Defines the NullEventRecord Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":time",
+          "PropertyName": "Time",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "time",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":objId",
+          "PropertyName": "ObjectId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "objId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "p14:ST_TransitionPattern",
+      "Name": "TransitionPatternValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "diamond",
+          "Name": "Diamond"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "hexagon",
+          "Name": "Hexagon"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "p14:ST_TransitionCenterDirectionType",
+      "Name": "TransitionCenterDirectionTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "center",
+          "Name": "Center"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "p14:ST_TransitionShredPattern",
+      "Name": "TransitionShredPatternValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "strip",
+          "Name": "Strip"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "rectangle",
+          "Name": "Rectangle"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "p14:ST_TransitionLeftRightDirectionType",
+      "Name": "TransitionLeftRightDirectionTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "l",
+          "Name": "Left"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "r",
+          "Name": "Right"
+        }
+      ],
+      "Version": "Office2010"
+    }
+  ]
+}

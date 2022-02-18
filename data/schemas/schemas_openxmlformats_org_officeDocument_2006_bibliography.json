@@ -1,0 +1,2708 @@
+{
+  "TargetNamespace": "http://schemas.openxmlformats.org/officeDocument/2006/bibliography",
+  "Types": [
+    {
+      "Name": "b:CT_Sources/b:Sources",
+      "ClassName": "Sources",
+      "Summary": "Sources.",
+      "BaseClass": "OpenXmlPartRootElement",
+      "Attributes": [
+        {
+          "QName": ":SelectedStyle",
+          "PropertyName": "SelectedStyle",
+          "Type": "StringValue",
+          "PropertyComments": "Selected Style",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinLength",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":StyleName",
+          "PropertyName": "StyleName",
+          "Type": "StringValue",
+          "PropertyComments": "Documentation Style Name",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinLength",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":URI",
+          "PropertyName": "Uri",
+          "Type": "StringValue",
+          "PropertyComments": "Uniform Resource Identifier",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinLength",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "b:CT_SourceType/b:Source"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_SourceType/b:Source",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_PersonType/b:Person",
+      "ClassName": "Person",
+      "Summary": "Person.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "b:ST_String255/b:Last"
+        },
+        {
+          "Name": "b:ST_String255/b:First"
+        },
+        {
+          "Name": "b:ST_String255/b:Middle"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:ST_String255/b:Last",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "b:ST_String255/b:First",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "b:ST_String255/b:Middle",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:ST_String255/b:Last",
+      "ClassName": "Last",
+      "Summary": "Person\u0027s Last, or Family, Name.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:First",
+      "ClassName": "First",
+      "Summary": "Person\u0027s First, or Given, Name.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Middle",
+      "ClassName": "Middle",
+      "Summary": "Person\u0027s Middle, or Other, Name.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Corporate",
+      "ClassName": "Corporate",
+      "Summary": "Corporate Author.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:AbbreviatedCaseNumber",
+      "ClassName": "AbbreviatedCaseNumber",
+      "Summary": "Abbreviated Case Number.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:AlbumTitle",
+      "ClassName": "AlbumTitle",
+      "Summary": "Album Title.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:BookTitle",
+      "ClassName": "BookTitle",
+      "Summary": "Book Title.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Broadcaster",
+      "ClassName": "Broadcaster",
+      "Summary": "Broadcaster.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:BroadcastTitle",
+      "ClassName": "BroadcastTitle",
+      "Summary": "Broadcast Title.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:CaseNumber",
+      "ClassName": "CaseNumber",
+      "Summary": "Case Number.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:ChapterNumber",
+      "ClassName": "ChapterNumber",
+      "Summary": "Chapter Number.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:City",
+      "ClassName": "City",
+      "Summary": "City.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Comments",
+      "ClassName": "Comments",
+      "Summary": "Comments.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:ConferenceName",
+      "ClassName": "ConferenceName",
+      "Summary": "Conference or Proceedings Name.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:CountryRegion",
+      "ClassName": "CountryRegion",
+      "Summary": "Country or Region.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Court",
+      "ClassName": "Court",
+      "Summary": "Court.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Day",
+      "ClassName": "Day",
+      "Summary": "Day.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:DayAccessed",
+      "ClassName": "DayAccessed",
+      "Summary": "Day Accessed.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Department",
+      "ClassName": "Department",
+      "Summary": "Department.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Distributor",
+      "ClassName": "Distributor",
+      "Summary": "Distributor.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Edition",
+      "ClassName": "Edition",
+      "Summary": "Editor.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Guid",
+      "ClassName": "GuidString",
+      "Summary": "GUID.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Institution",
+      "ClassName": "Institution",
+      "Summary": "Institution.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:InternetSiteTitle",
+      "ClassName": "InternetSiteTitle",
+      "Summary": "Internet Site Title.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Issue",
+      "ClassName": "Issue",
+      "Summary": "Issue.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:JournalName",
+      "ClassName": "JournalName",
+      "Summary": "Journal Name.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:LCID",
+      "ClassName": "LcId",
+      "Summary": "Locale ID.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Medium",
+      "ClassName": "Medium",
+      "Summary": "Medium.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Month",
+      "ClassName": "Month",
+      "Summary": "Month.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:MonthAccessed",
+      "ClassName": "MonthAccessed",
+      "Summary": "Month Accessed.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:NumberVolumes",
+      "ClassName": "NumberVolumes",
+      "Summary": "Number of Volumes.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Pages",
+      "ClassName": "Pages",
+      "Summary": "Pages.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:PatentNumber",
+      "ClassName": "PatentNumber",
+      "Summary": "Patent Number.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:PeriodicalTitle",
+      "ClassName": "PeriodicalTitle",
+      "Summary": "Periodical Title.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:ProductionCompany",
+      "ClassName": "ProductionCompany",
+      "Summary": "Production Company.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:PublicationTitle",
+      "ClassName": "PublicationTitle",
+      "Summary": "Publication Title.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Publisher",
+      "ClassName": "Publisher",
+      "Summary": "Publisher.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:RecordingNumber",
+      "ClassName": "RecordingNumber",
+      "Summary": "Recording Number.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:RefOrder",
+      "ClassName": "ReferenceOrder",
+      "Summary": "Reference Order.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Reporter",
+      "ClassName": "Reporter",
+      "Summary": "Reporter.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:ShortTitle",
+      "ClassName": "ShortTitle",
+      "Summary": "Short Title.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:StandardNumber",
+      "ClassName": "StandardNumber",
+      "Summary": "Standard Number.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:StateProvince",
+      "ClassName": "StateProvince",
+      "Summary": "State or Province.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Station",
+      "ClassName": "Station",
+      "Summary": "Station.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Tag",
+      "ClassName": "Tag",
+      "Summary": "Tag.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Theater",
+      "ClassName": "Theater",
+      "Summary": "Theater.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:ThesisType",
+      "ClassName": "ThesisType",
+      "Summary": "Thesis Type.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Title",
+      "ClassName": "Title",
+      "Summary": "Title.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Type",
+      "ClassName": "PatentType",
+      "Summary": "Type.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:URL",
+      "ClassName": "UrlString",
+      "Summary": "URL.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Version",
+      "ClassName": "Version",
+      "Summary": "Version.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Volume",
+      "ClassName": "Volume",
+      "Summary": "Volume.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:Year",
+      "ClassName": "Year",
+      "Summary": "Year.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:ST_String255/b:YearAccessed",
+      "ClassName": "YearAccessed",
+      "Summary": "Year Accessed.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "255"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:CT_NameListType/b:NameList",
+      "ClassName": "NameList",
+      "Summary": "Name List.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "b:CT_PersonType/b:Person"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_PersonType/b:Person",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:Artist",
+      "ClassName": "Artist",
+      "Summary": "Artist.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:BookAuthor",
+      "ClassName": "BookAuthor",
+      "Summary": "Book Author.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:Compiler",
+      "ClassName": "Compiler",
+      "Summary": "Compiler.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:Composer",
+      "ClassName": "Composer",
+      "Summary": "Composer.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:Conductor",
+      "ClassName": "Conductor",
+      "Summary": "Conductor.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:Counsel",
+      "ClassName": "Counsel",
+      "Summary": "Counsel.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:Director",
+      "ClassName": "Director",
+      "Summary": "Director.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:Editor",
+      "ClassName": "Editor",
+      "Summary": "Editor.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:Interviewee",
+      "ClassName": "Interviewee",
+      "Summary": "Interviewee.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:Interviewer",
+      "ClassName": "Interviewer",
+      "Summary": "Interviewer.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:Inventor",
+      "ClassName": "Inventor",
+      "Summary": "Inventor.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:ProducerName",
+      "ClassName": "ProducerName",
+      "Summary": "Producer Name.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:Translator",
+      "ClassName": "Translator",
+      "Summary": "Translator.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/b:Writer",
+      "ClassName": "Writer",
+      "Summary": "Writer.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "NameType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "b:CT_NameListType/b:NameList"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameType/",
+      "ClassName": "NameType",
+      "Summary": "Defines the NameType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "AdditionalElements": [
+        "b:CT_NameListType/b:NameList"
+      ],
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList",
+          "PropertyComments": "Name List"
+        }
+      ]
+    },
+    {
+      "Name": "b:CT_NameOrCorporateType/b:Author",
+      "ClassName": "Author",
+      "Summary": "Author.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "NameOrCorporateType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList"
+        },
+        {
+          "Name": "b:ST_String255/b:Corporate",
+          "PropertyName": "Corporate",
+          "PropertyComments": "Corporate Author"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Name": "b:CT_NameListType/b:NameList"
+              },
+              {
+                "Name": "b:ST_String255/b:Corporate"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameOrCorporateType/b:Performer",
+      "ClassName": "Performer",
+      "Summary": "Performer.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "NameOrCorporateType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList"
+        },
+        {
+          "Name": "b:ST_String255/b:Corporate",
+          "PropertyName": "Corporate",
+          "PropertyComments": "Corporate Author"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Name": "b:CT_NameListType/b:NameList"
+              },
+              {
+                "Name": "b:ST_String255/b:Corporate"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:CT_NameOrCorporateType/",
+      "ClassName": "NameOrCorporateType",
+      "Summary": "Defines the NameOrCorporateType Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "AdditionalElements": [
+        "b:CT_NameListType/b:NameList",
+        "b:ST_String255/b:Corporate"
+      ],
+      "Children": [
+        {
+          "Name": "b:CT_NameListType/b:NameList",
+          "PropertyName": "NameList"
+        },
+        {
+          "Name": "b:ST_String255/b:Corporate",
+          "PropertyName": "Corporate",
+          "PropertyComments": "Corporate Author"
+        }
+      ]
+    },
+    {
+      "Name": "b:CT_AuthorType/b:Author",
+      "ClassName": "AuthorList",
+      "Summary": "Contributors List.",
+      "CompositeType": "OneAll",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "b:CT_NameType/b:Artist",
+          "PropertyName": "Artist",
+          "PropertyComments": "Artist"
+        },
+        {
+          "Name": "b:CT_NameOrCorporateType/b:Author",
+          "PropertyName": "Author",
+          "PropertyComments": "Author"
+        },
+        {
+          "Name": "b:CT_NameType/b:BookAuthor",
+          "PropertyName": "BookAuthor",
+          "PropertyComments": "Book Author"
+        },
+        {
+          "Name": "b:CT_NameType/b:Compiler",
+          "PropertyName": "Compiler",
+          "PropertyComments": "Compiler"
+        },
+        {
+          "Name": "b:CT_NameType/b:Composer",
+          "PropertyName": "Composer",
+          "PropertyComments": "Composer"
+        },
+        {
+          "Name": "b:CT_NameType/b:Conductor",
+          "PropertyName": "Conductor",
+          "PropertyComments": "Conductor"
+        },
+        {
+          "Name": "b:CT_NameType/b:Counsel",
+          "PropertyName": "Counsel",
+          "PropertyComments": "Counsel"
+        },
+        {
+          "Name": "b:CT_NameType/b:Director",
+          "PropertyName": "Director",
+          "PropertyComments": "Director"
+        },
+        {
+          "Name": "b:CT_NameType/b:Editor",
+          "PropertyName": "Editor",
+          "PropertyComments": "Editor"
+        },
+        {
+          "Name": "b:CT_NameType/b:Interviewee",
+          "PropertyName": "Interviewee",
+          "PropertyComments": "Interviewee"
+        },
+        {
+          "Name": "b:CT_NameType/b:Interviewer",
+          "PropertyName": "Interviewer",
+          "PropertyComments": "Interviewer"
+        },
+        {
+          "Name": "b:CT_NameType/b:Inventor",
+          "PropertyName": "Inventor",
+          "PropertyComments": "Inventor"
+        },
+        {
+          "Name": "b:CT_NameOrCorporateType/b:Performer",
+          "PropertyName": "Performer",
+          "PropertyComments": "Performer"
+        },
+        {
+          "Name": "b:CT_NameType/b:ProducerName",
+          "PropertyName": "ProducerName",
+          "PropertyComments": "Producer Name"
+        },
+        {
+          "Name": "b:CT_NameType/b:Translator",
+          "PropertyName": "Translator",
+          "PropertyComments": "Translator"
+        },
+        {
+          "Name": "b:CT_NameType/b:Writer",
+          "PropertyName": "Writer",
+          "PropertyComments": "Writer"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Name": "b:CT_NameType/b:Artist"
+              },
+              {
+                "Name": "b:CT_NameOrCorporateType/b:Author"
+              },
+              {
+                "Name": "b:CT_NameType/b:BookAuthor"
+              },
+              {
+                "Name": "b:CT_NameType/b:Compiler"
+              },
+              {
+                "Name": "b:CT_NameType/b:Composer"
+              },
+              {
+                "Name": "b:CT_NameType/b:Conductor"
+              },
+              {
+                "Name": "b:CT_NameType/b:Counsel"
+              },
+              {
+                "Name": "b:CT_NameType/b:Director"
+              },
+              {
+                "Name": "b:CT_NameType/b:Editor"
+              },
+              {
+                "Name": "b:CT_NameType/b:Interviewee"
+              },
+              {
+                "Name": "b:CT_NameType/b:Interviewer"
+              },
+              {
+                "Name": "b:CT_NameType/b:Inventor"
+              },
+              {
+                "Name": "b:CT_NameOrCorporateType/b:Performer"
+              },
+              {
+                "Name": "b:CT_NameType/b:ProducerName"
+              },
+              {
+                "Name": "b:CT_NameType/b:Translator"
+              },
+              {
+                "Name": "b:CT_NameType/b:Writer"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "b:ST_SourceType/b:SourceType",
+      "ClassName": "SourceType",
+      "Summary": "Source Type.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "b:ST_SourceType",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "b:CT_SourceType/b:Source",
+      "ClassName": "Source",
+      "Summary": "Source.",
+      "CompositeType": "OneAll",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "b:ST_String255/b:AbbreviatedCaseNumber",
+          "PropertyName": "AbbreviatedCaseNumber",
+          "PropertyComments": "Abbreviated Case Number"
+        },
+        {
+          "Name": "b:ST_String255/b:AlbumTitle",
+          "PropertyName": "AlbumTitle",
+          "PropertyComments": "Album Title"
+        },
+        {
+          "Name": "b:CT_AuthorType/b:Author",
+          "PropertyName": "AuthorList",
+          "PropertyComments": "Contributors List"
+        },
+        {
+          "Name": "b:ST_String255/b:BookTitle",
+          "PropertyName": "BookTitle",
+          "PropertyComments": "Book Title"
+        },
+        {
+          "Name": "b:ST_String255/b:Broadcaster",
+          "PropertyName": "Broadcaster",
+          "PropertyComments": "Broadcaster"
+        },
+        {
+          "Name": "b:ST_String255/b:BroadcastTitle",
+          "PropertyName": "BroadcastTitle",
+          "PropertyComments": "Broadcast Title"
+        },
+        {
+          "Name": "b:ST_String255/b:CaseNumber",
+          "PropertyName": "CaseNumber",
+          "PropertyComments": "Case Number"
+        },
+        {
+          "Name": "b:ST_String255/b:ChapterNumber",
+          "PropertyName": "ChapterNumber",
+          "PropertyComments": "Chapter Number"
+        },
+        {
+          "Name": "b:ST_String255/b:City",
+          "PropertyName": "City",
+          "PropertyComments": "City"
+        },
+        {
+          "Name": "b:ST_String255/b:Comments",
+          "PropertyName": "Comments",
+          "PropertyComments": "Comments"
+        },
+        {
+          "Name": "b:ST_String255/b:ConferenceName",
+          "PropertyName": "ConferenceName",
+          "PropertyComments": "Conference or Proceedings Name"
+        },
+        {
+          "Name": "b:ST_String255/b:CountryRegion",
+          "PropertyName": "CountryRegion",
+          "PropertyComments": "Country or Region"
+        },
+        {
+          "Name": "b:ST_String255/b:Court",
+          "PropertyName": "Court",
+          "PropertyComments": "Court"
+        },
+        {
+          "Name": "b:ST_String255/b:Day",
+          "PropertyName": "Day",
+          "PropertyComments": "Day"
+        },
+        {
+          "Name": "b:ST_String255/b:DayAccessed",
+          "PropertyName": "DayAccessed",
+          "PropertyComments": "Day Accessed"
+        },
+        {
+          "Name": "b:ST_String255/b:Department",
+          "PropertyName": "Department",
+          "PropertyComments": "Department"
+        },
+        {
+          "Name": "b:ST_String255/b:Distributor",
+          "PropertyName": "Distributor",
+          "PropertyComments": "Distributor"
+        },
+        {
+          "Name": "b:ST_String255/b:Edition",
+          "PropertyName": "Edition",
+          "PropertyComments": "Editor"
+        },
+        {
+          "Name": "b:ST_String255/b:Guid",
+          "PropertyName": "GuidString",
+          "PropertyComments": "GUID"
+        },
+        {
+          "Name": "b:ST_String255/b:Institution",
+          "PropertyName": "Institution",
+          "PropertyComments": "Institution"
+        },
+        {
+          "Name": "b:ST_String255/b:InternetSiteTitle",
+          "PropertyName": "InternetSiteTitle",
+          "PropertyComments": "Internet Site Title"
+        },
+        {
+          "Name": "b:ST_String255/b:Issue",
+          "PropertyName": "Issue",
+          "PropertyComments": "Issue"
+        },
+        {
+          "Name": "b:ST_String255/b:JournalName",
+          "PropertyName": "JournalName",
+          "PropertyComments": "Journal Name"
+        },
+        {
+          "Name": "b:ST_String255/b:LCID",
+          "PropertyName": "LcId",
+          "PropertyComments": "Locale ID"
+        },
+        {
+          "Name": "b:ST_String255/b:Medium",
+          "PropertyName": "Medium",
+          "PropertyComments": "Medium"
+        },
+        {
+          "Name": "b:ST_String255/b:Month",
+          "PropertyName": "Month",
+          "PropertyComments": "Month"
+        },
+        {
+          "Name": "b:ST_String255/b:MonthAccessed",
+          "PropertyName": "MonthAccessed",
+          "PropertyComments": "Month Accessed"
+        },
+        {
+          "Name": "b:ST_String255/b:NumberVolumes",
+          "PropertyName": "NumberVolumes",
+          "PropertyComments": "Number of Volumes"
+        },
+        {
+          "Name": "b:ST_String255/b:Pages",
+          "PropertyName": "Pages",
+          "PropertyComments": "Pages"
+        },
+        {
+          "Name": "b:ST_String255/b:PatentNumber",
+          "PropertyName": "PatentNumber",
+          "PropertyComments": "Patent Number"
+        },
+        {
+          "Name": "b:ST_String255/b:PeriodicalTitle",
+          "PropertyName": "PeriodicalTitle",
+          "PropertyComments": "Periodical Title"
+        },
+        {
+          "Name": "b:ST_String255/b:ProductionCompany",
+          "PropertyName": "ProductionCompany",
+          "PropertyComments": "Production Company"
+        },
+        {
+          "Name": "b:ST_String255/b:PublicationTitle",
+          "PropertyName": "PublicationTitle",
+          "PropertyComments": "Publication Title"
+        },
+        {
+          "Name": "b:ST_String255/b:Publisher",
+          "PropertyName": "Publisher",
+          "PropertyComments": "Publisher"
+        },
+        {
+          "Name": "b:ST_String255/b:RecordingNumber",
+          "PropertyName": "RecordingNumber",
+          "PropertyComments": "Recording Number"
+        },
+        {
+          "Name": "b:ST_String255/b:RefOrder",
+          "PropertyName": "ReferenceOrder",
+          "PropertyComments": "Reference Order"
+        },
+        {
+          "Name": "b:ST_String255/b:Reporter",
+          "PropertyName": "Reporter",
+          "PropertyComments": "Reporter"
+        },
+        {
+          "Name": "b:ST_SourceType/b:SourceType",
+          "PropertyName": "SourceType",
+          "PropertyComments": "Source Type"
+        },
+        {
+          "Name": "b:ST_String255/b:ShortTitle",
+          "PropertyName": "ShortTitle",
+          "PropertyComments": "Short Title"
+        },
+        {
+          "Name": "b:ST_String255/b:StandardNumber",
+          "PropertyName": "StandardNumber",
+          "PropertyComments": "Standard Number"
+        },
+        {
+          "Name": "b:ST_String255/b:StateProvince",
+          "PropertyName": "StateProvince",
+          "PropertyComments": "State or Province"
+        },
+        {
+          "Name": "b:ST_String255/b:Station",
+          "PropertyName": "Station",
+          "PropertyComments": "Station"
+        },
+        {
+          "Name": "b:ST_String255/b:Tag",
+          "PropertyName": "Tag",
+          "PropertyComments": "Tag"
+        },
+        {
+          "Name": "b:ST_String255/b:Theater",
+          "PropertyName": "Theater",
+          "PropertyComments": "Theater"
+        },
+        {
+          "Name": "b:ST_String255/b:ThesisType",
+          "PropertyName": "ThesisType",
+          "PropertyComments": "Thesis Type"
+        },
+        {
+          "Name": "b:ST_String255/b:Title",
+          "PropertyName": "Title",
+          "PropertyComments": "Title"
+        },
+        {
+          "Name": "b:ST_String255/b:Type",
+          "PropertyName": "PatentType",
+          "PropertyComments": "Type"
+        },
+        {
+          "Name": "b:ST_String255/b:URL",
+          "PropertyName": "UrlString",
+          "PropertyComments": "URL"
+        },
+        {
+          "Name": "b:ST_String255/b:Version",
+          "PropertyName": "Version",
+          "PropertyComments": "Version"
+        },
+        {
+          "Name": "b:ST_String255/b:Volume",
+          "PropertyName": "Volume",
+          "PropertyComments": "Volume"
+        },
+        {
+          "Name": "b:ST_String255/b:Year",
+          "PropertyName": "Year",
+          "PropertyComments": "Year"
+        },
+        {
+          "Name": "b:ST_String255/b:YearAccessed",
+          "PropertyName": "YearAccessed",
+          "PropertyComments": "Year Accessed"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Name": "b:ST_String255/b:AbbreviatedCaseNumber"
+              },
+              {
+                "Name": "b:ST_String255/b:AlbumTitle"
+              },
+              {
+                "Name": "b:CT_AuthorType/b:Author"
+              },
+              {
+                "Name": "b:ST_String255/b:BookTitle"
+              },
+              {
+                "Name": "b:ST_String255/b:Broadcaster"
+              },
+              {
+                "Name": "b:ST_String255/b:BroadcastTitle"
+              },
+              {
+                "Name": "b:ST_String255/b:CaseNumber"
+              },
+              {
+                "Name": "b:ST_String255/b:ChapterNumber"
+              },
+              {
+                "Name": "b:ST_String255/b:City"
+              },
+              {
+                "Name": "b:ST_String255/b:Comments"
+              },
+              {
+                "Name": "b:ST_String255/b:ConferenceName"
+              },
+              {
+                "Name": "b:ST_String255/b:CountryRegion"
+              },
+              {
+                "Name": "b:ST_String255/b:Court"
+              },
+              {
+                "Name": "b:ST_String255/b:Day"
+              },
+              {
+                "Name": "b:ST_String255/b:DayAccessed"
+              },
+              {
+                "Name": "b:ST_String255/b:Department"
+              },
+              {
+                "Name": "b:ST_String255/b:Distributor"
+              },
+              {
+                "Name": "b:ST_String255/b:Edition"
+              },
+              {
+                "Name": "b:ST_String255/b:Guid"
+              },
+              {
+                "Name": "b:ST_String255/b:Institution"
+              },
+              {
+                "Name": "b:ST_String255/b:InternetSiteTitle"
+              },
+              {
+                "Name": "b:ST_String255/b:Issue"
+              },
+              {
+                "Name": "b:ST_String255/b:JournalName"
+              },
+              {
+                "Name": "b:ST_String255/b:LCID"
+              },
+              {
+                "Name": "b:ST_String255/b:Medium"
+              },
+              {
+                "Name": "b:ST_String255/b:Month"
+              },
+              {
+                "Name": "b:ST_String255/b:MonthAccessed"
+              },
+              {
+                "Name": "b:ST_String255/b:NumberVolumes"
+              },
+              {
+                "Name": "b:ST_String255/b:Pages"
+              },
+              {
+                "Name": "b:ST_String255/b:PatentNumber"
+              },
+              {
+                "Name": "b:ST_String255/b:PeriodicalTitle"
+              },
+              {
+                "Name": "b:ST_String255/b:ProductionCompany"
+              },
+              {
+                "Name": "b:ST_String255/b:PublicationTitle"
+              },
+              {
+                "Name": "b:ST_String255/b:Publisher"
+              },
+              {
+                "Name": "b:ST_String255/b:RecordingNumber"
+              },
+              {
+                "Name": "b:ST_String255/b:RefOrder"
+              },
+              {
+                "Name": "b:ST_String255/b:Reporter"
+              },
+              {
+                "Name": "b:ST_SourceType/b:SourceType"
+              },
+              {
+                "Name": "b:ST_String255/b:ShortTitle"
+              },
+              {
+                "Name": "b:ST_String255/b:StandardNumber"
+              },
+              {
+                "Name": "b:ST_String255/b:StateProvince"
+              },
+              {
+                "Name": "b:ST_String255/b:Station"
+              },
+              {
+                "Name": "b:ST_String255/b:Tag"
+              },
+              {
+                "Name": "b:ST_String255/b:Theater"
+              },
+              {
+                "Name": "b:ST_String255/b:ThesisType"
+              },
+              {
+                "Name": "b:ST_String255/b:Title"
+              },
+              {
+                "Name": "b:ST_String255/b:Type"
+              },
+              {
+                "Name": "b:ST_String255/b:URL"
+              },
+              {
+                "Name": "b:ST_String255/b:Version"
+              },
+              {
+                "Name": "b:ST_String255/b:Volume"
+              },
+              {
+                "Name": "b:ST_String255/b:Year"
+              },
+              {
+                "Name": "b:ST_String255/b:YearAccessed"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "b:ST_SourceType",
+      "Name": "DataSourceValues",
+      "Summary": "Bibliographic Data Source Types",
+      "Facets": [
+        {
+          "Comments": "Article in a Periodical",
+          "Value": "ArticleInAPeriodical",
+          "Name": "ArticleInAPeriodical"
+        },
+        {
+          "Comments": "Book",
+          "Value": "Book",
+          "Name": "Book"
+        },
+        {
+          "Comments": "Book Section",
+          "Value": "BookSection",
+          "Name": "BookSection"
+        },
+        {
+          "Comments": "Journal Article",
+          "Value": "JournalArticle",
+          "Name": "JournalArticle"
+        },
+        {
+          "Comments": "Conference Proceedings",
+          "Value": "ConferenceProceedings",
+          "Name": "ConferenceProceedings"
+        },
+        {
+          "Comments": "Reporter",
+          "Value": "Report",
+          "Name": "Report"
+        },
+        {
+          "Comments": "Sound Recording",
+          "Value": "SoundRecording",
+          "Name": "SoundRecording"
+        },
+        {
+          "Comments": "Performance",
+          "Value": "Performance",
+          "Name": "Performance"
+        },
+        {
+          "Comments": "Art",
+          "Value": "Art",
+          "Name": "Art"
+        },
+        {
+          "Comments": "Document from Internet Site",
+          "Value": "DocumentFromInternetSite",
+          "Name": "DocumentFromInternetSite"
+        },
+        {
+          "Comments": "Internet Site",
+          "Value": "InternetSite",
+          "Name": "InternetSite"
+        },
+        {
+          "Comments": "Film",
+          "Value": "Film",
+          "Name": "Film"
+        },
+        {
+          "Comments": "Interview",
+          "Value": "Interview",
+          "Name": "Interview"
+        },
+        {
+          "Comments": "Patent",
+          "Value": "Patent",
+          "Name": "Patent"
+        },
+        {
+          "Comments": "Electronic Source",
+          "Value": "ElectronicSource",
+          "Name": "ElectronicSource"
+        },
+        {
+          "Comments": "Case",
+          "Value": "Case",
+          "Name": "Case"
+        },
+        {
+          "Comments": "Miscellaneous",
+          "Value": "Misc",
+          "Name": "Miscellaneous"
+        }
+      ]
+    }
+  ]
+}

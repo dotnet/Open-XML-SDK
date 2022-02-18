@@ -1,0 +1,59 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2020/classificationShape",
+  "Types": [
+    {
+      "Name": "aclsh:CT_ClassificationOutcome/aclsh:classification",
+      "ClassName": "ClassificationOutcome",
+      "Summary": "Defines the ClassificationOutcome Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":classificationOutcomeType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcomeType\u003E",
+          "Version": "Office2021",
+          "PropertyComments": "classificationOutcomeType",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "aclsh:ST_ClassificationOutcomeType",
+      "Name": "ClassificationOutcomeType",
+      "Facets": [
+        {
+          "Version": "Office2021",
+          "Value": "none"
+        },
+        {
+          "Version": "Office2021",
+          "Value": "hdr"
+        },
+        {
+          "Version": "Office2021",
+          "Value": "ftr"
+        },
+        {
+          "Version": "Office2021",
+          "Value": "watermark"
+        }
+      ],
+      "Version": "Office2021"
+    }
+  ]
+}

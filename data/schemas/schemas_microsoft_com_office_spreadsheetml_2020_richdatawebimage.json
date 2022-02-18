@@ -1,0 +1,178 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage",
+  "Types": [
+    {
+      "Name": "xlrdwi:CT_WebImagesSupportingRichData/xlrdwi:webImagesSrd",
+      "ClassName": "WebImagesSupportingRichData",
+      "Summary": "Defines the WebImagesSupportingRichData Class.",
+      "Part": "RdRichValueWebImagePart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "xlrdwi:CT_WebImageSupportingRichData/xlrdwi:webImageSrd"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlrdwi:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrdwi:CT_WebImageSupportingRichData/xlrdwi:webImageSrd",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xlrdwi:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrdwi:CT_WebImageSupportingRichData/xlrdwi:webImageSrd",
+      "ClassName": "WebImageSupportingRichData",
+      "Summary": "Defines the WebImageSupportingRichData Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/xlrdwi:address",
+          "PropertyName": "AddressWebImageSupportingRichDataRelationship"
+        },
+        {
+          "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/xlrdwi:moreImagesAddress",
+          "PropertyName": "MoreImagesAddressWebImageSupportingRichDataRelationship"
+        },
+        {
+          "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/xlrdwi:blip",
+          "PropertyName": "BlipWebImageSupportingRichDataRelationship"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/xlrdwi:address",
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/xlrdwi:moreImagesAddress",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/xlrdwi:blip",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ExtensionList/xlrdwi:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "x:CT_Extension/x:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "x:CT_Extension/x:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/xlrdwi:address",
+      "ClassName": "AddressWebImageSupportingRichDataRelationship",
+      "Summary": "Defines the AddressWebImageSupportingRichDataRelationship Class.",
+      "BaseClass": "OpenXmlWebImageSupportingRichDataRelationshipElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/xlrdwi:moreImagesAddress",
+      "ClassName": "MoreImagesAddressWebImageSupportingRichDataRelationship",
+      "Summary": "Defines the MoreImagesAddressWebImageSupportingRichDataRelationship Class.",
+      "BaseClass": "OpenXmlWebImageSupportingRichDataRelationshipElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/xlrdwi:blip",
+      "ClassName": "BlipWebImageSupportingRichDataRelationship",
+      "Summary": "Defines the BlipWebImageSupportingRichDataRelationship Class.",
+      "BaseClass": "OpenXmlWebImageSupportingRichDataRelationshipElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/",
+      "ClassName": "OpenXmlWebImageSupportingRichDataRelationshipElement",
+      "Summary": "Defines the OpenXmlWebImageSupportingRichDataRelationshipElement Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

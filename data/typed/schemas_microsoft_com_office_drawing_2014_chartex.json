@@ -1,0 +1,283 @@
+[
+  {
+    "Name": "cx:CT_Gridlines/",
+    "ClassName": "OpenXmlGridlinesElement"
+  },
+  {
+    "Name": "cx:CT_TickMarks/",
+    "ClassName": "OpenXmlTickMarksElement"
+  },
+  {
+    "Name": "cx:CT_Aggregation/cx:aggregation",
+    "ClassName": "Aggregation"
+  },
+  {
+    "Name": "cx:CT_Axis/cx:axis",
+    "ClassName": "Axis"
+  },
+  {
+    "Name": "cx:ST_AxisId/cx:axisId",
+    "ClassName": "AxisId"
+  },
+  {
+    "Name": "xsd:unsignedInt/cx:binCount",
+    "ClassName": "BinCountXsdunsignedInt"
+  },
+  {
+    "Name": "cx:CT_Binning/cx:binning",
+    "ClassName": "Binning"
+  },
+  {
+    "Name": "xsd:double/cx:binSize",
+    "ClassName": "Xsddouble"
+  },
+  {
+    "Name": "cx:CT_CategoryAxisScaling/cx:catScaling",
+    "ClassName": "CategoryAxisScaling"
+  },
+  {
+    "Name": "cx:CT_Chart/cx:chart",
+    "ClassName": "Chart"
+  },
+  {
+    "Name": "cx:CT_ChartData/cx:chartData",
+    "ClassName": "ChartData"
+  },
+  {
+    "Name": "cx:CT_ChartSpace/cx:chartSpace",
+    "ClassName": "ChartSpace",
+    "PartClassName": "ExtendedChartPart"
+  },
+  {
+    "Name": "a:CT_ColorMapping/cx:clrMapOvr",
+    "ClassName": "ColorMappingType"
+  },
+  {
+    "Name": "cx:CT_Data/cx:data",
+    "ClassName": "Data"
+  },
+  {
+    "Name": "cx:CT_DataId/cx:dataId",
+    "ClassName": "DataId"
+  },
+  {
+    "Name": "cx:CT_DataLabel/cx:dataLabel",
+    "ClassName": "DataLabel"
+  },
+  {
+    "Name": "cx:CT_DataLabelHidden/cx:dataLabelHidden",
+    "ClassName": "DataLabelHidden"
+  },
+  {
+    "Name": "cx:CT_DataLabels/cx:dataLabels",
+    "ClassName": "DataLabels"
+  },
+  {
+    "Name": "cx:CT_DataPoint/cx:dataPt",
+    "ClassName": "DataPoint"
+  },
+  {
+    "Name": "xsd:string/cx:evenFooter",
+    "ClassName": "EvenFooterXsdstring"
+  },
+  {
+    "Name": "xsd:string/cx:evenHeader",
+    "ClassName": "EvenHeaderXsdstring"
+  },
+  {
+    "Name": "cx:CT_Extension/cx:ext",
+    "ClassName": "Extension2"
+  },
+  {
+    "Name": "cx:CT_ExternalData/cx:externalData",
+    "ClassName": "ExternalData"
+  },
+  {
+    "Name": "cx:CT_ExtensionList/cx:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "cx:CT_Formula/cx:f",
+    "ClassName": "Formula"
+  },
+  {
+    "Name": "xsd:string/cx:firstFooter",
+    "ClassName": "FirstFooterXsdstring"
+  },
+  {
+    "Name": "xsd:string/cx:firstHeader",
+    "ClassName": "FirstHeaderXsdstring"
+  },
+  {
+    "Name": "cx:CT_HeaderFooter/cx:headerFooter",
+    "ClassName": "HeaderFooter"
+  },
+  {
+    "Name": "c:CT_UnsignedInt/cx:idx",
+    "ClassName": "UnsignedIntegerType"
+  },
+  {
+    "Name": "cx:CT_SeriesLayoutProperties/cx:layoutPr",
+    "ClassName": "SeriesLayoutProperties"
+  },
+  {
+    "Name": "cx:CT_Legend/cx:legend",
+    "ClassName": "Legend"
+  },
+  {
+    "Name": "cx:CT_NumericLevel/cx:lvl",
+    "ClassName": "NumericLevel"
+  },
+  {
+    "Name": "cx:CT_StringLevel/cx:lvl",
+    "ClassName": "StringLevel"
+  },
+  {
+    "Name": "cx:CT_Gridlines/cx:majorGridlines",
+    "ClassName": "MajorGridlinesGridlines"
+  },
+  {
+    "Name": "cx:CT_TickMarks/cx:majorTickMarks",
+    "ClassName": "MajorTickMarksTickMarks"
+  },
+  {
+    "Name": "cx:CT_Gridlines/cx:minorGridlines",
+    "ClassName": "MinorGridlinesGridlines"
+  },
+  {
+    "Name": "cx:CT_TickMarks/cx:minorTickMarks",
+    "ClassName": "MinorTickMarksTickMarks"
+  },
+  {
+    "Name": "cx:CT_NumericDimension/cx:numDim",
+    "ClassName": "NumericDimension"
+  },
+  {
+    "Name": "cx:CT_NumberFormat/cx:numFmt",
+    "ClassName": "NumberFormat"
+  },
+  {
+    "Name": "xsd:string/cx:oddFooter",
+    "ClassName": "OddFooterXsdstring"
+  },
+  {
+    "Name": "xsd:string/cx:oddHeader",
+    "ClassName": "OddHeaderXsdstring"
+  },
+  {
+    "Name": "xsd:unsignedInt/cx:openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3",
+    "ClassName": "Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt"
+  },
+  {
+    "Name": "cx:CT_PageMargins/cx:pageMargins",
+    "ClassName": "PageMargins"
+  },
+  {
+    "Name": "cx:CT_PageSetup/cx:pageSetup",
+    "ClassName": "PageSetup"
+  },
+  {
+    "Name": "cx:CT_ParentLabelLayout/cx:parentLabelLayout",
+    "ClassName": "ParentLabelLayout"
+  },
+  {
+    "Name": "cx:CT_PlotArea/cx:plotArea",
+    "ClassName": "PlotArea"
+  },
+  {
+    "Name": "cx:CT_PlotAreaRegion/cx:plotAreaRegion",
+    "ClassName": "PlotAreaRegion"
+  },
+  {
+    "Name": "cx:CT_PlotSurface/cx:plotSurface",
+    "ClassName": "PlotSurface"
+  },
+  {
+    "Name": "cx:CT_PrintSettings/cx:printSettings",
+    "ClassName": "PrintSettings"
+  },
+  {
+    "Name": "cx:CT_NumericValue/cx:pt",
+    "ClassName": "NumericValue"
+  },
+  {
+    "Name": "cx:CT_StringValue/cx:pt",
+    "ClassName": "ChartStringValue"
+  },
+  {
+    "Name": "a:CT_TextBody/cx:rich",
+    "ClassName": "RichTextBody"
+  },
+  {
+    "Name": "xsd:string/cx:separator",
+    "ClassName": "SeparatorXsdstring"
+  },
+  {
+    "Name": "cx:CT_Series/cx:series",
+    "ClassName": "Series"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/cx:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "cx:CT_Statistics/cx:statistics",
+    "ClassName": "Statistics"
+  },
+  {
+    "Name": "cx:CT_StringDimension/cx:strDim",
+    "ClassName": "StringDimension"
+  },
+  {
+    "Name": "cx:CT_Subtotals/cx:subtotals",
+    "ClassName": "Subtotals"
+  },
+  {
+    "Name": "cx:CT_TickLabels/cx:tickLabels",
+    "ClassName": "TickLabels"
+  },
+  {
+    "Name": "cx:CT_AxisTitle/cx:title",
+    "ClassName": "AxisTitle"
+  },
+  {
+    "Name": "cx:CT_ChartTitle/cx:title",
+    "ClassName": "ChartTitle"
+  },
+  {
+    "Name": "cx:CT_Text/cx:tx",
+    "ClassName": "Text"
+  },
+  {
+    "Name": "cx:CT_TextData/cx:txData",
+    "ClassName": "TextData"
+  },
+  {
+    "Name": "a:CT_TextBody/cx:txPr",
+    "ClassName": "TxPrTextBody"
+  },
+  {
+    "Name": "cx:CT_AxisUnits/cx:units",
+    "ClassName": "AxisUnits"
+  },
+  {
+    "Name": "cx:CT_AxisUnitsLabel/cx:unitsLabel",
+    "ClassName": "AxisUnitsLabel"
+  },
+  {
+    "Name": "xsd:string/cx:v",
+    "ClassName": "VXsdstring"
+  },
+  {
+    "Name": "cx:CT_ValueAxisScaling/cx:valScaling",
+    "ClassName": "ValueAxisScaling"
+  },
+  {
+    "Name": "cx:CT_DataLabelVisibilities/cx:visibility",
+    "ClassName": "DataLabelVisibilities"
+  },
+  {
+    "Name": "cx:CT_SeriesElementVisibilities/cx:visibility",
+    "ClassName": "SeriesElementVisibilities"
+  }
+]

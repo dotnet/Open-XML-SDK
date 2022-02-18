@@ -1,0 +1,12 @@
+{
+  "Root": "x:CT_MapInfo",
+  "Name": "CustomXmlMappingsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/xml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/xmlMaps",
+  "Target": "xmlMaps",
+  "RootElement": "MapInfo",
+  "Paths": {
+    "General": "."
+  }
+}

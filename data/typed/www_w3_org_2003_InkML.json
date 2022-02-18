@@ -1,0 +1,110 @@
+[
+  {
+    "Name": "inkml:CT_ActiveArea/inkml:activeArea",
+    "ClassName": "ActiveArea"
+  },
+  {
+    "Name": "inkml:CT_Annotation/inkml:annotation",
+    "ClassName": "Annotation"
+  },
+  {
+    "Name": "inkml:CT_AnnotationXML/inkml:annotationXML",
+    "ClassName": "AnnotationXml"
+  },
+  {
+    "Name": "inkml:CT_Bind/inkml:bind",
+    "ClassName": "Bind"
+  },
+  {
+    "Name": "inkml:CT_Brush/inkml:brush",
+    "ClassName": "Brush"
+  },
+  {
+    "Name": "inkml:CT_BrushProperty/inkml:brushProperty",
+    "ClassName": "BrushProperty"
+  },
+  {
+    "Name": "inkml:CT_Canvas/inkml:canvas",
+    "ClassName": "Canvas"
+  },
+  {
+    "Name": "inkml:CT_CanvasTransform/inkml:canvasTransform",
+    "ClassName": "CanvasTransform"
+  },
+  {
+    "Name": "inkml:CT_Channel/inkml:channel",
+    "ClassName": "Channel"
+  },
+  {
+    "Name": "inkml:CT_ChannelProperties/inkml:channelProperties",
+    "ClassName": "ChannelProperties"
+  },
+  {
+    "Name": "inkml:CT_ChannelProperty/inkml:channelProperty",
+    "ClassName": "ChannelProperty"
+  },
+  {
+    "Name": "inkml:CT_Context/inkml:context",
+    "ClassName": "Context"
+  },
+  {
+    "Name": "inkml:CT_Definitions/inkml:definitions",
+    "ClassName": "Definitions"
+  },
+  {
+    "Name": "inkml:CT_Ink/inkml:ink",
+    "ClassName": "Ink"
+  },
+  {
+    "Name": "inkml:CT_InkSource/inkml:inkSource",
+    "ClassName": "InkSource"
+  },
+  {
+    "Name": "inkml:CT_IntermittentChannels/inkml:intermittentChannels",
+    "ClassName": "IntermittentChannels"
+  },
+  {
+    "Name": "inkml:CT_Latency/inkml:latency",
+    "ClassName": "Latency"
+  },
+  {
+    "Name": "inkml:CT_Mapping/inkml:mapping",
+    "ClassName": "Mapping"
+  },
+  {
+    "Name": "inkml:CT_Matrix/inkml:matrix",
+    "ClassName": "Matrix"
+  },
+  {
+    "Name": "inkml:CT_SampleRate/inkml:sampleRate",
+    "ClassName": "SampleRate"
+  },
+  {
+    "Name": "inkml:CT_SrcProperty/inkml:srcProperty",
+    "ClassName": "SourceProperty"
+  },
+  {
+    "Name": "inkml:CT_Table/inkml:table",
+    "ClassName": "Table"
+  },
+  {
+    "Name": "inkml:CT_Timestamp/inkml:timestamp",
+    "ClassName": "Timestamp"
+  },
+  {
+    "Name": "inkml:CT_Trace/inkml:trace",
+    "ClassName": "Trace"
+  },
+  {
+    "Name": "inkml:CT_TraceFormat/inkml:traceFormat",
+    "ClassName": "TraceFormat"
+  },
+  {
+    "Name": "inkml:CT_TraceGroup/inkml:traceGroup",
+    "ClassName": "TraceGroup"
+  },
+  {
+    "Name": "inkml:CT_TraceView/inkml:traceView",
+    "ClassName": "TraceView"
+  }
+]

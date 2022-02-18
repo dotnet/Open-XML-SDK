@@ -1,0 +1,12 @@
+{
+  "Root": "x:CT_Comments",
+  "Name": "WorksheetCommentsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.comments\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
+  "Target": "comments",
+  "RootElement": "comments",
+  "Paths": {
+    "General": ".."
+  }
+}

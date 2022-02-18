@@ -1,0 +1,11 @@
+{
+  "Name": "ExcelAttachedToolbarsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.attachedToolbars",
+  "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/attachedToolbars",
+  "Target": "attachedToolbars",
+  "Extension": ".bin",
+  "Paths": {
+    "General": "."
+  }
+}

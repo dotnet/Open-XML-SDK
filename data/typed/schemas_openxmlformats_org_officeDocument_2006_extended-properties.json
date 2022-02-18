@@ -1,0 +1,119 @@
+[
+  {
+    "Name": "ap:CT_VectorVariant/",
+    "ClassName": "VectorVariantType"
+  },
+  {
+    "Name": "xsd:string/ap:Application",
+    "ClassName": "Application"
+  },
+  {
+    "Name": "xsd:string/ap:AppVersion",
+    "ClassName": "ApplicationVersion"
+  },
+  {
+    "Name": "xsd:int/ap:Characters",
+    "ClassName": "Characters"
+  },
+  {
+    "Name": "xsd:int/ap:CharactersWithSpaces",
+    "ClassName": "CharactersWithSpaces"
+  },
+  {
+    "Name": "xsd:string/ap:Company",
+    "ClassName": "Company"
+  },
+  {
+    "Name": "ap:CT_DigSigBlob/ap:DigSig",
+    "ClassName": "DigitalSignature"
+  },
+  {
+    "Name": "xsd:int/ap:DocSecurity",
+    "ClassName": "DocumentSecurity"
+  },
+  {
+    "Name": "ap:CT_VectorVariant/ap:HeadingPairs",
+    "ClassName": "HeadingPairs"
+  },
+  {
+    "Name": "xsd:int/ap:HiddenSlides",
+    "ClassName": "HiddenSlides"
+  },
+  {
+    "Name": "ap:CT_VectorVariant/ap:HLinks",
+    "ClassName": "HyperlinkList"
+  },
+  {
+    "Name": "xsd:string/ap:HyperlinkBase",
+    "ClassName": "HyperlinkBase"
+  },
+  {
+    "Name": "xsd:boolean/ap:HyperlinksChanged",
+    "ClassName": "HyperlinksChanged"
+  },
+  {
+    "Name": "xsd:int/ap:Lines",
+    "ClassName": "Lines"
+  },
+  {
+    "Name": "xsd:boolean/ap:LinksUpToDate",
+    "ClassName": "LinksUpToDate"
+  },
+  {
+    "Name": "xsd:string/ap:Manager",
+    "ClassName": "Manager"
+  },
+  {
+    "Name": "xsd:int/ap:MMClips",
+    "ClassName": "MultimediaClips"
+  },
+  {
+    "Name": "xsd:int/ap:Notes",
+    "ClassName": "Notes"
+  },
+  {
+    "Name": "xsd:int/ap:Pages",
+    "ClassName": "Pages"
+  },
+  {
+    "Name": "xsd:int/ap:Paragraphs",
+    "ClassName": "Paragraphs"
+  },
+  {
+    "Name": "xsd:string/ap:PresentationFormat",
+    "ClassName": "PresentationFormat"
+  },
+  {
+    "Name": "ap:CT_Properties/ap:Properties",
+    "ClassName": "Properties",
+    "PartClassName": "ExtendedFilePropertiesPart"
+  },
+  {
+    "Name": "xsd:boolean/ap:ScaleCrop",
+    "ClassName": "ScaleCrop"
+  },
+  {
+    "Name": "xsd:boolean/ap:SharedDoc",
+    "ClassName": "SharedDocument"
+  },
+  {
+    "Name": "xsd:int/ap:Slides",
+    "ClassName": "Slides"
+  },
+  {
+    "Name": "xsd:string/ap:Template",
+    "ClassName": "Template"
+  },
+  {
+    "Name": "ap:CT_VectorLpstr/ap:TitlesOfParts",
+    "ClassName": "TitlesOfParts"
+  },
+  {
+    "Name": "xsd:int/ap:TotalTime",
+    "ClassName": "TotalTime"
+  },
+  {
+    "Name": "xsd:int/ap:Words",
+    "ClassName": "Words"
+  }
+]

@@ -1,0 +1,458 @@
+[
+  {
+    "Name": "oac:CT_DrawingElementMonikerList/",
+    "ClassName": "OpenXmlDrawingElementMonikerListElement"
+  },
+  {
+    "Name": "oac:CT_Empty/",
+    "ClassName": "OpenXmlEmptyElement"
+  },
+  {
+    "Name": "oac:CT_HyperlinkProps/",
+    "ClassName": "OpenXmlHyperlinkPropsElement"
+  },
+  {
+    "Name": "oac:CT_ImgData/",
+    "ClassName": "OpenXmlImgDataElement"
+  },
+  {
+    "Name": "oac:CT_RelativeRectProps/",
+    "ClassName": "OpenXmlRelativeRectPropsElement"
+  },
+  {
+    "Name": "a:CT_BlipFillProperties/oac:blipFill",
+    "ClassName": "BlipFillProperties"
+  },
+  {
+    "Name": "oac:CT_ResetBlipFillProperties/oac:blipFill",
+    "ClassName": "ResetBlipFillProperties"
+  },
+  {
+    "Name": "a:CT_TextBodyProperties/oac:bodyPr",
+    "ClassName": "TextBodyProperties"
+  },
+  {
+    "Name": "a:CT_BoundRect/oac:bounds",
+    "ClassName": "BoundRect"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:bwMode",
+    "ClassName": "BwModeEmpty"
+  },
+  {
+    "Name": "oac:CT_ModifyNonVisualConnectorProps/oac:cNvCxnSpPr",
+    "ClassName": "ModifyNonVisualConnectorProps"
+  },
+  {
+    "Name": "oac:CT_ResetNonVisualConnectorProps/oac:cNvCxnSpPr",
+    "ClassName": "ResetNonVisualConnectorProps"
+  },
+  {
+    "Name": "oac:CT_ModifyNonVisualGraphicFrameProps/oac:cNvGraphicFramePr",
+    "ClassName": "ModifyNonVisualGraphicFrameProps"
+  },
+  {
+    "Name": "oac:CT_ModifyNonVisualGroupDrawingShapeProps/oac:cNvGrpSpPr",
+    "ClassName": "ModifyNonVisualGroupDrawingShapeProps"
+  },
+  {
+    "Name": "a:CT_NonVisualGroupDrawingShapeProps/oac:cNvGrpSpPr",
+    "ClassName": "NonVisualGroupDrawingShapeProps"
+  },
+  {
+    "Name": "oac:CT_ModifyNonVisualInkProps/oac:cNvInkPr",
+    "ClassName": "ModifyNonVisualInkProps"
+  },
+  {
+    "Name": "oac:CT_ModifyNonVisualPictureProps/oac:cNvPicPr",
+    "ClassName": "ModifyNonVisualPictureProps"
+  },
+  {
+    "Name": "oac:CT_ResetNonVisualPictureProps/oac:cNvPicPr",
+    "ClassName": "ResetNonVisualPictureProps"
+  },
+  {
+    "Name": "oac:CT_ModifyNonVisualDrawingProps/oac:cNvPr",
+    "ClassName": "ModifyNonVisualDrawingProps"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/oac:cNvPr",
+    "ClassName": "NonVisualDrawingProps"
+  },
+  {
+    "Name": "oac:CT_ModifyNonVisualDrawingShapeProps/oac:cNvSpPr",
+    "ClassName": "ModifyNonVisualDrawingShapeProps"
+  },
+  {
+    "Name": "oac:CT_CompressPictureProps/oac:compressPicPr",
+    "ClassName": "CompressPictureProps"
+  },
+  {
+    "Name": "oac:CT_TextCharRangeContext/oac:context",
+    "ClassName": "TextCharRangeContext"
+  },
+  {
+    "Name": "oac:CT_ConnectorMoniker/oac:cxnSpMk",
+    "ClassName": "ConnectorMoniker"
+  },
+  {
+    "Name": "oac:CT_ConnectorMonikerList/oac:cxnSpMkLst",
+    "ClassName": "ConnectorMonikerList"
+  },
+  {
+    "Name": "oac:CT_DocumentContextMonikerList/oac:dcMkLst",
+    "ClassName": "DocumentContextMonikerList"
+  },
+  {
+    "Name": "oac:CT_DrawingElementMonikerList/oac:deMasterMkLst",
+    "ClassName": "DeMasterMkLstDrawingElementMonikerList"
+  },
+  {
+    "Name": "oac:CT_DrawingElementMonikerList/oac:deMkLst",
+    "ClassName": "DeMkLstDrawingElementMonikerList"
+  },
+  {
+    "Name": "oac:CT_DrawingElementPackage/oac:dePkg",
+    "ClassName": "DrawingElementPackage"
+  },
+  {
+    "Name": "oac:CT_DrawingElementMonikerList/oac:deSrcMkLst",
+    "ClassName": "DeSrcMkLstDrawingElementMonikerList"
+  },
+  {
+    "Name": "oac:CT_DrawingElementMonikerList/oac:deTgtMkLst",
+    "ClassName": "DeTgtMkLstDrawingElementMonikerList"
+  },
+  {
+    "Name": "oac:CT_DrawingMonikerList/oac:dgMkLst",
+    "ClassName": "DrawingMonikerList"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:dpi",
+    "ClassName": "DpiEmpty"
+  },
+  {
+    "Name": "oac:CT_DrawingSelectionStgList/oac:drSelLst",
+    "ClassName": "DrawingSelectionStgList"
+  },
+  {
+    "Name": "oac:CT_EditorSelectionStgList/oac:editorSelLst",
+    "ClassName": "EditorSelectionStgList"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:effect",
+    "ClassName": "EffectEmpty"
+  },
+  {
+    "Name": "a:CT_StyleMatrixReference/oac:effectRef",
+    "ClassName": "EffectRefStyleMatrixReference"
+  },
+  {
+    "Name": "a:CT_Connection/oac:endCxn",
+    "ClassName": "EndCxnConnection"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:endCxn",
+    "ClassName": "EndCxnEmpty"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:extLst",
+    "ClassName": "ExtLstEmpty"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:fill",
+    "ClassName": "FillEmpty"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:fillMode",
+    "ClassName": "FillModeEmpty"
+  },
+  {
+    "Name": "oac:CT_RelativeRectProps/oac:fillRect",
+    "ClassName": "FillRectRelativeRectProps"
+  },
+  {
+    "Name": "a:CT_StyleMatrixReference/oac:fillRef",
+    "ClassName": "FillRefStyleMatrixReference"
+  },
+  {
+    "Name": "a:CT_FontReference/oac:fontRef",
+    "ClassName": "FontReference"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:geom",
+    "ClassName": "GeomEmpty"
+  },
+  {
+    "Name": "oac:CT_GraphicFrameMoniker/oac:graphicFrameMk",
+    "ClassName": "GraphicFrameMoniker"
+  },
+  {
+    "Name": "oac:CT_GraphicFrameMonikerList/oac:graphicFrameMkLst",
+    "ClassName": "GraphicFrameMonikerList"
+  },
+  {
+    "Name": "oac:CT_GraphicParentMonikerList/oac:graphicParentMkLst",
+    "ClassName": "GraphicParentMonikerList"
+  },
+  {
+    "Name": "oac:CT_TableColumnMonikerList/oac:gridColMkLst",
+    "ClassName": "TableColumnMonikerList"
+  },
+  {
+    "Name": "oac:CT_GroupCommand/oac:grpCmd",
+    "ClassName": "GroupCommand"
+  },
+  {
+    "Name": "oac:CT_GroupShapeMoniker/oac:grpSpMk",
+    "ClassName": "GroupShapeMoniker"
+  },
+  {
+    "Name": "oac:CT_GroupShapeMonikerList/oac:grpSpMkLst",
+    "ClassName": "GroupShapeMonikerList"
+  },
+  {
+    "Name": "a:CT_GroupShapeProperties/oac:grpSpPr",
+    "ClassName": "GroupShapeProperties"
+  },
+  {
+    "Name": "oac:CT_ResetGroupShapeProperties/oac:grpSpPr",
+    "ClassName": "ResetGroupShapeProperties"
+  },
+  {
+    "Name": "oac:CT_ModifyHyperlinkProps/oac:hlink",
+    "ClassName": "ModifyHyperlinkProps"
+  },
+  {
+    "Name": "oac:CT_ResetHyperlinkProps/oac:hlink",
+    "ClassName": "ResetHyperlinkProps"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:hlinkClick",
+    "ClassName": "HlinkClickEmpty"
+  },
+  {
+    "Name": "oac:CT_HyperlinkProps/oac:hlinkClick",
+    "ClassName": "HlinkClickHyperlinkProps"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:hlinkHover",
+    "ClassName": "HlinkHoverEmpty"
+  },
+  {
+    "Name": "oac:CT_HyperlinkProps/oac:hlinkHover",
+    "ClassName": "HlinkHoverHyperlinkProps"
+  },
+  {
+    "Name": "oac:CT_HyperlinkMonikerList/oac:hlinkMkLst",
+    "ClassName": "HyperlinkMonikerList"
+  },
+  {
+    "Name": "oac:CT_ImgData/oac:imgData",
+    "ClassName": "ImgDataImgData"
+  },
+  {
+    "Name": "oac:CT_ImgLink/oac:imgLink",
+    "ClassName": "ImgLink"
+  },
+  {
+    "Name": "oac:CT_ResourceUrl/oac:imgUrl",
+    "ClassName": "ResourceUrl"
+  },
+  {
+    "Name": "oac:CT_InkMoniker/oac:inkMk",
+    "ClassName": "InkMoniker"
+  },
+  {
+    "Name": "oac:CT_InkMonikerList/oac:inkMkLst",
+    "ClassName": "InkMonikerList"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:lfPr",
+    "ClassName": "LfPrEmpty"
+  },
+  {
+    "Name": "a:CT_LineProperties/oac:lineProps",
+    "ClassName": "LinePropertiesType"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:ln",
+    "ClassName": "LnEmpty"
+  },
+  {
+    "Name": "a:CT_StyleMatrixReference/oac:lnRef",
+    "ClassName": "LnRefStyleMatrixReference"
+  },
+  {
+    "Name": "oac:CT_Model3DMonikerList/oac:model3DMkLst",
+    "ClassName": "Model3DMonikerList"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:noAdjustHandles",
+    "ClassName": "NoAdjustHandlesEmpty"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:noChangeArrowheads",
+    "ClassName": "NoChangeArrowheadsEmpty"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:noChangeAspect",
+    "ClassName": "NoChangeAspectEmpty"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:noChangeShapeType",
+    "ClassName": "NoChangeShapeTypeEmpty"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:noEditPoints",
+    "ClassName": "NoEditPointsEmpty"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:noGrp",
+    "ClassName": "NoGrpEmpty"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:noMove",
+    "ClassName": "NoMoveEmpty"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:noResize",
+    "ClassName": "NoResizeEmpty"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:noRot",
+    "ClassName": "NoRotEmpty"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:noSelect",
+    "ClassName": "NoSelectEmpty"
+  },
+  {
+    "Name": "a:CT_Point2D/oac:off",
+    "ClassName": "Point2DType"
+  },
+  {
+    "Name": "oac:CT_ImgData/oac:origImgData",
+    "ClassName": "OrigImgDataImgData"
+  },
+  {
+    "Name": "oac:CT_PictureMoniker/oac:picMk",
+    "ClassName": "PictureMoniker"
+  },
+  {
+    "Name": "oac:CT_PictureMonikerList/oac:picMkLst",
+    "ClassName": "PictureMonikerList"
+  },
+  {
+    "Name": "a:CT_TextParagraphProperties/oac:pPr",
+    "ClassName": "TextParagraphPropertiesType"
+  },
+  {
+    "Name": "xsd:boolean/oac:reset",
+    "ClassName": "ResetXsdboolean"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:rotWithShape",
+    "ClassName": "RotWithShapeEmpty"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:scene3d",
+    "ClassName": "Scene3dEmpty"
+  },
+  {
+    "Name": "oac:CT_ImgData/oac:sndData",
+    "ClassName": "SndDataImgData"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:sp3d",
+    "ClassName": "Sp3dEmpty"
+  },
+  {
+    "Name": "oac:CT_ShapeMoniker/oac:spMk",
+    "ClassName": "ShapeMoniker"
+  },
+  {
+    "Name": "oac:CT_ShapeMonikerList/oac:spMkLst",
+    "ClassName": "ShapeMonikerList"
+  },
+  {
+    "Name": "oac:CT_ShapePropsMonikerList/oac:spMkLst",
+    "ClassName": "ShapePropsMonikerList"
+  },
+  {
+    "Name": "oac:CT_ResetShapeProperties/oac:spPr",
+    "ClassName": "ResetShapeProperties"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/oac:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:srcRect",
+    "ClassName": "SrcRectEmpty"
+  },
+  {
+    "Name": "oac:CT_RelativeRectProps/oac:srcRect",
+    "ClassName": "SrcRectRelativeRectProps"
+  },
+  {
+    "Name": "a:CT_Connection/oac:stCxn",
+    "ClassName": "StCxnConnection"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:stCxn",
+    "ClassName": "StCxnEmpty"
+  },
+  {
+    "Name": "oac:CT_ModifyShapeStyleProps/oac:style",
+    "ClassName": "ModifyShapeStyleProps"
+  },
+  {
+    "Name": "oac:CT_SVGBlipMonikerList/oac:svgBlipMkLst",
+    "ClassName": "SVGBlipMonikerList"
+  },
+  {
+    "Name": "oac:CT_TableMonikerList/oac:tblMkLst",
+    "ClassName": "TableMonikerList"
+  },
+  {
+    "Name": "oac:CT_TableCellMonikerList/oac:tcMkLst",
+    "ClassName": "TableCellMonikerList"
+  },
+  {
+    "Name": "oac:CT_TableRowMonikerList/oac:trMkLst",
+    "ClassName": "TableRowMonikerList"
+  },
+  {
+    "Name": "oac:CT_TextBodyMonikerList/oac:txBodyMkLst",
+    "ClassName": "TextBodyMonikerList"
+  },
+  {
+    "Name": "oac:CT_TextBodyPackage/oac:txBodyPkg",
+    "ClassName": "TextBodyPackage"
+  },
+  {
+    "Name": "oac:CT_TextCharRangeMonikerList/oac:txMkLst",
+    "ClassName": "TextCharRangeMonikerList"
+  },
+  {
+    "Name": "xsd:boolean/oac:useBounds",
+    "ClassName": "UseBoundsXsdboolean"
+  },
+  {
+    "Name": "oac:CT_ViewSelectionStgList/oac:viewSelLst",
+    "ClassName": "ViewSelectionStgList"
+  },
+  {
+    "Name": "oac:CT_Empty/oac:xfrm",
+    "ClassName": "XfrmEmpty"
+  },
+  {
+    "Name": "oac:CT_ModifyTransformProps/oac:xfrm",
+    "ClassName": "ModifyTransformProps"
+  },
+  {
+    "Name": "a:CT_Transform2D/oac:xfrm",
+    "ClassName": "Transform2D"
+  }
+]

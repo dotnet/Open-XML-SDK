@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "w10:CT_Border/",
+    "ClassName": "BorderType"
+  },
+  {
+    "Name": "w10:CT_AnchorLock/w10:anchorlock",
+    "ClassName": "AnchorLock"
+  },
+  {
+    "Name": "w10:CT_Border/w10:borderbottom",
+    "ClassName": "BottomBorder"
+  },
+  {
+    "Name": "w10:CT_Border/w10:borderleft",
+    "ClassName": "LeftBorder"
+  },
+  {
+    "Name": "w10:CT_Border/w10:borderright",
+    "ClassName": "RightBorder"
+  },
+  {
+    "Name": "w10:CT_Border/w10:bordertop",
+    "ClassName": "TopBorder"
+  },
+  {
+    "Name": "w10:CT_Wrap/w10:wrap",
+    "ClassName": "TextWrap"
+  }
+]

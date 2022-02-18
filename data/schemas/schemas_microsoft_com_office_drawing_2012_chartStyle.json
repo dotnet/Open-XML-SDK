@@ -1,0 +1,7010 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2012/chartStyle",
+  "Types": [
+    {
+      "Name": "cs:CT_ColorStyle/cs:colorStyle",
+      "ClassName": "ColorStyle",
+      "Summary": "Defines the ColorStyle Class.",
+      "Part": "ChartColorStylePart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":meth",
+          "PropertyName": "Method",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "meth",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "cs:ST_ColorStyleMethodEnum",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "UInt32Value",
+          "Version": "Office2013",
+          "PropertyComments": "id"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_ScRgbColor/a:scrgbClr"
+        },
+        {
+          "Name": "a:CT_SRgbColor/a:srgbClr"
+        },
+        {
+          "Name": "a:CT_HslColor/a:hslClr"
+        },
+        {
+          "Name": "a:CT_SystemColor/a:sysClr"
+        },
+        {
+          "Name": "a:CT_SchemeColor/a:schemeClr"
+        },
+        {
+          "Name": "a:CT_PresetColor/a:prstClr"
+        },
+        {
+          "Name": "cs:CT_ColorStyleVariation/cs:variation"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_ScRgbColor/a:scrgbClr"
+                  },
+                  {
+                    "Name": "a:CT_SRgbColor/a:srgbClr"
+                  },
+                  {
+                    "Name": "a:CT_HslColor/a:hslClr"
+                  },
+                  {
+                    "Name": "a:CT_SystemColor/a:sysClr"
+                  },
+                  {
+                    "Name": "a:CT_SchemeColor/a:schemeClr"
+                  },
+                  {
+                    "Name": "a:CT_PresetColor/a:prstClr"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "cs:CT_ColorStyleVariation/cs:variation",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_ChartStyle/cs:chartStyle",
+      "ClassName": "ChartStyle",
+      "Summary": "Defines the ChartStyle Class.",
+      "Part": "ChartStylePart",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "UInt32Value",
+          "Version": "Office2013",
+          "PropertyComments": "id"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cs:CT_StyleEntry/cs:axisTitle",
+          "PropertyName": "AxisTitle"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:categoryAxis",
+          "PropertyName": "CategoryAxis"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:chartArea",
+          "PropertyName": "ChartArea"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:dataLabel",
+          "PropertyName": "DataLabel"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:dataLabelCallout",
+          "PropertyName": "DataLabelCallout"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:dataPoint",
+          "PropertyName": "DataPoint"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:dataPoint3D",
+          "PropertyName": "DataPoint3D"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:dataPointLine",
+          "PropertyName": "DataPointLine"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:dataPointMarker",
+          "PropertyName": "DataPointMarker"
+        },
+        {
+          "Name": "cs:CT_MarkerLayout/cs:dataPointMarkerLayout",
+          "PropertyName": "MarkerLayoutProperties"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:dataPointWireframe",
+          "PropertyName": "DataPointWireframe"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:dataTable",
+          "PropertyName": "DataTableStyle"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:downBar",
+          "PropertyName": "DownBar"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:dropLine",
+          "PropertyName": "DropLine"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:errorBar",
+          "PropertyName": "ErrorBar"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:floor",
+          "PropertyName": "Floor"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:gridlineMajor",
+          "PropertyName": "GridlineMajor"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:gridlineMinor",
+          "PropertyName": "GridlineMinor"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:hiLoLine",
+          "PropertyName": "HiLoLine"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:leaderLine",
+          "PropertyName": "LeaderLine"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:legend",
+          "PropertyName": "LegendStyle"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:plotArea",
+          "PropertyName": "PlotArea"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:plotArea3D",
+          "PropertyName": "PlotArea3D"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:seriesAxis",
+          "PropertyName": "SeriesAxis"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:seriesLine",
+          "PropertyName": "SeriesLine"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:title",
+          "PropertyName": "TitleStyle"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:trendline",
+          "PropertyName": "TrendlineStyle"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:trendlineLabel",
+          "PropertyName": "TrendlineLabel"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:upBar",
+          "PropertyName": "UpBar"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:valueAxis",
+          "PropertyName": "ValueAxis"
+        },
+        {
+          "Name": "cs:CT_StyleEntry/cs:wall",
+          "PropertyName": "Wall"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleEntry/cs:axisTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:categoryAxis",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:chartArea",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:dataLabel",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:dataLabelCallout",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:dataPoint",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:dataPoint3D",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:dataPointLine",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:dataPointMarker",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_MarkerLayout/cs:dataPointMarkerLayout",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:dataPointWireframe",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:dataTable",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:downBar",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:dropLine",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:errorBar",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:floor",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:gridlineMajor",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:gridlineMinor",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:hiLoLine",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:leaderLine",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:legend",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:plotArea",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:plotArea3D",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:seriesAxis",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:seriesLine",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:title",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:trendline",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:trendlineLabel",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:upBar",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:valueAxis",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleEntry/cs:wall",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_ColorStyleVariation/cs:variation",
+      "ClassName": "ColorStyleVariation",
+      "Summary": "Defines the ColorStyleVariation Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "a:CT_PositiveFixedPercentage/a:tint"
+        },
+        {
+          "Name": "a:CT_PositiveFixedPercentage/a:shade"
+        },
+        {
+          "Name": "a:CT_ComplementTransform/a:comp"
+        },
+        {
+          "Name": "a:CT_InverseTransform/a:inv"
+        },
+        {
+          "Name": "a:CT_GrayscaleTransform/a:gray"
+        },
+        {
+          "Name": "a:CT_PositiveFixedPercentage/a:alpha"
+        },
+        {
+          "Name": "a:CT_FixedPercentage/a:alphaOff"
+        },
+        {
+          "Name": "a:CT_PositivePercentage/a:alphaMod"
+        },
+        {
+          "Name": "a:CT_PositiveFixedAngle/a:hue"
+        },
+        {
+          "Name": "a:CT_Angle/a:hueOff"
+        },
+        {
+          "Name": "a:CT_PositivePercentage/a:hueMod"
+        },
+        {
+          "Name": "a:CT_Percentage/a:sat"
+        },
+        {
+          "Name": "a:CT_Percentage/a:satOff"
+        },
+        {
+          "Name": "a:CT_Percentage/a:satMod"
+        },
+        {
+          "Name": "a:CT_Percentage/a:lum"
+        },
+        {
+          "Name": "a:CT_Percentage/a:lumOff"
+        },
+        {
+          "Name": "a:CT_Percentage/a:lumMod"
+        },
+        {
+          "Name": "a:CT_Percentage/a:red"
+        },
+        {
+          "Name": "a:CT_Percentage/a:redOff"
+        },
+        {
+          "Name": "a:CT_Percentage/a:redMod"
+        },
+        {
+          "Name": "a:CT_Percentage/a:green"
+        },
+        {
+          "Name": "a:CT_Percentage/a:greenOff"
+        },
+        {
+          "Name": "a:CT_Percentage/a:greenMod"
+        },
+        {
+          "Name": "a:CT_Percentage/a:blue"
+        },
+        {
+          "Name": "a:CT_Percentage/a:blueOff"
+        },
+        {
+          "Name": "a:CT_Percentage/a:blueMod"
+        },
+        {
+          "Name": "a:CT_GammaTransform/a:gamma"
+        },
+        {
+          "Name": "a:CT_InverseGammaTransform/a:invGamma"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_PositiveFixedPercentage/a:tint"
+                  },
+                  {
+                    "Name": "a:CT_PositiveFixedPercentage/a:shade"
+                  },
+                  {
+                    "Name": "a:CT_ComplementTransform/a:comp"
+                  },
+                  {
+                    "Name": "a:CT_InverseTransform/a:inv"
+                  },
+                  {
+                    "Name": "a:CT_GrayscaleTransform/a:gray"
+                  },
+                  {
+                    "Name": "a:CT_PositiveFixedPercentage/a:alpha"
+                  },
+                  {
+                    "Name": "a:CT_FixedPercentage/a:alphaOff"
+                  },
+                  {
+                    "Name": "a:CT_PositivePercentage/a:alphaMod"
+                  },
+                  {
+                    "Name": "a:CT_PositiveFixedAngle/a:hue"
+                  },
+                  {
+                    "Name": "a:CT_Angle/a:hueOff"
+                  },
+                  {
+                    "Name": "a:CT_PositivePercentage/a:hueMod"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:sat"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:satOff"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:satMod"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:lum"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:lumOff"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:lumMod"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:red"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:redOff"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:redMod"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:green"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:greenOff"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:greenMod"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:blue"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:blueOff"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:blueMod"
+                  },
+                  {
+                    "Name": "a:CT_GammaTransform/a:gamma"
+                  },
+                  {
+                    "Name": "a:CT_InverseGammaTransform/a:invGamma"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleColor/cs:styleClr",
+      "ClassName": "StyleColor",
+      "Summary": "Defines the StyleColor Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "NumberValidator",
+              "Type": "xsd:unsignedInt",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "cs:ST_StyleColorEnum",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_PositiveFixedPercentage/a:tint"
+        },
+        {
+          "Name": "a:CT_PositiveFixedPercentage/a:shade"
+        },
+        {
+          "Name": "a:CT_ComplementTransform/a:comp"
+        },
+        {
+          "Name": "a:CT_InverseTransform/a:inv"
+        },
+        {
+          "Name": "a:CT_GrayscaleTransform/a:gray"
+        },
+        {
+          "Name": "a:CT_PositiveFixedPercentage/a:alpha"
+        },
+        {
+          "Name": "a:CT_FixedPercentage/a:alphaOff"
+        },
+        {
+          "Name": "a:CT_PositivePercentage/a:alphaMod"
+        },
+        {
+          "Name": "a:CT_PositiveFixedAngle/a:hue"
+        },
+        {
+          "Name": "a:CT_Angle/a:hueOff"
+        },
+        {
+          "Name": "a:CT_PositivePercentage/a:hueMod"
+        },
+        {
+          "Name": "a:CT_Percentage/a:sat"
+        },
+        {
+          "Name": "a:CT_Percentage/a:satOff"
+        },
+        {
+          "Name": "a:CT_Percentage/a:satMod"
+        },
+        {
+          "Name": "a:CT_Percentage/a:lum"
+        },
+        {
+          "Name": "a:CT_Percentage/a:lumOff"
+        },
+        {
+          "Name": "a:CT_Percentage/a:lumMod"
+        },
+        {
+          "Name": "a:CT_Percentage/a:red"
+        },
+        {
+          "Name": "a:CT_Percentage/a:redOff"
+        },
+        {
+          "Name": "a:CT_Percentage/a:redMod"
+        },
+        {
+          "Name": "a:CT_Percentage/a:green"
+        },
+        {
+          "Name": "a:CT_Percentage/a:greenOff"
+        },
+        {
+          "Name": "a:CT_Percentage/a:greenMod"
+        },
+        {
+          "Name": "a:CT_Percentage/a:blue"
+        },
+        {
+          "Name": "a:CT_Percentage/a:blueOff"
+        },
+        {
+          "Name": "a:CT_Percentage/a:blueMod"
+        },
+        {
+          "Name": "a:CT_GammaTransform/a:gamma"
+        },
+        {
+          "Name": "a:CT_InverseGammaTransform/a:invGamma"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_PositiveFixedPercentage/a:tint"
+                  },
+                  {
+                    "Name": "a:CT_PositiveFixedPercentage/a:shade"
+                  },
+                  {
+                    "Name": "a:CT_ComplementTransform/a:comp"
+                  },
+                  {
+                    "Name": "a:CT_InverseTransform/a:inv"
+                  },
+                  {
+                    "Name": "a:CT_GrayscaleTransform/a:gray"
+                  },
+                  {
+                    "Name": "a:CT_PositiveFixedPercentage/a:alpha"
+                  },
+                  {
+                    "Name": "a:CT_FixedPercentage/a:alphaOff"
+                  },
+                  {
+                    "Name": "a:CT_PositivePercentage/a:alphaMod"
+                  },
+                  {
+                    "Name": "a:CT_PositiveFixedAngle/a:hue"
+                  },
+                  {
+                    "Name": "a:CT_Angle/a:hueOff"
+                  },
+                  {
+                    "Name": "a:CT_PositivePercentage/a:hueMod"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:sat"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:satOff"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:satMod"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:lum"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:lumOff"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:lumMod"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:red"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:redOff"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:redMod"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:green"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:greenOff"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:greenMod"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:blue"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:blueOff"
+                  },
+                  {
+                    "Name": "a:CT_Percentage/a:blueMod"
+                  },
+                  {
+                    "Name": "a:CT_GammaTransform/a:gamma"
+                  },
+                  {
+                    "Name": "a:CT_InverseGammaTransform/a:invGamma"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleReference/cs:lnRef",
+      "ClassName": "LineReference",
+      "Summary": "Defines the LineReference Class.",
+      "BaseClass": "StyleReference",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "a:CT_ScRgbColor/a:scrgbClr"
+        },
+        {
+          "Name": "a:CT_SRgbColor/a:srgbClr"
+        },
+        {
+          "Name": "a:CT_HslColor/a:hslClr"
+        },
+        {
+          "Name": "a:CT_SystemColor/a:sysClr"
+        },
+        {
+          "Name": "a:CT_SchemeColor/a:schemeClr"
+        },
+        {
+          "Name": "a:CT_PresetColor/a:prstClr"
+        },
+        {
+          "Name": "cs:CT_StyleColor/cs:styleClr"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_ScRgbColor/a:scrgbClr"
+                  },
+                  {
+                    "Name": "a:CT_SRgbColor/a:srgbClr"
+                  },
+                  {
+                    "Name": "a:CT_HslColor/a:hslClr"
+                  },
+                  {
+                    "Name": "a:CT_SystemColor/a:sysClr"
+                  },
+                  {
+                    "Name": "a:CT_SchemeColor/a:schemeClr"
+                  },
+                  {
+                    "Name": "a:CT_PresetColor/a:prstClr"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "cs:CT_StyleColor/cs:styleClr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleReference/cs:fillRef",
+      "ClassName": "FillReference",
+      "Summary": "Defines the FillReference Class.",
+      "BaseClass": "StyleReference",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "a:CT_ScRgbColor/a:scrgbClr"
+        },
+        {
+          "Name": "a:CT_SRgbColor/a:srgbClr"
+        },
+        {
+          "Name": "a:CT_HslColor/a:hslClr"
+        },
+        {
+          "Name": "a:CT_SystemColor/a:sysClr"
+        },
+        {
+          "Name": "a:CT_SchemeColor/a:schemeClr"
+        },
+        {
+          "Name": "a:CT_PresetColor/a:prstClr"
+        },
+        {
+          "Name": "cs:CT_StyleColor/cs:styleClr"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_ScRgbColor/a:scrgbClr"
+                  },
+                  {
+                    "Name": "a:CT_SRgbColor/a:srgbClr"
+                  },
+                  {
+                    "Name": "a:CT_HslColor/a:hslClr"
+                  },
+                  {
+                    "Name": "a:CT_SystemColor/a:sysClr"
+                  },
+                  {
+                    "Name": "a:CT_SchemeColor/a:schemeClr"
+                  },
+                  {
+                    "Name": "a:CT_PresetColor/a:prstClr"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "cs:CT_StyleColor/cs:styleClr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleReference/cs:effectRef",
+      "ClassName": "EffectReference",
+      "Summary": "Defines the EffectReference Class.",
+      "BaseClass": "StyleReference",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "a:CT_ScRgbColor/a:scrgbClr"
+        },
+        {
+          "Name": "a:CT_SRgbColor/a:srgbClr"
+        },
+        {
+          "Name": "a:CT_HslColor/a:hslClr"
+        },
+        {
+          "Name": "a:CT_SystemColor/a:sysClr"
+        },
+        {
+          "Name": "a:CT_SchemeColor/a:schemeClr"
+        },
+        {
+          "Name": "a:CT_PresetColor/a:prstClr"
+        },
+        {
+          "Name": "cs:CT_StyleColor/cs:styleClr"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_ScRgbColor/a:scrgbClr"
+                  },
+                  {
+                    "Name": "a:CT_SRgbColor/a:srgbClr"
+                  },
+                  {
+                    "Name": "a:CT_HslColor/a:hslClr"
+                  },
+                  {
+                    "Name": "a:CT_SystemColor/a:sysClr"
+                  },
+                  {
+                    "Name": "a:CT_SchemeColor/a:schemeClr"
+                  },
+                  {
+                    "Name": "a:CT_PresetColor/a:prstClr"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "cs:CT_StyleColor/cs:styleClr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleReference/",
+      "ClassName": "StyleReference",
+      "Summary": "Defines the StyleReference Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":idx",
+          "PropertyName": "Index",
+          "Type": "UInt32Value",
+          "Version": "Office2013",
+          "PropertyComments": "idx",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":mods",
+          "PropertyName": "Modifiers",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "mods"
+        }
+      ],
+      "AdditionalElements": [
+        "a:CT_HslColor/a:hslClr",
+        "a:CT_PresetColor/a:prstClr",
+        "a:CT_SchemeColor/a:schemeClr",
+        "a:CT_ScRgbColor/a:scrgbClr",
+        "a:CT_SRgbColor/a:srgbClr",
+        "a:CT_SystemColor/a:sysClr",
+        "cs:CT_StyleColor/cs:styleClr"
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_ScRgbColor/a:scrgbClr"
+        },
+        {
+          "Name": "a:CT_SRgbColor/a:srgbClr"
+        },
+        {
+          "Name": "a:CT_HslColor/a:hslClr"
+        },
+        {
+          "Name": "a:CT_SystemColor/a:sysClr"
+        },
+        {
+          "Name": "a:CT_SchemeColor/a:schemeClr"
+        },
+        {
+          "Name": "a:CT_PresetColor/a:prstClr"
+        },
+        {
+          "Name": "cs:CT_StyleColor/cs:styleClr"
+        }
+      ]
+    },
+    {
+      "Name": "xsd:double/cs:lineWidthScale",
+      "ClassName": "LineWidthScale",
+      "Summary": "Defines the LineWidthScale Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2013",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:double",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "cs:CT_FontReference/cs:fontRef",
+      "ClassName": "FontReference",
+      "Summary": "Defines the FontReference Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":idx",
+          "PropertyName": "Index",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.FontCollectionIndexValues\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "idx",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":mods",
+          "PropertyName": "Modifiers",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "mods"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_ScRgbColor/a:scrgbClr"
+        },
+        {
+          "Name": "a:CT_SRgbColor/a:srgbClr"
+        },
+        {
+          "Name": "a:CT_HslColor/a:hslClr"
+        },
+        {
+          "Name": "a:CT_SystemColor/a:sysClr"
+        },
+        {
+          "Name": "a:CT_SchemeColor/a:schemeClr"
+        },
+        {
+          "Name": "a:CT_PresetColor/a:prstClr"
+        },
+        {
+          "Name": "cs:CT_StyleColor/cs:styleClr"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_ScRgbColor/a:scrgbClr"
+                  },
+                  {
+                    "Name": "a:CT_SRgbColor/a:srgbClr"
+                  },
+                  {
+                    "Name": "a:CT_HslColor/a:hslClr"
+                  },
+                  {
+                    "Name": "a:CT_SystemColor/a:sysClr"
+                  },
+                  {
+                    "Name": "a:CT_SchemeColor/a:schemeClr"
+                  },
+                  {
+                    "Name": "a:CT_PresetColor/a:prstClr"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "cs:CT_StyleColor/cs:styleClr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_ShapeProperties/cs:spPr",
+      "ClassName": "ShapeProperties",
+      "Summary": "Defines the ShapeProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":bwMode",
+          "PropertyName": "BlackWhiteMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "PropertyComments": "Black and White Mode",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Transform2D/a:xfrm",
+          "PropertyName": "Transform2D",
+          "PropertyComments": "2D Transform for Individual Objects"
+        },
+        {
+          "Name": "a:CT_CustomGeometry2D/a:custGeom"
+        },
+        {
+          "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+        },
+        {
+          "Name": "a:CT_NoFillProperties/a:noFill"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+        },
+        {
+          "Name": "a:CT_GradientFillProperties/a:gradFill"
+        },
+        {
+          "Name": "a:CT_BlipFillProperties/a:blipFill"
+        },
+        {
+          "Name": "a:CT_PatternFillProperties/a:pattFill"
+        },
+        {
+          "Name": "a:CT_GroupFillProperties/a:grpFill"
+        },
+        {
+          "Name": "a:CT_LineProperties/a:ln"
+        },
+        {
+          "Name": "a:CT_EffectList/a:effectLst"
+        },
+        {
+          "Name": "a:CT_EffectContainer/a:effectDag"
+        },
+        {
+          "Name": "a:CT_Scene3D/a:scene3d"
+        },
+        {
+          "Name": "a:CT_Shape3D/a:sp3d"
+        },
+        {
+          "Name": "a:CT_ShapePropertiesExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Transform2D/a:xfrm",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_CustomGeometry2D/a:custGeom"
+                  },
+                  {
+                    "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_NoFillProperties/a:noFill"
+                  },
+                  {
+                    "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+                  },
+                  {
+                    "Name": "a:CT_GradientFillProperties/a:gradFill"
+                  },
+                  {
+                    "Name": "a:CT_BlipFillProperties/a:blipFill"
+                  },
+                  {
+                    "Name": "a:CT_PatternFillProperties/a:pattFill"
+                  },
+                  {
+                    "Name": "a:CT_GroupFillProperties/a:grpFill"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_LineProperties/a:ln",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_EffectList/a:effectLst"
+                  },
+                  {
+                    "Name": "a:CT_EffectContainer/a:effectDag"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Scene3D/a:scene3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Shape3D/a:sp3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_ShapePropertiesExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+      "ClassName": "TextCharacterPropertiesType",
+      "Summary": "Defines the TextCharacterPropertiesType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":kumimoji",
+          "PropertyName": "Kumimoji",
+          "Type": "BooleanValue",
+          "PropertyComments": "kumimoji"
+        },
+        {
+          "QName": ":lang",
+          "PropertyName": "Language",
+          "Type": "StringValue",
+          "PropertyComments": "lang"
+        },
+        {
+          "QName": ":altLang",
+          "PropertyName": "AlternativeLanguage",
+          "Type": "StringValue",
+          "PropertyComments": "altLang"
+        },
+        {
+          "QName": ":sz",
+          "PropertyName": "FontSize",
+          "Type": "Int32Value",
+          "PropertyComments": "sz",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "100"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "400000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":b",
+          "PropertyName": "Bold",
+          "Type": "BooleanValue",
+          "PropertyComments": "b"
+        },
+        {
+          "QName": ":i",
+          "PropertyName": "Italic",
+          "Type": "BooleanValue",
+          "PropertyComments": "i"
+        },
+        {
+          "QName": ":u",
+          "PropertyName": "Underline",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextUnderlineValues\u003E",
+          "PropertyComments": "u",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":strike",
+          "PropertyName": "Strike",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextStrikeValues\u003E",
+          "PropertyComments": "strike",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":kern",
+          "PropertyName": "Kerning",
+          "Type": "Int32Value",
+          "PropertyComments": "kern",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "400000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":cap",
+          "PropertyName": "Capital",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextCapsValues\u003E",
+          "PropertyComments": "cap",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":spc",
+          "PropertyName": "Spacing",
+          "Type": "Int32Value",
+          "PropertyComments": "spc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-400000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "400000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":normalizeH",
+          "PropertyName": "NormalizeHeight",
+          "Type": "BooleanValue",
+          "PropertyComments": "normalizeH"
+        },
+        {
+          "QName": ":baseline",
+          "PropertyName": "Baseline",
+          "Type": "Int32Value",
+          "PropertyComments": "baseline"
+        },
+        {
+          "QName": ":noProof",
+          "PropertyName": "NoProof",
+          "Type": "BooleanValue",
+          "PropertyComments": "noProof"
+        },
+        {
+          "QName": ":dirty",
+          "PropertyName": "Dirty",
+          "Type": "BooleanValue",
+          "PropertyComments": "dirty"
+        },
+        {
+          "QName": ":err",
+          "PropertyName": "SpellingError",
+          "Type": "BooleanValue",
+          "PropertyComments": "err"
+        },
+        {
+          "QName": ":smtClean",
+          "PropertyName": "SmartTagClean",
+          "Type": "BooleanValue",
+          "PropertyComments": "smtClean"
+        },
+        {
+          "QName": ":smtId",
+          "PropertyName": "SmartTagId",
+          "Type": "UInt32Value",
+          "PropertyComments": "smtId"
+        },
+        {
+          "QName": ":bmk",
+          "PropertyName": "Bookmark",
+          "Type": "StringValue",
+          "PropertyComments": "bmk"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_LineProperties/a:ln",
+          "PropertyName": "Outline"
+        },
+        {
+          "Name": "a:CT_NoFillProperties/a:noFill"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+        },
+        {
+          "Name": "a:CT_GradientFillProperties/a:gradFill"
+        },
+        {
+          "Name": "a:CT_BlipFillProperties/a:blipFill"
+        },
+        {
+          "Name": "a:CT_PatternFillProperties/a:pattFill"
+        },
+        {
+          "Name": "a:CT_GroupFillProperties/a:grpFill"
+        },
+        {
+          "Name": "a:CT_EffectList/a:effectLst"
+        },
+        {
+          "Name": "a:CT_EffectContainer/a:effectDag"
+        },
+        {
+          "Name": "a:CT_Color/a:highlight"
+        },
+        {
+          "Name": "a:CT_TextUnderlineLineFollowText/a:uLnTx"
+        },
+        {
+          "Name": "a:CT_LineProperties/a:uLn"
+        },
+        {
+          "Name": "a:CT_TextUnderlineFillFollowText/a:uFillTx"
+        },
+        {
+          "Name": "a:CT_TextUnderlineFillGroupWrapper/a:uFill"
+        },
+        {
+          "Name": "a:CT_TextFont/a:latin"
+        },
+        {
+          "Name": "a:CT_TextFont/a:ea"
+        },
+        {
+          "Name": "a:CT_TextFont/a:cs"
+        },
+        {
+          "Name": "a:CT_TextFont/a:sym"
+        },
+        {
+          "Name": "a:CT_Hyperlink/a:hlinkClick"
+        },
+        {
+          "Name": "a:CT_Hyperlink/a:hlinkMouseOver"
+        },
+        {
+          "Name": "a:CT_Bool/a:rtl"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_LineProperties/a:ln",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_NoFillProperties/a:noFill"
+                  },
+                  {
+                    "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+                  },
+                  {
+                    "Name": "a:CT_GradientFillProperties/a:gradFill"
+                  },
+                  {
+                    "Name": "a:CT_BlipFillProperties/a:blipFill"
+                  },
+                  {
+                    "Name": "a:CT_PatternFillProperties/a:pattFill"
+                  },
+                  {
+                    "Name": "a:CT_GroupFillProperties/a:grpFill"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_EffectList/a:effectLst"
+                  },
+                  {
+                    "Name": "a:CT_EffectContainer/a:effectDag"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Color/a:highlight",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_TextUnderlineLineFollowText/a:uLnTx"
+                  },
+                  {
+                    "Name": "a:CT_LineProperties/a:uLn",
+                    "Occurs": [
+                      {
+                        "Max": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_TextUnderlineFillFollowText/a:uFillTx"
+                  },
+                  {
+                    "Name": "a:CT_TextUnderlineFillGroupWrapper/a:uFill"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextFont/a:latin",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextFont/a:ea",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextFont/a:cs",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextFont/a:sym",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Hyperlink/a:hlinkClick",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Hyperlink/a:hlinkMouseOver",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Bool/a:rtl",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+      "ClassName": "TextBodyProperties",
+      "Summary": "Defines the TextBodyProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":rot",
+          "PropertyName": "Rotation",
+          "Type": "Int32Value",
+          "PropertyComments": "Rotation"
+        },
+        {
+          "QName": ":spcFirstLastPara",
+          "PropertyName": "UseParagraphSpacing",
+          "Type": "BooleanValue",
+          "PropertyComments": "Paragraph Spacing"
+        },
+        {
+          "QName": ":vertOverflow",
+          "PropertyName": "VerticalOverflow",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues\u003E",
+          "PropertyComments": "Text Vertical Overflow",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":horzOverflow",
+          "PropertyName": "HorizontalOverflow",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues\u003E",
+          "PropertyComments": "Text Horizontal Overflow",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":vert",
+          "PropertyName": "Vertical",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextVerticalValues\u003E",
+          "PropertyComments": "Vertical Text",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":wrap",
+          "PropertyName": "Wrap",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextWrappingValues\u003E",
+          "PropertyComments": "Text Wrapping Type",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":lIns",
+          "PropertyName": "LeftInset",
+          "Type": "Int32Value",
+          "PropertyComments": "Left Inset"
+        },
+        {
+          "QName": ":tIns",
+          "PropertyName": "TopInset",
+          "Type": "Int32Value",
+          "PropertyComments": "Top Inset"
+        },
+        {
+          "QName": ":rIns",
+          "PropertyName": "RightInset",
+          "Type": "Int32Value",
+          "PropertyComments": "Right Inset"
+        },
+        {
+          "QName": ":bIns",
+          "PropertyName": "BottomInset",
+          "Type": "Int32Value",
+          "PropertyComments": "Bottom Inset"
+        },
+        {
+          "QName": ":numCol",
+          "PropertyName": "ColumnCount",
+          "Type": "Int32Value",
+          "PropertyComments": "Number of Columns",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "1"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "16"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":spcCol",
+          "PropertyName": "ColumnSpacing",
+          "Type": "Int32Value",
+          "PropertyComments": "Space Between Columns",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":rtlCol",
+          "PropertyName": "RightToLeftColumns",
+          "Type": "BooleanValue",
+          "PropertyComments": "Columns Right-To-Left"
+        },
+        {
+          "QName": ":fromWordArt",
+          "PropertyName": "FromWordArt",
+          "Type": "BooleanValue",
+          "PropertyComments": "From WordArt"
+        },
+        {
+          "QName": ":anchor",
+          "PropertyName": "Anchor",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues\u003E",
+          "PropertyComments": "Anchor",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":anchorCtr",
+          "PropertyName": "AnchorCenter",
+          "Type": "BooleanValue",
+          "PropertyComments": "Anchor Center"
+        },
+        {
+          "QName": ":forceAA",
+          "PropertyName": "ForceAntiAlias",
+          "Type": "BooleanValue",
+          "PropertyComments": "Force Anti-Alias"
+        },
+        {
+          "QName": ":upright",
+          "PropertyName": "UpRight",
+          "Type": "BooleanValue",
+          "PropertyComments": "Text Upright"
+        },
+        {
+          "QName": ":compatLnSpc",
+          "PropertyName": "CompatibleLineSpacing",
+          "Type": "BooleanValue",
+          "PropertyComments": "Compatible Line Spacing"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_PresetTextShape/a:prstTxWarp",
+          "PropertyName": "PresetTextWrap",
+          "PropertyComments": "Preset Text Shape"
+        },
+        {
+          "Name": "a:CT_TextNoAutofit/a:noAutofit"
+        },
+        {
+          "Name": "a:CT_TextNormalAutofit/a:normAutofit"
+        },
+        {
+          "Name": "a:CT_TextShapeAutofit/a:spAutoFit"
+        },
+        {
+          "Name": "a:CT_Scene3D/a:scene3d"
+        },
+        {
+          "Name": "a:CT_Shape3D/a:sp3d"
+        },
+        {
+          "Name": "a:CT_FlatText/a:flatTx"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_PresetTextShape/a:prstTxWarp",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_TextNoAutofit/a:noAutofit"
+                  },
+                  {
+                    "Name": "a:CT_TextNormalAutofit/a:normAutofit"
+                  },
+                  {
+                    "Name": "a:CT_TextShapeAutofit/a:spAutoFit"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Scene3D/a:scene3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_Shape3D/a:sp3d"
+                  },
+                  {
+                    "Name": "a:CT_FlatText/a:flatTx"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_AxisProps/cs:categoryAxis",
+      "ClassName": "CategoryAxisProperties",
+      "Summary": "Defines the CategoryAxisProperties Class.",
+      "BaseClass": "AxisProperties",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2013"
+    },
+    {
+      "Name": "cs:CT_AxisProps/cs:seriesAxis",
+      "ClassName": "SeriesAxisProperties",
+      "Summary": "Defines the SeriesAxisProperties Class.",
+      "BaseClass": "AxisProperties",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2013"
+    },
+    {
+      "Name": "cs:CT_AxisProps/cs:valueAxis",
+      "ClassName": "ValueAxisProperties",
+      "Summary": "Defines the ValueAxisProperties Class.",
+      "BaseClass": "AxisProperties",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2013"
+    },
+    {
+      "Name": "cs:CT_AxisProps/",
+      "ClassName": "AxisProperties",
+      "Summary": "Defines the AxisProperties Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":visible",
+          "PropertyName": "Visible",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "visible",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":majorTick",
+          "PropertyName": "MajorTick",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "majorTick",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":minorTick",
+          "PropertyName": "MinorTickProp",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "minorTick",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":labelPosition",
+          "PropertyName": "LabelPosition",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "labelPosition",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":majorGridlines",
+          "PropertyName": "MajorGridlines",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "majorGridlines",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":minorGridlines",
+          "PropertyName": "MinorGridlinesProp",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "minorGridlines",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":title",
+          "PropertyName": "TitleProp",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "title",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cs:CT_DataSeriesProps/cs:dataSeries",
+      "ClassName": "DataSeries",
+      "Summary": "Defines the DataSeries Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":overlap",
+          "PropertyName": "Overlap",
+          "Type": "SByteValue",
+          "Version": "Office2013",
+          "PropertyComments": "overlap",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-100"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":gapWidth",
+          "PropertyName": "GapWidth",
+          "Type": "UInt16Value",
+          "Version": "Office2013",
+          "PropertyComments": "gapWidth",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "500"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":gapDepth",
+          "PropertyName": "GapDepth",
+          "Type": "UInt16Value",
+          "Version": "Office2013",
+          "PropertyComments": "gapDepth",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "500"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":doughnutHoleSize",
+          "PropertyName": "DoughnutHoleSize",
+          "Type": "ByteValue",
+          "Version": "Office2013",
+          "PropertyComments": "doughnutHoleSize",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "10"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "90"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":markerVisible",
+          "PropertyName": "MarkerVisible",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "markerVisible",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":hiloLines",
+          "PropertyName": "HiloLines",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "hiloLines",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":dropLines",
+          "PropertyName": "DropLines",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "dropLines",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":seriesLines",
+          "PropertyName": "SeriesLines",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "seriesLines",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cs:CT_DataLabelsProps/cs:dataLabels",
+      "ClassName": "DataLabels",
+      "Summary": "Defines the DataLabels Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":position",
+          "PropertyName": "Position",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "position",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":value",
+          "PropertyName": "Value",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "value",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":seriesName",
+          "PropertyName": "SeriesName",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "seriesName",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":categoryName",
+          "PropertyName": "CategoryName",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "categoryName",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":legendKey",
+          "PropertyName": "LegendKey",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "legendKey",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":percentage",
+          "PropertyName": "Percentage",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "percentage",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cs:CT_DataTableProps/cs:dataTable",
+      "ClassName": "DataTable",
+      "Summary": "Defines the DataTable Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":legendKeys",
+          "PropertyName": "LegendKeys",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "legendKeys",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":horizontalBorder",
+          "PropertyName": "HorizontalBorder",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "horizontalBorder",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":verticalBorder",
+          "PropertyName": "VerticalBorder",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "verticalBorder",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":outlineBorder",
+          "PropertyName": "OutlineBorder",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "outlineBorder",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cs:CT_LegendProps/cs:legend",
+      "ClassName": "Legend",
+      "Summary": "Defines the Legend Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":visible",
+          "PropertyName": "Visible",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "visible",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":includeInLayout",
+          "PropertyName": "IncludeInLayout",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "includeInLayout",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":position",
+          "PropertyName": "Position",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "position",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cs:CT_TitleProps/cs:title",
+      "ClassName": "Title",
+      "Summary": "Defines the Title Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":position",
+          "PropertyName": "Position",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "position",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cs:CT_TrendlineProps/cs:trendline",
+      "ClassName": "Trendline",
+      "Summary": "Defines the Trendline Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":add",
+          "PropertyName": "Add",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "add",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":equation",
+          "PropertyName": "Equation",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "equation",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":rsquared",
+          "PropertyName": "RSquared",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "rsquared",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cs:CT_View3DProps/cs:view3D",
+      "ClassName": "View3DProperties",
+      "Summary": "Defines the View3DProperties Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":rotX",
+          "PropertyName": "RotX",
+          "Type": "SByteValue",
+          "Version": "Office2013",
+          "PropertyComments": "rotX",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-90"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "90"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":rotY",
+          "PropertyName": "RotY",
+          "Type": "UInt16Value",
+          "Version": "Office2013",
+          "PropertyComments": "rotY",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "360"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":rAngAx",
+          "PropertyName": "RightAngleAxes",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "rAngAx",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":perspective",
+          "PropertyName": "Perspective",
+          "Type": "ByteValue",
+          "Version": "Office2013",
+          "PropertyComments": "perspective",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "240"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":heightPercent",
+          "PropertyName": "HeightPercent",
+          "Type": "UInt16Value",
+          "Version": "Office2013",
+          "PropertyComments": "heightPercent",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "5"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "500"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":depthPercent",
+          "PropertyName": "DepthPercent",
+          "Type": "UInt16Value",
+          "Version": "Office2013",
+          "PropertyComments": "depthPercent",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "20"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:axisTitle",
+      "ClassName": "AxisTitle",
+      "Summary": "Defines the AxisTitle Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:categoryAxis",
+      "ClassName": "CategoryAxis",
+      "Summary": "Defines the CategoryAxis Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:chartArea",
+      "ClassName": "ChartArea",
+      "Summary": "Defines the ChartArea Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:dataLabel",
+      "ClassName": "DataLabel",
+      "Summary": "Defines the DataLabel Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:dataLabelCallout",
+      "ClassName": "DataLabelCallout",
+      "Summary": "Defines the DataLabelCallout Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:dataPoint",
+      "ClassName": "DataPoint",
+      "Summary": "Defines the DataPoint Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:dataPoint3D",
+      "ClassName": "DataPoint3D",
+      "Summary": "Defines the DataPoint3D Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:dataPointLine",
+      "ClassName": "DataPointLine",
+      "Summary": "Defines the DataPointLine Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:dataPointMarker",
+      "ClassName": "DataPointMarker",
+      "Summary": "Defines the DataPointMarker Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:dataPointWireframe",
+      "ClassName": "DataPointWireframe",
+      "Summary": "Defines the DataPointWireframe Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:dataTable",
+      "ClassName": "DataTableStyle",
+      "Summary": "Defines the DataTableStyle Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:downBar",
+      "ClassName": "DownBar",
+      "Summary": "Defines the DownBar Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:dropLine",
+      "ClassName": "DropLine",
+      "Summary": "Defines the DropLine Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:errorBar",
+      "ClassName": "ErrorBar",
+      "Summary": "Defines the ErrorBar Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:floor",
+      "ClassName": "Floor",
+      "Summary": "Defines the Floor Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:gridlineMajor",
+      "ClassName": "GridlineMajor",
+      "Summary": "Defines the GridlineMajor Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:gridlineMinor",
+      "ClassName": "GridlineMinor",
+      "Summary": "Defines the GridlineMinor Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:hiLoLine",
+      "ClassName": "HiLoLine",
+      "Summary": "Defines the HiLoLine Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:leaderLine",
+      "ClassName": "LeaderLine",
+      "Summary": "Defines the LeaderLine Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:legend",
+      "ClassName": "LegendStyle",
+      "Summary": "Defines the LegendStyle Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:plotArea",
+      "ClassName": "PlotArea",
+      "Summary": "Defines the PlotArea Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:plotArea3D",
+      "ClassName": "PlotArea3D",
+      "Summary": "Defines the PlotArea3D Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:seriesAxis",
+      "ClassName": "SeriesAxis",
+      "Summary": "Defines the SeriesAxis Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:seriesLine",
+      "ClassName": "SeriesLine",
+      "Summary": "Defines the SeriesLine Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:title",
+      "ClassName": "TitleStyle",
+      "Summary": "Defines the TitleStyle Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:trendline",
+      "ClassName": "TrendlineStyle",
+      "Summary": "Defines the TrendlineStyle Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:trendlineLabel",
+      "ClassName": "TrendlineLabel",
+      "Summary": "Defines the TrendlineLabel Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:upBar",
+      "ClassName": "UpBar",
+      "Summary": "Defines the UpBar Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:valueAxis",
+      "ClassName": "ValueAxis",
+      "Summary": "Defines the ValueAxis Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/cs:wall",
+      "ClassName": "Wall",
+      "Summary": "Defines the Wall Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "StyleEntry",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cs:CT_StyleReference/cs:lnRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:double/cs:lineWidthScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:fillRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_StyleReference/cs:effectRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "cs:CT_FontReference/cs:fontRef",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cs:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cs:CT_StyleEntry/",
+      "ClassName": "StyleEntry",
+      "Summary": "Defines the StyleEntry Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":mods",
+          "PropertyName": "Modifiers",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "mods"
+        }
+      ],
+      "AdditionalElements": [
+        "a:CT_OfficeArtExtensionList/cs:extLst",
+        "a:CT_ShapeProperties/cs:spPr",
+        "a:CT_TextBodyProperties/cs:bodyPr",
+        "a:CT_TextCharacterProperties/cs:defRPr",
+        "cs:CT_FontReference/cs:fontRef",
+        "cs:CT_StyleReference/cs:lnRef",
+        "cs:CT_StyleReference/cs:fillRef",
+        "cs:CT_StyleReference/cs:effectRef",
+        "xsd:double/cs:lineWidthScale"
+      ],
+      "Children": [
+        {
+          "Name": "cs:CT_StyleReference/cs:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "xsd:double/cs:lineWidthScale",
+          "PropertyName": "LineWidthScale"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "cs:CT_StyleReference/cs:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "cs:CT_FontReference/cs:fontRef",
+          "PropertyName": "FontReference"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cs:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+          "PropertyName": "TextCharacterPropertiesType"
+        },
+        {
+          "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+          "PropertyName": "TextBodyProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ]
+    },
+    {
+      "Name": "cs:CT_MarkerLayout/cs:dataPointMarkerLayout",
+      "ClassName": "MarkerLayoutProperties",
+      "Summary": "Defines the MarkerLayoutProperties Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":symbol",
+          "PropertyName": "Symbol",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "symbol",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":size",
+          "PropertyName": "Size",
+          "Type": "ByteValue",
+          "Version": "Office2013",
+          "PropertyComments": "size",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "2"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "72"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "cs:ST_ColorStyleMethodEnum",
+      "Name": "ColorStyleMethodEnum",
+      "Facets": [
+        {
+          "Version": "Office2013",
+          "Value": "cycle",
+          "Name": "Cycle"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "withinLinear",
+          "Name": "WithinLinear"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "acrossLinear",
+          "Name": "AcrossLinear"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "withinLinearReversed"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "acrossLinearReversed"
+        }
+      ],
+      "Version": "Office2013"
+    },
+    {
+      "Type": "cs:ST_StyleReferenceModifierEnum",
+      "Name": "StyleReferenceModifierEnum",
+      "Facets": [
+        {
+          "Version": "Office2013",
+          "Value": "ignoreCSTransforms",
+          "Name": "IgnoreCSTransforms"
+        }
+      ],
+      "Version": "Office2013"
+    },
+    {
+      "Type": "cs:ST_StyleColorEnum",
+      "Name": "StyleColorEnum",
+      "Facets": [
+        {
+          "Version": "Office2013",
+          "Value": "auto",
+          "Name": "Automatic"
+        }
+      ],
+      "Version": "Office2013"
+    },
+    {
+      "Type": "cs:ST_StyleEntryModifierEnum",
+      "Name": "StyleEntryModifierEnum",
+      "Facets": [
+        {
+          "Version": "Office2013",
+          "Value": "allowNoFillOverride",
+          "Name": "AllowNoFillOverride"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "allowNoLineOverride",
+          "Name": "AllowNoLineOverride"
+        }
+      ],
+      "Version": "Office2013"
+    },
+    {
+      "Type": "cs:ST_MarkerStyle",
+      "Name": "MarkerStyle",
+      "Facets": [
+        {
+          "Version": "Office2013",
+          "Value": "circle",
+          "Name": "Circle"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "dash",
+          "Name": "Dash"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "diamond",
+          "Name": "Diamond"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "dot",
+          "Name": "Dot"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "plus",
+          "Name": "Plus"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "square",
+          "Name": "Square"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "star",
+          "Name": "Star"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "triangle",
+          "Name": "Triangle"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "x",
+          "Name": "X"
+        }
+      ],
+      "Version": "Office2013"
+    },
+    {
+      "Type": "cs:ST_Boolean",
+      "Name": "Boolean",
+      "Facets": [
+        {
+          "Version": "Office2013",
+          "Value": "false",
+          "Name": "False"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "true",
+          "Name": "True"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "ninch",
+          "Name": "Ninch"
+        }
+      ],
+      "Version": "Office2013"
+    },
+    {
+      "Type": "cs:ST_TickMark",
+      "Name": "TickMarkNinch",
+      "Facets": [
+        {
+          "Version": "Office2013",
+          "Value": "cross",
+          "Name": "Cross"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "inside",
+          "Name": "Inside"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "none",
+          "Name": "None"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "outside",
+          "Name": "Outside"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "ninch",
+          "Name": "Ninch"
+        }
+      ],
+      "Version": "Office2013"
+    },
+    {
+      "Type": "cs:ST_TickLabelPosition",
+      "Name": "TickLabelPositionNinch",
+      "Facets": [
+        {
+          "Version": "Office2013",
+          "Value": "high",
+          "Name": "High"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "low",
+          "Name": "Low"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "nextToAxis",
+          "Name": "NextToAxis"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "none",
+          "Name": "None"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "ninch",
+          "Name": "Ninch"
+        }
+      ],
+      "Version": "Office2013"
+    },
+    {
+      "Type": "cs:ST_DataLabelsPosition",
+      "Name": "DataLabelsPosition",
+      "Facets": [
+        {
+          "Version": "Office2013",
+          "Value": "center",
+          "Name": "Center"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "insideEnd",
+          "Name": "InsideEnd"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "insideBase",
+          "Name": "InsideBase"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "outsideEnd",
+          "Name": "OutsideEnd"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "ninch",
+          "Name": "Ninch"
+        }
+      ],
+      "Version": "Office2013"
+    },
+    {
+      "Type": "cs:ST_LegendPosition",
+      "Name": "LegendPosition",
+      "Facets": [
+        {
+          "Version": "Office2013",
+          "Value": "right",
+          "Name": "Right"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "top",
+          "Name": "Top"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "left",
+          "Name": "Left"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "bottom",
+          "Name": "Bottom"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "ninch",
+          "Name": "Ninch"
+        }
+      ],
+      "Version": "Office2013"
+    },
+    {
+      "Type": "cs:ST_TitlePosition",
+      "Name": "TitlePosition",
+      "Facets": [
+        {
+          "Version": "Office2013",
+          "Value": "above",
+          "Name": "Above"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "overlay",
+          "Name": "Overlay"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "off",
+          "Name": "Off"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "ninch",
+          "Name": "Ninch"
+        }
+      ],
+      "Version": "Office2013"
+    }
+  ]
+}

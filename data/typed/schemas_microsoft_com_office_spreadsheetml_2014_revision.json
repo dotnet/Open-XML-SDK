@@ -1,0 +1,198 @@
+[
+  {
+    "Name": "x:CT_AutoFilter/xr:autoFilter",
+    "ClassName": "AutoFilter"
+  },
+  {
+    "Name": "xr:CT_RevisionState/xr:body",
+    "ClassName": "RevisionState"
+  },
+  {
+    "Name": "xr:CT_RevCell/xr:c",
+    "ClassName": "RevCell"
+  },
+  {
+    "Name": "xr:CT_ChangeCellSubEdit/xr:ccse",
+    "ClassName": "ChangeCellSubEdit"
+  },
+  {
+    "Name": "x:CT_Comments/xr:comments",
+    "ClassName": "Comments"
+  },
+  {
+    "Name": "x:CT_DataValidation/xr:dataValidation",
+    "ClassName": "DataValidation"
+  },
+  {
+    "Name": "x:CT_Dxf/xr:dxf",
+    "ClassName": "DifferentialFormatType"
+  },
+  {
+    "Name": "x:CT_ExtensionList/xr:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "x:ST_Formula/xr:f",
+    "ClassName": "FFormula"
+  },
+  {
+    "Name": "x:ST_Formula/xr:formula",
+    "ClassName": "FormulaFormula"
+  },
+  {
+    "Name": "xr:CT_FreezePanes/xr:freezePanes",
+    "ClassName": "FreezePanes"
+  },
+  {
+    "Name": "xr:CT_RefFuture/xr:future",
+    "ClassName": "RefFuture"
+  },
+  {
+    "Name": "xr:CT_RevExHeader/xr:hdr",
+    "ClassName": "RevExHeader"
+  },
+  {
+    "Name": "xr:CT_StateBasedHeader/xr:hdr",
+    "ClassName": "StateBasedHeader"
+  },
+  {
+    "Name": "xr:CT_HideUnhideSheet/xr:hideUnhideSheet",
+    "ClassName": "HideUnhideSheet"
+  },
+  {
+    "Name": "x:CT_Hyperlink/xr:hyperlink",
+    "ClassName": "Hyperlink"
+  },
+  {
+    "Name": "x:CT_Rst/xr:is",
+    "ClassName": "RstType"
+  },
+  {
+    "Name": "xr:CT_RevisionStateLink/xr:link",
+    "ClassName": "RevisionStateLink"
+  },
+  {
+    "Name": "xr:CT_RefOartAnchor/xr:oartAnchor",
+    "ClassName": "RefOartAnchor"
+  },
+  {
+    "Name": "xr:CT_StateBasedObject/xr:objectState",
+    "ClassName": "StateBasedObject"
+  },
+  {
+    "Name": "xr:CT_Outline/xr:outline",
+    "ClassName": "Outline"
+  },
+  {
+    "Name": "xr:CT_Outlines/xr:outlines",
+    "ClassName": "Outlines"
+  },
+  {
+    "Name": "x:CT_pivotTableDefinition/xr:pivotTableDefinition",
+    "ClassName": "pivotTableDefinition"
+  },
+  {
+    "Name": "xr:CT_RefCell/xr:ref",
+    "ClassName": "RefCell"
+  },
+  {
+    "Name": "xr:CT_RefMap/xr:refmap",
+    "ClassName": "RefMap"
+  },
+  {
+    "Name": "xr:CT_RevExHeaders/xr:revHdrs",
+    "ClassName": "RevExHeaders"
+  },
+  {
+    "Name": "xr:CT_RevisionPtr/xr:revisionPtr",
+    "ClassName": "RevisionPtr"
+  },
+  {
+    "Name": "xr:CT_RevExStream/xr:revStream",
+    "ClassName": "RevExStream"
+  },
+  {
+    "Name": "xr:CT_RowColVisualOps/xr:rowColVisualOps",
+    "ClassName": "RowColVisualOps"
+  },
+  {
+    "Name": "xr:CT_SheetXluid/xr:sheetUid",
+    "ClassName": "SheetXluid"
+  },
+  {
+    "Name": "xr:CT_ShowGridlinesHeadings/xr:showGridlinesHeadings",
+    "ClassName": "ShowGridlinesHeadings"
+  },
+  {
+    "Name": "x14:CT_SparklineGroup/xr:sparklineGroup",
+    "ClassName": "SparklineGroup"
+  },
+  {
+    "Name": "xr:CT_RefTest/xr:test",
+    "ClassName": "RefTest"
+  },
+  {
+    "Name": "x:ST_Xstring/xr:v",
+    "ClassName": "Xstring"
+  },
+  {
+    "Name": "xr:CT_RevExChangeCell/xr:xrrc",
+    "ClassName": "RevExChangeCell"
+  },
+  {
+    "Name": "xr:CT_RevExChgObj/xr:xrrco",
+    "ClassName": "RevExChgObj"
+  },
+  {
+    "Name": "xr:CT_RevExDefinedName/xr:xrrDefName",
+    "ClassName": "RevExDefinedName"
+  },
+  {
+    "Name": "xr:CT_RevExDelObj/xr:xrrdo",
+    "ClassName": "RevExDelObj"
+  },
+  {
+    "Name": "xr:CT_RevExFormatting/xr:xrrf",
+    "ClassName": "RevExFormatting"
+  },
+  {
+    "Name": "xr:CT_RevExFuture/xr:xrrftr",
+    "ClassName": "RevExFuture"
+  },
+  {
+    "Name": "xr:CT_RevGroup/xr:xrrg",
+    "ClassName": "RevGroup"
+  },
+  {
+    "Name": "xr:CT_RevisionList/xr:xrrList",
+    "ClassName": "RevisionList"
+  },
+  {
+    "Name": "xr:CT_RevListAutoExpandRw/xr:xrrListExpR",
+    "ClassName": "RevListAutoExpandRw"
+  },
+  {
+    "Name": "xr:CT_RevExMove/xr:xrrm",
+    "ClassName": "RevExMove"
+  },
+  {
+    "Name": "xr:CT_RevExRowColumn/xr:xrrrc",
+    "ClassName": "RevExRowColumn"
+  },
+  {
+    "Name": "xr:CT_RevExSheetOp/xr:xrrSheet",
+    "ClassName": "RevExSheetOp"
+  },
+  {
+    "Name": "xr:CT_RevExTest/xr:xrrtest",
+    "ClassName": "RevExTest"
+  },
+  {
+    "Name": "xr:CT_RevExTrimmed/xr:xrrTrim",
+    "ClassName": "RevExTrimmed"
+  },
+  {
+    "Name": "xr:CT_RevExUnsupported/xr:xrrUspt",
+    "ClassName": "RevExUnsupported"
+  }
+]

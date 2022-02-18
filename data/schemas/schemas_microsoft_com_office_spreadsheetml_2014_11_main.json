@@ -1,0 +1,191 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2014/11/main",
+  "Types": [
+    {
+      "Name": "x16:CT_ModelTimeGroupings/x16:modelTimeGroupings",
+      "ClassName": "ModelTimeGroupings",
+      "Summary": "Defines the ModelTimeGroupings Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "x16:CT_ModelTimeGrouping/x16:modelTimeGrouping"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x16:CT_ModelTimeGrouping/x16:modelTimeGrouping",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x16:CT_ModelTimeGrouping/x16:modelTimeGrouping",
+      "ClassName": "ModelTimeGrouping",
+      "Summary": "Defines the ModelTimeGrouping Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":tableName",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "tableName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":columnName",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "columnName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":columnId",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "columnId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x16:CT_CalculatedTimeColumn/x16:calculatedTimeColumn"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x16:CT_CalculatedTimeColumn/x16:calculatedTimeColumn",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x16:CT_CalculatedTimeColumn/x16:calculatedTimeColumn",
+      "ClassName": "CalculatedTimeColumn",
+      "Summary": "Defines the CalculatedTimeColumn Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":columnName",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "columnName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":columnId",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "columnId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":contentType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "contentType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":isSelected",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "isSelected",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "x16:ST_ModelTimeGroupingContentType",
+      "Name": "ModelTimeGroupingContentType",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "years"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "quarters"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "monthsindex"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "months"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "daysindex"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "days"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "hours"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "minutes"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "seconds"
+        }
+      ],
+      "Version": "Office2016"
+    }
+  ]
+}

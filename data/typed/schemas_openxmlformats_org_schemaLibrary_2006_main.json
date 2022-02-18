@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "sl:CT_Schema/sl:schema",
+    "ClassName": "Schema"
+  },
+  {
+    "Name": "sl:CT_SchemaLibrary/sl:schemaLibrary",
+    "ClassName": "SchemaLibrary"
+  }
+]

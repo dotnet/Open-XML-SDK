@@ -1,0 +1,38 @@
+[
+  {
+    "Name": "ask:CT_Empty/",
+    "ClassName": "OpenXmlEmptyElement"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/ask:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "ask:CT_Empty/ask:lineSketchCurved",
+    "ClassName": "LineSketchCurvedEmpty"
+  },
+  {
+    "Name": "ask:CT_Empty/ask:lineSketchFreehand",
+    "ClassName": "LineSketchFreehandEmpty"
+  },
+  {
+    "Name": "ask:CT_Empty/ask:lineSketchNone",
+    "ClassName": "LineSketchNoneEmpty"
+  },
+  {
+    "Name": "ask:CT_Empty/ask:lineSketchScribble",
+    "ClassName": "LineSketchScribbleEmpty"
+  },
+  {
+    "Name": "ask:CT_LineSketchStyleProperties/ask:lineSketchStyleProps",
+    "ClassName": "LineSketchStyleProperties"
+  },
+  {
+    "Name": "ask:ST_LineSketchSeed/ask:seed",
+    "ClassName": "LineSketchSeed"
+  },
+  {
+    "Name": "ask:CT_LineSketchTypeProperties/ask:type",
+    "ClassName": "LineSketchTypeProperties"
+  }
+]

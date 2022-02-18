@@ -1,0 +1,12 @@
+{
+  "Root": "dgm:CT_ColorTransform",
+  "Name": "DiagramColorsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
+  "Target": "colors",
+  "RootElement": "colorsDef",
+  "Paths": {
+    "General": "../graphics"
+  }
+}

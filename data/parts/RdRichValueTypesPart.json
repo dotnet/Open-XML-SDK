@@ -1,0 +1,13 @@
+{
+  "Root": "xlrd2:CT_RichValueTypesInfo",
+  "Name": "RdRichValueTypesPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.rdrichvaluetypes\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueTypes",
+  "Target": "rdRichValueTypes",
+  "RootElement": "rvTypesInfo",
+  "Paths": {
+    "General": "richData"
+  },
+  "Version": "Office2019"
+}

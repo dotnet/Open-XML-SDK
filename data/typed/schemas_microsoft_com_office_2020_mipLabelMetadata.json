@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "clbl:CT_ClassificationExtension/clbl:ext",
+    "ClassName": "ClassificationExtension"
+  },
+  {
+    "Name": "clbl:CT_ClassificationExtensionList/clbl:extLst",
+    "ClassName": "ClassificationExtensionList"
+  },
+  {
+    "Name": "clbl:CT_ClassificationLabel/clbl:label",
+    "ClassName": "ClassificationLabel"
+  },
+  {
+    "Name": "clbl:CT_ClassificationLabelList/clbl:labelList",
+    "ClassName": "ClassificationLabelList",
+    "PartClassName": "LabelInfoPart"
+  }
+]

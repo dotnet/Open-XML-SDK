@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "dgm1611:CT_NumberDiagramInfo/dgm1611:autoBuNodeInfo",
+    "ClassName": "NumberDiagramInfo"
+  },
+  {
+    "Name": "dgm1611:CT_NumberDiagramInfoList/dgm1611:autoBuNodeInfoLst",
+    "ClassName": "NumberDiagramInfoList"
+  },
+  {
+    "Name": "dgm1611:CT_DiagramAutoBullet/dgm1611:buPr",
+    "ClassName": "DiagramAutoBullet"
+  }
+]

@@ -1,0 +1,195 @@
+{
+  "Root": "x:CT_Workbook",
+  "Name": "WorkbookPart",
+  "Base": "OpenXmlPart",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument",
+  "Target": "workbook",
+  "RootElement": "workbook",
+  "Paths": {
+    "General": "xl"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "CustomXmlParts",
+      "Name": "CustomXmlPart"
+    },
+    {
+      "ApiName": "CalculationChainPart",
+      "Name": "CalculationChainPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "CellMetadataPart",
+      "Name": "CellMetadataPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "ConnectionsPart",
+      "Name": "ConnectionsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "CustomXmlMappingsPart",
+      "Name": "CustomXmlMappingsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "SharedStringTablePart",
+      "Name": "SharedStringTablePart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "WorkbookRevisionHeaderPart",
+      "Name": "WorkbookRevisionHeaderPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "WorkbookUserDataPart",
+      "Name": "WorkbookUserDataPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "WorkbookStylesPart",
+      "Name": "WorkbookStylesPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "ThemePart",
+      "Name": "ThemePart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "ThumbnailPart",
+      "Name": "ThumbnailPart"
+    },
+    {
+      "ApiName": "VolatileDependenciesPart",
+      "Name": "VolatileDependenciesPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ChartsheetParts",
+      "Name": "ChartsheetPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DialogsheetParts",
+      "Name": "DialogsheetPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ExternalWorkbookParts",
+      "Name": "ExternalWorkbookPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "PivotTableCacheDefinitionParts",
+      "Name": "PivotTableCacheDefinitionPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "WorksheetParts",
+      "Name": "WorksheetPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "ExcelAttachedToolbarsPart",
+      "Name": "ExcelAttachedToolbarsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "VbaProjectPart",
+      "Name": "VbaProjectPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "MacroSheetParts",
+      "Name": "MacroSheetPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "InternationalMacroSheetParts",
+      "Name": "InternationalMacroSheetPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "CustomDataPropertiesParts",
+      "Name": "CustomDataPropertiesPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "SlicerCacheParts",
+      "Name": "SlicerCachePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "TimeLineCacheParts",
+      "Name": "TimeLineCachePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "WorkbookPersonParts",
+      "Name": "WorkbookPersonPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "RdRichValueParts",
+      "Name": "RdRichValuePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "CT_RdRichValueStructureParts",
+      "Name": "RdRichValueStructurePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "RdArrayParts",
+      "Name": "RdArrayPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "RichStylesParts",
+      "Name": "RichStylesPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "RdSupportingPropertyBagParts",
+      "Name": "RdSupportingPropertyBagPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "RdSupportingPropertyBagStructureParts",
+      "Name": "RdSupportingPropertyBagStructurePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "RdRichValueTypesParts",
+      "Name": "RdRichValueTypesPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "RdRichValueWebImagePart",
+      "Name": "RdRichValueWebImagePart",
+      "HasFixedContent": true
+    }
+  ]
+}

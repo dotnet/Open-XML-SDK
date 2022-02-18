@@ -1,0 +1,40 @@
+[
+  {
+    "Name": "xne:CT_SortMapItem/",
+    "ClassName": "SortMapItemType"
+  },
+  {
+    "Name": "xne:CT_SortMapItem/xne:col",
+    "ClassName": "ColumnSortMapItem"
+  },
+  {
+    "Name": "xne:CT_ColSortMap/xne:colSortMap",
+    "ClassName": "ColumnSortMap"
+  },
+  {
+    "Name": "x:ST_Formula/xne:f",
+    "ClassName": "Formula"
+  },
+  {
+    "Name": "x:CT_Macrosheet/xne:macrosheet",
+    "ClassName": "Macrosheet",
+    "PartClassName": "MacroSheetPart"
+  },
+  {
+    "Name": "xne:CT_SortMapItem/xne:row",
+    "ClassName": "RowSortMapItem"
+  },
+  {
+    "Name": "xne:CT_RowSortMap/xne:rowSortMap",
+    "ClassName": "RowSortMap"
+  },
+  {
+    "Name": "xne:ST_Sqref/xne:sqref",
+    "ClassName": "ReferenceSequence"
+  },
+  {
+    "Name": "xne:CT_WorksheetSortMap/xne:worksheetSortMap",
+    "ClassName": "WorksheetSortMap",
+    "PartClassName": "WorksheetSortMapPart"
+  }
+]

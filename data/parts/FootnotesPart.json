@@ -1,0 +1,95 @@
+{
+  "Root": "w:CT_Footnotes",
+  "Name": "FootnotesPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes",
+  "Target": "footnotes",
+  "RootElement": "footnotes",
+  "Paths": {
+    "General": "."
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "AlternativeFormatImportParts",
+      "Name": "AlternativeFormatImportPart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ChartParts",
+      "Name": "ChartPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ExtendedChartParts",
+      "Name": "ExtendedChartPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramColorsParts",
+      "Name": "DiagramColorsPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramDataParts",
+      "Name": "DiagramDataPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramPersistLayoutParts",
+      "Name": "DiagramPersistLayoutPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramLayoutDefinitionParts",
+      "Name": "DiagramLayoutDefinitionPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramStyleParts",
+      "Name": "DiagramStylePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedControlPersistenceParts",
+      "Name": "EmbeddedControlPersistencePart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedObjectParts",
+      "Name": "EmbeddedObjectPart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedPackageParts",
+      "Name": "EmbeddedPackagePart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "IsDataPartReference": true,
+      "ApiName": "VideoReferenceRelationships",
+      "Name": "VideoReferenceRelationship"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "Model3DReferenceRelationshipParts",
+      "Name": "Model3DReferenceRelationshipPart",
+      "HasFixedContent": true
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "Name": "x:CT_ExtensionList/xltc:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "xltc:CT_Mention/xltc:mention",
+    "ClassName": "Mention"
+  },
+  {
+    "Name": "xltc:CT_ThreadedCommentMentions/xltc:mentions",
+    "ClassName": "ThreadedCommentMentions"
+  },
+  {
+    "Name": "xltc:CT_Person/xltc:person",
+    "ClassName": "Person"
+  },
+  {
+    "Name": "xltc:CT_PersonList/xltc:personList",
+    "ClassName": "PersonList",
+    "PartClassName": "WorkbookPersonPart"
+  },
+  {
+    "Name": "x:ST_Xstring/xltc:text",
+    "ClassName": "ThreadedCommentText"
+  },
+  {
+    "Name": "xltc:CT_ThreadedComment/xltc:threadedComment",
+    "ClassName": "ThreadedComment"
+  },
+  {
+    "Name": "xltc:CT_ThreadedComments/xltc:ThreadedComments",
+    "ClassName": "ThreadedComments",
+    "PartClassName": "WorksheetThreadedCommentsPart"
+  }
+]

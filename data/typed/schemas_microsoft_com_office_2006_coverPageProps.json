@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "xsd:string/cppr:Abstract",
+    "ClassName": "DocumentAbstract"
+  },
+  {
+    "Name": "xsd:string/cppr:CompanyAddress",
+    "ClassName": "CompanyAddress"
+  },
+  {
+    "Name": "xsd:string/cppr:CompanyEmail",
+    "ClassName": "CompanyEmailAddress"
+  },
+  {
+    "Name": "xsd:string/cppr:CompanyFax",
+    "ClassName": "CompanyFaxNumber"
+  },
+  {
+    "Name": "xsd:string/cppr:CompanyPhone",
+    "ClassName": "CompanyPhoneNumber"
+  },
+  {
+    "Name": "cppr:CT_CoverPageProperties/cppr:CoverPageProperties",
+    "ClassName": "CoverPageProperties"
+  },
+  {
+    "Name": "cppr:ST_PublishDate/cppr:PublishDate",
+    "ClassName": "PublishDate"
+  }
+]

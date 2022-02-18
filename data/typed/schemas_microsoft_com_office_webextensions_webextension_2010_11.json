@@ -1,0 +1,43 @@
+[
+  {
+    "Name": "we:CT_OsfWebExtensionReferenceList/we:alternateReferences",
+    "ClassName": "WebExtensionReferenceList"
+  },
+  {
+    "Name": "we:CT_OsfWebExtensionBinding/we:binding",
+    "ClassName": "WebExtensionBinding"
+  },
+  {
+    "Name": "we:CT_OsfWebExtensionBindingList/we:bindings",
+    "ClassName": "WebExtensionBindingList"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/we:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "we:CT_OsfWebExtensionPropertyBag/we:properties",
+    "ClassName": "WebExtensionPropertyBag"
+  },
+  {
+    "Name": "we:CT_OsfWebExtensionProperty/we:property",
+    "ClassName": "WebExtensionProperty"
+  },
+  {
+    "Name": "we:CT_OsfWebExtensionReference/we:reference",
+    "ClassName": "WebExtensionStoreReference"
+  },
+  {
+    "Name": "a:CT_Blip/we:snapshot",
+    "ClassName": "Snapshot"
+  },
+  {
+    "Name": "we:CT_OsfWebExtension/we:webextension",
+    "ClassName": "WebExtension",
+    "PartClassName": "WebExtensionPart"
+  },
+  {
+    "Name": "we:CT_WebExtensionPartRef/we:webextensionref",
+    "ClassName": "WebExtensionReference"
+  }
+]

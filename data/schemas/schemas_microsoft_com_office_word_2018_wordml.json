@@ -1,0 +1,50 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/word/2018/wordml",
+  "Types": [
+    {
+      "Name": "w16cur:CT_Extension/w16cur:ext",
+      "ClassName": "Extension",
+      "Summary": "Defines the Extension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": "w16cur:uri",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "uri",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2021"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any"
+          }
+        ]
+      }
+    }
+  ]
+}

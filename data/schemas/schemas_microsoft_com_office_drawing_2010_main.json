@@ -1,0 +1,3279 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2010/main",
+  "Types": [
+    {
+      "Name": "a14:CT_CameraTool/a14:cameraTool",
+      "ClassName": "CameraTool",
+      "Summary": "Defines the CameraTool Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":cellRange",
+          "PropertyName": "CellRange",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "cellRange"
+        },
+        {
+          "QName": ":spid",
+          "PropertyName": "ShapeId",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "spid"
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_CompatExt/a14:compatExt",
+      "ClassName": "CompatExtension",
+      "Summary": "Defines the CompatExtension Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":spid",
+          "PropertyName": "ShapeId",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "spid"
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_IsGvmlCanvas/a14:isCanvas",
+      "ClassName": "IsCanvas",
+      "Summary": "Defines the IsCanvas Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_GvmlContentPart/a14:contentPart",
+      "ClassName": "GvmlContentPart",
+      "Summary": "Defines the GvmlContentPart Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":bwMode",
+          "PropertyName": "BlackWhiteMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "bwMode",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "r:id",
+          "PropertyName": "RelationshipId",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a14:CT_GvmlContentPartNonVisual/a14:nvContentPartPr",
+          "PropertyName": "NonVisualContentPartProperties"
+        },
+        {
+          "Name": "a:CT_Transform2D/a14:xfrm",
+          "PropertyName": "Transform2D"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a14:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a14:CT_GvmlContentPartNonVisual/a14:nvContentPartPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a:CT_Transform2D/a14:xfrm",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a14:CT_ShadowObscured/a14:shadowObscured",
+      "ClassName": "ShadowObscured",
+      "Summary": "Defines the ShadowObscured Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "val"
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_FillProperties/a14:hiddenFill",
+      "ClassName": "HiddenFillProperties",
+      "Summary": "Defines the HiddenFillProperties Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_NoFillProperties/a:noFill",
+          "PropertyName": "NoFill"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/a:solidFill",
+          "PropertyName": "SolidFill"
+        },
+        {
+          "Name": "a:CT_GradientFillProperties/a:gradFill",
+          "PropertyName": "GradientFill"
+        },
+        {
+          "Name": "a:CT_BlipFillProperties/a:blipFill",
+          "PropertyName": "BlipFill"
+        },
+        {
+          "Name": "a:CT_PatternFillProperties/a:pattFill",
+          "PropertyName": "PatternFill",
+          "PropertyComments": "Pattern Fill"
+        },
+        {
+          "Name": "a:CT_GroupFillProperties/a:grpFill",
+          "PropertyName": "GroupFill",
+          "PropertyComments": "Group Fill"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_NoFillProperties/a:noFill"
+                  },
+                  {
+                    "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+                  },
+                  {
+                    "Name": "a:CT_GradientFillProperties/a:gradFill"
+                  },
+                  {
+                    "Name": "a:CT_BlipFillProperties/a:blipFill"
+                  },
+                  {
+                    "Name": "a:CT_PatternFillProperties/a:pattFill"
+                  },
+                  {
+                    "Name": "a:CT_GroupFillProperties/a:grpFill"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_LineProperties/a14:hiddenLine",
+      "ClassName": "HiddenLineProperties",
+      "Summary": "Defines the HiddenLineProperties Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":w",
+          "PropertyName": "Width",
+          "Type": "Int32Value",
+          "PropertyComments": "line width",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "20116800"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":cap",
+          "PropertyName": "CapType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.LineCapValues\u003E",
+          "PropertyComments": "line cap",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":cmpd",
+          "PropertyName": "CompoundLineType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.CompoundLineValues\u003E",
+          "PropertyComments": "compound line type",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":algn",
+          "PropertyName": "Alignment",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PenAlignmentValues\u003E",
+          "PropertyComments": "pen alignment",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_NoFillProperties/a:noFill"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+        },
+        {
+          "Name": "a:CT_GradientFillProperties/a:gradFill"
+        },
+        {
+          "Name": "a:CT_PatternFillProperties/a:pattFill"
+        },
+        {
+          "Name": "a:CT_PresetLineDashProperties/a:prstDash"
+        },
+        {
+          "Name": "a:CT_DashStopList/a:custDash"
+        },
+        {
+          "Name": "a:CT_LineJoinRound/a:round"
+        },
+        {
+          "Name": "a:CT_LineJoinBevel/a:bevel"
+        },
+        {
+          "Name": "a:CT_LineJoinMiterProperties/a:miter"
+        },
+        {
+          "Name": "a:CT_LineEndProperties/a:headEnd"
+        },
+        {
+          "Name": "a:CT_LineEndProperties/a:tailEnd"
+        },
+        {
+          "Name": "a:CT_LinePropertiesExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_NoFillProperties/a:noFill"
+                  },
+                  {
+                    "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+                  },
+                  {
+                    "Name": "a:CT_GradientFillProperties/a:gradFill"
+                  },
+                  {
+                    "Name": "a:CT_PatternFillProperties/a:pattFill"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_PresetLineDashProperties/a:prstDash"
+                  },
+                  {
+                    "Name": "a:CT_DashStopList/a:custDash"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_LineJoinRound/a:round"
+                  },
+                  {
+                    "Name": "a:CT_LineJoinBevel/a:bevel"
+                  },
+                  {
+                    "Name": "a:CT_LineJoinMiterProperties/a:miter"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_LineEndProperties/a:headEnd",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_LineEndProperties/a:tailEnd",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_LinePropertiesExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_EffectProperties/a14:hiddenEffects",
+      "ClassName": "HiddenEffectsProperties",
+      "Summary": "Defines the HiddenEffectsProperties Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_EffectList/a:effectLst",
+          "PropertyName": "EffectList",
+          "PropertyComments": "Effect Container"
+        },
+        {
+          "Name": "a:CT_EffectContainer/a:effectDag",
+          "PropertyName": "EffectDag",
+          "PropertyComments": "Effect Container"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_EffectList/a:effectLst"
+                  },
+                  {
+                    "Name": "a:CT_EffectContainer/a:effectDag"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_Scene3D/a14:hiddenScene3d",
+      "ClassName": "HiddenScene3D",
+      "Summary": "Defines the HiddenScene3D Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_Camera/a:camera",
+          "PropertyName": "Camera",
+          "PropertyComments": "Camera"
+        },
+        {
+          "Name": "a:CT_LightRig/a:lightRig",
+          "PropertyName": "LightRig",
+          "PropertyComments": "Light Rig"
+        },
+        {
+          "Name": "a:CT_Backdrop/a:backdrop",
+          "PropertyName": "Backdrop",
+          "PropertyComments": "Backdrop Plane"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Camera/a:camera"
+          },
+          {
+            "Name": "a:CT_LightRig/a:lightRig"
+          },
+          {
+            "Name": "a:CT_Backdrop/a:backdrop",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_Shape3D/a14:hiddenSp3d",
+      "ClassName": "HiddenShape3D",
+      "Summary": "Defines the HiddenShape3D Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":z",
+          "PropertyName": "Z",
+          "Type": "Int64Value",
+          "PropertyComments": "Shape Depth",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":extrusionH",
+          "PropertyName": "ExtrusionHeight",
+          "Type": "Int64Value",
+          "PropertyComments": "Extrusion Height",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":contourW",
+          "PropertyName": "ContourWidth",
+          "Type": "Int64Value",
+          "PropertyComments": "Contour Width",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":prstMaterial",
+          "PropertyName": "PresetMaterial",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues\u003E",
+          "PropertyComments": "Preset Material Type",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Bevel/a:bevelT",
+          "PropertyName": "BevelTop",
+          "PropertyComments": "Top Bevel"
+        },
+        {
+          "Name": "a:CT_Bevel/a:bevelB",
+          "PropertyName": "BevelBottom",
+          "PropertyComments": "Bottom Bevel"
+        },
+        {
+          "Name": "a:CT_Color/a:extrusionClr",
+          "PropertyName": "ExtrusionColor",
+          "PropertyComments": "Extrusion Color"
+        },
+        {
+          "Name": "a:CT_Color/a:contourClr",
+          "PropertyName": "ContourColor",
+          "PropertyComments": "Contour Color"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Bevel/a:bevelT",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Bevel/a:bevelB",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Color/a:extrusionClr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Color/a:contourClr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a14:CT_Photo/a14:imgProps",
+      "ClassName": "ImageProperties",
+      "Summary": "Defines the ImageProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a14:CT_PictureLayer/a14:imgLayer",
+          "PropertyName": "ImageLayer"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a14:CT_PictureLayer/a14:imgLayer",
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a14:CT_UseLocalDpi/a14:useLocalDpi",
+      "ClassName": "UseLocalDpi",
+      "Summary": "Defines the UseLocalDpi Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "val"
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_TextMath/a14:m",
+      "ClassName": "TextMath",
+      "Summary": "Defines the TextMath Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/a14:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a14:CT_ContentPartLocking/a14:cpLocks",
+      "ClassName": "ContentPartLocks",
+      "Summary": "Defines the ContentPartLocks Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":noGrp",
+          "PropertyName": "NoGrouping",
+          "Type": "BooleanValue",
+          "PropertyComments": "Disallow Shape Grouping"
+        },
+        {
+          "QName": ":noSelect",
+          "PropertyName": "NoSelection",
+          "Type": "BooleanValue",
+          "PropertyComments": "Disallow Shape Selection"
+        },
+        {
+          "QName": ":noRot",
+          "PropertyName": "NoRotation",
+          "Type": "BooleanValue",
+          "PropertyComments": "Disallow Shape Rotation"
+        },
+        {
+          "QName": ":noChangeAspect",
+          "PropertyName": "NoChangeAspect",
+          "Type": "BooleanValue",
+          "PropertyComments": "Disallow Aspect Ratio Change"
+        },
+        {
+          "QName": ":noMove",
+          "PropertyName": "NoMove",
+          "Type": "BooleanValue",
+          "PropertyComments": "Disallow Shape Movement"
+        },
+        {
+          "QName": ":noResize",
+          "PropertyName": "NoResize",
+          "Type": "BooleanValue",
+          "PropertyComments": "Disallow Shape Resize"
+        },
+        {
+          "QName": ":noEditPoints",
+          "PropertyName": "NoEditPoints",
+          "Type": "BooleanValue",
+          "PropertyComments": "Disallow Shape Point Editing"
+        },
+        {
+          "QName": ":noAdjustHandles",
+          "PropertyName": "NoAdjustHandles",
+          "Type": "BooleanValue",
+          "PropertyComments": "Disallow Showing Adjust Handles"
+        },
+        {
+          "QName": ":noChangeArrowheads",
+          "PropertyName": "NoChangeArrowheads",
+          "Type": "BooleanValue",
+          "PropertyComments": "Disallow Arrowhead Changes"
+        },
+        {
+          "QName": ":noChangeShapeType",
+          "PropertyName": "NoChangeShapeType",
+          "Type": "BooleanValue",
+          "PropertyComments": "Disallow Shape Type Change"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a14:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a14:CT_PictureEffectBackgroundRemovalForegroundMark/a14:foregroundMark",
+      "ClassName": "ForegroundMark",
+      "Summary": "Defines the ForegroundMark Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":x1",
+          "PropertyName": "FirstXCoordinate",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "x1",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":y1",
+          "PropertyName": "FirstYCoordinate",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "y1",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":x2",
+          "PropertyName": "SecondXCoordinate",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "x2",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":y2",
+          "PropertyName": "SecondYCoordinate",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "y2",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectBackgroundRemovalBackgroundMark/a14:backgroundMark",
+      "ClassName": "BackgroundMark",
+      "Summary": "Defines the BackgroundMark Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":x1",
+          "PropertyName": "FirstXCoordinate",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "x1",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":y1",
+          "PropertyName": "FirstYCoordinate",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "y1",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":x2",
+          "PropertyName": "SecondXCoordinate",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "x2",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":y2",
+          "PropertyName": "SecondYCoordinate",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "y2",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectBlur/a14:artisticBlur",
+      "ClassName": "ArtisticBlur",
+      "Summary": "Defines the ArtisticBlur Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":radius",
+          "PropertyName": "Radius",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "radius",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectCement/a14:artisticCement",
+      "ClassName": "ArtisticCement",
+      "Summary": "Defines the ArtisticCement Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":crackSpacing",
+          "PropertyName": "CrackSpacing",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "crackSpacing",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectChalkSketch/a14:artisticChalkSketch",
+      "ClassName": "ArtisticChalkSketch",
+      "Summary": "Defines the ArtisticChalkSketch Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":pressure",
+          "PropertyName": "Pressure",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "pressure",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "4"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectCrisscrossEtching/a14:artisticCrisscrossEtching",
+      "ClassName": "ArtisticCrisscrossEtching",
+      "Summary": "Defines the ArtisticCrisscrossEtching Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":pressure",
+          "PropertyName": "Pressure",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "pressure",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectCutout/a14:artisticCutout",
+      "ClassName": "ArtisticCutout",
+      "Summary": "Defines the ArtisticCutout Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":numberOfShades",
+          "PropertyName": "NumberOfShades",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "numberOfShades",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "6"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectFilmGrain/a14:artisticFilmGrain",
+      "ClassName": "ArtisticFilmGrain",
+      "Summary": "Defines the ArtisticFilmGrain Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":grainSize",
+          "PropertyName": "GrainSize",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "grainSize",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectGlass/a14:artisticGlass",
+      "ClassName": "ArtisticGlass",
+      "Summary": "Defines the ArtisticGlass Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":scaling",
+          "PropertyName": "Scaling",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "scaling",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectGlowDiffused/a14:artisticGlowDiffused",
+      "ClassName": "ArtisticGlowDiffused",
+      "Summary": "Defines the ArtisticGlowDiffused Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":intensity",
+          "PropertyName": "Intensity",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "intensity",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectGlowEdges/a14:artisticGlowEdges",
+      "ClassName": "ArtisticGlowEdges",
+      "Summary": "Defines the ArtisticGlowEdges Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":smoothness",
+          "PropertyName": "Smoothness",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "smoothness",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectLightScreen/a14:artisticLightScreen",
+      "ClassName": "ArtisticLightScreen",
+      "Summary": "Defines the ArtisticLightScreen Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":gridSize",
+          "PropertyName": "GridSize",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "gridSize",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectLineDrawing/a14:artisticLineDrawing",
+      "ClassName": "ArtisticLineDrawing",
+      "Summary": "Defines the ArtisticLineDrawing Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":pencilSize",
+          "PropertyName": "PencilSize",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "pencilSize",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectMarker/a14:artisticMarker",
+      "ClassName": "ArtisticMarker",
+      "Summary": "Defines the ArtisticMarker Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":size",
+          "PropertyName": "Size",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "size",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectMosiaicBubbles/a14:artisticMosiaicBubbles",
+      "ClassName": "ArtisticMosaicBubbles",
+      "Summary": "Defines the ArtisticMosaicBubbles Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":pressure",
+          "PropertyName": "Pressure",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "pressure",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectPaintStrokes/a14:artisticPaintStrokes",
+      "ClassName": "ArtisticPaintStrokes",
+      "Summary": "Defines the ArtisticPaintStrokes Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":intensity",
+          "PropertyName": "Intensity",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "intensity",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectPaintBrush/a14:artisticPaintBrush",
+      "ClassName": "ArtisticPaintBrush",
+      "Summary": "Defines the ArtisticPaintBrush Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":brushSize",
+          "PropertyName": "BrushSize",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "brushSize",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectPastelsSmooth/a14:artisticPastelsSmooth",
+      "ClassName": "ArtisticPastelsSmooth",
+      "Summary": "Defines the ArtisticPastelsSmooth Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":scaling",
+          "PropertyName": "BrushSize",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "scaling",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectPencilGrayscale/a14:artisticPencilGrayscale",
+      "ClassName": "ArtisticPencilGrayscale",
+      "Summary": "Defines the ArtisticPencilGrayscale Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":pencilSize",
+          "PropertyName": "BrushSize",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "pencilSize",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectPencilSketch/a14:artisticPencilSketch",
+      "ClassName": "ArtisticPencilSketch",
+      "Summary": "Defines the ArtisticPencilSketch Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":pressure",
+          "PropertyName": "Pressure",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "pressure",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectPhotocopy/a14:artisticPhotocopy",
+      "ClassName": "ArtisticPhotocopy",
+      "Summary": "Defines the ArtisticPhotocopy Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":detail",
+          "PropertyName": "Detail",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "detail",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectPlasticWrap/a14:artisticPlasticWrap",
+      "ClassName": "ArtisticPlasticWrap",
+      "Summary": "Defines the ArtisticPlasticWrap Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":smoothness",
+          "PropertyName": "Smoothness",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "smoothness",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectTexturizer/a14:artisticTexturizer",
+      "ClassName": "ArtisticTexturizer",
+      "Summary": "Defines the ArtisticTexturizer Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":scaling",
+          "PropertyName": "Scaling",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "scaling",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectWatercolorSponge/a14:artisticWatercolorSponge",
+      "ClassName": "ArtisticWatercolorSponge",
+      "Summary": "Defines the ArtisticWatercolorSponge Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":trans",
+          "PropertyName": "Transparancy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "trans",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":brushSize",
+          "PropertyName": "BrushSize",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "brushSize",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectBackgroundRemoval/a14:backgroundRemoval",
+      "ClassName": "BackgroundRemoval",
+      "Summary": "Defines the BackgroundRemoval Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":t",
+          "PropertyName": "MarqueeTop",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "t",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":b",
+          "PropertyName": "MarqueeBottom",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "b",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":l",
+          "PropertyName": "MarqueeLeft",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "l",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":r",
+          "PropertyName": "MarqueeRight",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "r",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a14:CT_PictureEffectBackgroundRemovalForegroundMark/a14:foregroundMark"
+        },
+        {
+          "Name": "a14:CT_PictureEffectBackgroundRemovalBackgroundMark/a14:backgroundMark"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a14:CT_PictureEffectBackgroundRemovalForegroundMark/a14:foregroundMark",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectBackgroundRemovalBackgroundMark/a14:backgroundMark",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a14:CT_PictureEffectBrightnessContrast/a14:brightnessContrast",
+      "ClassName": "BrightnessContrast",
+      "Summary": "Defines the BrightnessContrast Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":bright",
+          "PropertyName": "Bright",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "bright",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-100000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":contrast",
+          "PropertyName": "Contrast",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "contrast",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-100000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectColorTemperature/a14:colorTemperature",
+      "ClassName": "ColorTemperature",
+      "Summary": "Defines the ColorTemperature Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":colorTemp",
+          "PropertyName": "ColorTemperatureValue",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "colorTemp",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "1500"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "11500"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectSaturation/a14:saturation",
+      "ClassName": "Saturation",
+      "Summary": "Defines the Saturation Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":sat",
+          "PropertyName": "SaturationAmount",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "sat",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "400000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffectSharpenSoften/a14:sharpenSoften",
+      "ClassName": "SharpenSoften",
+      "Summary": "Defines the SharpenSoften Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":amount",
+          "PropertyName": "Amount",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "amount",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-100000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a14:CT_PictureEffect/a14:imgEffect",
+      "ClassName": "ImageEffect",
+      "Summary": "Defines the ImageEffect Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":visible",
+          "PropertyName": "Visible",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "visible"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a14:CT_PictureEffectBlur/a14:artisticBlur",
+          "PropertyName": "ArtisticBlur"
+        },
+        {
+          "Name": "a14:CT_PictureEffectCement/a14:artisticCement",
+          "PropertyName": "ArtisticCement"
+        },
+        {
+          "Name": "a14:CT_PictureEffectChalkSketch/a14:artisticChalkSketch",
+          "PropertyName": "ArtisticChalkSketch"
+        },
+        {
+          "Name": "a14:CT_PictureEffectCrisscrossEtching/a14:artisticCrisscrossEtching",
+          "PropertyName": "ArtisticCrisscrossEtching"
+        },
+        {
+          "Name": "a14:CT_PictureEffectCutout/a14:artisticCutout",
+          "PropertyName": "ArtisticCutout"
+        },
+        {
+          "Name": "a14:CT_PictureEffectFilmGrain/a14:artisticFilmGrain",
+          "PropertyName": "ArtisticFilmGrain"
+        },
+        {
+          "Name": "a14:CT_PictureEffectGlass/a14:artisticGlass",
+          "PropertyName": "ArtisticGlass"
+        },
+        {
+          "Name": "a14:CT_PictureEffectGlowDiffused/a14:artisticGlowDiffused",
+          "PropertyName": "ArtisticGlowDiffused"
+        },
+        {
+          "Name": "a14:CT_PictureEffectGlowEdges/a14:artisticGlowEdges",
+          "PropertyName": "ArtisticGlowEdges"
+        },
+        {
+          "Name": "a14:CT_PictureEffectLightScreen/a14:artisticLightScreen",
+          "PropertyName": "ArtisticLightScreen"
+        },
+        {
+          "Name": "a14:CT_PictureEffectLineDrawing/a14:artisticLineDrawing",
+          "PropertyName": "ArtisticLineDrawing"
+        },
+        {
+          "Name": "a14:CT_PictureEffectMarker/a14:artisticMarker",
+          "PropertyName": "ArtisticMarker"
+        },
+        {
+          "Name": "a14:CT_PictureEffectMosiaicBubbles/a14:artisticMosiaicBubbles",
+          "PropertyName": "ArtisticMosaicBubbles"
+        },
+        {
+          "Name": "a14:CT_PictureEffectPaintStrokes/a14:artisticPaintStrokes",
+          "PropertyName": "ArtisticPaintStrokes"
+        },
+        {
+          "Name": "a14:CT_PictureEffectPaintBrush/a14:artisticPaintBrush",
+          "PropertyName": "ArtisticPaintBrush"
+        },
+        {
+          "Name": "a14:CT_PictureEffectPastelsSmooth/a14:artisticPastelsSmooth",
+          "PropertyName": "ArtisticPastelsSmooth"
+        },
+        {
+          "Name": "a14:CT_PictureEffectPencilGrayscale/a14:artisticPencilGrayscale",
+          "PropertyName": "ArtisticPencilGrayscale"
+        },
+        {
+          "Name": "a14:CT_PictureEffectPencilSketch/a14:artisticPencilSketch",
+          "PropertyName": "ArtisticPencilSketch"
+        },
+        {
+          "Name": "a14:CT_PictureEffectPhotocopy/a14:artisticPhotocopy",
+          "PropertyName": "ArtisticPhotocopy"
+        },
+        {
+          "Name": "a14:CT_PictureEffectPlasticWrap/a14:artisticPlasticWrap",
+          "PropertyName": "ArtisticPlasticWrap"
+        },
+        {
+          "Name": "a14:CT_PictureEffectTexturizer/a14:artisticTexturizer",
+          "PropertyName": "ArtisticTexturizer"
+        },
+        {
+          "Name": "a14:CT_PictureEffectWatercolorSponge/a14:artisticWatercolorSponge",
+          "PropertyName": "ArtisticWatercolorSponge"
+        },
+        {
+          "Name": "a14:CT_PictureEffectBackgroundRemoval/a14:backgroundRemoval",
+          "PropertyName": "BackgroundRemoval"
+        },
+        {
+          "Name": "a14:CT_PictureEffectBrightnessContrast/a14:brightnessContrast",
+          "PropertyName": "BrightnessContrast"
+        },
+        {
+          "Name": "a14:CT_PictureEffectColorTemperature/a14:colorTemperature",
+          "PropertyName": "ColorTemperature"
+        },
+        {
+          "Name": "a14:CT_PictureEffectSaturation/a14:saturation",
+          "PropertyName": "Saturation"
+        },
+        {
+          "Name": "a14:CT_PictureEffectSharpenSoften/a14:sharpenSoften",
+          "PropertyName": "SharpenSoften"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "a14:CT_PictureEffectBlur/a14:artisticBlur",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectCement/a14:artisticCement",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectChalkSketch/a14:artisticChalkSketch",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectCrisscrossEtching/a14:artisticCrisscrossEtching",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectCutout/a14:artisticCutout",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectFilmGrain/a14:artisticFilmGrain",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectGlass/a14:artisticGlass",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectGlowDiffused/a14:artisticGlowDiffused",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectGlowEdges/a14:artisticGlowEdges",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectLightScreen/a14:artisticLightScreen",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectLineDrawing/a14:artisticLineDrawing",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectMarker/a14:artisticMarker",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectMosiaicBubbles/a14:artisticMosiaicBubbles",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectPaintStrokes/a14:artisticPaintStrokes",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectPaintBrush/a14:artisticPaintBrush",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectPastelsSmooth/a14:artisticPastelsSmooth",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectPencilGrayscale/a14:artisticPencilGrayscale",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectPencilSketch/a14:artisticPencilSketch",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectPhotocopy/a14:artisticPhotocopy",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectPlasticWrap/a14:artisticPlasticWrap",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectTexturizer/a14:artisticTexturizer",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectWatercolorSponge/a14:artisticWatercolorSponge",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectBackgroundRemoval/a14:backgroundRemoval",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectBrightnessContrast/a14:brightnessContrast",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectColorTemperature/a14:colorTemperature",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectSaturation/a14:saturation",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_PictureEffectSharpenSoften/a14:sharpenSoften",
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a14:CT_PictureLayer/a14:imgLayer",
+      "ClassName": "ImageLayer",
+      "Summary": "Defines the ImageLayer Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "r:embed",
+          "PropertyName": "Embed",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "embed"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a14:CT_PictureEffect/a14:imgEffect"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a14:CT_PictureEffect/a14:imgEffect",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_NonVisualDrawingProps/a14:cNvPr",
+      "ClassName": "NonVisualDrawingProperties",
+      "Summary": "Defines the NonVisualDrawingProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "UInt32Value",
+          "PropertyComments": "Application defined unique identifier.",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "Name compatible with Object Model (non-unique).",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":descr",
+          "PropertyName": "Description",
+          "Type": "StringValue",
+          "PropertyComments": "Description of the drawing element."
+        },
+        {
+          "QName": ":hidden",
+          "PropertyName": "Hidden",
+          "Type": "BooleanValue",
+          "PropertyComments": "Flag determining to show or hide this element."
+        },
+        {
+          "QName": ":title",
+          "PropertyName": "Title",
+          "Type": "StringValue",
+          "PropertyComments": "Title"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Hyperlink/a:hlinkClick",
+          "PropertyName": "HyperlinkOnClick",
+          "PropertyComments": "Hyperlink associated with clicking or selecting the element."
+        },
+        {
+          "Name": "a:CT_Hyperlink/a:hlinkHover",
+          "PropertyName": "HyperlinkOnHover",
+          "PropertyComments": "Hyperlink associated with hovering over the element."
+        },
+        {
+          "Name": "a:CT_NonVisualDrawingPropsExtensionList/a:extLst",
+          "PropertyName": "NonVisualDrawingPropertiesExtensionList",
+          "PropertyComments": "Future extension"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Hyperlink/a:hlinkClick",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Hyperlink/a:hlinkHover",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_NonVisualDrawingPropsExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a14:CT_NonVisualInkContentPartProperties/a14:cNvContentPartPr",
+      "ClassName": "NonVisualInkContentPartProperties",
+      "Summary": "Defines the NonVisualInkContentPartProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":isComment",
+          "PropertyName": "IsComment",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "isComment"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a14:CT_ContentPartLocking/a14:cpLocks",
+          "PropertyName": "ContentPartLocks"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a14:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a14:CT_ContentPartLocking/a14:cpLocks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a14:CT_GvmlContentPartNonVisual/a14:nvContentPartPr",
+      "ClassName": "NonVisualContentPartProperties",
+      "Summary": "Defines the NonVisualContentPartProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_NonVisualDrawingProps/a14:cNvPr",
+          "PropertyName": "NonVisualDrawingProperties"
+        },
+        {
+          "Name": "a14:CT_NonVisualInkContentPartProperties/a14:cNvContentPartPr",
+          "PropertyName": "NonVisualInkContentPartProperties"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_NonVisualDrawingProps/a14:cNvPr",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_NonVisualInkContentPartProperties/a14:cNvContentPartPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_Transform2D/a14:xfrm",
+      "ClassName": "Transform2D",
+      "Summary": "Defines the Transform2D Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":rot",
+          "PropertyName": "Rotation",
+          "Type": "Int32Value",
+          "PropertyComments": "Rotation"
+        },
+        {
+          "QName": ":flipH",
+          "PropertyName": "HorizontalFlip",
+          "Type": "BooleanValue",
+          "PropertyComments": "Horizontal Flip"
+        },
+        {
+          "QName": ":flipV",
+          "PropertyName": "VerticalFlip",
+          "Type": "BooleanValue",
+          "PropertyComments": "Vertical Flip"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Point2D/a:off",
+          "PropertyName": "Offset",
+          "PropertyComments": "Offset"
+        },
+        {
+          "Name": "a:CT_PositiveSize2D/a:ext",
+          "PropertyName": "Extents",
+          "PropertyComments": "Extents"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Point2D/a:off",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_PositiveSize2D/a:ext",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

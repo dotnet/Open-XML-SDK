@@ -1,0 +1,54 @@
+{
+  "TargetNamespace": "http://schemas.openxmlformats.org/schemaLibrary/2006/main",
+  "Types": [
+    {
+      "Name": "sl:CT_SchemaLibrary/sl:schemaLibrary",
+      "ClassName": "SchemaLibrary",
+      "Summary": "Embedded Custom XML Schema Supplementary Data.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "sl:CT_Schema/sl:schema"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "sl:CT_Schema/sl:schema",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "sl:CT_Schema/sl:schema",
+      "ClassName": "Schema",
+      "Summary": "Custom XML Schema Reference.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "sl:uri",
+          "PropertyName": "Uri",
+          "Type": "StringValue",
+          "PropertyComments": "Custom XML Schema Namespace"
+        },
+        {
+          "QName": "sl:manifestLocation",
+          "PropertyName": "ManifestLocation",
+          "Type": "StringValue",
+          "PropertyComments": "Resource File Location"
+        },
+        {
+          "QName": "sl:schemaLocation",
+          "PropertyName": "SchemaLocation",
+          "Type": "StringValue",
+          "PropertyComments": "Custom XML Schema Location"
+        }
+      ]
+    }
+  ]
+}

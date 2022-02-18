@@ -1,0 +1,474 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2007/8/2/chart",
+  "Types": [
+    {
+      "Name": "c14:CT_PivotOptions/c14:pivotOptions",
+      "ClassName": "PivotOptions",
+      "Summary": "Defines the PivotOptions Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "c14:CT_BooleanFalse/c14:dropZoneFilter",
+          "PropertyName": "DropZoneFilter"
+        },
+        {
+          "Name": "c14:CT_BooleanFalse/c14:dropZoneCategories",
+          "PropertyName": "DropZoneCategories"
+        },
+        {
+          "Name": "c14:CT_BooleanFalse/c14:dropZoneData",
+          "PropertyName": "DropZoneData"
+        },
+        {
+          "Name": "c14:CT_BooleanFalse/c14:dropZoneSeries",
+          "PropertyName": "DropZoneSeries"
+        },
+        {
+          "Name": "c14:CT_BooleanFalse/c14:dropZonesVisible",
+          "PropertyName": "DropZonesVisible"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c14:CT_BooleanFalse/c14:dropZoneFilter",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "c14:CT_BooleanFalse/c14:dropZoneCategories",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "c14:CT_BooleanFalse/c14:dropZoneData",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "c14:CT_BooleanFalse/c14:dropZoneSeries",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "c14:CT_BooleanFalse/c14:dropZonesVisible",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c14:CT_SketchOptions/c14:sketchOptions",
+      "ClassName": "SketchOptions",
+      "Summary": "Defines the SketchOptions Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "c14:CT_BooleanFalse/c14:inSketchMode",
+          "PropertyName": "InSketchMode"
+        },
+        {
+          "Name": "c14:CT_BooleanTrue/c14:showSketchBtn",
+          "PropertyName": "ShowSketchButton"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c14:CT_BooleanFalse/c14:inSketchMode",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "c14:CT_BooleanTrue/c14:showSketchBtn",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c14:CT_InvertSolidFillFmt/c14:invertSolidFillFmt",
+      "ClassName": "InvertSolidFillFormat",
+      "Summary": "Defines the InvertSolidFillFormat Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_ShapeProperties/c14:spPr",
+          "PropertyName": "ShapeProperties"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_ShapeProperties/c14:spPr",
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c14:CT_Style/c14:style",
+      "ClassName": "Style",
+      "Summary": "Defines the Style Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "ByteValue",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "101"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "148"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_ShapeProperties/c14:spPr",
+      "ClassName": "ShapeProperties",
+      "Summary": "Defines the ShapeProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":bwMode",
+          "PropertyName": "BlackWhiteMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "PropertyComments": "Black and White Mode",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Transform2D/a:xfrm",
+          "PropertyName": "Transform2D",
+          "PropertyComments": "2D Transform for Individual Objects"
+        },
+        {
+          "Name": "a:CT_CustomGeometry2D/a:custGeom"
+        },
+        {
+          "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+        },
+        {
+          "Name": "a:CT_NoFillProperties/a:noFill"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+        },
+        {
+          "Name": "a:CT_GradientFillProperties/a:gradFill"
+        },
+        {
+          "Name": "a:CT_BlipFillProperties/a:blipFill"
+        },
+        {
+          "Name": "a:CT_PatternFillProperties/a:pattFill"
+        },
+        {
+          "Name": "a:CT_GroupFillProperties/a:grpFill"
+        },
+        {
+          "Name": "a:CT_LineProperties/a:ln"
+        },
+        {
+          "Name": "a:CT_EffectList/a:effectLst"
+        },
+        {
+          "Name": "a:CT_EffectContainer/a:effectDag"
+        },
+        {
+          "Name": "a:CT_Scene3D/a:scene3d"
+        },
+        {
+          "Name": "a:CT_Shape3D/a:sp3d"
+        },
+        {
+          "Name": "a:CT_ShapePropertiesExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Transform2D/a:xfrm",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_CustomGeometry2D/a:custGeom"
+                  },
+                  {
+                    "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_NoFillProperties/a:noFill"
+                  },
+                  {
+                    "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+                  },
+                  {
+                    "Name": "a:CT_GradientFillProperties/a:gradFill"
+                  },
+                  {
+                    "Name": "a:CT_BlipFillProperties/a:blipFill"
+                  },
+                  {
+                    "Name": "a:CT_PatternFillProperties/a:pattFill"
+                  },
+                  {
+                    "Name": "a:CT_GroupFillProperties/a:grpFill"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_LineProperties/a:ln",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_EffectList/a:effectLst"
+                  },
+                  {
+                    "Name": "a:CT_EffectContainer/a:effectDag"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Scene3D/a:scene3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Shape3D/a:sp3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_ShapePropertiesExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c14:CT_BooleanFalse/c14:dropZoneFilter",
+      "ClassName": "DropZoneFilter",
+      "Summary": "Defines the DropZoneFilter Class.",
+      "BaseClass": "BooleanFalseType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "c14:CT_BooleanFalse/c14:dropZoneCategories",
+      "ClassName": "DropZoneCategories",
+      "Summary": "Defines the DropZoneCategories Class.",
+      "BaseClass": "BooleanFalseType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "c14:CT_BooleanFalse/c14:dropZoneData",
+      "ClassName": "DropZoneData",
+      "Summary": "Defines the DropZoneData Class.",
+      "BaseClass": "BooleanFalseType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "c14:CT_BooleanFalse/c14:dropZoneSeries",
+      "ClassName": "DropZoneSeries",
+      "Summary": "Defines the DropZoneSeries Class.",
+      "BaseClass": "BooleanFalseType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "c14:CT_BooleanFalse/c14:dropZonesVisible",
+      "ClassName": "DropZonesVisible",
+      "Summary": "Defines the DropZonesVisible Class.",
+      "BaseClass": "BooleanFalseType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "c14:CT_BooleanFalse/c14:inSketchMode",
+      "ClassName": "InSketchMode",
+      "Summary": "Defines the InSketchMode Class.",
+      "BaseClass": "BooleanFalseType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "c14:CT_BooleanFalse/",
+      "ClassName": "BooleanFalseType",
+      "Summary": "Defines the BooleanFalseType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "val"
+        }
+      ]
+    },
+    {
+      "Name": "c14:CT_BooleanTrue/c14:showSketchBtn",
+      "ClassName": "ShowSketchButton",
+      "Summary": "Defines the ShowSketchButton Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "val"
+        }
+      ]
+    }
+  ]
+}

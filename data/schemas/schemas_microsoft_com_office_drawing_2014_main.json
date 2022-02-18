@@ -1,0 +1,171 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2014/main",
+  "Types": [
+    {
+      "Name": "a16:CT_CreationId/a16:creationId",
+      "ClassName": "CreationId",
+      "Summary": "Defines the CreationId Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a16:CT_PredecessorDrawingElementReference/a16:predDERef",
+      "ClassName": "PredecessorDrawingElementReference",
+      "Summary": "Defines the PredecessorDrawingElementReference Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":pred",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "pred",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a16:CT_ConnectableReferences/a16:cxnDERefs",
+      "ClassName": "ConnectableReferences",
+      "Summary": "Defines the ConnectableReferences Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":st",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "st",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":end",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "end",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a16:CT_Identifier/a16:rowId",
+      "ClassName": "RowIdIdentifier",
+      "Summary": "Defines the RowIdIdentifier Class.",
+      "BaseClass": "OpenXmlIdentifierElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "a16:CT_Identifier/a16:colId",
+      "ClassName": "ColIdIdentifier",
+      "Summary": "Defines the ColIdIdentifier Class.",
+      "BaseClass": "OpenXmlIdentifierElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "a16:CT_Identifier/",
+      "ClassName": "OpenXmlIdentifierElement",
+      "Summary": "Defines the OpenXmlIdentifierElement Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

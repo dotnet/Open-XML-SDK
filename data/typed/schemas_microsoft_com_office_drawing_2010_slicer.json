@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "a:CT_OfficeArtExtensionList/sle:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "sle:CT_Slicer/sle:slicer",
+    "ClassName": "Slicer"
+  }
+]

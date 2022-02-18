@@ -1,0 +1,2201 @@
+{
+  "TargetNamespace": "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing",
+  "Types": [
+    {
+      "Name": "xdr:CT_TwoCellAnchor/xdr:twoCellAnchor",
+      "ClassName": "TwoCellAnchor",
+      "Summary": "Two Cell Anchor Shape Size.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":editAs",
+          "PropertyName": "EditAs",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Spreadsheet.EditAsValues\u003E",
+          "PropertyComments": "Positioning and Resizing Behaviors",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xdr:CT_Marker/xdr:from",
+          "PropertyName": "FromMarker",
+          "PropertyComments": "Starting Anchor Point"
+        },
+        {
+          "Name": "xdr:CT_Marker/xdr:to",
+          "PropertyName": "ToMarker",
+          "PropertyComments": "Ending Anchor Point"
+        },
+        {
+          "Name": "xdr:CT_Shape/xdr:sp"
+        },
+        {
+          "Name": "xdr:CT_GroupShape/xdr:grpSp"
+        },
+        {
+          "Name": "xdr:CT_GraphicalObjectFrame/xdr:graphicFrame"
+        },
+        {
+          "Name": "xdr:CT_Connector/xdr:cxnSp"
+        },
+        {
+          "Name": "xdr:CT_Picture/xdr:pic"
+        },
+        {
+          "Name": "xdr14:CT_ContentPart/xdr:contentPart"
+        },
+        {
+          "Name": "xdr:CT_AnchorClientData/xdr:clientData"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xdr:CT_Marker/xdr:from"
+          },
+          {
+            "Name": "xdr:CT_Marker/xdr:to"
+          },
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Kind": "Choice",
+                    "Items": [
+                      {
+                        "Name": "xdr:CT_Shape/xdr:sp"
+                      },
+                      {
+                        "Name": "xdr:CT_GroupShape/xdr:grpSp"
+                      },
+                      {
+                        "Name": "xdr:CT_GraphicalObjectFrame/xdr:graphicFrame"
+                      },
+                      {
+                        "Name": "xdr:CT_Connector/xdr:cxnSp"
+                      },
+                      {
+                        "Name": "xdr:CT_Picture/xdr:pic"
+                      },
+                      {
+                        "Name": "xdr14:CT_ContentPart/xdr:contentPart",
+                        "InitialVersion": "Office2010"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "xdr:CT_AnchorClientData/xdr:clientData"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_OneCellAnchor/xdr:oneCellAnchor",
+      "ClassName": "OneCellAnchor",
+      "Summary": "One Cell Anchor Shape Size.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "xdr:CT_Marker/xdr:from",
+          "PropertyName": "FromMarker"
+        },
+        {
+          "Name": "a:CT_PositiveSize2D/xdr:ext",
+          "PropertyName": "Extent"
+        },
+        {
+          "Name": "xdr:CT_Shape/xdr:sp"
+        },
+        {
+          "Name": "xdr:CT_GroupShape/xdr:grpSp"
+        },
+        {
+          "Name": "xdr:CT_GraphicalObjectFrame/xdr:graphicFrame"
+        },
+        {
+          "Name": "xdr:CT_Connector/xdr:cxnSp"
+        },
+        {
+          "Name": "xdr:CT_Picture/xdr:pic"
+        },
+        {
+          "Name": "xdr14:CT_ContentPart/xdr:contentPart"
+        },
+        {
+          "Name": "xdr:CT_AnchorClientData/xdr:clientData"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xdr:CT_Marker/xdr:from"
+          },
+          {
+            "Name": "a:CT_PositiveSize2D/xdr:ext"
+          },
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Kind": "Choice",
+                    "Items": [
+                      {
+                        "Name": "xdr:CT_Shape/xdr:sp"
+                      },
+                      {
+                        "Name": "xdr:CT_GroupShape/xdr:grpSp"
+                      },
+                      {
+                        "Name": "xdr:CT_GraphicalObjectFrame/xdr:graphicFrame"
+                      },
+                      {
+                        "Name": "xdr:CT_Connector/xdr:cxnSp"
+                      },
+                      {
+                        "Name": "xdr:CT_Picture/xdr:pic"
+                      },
+                      {
+                        "Name": "xdr14:CT_ContentPart/xdr:contentPart",
+                        "InitialVersion": "Office2010"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "xdr:CT_AnchorClientData/xdr:clientData"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_AbsoluteAnchor/xdr:absoluteAnchor",
+      "ClassName": "AbsoluteAnchor",
+      "Summary": "Absolute Anchor Shape Size.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_Point2D/xdr:pos",
+          "PropertyName": "Position",
+          "PropertyComments": "Position"
+        },
+        {
+          "Name": "a:CT_PositiveSize2D/xdr:ext",
+          "PropertyName": "Extent",
+          "PropertyComments": "Shape Extent"
+        },
+        {
+          "Name": "xdr:CT_Shape/xdr:sp"
+        },
+        {
+          "Name": "xdr:CT_GroupShape/xdr:grpSp"
+        },
+        {
+          "Name": "xdr:CT_GraphicalObjectFrame/xdr:graphicFrame"
+        },
+        {
+          "Name": "xdr:CT_Connector/xdr:cxnSp"
+        },
+        {
+          "Name": "xdr:CT_Picture/xdr:pic"
+        },
+        {
+          "Name": "xdr14:CT_ContentPart/xdr:contentPart"
+        },
+        {
+          "Name": "xdr:CT_AnchorClientData/xdr:clientData"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Point2D/xdr:pos"
+          },
+          {
+            "Name": "a:CT_PositiveSize2D/xdr:ext"
+          },
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Kind": "Choice",
+                    "Items": [
+                      {
+                        "Name": "xdr:CT_Shape/xdr:sp"
+                      },
+                      {
+                        "Name": "xdr:CT_GroupShape/xdr:grpSp"
+                      },
+                      {
+                        "Name": "xdr:CT_GraphicalObjectFrame/xdr:graphicFrame"
+                      },
+                      {
+                        "Name": "xdr:CT_Connector/xdr:cxnSp"
+                      },
+                      {
+                        "Name": "xdr:CT_Picture/xdr:pic"
+                      },
+                      {
+                        "Name": "xdr14:CT_ContentPart/xdr:contentPart",
+                        "InitialVersion": "Office2010"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "xdr:CT_AnchorClientData/xdr:clientData"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_Shape/xdr:sp",
+      "ClassName": "Shape",
+      "Summary": "Shape.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":macro",
+          "PropertyName": "Macro",
+          "Type": "StringValue",
+          "PropertyComments": "Reference to Custom Function"
+        },
+        {
+          "QName": ":textlink",
+          "PropertyName": "TextLink",
+          "Type": "StringValue",
+          "PropertyComments": "Text Link"
+        },
+        {
+          "QName": ":fLocksText",
+          "PropertyName": "LockText",
+          "Type": "BooleanValue",
+          "PropertyComments": "Lock Text Flag"
+        },
+        {
+          "QName": ":fPublished",
+          "PropertyName": "Published",
+          "Type": "BooleanValue",
+          "PropertyComments": "Publish to Server Flag"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xdr:CT_ShapeNonVisual/xdr:nvSpPr",
+          "PropertyName": "NonVisualShapeProperties",
+          "PropertyComments": "Non-Visual Properties for a Shape"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/xdr:spPr",
+          "PropertyName": "ShapeProperties",
+          "PropertyComments": "Shape Properties"
+        },
+        {
+          "Name": "a:CT_ShapeStyle/xdr:style",
+          "PropertyName": "ShapeStyle"
+        },
+        {
+          "Name": "a:CT_TextBody/xdr:txBody",
+          "PropertyName": "TextBody",
+          "PropertyComments": "Shape Text Body"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xdr:CT_ShapeNonVisual/xdr:nvSpPr"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/xdr:spPr"
+          },
+          {
+            "Name": "a:CT_ShapeStyle/xdr:style",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextBody/xdr:txBody",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_GroupShape/xdr:grpSp",
+      "ClassName": "GroupShape",
+      "Summary": "Group Shape.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "xdr:CT_GroupShapeNonVisual/xdr:nvGrpSpPr",
+          "PropertyName": "NonVisualGroupShapeProperties",
+          "PropertyComments": "Non-Visual Properties for a Group Shape"
+        },
+        {
+          "Name": "a:CT_GroupShapeProperties/xdr:grpSpPr",
+          "PropertyName": "GroupShapeProperties",
+          "PropertyComments": "Group Shape Properties"
+        },
+        {
+          "Name": "xdr:CT_Shape/xdr:sp"
+        },
+        {
+          "Name": "xdr:CT_GroupShape/xdr:grpSp"
+        },
+        {
+          "Name": "xdr:CT_GraphicalObjectFrame/xdr:graphicFrame"
+        },
+        {
+          "Name": "xdr:CT_Connector/xdr:cxnSp"
+        },
+        {
+          "Name": "xdr:CT_Picture/xdr:pic"
+        },
+        {
+          "Name": "xdr14:CT_ContentPart/xdr14:contentPart"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xdr:CT_GroupShapeNonVisual/xdr:nvGrpSpPr"
+          },
+          {
+            "Name": "a:CT_GroupShapeProperties/xdr:grpSpPr"
+          },
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Name": "xdr:CT_Shape/xdr:sp"
+              },
+              {
+                "Name": "xdr:CT_GroupShape/xdr:grpSp"
+              },
+              {
+                "Name": "xdr:CT_GraphicalObjectFrame/xdr:graphicFrame"
+              },
+              {
+                "Name": "xdr:CT_Connector/xdr:cxnSp"
+              },
+              {
+                "Name": "xdr:CT_Picture/xdr:pic"
+              },
+              {
+                "Name": "xdr14:CT_ContentPart/xdr14:contentPart",
+                "InitialVersion": "Office2010"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_GraphicalObjectFrame/xdr:graphicFrame",
+      "ClassName": "GraphicFrame",
+      "Summary": "Graphic Frame.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":macro",
+          "PropertyName": "Macro",
+          "Type": "StringValue",
+          "PropertyComments": "Reference To Custom Function"
+        },
+        {
+          "QName": ":fPublished",
+          "PropertyName": "Published",
+          "Type": "BooleanValue",
+          "PropertyComments": "Publish to Server Flag"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xdr:CT_GraphicalObjectFrameNonVisual/xdr:nvGraphicFramePr",
+          "PropertyName": "NonVisualGraphicFrameProperties",
+          "PropertyComments": "Non-Visual Properties for a Graphic Frame"
+        },
+        {
+          "Name": "a:CT_Transform2D/xdr:xfrm",
+          "PropertyName": "Transform",
+          "PropertyComments": "2D Transform for Graphic Frames"
+        },
+        {
+          "Name": "a:CT_GraphicalObject/a:graphic",
+          "PropertyName": "Graphic"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xdr:CT_GraphicalObjectFrameNonVisual/xdr:nvGraphicFramePr"
+          },
+          {
+            "Name": "a:CT_Transform2D/xdr:xfrm"
+          },
+          {
+            "Name": "a:CT_GraphicalObject/a:graphic"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_Connector/xdr:cxnSp",
+      "ClassName": "ConnectionShape",
+      "Summary": "Connection Shape.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":macro",
+          "PropertyName": "Macro",
+          "Type": "StringValue",
+          "PropertyComments": "Reference to Custom Function"
+        },
+        {
+          "QName": ":fPublished",
+          "PropertyName": "Published",
+          "Type": "BooleanValue",
+          "PropertyComments": "Publish to Server Flag"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xdr:CT_ConnectorNonVisual/xdr:nvCxnSpPr",
+          "PropertyName": "NonVisualConnectionShapeProperties",
+          "PropertyComments": "Non-Visual Properties for a Connection Shape"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/xdr:spPr",
+          "PropertyName": "ShapeProperties",
+          "PropertyComments": "Connector Shape Properties"
+        },
+        {
+          "Name": "a:CT_ShapeStyle/xdr:style",
+          "PropertyName": "ShapeStyle"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xdr:CT_ConnectorNonVisual/xdr:nvCxnSpPr"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/xdr:spPr"
+          },
+          {
+            "Name": "a:CT_ShapeStyle/xdr:style",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_Picture/xdr:pic",
+      "ClassName": "Picture",
+      "Summary": "Defines the Picture Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":macro",
+          "PropertyName": "Macro",
+          "Type": "StringValue",
+          "PropertyComments": "Reference To Custom Function"
+        },
+        {
+          "QName": ":fPublished",
+          "PropertyName": "Published",
+          "Type": "BooleanValue",
+          "PropertyComments": "Publish to Server Flag"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xdr:CT_PictureNonVisual/xdr:nvPicPr",
+          "PropertyName": "NonVisualPictureProperties",
+          "PropertyComments": "Non-Visual Properties for a Picture"
+        },
+        {
+          "Name": "a:CT_BlipFillProperties2/xdr:blipFill",
+          "PropertyName": "BlipFill",
+          "PropertyComments": "Picture Fill"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/xdr:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_ShapeStyle/xdr:style",
+          "PropertyName": "ShapeStyle",
+          "PropertyComments": "Shape Style"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xdr:CT_PictureNonVisual/xdr:nvPicPr"
+          },
+          {
+            "Name": "a:CT_BlipFillProperties2/xdr:blipFill"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/xdr:spPr"
+          },
+          {
+            "Name": "a:CT_ShapeStyle/xdr:style",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr14:CT_ContentPart/xdr:contentPart",
+      "ClassName": "ContentPart",
+      "Summary": "Defines the ContentPart Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "PropertyName": "RelationshipId",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":bwMode",
+          "PropertyName": "BlackWhiteMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "bwMode",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xdr14:CT_ContentPartNonVisual/xdr14:nvContentPartPr",
+          "PropertyName": "ExcelNonVisualContentPartShapeProperties"
+        },
+        {
+          "Name": "xdr14:CT_ApplicationNonVisualDrawingProps/xdr14:nvPr",
+          "PropertyName": "ApplicationNonVisualDrawingProperties"
+        },
+        {
+          "Name": "a:CT_Transform2D/xdr14:xfrm",
+          "PropertyName": "Transform2D"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/xdr14:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xdr14:CT_ContentPartNonVisual/xdr14:nvContentPartPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "xdr14:CT_ApplicationNonVisualDrawingProps/xdr14:nvPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a:CT_Transform2D/xdr14:xfrm",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/xdr14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_Drawing/xdr:wsDr",
+      "ClassName": "WorksheetDrawing",
+      "Summary": "Worksheet Drawing.",
+      "Part": "DrawingsPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "xdr:CT_TwoCellAnchor/xdr:twoCellAnchor"
+        },
+        {
+          "Name": "xdr:CT_OneCellAnchor/xdr:oneCellAnchor"
+        },
+        {
+          "Name": "xdr:CT_AbsoluteAnchor/xdr:absoluteAnchor"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "xdr:CT_TwoCellAnchor/xdr:twoCellAnchor"
+                  },
+                  {
+                    "Name": "xdr:CT_OneCellAnchor/xdr:oneCellAnchor"
+                  },
+                  {
+                    "Name": "xdr:CT_AbsoluteAnchor/xdr:absoluteAnchor"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_ShapeNonVisual/xdr:nvSpPr",
+      "ClassName": "NonVisualShapeProperties",
+      "Summary": "Non-Visual Properties for a Shape.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_SpreadSheetNonVisualDrawingProps/xdr:cNvPr",
+          "PropertyName": "NonVisualDrawingProperties",
+          "PropertyComments": "Non-Visual Drawing Properties"
+        },
+        {
+          "Name": "a:CT_NonVisualDrawingShapeProps/xdr:cNvSpPr",
+          "PropertyName": "NonVisualShapeDrawingProperties",
+          "PropertyComments": "Connection Non-Visual Shape Properties"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_SpreadSheetNonVisualDrawingProps/xdr:cNvPr"
+          },
+          {
+            "Name": "a:CT_NonVisualDrawingShapeProps/xdr:cNvSpPr"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_ShapeProperties/xdr:spPr",
+      "ClassName": "ShapeProperties",
+      "Summary": "Shape Properties.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":bwMode",
+          "PropertyName": "BlackWhiteMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "PropertyComments": "Black and White Mode",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Transform2D/a:xfrm",
+          "PropertyName": "Transform2D",
+          "PropertyComments": "2D Transform for Individual Objects"
+        },
+        {
+          "Name": "a:CT_CustomGeometry2D/a:custGeom"
+        },
+        {
+          "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+        },
+        {
+          "Name": "a:CT_NoFillProperties/a:noFill"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+        },
+        {
+          "Name": "a:CT_GradientFillProperties/a:gradFill"
+        },
+        {
+          "Name": "a:CT_BlipFillProperties/a:blipFill"
+        },
+        {
+          "Name": "a:CT_PatternFillProperties/a:pattFill"
+        },
+        {
+          "Name": "a:CT_GroupFillProperties/a:grpFill"
+        },
+        {
+          "Name": "a:CT_LineProperties/a:ln"
+        },
+        {
+          "Name": "a:CT_EffectList/a:effectLst"
+        },
+        {
+          "Name": "a:CT_EffectContainer/a:effectDag"
+        },
+        {
+          "Name": "a:CT_Scene3D/a:scene3d"
+        },
+        {
+          "Name": "a:CT_Shape3D/a:sp3d"
+        },
+        {
+          "Name": "a:CT_ShapePropertiesExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Transform2D/a:xfrm",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_CustomGeometry2D/a:custGeom"
+                  },
+                  {
+                    "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_NoFillProperties/a:noFill"
+                  },
+                  {
+                    "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+                  },
+                  {
+                    "Name": "a:CT_GradientFillProperties/a:gradFill"
+                  },
+                  {
+                    "Name": "a:CT_BlipFillProperties/a:blipFill"
+                  },
+                  {
+                    "Name": "a:CT_PatternFillProperties/a:pattFill"
+                  },
+                  {
+                    "Name": "a:CT_GroupFillProperties/a:grpFill"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_LineProperties/a:ln",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_EffectList/a:effectLst"
+                  },
+                  {
+                    "Name": "a:CT_EffectContainer/a:effectDag"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Scene3D/a:scene3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Shape3D/a:sp3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_ShapePropertiesExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_ShapeStyle/xdr:style",
+      "ClassName": "ShapeStyle",
+      "Summary": "Defines the ShapeStyle Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_StyleMatrixReference/a:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "a:CT_StyleMatrixReference/a:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "a:CT_StyleMatrixReference/a:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "a:CT_FontReference/a:fontRef",
+          "PropertyName": "FontReference",
+          "PropertyComments": "Font Reference"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_StyleMatrixReference/a:lnRef"
+          },
+          {
+            "Name": "a:CT_StyleMatrixReference/a:fillRef"
+          },
+          {
+            "Name": "a:CT_StyleMatrixReference/a:effectRef"
+          },
+          {
+            "Name": "a:CT_FontReference/a:fontRef"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_TextBody/xdr:txBody",
+      "ClassName": "TextBody",
+      "Summary": "Shape Text Body.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_TextBodyProperties/a:bodyPr",
+          "PropertyName": "BodyProperties",
+          "PropertyComments": "Body Properties"
+        },
+        {
+          "Name": "a:CT_TextListStyle/a:lstStyle",
+          "PropertyName": "ListStyle",
+          "PropertyComments": "Text List Styles"
+        },
+        {
+          "Name": "a:CT_TextParagraph/a:p"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_TextBodyProperties/a:bodyPr"
+          },
+          {
+            "Name": "a:CT_TextListStyle/a:lstStyle",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextParagraph/a:p",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_ConnectorNonVisual/xdr:nvCxnSpPr",
+      "ClassName": "NonVisualConnectionShapeProperties",
+      "Summary": "Non-Visual Properties for a Connection Shape.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_SpreadSheetNonVisualDrawingProps/xdr:cNvPr",
+          "PropertyName": "NonVisualDrawingProperties",
+          "PropertyComments": "Connection Non-Visual Properties"
+        },
+        {
+          "Name": "a:CT_NonVisualConnectorProperties/xdr:cNvCxnSpPr",
+          "PropertyName": "NonVisualConnectorShapeDrawingProperties",
+          "PropertyComments": "Non-Visual Connector Shape Drawing Properties"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_SpreadSheetNonVisualDrawingProps/xdr:cNvPr"
+          },
+          {
+            "Name": "a:CT_NonVisualConnectorProperties/xdr:cNvCxnSpPr"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_PictureNonVisual/xdr:nvPicPr",
+      "ClassName": "NonVisualPictureProperties",
+      "Summary": "Non-Visual Properties for a Picture.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_SpreadSheetNonVisualDrawingProps/xdr:cNvPr",
+          "PropertyName": "NonVisualDrawingProperties"
+        },
+        {
+          "Name": "a:CT_NonVisualPictureProperties/xdr:cNvPicPr",
+          "PropertyName": "NonVisualPictureDrawingProperties",
+          "PropertyComments": "Non-Visual Picture Drawing Properties"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_SpreadSheetNonVisualDrawingProps/xdr:cNvPr"
+          },
+          {
+            "Name": "a:CT_NonVisualPictureProperties/xdr:cNvPicPr"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_BlipFillProperties2/xdr:blipFill",
+      "ClassName": "BlipFill",
+      "Summary": "Picture Fill.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":rotWithShape",
+          "PropertyName": "RotateWithShape",
+          "Type": "BooleanValue",
+          "PropertyComments": "Rotate With Shape"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Blip/a:blip",
+          "PropertyName": "Blip"
+        },
+        {
+          "Name": "a:CT_RelativeRect/a:srcRect",
+          "PropertyName": "SourceRectangle",
+          "PropertyComments": "Source Rectangle"
+        },
+        {
+          "Name": "a:CT_TileInfoProperties/a:tile"
+        },
+        {
+          "Name": "a:CT_StretchInfoProperties/a:stretch"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Blip/a:blip",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_RelativeRect/a:srcRect",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_TileInfoProperties/a:tile"
+                  },
+                  {
+                    "Name": "a:CT_StretchInfoProperties/a:stretch"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_GraphicalObjectFrameNonVisual/xdr:nvGraphicFramePr",
+      "ClassName": "NonVisualGraphicFrameProperties",
+      "Summary": "Non-Visual Properties for a Graphic Frame.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_SpreadSheetNonVisualDrawingProps/xdr:cNvPr",
+          "PropertyName": "NonVisualDrawingProperties",
+          "PropertyComments": "Connection Non-Visual Properties"
+        },
+        {
+          "Name": "a:CT_NonVisualGraphicFrameProperties/xdr:cNvGraphicFramePr",
+          "PropertyName": "NonVisualGraphicFrameDrawingProperties",
+          "PropertyComments": "Non-Visual Graphic Frame Drawing Properties"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_SpreadSheetNonVisualDrawingProps/xdr:cNvPr"
+          },
+          {
+            "Name": "a:CT_NonVisualGraphicFrameProperties/xdr:cNvGraphicFramePr"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_Transform2D/xdr:xfrm",
+      "ClassName": "Transform",
+      "Summary": "2D Transform for Graphic Frames.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":rot",
+          "PropertyName": "Rotation",
+          "Type": "Int32Value",
+          "PropertyComments": "Rotation"
+        },
+        {
+          "QName": ":flipH",
+          "PropertyName": "HorizontalFlip",
+          "Type": "BooleanValue",
+          "PropertyComments": "Horizontal Flip"
+        },
+        {
+          "QName": ":flipV",
+          "PropertyName": "VerticalFlip",
+          "Type": "BooleanValue",
+          "PropertyComments": "Vertical Flip"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Point2D/a:off",
+          "PropertyName": "Offset",
+          "PropertyComments": "Offset"
+        },
+        {
+          "Name": "a:CT_PositiveSize2D/a:ext",
+          "PropertyName": "Extents",
+          "PropertyComments": "Extents"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Point2D/a:off",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_PositiveSize2D/a:ext",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:ST_ColID/xdr:col",
+      "ClassName": "ColumnId",
+      "Summary": "Column).",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinInclusive",
+              "Value": "0"
+            }
+          ],
+          "Name": "NumberValidator",
+          "Type": "xdr:ST_ColID",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "a:ST_Coordinate/xdr:colOff",
+      "ClassName": "ColumnOffset",
+      "Summary": "Column Offset.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinInclusive",
+              "Value": "-27273042329600"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxInclusive",
+              "Value": "27273042316900"
+            }
+          ],
+          "Name": "NumberValidator",
+          "Type": "a:ST_Coordinate",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "a:ST_Coordinate/xdr:rowOff",
+      "ClassName": "RowOffset",
+      "Summary": "Row Offset.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinInclusive",
+              "Value": "-27273042329600"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxInclusive",
+              "Value": "27273042316900"
+            }
+          ],
+          "Name": "NumberValidator",
+          "Type": "a:ST_Coordinate",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xdr:ST_RowID/xdr:row",
+      "ClassName": "RowId",
+      "Summary": "Row.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinInclusive",
+              "Value": "0"
+            }
+          ],
+          "Name": "NumberValidator",
+          "Type": "xdr:ST_RowID",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xdr:CT_Marker/xdr:from",
+      "ClassName": "FromMarker",
+      "Summary": "Starting Anchor Point.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "MarkerType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "xdr:ST_ColID/xdr:col",
+          "PropertyName": "ColumnId",
+          "PropertyComments": "Column)"
+        },
+        {
+          "Name": "a:ST_Coordinate/xdr:colOff",
+          "PropertyName": "ColumnOffset",
+          "PropertyComments": "Column Offset"
+        },
+        {
+          "Name": "xdr:ST_RowID/xdr:row",
+          "PropertyName": "RowId",
+          "PropertyComments": "Row"
+        },
+        {
+          "Name": "a:ST_Coordinate/xdr:rowOff",
+          "PropertyName": "RowOffset",
+          "PropertyComments": "Row Offset"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xdr:ST_ColID/xdr:col"
+          },
+          {
+            "Name": "a:ST_Coordinate/xdr:colOff"
+          },
+          {
+            "Name": "xdr:ST_RowID/xdr:row"
+          },
+          {
+            "Name": "a:ST_Coordinate/xdr:rowOff"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_Marker/xdr:to",
+      "ClassName": "ToMarker",
+      "Summary": "Ending Anchor Point.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "MarkerType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "xdr:ST_ColID/xdr:col",
+          "PropertyName": "ColumnId",
+          "PropertyComments": "Column)"
+        },
+        {
+          "Name": "a:ST_Coordinate/xdr:colOff",
+          "PropertyName": "ColumnOffset",
+          "PropertyComments": "Column Offset"
+        },
+        {
+          "Name": "xdr:ST_RowID/xdr:row",
+          "PropertyName": "RowId",
+          "PropertyComments": "Row"
+        },
+        {
+          "Name": "a:ST_Coordinate/xdr:rowOff",
+          "PropertyName": "RowOffset",
+          "PropertyComments": "Row Offset"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xdr:ST_ColID/xdr:col"
+          },
+          {
+            "Name": "a:ST_Coordinate/xdr:colOff"
+          },
+          {
+            "Name": "xdr:ST_RowID/xdr:row"
+          },
+          {
+            "Name": "a:ST_Coordinate/xdr:rowOff"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_Marker/",
+      "ClassName": "MarkerType",
+      "Summary": "Defines the MarkerType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "AdditionalElements": [
+        "a:ST_Coordinate/xdr:colOff",
+        "a:ST_Coordinate/xdr:rowOff",
+        "xdr:ST_ColID/xdr:col",
+        "xdr:ST_RowID/xdr:row"
+      ],
+      "Children": [
+        {
+          "Name": "xdr:ST_ColID/xdr:col",
+          "PropertyName": "ColumnId",
+          "PropertyComments": "Column)"
+        },
+        {
+          "Name": "a:ST_Coordinate/xdr:colOff",
+          "PropertyName": "ColumnOffset",
+          "PropertyComments": "Column Offset"
+        },
+        {
+          "Name": "xdr:ST_RowID/xdr:row",
+          "PropertyName": "RowId",
+          "PropertyComments": "Row"
+        },
+        {
+          "Name": "a:ST_Coordinate/xdr:rowOff",
+          "PropertyName": "RowOffset",
+          "PropertyComments": "Row Offset"
+        }
+      ]
+    },
+    {
+      "Name": "xdr:CT_AnchorClientData/xdr:clientData",
+      "ClassName": "ClientData",
+      "Summary": "Client Data.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":fLocksWithSheet",
+          "PropertyName": "LockWithSheet",
+          "Type": "BooleanValue",
+          "PropertyComments": "Locks With Sheet Flag"
+        },
+        {
+          "QName": ":fPrintsWithSheet",
+          "PropertyName": "PrintWithSheet",
+          "Type": "BooleanValue",
+          "PropertyComments": "Prints With Sheet Flag"
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_PositiveSize2D/xdr:ext",
+      "ClassName": "Extent",
+      "Summary": "Defines the Extent Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":cx",
+          "PropertyName": "Cx",
+          "Type": "Int64Value",
+          "PropertyComments": "Extent Length",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":cy",
+          "PropertyName": "Cy",
+          "Type": "Int64Value",
+          "PropertyComments": "Extent Width",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_Point2D/xdr:pos",
+      "ClassName": "Position",
+      "Summary": "Position.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":x",
+          "PropertyName": "X",
+          "Type": "Int64Value",
+          "PropertyComments": "X-Axis Coordinate",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":y",
+          "PropertyName": "Y",
+          "Type": "Int64Value",
+          "PropertyComments": "Y-Axis Coordinate",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_SpreadSheetNonVisualDrawingProps/xdr:cNvPr",
+      "ClassName": "NonVisualDrawingProperties",
+      "Summary": "Non-Visual Drawing Properties.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "UInt32Value",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":descr",
+          "PropertyName": "Description",
+          "Type": "StringValue",
+          "PropertyComments": "descr"
+        },
+        {
+          "QName": ":hidden",
+          "PropertyName": "Hidden",
+          "Type": "BooleanValue",
+          "PropertyComments": "hidden"
+        },
+        {
+          "QName": ":title",
+          "Type": "StringValue",
+          "PropertyComments": "title"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Hyperlink/a:hlinkClick",
+          "PropertyName": "HyperlinkOnClick"
+        },
+        {
+          "Name": "a:CT_Hyperlink/a:hlinkHover",
+          "PropertyName": "HyperlinkOnHover"
+        },
+        {
+          "Name": "a:CT_NonVisualDrawingPropsExtensionList/a:extLst",
+          "PropertyName": "NonVisualDrawingPropertiesExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Hyperlink/a:hlinkClick",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Hyperlink/a:hlinkHover",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_NonVisualDrawingPropsExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_NonVisualDrawingShapeProps/xdr:cNvSpPr",
+      "ClassName": "NonVisualShapeDrawingProperties",
+      "Summary": "Connection Non-Visual Shape Properties.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":txBox",
+          "PropertyName": "TextBox",
+          "Type": "BooleanValue",
+          "PropertyComments": "Text Box"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_ShapeLocking/a:spLocks",
+          "PropertyName": "ShapeLocks",
+          "PropertyComments": "Shape Locks"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_ShapeLocking/a:spLocks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_NonVisualConnectorProperties/xdr:cNvCxnSpPr",
+      "ClassName": "NonVisualConnectorShapeDrawingProperties",
+      "Summary": "Non-Visual Connector Shape Drawing Properties.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_ConnectorLocking/a:cxnSpLocks",
+          "PropertyName": "ConnectionShapeLocks",
+          "PropertyComments": "Connection Shape Locks"
+        },
+        {
+          "Name": "a:CT_Connection/a:stCxn",
+          "PropertyName": "StartConnection",
+          "PropertyComments": "Connection Start"
+        },
+        {
+          "Name": "a:CT_Connection/a:endCxn",
+          "PropertyName": "EndConnection",
+          "PropertyComments": "Connection End"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_ConnectorLocking/a:cxnSpLocks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Connection/a:stCxn",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Connection/a:endCxn",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_NonVisualPictureProperties/xdr:cNvPicPr",
+      "ClassName": "NonVisualPictureDrawingProperties",
+      "Summary": "Non-Visual Picture Drawing Properties.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":preferRelativeResize",
+          "PropertyName": "PreferRelativeResize",
+          "Type": "BooleanValue",
+          "PropertyComments": "preferRelativeResize"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_PictureLocking/a:picLocks",
+          "PropertyName": "PictureLocks"
+        },
+        {
+          "Name": "a:CT_NonVisualPicturePropertiesExtensionList/a:extLst",
+          "PropertyName": "NonVisualPicturePropertiesExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_PictureLocking/a:picLocks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_NonVisualPicturePropertiesExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_NonVisualGraphicFrameProperties/xdr:cNvGraphicFramePr",
+      "ClassName": "NonVisualGraphicFrameDrawingProperties",
+      "Summary": "Non-Visual Graphic Frame Drawing Properties.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_GraphicalObjectFrameLocking/a:graphicFrameLocks",
+          "PropertyName": "GraphicFrameLocks",
+          "PropertyComments": "Graphic Frame Locks"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_GraphicalObjectFrameLocking/a:graphicFrameLocks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_NonVisualGroupDrawingShapeProps/xdr:cNvGrpSpPr",
+      "ClassName": "NonVisualGroupShapeDrawingProperties",
+      "Summary": "Non-Visual Group Shape Drawing Properties.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_GroupLocking/a:grpSpLocks",
+          "PropertyName": "GroupShapeLocks"
+        },
+        {
+          "Name": "a:CT_NonVisualGroupDrawingShapePropsExtensionList/a:extLst",
+          "PropertyName": "NonVisualGroupDrawingShapePropsExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_GroupLocking/a:grpSpLocks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_NonVisualGroupDrawingShapePropsExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xdr:CT_GroupShapeNonVisual/xdr:nvGrpSpPr",
+      "ClassName": "NonVisualGroupShapeProperties",
+      "Summary": "Non-Visual Properties for a Group Shape.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_SpreadSheetNonVisualDrawingProps/xdr:cNvPr",
+          "PropertyName": "NonVisualDrawingProperties",
+          "PropertyComments": "Connection Non-Visual Properties"
+        },
+        {
+          "Name": "a:CT_NonVisualGroupDrawingShapeProps/xdr:cNvGrpSpPr",
+          "PropertyName": "NonVisualGroupShapeDrawingProperties",
+          "PropertyComments": "Non-Visual Group Shape Drawing Properties"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_SpreadSheetNonVisualDrawingProps/xdr:cNvPr"
+          },
+          {
+            "Name": "a:CT_NonVisualGroupDrawingShapeProps/xdr:cNvGrpSpPr"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_GroupShapeProperties/xdr:grpSpPr",
+      "ClassName": "GroupShapeProperties",
+      "Summary": "Group Shape Properties.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":bwMode",
+          "PropertyName": "BlackWhiteMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "PropertyComments": "Black and White Mode",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_GroupTransform2D/a:xfrm",
+          "PropertyName": "TransformGroup",
+          "PropertyComments": "2D Transform for Grouped Objects"
+        },
+        {
+          "Name": "a:CT_NoFillProperties/a:noFill"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+        },
+        {
+          "Name": "a:CT_GradientFillProperties/a:gradFill"
+        },
+        {
+          "Name": "a:CT_BlipFillProperties/a:blipFill"
+        },
+        {
+          "Name": "a:CT_PatternFillProperties/a:pattFill"
+        },
+        {
+          "Name": "a:CT_GroupFillProperties/a:grpFill"
+        },
+        {
+          "Name": "a:CT_EffectList/a:effectLst"
+        },
+        {
+          "Name": "a:CT_EffectContainer/a:effectDag"
+        },
+        {
+          "Name": "a:CT_Scene3D/a:scene3d"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_GroupTransform2D/a:xfrm",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_NoFillProperties/a:noFill"
+                  },
+                  {
+                    "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+                  },
+                  {
+                    "Name": "a:CT_GradientFillProperties/a:gradFill"
+                  },
+                  {
+                    "Name": "a:CT_BlipFillProperties/a:blipFill"
+                  },
+                  {
+                    "Name": "a:CT_PatternFillProperties/a:pattFill"
+                  },
+                  {
+                    "Name": "a:CT_GroupFillProperties/a:grpFill"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_EffectList/a:effectLst"
+                  },
+                  {
+                    "Name": "a:CT_EffectContainer/a:effectDag"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Scene3D/a:scene3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "xdr:ST_EditAs",
+      "Name": "EditAsValues",
+      "Summary": "Resizing Behaviors",
+      "Facets": [
+        {
+          "Comments": "Move and Resize With Anchor Cells",
+          "Value": "twoCell",
+          "Name": "TwoCell"
+        },
+        {
+          "Comments": "Move With Cells but Do Not Resize",
+          "Value": "oneCell",
+          "Name": "OneCell"
+        },
+        {
+          "Comments": "Do Not Move or Resize With Underlying Rows/Columns",
+          "Value": "absolute",
+          "Name": "Absolute"
+        }
+      ]
+    }
+  ]
+}

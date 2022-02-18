@@ -1,0 +1,27 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2016/SVG/main",
+  "Types": [
+    {
+      "Name": "asvg:CT_SVGBlip/asvg:svgBlip",
+      "ClassName": "SVGBlip",
+      "Summary": "Defines the SVGBlip Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": "r:embed",
+          "PropertyName": "Embed",
+          "Type": "StringValue",
+          "PropertyComments": "Embedded Picture Reference"
+        },
+        {
+          "QName": "r:link",
+          "PropertyName": "Link",
+          "Type": "StringValue",
+          "PropertyComments": "Linked Picture Reference"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5805 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main",
+  "Types": [
+    {
+      "Name": "x14:CT_ConditionalFormattings/x14:conditionalFormattings",
+      "ClassName": "ConditionalFormattings",
+      "Summary": "Defines the ConditionalFormattings Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_ConditionalFormatting/x14:conditionalFormatting"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_ConditionalFormatting/x14:conditionalFormatting",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_DataValidations/x14:dataValidations",
+      "ClassName": "DataValidations",
+      "Summary": "Defines the DataValidations Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":disablePrompts",
+          "PropertyName": "DisablePrompts",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "disablePrompts"
+        },
+        {
+          "QName": ":xWindow",
+          "PropertyName": "XWindow",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "xWindow"
+        },
+        {
+          "QName": ":yWindow",
+          "PropertyName": "YWindow",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "yWindow"
+        },
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_DataValidation/x14:dataValidation"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_DataValidation/x14:dataValidation",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_SparklineGroups/x14:sparklineGroups",
+      "ClassName": "SparklineGroups",
+      "Summary": "Defines the SparklineGroups Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_SparklineGroup/x14:sparklineGroup"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_SparklineGroup/x14:sparklineGroup",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_SlicerRefs/x14:slicerList",
+      "ClassName": "SlicerList",
+      "Summary": "Defines the SlicerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_SlicerRef/x14:slicer"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_SlicerRef/x14:slicer",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_ProtectedRanges/x14:protectedRanges",
+      "ClassName": "ProtectedRanges",
+      "Summary": "Defines the ProtectedRanges Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_ProtectedRange/x14:protectedRange"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_ProtectedRange/x14:protectedRange",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_IgnoredErrors/x14:ignoredErrors",
+      "ClassName": "IgnoredErrors",
+      "Summary": "Defines the IgnoredErrors Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_IgnoredError/x14:ignoredError"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x14:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_IgnoredError/x14:ignoredError",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_ExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_DefinedNames/x14:definedNames",
+      "ClassName": "DefinedNames",
+      "Summary": "Defines the DefinedNames Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_DefinedName/x14:definedName"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_DefinedName/x14:definedName",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_PivotCaches/x14:pivotCaches",
+      "ClassName": "PivotCaches",
+      "Summary": "Defines the PivotCaches Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x:CT_PivotCache/x:pivotCache"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_PivotCache/x:pivotCache",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_SlicerCaches/x14:slicerCaches",
+      "ClassName": "SlicerCaches",
+      "Summary": "Defines the SlicerCaches Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_SlicerCache/x14:slicerCache"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_SlicerCache/x14:slicerCache",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_WorkbookPr/x14:workbookPr",
+      "ClassName": "WorkbookProperties",
+      "Summary": "Defines the WorkbookProperties Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":defaultImageDpi",
+          "PropertyName": "DefaultImageDpi",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "defaultImageDpi"
+        },
+        {
+          "QName": ":discardImageEditData",
+          "PropertyName": "DiscardImageEditData",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "discardImageEditData"
+        },
+        {
+          "QName": ":accuracyVersion",
+          "PropertyName": "AccuracyVersion",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "accuracyVersion"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_CalculatedMember/x14:calculatedMember",
+      "ClassName": "CalculatedMember",
+      "Summary": "Defines the CalculatedMember Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":displayFolder",
+          "PropertyName": "DisplayFolder",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "displayFolder"
+        },
+        {
+          "QName": ":flattenHierarchies",
+          "PropertyName": "FlattenHierarchies",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "flattenHierarchies"
+        },
+        {
+          "QName": ":dynamicSet",
+          "PropertyName": "DynamicSet",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "dynamicSet"
+        },
+        {
+          "QName": ":hierarchizeDistinct",
+          "PropertyName": "HierarchizeDistinct",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "hierarchizeDistinct"
+        },
+        {
+          "QName": ":mdxLong",
+          "PropertyName": "MdxLong",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "mdxLong"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_TupleSet/x14:tupleSet",
+          "PropertyName": "TupleSet"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_TupleSet/x14:tupleSet",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_CacheHierarchy/x14:cacheHierarchy",
+      "ClassName": "CacheHierarchy",
+      "Summary": "Defines the CacheHierarchy Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":flattenHierarchies",
+          "PropertyName": "FlattenHierarchies",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "flattenHierarchies"
+        },
+        {
+          "QName": ":measuresSet",
+          "PropertyName": "MeasuresSet",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "measuresSet"
+        },
+        {
+          "QName": ":hierarchizeDistinct",
+          "PropertyName": "HierarchizeDistinct",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "hierarchizeDistinct"
+        },
+        {
+          "QName": ":ignore",
+          "PropertyName": "Ignore",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "ignore"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_SetLevels/x14:setLevels",
+          "PropertyName": "SetLevels"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_SetLevels/x14:setLevels",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_DataField/x14:dataField",
+      "ClassName": "DataField",
+      "Summary": "Defines the DataField Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":pivotShowAs",
+          "PropertyName": "PivotShowAs",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.PivotShowAsValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "pivotShowAs"
+        },
+        {
+          "QName": ":sourceField",
+          "PropertyName": "SourceField",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "sourceField"
+        },
+        {
+          "QName": ":uniqueName",
+          "PropertyName": "UniqueName",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "uniqueName"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_PivotField/x14:pivotField",
+      "ClassName": "PivotField",
+      "Summary": "Defines the PivotField Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":fillDownLabels",
+          "PropertyName": "FillDownLabels",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "fillDownLabels"
+        },
+        {
+          "QName": ":ignore",
+          "PropertyName": "Ignore",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "ignore"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_PivotTableDefinition/x14:pivotTableDefinition",
+      "ClassName": "PivotTableDefinition",
+      "Summary": "Defines the PivotTableDefinition Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":fillDownLabelsDefault",
+          "PropertyName": "FillDownLabelsDefault",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "fillDownLabelsDefault"
+        },
+        {
+          "QName": ":visualTotalsForSets",
+          "PropertyName": "VisualTotalsForSets",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "visualTotalsForSets"
+        },
+        {
+          "QName": ":calculatedMembersInFilters",
+          "PropertyName": "CalculatedMembersInFilters",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "calculatedMembersInFilters"
+        },
+        {
+          "QName": ":altText",
+          "PropertyName": "AltText",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "altText"
+        },
+        {
+          "QName": ":altTextSummary",
+          "PropertyName": "AltTextSummary",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "altTextSummary"
+        },
+        {
+          "QName": ":enableEdit",
+          "PropertyName": "EnableEdit",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "enableEdit"
+        },
+        {
+          "QName": ":autoApply",
+          "PropertyName": "AutoApply",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "autoApply"
+        },
+        {
+          "QName": ":allocationMethod",
+          "PropertyName": "AllocationMethod",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "allocationMethod"
+        },
+        {
+          "QName": ":weightExpression",
+          "PropertyName": "WeightExpression",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "weightExpression"
+        },
+        {
+          "QName": ":hideValuesRow",
+          "PropertyName": "HideValuesRow",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "hideValuesRow"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_PivotEdits/x14:pivotEdits",
+          "PropertyName": "PivotEdits"
+        },
+        {
+          "Name": "x14:CT_PivotChanges/x14:pivotChanges",
+          "PropertyName": "PivotChanges"
+        },
+        {
+          "Name": "x14:CT_ConditionalFormats/x14:conditionalFormats",
+          "PropertyName": "ConditionalFormats"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_PivotEdits/x14:pivotEdits",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x14:CT_PivotChanges/x14:pivotChanges",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x14:CT_ConditionalFormats/x14:conditionalFormats",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_PivotCacheDefinition/x14:pivotCacheDefinition",
+      "ClassName": "PivotCacheDefinition",
+      "Summary": "Defines the PivotCacheDefinition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":slicerData",
+          "PropertyName": "SlicerData",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "slicerData"
+        },
+        {
+          "QName": ":pivotCacheId",
+          "PropertyName": "PivotCacheId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "pivotCacheId"
+        },
+        {
+          "QName": ":supportSubqueryNonVisual",
+          "PropertyName": "SupportSubqueryNonVisual",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "supportSubqueryNonVisual"
+        },
+        {
+          "QName": ":supportSubqueryCalcMem",
+          "PropertyName": "SupportSubqueryCalcMem",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "supportSubqueryCalcMem"
+        },
+        {
+          "QName": ":supportAddCalcMems",
+          "PropertyName": "SupportAddCalcMems",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "supportAddCalcMems"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_Connection/x14:connection",
+      "ClassName": "Connection",
+      "Summary": "Defines the Connection Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":culture",
+          "PropertyName": "Culture",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "culture"
+        },
+        {
+          "QName": ":embeddedDataId",
+          "PropertyName": "EmbeddedDataId",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "embeddedDataId"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_CalculatedMembers/x14:calculatedMembers",
+          "PropertyName": "CalculatedMembers"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_CalculatedMembers/x14:calculatedMembers",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_Table/x14:table",
+      "ClassName": "Table",
+      "Summary": "Defines the Table Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":altText",
+          "PropertyName": "AltText",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "altText"
+        },
+        {
+          "QName": ":altTextSummary",
+          "PropertyName": "AltTextSummary",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "altTextSummary"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_SlicerStyles/x14:slicerStyles",
+      "ClassName": "SlicerStyles",
+      "Summary": "Defines the SlicerStyles Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":defaultSlicerStyle",
+          "PropertyName": "DefaultSlicerStyle",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "defaultSlicerStyle",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_SlicerStyle/x14:slicerStyle"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_SlicerStyle/x14:slicerStyle",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_Dxfs/x14:dxfs",
+      "ClassName": "DifferentialFormats",
+      "Summary": "Defines the DifferentialFormats Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Format Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_Dxf/x:dxf"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_Dxf/x:dxf",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_OleItem/x14:oleItem",
+      "ClassName": "OleItem",
+      "Summary": "Defines the OleItem Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":icon",
+          "PropertyName": "Icon",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "icon"
+        },
+        {
+          "QName": ":advise",
+          "PropertyName": "Advise",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "advise"
+        },
+        {
+          "QName": ":preferPic",
+          "PropertyName": "PreferPicture",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "preferPic"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_DdeValues/x14:values",
+          "PropertyName": "DdeValues"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_DdeValues/x14:values",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_PivotHierarchy/x14:pivotHierarchy",
+      "ClassName": "PivotHierarchy",
+      "Summary": "Defines the PivotHierarchy Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":ignore",
+          "PropertyName": "Ignore",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "ignore"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_CacheField/x14:cacheField",
+      "ClassName": "CacheField",
+      "Summary": "Defines the CacheField Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":ignore",
+          "PropertyName": "Ignore",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "ignore"
+        }
+      ]
+    },
+    {
+      "Name": "x:ST_Guid/x14:id",
+      "ClassName": "Id",
+      "Summary": "Defines the Id Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2010",
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Boolean",
+              "Name": "IsToken",
+              "Value": "True"
+            },
+            {
+              "Type": "String",
+              "Name": "Pattern",
+              "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_IconFilter/x14:iconFilter",
+      "ClassName": "IconFilter",
+      "Summary": "Defines the IconFilter Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":iconSet",
+          "PropertyName": "IconSet",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "iconSet",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":iconId",
+          "PropertyName": "IconId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "iconId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_Filter/x14:filter",
+      "ClassName": "Filter",
+      "Summary": "Defines the Filter Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "val"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_CustomFilters/x14:customFilters",
+      "ClassName": "CustomFilters",
+      "Summary": "Defines the CustomFilters Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":and",
+          "PropertyName": "And",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "and"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_CustomFilter/x14:customFilter"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_CustomFilter/x14:customFilter",
+            "Occurs": [
+              {
+                "Min": 1,
+                "Max": 2
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_SortCondition/x14:sortCondition",
+      "ClassName": "SortCondition",
+      "Summary": "Defines the SortCondition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":descending",
+          "PropertyName": "Descending",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "descending"
+        },
+        {
+          "QName": ":sortBy",
+          "PropertyName": "SortBy",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SortByValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "sortBy"
+        },
+        {
+          "QName": ":ref",
+          "PropertyName": "Reference",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "ref",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":customList",
+          "PropertyName": "CustomList",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "customList"
+        },
+        {
+          "QName": ":dxfId",
+          "PropertyName": "FormatId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "dxfId"
+        },
+        {
+          "QName": ":iconSet",
+          "PropertyName": "IconSet",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "iconSet"
+        },
+        {
+          "QName": ":iconId",
+          "PropertyName": "IconId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "iconId"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_SourceConnection/x14:sourceConnection",
+      "ClassName": "SourceConnection",
+      "Summary": "Defines the SourceConnection Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_DatastoreItem/x14:datastoreItem",
+      "ClassName": "DatastoreItem",
+      "Summary": "Defines the DatastoreItem Class.",
+      "Part": "CustomDataPropertiesPart",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_ExtensionList/x14:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_ExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_FormControlPr/x14:formControlPr",
+      "ClassName": "FormControlProperties",
+      "Summary": "Defines the FormControlProperties Class.",
+      "Part": "ControlPropertiesPart",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":objectType",
+          "PropertyName": "ObjectType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.ObjectTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "objectType",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":checked",
+          "PropertyName": "Checked",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.CheckedValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "checked",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":colored",
+          "PropertyName": "Colored",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "colored"
+        },
+        {
+          "QName": ":dropLines",
+          "PropertyName": "DropLines",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "dropLines"
+        },
+        {
+          "QName": ":dropStyle",
+          "PropertyName": "DropStyle",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.DropStyleValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "dropStyle",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":dx",
+          "PropertyName": "ScrollBarWidth",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "dx"
+        },
+        {
+          "QName": ":firstButton",
+          "PropertyName": "FirstButton",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "firstButton"
+        },
+        {
+          "QName": ":fmlaGroup",
+          "PropertyName": "FmlaGroup",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "fmlaGroup"
+        },
+        {
+          "QName": ":fmlaLink",
+          "PropertyName": "FmlaLink",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "fmlaLink"
+        },
+        {
+          "QName": ":fmlaRange",
+          "PropertyName": "FmlaRange",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "fmlaRange"
+        },
+        {
+          "QName": ":fmlaTxbx",
+          "PropertyName": "FmlaTextbox",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "fmlaTxbx"
+        },
+        {
+          "QName": ":horiz",
+          "PropertyName": "Horizontal",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "horiz"
+        },
+        {
+          "QName": ":inc",
+          "PropertyName": "Incremental",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "inc"
+        },
+        {
+          "QName": ":justLastX",
+          "PropertyName": "JustLastX",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "justLastX"
+        },
+        {
+          "QName": ":lockText",
+          "PropertyName": "LockText",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "lockText"
+        },
+        {
+          "QName": ":max",
+          "PropertyName": "Max",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "max"
+        },
+        {
+          "QName": ":min",
+          "PropertyName": "Min",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "min"
+        },
+        {
+          "QName": ":multiSel",
+          "PropertyName": "MultipleSelection",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "multiSel"
+        },
+        {
+          "QName": ":noThreeD",
+          "PropertyName": "NoThreeD",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "noThreeD"
+        },
+        {
+          "QName": ":noThreeD2",
+          "PropertyName": "NoThreeD2",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "noThreeD2"
+        },
+        {
+          "QName": ":page",
+          "PropertyName": "Page",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "page"
+        },
+        {
+          "QName": ":sel",
+          "PropertyName": "Selected",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "sel"
+        },
+        {
+          "QName": ":seltype",
+          "PropertyName": "SelectionType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SelectionTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "seltype",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":textHAlign",
+          "PropertyName": "TextHorizontalAlign",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.TextHorizontalAlignmentValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "textHAlign"
+        },
+        {
+          "QName": ":textVAlign",
+          "PropertyName": "TextVerticalAlign",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.TextVerticalAlignmentValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "textVAlign"
+        },
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "val"
+        },
+        {
+          "QName": ":widthMin",
+          "PropertyName": "MinimumWidth",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "widthMin"
+        },
+        {
+          "QName": ":editVal",
+          "PropertyName": "EditVal",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.EditValidationValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "editVal",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":multiLine",
+          "PropertyName": "MultipleLines",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "multiLine"
+        },
+        {
+          "QName": ":verticalBar",
+          "PropertyName": "VerticalBar",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "verticalBar"
+        },
+        {
+          "QName": ":passwordEdit",
+          "PropertyName": "PasswordEdit",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "passwordEdit"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_ListItems/x14:itemLst",
+          "PropertyName": "ListItems"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x14:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_ListItems/x14:itemLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_ExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_Slicers/x14:slicers",
+      "ClassName": "Slicers",
+      "Summary": "Defines the Slicers Class.",
+      "Part": "SlicersPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_Slicer/x14:slicer"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_Slicer/x14:slicer",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_SlicerCacheDefinition/x14:slicerCacheDefinition",
+      "ClassName": "SlicerCacheDefinition",
+      "Summary": "Defines the SlicerCacheDefinition Class.",
+      "Part": "SlicerCachePart",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":sourceName",
+          "PropertyName": "SourceName",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "sourceName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_SlicerCachePivotTables/x14:pivotTables",
+          "PropertyName": "SlicerCachePivotTables"
+        },
+        {
+          "Name": "x14:CT_SlicerCacheData/x14:data",
+          "PropertyName": "SlicerCacheData"
+        },
+        {
+          "Name": "x:CT_SlicerCacheDefinitionExtensionList/x14:extLst",
+          "PropertyName": "SlicerCacheDefinitionExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_SlicerCachePivotTables/x14:pivotTables",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x14:CT_SlicerCacheData/x14:data",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_SlicerCacheDefinitionExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_ConditionalFormatting/x14:conditionalFormatting",
+      "ClassName": "ConditionalFormatting",
+      "Summary": "Defines the ConditionalFormatting Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":pivot",
+          "PropertyName": "Pivot",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "pivot"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_CfRule/x14:cfRule"
+        },
+        {
+          "Name": "xne:ST_Sqref/xne:sqref"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x14:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_CfRule/x14:cfRule",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "xne:ST_Sqref/xne:sqref",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_ExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_CfRule/x14:cfRule",
+      "ClassName": "ConditionalFormattingRule",
+      "Summary": "Defines the ConditionalFormattingRule Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "type"
+        },
+        {
+          "QName": ":priority",
+          "PropertyName": "Priority",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "priority"
+        },
+        {
+          "QName": ":stopIfTrue",
+          "PropertyName": "StopIfTrue",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "stopIfTrue"
+        },
+        {
+          "QName": ":aboveAverage",
+          "PropertyName": "AboveAverage",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "aboveAverage"
+        },
+        {
+          "QName": ":percent",
+          "PropertyName": "Percent",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "percent"
+        },
+        {
+          "QName": ":bottom",
+          "PropertyName": "Bottom",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "bottom"
+        },
+        {
+          "QName": ":operator",
+          "PropertyName": "Operator",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "operator"
+        },
+        {
+          "QName": ":text",
+          "PropertyName": "Text",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "text"
+        },
+        {
+          "QName": ":timePeriod",
+          "PropertyName": "TimePeriod",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.TimePeriodValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "timePeriod"
+        },
+        {
+          "QName": ":rank",
+          "PropertyName": "Rank",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "rank"
+        },
+        {
+          "QName": ":stdDev",
+          "PropertyName": "StandardDeviation",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "stdDev"
+        },
+        {
+          "QName": ":equalAverage",
+          "PropertyName": "EqualAverage",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "equalAverage"
+        },
+        {
+          "QName": ":activePresent",
+          "PropertyName": "ActivePresent",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "activePresent"
+        },
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:ST_Formula/xne:f"
+        },
+        {
+          "Name": "x14:CT_ColorScale/x14:colorScale"
+        },
+        {
+          "Name": "x14:CT_DataBar/x14:dataBar"
+        },
+        {
+          "Name": "x14:CT_IconSet/x14:iconSet"
+        },
+        {
+          "Name": "x:CT_Dxf/x14:dxf"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x14:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:ST_Formula/xne:f",
+            "Occurs": [
+              {
+                "Max": 3
+              }
+            ]
+          },
+          {
+            "Name": "x14:CT_ColorScale/x14:colorScale",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x14:CT_DataBar/x14:dataBar",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x14:CT_IconSet/x14:iconSet",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Dxf/x14:dxf",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_ExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ExtensionList/x14:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x:CT_Extension/x:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "x:CT_Extension/x:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_DataValidation/x14:dataValidation",
+      "ClassName": "DataValidation",
+      "Summary": "Defines the DataValidation Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "type"
+        },
+        {
+          "QName": ":errorStyle",
+          "PropertyName": "ErrorStyle",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "errorStyle"
+        },
+        {
+          "QName": ":imeMode",
+          "PropertyName": "ImeMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "imeMode"
+        },
+        {
+          "QName": ":operator",
+          "PropertyName": "Operator",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "operator"
+        },
+        {
+          "QName": ":allowBlank",
+          "PropertyName": "AllowBlank",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "allowBlank"
+        },
+        {
+          "QName": ":showDropDown",
+          "PropertyName": "ShowDropDown",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "showDropDown"
+        },
+        {
+          "QName": ":showInputMessage",
+          "PropertyName": "ShowInputMessage",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "showInputMessage"
+        },
+        {
+          "QName": ":showErrorMessage",
+          "PropertyName": "ShowErrorMessage",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "showErrorMessage"
+        },
+        {
+          "QName": ":errorTitle",
+          "PropertyName": "ErrorTitle",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "errorTitle"
+        },
+        {
+          "QName": ":error",
+          "PropertyName": "Error",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "error"
+        },
+        {
+          "QName": ":promptTitle",
+          "PropertyName": "PromptTitle",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "promptTitle"
+        },
+        {
+          "QName": ":prompt",
+          "PropertyName": "Prompt",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "prompt"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_DataValidationFormula/x14:formula1",
+          "PropertyName": "DataValidationForumla1"
+        },
+        {
+          "Name": "x14:CT_DataValidationFormula/x14:formula2",
+          "PropertyName": "DataValidationForumla2"
+        },
+        {
+          "Name": "xne:ST_Sqref/xne:sqref",
+          "PropertyName": "ReferenceSequence"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_DataValidationFormula/x14:formula1",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x14:CT_DataValidationFormula/x14:formula2",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "xne:ST_Sqref/xne:sqref"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_DataValidationFormula/x14:formula1",
+      "ClassName": "DataValidationForumla1",
+      "Summary": "Defines the DataValidationForumla1 Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "DataValidationFormulaType",
+      "IsDerived": true,
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x:ST_Formula/xne:f",
+          "PropertyName": "Formula"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:ST_Formula/xne:f"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_DataValidationFormula/x14:formula2",
+      "ClassName": "DataValidationForumla2",
+      "Summary": "Defines the DataValidationForumla2 Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "DataValidationFormulaType",
+      "IsDerived": true,
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x:ST_Formula/xne:f",
+          "PropertyName": "Formula"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:ST_Formula/xne:f"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_DataValidationFormula/",
+      "ClassName": "DataValidationFormulaType",
+      "Summary": "Defines the DataValidationFormulaType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "Version": "Office2010",
+      "AdditionalElements": [
+        "x:ST_Formula/xne:f"
+      ],
+      "Children": [
+        {
+          "Name": "x:ST_Formula/xne:f",
+          "PropertyName": "Formula"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_SparklineGroup/x14:sparklineGroup",
+      "ClassName": "SparklineGroup",
+      "Summary": "Defines the SparklineGroup Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":manualMax",
+          "PropertyName": "ManualMax",
+          "Type": "DoubleValue",
+          "Version": "Office2010",
+          "PropertyComments": "manualMax"
+        },
+        {
+          "QName": ":manualMin",
+          "PropertyName": "ManualMin",
+          "Type": "DoubleValue",
+          "Version": "Office2010",
+          "PropertyComments": "manualMin"
+        },
+        {
+          "QName": ":lineWeight",
+          "PropertyName": "LineWeight",
+          "Type": "DoubleValue",
+          "Version": "Office2010",
+          "PropertyComments": "lineWeight"
+        },
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "type"
+        },
+        {
+          "QName": ":dateAxis",
+          "PropertyName": "DateAxis",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "dateAxis"
+        },
+        {
+          "QName": ":displayEmptyCellsAs",
+          "PropertyName": "DisplayEmptyCellsAs",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "displayEmptyCellsAs"
+        },
+        {
+          "QName": ":markers",
+          "PropertyName": "Markers",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "markers"
+        },
+        {
+          "QName": ":high",
+          "PropertyName": "High",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "high"
+        },
+        {
+          "QName": ":low",
+          "PropertyName": "Low",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "low"
+        },
+        {
+          "QName": ":first",
+          "PropertyName": "First",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "first"
+        },
+        {
+          "QName": ":last",
+          "PropertyName": "Last",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "last"
+        },
+        {
+          "QName": ":negative",
+          "PropertyName": "Negative",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "negative"
+        },
+        {
+          "QName": ":displayXAxis",
+          "PropertyName": "DisplayXAxis",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "displayXAxis"
+        },
+        {
+          "QName": ":displayHidden",
+          "PropertyName": "DisplayHidden",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "displayHidden"
+        },
+        {
+          "QName": ":minAxisType",
+          "PropertyName": "MinAxisType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "minAxisType"
+        },
+        {
+          "QName": ":maxAxisType",
+          "PropertyName": "MaxAxisType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "maxAxisType"
+        },
+        {
+          "QName": ":rightToLeft",
+          "PropertyName": "RightToLeft",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "rightToLeft"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_Color/x14:colorSeries",
+          "PropertyName": "SeriesColor"
+        },
+        {
+          "Name": "x:CT_Color/x14:colorNegative",
+          "PropertyName": "NegativeColor"
+        },
+        {
+          "Name": "x:CT_Color/x14:colorAxis",
+          "PropertyName": "AxisColor"
+        },
+        {
+          "Name": "x:CT_Color/x14:colorMarkers",
+          "PropertyName": "MarkersColor"
+        },
+        {
+          "Name": "x:CT_Color/x14:colorFirst",
+          "PropertyName": "FirstMarkerColor"
+        },
+        {
+          "Name": "x:CT_Color/x14:colorLast",
+          "PropertyName": "LastMarkerColor"
+        },
+        {
+          "Name": "x:CT_Color/x14:colorHigh",
+          "PropertyName": "HighMarkerColor"
+        },
+        {
+          "Name": "x:CT_Color/x14:colorLow",
+          "PropertyName": "LowMarkerColor"
+        },
+        {
+          "Name": "x:ST_Formula/xne:f",
+          "PropertyName": "Formula"
+        },
+        {
+          "Name": "x14:CT_Sparklines/x14:sparklines",
+          "PropertyName": "Sparklines"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_Color/x14:colorSeries",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Color/x14:colorNegative",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Color/x14:colorAxis",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Color/x14:colorMarkers",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Color/x14:colorFirst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Color/x14:colorLast",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Color/x14:colorHigh",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Color/x14:colorLow",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:ST_Formula/xne:f",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x14:CT_Sparklines/x14:sparklines",
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_Color/x14:colorSeries",
+      "ClassName": "SeriesColor",
+      "Summary": "Defines the SeriesColor Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/x14:colorNegative",
+      "ClassName": "NegativeColor",
+      "Summary": "Defines the NegativeColor Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/x14:colorAxis",
+      "ClassName": "AxisColor",
+      "Summary": "Defines the AxisColor Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/x14:colorMarkers",
+      "ClassName": "MarkersColor",
+      "Summary": "Defines the MarkersColor Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/x14:colorFirst",
+      "ClassName": "FirstMarkerColor",
+      "Summary": "Defines the FirstMarkerColor Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/x14:colorLast",
+      "ClassName": "LastMarkerColor",
+      "Summary": "Defines the LastMarkerColor Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/x14:colorHigh",
+      "ClassName": "HighMarkerColor",
+      "Summary": "Defines the HighMarkerColor Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/x14:colorLow",
+      "ClassName": "LowMarkerColor",
+      "Summary": "Defines the LowMarkerColor Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/x14:color",
+      "ClassName": "Color",
+      "Summary": "Defines the Color Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/x14:fillColor",
+      "ClassName": "FillColor",
+      "Summary": "Defines the FillColor Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/x14:borderColor",
+      "ClassName": "BorderColor",
+      "Summary": "Defines the BorderColor Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/x14:negativeFillColor",
+      "ClassName": "NegativeFillColor",
+      "Summary": "Defines the NegativeFillColor Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/x14:negativeBorderColor",
+      "ClassName": "NegativeBorderColor",
+      "Summary": "Defines the NegativeBorderColor Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/x14:axisColor",
+      "ClassName": "BarAxisColor",
+      "Summary": "Defines the BarAxisColor Class.",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x:CT_Color/",
+      "ClassName": "ColorType",
+      "Summary": "Defines the ColorType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":auto",
+          "PropertyName": "Auto",
+          "Type": "BooleanValue",
+          "PropertyComments": "Automatic"
+        },
+        {
+          "QName": ":indexed",
+          "PropertyName": "Indexed",
+          "Type": "UInt32Value",
+          "PropertyComments": "Index"
+        },
+        {
+          "QName": ":rgb",
+          "PropertyName": "Rgb",
+          "Type": "HexBinaryValue",
+          "PropertyComments": "Alpha Red Green Blue Color Value",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "4"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":theme",
+          "PropertyName": "Theme",
+          "Type": "UInt32Value",
+          "PropertyComments": "Theme Color"
+        },
+        {
+          "QName": ":tint",
+          "PropertyName": "Tint",
+          "Type": "DoubleValue",
+          "PropertyComments": "Tint"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_Sparklines/x14:sparklines",
+      "ClassName": "Sparklines",
+      "Summary": "Defines the Sparklines Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_Sparkline/x14:sparkline"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_Sparkline/x14:sparkline",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_Sparkline/x14:sparkline",
+      "ClassName": "Sparkline",
+      "Summary": "Defines the Sparkline Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x:ST_Formula/xne:f",
+          "PropertyName": "Formula"
+        },
+        {
+          "Name": "xne:ST_Sqref/xne:sqref",
+          "PropertyName": "ReferenceSequence"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:ST_Formula/xne:f",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xne:ST_Sqref/xne:sqref"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_SlicerRef/x14:slicer",
+      "ClassName": "SlicerRef",
+      "Summary": "Defines the SlicerRef Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_SlicerCache/x14:slicerCache",
+      "ClassName": "SlicerCache",
+      "Summary": "Defines the SlicerCache Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_DefinedName/x14:definedName",
+      "ClassName": "DefinedName",
+      "Summary": "Defines the DefinedName Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_DefinedNameArgumentDescriptions/x14:argumentDescriptions",
+          "PropertyName": "ArgumentDescriptions"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_DefinedNameArgumentDescriptions/x14:argumentDescriptions",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_DefinedNameArgumentDescriptions/x14:argumentDescriptions",
+      "ClassName": "ArgumentDescriptions",
+      "Summary": "Defines the ArgumentDescriptions Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_DefinedNameArgumentDescription/x14:argumentDescription"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_DefinedNameArgumentDescription/x14:argumentDescription",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_DefinedNameArgumentDescription/x14:argumentDescription",
+      "ClassName": "ArgumentDescription",
+      "Summary": "Defines the ArgumentDescription Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":index",
+          "PropertyName": "Index",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "index",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_TupleSet/x14:tupleSet",
+      "ClassName": "TupleSet",
+      "Summary": "Defines the TupleSet Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":rowCount",
+          "PropertyName": "RowCount",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "rowCount"
+        },
+        {
+          "QName": ":columnCount",
+          "PropertyName": "ColumnCount",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "columnCount"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_TupleSetHeaders/x14:headers",
+          "PropertyName": "TupleSetHeaders"
+        },
+        {
+          "Name": "x14:CT_TupleSetRows/x14:rows",
+          "PropertyName": "TupleSetRows"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_TupleSetHeaders/x14:headers",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x14:CT_TupleSetRows/x14:rows",
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_TupleSetHeaders/x14:headers",
+      "ClassName": "TupleSetHeaders",
+      "Summary": "Defines the TupleSetHeaders Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_TupleSetHeader/x14:header"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_TupleSetHeader/x14:header",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_TupleSetRows/x14:rows",
+      "ClassName": "TupleSetRows",
+      "Summary": "Defines the TupleSetRows Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_TupleSetRow/x14:row"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_TupleSetRow/x14:row",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_TupleSetHeader/x14:header",
+      "ClassName": "TupleSetHeader",
+      "Summary": "Defines the TupleSetHeader Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":uniqueName",
+          "PropertyName": "UniqueName",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "uniqueName"
+        },
+        {
+          "QName": ":hierarchyName",
+          "PropertyName": "HierarchyName",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "hierarchyName"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_TupleSetRow/x14:row",
+      "ClassName": "TupleSetRow",
+      "Summary": "Defines the TupleSetRow Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_TupleSetRowItem/x14:rowItem"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_TupleSetRowItem/x14:rowItem",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_TupleSetRowItem/x14:rowItem",
+      "ClassName": "TupleSetRowItem",
+      "Summary": "Defines the TupleSetRowItem Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":u",
+          "PropertyName": "UniqueName",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "u"
+        },
+        {
+          "QName": ":d",
+          "PropertyName": "DisplayName",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "d"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_SetLevel/x14:setLevel",
+      "ClassName": "SetLevel",
+      "Summary": "Defines the SetLevel Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":hierarchy",
+          "PropertyName": "Hierarchy",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "hierarchy",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_SetLevels/x14:setLevels",
+      "ClassName": "SetLevels",
+      "Summary": "Defines the SetLevels Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_SetLevel/x14:setLevel"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_SetLevel/x14:setLevel",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_ColorScale/x14:colorScale",
+      "ClassName": "ColorScale",
+      "Summary": "Defines the ColorScale Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_Cfvo/x14:cfvo"
+        },
+        {
+          "Name": "x:CT_Color/x14:color"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_Cfvo/x14:cfvo",
+            "Occurs": [
+              {
+                "Min": 2
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Color/x14:color",
+            "Occurs": [
+              {
+                "Min": 2
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_DataBar/x14:dataBar",
+      "ClassName": "DataBar",
+      "Summary": "Defines the DataBar Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":minLength",
+          "PropertyName": "MinLength",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "minLength"
+        },
+        {
+          "QName": ":maxLength",
+          "PropertyName": "MaxLength",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "maxLength"
+        },
+        {
+          "QName": ":showValue",
+          "PropertyName": "ShowValue",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "showValue"
+        },
+        {
+          "QName": ":border",
+          "PropertyName": "Border",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "border"
+        },
+        {
+          "QName": ":gradient",
+          "PropertyName": "Gradient",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "gradient"
+        },
+        {
+          "QName": ":direction",
+          "PropertyName": "Direction",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.DataBarDirectionValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "direction"
+        },
+        {
+          "QName": ":negativeBarColorSameAsPositive",
+          "PropertyName": "NegativeBarColorSameAsPositive",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "negativeBarColorSameAsPositive"
+        },
+        {
+          "QName": ":negativeBarBorderColorSameAsPositive",
+          "PropertyName": "NegativeBarBorderColorSameAsPositive",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "negativeBarBorderColorSameAsPositive"
+        },
+        {
+          "QName": ":axisPosition",
+          "PropertyName": "AxisPosition",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.DataBarAxisPositionValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "axisPosition"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_Cfvo/x14:cfvo"
+        },
+        {
+          "Name": "x:CT_Color/x14:fillColor"
+        },
+        {
+          "Name": "x:CT_Color/x14:borderColor"
+        },
+        {
+          "Name": "x:CT_Color/x14:negativeFillColor"
+        },
+        {
+          "Name": "x:CT_Color/x14:negativeBorderColor"
+        },
+        {
+          "Name": "x:CT_Color/x14:axisColor"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_Cfvo/x14:cfvo",
+            "Occurs": [
+              {
+                "Min": 2,
+                "Max": 2
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Color/x14:fillColor",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Color/x14:borderColor",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Color/x14:negativeFillColor",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Color/x14:negativeBorderColor",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_Color/x14:axisColor",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_IconSet/x14:iconSet",
+      "ClassName": "IconSet",
+      "Summary": "Defines the IconSet Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":iconSet",
+          "PropertyName": "IconSetTypes",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "iconSet"
+        },
+        {
+          "QName": ":showValue",
+          "PropertyName": "ShowValue",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "showValue"
+        },
+        {
+          "QName": ":percent",
+          "PropertyName": "Percent",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "percent"
+        },
+        {
+          "QName": ":reverse",
+          "PropertyName": "Reverse",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "reverse"
+        },
+        {
+          "QName": ":custom",
+          "PropertyName": "Custom",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "custom"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_Cfvo/x14:cfvo"
+        },
+        {
+          "Name": "x14:CT_CfIcon/x14:cfIcon"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_Cfvo/x14:cfvo",
+            "Occurs": [
+              {
+                "Min": 2
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x14:CT_CfIcon/x14:cfIcon",
+            "Occurs": [
+              {
+                "Max": 5
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_Dxf/x14:dxf",
+      "ClassName": "DifferentialType",
+      "Summary": "Defines the DifferentialType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x:CT_Font/x:font",
+          "PropertyName": "Font",
+          "PropertyComments": "Font Properties"
+        },
+        {
+          "Name": "x:CT_NumFmt/x:numFmt",
+          "PropertyName": "NumberingFormat",
+          "PropertyComments": "Number Format"
+        },
+        {
+          "Name": "x:CT_Fill/x:fill",
+          "PropertyName": "Fill",
+          "PropertyComments": "Fill"
+        },
+        {
+          "Name": "x:CT_CellAlignment/x:alignment",
+          "PropertyName": "Alignment",
+          "PropertyComments": "Alignment"
+        },
+        {
+          "Name": "x:CT_Border/x:border",
+          "PropertyName": "Border",
+          "PropertyComments": "Border Properties"
+        },
+        {
+          "Name": "x:CT_CellProtection/x:protection",
+          "PropertyName": "Protection",
+          "PropertyComments": "Protection Properties"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x:extLst",
+          "PropertyName": "ExtensionList",
+          "PropertyComments": "Future Feature Data Storage Area"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_Font/x:font",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_NumFmt/x:numFmt",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_Fill/x:fill",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_CellAlignment/x:alignment",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_Border/x:border",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_CellProtection/x:protection",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_ExtensionList/x:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_Cfvo/x14:cfvo",
+      "ClassName": "ConditionalFormattingValueObject",
+      "Summary": "Defines the ConditionalFormattingValueObject Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObjectTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "type",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":gte",
+          "PropertyName": "GreaterThanOrEqual",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "gte"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:ST_Formula/xne:f",
+          "PropertyName": "Formula"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x14:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:ST_Formula/xne:f",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_ExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_CfIcon/x14:cfIcon",
+      "ClassName": "ConditionalFormattingIcon",
+      "Summary": "Defines the ConditionalFormattingIcon Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":iconSet",
+          "PropertyName": "IconSet",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "iconSet",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":iconId",
+          "PropertyName": "IconId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "iconId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_PivotEdits/x14:pivotEdits",
+      "ClassName": "PivotEdits",
+      "Summary": "Defines the PivotEdits Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_PivotEdit/x14:pivotEdit"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_PivotEdit/x14:pivotEdit",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_PivotChanges/x14:pivotChanges",
+      "ClassName": "PivotChanges",
+      "Summary": "Defines the PivotChanges Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_PivotChange/x14:pivotChange"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_PivotChange/x14:pivotChange",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_ConditionalFormats/x14:conditionalFormats",
+      "ClassName": "ConditionalFormats",
+      "Summary": "Defines the ConditionalFormats Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_ConditionalFormat/x14:conditionalFormat"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_ConditionalFormat/x14:conditionalFormat",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_CalculatedMembers/x14:calculatedMembers",
+      "ClassName": "CalculatedMembers",
+      "Summary": "Defines the CalculatedMembers Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Calculated Members Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_CalculatedMember/x:calculatedMember"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_CalculatedMember/x:calculatedMember",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_PivotEdit/x14:pivotEdit",
+      "ClassName": "PivotEdit",
+      "Summary": "Defines the PivotEdit Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_PivotUserEdit/x14:userEdit",
+          "PropertyName": "PivotUserEdit"
+        },
+        {
+          "Name": "x14:CT_TupleItems/x14:tupleItems",
+          "PropertyName": "TupleItems"
+        },
+        {
+          "Name": "x:CT_PivotArea/x14:pivotArea",
+          "PropertyName": "PivotArea"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x14:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_PivotUserEdit/x14:userEdit",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x14:CT_TupleItems/x14:tupleItems",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_PivotArea/x14:pivotArea",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_ExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_PivotUserEdit/x14:userEdit",
+      "ClassName": "PivotUserEdit",
+      "Summary": "Defines the PivotUserEdit Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x:ST_Formula/xne:f",
+          "PropertyName": "Formula"
+        },
+        {
+          "Name": "x14:CT_PivotEditValue/x14:editValue",
+          "PropertyName": "PivotEditValue"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "x:ST_Formula/xne:f"
+          },
+          {
+            "Name": "x14:CT_PivotEditValue/x14:editValue",
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_TupleItems/x14:tupleItems",
+      "ClassName": "TupleItems",
+      "Summary": "Defines the TupleItems Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x:ST_Xstring/x14:tupleItem"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:ST_Xstring/x14:tupleItem",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_PivotArea/x14:pivotArea",
+      "ClassName": "PivotArea",
+      "Summary": "Defines the PivotArea Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":field",
+          "PropertyName": "Field",
+          "Type": "Int32Value",
+          "PropertyComments": "Field Index"
+        },
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PivotAreaValues\u003E",
+          "PropertyComments": "Rule Type"
+        },
+        {
+          "QName": ":dataOnly",
+          "PropertyName": "DataOnly",
+          "Type": "BooleanValue",
+          "PropertyComments": "Data Only"
+        },
+        {
+          "QName": ":labelOnly",
+          "PropertyName": "LabelOnly",
+          "Type": "BooleanValue",
+          "PropertyComments": "Labels Only"
+        },
+        {
+          "QName": ":grandRow",
+          "PropertyName": "GrandRow",
+          "Type": "BooleanValue",
+          "PropertyComments": "Include Row Grand Total"
+        },
+        {
+          "QName": ":grandCol",
+          "PropertyName": "GrandColumn",
+          "Type": "BooleanValue",
+          "PropertyComments": "Include Column Grand Total"
+        },
+        {
+          "QName": ":cacheIndex",
+          "PropertyName": "CacheIndex",
+          "Type": "BooleanValue",
+          "PropertyComments": "Cache Index"
+        },
+        {
+          "QName": ":outline",
+          "PropertyName": "Outline",
+          "Type": "BooleanValue",
+          "PropertyComments": "Outline"
+        },
+        {
+          "QName": ":offset",
+          "PropertyName": "Offset",
+          "Type": "StringValue",
+          "PropertyComments": "Offset Reference"
+        },
+        {
+          "QName": ":collapsedLevelsAreSubtotals",
+          "PropertyName": "CollapsedLevelsAreSubtotals",
+          "Type": "BooleanValue",
+          "PropertyComments": "Collapsed Levels Are Subtotals"
+        },
+        {
+          "QName": ":axis",
+          "PropertyName": "Axis",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues\u003E",
+          "PropertyComments": "Axis"
+        },
+        {
+          "QName": ":fieldPosition",
+          "PropertyName": "FieldPosition",
+          "Type": "UInt32Value",
+          "PropertyComments": "Field Position"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_PivotAreaReferences/x:references",
+          "PropertyName": "PivotAreaReferences",
+          "PropertyComments": "References"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x:extLst",
+          "PropertyName": "ExtensionList",
+          "PropertyComments": "Future Feature Data Storage Area"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_PivotAreaReferences/x:references",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_ExtensionList/x:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_PivotChange/x14:pivotChange",
+      "ClassName": "PivotChange",
+      "Summary": "Defines the PivotChange Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":allocationMethod",
+          "PropertyName": "AllocationMethod",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "allocationMethod"
+        },
+        {
+          "QName": ":weightExpression",
+          "PropertyName": "WeightExpression",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "weightExpression"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_PivotEditValue/x14:editValue",
+          "PropertyName": "PivotEditValue"
+        },
+        {
+          "Name": "x14:CT_TupleItems/x14:tupleItems",
+          "PropertyName": "TupleItems"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x14:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_PivotEditValue/x14:editValue",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x14:CT_TupleItems/x14:tupleItems",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_ExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_PivotEditValue/x14:editValue",
+      "ClassName": "PivotEditValue",
+      "Summary": "Defines the PivotEditValue Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":valueType",
+          "PropertyName": "ValueType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.PivotEditValueTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "valueType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "x:ST_Xstring/x14:tupleItem",
+      "ClassName": "Xstring",
+      "Summary": "Defines the Xstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "x14:CT_SlicerStyleElements/x14:slicerStyleElements",
+      "ClassName": "SlicerStyleElements",
+      "Summary": "Defines the SlicerStyleElements Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_SlicerStyleElement/x14:slicerStyleElement"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_SlicerStyleElement/x14:slicerStyleElement",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_DdeValues/x14:values",
+      "ClassName": "DdeValues",
+      "Summary": "Defines the DdeValues Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":rows",
+          "PropertyName": "Rows",
+          "Type": "UInt32Value",
+          "PropertyComments": "Rows"
+        },
+        {
+          "QName": ":cols",
+          "PropertyName": "Columns",
+          "Type": "UInt32Value",
+          "PropertyComments": "Columns"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_DdeValue/x:value"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_DdeValue/x:value",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_ConditionalFormat/x14:conditionalFormat",
+      "ClassName": "ConditionalFormat",
+      "Summary": "Defines the ConditionalFormat Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":scope",
+          "PropertyName": "Scope",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ScopeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "scope"
+        },
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.RuleValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "type"
+        },
+        {
+          "QName": ":priority",
+          "PropertyName": "Priority",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "priority"
+        },
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_PivotAreas/x14:pivotAreas",
+          "PropertyName": "PivotAreas"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x14:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_PivotAreas/x14:pivotAreas",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_ExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_PivotAreas/x14:pivotAreas",
+      "ClassName": "PivotAreas",
+      "Summary": "Defines the PivotAreas Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Pivot Area Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_PivotArea/x:pivotArea"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_PivotArea/x:pivotArea",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_SlicerStyle/x14:slicerStyle",
+      "ClassName": "SlicerStyle",
+      "Summary": "Defines the SlicerStyle Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_SlicerStyleElements/x14:slicerStyleElements",
+          "PropertyName": "SlicerStyleElements"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_SlicerStyleElements/x14:slicerStyleElements",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_SlicerStyleElement/x14:slicerStyleElement",
+      "ClassName": "SlicerStyleElement",
+      "Summary": "Defines the SlicerStyleElement Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SlicerStyleTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "type",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":dxfId",
+          "PropertyName": "FormatId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "dxfId"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_IgnoredError/x14:ignoredError",
+      "ClassName": "IgnoredError",
+      "Summary": "Defines the IgnoredError Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":evalError",
+          "PropertyName": "EvalError",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "evalError"
+        },
+        {
+          "QName": ":twoDigitTextYear",
+          "PropertyName": "TwoDigitTextYear",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "twoDigitTextYear"
+        },
+        {
+          "QName": ":numberStoredAsText",
+          "PropertyName": "NumberStoredAsText",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "numberStoredAsText"
+        },
+        {
+          "QName": ":formula",
+          "PropertyName": "Formula",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "formula"
+        },
+        {
+          "QName": ":formulaRange",
+          "PropertyName": "FormulaRange",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "formulaRange"
+        },
+        {
+          "QName": ":unlockedFormula",
+          "PropertyName": "UnlockedFormula",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "unlockedFormula"
+        },
+        {
+          "QName": ":emptyCellReference",
+          "PropertyName": "EmptyCellReference",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "emptyCellReference"
+        },
+        {
+          "QName": ":listDataValidation",
+          "PropertyName": "ListDataValidation",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "listDataValidation"
+        },
+        {
+          "QName": ":calculatedColumn",
+          "PropertyName": "CalculatedColumn",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "calculatedColumn"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xne:ST_Sqref/xne:sqref",
+          "PropertyName": "ReferenceSequence"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xne:ST_Sqref/xne:sqref"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_ProtectedRange/x14:protectedRange",
+      "ClassName": "ProtectedRange",
+      "Summary": "Defines the ProtectedRange Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":password",
+          "PropertyName": "Password",
+          "Type": "HexBinaryValue",
+          "Version": "Office2010",
+          "PropertyComments": "password",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "2"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":algorithmName",
+          "PropertyName": "AlgorithmName",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "algorithmName"
+        },
+        {
+          "QName": ":hashValue",
+          "PropertyName": "HashValue",
+          "Type": "Base64BinaryValue",
+          "Version": "Office2010",
+          "PropertyComments": "hashValue"
+        },
+        {
+          "QName": ":saltValue",
+          "PropertyName": "SaltValue",
+          "Type": "Base64BinaryValue",
+          "Version": "Office2010",
+          "PropertyComments": "saltValue"
+        },
+        {
+          "QName": ":spinCount",
+          "PropertyName": "SpinCount",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "spinCount"
+        },
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":securityDescriptor",
+          "PropertyName": "SecurityDescriptor",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "securityDescriptor"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xne:ST_Sqref/xne:sqref",
+          "PropertyName": "ReferenceSequence"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xne:ST_Sqref/xne:sqref"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_CustomFilter/x14:customFilter",
+      "ClassName": "CustomFilter",
+      "Summary": "Defines the CustomFilter Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":operator",
+          "PropertyName": "Operator",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "operator"
+        },
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "val"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_ListItem/x14:item",
+      "ClassName": "ListItem",
+      "Summary": "Defines the ListItem Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_ListItems/x14:itemLst",
+      "ClassName": "ListItems",
+      "Summary": "Defines the ListItems Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_ListItem/x14:item"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x14:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_ListItem/x14:item",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_ExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_Slicer/x14:slicer",
+      "ClassName": "Slicer",
+      "Summary": "Defines the Slicer Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":cache",
+          "PropertyName": "Cache",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "cache",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":caption",
+          "PropertyName": "Caption",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "caption"
+        },
+        {
+          "QName": ":startItem",
+          "PropertyName": "StartItem",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "startItem"
+        },
+        {
+          "QName": ":columnCount",
+          "PropertyName": "ColumnCount",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "columnCount"
+        },
+        {
+          "QName": ":showCaption",
+          "PropertyName": "ShowCaption",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "showCaption"
+        },
+        {
+          "QName": ":level",
+          "PropertyName": "Level",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "level"
+        },
+        {
+          "QName": ":style",
+          "PropertyName": "Style",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "style"
+        },
+        {
+          "QName": ":lockedPosition",
+          "PropertyName": "LockedPosition",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "lockedPosition"
+        },
+        {
+          "QName": ":rowHeight",
+          "PropertyName": "RowHeight",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "rowHeight",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_ExtensionList/x14:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_ExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_OlapSlicerCache/x14:olap",
+      "ClassName": "OlapSlicerCache",
+      "Summary": "Defines the OlapSlicerCache Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":pivotCacheId",
+          "PropertyName": "PivotCacheId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "pivotCacheId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_OlapSlicerCacheLevelsData/x14:levels",
+          "PropertyName": "OlapSlicerCacheLevelsData"
+        },
+        {
+          "Name": "x14:CT_OlapSlicerCacheSelections/x14:selections",
+          "PropertyName": "OlapSlicerCacheSelections"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x14:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_OlapSlicerCacheLevelsData/x14:levels",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x14:CT_OlapSlicerCacheSelections/x14:selections",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_ExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_TabularSlicerCache/x14:tabular",
+      "ClassName": "TabularSlicerCache",
+      "Summary": "Defines the TabularSlicerCache Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":pivotCacheId",
+          "PropertyName": "PivotCacheId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "pivotCacheId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":sortOrder",
+          "PropertyName": "SortOrder",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "sortOrder"
+        },
+        {
+          "QName": ":customListSort",
+          "PropertyName": "CustomListSort",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "customListSort"
+        },
+        {
+          "QName": ":showMissing",
+          "PropertyName": "ShowMissing",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "showMissing"
+        },
+        {
+          "QName": ":crossFilter",
+          "PropertyName": "CrossFilter",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "crossFilter"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_TabularSlicerCacheItems/x14:items",
+          "PropertyName": "TabularSlicerCacheItems"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x14:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_TabularSlicerCacheItems/x14:items",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_ExtensionList/x14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_SlicerCachePivotTable/x14:pivotTable",
+      "ClassName": "SlicerCachePivotTable",
+      "Summary": "Defines the SlicerCachePivotTable Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":tabId",
+          "PropertyName": "TabId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "tabId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_OlapSlicerCacheItemParent/x14:p",
+      "ClassName": "OlapSlicerCacheItemParent",
+      "Summary": "Defines the OlapSlicerCacheItemParent Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":n",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "n",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_OlapSlicerCacheItem/x14:i",
+      "ClassName": "OlapSlicerCacheItem",
+      "Summary": "Defines the OlapSlicerCacheItem Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":n",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "n",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":c",
+          "PropertyName": "DisplayName",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "c"
+        },
+        {
+          "QName": ":nd",
+          "PropertyName": "NonDisplay",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "nd"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_OlapSlicerCacheItemParent/x14:p"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_OlapSlicerCacheItemParent/x14:p",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_OlapSlicerCacheRange/x14:range",
+      "ClassName": "OlapSlicerCacheRange",
+      "Summary": "Defines the OlapSlicerCacheRange Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":startItem",
+          "PropertyName": "StartItem",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "startItem",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_OlapSlicerCacheItem/x14:i"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_OlapSlicerCacheItem/x14:i",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_OlapSlicerCacheRanges/x14:ranges",
+      "ClassName": "OlapSlicerCacheRanges",
+      "Summary": "Defines the OlapSlicerCacheRanges Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_OlapSlicerCacheRange/x14:range"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_OlapSlicerCacheRange/x14:range",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_OlapSlicerCacheLevelData/x14:level",
+      "ClassName": "OlapSlicerCacheLevelData",
+      "Summary": "Defines the OlapSlicerCacheLevelData Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":uniqueName",
+          "PropertyName": "UniqueName",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "uniqueName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":sourceCaption",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "sourceCaption"
+        },
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "count",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":sortOrder",
+          "PropertyName": "SortOrder",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSortOrderValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "sortOrder"
+        },
+        {
+          "QName": ":crossFilter",
+          "PropertyName": "CrossFilter",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "crossFilter"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_OlapSlicerCacheRanges/x14:ranges",
+          "PropertyName": "OlapSlicerCacheRanges"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_OlapSlicerCacheRanges/x14:ranges",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_OlapSlicerCacheLevelsData/x14:levels",
+      "ClassName": "OlapSlicerCacheLevelsData",
+      "Summary": "Defines the OlapSlicerCacheLevelsData Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_OlapSlicerCacheLevelData/x14:level"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_OlapSlicerCacheLevelData/x14:level",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_OlapSlicerCacheSelections/x14:selections",
+      "ClassName": "OlapSlicerCacheSelections",
+      "Summary": "Defines the OlapSlicerCacheSelections Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_OlapSlicerCacheSelection/x14:selection"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_OlapSlicerCacheSelection/x14:selection",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_OlapSlicerCacheSelection/x14:selection",
+      "ClassName": "OlapSlicerCacheSelection",
+      "Summary": "Defines the OlapSlicerCacheSelection Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":n",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "n",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_OlapSlicerCacheItemParent/x14:p"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_OlapSlicerCacheItemParent/x14:p",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_TabularSlicerCacheItems/x14:items",
+      "ClassName": "TabularSlicerCacheItems",
+      "Summary": "Defines the TabularSlicerCacheItems Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_TabularSlicerCacheItem/x14:i"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_TabularSlicerCacheItem/x14:i",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_TabularSlicerCacheItem/x14:i",
+      "ClassName": "TabularSlicerCacheItem",
+      "Summary": "Defines the TabularSlicerCacheItem Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":x",
+          "PropertyName": "Atom",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "x",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":s",
+          "PropertyName": "IsSelected",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "s"
+        },
+        {
+          "QName": ":nd",
+          "PropertyName": "NonDisplay",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "nd"
+        }
+      ]
+    },
+    {
+      "Name": "x14:CT_SlicerCachePivotTables/x14:pivotTables",
+      "ClassName": "SlicerCachePivotTables",
+      "Summary": "Defines the SlicerCachePivotTables Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_SlicerCachePivotTable/x14:pivotTable"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x14:CT_SlicerCachePivotTable/x14:pivotTable",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_SlicerCacheData/x14:data",
+      "ClassName": "SlicerCacheData",
+      "Summary": "Defines the SlicerCacheData Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x14:CT_OlapSlicerCache/x14:olap",
+          "PropertyName": "OlapSlicerCache"
+        },
+        {
+          "Name": "x14:CT_TabularSlicerCache/x14:tabular",
+          "PropertyName": "TabularSlicerCache"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "x14:CT_OlapSlicerCache/x14:olap",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x14:CT_TabularSlicerCache/x14:tabular",
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_SlicerCacheDefinitionExtensionList/x14:extLst",
+      "ClassName": "SlicerCacheDefinitionExtensionList",
+      "Summary": "Defines the SlicerCacheDefinitionExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "x:CT_SlicerCacheDefinitionExtension/x:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_SlicerCacheDefinitionExtension/x:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "x14:ST_DispBlanksAs",
+      "Name": "DisplayBlanksAsValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "span",
+          "Name": "Span"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "gap",
+          "Name": "Gap"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "zero",
+          "Name": "Zero"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_SparklineAxisMinMax",
+      "Name": "SparklineAxisMinMaxValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "individual",
+          "Name": "Individual"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "group",
+          "Name": "Group"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "custom",
+          "Name": "Custom"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_SparklineType",
+      "Name": "SparklineTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "line",
+          "Name": "Line"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "column",
+          "Name": "Column"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "stacked",
+          "Name": "Stacked"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_PivotShowAs",
+      "Name": "PivotShowAsValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "percentOfParent",
+          "Name": "PercentOfParent"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "percentOfParentRow",
+          "Name": "PercentOfParentRow"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "percentOfParentCol",
+          "Name": "PercentOfParentColumn"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "percentOfRunningTotal",
+          "Name": "PercentOfRunningTotal"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "rankAscending",
+          "Name": "RankAscending"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "rankDescending",
+          "Name": "RankDescending"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_DataBarDirection",
+      "Name": "DataBarDirectionValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "context",
+          "Name": "Context"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "leftToRight",
+          "Name": "LeftToRight"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "rightToLeft",
+          "Name": "RightToLeft"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_DataBarAxisPosition",
+      "Name": "DataBarAxisPositionValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "automatic",
+          "Name": "Automatic"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "middle",
+          "Name": "Middle"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "none",
+          "Name": "None"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_CfvoType",
+      "Name": "ConditionalFormattingValueObjectTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "num",
+          "Name": "Numeric"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "percent",
+          "Name": "Percent"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "max",
+          "Name": "Max"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "min",
+          "Name": "Min"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "formula",
+          "Name": "Formula"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "percentile",
+          "Name": "Percentile"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "autoMin",
+          "Name": "AutoMin"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "autoMax",
+          "Name": "AutoMax"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_IconSetType",
+      "Name": "IconSetTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "3Arrows",
+          "Name": "ThreeArrows"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "3ArrowsGray",
+          "Name": "ThreeArrowsGray"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "3Flags",
+          "Name": "ThreeFlags"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "3TrafficLights1",
+          "Name": "ThreeTrafficLights1"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "3TrafficLights2",
+          "Name": "ThreeTrafficLights2"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "3Signs",
+          "Name": "ThreeSigns"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "3Symbols",
+          "Name": "ThreeSymbols"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "3Symbols2",
+          "Name": "ThreeSymbols2"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "4Arrows",
+          "Name": "FourArrows"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "4ArrowsGray",
+          "Name": "FourArrowsGray"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "4RedToBlack",
+          "Name": "FourRedToBlack"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "4Rating",
+          "Name": "FourRating"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "4TrafficLights",
+          "Name": "FourTrafficLights"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "5Arrows",
+          "Name": "FiveArrows"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "5ArrowsGray",
+          "Name": "FiveArrowsGray"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "5Rating",
+          "Name": "FiveRating"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "5Quarters",
+          "Name": "FiveQuarters"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "3Stars",
+          "Name": "ThreeStars"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "3Triangles",
+          "Name": "ThreeTriangles"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "5Boxes",
+          "Name": "FiveBoxes"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "NoIcons",
+          "Name": "NoIcons"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_PivotEditValueType",
+      "Name": "PivotEditValueTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "number",
+          "Name": "Number"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "dateTime",
+          "Name": "DateTime"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "string",
+          "Name": "String"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "boolean",
+          "Name": "Boolean"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "error",
+          "Name": "Error"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_AllocationMethod",
+      "Name": "AllocationMethodValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "equalAllocation",
+          "Name": "EqualAllocation"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "equalIncrement",
+          "Name": "EqualIncrement"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "weightedAllocation",
+          "Name": "WeightedAllocation"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "weightedIncrement",
+          "Name": "WeightedIncrement"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_SlicerStyleType",
+      "Name": "SlicerStyleTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "unselectedItemWithData",
+          "Name": "UnselectedItemWithData"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "selectedItemWithData",
+          "Name": "SelectedItemWithData"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "unselectedItemWithNoData",
+          "Name": "UnselectedItemWithNoData"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "selectedItemWithNoData",
+          "Name": "SelectedItemWithNoData"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "hoveredUnselectedItemWithData",
+          "Name": "HoveredUnselectedItemWithData"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "hoveredSelectedItemWithData",
+          "Name": "HoveredSelectedItemWithData"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "hoveredUnselectedItemWithNoData",
+          "Name": "HoveredUnselectedItemWithNoData"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "hoveredSelectedItemWithNoData",
+          "Name": "HoveredSelectedItemWithNoData"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_Checked",
+      "Name": "CheckedValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "Unchecked",
+          "Name": "Unchecked"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "Checked",
+          "Name": "Checked"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "Mixed",
+          "Name": "Mixed"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_DropStyle",
+      "Name": "DropStyleValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "combo",
+          "Name": "Combo"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "comboedit",
+          "Name": "ComboEdit"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "simple",
+          "Name": "Simple"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_SelType",
+      "Name": "SelectionTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "single",
+          "Name": "Single"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "multi",
+          "Name": "Multiple"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "extended",
+          "Name": "Extended"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_TextHAlign",
+      "Name": "TextHorizontalAlignmentValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "left",
+          "Name": "Left"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "center",
+          "Name": "Center"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "right",
+          "Name": "Right"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "justify",
+          "Name": "Justify"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "distributed",
+          "Name": "Distributed"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_TextVAlign",
+      "Name": "TextVerticalAlignmentValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "top",
+          "Name": "Top"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "center",
+          "Name": "Center"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "bottom",
+          "Name": "Bottom"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "justify",
+          "Name": "Justify"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "distributed",
+          "Name": "Distributed"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_EditValidation",
+      "Name": "EditValidationValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "text",
+          "Name": "Text"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "integer",
+          "Name": "Integer"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "number",
+          "Name": "Number"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "reference",
+          "Name": "Reference"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "formula",
+          "Name": "Formula"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_OlapSlicerCacheSortOrder",
+      "Name": "OlapSlicerCacheSortOrderValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "natural",
+          "Name": "Natural"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "ascending",
+          "Name": "Ascending"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "descending",
+          "Name": "Descending"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_TabularSlicerCacheSortOrder",
+      "Name": "TabularSlicerCacheSortOrderValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "ascending",
+          "Name": "Ascending"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "descending",
+          "Name": "Descending"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_SlicerCacheCrossFilter",
+      "Name": "SlicerCacheCrossFilterValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "none",
+          "Name": "None"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "showItemsWithDataAtTop",
+          "Name": "ShowItemsWithDataAtTop"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "showItemsWithNoData",
+          "Name": "ShowItemsWithNoData"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "x14:ST_ObjectType",
+      "Name": "ObjectTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "Button",
+          "Name": "Button"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "CheckBox",
+          "Name": "CheckBox"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "Drop",
+          "Name": "Drop"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "GBox",
+          "Name": "GroupBox"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "Label",
+          "Name": "Label"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "List",
+          "Name": "List"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "Radio",
+          "Name": "Radio"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "Scroll",
+          "Name": "Scroll"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "Spin",
+          "Name": "Spin"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "EditBox",
+          "Name": "EditBox"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "Dialog"
+        }
+      ],
+      "Version": "Office2010"
+    }
+  ]
+}

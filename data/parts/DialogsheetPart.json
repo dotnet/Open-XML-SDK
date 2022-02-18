@@ -1,0 +1,37 @@
+{
+  "Root": "x:CT_Dialogsheet",
+  "Name": "DialogsheetPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet",
+  "Target": "sheet",
+  "RootElement": "dialogsheet",
+  "Paths": {
+    "General": "dialogsheets"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "SpreadsheetPrinterSettingsParts",
+      "Name": "SpreadsheetPrinterSettingsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "DrawingsPart",
+      "Name": "DrawingsPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "VmlDrawingParts",
+      "Name": "VmlDrawingPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedObjectParts",
+      "Name": "EmbeddedObjectPart",
+      "IsSpecialEmbeddedPart": true
+    }
+  ]
+}

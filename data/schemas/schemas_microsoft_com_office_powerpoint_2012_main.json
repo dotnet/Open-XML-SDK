@@ -1,0 +1,447 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2012/main",
+  "Types": [
+    {
+      "Name": "p15:CT_PresetTransition/p15:prstTrans",
+      "ClassName": "PresetTransition",
+      "Summary": "Defines the PresetTransition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":prst",
+          "PropertyName": "Preset",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "prst"
+        },
+        {
+          "QName": ":invX",
+          "Type": "BooleanValue",
+          "Version": "Office2013",
+          "PropertyComments": "invX"
+        },
+        {
+          "QName": ":invY",
+          "Type": "BooleanValue",
+          "Version": "Office2013",
+          "PropertyComments": "invY"
+        }
+      ]
+    },
+    {
+      "Name": "p15:CT_PresenceInfo/p15:presenceInfo",
+      "ClassName": "PresenceInfo",
+      "Summary": "Defines the PresenceInfo Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":userId",
+          "PropertyName": "UserId",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "userId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":providerId",
+          "PropertyName": "ProviderId",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "providerId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p15:CT_CommentThreading/p15:threadingInfo",
+      "ClassName": "ThreadingInfo",
+      "Summary": "Defines the ThreadingInfo Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":timeZoneBias",
+          "PropertyName": "TimeZoneBias",
+          "Type": "Int32Value",
+          "Version": "Office2013",
+          "PropertyComments": "timeZoneBias"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "p15:CT_ParentCommentIdentifier/p15:parentCm",
+          "PropertyName": "ParentCommentIdentifier"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p15:CT_ParentCommentIdentifier/p15:parentCm",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p15:CT_ExtendedGuideList/p15:sldGuideLst",
+      "ClassName": "SlideGuideList",
+      "Summary": "Defines the SlideGuideList Class.",
+      "BaseClass": "ExtendedGuideList",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "p15:CT_ExtendedGuide/p15:guide"
+        },
+        {
+          "Name": "p:CT_ExtensionList/p15:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p15:CT_ExtendedGuide/p15:guide",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "p:CT_ExtensionList/p15:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p15:CT_ExtendedGuideList/p15:notesGuideLst",
+      "ClassName": "NotesGuideList",
+      "Summary": "Defines the NotesGuideList Class.",
+      "BaseClass": "ExtendedGuideList",
+      "IsDerived": true,
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "p15:CT_ExtendedGuide/p15:guide"
+        },
+        {
+          "Name": "p:CT_ExtensionList/p15:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p15:CT_ExtendedGuide/p15:guide",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "p:CT_ExtensionList/p15:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p15:CT_ExtendedGuideList/",
+      "ClassName": "ExtendedGuideList",
+      "Summary": "Defines the ExtendedGuideList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "Version": "Office2013",
+      "AdditionalElements": [
+        "p:CT_ExtensionList/p15:extLst",
+        "p15:CT_ExtendedGuide/p15:guide"
+      ],
+      "Children": [
+        {
+          "Name": "p15:CT_ExtendedGuide/p15:guide"
+        },
+        {
+          "Name": "p:CT_ExtensionList/p15:extLst"
+        }
+      ]
+    },
+    {
+      "Name": "p15:CT_ChartTrackingRefBased/p15:chartTrackingRefBased",
+      "ClassName": "ChartTrackingReferenceBased",
+      "Summary": "Defines the ChartTrackingReferenceBased Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "BooleanValue",
+          "Version": "Office2013",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p15:CT_ParentCommentIdentifier/p15:parentCm",
+      "ClassName": "ParentCommentIdentifier",
+      "Summary": "Defines the ParentCommentIdentifier Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":authorId",
+          "PropertyName": "AuthorId",
+          "Type": "UInt32Value",
+          "Version": "Office2013",
+          "PropertyComments": "authorId"
+        },
+        {
+          "QName": ":idx",
+          "PropertyName": "Index",
+          "Type": "UInt32Value",
+          "Version": "Office2013",
+          "PropertyComments": "idx"
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_Color/p15:clr",
+      "ClassName": "ColorType",
+      "Summary": "Defines the ColorType Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "a:CT_ScRgbColor/a:scrgbClr",
+          "PropertyName": "RgbColorModelPercentage",
+          "PropertyComments": "RGB Color Model - Percentage Variant"
+        },
+        {
+          "Name": "a:CT_SRgbColor/a:srgbClr",
+          "PropertyName": "RgbColorModelHex",
+          "PropertyComments": "RGB Color Model - Hex Variant"
+        },
+        {
+          "Name": "a:CT_HslColor/a:hslClr",
+          "PropertyName": "HslColor",
+          "PropertyComments": "Hue, Saturation, Luminance Color Model"
+        },
+        {
+          "Name": "a:CT_SystemColor/a:sysClr",
+          "PropertyName": "SystemColor",
+          "PropertyComments": "System Color"
+        },
+        {
+          "Name": "a:CT_SchemeColor/a:schemeClr",
+          "PropertyName": "SchemeColor",
+          "PropertyComments": "Scheme Color"
+        },
+        {
+          "Name": "a:CT_PresetColor/a:prstClr",
+          "PropertyName": "PresetColor",
+          "PropertyComments": "Preset Color"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_ScRgbColor/a:scrgbClr"
+                  },
+                  {
+                    "Name": "a:CT_SRgbColor/a:srgbClr"
+                  },
+                  {
+                    "Name": "a:CT_HslColor/a:hslClr"
+                  },
+                  {
+                    "Name": "a:CT_SystemColor/a:sysClr"
+                  },
+                  {
+                    "Name": "a:CT_SchemeColor/a:schemeClr"
+                  },
+                  {
+                    "Name": "a:CT_PresetColor/a:prstClr"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p:CT_ExtensionList/p15:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "p:CT_Extension/p:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "p:CT_Extension/p:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p15:CT_ExtendedGuide/p15:guide",
+      "ClassName": "ExtendedGuide",
+      "Summary": "Defines the ExtendedGuide Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "UInt32Value",
+          "Version": "Office2013",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "name"
+        },
+        {
+          "QName": ":orient",
+          "PropertyName": "Orientation",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.DirectionValues\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "orient",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":pos",
+          "PropertyName": "Position",
+          "Type": "Int32Value",
+          "Version": "Office2013",
+          "PropertyComments": "pos"
+        },
+        {
+          "QName": ":userDrawn",
+          "PropertyName": "IsUserDrawn",
+          "Type": "BooleanValue",
+          "Version": "Office2013",
+          "PropertyComments": "userDrawn"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Color/p15:clr",
+          "PropertyName": "ColorType"
+        },
+        {
+          "Name": "p:CT_ExtensionList/p15:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Color/p15:clr",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "p:CT_ExtensionList/p15:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    }
+  ]
+}

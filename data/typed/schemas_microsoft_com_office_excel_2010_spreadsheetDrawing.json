@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "a14:CT_NonVisualInkContentPartProperties/xdr14:cNvContentPartPr",
+    "ClassName": "NonVisualInkContentPartProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/xdr14:cNvPr",
+    "ClassName": "NonVisualDrawingProperties"
+  },
+  {
+    "Name": "xdr14:CT_ContentPart/xdr14:contentPart",
+    "ClassName": "ContentPart"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/xdr14:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "xdr14:CT_ContentPartNonVisual/xdr14:nvContentPartPr",
+    "ClassName": "ExcelNonVisualContentPartShapeProperties"
+  },
+  {
+    "Name": "xdr14:CT_ApplicationNonVisualDrawingProps/xdr14:nvPr",
+    "ClassName": "ApplicationNonVisualDrawingProperties"
+  },
+  {
+    "Name": "a:CT_Transform2D/xdr14:xfrm",
+    "ClassName": "Transform2D"
+  }
+]

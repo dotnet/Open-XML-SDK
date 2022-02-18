@@ -1,0 +1,21 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2019/extlinksprops",
+  "Types": [
+    {
+      "Name": "xxlnp:CT_ExternalLinksPr/xxlnp:externalLinksPr",
+      "ClassName": "ExternalLinksPr",
+      "Summary": "Defines the ExternalLinksPr Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":autoRefresh",
+          "Type": "BooleanValue",
+          "Version": "Office2021",
+          "PropertyComments": "autoRefresh"
+        }
+      ]
+    }
+  ]
+}

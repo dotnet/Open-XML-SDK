@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "w16cid:CT_CommentId/w16cid:commentId",
+    "ClassName": "CommentId"
+  },
+  {
+    "Name": "w16cid:CT_CommentsIds/w16cid:commentsIds",
+    "ClassName": "CommentsIds",
+    "PartClassName": "WordprocessingCommentsIdsPart"
+  }
+]

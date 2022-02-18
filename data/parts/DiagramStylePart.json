@@ -1,0 +1,12 @@
+{
+  "Root": "dgm:CT_StyleDefinition",
+  "Name": "DiagramStylePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
+  "Target": "quickStyle",
+  "RootElement": "styleDef",
+  "Paths": {
+    "General": "../graphics"
+  }
+}

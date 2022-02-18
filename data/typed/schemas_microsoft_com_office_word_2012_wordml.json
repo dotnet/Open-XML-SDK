@@ -1,0 +1,76 @@
+[
+  {
+    "Name": "w15:CT_SdtAppearance/w15:appearance",
+    "ClassName": "Appearance"
+  },
+  {
+    "Name": "w:CT_OnOff/w15:chartTrackingRefBased",
+    "ClassName": "ChartTrackingRefBased"
+  },
+  {
+    "Name": "w:CT_OnOff/w15:collapsed",
+    "ClassName": "DefaultCollapsed"
+  },
+  {
+    "Name": "w:CT_Color/w15:color",
+    "ClassName": "Color"
+  },
+  {
+    "Name": "w15:CT_CommentEx/w15:commentEx",
+    "ClassName": "CommentEx"
+  },
+  {
+    "Name": "w15:CT_CommentsEx/w15:commentsEx",
+    "ClassName": "CommentsEx",
+    "PartClassName": "WordprocessingCommentsExPart"
+  },
+  {
+    "Name": "w:CT_DataBinding/w15:dataBinding",
+    "ClassName": "DataBinding"
+  },
+  {
+    "Name": "w15:CT_Guid/w15:docId",
+    "ClassName": "PersistentDocumentId"
+  },
+  {
+    "Name": "w:CT_OnOff/w15:doNotAllowInsertDeleteSection",
+    "ClassName": "DoNotAllowInsertDeleteSection"
+  },
+  {
+    "Name": "w:CT_DecimalNumber/w15:footnoteColumns",
+    "ClassName": "FootnoteColumns"
+  },
+  {
+    "Name": "w15:CT_People/w15:people",
+    "ClassName": "People",
+    "PartClassName": "WordprocessingPeoplePart"
+  },
+  {
+    "Name": "w15:CT_Person/w15:person",
+    "ClassName": "Person"
+  },
+  {
+    "Name": "w15:CT_PresenceInfo/w15:presenceInfo",
+    "ClassName": "PresenceInfo"
+  },
+  {
+    "Name": "w15:CT_SdtRepeatedSection/w15:repeatingSection",
+    "ClassName": "SdtRepeatedSection"
+  },
+  {
+    "Name": "w:CT_Empty/w15:repeatingSectionItem",
+    "ClassName": "SdtRepeatedSectionItem"
+  },
+  {
+    "Name": "w:CT_String/w15:sectionTitle",
+    "ClassName": "SectionTitle"
+  },
+  {
+    "Name": "w:CT_OnOff/w15:webExtensionCreated",
+    "ClassName": "WebExtensionCreated"
+  },
+  {
+    "Name": "w:CT_OnOff/w15:webExtensionLinked",
+    "ClassName": "WebExtensionLinked"
+  }
+]

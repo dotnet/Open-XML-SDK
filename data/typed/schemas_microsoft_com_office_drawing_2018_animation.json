@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "aanim:CT_AnimationProperties/aanim:animPr",
+    "ClassName": "AnimationProperties"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/aanim:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "Name": "CoreFilePropertiesPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-package.core-properties\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties",
+  "Target": "core",
+  "RootElement": "coreProperties",
+  "Paths": {
+    "General": "docProps"
+  }
+}

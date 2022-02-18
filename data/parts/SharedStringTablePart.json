@@ -1,0 +1,12 @@
+{
+  "Root": "x:CT_Sst",
+  "Name": "SharedStringTablePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sharedStrings\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings",
+  "Target": "sharedStrings",
+  "RootElement": "sst",
+  "Paths": {
+    "General": "."
+  }
+}

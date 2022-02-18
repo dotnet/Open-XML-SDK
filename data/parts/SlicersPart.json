@@ -1,0 +1,13 @@
+{
+  "Root": "x14:CT_Slicers",
+  "Name": "SlicersPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.slicer\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/slicer",
+  "Target": "slicer",
+  "RootElement": "slicers",
+  "Paths": {
+    "General": "../slicers"
+  },
+  "Version": "Office2010"
+}

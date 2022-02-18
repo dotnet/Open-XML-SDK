@@ -1,0 +1,19 @@
+{
+  "Root": "dsp:CT_Drawing",
+  "Name": "DiagramPersistLayoutPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
+  "Target": "drawing",
+  "RootElement": "drawing",
+  "Paths": {
+    "General": "../diagrams"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    }
+  ]
+}

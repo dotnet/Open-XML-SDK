@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "ax:CT_Font/ax:font",
+    "ClassName": "SharedComFont"
+  },
+  {
+    "Name": "ax:CT_Ocx/ax:ocx",
+    "ClassName": "ActiveXControlData"
+  },
+  {
+    "Name": "ax:CT_OcxPr/ax:ocxPr",
+    "ClassName": "ActiveXObjectProperty"
+  },
+  {
+    "Name": "ax:CT_Picture/ax:picture",
+    "ClassName": "SharedComPicture"
+  }
+]

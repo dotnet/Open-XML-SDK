@@ -1,0 +1,667 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/tasks/2019/documenttasks",
+  "Types": [
+    {
+      "Name": "t:CT_Tasks/t:Tasks",
+      "ClassName": "Tasks",
+      "Summary": "Defines the Tasks Class.",
+      "Part": "DocumentTasksPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "t:CT_Task/t:Task"
+        },
+        {
+          "Name": "oel:CT_ExtensionList/t:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "t:CT_Task/t:Task",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "oel:CT_ExtensionList/t:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "t:CT_Task/t:Task",
+      "ClassName": "Task",
+      "Summary": "Defines the Task Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "t:CT_TaskAnchor/t:Anchor",
+          "PropertyName": "TaskAnchor"
+        },
+        {
+          "Name": "t:CT_TaskHistory/t:History",
+          "PropertyName": "TaskHistory"
+        },
+        {
+          "Name": "oel:CT_ExtensionList/t:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "t:CT_TaskAnchor/t:Anchor",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "t:CT_TaskHistory/t:History",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "oel:CT_ExtensionList/t:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "oel:CT_ExtensionList/t:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "oel:CT_Extension/oel:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "oel:CT_Extension/oel:ext",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "t:CT_TaskAnchor/t:Anchor",
+      "ClassName": "TaskAnchor",
+      "Summary": "Defines the TaskAnchor Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "t:CT_CommentAnchor/t:Comment",
+          "PropertyName": "CommentAnchor"
+        },
+        {
+          "Name": "oel:CT_ExtensionList/t:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "t:CT_CommentAnchor/t:Comment",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "oel:CT_ExtensionList/t:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "t:CT_TaskHistory/t:History",
+      "ClassName": "TaskHistory",
+      "Summary": "Defines the TaskHistory Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "t:CT_TaskHistoryEvent/t:Event"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "t:CT_TaskHistoryEvent/t:Event",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "t:CT_TaskHistoryEvent/t:Event",
+      "ClassName": "TaskHistoryEvent",
+      "Summary": "Defines the TaskHistoryEvent Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":time",
+          "Type": "DateTimeValue",
+          "Version": "Office2021",
+          "PropertyComments": "time",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "t:CT_TaskUser/t:Attribution",
+          "PropertyName": "AttributionTaskUser"
+        },
+        {
+          "Name": "t:CT_TaskAnchor/t:Anchor",
+          "PropertyName": "TaskAnchor"
+        },
+        {
+          "Name": "t:CT_TaskUser/t:Assign"
+        },
+        {
+          "Name": "t:CT_TaskUser/t:Unassign"
+        },
+        {
+          "Name": "t:CT_TaskCreateEventInfo/t:Create"
+        },
+        {
+          "Name": "t:CT_TaskTitleEventInfo/t:SetTitle"
+        },
+        {
+          "Name": "t:CT_TaskScheduleEventInfo/t:Schedule"
+        },
+        {
+          "Name": "t:CT_TaskProgressEventInfo/t:Progress"
+        },
+        {
+          "Name": "t:CT_TaskPriorityEventInfo/t:Priority"
+        },
+        {
+          "Name": "t:CT_TaskDeleteEventInfo/t:Delete"
+        },
+        {
+          "Name": "t:CT_TaskUndeleteEventInfo/t:Undelete"
+        },
+        {
+          "Name": "t:CT_TaskUnassignAll/t:UnassignAll"
+        },
+        {
+          "Name": "t:CT_TaskUndo/t:Undo"
+        },
+        {
+          "Name": "oel:CT_ExtensionList/t:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "t:CT_TaskUser/t:Attribution",
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "t:CT_TaskAnchor/t:Anchor",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Name": "t:CT_TaskUser/t:Assign",
+                "InitialVersion": "Office2021"
+              },
+              {
+                "Name": "t:CT_TaskUser/t:Unassign",
+                "InitialVersion": "Office2021"
+              },
+              {
+                "Name": "t:CT_TaskCreateEventInfo/t:Create",
+                "InitialVersion": "Office2021"
+              },
+              {
+                "Name": "t:CT_TaskTitleEventInfo/t:SetTitle",
+                "InitialVersion": "Office2021"
+              },
+              {
+                "Name": "t:CT_TaskScheduleEventInfo/t:Schedule",
+                "InitialVersion": "Office2021"
+              },
+              {
+                "Name": "t:CT_TaskProgressEventInfo/t:Progress",
+                "InitialVersion": "Office2021"
+              },
+              {
+                "Name": "t:CT_TaskPriorityEventInfo/t:Priority",
+                "InitialVersion": "Office2021"
+              },
+              {
+                "Name": "t:CT_TaskDeleteEventInfo/t:Delete",
+                "InitialVersion": "Office2021"
+              },
+              {
+                "Name": "t:CT_TaskUndeleteEventInfo/t:Undelete",
+                "InitialVersion": "Office2021"
+              },
+              {
+                "Name": "t:CT_TaskUnassignAll/t:UnassignAll",
+                "InitialVersion": "Office2021"
+              },
+              {
+                "Name": "t:CT_TaskUndo/t:Undo",
+                "InitialVersion": "Office2021"
+              }
+            ]
+          },
+          {
+            "Name": "oel:CT_ExtensionList/t:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "t:CT_TaskUser/t:Attribution",
+      "ClassName": "AttributionTaskUser",
+      "Summary": "Defines the AttributionTaskUser Class.",
+      "BaseClass": "OpenXmlTaskUserElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "t:CT_TaskUser/t:Assign",
+      "ClassName": "AssignTaskUser",
+      "Summary": "Defines the AssignTaskUser Class.",
+      "BaseClass": "OpenXmlTaskUserElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "t:CT_TaskUser/t:Unassign",
+      "ClassName": "UnassignTaskUser",
+      "Summary": "Defines the UnassignTaskUser Class.",
+      "BaseClass": "OpenXmlTaskUserElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "t:CT_TaskUser/",
+      "ClassName": "OpenXmlTaskUserElement",
+      "Summary": "Defines the OpenXmlTaskUserElement Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":userId",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "userId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":userName",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "userName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":userProvider",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "userProvider",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "t:CT_TaskCreateEventInfo/t:Create",
+      "ClassName": "TaskCreateEventInfo",
+      "Summary": "Defines the TaskCreateEventInfo Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "t:CT_TaskTitleEventInfo/t:SetTitle",
+      "ClassName": "TaskTitleEventInfo",
+      "Summary": "Defines the TaskTitleEventInfo Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":title",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "title",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "t:CT_TaskScheduleEventInfo/t:Schedule",
+      "ClassName": "TaskScheduleEventInfo",
+      "Summary": "Defines the TaskScheduleEventInfo Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":startDate",
+          "Type": "DateTimeValue",
+          "Version": "Office2021",
+          "PropertyComments": "startDate"
+        },
+        {
+          "QName": ":dueDate",
+          "Type": "DateTimeValue",
+          "Version": "Office2021",
+          "PropertyComments": "dueDate"
+        }
+      ]
+    },
+    {
+      "Name": "t:CT_TaskProgressEventInfo/t:Progress",
+      "ClassName": "TaskProgressEventInfo",
+      "Summary": "Defines the TaskProgressEventInfo Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":percentComplete",
+          "Type": "Int32Value",
+          "Version": "Office2021",
+          "PropertyComments": "percentComplete",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "t:CT_TaskPriorityEventInfo/t:Priority",
+      "ClassName": "TaskPriorityEventInfo",
+      "Summary": "Defines the TaskPriorityEventInfo Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":value",
+          "Type": "Int32Value",
+          "Version": "Office2021",
+          "PropertyComments": "value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "t:CT_TaskDeleteEventInfo/t:Delete",
+      "ClassName": "TaskDeleteEventInfo",
+      "Summary": "Defines the TaskDeleteEventInfo Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "t:CT_TaskUndeleteEventInfo/t:Undelete",
+      "ClassName": "TaskUndeleteEventInfo",
+      "Summary": "Defines the TaskUndeleteEventInfo Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "t:CT_TaskUnassignAll/t:UnassignAll",
+      "ClassName": "TaskUnassignAll",
+      "Summary": "Defines the TaskUnassignAll Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "t:CT_TaskUndo/t:Undo",
+      "ClassName": "TaskUndo",
+      "Summary": "Defines the TaskUndo Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "t:CT_CommentAnchor/t:Comment",
+      "ClassName": "CommentAnchor",
+      "Summary": "Defines the CommentAnchor Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

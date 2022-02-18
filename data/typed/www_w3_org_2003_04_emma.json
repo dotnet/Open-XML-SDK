@@ -1,0 +1,70 @@
+[
+  {
+    "Name": "emma:CT_Arc/emma:arc",
+    "ClassName": "Arc"
+  },
+  {
+    "Name": "emma:CT_Derivation/emma:derivation",
+    "ClassName": "Derivation"
+  },
+  {
+    "Name": "emma:CT_DerivedFrom/emma:derived-from",
+    "ClassName": "DerivedFrom"
+  },
+  {
+    "Name": "emma:CT_Emma/emma:emma",
+    "ClassName": "Emma"
+  },
+  {
+    "Name": "emma:CT_EndPoint/emma:endpoint",
+    "ClassName": "EndPoint"
+  },
+  {
+    "Name": "emma:CT_EndPointInfo/emma:endpoint-info",
+    "ClassName": "EndPointInfo"
+  },
+  {
+    "Name": "emma:CT_Grammar/emma:grammar",
+    "ClassName": "Grammar"
+  },
+  {
+    "Name": "emma:CT_Group/emma:group",
+    "ClassName": "Group"
+  },
+  {
+    "Name": "emma:CT_GroupInfo/emma:group-info",
+    "ClassName": "GroupInfo"
+  },
+  {
+    "Name": "emma:CT_Info/emma:info",
+    "ClassName": "Info"
+  },
+  {
+    "Name": "emma:CT_Interpretation/emma:interpretation",
+    "ClassName": "Interpretation"
+  },
+  {
+    "Name": "emma:CT_Lattice/emma:lattice",
+    "ClassName": "Lattice"
+  },
+  {
+    "Name": "emma:CT_Literal/emma:literal",
+    "ClassName": "Literal"
+  },
+  {
+    "Name": "emma:CT_Model/emma:model",
+    "ClassName": "Model"
+  },
+  {
+    "Name": "emma:CT_Node/emma:node",
+    "ClassName": "Node"
+  },
+  {
+    "Name": "emma:CT_OneOf/emma:one-of",
+    "ClassName": "OneOf"
+  },
+  {
+    "Name": "emma:CT_Sequence/emma:sequence",
+    "ClassName": "Sequence"
+  }
+]

@@ -1,0 +1,1067 @@
+[
+  {
+    "Name": "a:CT_Color3/",
+    "ClassName": "Color3Type"
+  },
+  {
+    "Name": "p:CT_EightDirectionTransition/",
+    "ClassName": "EightDirectionTransitionType"
+  },
+  {
+    "Name": "p:CT_EmbeddedFontDataId/",
+    "ClassName": "EmbeddedFontDataIdType"
+  },
+  {
+    "Name": "p:CT_Empty/",
+    "ClassName": "EmptyType"
+  },
+  {
+    "Name": "p:CT_GroupShape/",
+    "ClassName": "GroupShapeType"
+  },
+  {
+    "Name": "p:CT_IndexRange/",
+    "ClassName": "IndexRangeType"
+  },
+  {
+    "Name": "p:CT_NormalViewPortion/",
+    "ClassName": "NormalViewPortionType"
+  },
+  {
+    "Name": "p:CT_OptionalBlackTransition/",
+    "ClassName": "OptionalBlackTransitionType"
+  },
+  {
+    "Name": "p:CT_OrientationTransition/",
+    "ClassName": "OrientationTransitionType"
+  },
+  {
+    "Name": "p:CT_SideDirectionTransition/",
+    "ClassName": "SideDirectionTransitionType"
+  },
+  {
+    "Name": "a:CT_TextListStyle/",
+    "ClassName": "TextListStyleType"
+  },
+  {
+    "Name": "p:CT_TimeNodeList/",
+    "ClassName": "TimeTypeListType"
+  },
+  {
+    "Name": "p:CT_TLAnimVariant/",
+    "ClassName": "TimeListAnimationVariantType"
+  },
+  {
+    "Name": "p:CT_TLPoint/",
+    "ClassName": "TimeListType"
+  },
+  {
+    "Name": "p:CT_TLSubShapeId/",
+    "ClassName": "TimeListSubShapeIdType"
+  },
+  {
+    "Name": "p:CT_TLTimeCondition/",
+    "ClassName": "TimeListConditionalType"
+  },
+  {
+    "Name": "p:CT_TLTimeConditionList/",
+    "ClassName": "TimeListTimeConditionalListType"
+  },
+  {
+    "Name": "p:CT_TLAnimateBehavior/p:anim",
+    "ClassName": "Animate"
+  },
+  {
+    "Name": "p:CT_TLAnimateColorBehavior/p:animClr",
+    "ClassName": "AnimateColor"
+  },
+  {
+    "Name": "p:CT_TLAnimateEffectBehavior/p:animEffect",
+    "ClassName": "AnimateEffect"
+  },
+  {
+    "Name": "p:CT_TLAnimateMotionBehavior/p:animMotion",
+    "ClassName": "AnimateMotion"
+  },
+  {
+    "Name": "p:CT_TLAnimateRotationBehavior/p:animRot",
+    "ClassName": "AnimateRotation"
+  },
+  {
+    "Name": "p:CT_TLAnimateScaleBehavior/p:animScale",
+    "ClassName": "AnimateScale"
+  },
+  {
+    "Name": "xsd:string/p:attrName",
+    "ClassName": "AttributeName"
+  },
+  {
+    "Name": "p:CT_TLBehaviorAttributeNameList/p:attrNameLst",
+    "ClassName": "AttributeNameList"
+  },
+  {
+    "Name": "p:CT_TLMediaNodeAudio/p:audio",
+    "ClassName": "Audio"
+  },
+  {
+    "Name": "p:CT_Background/p:bg",
+    "ClassName": "Background"
+  },
+  {
+    "Name": "p:CT_Empty/p:bg",
+    "ClassName": "BackgroundAnimation"
+  },
+  {
+    "Name": "p:CT_BackgroundProperties/p:bgPr",
+    "ClassName": "BackgroundProperties"
+  },
+  {
+    "Name": "a:CT_StyleMatrixReference/p:bgRef",
+    "ClassName": "BackgroundStyleReference"
+  },
+  {
+    "Name": "p:CT_Empty/p:bldAsOne",
+    "ClassName": "BuildAsOne"
+  },
+  {
+    "Name": "p:CT_TLBuildDiagram/p:bldDgm",
+    "ClassName": "BuildDiagram"
+  },
+  {
+    "Name": "p:CT_TLGraphicalObjectBuild/p:bldGraphic",
+    "ClassName": "BuildGraphics"
+  },
+  {
+    "Name": "p:CT_BuildList/p:bldLst",
+    "ClassName": "BuildList"
+  },
+  {
+    "Name": "p:CT_TLOleBuildChart/p:bldOleChart",
+    "ClassName": "BuildOleChart"
+  },
+  {
+    "Name": "p:CT_TLBuildParagraph/p:bldP",
+    "ClassName": "BuildParagraph"
+  },
+  {
+    "Name": "a:CT_AnimationGraphicalObjectBuildProperties/p:bldSub",
+    "ClassName": "BuildSubElement"
+  },
+  {
+    "Name": "p:CT_OrientationTransition/p:blinds",
+    "ClassName": "BlindsTransition"
+  },
+  {
+    "Name": "a:CT_BlipFillProperties/p:blipFill",
+    "ClassName": "BlipFill"
+  },
+  {
+    "Name": "a:CT_TextListStyle/p:bodyStyle",
+    "ClassName": "BodyStyle"
+  },
+  {
+    "Name": "p:CT_EmbeddedFontDataId/p:bold",
+    "ClassName": "BoldFont"
+  },
+  {
+    "Name": "p:CT_EmbeddedFontDataId/p:boldItalic",
+    "ClassName": "BoldItalicFont"
+  },
+  {
+    "Name": "p:CT_TLAnimVariantBooleanVal/p:boolVal",
+    "ClassName": "BooleanVariantValue"
+  },
+  {
+    "Name": "p:CT_ShowInfoBrowse/p:browse",
+    "ClassName": "BrowseSlideMode"
+  },
+  {
+    "Name": "p:CT_TLByAnimateColorTransform/p:by",
+    "ClassName": "ByColor"
+  },
+  {
+    "Name": "p:CT_TLPoint/p:by",
+    "ClassName": "ByPosition"
+  },
+  {
+    "Name": "p:CT_TLCommonBehaviorData/p:cBhvr",
+    "ClassName": "CommonBehavior"
+  },
+  {
+    "Name": "p:CT_IndexRange/p:charRg",
+    "ClassName": "CharRange"
+  },
+  {
+    "Name": "p:CT_OrientationTransition/p:checker",
+    "ClassName": "CheckerTransition"
+  },
+  {
+    "Name": "p:CT_TimeNodeList/p:childTnLst",
+    "ClassName": "ChildTimeNodeList"
+  },
+  {
+    "Name": "p:CT_Empty/p:circle",
+    "ClassName": "CircleTransition"
+  },
+  {
+    "Name": "a:CT_ColorMapping/p:clrMap",
+    "ClassName": "ColorMap"
+  },
+  {
+    "Name": "a:CT_ColorMappingOverride/p:clrMapOvr",
+    "ClassName": "ColorMapOverride"
+  },
+  {
+    "Name": "a:CT_ColorMRU/p:clrMru",
+    "ClassName": "ColorMostRecentlyUsed"
+  },
+  {
+    "Name": "a:CT_Color/p:clrVal",
+    "ClassName": "ColorValue"
+  },
+  {
+    "Name": "p:CT_Comment/p:cm",
+    "ClassName": "Comment"
+  },
+  {
+    "Name": "p:CT_CommentAuthor/p:cmAuthor",
+    "ClassName": "CommentAuthor"
+  },
+  {
+    "Name": "p:CT_CommentAuthorList/p:cmAuthorLst",
+    "ClassName": "CommentAuthorList",
+    "PartClassName": "CommentAuthorsPart"
+  },
+  {
+    "Name": "p:CT_TLCommandBehavior/p:cmd",
+    "ClassName": "Command"
+  },
+  {
+    "Name": "p:CT_TLCommonMediaNodeData/p:cMediaNode",
+    "ClassName": "CommonMediaNode"
+  },
+  {
+    "Name": "p:CT_CommentList/p:cmLst",
+    "ClassName": "CommentList",
+    "PartClassName": "SlideCommentsPart"
+  },
+  {
+    "Name": "a:CT_NonVisualConnectorProperties/p:cNvCxnSpPr",
+    "ClassName": "NonVisualConnectorShapeDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualGraphicFrameProperties/p:cNvGraphicFramePr",
+    "ClassName": "NonVisualGraphicFrameDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualGroupDrawingShapeProps/p:cNvGrpSpPr",
+    "ClassName": "NonVisualGroupShapeDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualPictureProperties/p:cNvPicPr",
+    "ClassName": "NonVisualPictureDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/p:cNvPr",
+    "ClassName": "NonVisualDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingShapeProps/p:cNvSpPr",
+    "ClassName": "NonVisualShapeDrawingProperties"
+  },
+  {
+    "Name": "p:CT_OrientationTransition/p:comb",
+    "ClassName": "CombTransition"
+  },
+  {
+    "Name": "p:CT_TLTimeCondition/p:cond",
+    "ClassName": "Condition"
+  },
+  {
+    "Name": "p:CT_ContentPart/p:contentPart",
+    "ClassName": "ContentPart"
+  },
+  {
+    "Name": "p:CT_Control/p:control",
+    "ClassName": "Control"
+  },
+  {
+    "Name": "p:CT_ControlList/p:controls",
+    "ClassName": "ControlList"
+  },
+  {
+    "Name": "p:CT_EightDirectionTransition/p:cover",
+    "ClassName": "CoverTransition"
+  },
+  {
+    "Name": "p:CT_CommonSlideData/p:cSld",
+    "ClassName": "CommonSlideData"
+  },
+  {
+    "Name": "p:CT_CommonSlideViewProperties/p:cSldViewPr",
+    "ClassName": "CommonSlideViewProperties"
+  },
+  {
+    "Name": "p:CT_TLCommonTimeNodeData/p:cTn",
+    "ClassName": "CommonTimeNode"
+  },
+  {
+    "Name": "p:CT_CustomerData/p:custData",
+    "ClassName": "CustomerData"
+  },
+  {
+    "Name": "p:CT_CustomerDataList/p:custDataLst",
+    "ClassName": "CustomerDataList"
+  },
+  {
+    "Name": "p:CT_CustomShow/p:custShow",
+    "ClassName": "CustomShow"
+  },
+  {
+    "Name": "p:CT_CustomShowId/p:custShow",
+    "ClassName": "CustomShowReference"
+  },
+  {
+    "Name": "p:CT_CustomShowList/p:custShowLst",
+    "ClassName": "CustomShowList"
+  },
+  {
+    "Name": "p:CT_OptionalBlackTransition/p:cut",
+    "ClassName": "CutTransition"
+  },
+  {
+    "Name": "p:CT_CommonViewProperties/p:cViewPr",
+    "ClassName": "CommonViewProperties"
+  },
+  {
+    "Name": "p:CT_Connector/p:cxnSp",
+    "ClassName": "ConnectionShape"
+  },
+  {
+    "Name": "a:CT_TextListStyle/p:defaultTextStyle",
+    "ClassName": "DefaultTextStyle"
+  },
+  {
+    "Name": "p:CT_Empty/p:diamond",
+    "ClassName": "DiamondTransition"
+  },
+  {
+    "Name": "p:CT_Empty/p:dissolve",
+    "ClassName": "DissolveTransition"
+  },
+  {
+    "Name": "p:CT_OleObjectEmbed/p:embed",
+    "ClassName": "OleObjectEmbed"
+  },
+  {
+    "Name": "p:CT_EmbeddedFontListEntry/p:embeddedFont",
+    "ClassName": "EmbeddedFont"
+  },
+  {
+    "Name": "p:CT_EmbeddedFontList/p:embeddedFontLst",
+    "ClassName": "EmbeddedFontList"
+  },
+  {
+    "Name": "p:CT_TLTimeConditionList/p:endCondLst",
+    "ClassName": "EndConditionList"
+  },
+  {
+    "Name": "p:CT_Empty/p:endSnd",
+    "ClassName": "EndSoundAction"
+  },
+  {
+    "Name": "p:CT_TLTimeCondition/p:endSync",
+    "ClassName": "EndSync"
+  },
+  {
+    "Name": "p:CT_TLTimeNodeExclusive/p:excl",
+    "ClassName": "ExclusiveTimeNode"
+  },
+  {
+    "Name": "p:CT_ApplicationNonVisualDrawingPropsExtension/p:ext",
+    "ClassName": "ApplicationNonVisualDrawingPropertiesExtension"
+  },
+  {
+    "Name": "p:CT_CommentAuthorExtension/p:ext",
+    "ClassName": "CommentAuthorExtension"
+  },
+  {
+    "Name": "p:CT_CommentExtension/p:ext",
+    "ClassName": "CommentExtension"
+  },
+  {
+    "Name": "p:CT_CommonSlideDataExtension/p:ext",
+    "ClassName": "CommonSlideDataExtension"
+  },
+  {
+    "Name": "p:CT_Extension/p:ext",
+    "ClassName": "Extension"
+  },
+  {
+    "Name": "p:CT_HandoutMasterExtension/p:ext",
+    "ClassName": "HandoutMasterExtension"
+  },
+  {
+    "Name": "p:CT_NotesMasterExtension/p:ext",
+    "ClassName": "NotesMasterExtension"
+  },
+  {
+    "Name": "p:CT_PresentationExtension/p:ext",
+    "ClassName": "PresentationExtension"
+  },
+  {
+    "Name": "p:CT_PresentationPropertiesExtension/p:ext",
+    "ClassName": "PresentationPropertiesExtension"
+  },
+  {
+    "Name": "p:CT_ShowPropertiesExtension/p:ext",
+    "ClassName": "ShowPropertiesExtension"
+  },
+  {
+    "Name": "p:CT_SlideExtension/p:ext",
+    "ClassName": "SlideExtension"
+  },
+  {
+    "Name": "p:CT_SlideLayoutExtension/p:ext",
+    "ClassName": "SlideLayoutExtension"
+  },
+  {
+    "Name": "p:CT_SlideMasterExtension/p:ext",
+    "ClassName": "SlideMasterExtension"
+  },
+  {
+    "Name": "p:CT_ApplicationNonVisualDrawingPropsExtensionList/p:extLst",
+    "ClassName": "ApplicationNonVisualDrawingPropertiesExtensionList"
+  },
+  {
+    "Name": "p:CT_CommentAuthorExtensionList/p:extLst",
+    "ClassName": "CommentAuthorExtensionList"
+  },
+  {
+    "Name": "p:CT_CommentExtensionList/p:extLst",
+    "ClassName": "CommentExtensionList"
+  },
+  {
+    "Name": "p:CT_CommonSlideDataExtensionList/p:extLst",
+    "ClassName": "CommonSlideDataExtensionList"
+  },
+  {
+    "Name": "p:CT_ExtensionList/p:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "p:CT_ExtensionListModify/p:extLst",
+    "ClassName": "ExtensionListWithModification"
+  },
+  {
+    "Name": "p:CT_HandoutMasterExtensionList/p:extLst",
+    "ClassName": "HandoutMasterExtensionList"
+  },
+  {
+    "Name": "p:CT_NotesMasterExtensionList/p:extLst",
+    "ClassName": "NotesMasterExtensionList"
+  },
+  {
+    "Name": "p:CT_PresentationExtensionList/p:extLst",
+    "ClassName": "PresentationExtensionList"
+  },
+  {
+    "Name": "p:CT_PresentationPropertiesExtensionList/p:extLst",
+    "ClassName": "PresentationPropertiesExtensionList"
+  },
+  {
+    "Name": "p:CT_ShowPropertiesExtensionList/p:extLst",
+    "ClassName": "ShowPropertiesExtensionList"
+  },
+  {
+    "Name": "p:CT_SlideExtensionList/p:extLst",
+    "ClassName": "SlideExtensionList"
+  },
+  {
+    "Name": "p:CT_SlideLayoutExtensionList/p:extLst",
+    "ClassName": "SlideLayoutExtensionList"
+  },
+  {
+    "Name": "p:CT_SlideMasterExtensionList/p:extLst",
+    "ClassName": "SlideMasterExtensionList"
+  },
+  {
+    "Name": "p:CT_OptionalBlackTransition/p:fade",
+    "ClassName": "FadeTransition"
+  },
+  {
+    "Name": "p:CT_TLAnimVariantFloatVal/p:fltVal",
+    "ClassName": "FloatVariantValue"
+  },
+  {
+    "Name": "a:CT_TextFont/p:font",
+    "ClassName": "Font"
+  },
+  {
+    "Name": "a:CT_Color3/p:from",
+    "ClassName": "FromColor"
+  },
+  {
+    "Name": "p:CT_TLPoint/p:from",
+    "ClassName": "FromPosition"
+  },
+  {
+    "Name": "a:CT_AnimationElementChoice/p:graphicEl",
+    "ClassName": "GraphicElement"
+  },
+  {
+    "Name": "p:CT_GraphicalObjectFrame/p:graphicFrame",
+    "ClassName": "GraphicFrame"
+  },
+  {
+    "Name": "a:CT_PositiveSize2D/p:gridSpacing",
+    "ClassName": "GridSpacing"
+  },
+  {
+    "Name": "p:CT_GroupShape/p:grpSp",
+    "ClassName": "GroupShape"
+  },
+  {
+    "Name": "a:CT_GroupShapeProperties/p:grpSpPr",
+    "ClassName": "GroupShapeProperties"
+  },
+  {
+    "Name": "p:CT_Guide/p:guide",
+    "ClassName": "Guide"
+  },
+  {
+    "Name": "p:CT_GuideList/p:guideLst",
+    "ClassName": "GuideList"
+  },
+  {
+    "Name": "p:CT_HandoutMaster/p:handoutMaster",
+    "ClassName": "HandoutMaster",
+    "PartClassName": "HandoutMasterPart"
+  },
+  {
+    "Name": "p:CT_HandoutMasterIdListEntry/p:handoutMasterId",
+    "ClassName": "HandoutMasterId"
+  },
+  {
+    "Name": "p:CT_HandoutMasterIdList/p:handoutMasterIdLst",
+    "ClassName": "HandoutMasterIdList"
+  },
+  {
+    "Name": "p:CT_HeaderFooter/p:hf",
+    "ClassName": "HeaderFooter"
+  },
+  {
+    "Name": "p:CT_TLByHslColorTransform/p:hsl",
+    "ClassName": "HslColor"
+  },
+  {
+    "Name": "p:CT_HtmlPublishProperties/p:htmlPubPr",
+    "ClassName": "HtmlPublishProperties"
+  },
+  {
+    "Name": "p:CT_TLSubShapeId/p:inkTgt",
+    "ClassName": "InkTarget"
+  },
+  {
+    "Name": "p:CT_TLAnimVariantIntegerVal/p:intVal",
+    "ClassName": "IntegerVariantValue"
+  },
+  {
+    "Name": "p:CT_EmbeddedFontDataId/p:italic",
+    "ClassName": "ItalicFont"
+  },
+  {
+    "Name": "p:CT_TLIterateData/p:iterate",
+    "ClassName": "Iterate"
+  },
+  {
+    "Name": "p:CT_Kinsoku/p:kinsoku",
+    "ClassName": "Kinsoku"
+  },
+  {
+    "Name": "p:CT_ShowInfoKiosk/p:kiosk",
+    "ClassName": "KioskSlideMode"
+  },
+  {
+    "Name": "p:CT_OleObjectLink/p:link",
+    "ClassName": "OleObjectLink"
+  },
+  {
+    "Name": "p:CT_ModifyVerifier/p:modifyVerifier",
+    "ClassName": "ModificationVerifier"
+  },
+  {
+    "Name": "p:CT_Empty/p:newsflash",
+    "ClassName": "NewsflashTransition"
+  },
+  {
+    "Name": "p:CT_TLTimeConditionList/p:nextCondLst",
+    "ClassName": "NextConditionList"
+  },
+  {
+    "Name": "p:CT_NormalViewProperties/p:normalViewPr",
+    "ClassName": "NormalViewProperties"
+  },
+  {
+    "Name": "p:CT_NotesSlide/p:notes",
+    "ClassName": "NotesSlide",
+    "PartClassName": "NotesSlidePart"
+  },
+  {
+    "Name": "p:CT_NotesMaster/p:notesMaster",
+    "ClassName": "NotesMaster",
+    "PartClassName": "NotesMasterPart"
+  },
+  {
+    "Name": "p:CT_NotesMasterIdListEntry/p:notesMasterId",
+    "ClassName": "NotesMasterId"
+  },
+  {
+    "Name": "p:CT_NotesMasterIdList/p:notesMasterIdLst",
+    "ClassName": "NotesMasterIdList"
+  },
+  {
+    "Name": "a:CT_TextListStyle/p:notesStyle",
+    "ClassName": "NotesStyle"
+  },
+  {
+    "Name": "a:CT_PositiveSize2D/p:notesSz",
+    "ClassName": "NotesSize"
+  },
+  {
+    "Name": "p:CT_NotesTextViewProperties/p:notesTextViewPr",
+    "ClassName": "NotesTextViewProperties"
+  },
+  {
+    "Name": "p:CT_NotesViewProperties/p:notesViewPr",
+    "ClassName": "NotesViewProperties"
+  },
+  {
+    "Name": "p:CT_ConnectorNonVisual/p:nvCxnSpPr",
+    "ClassName": "NonVisualConnectionShapeProperties"
+  },
+  {
+    "Name": "p:CT_GraphicalObjectFrameNonVisual/p:nvGraphicFramePr",
+    "ClassName": "NonVisualGraphicFrameProperties"
+  },
+  {
+    "Name": "p:CT_GroupShapeNonVisual/p:nvGrpSpPr",
+    "ClassName": "NonVisualGroupShapeProperties"
+  },
+  {
+    "Name": "p:CT_PictureNonVisual/p:nvPicPr",
+    "ClassName": "NonVisualPictureProperties"
+  },
+  {
+    "Name": "p:CT_ApplicationNonVisualDrawingProps/p:nvPr",
+    "ClassName": "ApplicationNonVisualDrawingProperties"
+  },
+  {
+    "Name": "p:CT_ShapeNonVisual/p:nvSpPr",
+    "ClassName": "NonVisualShapeProperties"
+  },
+  {
+    "Name": "p:CT_TLOleChartTargetElement/p:oleChartEl",
+    "ClassName": "OleChartElement"
+  },
+  {
+    "Name": "p:CT_OleObject/p:oleObj",
+    "ClassName": "OleObject"
+  },
+  {
+    "Name": "a:CT_Point2D/p:origin",
+    "ClassName": "Origin"
+  },
+  {
+    "Name": "a:CT_TextListStyle/p:otherStyle",
+    "ClassName": "OtherStyle"
+  },
+  {
+    "Name": "p:CT_OutlineViewProperties/p:outlineViewPr",
+    "ClassName": "OutlineViewProperties"
+  },
+  {
+    "Name": "p:CT_TLTimeNodeParallel/p:par",
+    "ClassName": "ParallelTimeNode"
+  },
+  {
+    "Name": "a:CT_Color/p:penClr",
+    "ClassName": "PenColor"
+  },
+  {
+    "Name": "p:CT_Placeholder/p:ph",
+    "ClassName": "PlaceholderShape"
+  },
+  {
+    "Name": "p:CT_PhotoAlbum/p:photoAlbum",
+    "ClassName": "PhotoAlbum"
+  },
+  {
+    "Name": "p:CT_Picture/p:pic",
+    "ClassName": "Picture"
+  },
+  {
+    "Name": "p:CT_Empty/p:plus",
+    "ClassName": "PlusTransition"
+  },
+  {
+    "Name": "a:CT_Point2D/p:pos",
+    "ClassName": "Position"
+  },
+  {
+    "Name": "p:CT_Empty/p:present",
+    "ClassName": "PresenterSlideMode"
+  },
+  {
+    "Name": "p:CT_Presentation/p:presentation",
+    "ClassName": "Presentation",
+    "PartClassName": "PresentationPart"
+  },
+  {
+    "Name": "p:CT_PresentationProperties/p:presentationPr",
+    "ClassName": "PresentationProperties",
+    "PartClassName": "PresentationPropertiesPart"
+  },
+  {
+    "Name": "p:CT_TLTimeConditionList/p:prevCondLst",
+    "ClassName": "PreviousConditionList"
+  },
+  {
+    "Name": "p:CT_IndexRange/p:pRg",
+    "ClassName": "ParagraphIndexRange"
+  },
+  {
+    "Name": "p:CT_PrintProperties/p:prnPr",
+    "ClassName": "PrintingProperties"
+  },
+  {
+    "Name": "p:CT_TLAnimFloat/p:progress",
+    "ClassName": "Progress"
+  },
+  {
+    "Name": "p:CT_EightDirectionTransition/p:pull",
+    "ClassName": "PullTransition"
+  },
+  {
+    "Name": "p:CT_SideDirectionTransition/p:push",
+    "ClassName": "PushTransition"
+  },
+  {
+    "Name": "p:CT_Empty/p:random",
+    "ClassName": "RandomTransition"
+  },
+  {
+    "Name": "p:CT_OrientationTransition/p:randomBar",
+    "ClassName": "RandomBarTransition"
+  },
+  {
+    "Name": "p:CT_TLPoint/p:rCtr",
+    "ClassName": "RotationCenter"
+  },
+  {
+    "Name": "p:CT_EmbeddedFontDataId/p:regular",
+    "ClassName": "RegularFont"
+  },
+  {
+    "Name": "p:CT_NormalViewPortion/p:restoredLeft",
+    "ClassName": "RestoredLeft"
+  },
+  {
+    "Name": "p:CT_NormalViewPortion/p:restoredTop",
+    "ClassName": "RestoredTop"
+  },
+  {
+    "Name": "p:CT_TLByRgbColorTransform/p:rgb",
+    "ClassName": "RgbColor"
+  },
+  {
+    "Name": "p:CT_TLTriggerRuntimeNode/p:rtn",
+    "ClassName": "RuntimeNodeTrigger"
+  },
+  {
+    "Name": "a:CT_Scale2D/p:scale",
+    "ClassName": "ScaleFactor"
+  },
+  {
+    "Name": "p:CT_TLTimeNodeSequence/p:seq",
+    "ClassName": "SequenceTimeNode"
+  },
+  {
+    "Name": "p:CT_TLSetBehavior/p:set",
+    "ClassName": "SetBehavior"
+  },
+  {
+    "Name": "p:CT_ShowProperties/p:showPr",
+    "ClassName": "ShowProperties"
+  },
+  {
+    "Name": "p:CT_OutlineViewSlideEntry/p:sld",
+    "ClassName": "OutlineViewSlideListEntry"
+  },
+  {
+    "Name": "p:CT_Slide/p:sld",
+    "ClassName": "Slide",
+    "PartClassName": "SlidePart"
+  },
+  {
+    "Name": "p:CT_SlideRelationshipListEntry/p:sld",
+    "ClassName": "SlideListEntry"
+  },
+  {
+    "Name": "p:CT_Empty/p:sldAll",
+    "ClassName": "SlideAll"
+  },
+  {
+    "Name": "p:CT_SlideIdListEntry/p:sldId",
+    "ClassName": "SlideId"
+  },
+  {
+    "Name": "p:CT_SlideIdList/p:sldIdLst",
+    "ClassName": "SlideIdList"
+  },
+  {
+    "Name": "p:CT_SlideLayout/p:sldLayout",
+    "ClassName": "SlideLayout",
+    "PartClassName": "SlideLayoutPart"
+  },
+  {
+    "Name": "p:CT_SlideLayoutIdListEntry/p:sldLayoutId",
+    "ClassName": "SlideLayoutId"
+  },
+  {
+    "Name": "p:CT_SlideLayoutIdList/p:sldLayoutIdLst",
+    "ClassName": "SlideLayoutIdList"
+  },
+  {
+    "Name": "p:CT_OutlineViewSlideList/p:sldLst",
+    "ClassName": "OutlineViewSlideList"
+  },
+  {
+    "Name": "p:CT_SlideRelationshipList/p:sldLst",
+    "ClassName": "SlideList"
+  },
+  {
+    "Name": "p:CT_SlideMaster/p:sldMaster",
+    "ClassName": "SlideMaster",
+    "PartClassName": "SlideMasterPart"
+  },
+  {
+    "Name": "p:CT_SlideMasterIdListEntry/p:sldMasterId",
+    "ClassName": "SlideMasterId"
+  },
+  {
+    "Name": "p:CT_SlideMasterIdList/p:sldMasterIdLst",
+    "ClassName": "SlideMasterIdList"
+  },
+  {
+    "Name": "p:CT_IndexRange/p:sldRg",
+    "ClassName": "SlideRange"
+  },
+  {
+    "Name": "p:CT_SlideSyncProperties/p:sldSyncPr",
+    "ClassName": "SlideSyncProperties",
+    "PartClassName": "SlideSyncDataPart"
+  },
+  {
+    "Name": "p:CT_SlideSize/p:sldSz",
+    "ClassName": "SlideSize"
+  },
+  {
+    "Name": "p:CT_Empty/p:sldTgt",
+    "ClassName": "SlideTarget"
+  },
+  {
+    "Name": "p:CT_SlideViewProperties/p:slideViewPr",
+    "ClassName": "SlideViewProperties"
+  },
+  {
+    "Name": "a:CT_EmbeddedWAVAudioFile/p:snd",
+    "ClassName": "Sound"
+  },
+  {
+    "Name": "p:CT_TransitionSoundAction/p:sndAc",
+    "ClassName": "SoundAction"
+  },
+  {
+    "Name": "a:CT_EmbeddedWAVAudioFile/p:sndTgt",
+    "ClassName": "SoundTarget"
+  },
+  {
+    "Name": "p:CT_SlideSorterViewProperties/p:sorterViewPr",
+    "ClassName": "SorterViewProperties"
+  },
+  {
+    "Name": "p:CT_Shape/p:sp",
+    "ClassName": "Shape"
+  },
+  {
+    "Name": "p:CT_SplitTransition/p:split",
+    "ClassName": "SplitTransition"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/p:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "p:CT_TLShapeTargetElement/p:spTgt",
+    "ClassName": "ShapeTarget"
+  },
+  {
+    "Name": "p:CT_GroupShape/p:spTree",
+    "ClassName": "ShapeTree"
+  },
+  {
+    "Name": "p:CT_TLTimeConditionList/p:stCondLst",
+    "ClassName": "StartConditionList"
+  },
+  {
+    "Name": "p:CT_CornerDirectionTransition/p:strips",
+    "ClassName": "StripsTransition"
+  },
+  {
+    "Name": "p:CT_TLAnimVariantStringVal/p:strVal",
+    "ClassName": "StringVariantValue"
+  },
+  {
+    "Name": "p:CT_TransitionStartSoundAction/p:stSnd",
+    "ClassName": "StartSoundAction"
+  },
+  {
+    "Name": "a:CT_ShapeStyle/p:style",
+    "ClassName": "ShapeStyle"
+  },
+  {
+    "Name": "p:CT_TLSubShapeId/p:subSp",
+    "ClassName": "SubShape"
+  },
+  {
+    "Name": "p:CT_TimeNodeList/p:subTnLst",
+    "ClassName": "SubTimeNodeList"
+  },
+  {
+    "Name": "p:CT_StringTag/p:tag",
+    "ClassName": "Tag"
+  },
+  {
+    "Name": "p:CT_TagList/p:tagLst",
+    "ClassName": "TagList",
+    "PartClassName": "UserDefinedTagsPart"
+  },
+  {
+    "Name": "p:CT_TagsData/p:tags",
+    "ClassName": "CustomerDataTags"
+  },
+  {
+    "Name": "p:CT_TLTimeAnimateValue/p:tav",
+    "ClassName": "TimeAnimateValue"
+  },
+  {
+    "Name": "p:CT_TLTimeAnimateValueList/p:tavLst",
+    "ClassName": "TimeAnimateValueList"
+  },
+  {
+    "Name": "xsd:string/p:text",
+    "ClassName": "Text"
+  },
+  {
+    "Name": "p:CT_TLTimeTargetElement/p:tgtEl",
+    "ClassName": "TargetElement"
+  },
+  {
+    "Name": "p:CT_SlideTiming/p:timing",
+    "ClassName": "Timing"
+  },
+  {
+    "Name": "a:CT_TextListStyle/p:titleStyle",
+    "ClassName": "TitleStyle"
+  },
+  {
+    "Name": "p:CT_TLIterateIntervalTime/p:tmAbs",
+    "ClassName": "TimeAbsolute"
+  },
+  {
+    "Name": "p:CT_TLIterateIntervalPercentage/p:tmPct",
+    "ClassName": "TimePercentage"
+  },
+  {
+    "Name": "p:CT_TLTemplate/p:tmpl",
+    "ClassName": "Template"
+  },
+  {
+    "Name": "p:CT_TLTemplateList/p:tmplLst",
+    "ClassName": "TemplateList"
+  },
+  {
+    "Name": "p:CT_TLTriggerTimeNodeID/p:tn",
+    "ClassName": "TimeNode"
+  },
+  {
+    "Name": "p:CT_RootTimeNode/p:tnLst",
+    "ClassName": "TimeNodeList"
+  },
+  {
+    "Name": "a:CT_Color3/p:to",
+    "ClassName": "ToColor"
+  },
+  {
+    "Name": "p:CT_TLAnimVariant/p:to",
+    "ClassName": "ToVariantValue"
+  },
+  {
+    "Name": "p:CT_TLPoint/p:to",
+    "ClassName": "ToPosition"
+  },
+  {
+    "Name": "p:CT_SlideTransition/p:transition",
+    "ClassName": "Transition"
+  },
+  {
+    "Name": "a:CT_TextBody/p:txBody",
+    "ClassName": "TextBody"
+  },
+  {
+    "Name": "p:CT_TLTextTargetElement/p:txEl",
+    "ClassName": "TextElement"
+  },
+  {
+    "Name": "p:CT_SlideMasterTextStyles/p:txStyles",
+    "ClassName": "TextStyles"
+  },
+  {
+    "Name": "p:CT_TLAnimVariant/p:val",
+    "ClassName": "VariantValue"
+  },
+  {
+    "Name": "p:CT_TLMediaNodeVideo/p:video",
+    "ClassName": "Video"
+  },
+  {
+    "Name": "p:CT_ViewProperties/p:viewPr",
+    "ClassName": "ViewProperties",
+    "PartClassName": "ViewPropertiesPart"
+  },
+  {
+    "Name": "p:CT_WebProperties/p:webPr",
+    "ClassName": "WebProperties"
+  },
+  {
+    "Name": "p:CT_Empty/p:wedge",
+    "ClassName": "WedgeTransition"
+  },
+  {
+    "Name": "p:CT_WheelTransition/p:wheel",
+    "ClassName": "WheelTransition"
+  },
+  {
+    "Name": "p:CT_SideDirectionTransition/p:wipe",
+    "ClassName": "WipeTransition"
+  },
+  {
+    "Name": "a:CT_Transform2D/p:xfrm",
+    "ClassName": "Transform"
+  },
+  {
+    "Name": "p:CT_InOutTransition/p:zoom",
+    "ClassName": "ZoomTransition"
+  }
+]

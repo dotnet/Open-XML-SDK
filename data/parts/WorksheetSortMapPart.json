@@ -1,0 +1,12 @@
+{
+  "Root": "xne:CT_WorksheetSortMap",
+  "Name": "WorksheetSortMapPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.wsSortMap\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/wsSortMap",
+  "Target": "wsSortMap",
+  "RootElement": "worksheetSortMap",
+  "Paths": {
+    "General": "."
+  }
+}

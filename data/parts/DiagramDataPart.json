@@ -1,0 +1,31 @@
+{
+  "Root": "dgm:CT_DataModelRoot",
+  "Name": "DiagramDataPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
+  "Target": "data",
+  "RootElement": "dataModel",
+  "Paths": {
+    "General": "../graphics"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "SlideParts",
+      "Name": "SlidePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "WorksheetParts",
+      "Name": "WorksheetPart",
+      "HasFixedContent": true
+    }
+  ]
+}

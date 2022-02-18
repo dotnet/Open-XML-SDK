@@ -1,0 +1,11 @@
+{
+  "Name": "WordprocessingPrinterSettingsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.printerSettings",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
+  "Target": "printerSettings",
+  "Extension": ".bin",
+  "Paths": {
+    "General": "../printerSettings"
+  }
+}

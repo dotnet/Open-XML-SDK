@@ -1,0 +1,130 @@
+[
+  {
+    "Name": "o:CT_StrokeChild/",
+    "ClassName": "StrokeChildType"
+  },
+  {
+    "Name": "o:CT_StrokeChild/o:bottom",
+    "ClassName": "BottomStroke"
+  },
+  {
+    "Name": "o:CT_Callout/o:callout",
+    "ClassName": "Callout"
+  },
+  {
+    "Name": "o:CT_ClipPath/o:clippath",
+    "ClassName": "ClipPath"
+  },
+  {
+    "Name": "o:CT_ColorMenu/o:colormenu",
+    "ClassName": "ColorMenu"
+  },
+  {
+    "Name": "o:CT_ColorMru/o:colormru",
+    "ClassName": "ColorMostRecentlyUsed"
+  },
+  {
+    "Name": "o:CT_StrokeChild/o:column",
+    "ClassName": "ColumnStroke"
+  },
+  {
+    "Name": "o:CT_Complex/o:complex",
+    "ClassName": "Complex"
+  },
+  {
+    "Name": "o:CT_Diagram/o:diagram",
+    "ClassName": "Diagram"
+  },
+  {
+    "Name": "o:CT_Entry/o:entry",
+    "ClassName": "Entry"
+  },
+  {
+    "Name": "o:CT_Extrusion/o:extrusion",
+    "ClassName": "Extrusion"
+  },
+  {
+    "Name": "xsd:string/o:FieldCodes",
+    "ClassName": "FieldCodes"
+  },
+  {
+    "Name": "o:CT_Fill/o:fill",
+    "ClassName": "FillExtendedProperties"
+  },
+  {
+    "Name": "o:CT_IdMap/o:idmap",
+    "ClassName": "ShapeIdMap"
+  },
+  {
+    "Name": "o:CT_Ink/o:ink",
+    "ClassName": "Ink"
+  },
+  {
+    "Name": "o:CT_StrokeChild/o:left",
+    "ClassName": "LeftStroke"
+  },
+  {
+    "Name": "o:ST_OLELinkType/o:LinkType",
+    "ClassName": "LinkType"
+  },
+  {
+    "Name": "o:CT_Lock/o:lock",
+    "ClassName": "Lock"
+  },
+  {
+    "Name": "o:ST_TrueFalseBlank/o:LockedField",
+    "ClassName": "LockedField"
+  },
+  {
+    "Name": "o:CT_OLEObject/o:OLEObject",
+    "ClassName": "OleObject"
+  },
+  {
+    "Name": "o:CT_Proxy/o:proxy",
+    "ClassName": "Proxy"
+  },
+  {
+    "Name": "o:CT_R/o:r",
+    "ClassName": "Rule"
+  },
+  {
+    "Name": "o:CT_RegroupTable/o:regrouptable",
+    "ClassName": "RegroupTable"
+  },
+  {
+    "Name": "o:CT_Relation/o:rel",
+    "ClassName": "Relation"
+  },
+  {
+    "Name": "o:CT_RelationTable/o:relationtable",
+    "ClassName": "RelationTable"
+  },
+  {
+    "Name": "o:CT_StrokeChild/o:right",
+    "ClassName": "RightStroke"
+  },
+  {
+    "Name": "o:CT_Rules/o:rules",
+    "ClassName": "Rules"
+  },
+  {
+    "Name": "o:CT_ShapeDefaults/o:shapedefaults",
+    "ClassName": "ShapeDefaults"
+  },
+  {
+    "Name": "o:CT_ShapeLayout/o:shapelayout",
+    "ClassName": "ShapeLayout"
+  },
+  {
+    "Name": "o:CT_SignatureLine/o:signatureline",
+    "ClassName": "SignatureLine"
+  },
+  {
+    "Name": "o:CT_Skew/o:skew",
+    "ClassName": "Skew"
+  },
+  {
+    "Name": "o:CT_StrokeChild/o:top",
+    "ClassName": "TopStroke"
+  }
+]

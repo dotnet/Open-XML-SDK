@@ -1,0 +1,1864 @@
+[
+  {
+    "Name": "x:CT_BooleanProperty/",
+    "ClassName": "BooleanPropertyType"
+  },
+  {
+    "Name": "x:CT_BorderPr/",
+    "ClassName": "BorderPropertiesType"
+  },
+  {
+    "Name": "x:CT_Cell/",
+    "ClassName": "CellType"
+  },
+  {
+    "Name": "x:CT_Color/",
+    "ClassName": "ColorType"
+  },
+  {
+    "Name": "x:CT_Dxf/",
+    "ClassName": "DifferentialFormatType"
+  },
+  {
+    "Name": "x:CT_HierarchyUsage/",
+    "ClassName": "HierarchyUsageType"
+  },
+  {
+    "Name": "x:CT_IntProperty/",
+    "ClassName": "InternationalPropertyType"
+  },
+  {
+    "Name": "x:CT_LegacyDrawing/",
+    "ClassName": "LegacyDrawingType"
+  },
+  {
+    "Name": "x:CT_MetadataBlocks/",
+    "ClassName": "MetadataBlocksType"
+  },
+  {
+    "Name": "x:CT_PageBreak/",
+    "ClassName": "PageBreakType"
+  },
+  {
+    "Name": "x:CT_Rst/",
+    "ClassName": "RstType"
+  },
+  {
+    "Name": "x:CT_TableFormula/",
+    "ClassName": "TableFormulaType"
+  },
+  {
+    "Name": "x:CT_Tuples/",
+    "ClassName": "TuplesType"
+  },
+  {
+    "Name": "x:CT_X/",
+    "ClassName": "XType"
+  },
+  {
+    "Name": "x:CT_Xstring/",
+    "ClassName": "XstringType"
+  },
+  {
+    "Name": "x:CT_CellAlignment/x:alignment",
+    "ClassName": "Alignment"
+  },
+  {
+    "Name": "x:CT_ObjectAnchor/x:anchor",
+    "ClassName": "ObjectAnchor"
+  },
+  {
+    "Name": "x:CT_Xstring/x:author",
+    "ClassName": "Author"
+  },
+  {
+    "Name": "x:CT_Authors/x:authors",
+    "ClassName": "Authors"
+  },
+  {
+    "Name": "x:CT_AutoFilter/x:autoFilter",
+    "ClassName": "AutoFilter"
+  },
+  {
+    "Name": "x:CT_AutoSortScope/x:autoSortScope",
+    "ClassName": "AutoSortScope"
+  },
+  {
+    "Name": "x:CT_Boolean/x:b",
+    "ClassName": "BooleanItem"
+  },
+  {
+    "Name": "x:CT_BooleanProperty/x:b",
+    "ClassName": "Bold"
+  },
+  {
+    "Name": "x:CT_Color/x:bgColor",
+    "ClassName": "BackgroundColor"
+  },
+  {
+    "Name": "x:CT_FutureMetadataBlock/x:bk",
+    "ClassName": "FutureMetadataBlock"
+  },
+  {
+    "Name": "x:CT_MetadataBlock/x:bk",
+    "ClassName": "MetadataBlock"
+  },
+  {
+    "Name": "x:CT_BookViews/x:bookViews",
+    "ClassName": "BookViews"
+  },
+  {
+    "Name": "x:CT_Border/x:border",
+    "ClassName": "Border"
+  },
+  {
+    "Name": "x:CT_Borders/x:borders",
+    "ClassName": "Borders"
+  },
+  {
+    "Name": "x:CT_BorderPr/x:bottom",
+    "ClassName": "BottomBorder"
+  },
+  {
+    "Name": "x:CT_Break/x:brk",
+    "ClassName": "Break"
+  },
+  {
+    "Name": "x:CT_CalcCell/x:c",
+    "ClassName": "CalculationCell"
+  },
+  {
+    "Name": "x:CT_Cell/x:c",
+    "ClassName": "Cell"
+  },
+  {
+    "Name": "x:CT_CacheField/x:cacheField",
+    "ClassName": "CacheField"
+  },
+  {
+    "Name": "x:CT_CacheFields/x:cacheFields",
+    "ClassName": "CacheFields"
+  },
+  {
+    "Name": "x:CT_CacheHierarchies/x:cacheHierarchies",
+    "ClassName": "CacheHierarchies"
+  },
+  {
+    "Name": "x:CT_CacheHierarchy/x:cacheHierarchy",
+    "ClassName": "CacheHierarchy"
+  },
+  {
+    "Name": "x:CT_CacheSource/x:cacheSource",
+    "ClassName": "CacheSource"
+  },
+  {
+    "Name": "x:CT_CalcChain/x:calcChain",
+    "ClassName": "CalculationChain",
+    "PartClassName": "CalculationChainPart"
+  },
+  {
+    "Name": "x:CT_CalcPr/x:calcPr",
+    "ClassName": "CalculationProperties"
+  },
+  {
+    "Name": "x:CT_TableFormula/x:calculatedColumnFormula",
+    "ClassName": "CalculatedColumnFormula"
+  },
+  {
+    "Name": "x:CT_CalculatedItem/x:calculatedItem",
+    "ClassName": "CalculatedItem"
+  },
+  {
+    "Name": "x:CT_CalculatedItems/x:calculatedItems",
+    "ClassName": "CalculatedItems"
+  },
+  {
+    "Name": "x:CT_CalculatedMember/x:calculatedMember",
+    "ClassName": "CalculatedMember"
+  },
+  {
+    "Name": "x:CT_CalculatedMembers/x:calculatedMembers",
+    "ClassName": "CalculatedMembers"
+  },
+  {
+    "Name": "x:CT_ExternalCell/x:cell",
+    "ClassName": "ExternalCell"
+  },
+  {
+    "Name": "x:CT_MetadataBlocks/x:cellMetadata",
+    "ClassName": "CellMetadata"
+  },
+  {
+    "Name": "x:CT_CellStyle/x:cellStyle",
+    "ClassName": "CellStyle"
+  },
+  {
+    "Name": "x:CT_CellStyles/x:cellStyles",
+    "ClassName": "CellStyles"
+  },
+  {
+    "Name": "x:CT_CellStyleXfs/x:cellStyleXfs",
+    "ClassName": "CellStyleFormats"
+  },
+  {
+    "Name": "x:CT_CellWatch/x:cellWatch",
+    "ClassName": "CellWatch"
+  },
+  {
+    "Name": "x:CT_CellWatches/x:cellWatches",
+    "ClassName": "CellWatches"
+  },
+  {
+    "Name": "x:CT_CellXfs/x:cellXfs",
+    "ClassName": "CellFormats"
+  },
+  {
+    "Name": "x:CT_CfRule/x:cfRule",
+    "ClassName": "ConditionalFormattingRule"
+  },
+  {
+    "Name": "x:CT_Cfvo/x:cfvo",
+    "ClassName": "ConditionalFormatValueObject"
+  },
+  {
+    "Name": "x:CT_ByteProperty/x:charset",
+    "ClassName": "FontCharSet"
+  },
+  {
+    "Name": "x:CT_IntProperty/x:charset",
+    "ClassName": "RunPropertyCharSet"
+  },
+  {
+    "Name": "x:CT_ChartFormat/x:chartFormat",
+    "ClassName": "ChartFormat"
+  },
+  {
+    "Name": "x:CT_ChartFormats/x:chartFormats",
+    "ClassName": "ChartFormats"
+  },
+  {
+    "Name": "x:CT_Chartsheet/x:chartsheet",
+    "ClassName": "Chartsheet",
+    "PartClassName": "ChartsheetPart"
+  },
+  {
+    "Name": "x:CT_Col/x:col",
+    "ClassName": "Column"
+  },
+  {
+    "Name": "x:CT_PageBreak/x:colBreaks",
+    "ClassName": "ColumnBreaks"
+  },
+  {
+    "Name": "x:CT_ColFields/x:colFields",
+    "ClassName": "ColumnFields"
+  },
+  {
+    "Name": "x:CT_ColHierarchiesUsage/x:colHierarchiesUsage",
+    "ClassName": "ColumnHierarchiesUsage"
+  },
+  {
+    "Name": "x:CT_HierarchyUsage/x:colHierarchyUsage",
+    "ClassName": "ColumnHierarchyUsage"
+  },
+  {
+    "Name": "x:CT_colItems/x:colItems",
+    "ClassName": "ColumnItems"
+  },
+  {
+    "Name": "x:CT_Color/x:color",
+    "ClassName": "Color"
+  },
+  {
+    "Name": "x:CT_ColorFilter/x:colorFilter",
+    "ClassName": "ColorFilter"
+  },
+  {
+    "Name": "x:CT_Colors/x:colors",
+    "ClassName": "Colors"
+  },
+  {
+    "Name": "x:CT_ColorScale/x:colorScale",
+    "ClassName": "ColorScale"
+  },
+  {
+    "Name": "x:CT_Cols/x:cols",
+    "ClassName": "Columns"
+  },
+  {
+    "Name": "x:CT_Comment/x:comment",
+    "ClassName": "Comment"
+  },
+  {
+    "Name": "x:CT_CommentList/x:commentList",
+    "ClassName": "CommentList"
+  },
+  {
+    "Name": "x:CT_CommentPr/x:commentPr",
+    "ClassName": "CommentProperties"
+  },
+  {
+    "Name": "x:CT_Comments/x:comments",
+    "ClassName": "Comments",
+    "PartClassName": "WorksheetCommentsPart"
+  },
+  {
+    "Name": "x:CT_BooleanProperty/x:condense",
+    "ClassName": "Condense"
+  },
+  {
+    "Name": "x:CT_ConditionalFormat/x:conditionalFormat",
+    "ClassName": "ConditionalFormat"
+  },
+  {
+    "Name": "x:CT_ConditionalFormats/x:conditionalFormats",
+    "ClassName": "ConditionalFormats"
+  },
+  {
+    "Name": "x:CT_ConditionalFormatting/x:conditionalFormatting",
+    "ClassName": "ConditionalFormatting"
+  },
+  {
+    "Name": "x:CT_Connection/x:connection",
+    "ClassName": "Connection"
+  },
+  {
+    "Name": "x:CT_Connections/x:connections",
+    "ClassName": "Connections",
+    "PartClassName": "ConnectionsPart"
+  },
+  {
+    "Name": "x:CT_Consolidation/x:consolidation",
+    "ClassName": "Consolidation"
+  },
+  {
+    "Name": "x:CT_Control/x:control",
+    "ClassName": "Control"
+  },
+  {
+    "Name": "x:CT_ControlPr/x:controlPr",
+    "ClassName": "ControlProperties"
+  },
+  {
+    "Name": "x:CT_Controls/x:controls",
+    "ClassName": "Controls"
+  },
+  {
+    "Name": "x:CT_CustomFilter/x:customFilter",
+    "ClassName": "CustomFilter"
+  },
+  {
+    "Name": "x:CT_CustomFilters/x:customFilters",
+    "ClassName": "CustomFilters"
+  },
+  {
+    "Name": "x:CT_CustomProperty/x:customPr",
+    "ClassName": "CustomProperty"
+  },
+  {
+    "Name": "x:CT_CustomProperties/x:customProperties",
+    "ClassName": "CustomProperties"
+  },
+  {
+    "Name": "x:CT_CustomChartsheetView/x:customSheetView",
+    "ClassName": "CustomChartsheetView"
+  },
+  {
+    "Name": "x:CT_CustomSheetView/x:customSheetView",
+    "ClassName": "CustomSheetView"
+  },
+  {
+    "Name": "x:CT_CustomChartsheetViews/x:customSheetViews",
+    "ClassName": "CustomChartsheetViews"
+  },
+  {
+    "Name": "x:CT_CustomSheetViews/x:customSheetViews",
+    "ClassName": "CustomSheetViews"
+  },
+  {
+    "Name": "x:CT_CustomWorkbookView/x:customWorkbookView",
+    "ClassName": "CustomWorkbookView"
+  },
+  {
+    "Name": "x:CT_CustomWorkbookViews/x:customWorkbookViews",
+    "ClassName": "CustomWorkbookViews"
+  },
+  {
+    "Name": "x:CT_DateTime/x:d",
+    "ClassName": "DateTimeItem"
+  },
+  {
+    "Name": "x:CT_DataBar/x:dataBar",
+    "ClassName": "DataBar"
+  },
+  {
+    "Name": "x:CT_DataBinding/x:DataBinding",
+    "ClassName": "DataBinding"
+  },
+  {
+    "Name": "x:CT_DataConsolidate/x:dataConsolidate",
+    "ClassName": "DataConsolidate"
+  },
+  {
+    "Name": "x:CT_DataField/x:dataField",
+    "ClassName": "DataField"
+  },
+  {
+    "Name": "x:CT_DataFields/x:dataFields",
+    "ClassName": "DataFields"
+  },
+  {
+    "Name": "x:CT_DataRef/x:dataRef",
+    "ClassName": "DataReference"
+  },
+  {
+    "Name": "x:CT_DataRefs/x:dataRefs",
+    "ClassName": "DataReferences"
+  },
+  {
+    "Name": "x:CT_DataValidation/x:dataValidation",
+    "ClassName": "DataValidation"
+  },
+  {
+    "Name": "x:CT_DataValidations/x:dataValidations",
+    "ClassName": "DataValidations"
+  },
+  {
+    "Name": "x:CT_DateGroupItem/x:dateGroupItem",
+    "ClassName": "DateGroupItem"
+  },
+  {
+    "Name": "x:CT_DbPr/x:dbPr",
+    "ClassName": "DatabaseProperties"
+  },
+  {
+    "Name": "x:CT_DdeItem/x:ddeItem",
+    "ClassName": "DdeItem"
+  },
+  {
+    "Name": "x:CT_DdeItems/x:ddeItems",
+    "ClassName": "DdeItems"
+  },
+  {
+    "Name": "x:CT_DdeLink/x:ddeLink",
+    "ClassName": "DdeLink"
+  },
+  {
+    "Name": "x:CT_DefinedName/x:definedName",
+    "ClassName": "DefinedName"
+  },
+  {
+    "Name": "x:CT_ExternalDefinedName/x:definedName",
+    "ClassName": "ExternalDefinedName"
+  },
+  {
+    "Name": "x:CT_DefinedNames/x:definedNames",
+    "ClassName": "DefinedNames"
+  },
+  {
+    "Name": "x:CT_ExternalDefinedNames/x:definedNames",
+    "ClassName": "ExternalDefinedNames"
+  },
+  {
+    "Name": "x:CT_DeletedField/x:deletedField",
+    "ClassName": "DeletedField"
+  },
+  {
+    "Name": "x:CT_BorderPr/x:diagonal",
+    "ClassName": "DiagonalBorder"
+  },
+  {
+    "Name": "x:CT_Dialogsheet/x:dialogsheet",
+    "ClassName": "DialogSheet",
+    "PartClassName": "DialogsheetPart"
+  },
+  {
+    "Name": "x:CT_PivotDimension/x:dimension",
+    "ClassName": "Dimension"
+  },
+  {
+    "Name": "x:CT_SheetDimension/x:dimension",
+    "ClassName": "SheetDimension"
+  },
+  {
+    "Name": "x:CT_Dimensions/x:dimensions",
+    "ClassName": "Dimensions"
+  },
+  {
+    "Name": "x:CT_DiscretePr/x:discretePr",
+    "ClassName": "DiscreteProperties"
+  },
+  {
+    "Name": "x:CT_Drawing/x:drawing",
+    "ClassName": "Drawing"
+  },
+  {
+    "Name": "x:CT_DrawingHF/x:drawingHF",
+    "ClassName": "DrawingHeaderFooter"
+  },
+  {
+    "Name": "x:CT_Dxf/x:dxf",
+    "ClassName": "DifferentialFormat"
+  },
+  {
+    "Name": "x:CT_Dxfs/x:dxfs",
+    "ClassName": "DifferentialFormats"
+  },
+  {
+    "Name": "x:CT_DynamicFilter/x:dynamicFilter",
+    "ClassName": "DynamicFilter"
+  },
+  {
+    "Name": "x:CT_Error/x:e",
+    "ClassName": "ErrorItem"
+  },
+  {
+    "Name": "x:CT_BorderPr/x:end",
+    "ClassName": "EndBorder"
+  },
+  {
+    "Name": "x:CT_PCDSDTCEntries/x:entries",
+    "ClassName": "Entries"
+  },
+  {
+    "Name": "x:CT_Xstring/x:evenFooter",
+    "ClassName": "EvenFooter"
+  },
+  {
+    "Name": "x:CT_Xstring/x:evenHeader",
+    "ClassName": "EvenHeader"
+  },
+  {
+    "Name": "x:CT_CacheFieldExtension/x:ext",
+    "ClassName": "CacheFieldExtension"
+  },
+  {
+    "Name": "x:CT_CacheHierarchyExtension/x:ext",
+    "ClassName": "CacheHierarchyExtension"
+  },
+  {
+    "Name": "x:CT_CacheSourceExtension/x:ext",
+    "ClassName": "CacheSourceExtension"
+  },
+  {
+    "Name": "x:CT_CalculatedMemberExtension/x:ext",
+    "ClassName": "CalculatedMemberExtension"
+  },
+  {
+    "Name": "x:CT_CfRuleExtension/x:ext",
+    "ClassName": "ConditionalFormattingRuleExtension"
+  },
+  {
+    "Name": "x:CT_ConnectionExtension/x:ext",
+    "ClassName": "ConnectionExtension"
+  },
+  {
+    "Name": "x:CT_DataFieldExtension/x:ext",
+    "ClassName": "DataFieldExtension"
+  },
+  {
+    "Name": "x:CT_Extension/x:ext",
+    "ClassName": "Extension"
+  },
+  {
+    "Name": "x:CT_PivotCacheDefinitionExtension/x:ext",
+    "ClassName": "PivotCacheDefinitionExtension"
+  },
+  {
+    "Name": "x:CT_PivotFieldExtension/x:ext",
+    "ClassName": "PivotFieldExtension"
+  },
+  {
+    "Name": "x:CT_PivotFilterExtension/x:ext",
+    "ClassName": "PivotFilterExtension"
+  },
+  {
+    "Name": "x:CT_PivotHierarchyExtension/x:ext",
+    "ClassName": "PivotHierarchyExtension"
+  },
+  {
+    "Name": "x:CT_pivotTableDefinitionExtension/x:ext",
+    "ClassName": "PivotTableDefinitionExtension"
+  },
+  {
+    "Name": "x:CT_QueryTableExtension/x:ext",
+    "ClassName": "QueryTableExtension"
+  },
+  {
+    "Name": "x:CT_SlicerCacheDefinitionExtension/x:ext",
+    "ClassName": "SlicerCacheDefinitionExtension"
+  },
+  {
+    "Name": "x:CT_StylesheetExtension/x:ext",
+    "ClassName": "StylesheetExtension"
+  },
+  {
+    "Name": "x:CT_TableExtension/x:ext",
+    "ClassName": "TableExtension"
+  },
+  {
+    "Name": "x:CT_WorkbookExtension/x:ext",
+    "ClassName": "WorkbookExtension"
+  },
+  {
+    "Name": "x:CT_WorksheetExtension/x:ext",
+    "ClassName": "WorksheetExtension"
+  },
+  {
+    "Name": "x:CT_BooleanProperty/x:extend",
+    "ClassName": "Extend"
+  },
+  {
+    "Name": "x:CT_ExternalBook/x:externalBook",
+    "ClassName": "ExternalBook"
+  },
+  {
+    "Name": "x:CT_ExternalLink/x:externalLink",
+    "ClassName": "ExternalLink",
+    "PartClassName": "ExternalWorkbookPart"
+  },
+  {
+    "Name": "x:CT_ExternalReference/x:externalReference",
+    "ClassName": "ExternalReference"
+  },
+  {
+    "Name": "x:CT_ExternalReferences/x:externalReferences",
+    "ClassName": "ExternalReferences"
+  },
+  {
+    "Name": "x:CT_CacheFieldExtensionList/x:extLst",
+    "ClassName": "CacheFieldExtensionList"
+  },
+  {
+    "Name": "x:CT_CacheHierarchyExtensionList/x:extLst",
+    "ClassName": "CacheHierarchyExtensionList"
+  },
+  {
+    "Name": "x:CT_CacheSourceExtensionList/x:extLst",
+    "ClassName": "CacheSourceExtensionList"
+  },
+  {
+    "Name": "x:CT_CalculatedMemberExtensionList/x:extLst",
+    "ClassName": "CalculatedMemberExtensionList"
+  },
+  {
+    "Name": "x:CT_CfRuleExtensionList/x:extLst",
+    "ClassName": "ConditionalFormattingRuleExtensionList"
+  },
+  {
+    "Name": "x:CT_ConnectionExtensionList/x:extLst",
+    "ClassName": "ConnectionExtensionList"
+  },
+  {
+    "Name": "x:CT_DataFieldExtensionList/x:extLst",
+    "ClassName": "DataFieldExtensionList"
+  },
+  {
+    "Name": "x:CT_ExtensionList/x:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "x:CT_PivotCacheDefinitionExtensionList/x:extLst",
+    "ClassName": "PivotCacheDefinitionExtensionList"
+  },
+  {
+    "Name": "x:CT_PivotFieldExtensionList/x:extLst",
+    "ClassName": "PivotFieldExtensionList"
+  },
+  {
+    "Name": "x:CT_PivotFilterExtensionList/x:extLst",
+    "ClassName": "PivotFilterExtensionList"
+  },
+  {
+    "Name": "x:CT_PivotHierarchyExtensionList/x:extLst",
+    "ClassName": "PivotHierarchyExtensionList"
+  },
+  {
+    "Name": "x:CT_pivotTableDefinitionExtensionList/x:extLst",
+    "ClassName": "PivotTableDefinitionExtensionList"
+  },
+  {
+    "Name": "x:CT_QueryTableExtensionList/x:extLst",
+    "ClassName": "QueryTableExtensionList"
+  },
+  {
+    "Name": "x:CT_StylesheetExtensionList/x:extLst",
+    "ClassName": "StylesheetExtensionList"
+  },
+  {
+    "Name": "x:CT_TableExtensionList/x:extLst",
+    "ClassName": "TableExtensionList"
+  },
+  {
+    "Name": "x:CT_WorkbookExtensionList/x:extLst",
+    "ClassName": "WorkbookExtensionList"
+  },
+  {
+    "Name": "x:CT_WorksheetExtensionList/x:extLst",
+    "ClassName": "WorksheetExtensionList"
+  },
+  {
+    "Name": "x:CT_CellFormula/x:f",
+    "ClassName": "CellFormula"
+  },
+  {
+    "Name": "x:CT_FontFamilyNum/x:family",
+    "ClassName": "FontFamilyNumbering"
+  },
+  {
+    "Name": "x:CT_IntProperty/x:family",
+    "ClassName": "FontFamily"
+  },
+  {
+    "Name": "x:CT_Color/x:fgColor",
+    "ClassName": "ForegroundColor"
+  },
+  {
+    "Name": "x:CT_Field/x:field",
+    "ClassName": "Field"
+  },
+  {
+    "Name": "x:CT_FieldGroup/x:fieldGroup",
+    "ClassName": "FieldGroup"
+  },
+  {
+    "Name": "x:CT_FieldsUsage/x:fieldsUsage",
+    "ClassName": "FieldsUsage"
+  },
+  {
+    "Name": "x:CT_FieldUsage/x:fieldUsage",
+    "ClassName": "FieldUsage"
+  },
+  {
+    "Name": "x:CT_FileRecoveryPr/x:fileRecoveryPr",
+    "ClassName": "FileRecoveryProperties"
+  },
+  {
+    "Name": "x:CT_FileSharing/x:fileSharing",
+    "ClassName": "FileSharing"
+  },
+  {
+    "Name": "x:CT_FileVersion/x:fileVersion",
+    "ClassName": "FileVersion"
+  },
+  {
+    "Name": "x:CT_Fill/x:fill",
+    "ClassName": "Fill"
+  },
+  {
+    "Name": "x:CT_Fills/x:fills",
+    "ClassName": "Fills"
+  },
+  {
+    "Name": "x:CT_Filter/x:filter",
+    "ClassName": "Filter"
+  },
+  {
+    "Name": "x:CT_PivotFilter/x:filter",
+    "ClassName": "PivotFilter"
+  },
+  {
+    "Name": "x:CT_FilterColumn/x:filterColumn",
+    "ClassName": "FilterColumn"
+  },
+  {
+    "Name": "x:CT_Filters/x:filters",
+    "ClassName": "Filters"
+  },
+  {
+    "Name": "x:CT_PivotFilters/x:filters",
+    "ClassName": "PivotFilters"
+  },
+  {
+    "Name": "x:CT_Xstring/x:firstFooter",
+    "ClassName": "FirstFooter"
+  },
+  {
+    "Name": "x:CT_Xstring/x:firstHeader",
+    "ClassName": "FirstHeader"
+  },
+  {
+    "Name": "x:CT_Font/x:font",
+    "ClassName": "Font"
+  },
+  {
+    "Name": "x:CT_Fonts/x:fonts",
+    "ClassName": "Fonts"
+  },
+  {
+    "Name": "x:CT_Format/x:format",
+    "ClassName": "Format"
+  },
+  {
+    "Name": "x:CT_Formats/x:formats",
+    "ClassName": "Formats"
+  },
+  {
+    "Name": "x:CT_Xstring/x:formula",
+    "ClassName": "Formula"
+  },
+  {
+    "Name": "x:CT_Xstring/x:formula1",
+    "ClassName": "Formula1"
+  },
+  {
+    "Name": "x:CT_Xstring/x:formula2",
+    "ClassName": "Formula2"
+  },
+  {
+    "Name": "xdr:CT_Marker/x:from",
+    "ClassName": "FromMarker"
+  },
+  {
+    "Name": "x:CT_FunctionGroup/x:functionGroup",
+    "ClassName": "FunctionGroup"
+  },
+  {
+    "Name": "x:CT_FunctionGroups/x:functionGroups",
+    "ClassName": "FunctionGroups"
+  },
+  {
+    "Name": "x:CT_FutureMetadata/x:futureMetadata",
+    "ClassName": "FutureMetadata"
+  },
+  {
+    "Name": "x:CT_GradientFill/x:gradientFill",
+    "ClassName": "GradientFill"
+  },
+  {
+    "Name": "x:CT_LevelGroup/x:group",
+    "ClassName": "Group"
+  },
+  {
+    "Name": "x:CT_GroupItems/x:groupItems",
+    "ClassName": "GroupItems"
+  },
+  {
+    "Name": "x:CT_GroupLevel/x:groupLevel",
+    "ClassName": "GroupLevel"
+  },
+  {
+    "Name": "x:CT_GroupLevels/x:groupLevels",
+    "ClassName": "GroupLevels"
+  },
+  {
+    "Name": "x:CT_GroupMember/x:groupMember",
+    "ClassName": "GroupMember"
+  },
+  {
+    "Name": "x:CT_GroupMembers/x:groupMembers",
+    "ClassName": "GroupMembers"
+  },
+  {
+    "Name": "x:CT_Groups/x:groups",
+    "ClassName": "Groups"
+  },
+  {
+    "Name": "x:CT_RevisionHeader/x:header",
+    "ClassName": "Header"
+  },
+  {
+    "Name": "x:CT_HeaderFooter/x:headerFooter",
+    "ClassName": "HeaderFooter"
+  },
+  {
+    "Name": "x:CT_RevisionHeaders/x:headers",
+    "ClassName": "Headers",
+    "PartClassName": "WorkbookRevisionHeaderPart"
+  },
+  {
+    "Name": "x:CT_BorderPr/x:horizontal",
+    "ClassName": "HorizontalBorder"
+  },
+  {
+    "Name": "x:CT_Hyperlink/x:hyperlink",
+    "ClassName": "Hyperlink"
+  },
+  {
+    "Name": "x:CT_Hyperlinks/x:hyperlinks",
+    "ClassName": "Hyperlinks"
+  },
+  {
+    "Name": "x:CT_BooleanProperty/x:i",
+    "ClassName": "Italic"
+  },
+  {
+    "Name": "x:CT_I/x:i",
+    "ClassName": "RowItem"
+  },
+  {
+    "Name": "x:CT_IconFilter/x:iconFilter",
+    "ClassName": "IconFilter"
+  },
+  {
+    "Name": "x:CT_IconSet/x:iconSet",
+    "ClassName": "IconSet"
+  },
+  {
+    "Name": "x:CT_IgnoredError/x:ignoredError",
+    "ClassName": "IgnoredError"
+  },
+  {
+    "Name": "x:CT_IgnoredErrors/x:ignoredErrors",
+    "ClassName": "IgnoredErrors"
+  },
+  {
+    "Name": "x:CT_IndexedColors/x:indexedColors",
+    "ClassName": "IndexedColors"
+  },
+  {
+    "Name": "x:CT_InputCells/x:inputCells",
+    "ClassName": "InputCells"
+  },
+  {
+    "Name": "x:CT_Rst/x:is",
+    "ClassName": "InlineString"
+  },
+  {
+    "Name": "x:CT_Item/x:item",
+    "ClassName": "Item"
+  },
+  {
+    "Name": "x:CT_Items/x:items",
+    "ClassName": "Items"
+  },
+  {
+    "Name": "x:CT_MdxKPI/x:k",
+    "ClassName": "MdxKpi"
+  },
+  {
+    "Name": "x:CT_PCDKPI/x:kpi",
+    "ClassName": "Kpi"
+  },
+  {
+    "Name": "x:CT_PCDKPIs/x:kpis",
+    "ClassName": "Kpis"
+  },
+  {
+    "Name": "x:CT_BorderPr/x:left",
+    "ClassName": "LeftBorder"
+  },
+  {
+    "Name": "x:CT_LegacyDrawing/x:legacyDrawing",
+    "ClassName": "LegacyDrawing"
+  },
+  {
+    "Name": "x:CT_LegacyDrawing/x:legacyDrawingHF",
+    "ClassName": "LegacyDrawingHeaderFooter"
+  },
+  {
+    "Name": "x:CT_Location/x:location",
+    "ClassName": "Location"
+  },
+  {
+    "Name": "x:CT_Missing/x:m",
+    "ClassName": "MissingItem"
+  },
+  {
+    "Name": "x:CT_TableMissing/x:m",
+    "ClassName": "MissingTable"
+  },
+  {
+    "Name": "x:CT_VolMain/x:main",
+    "ClassName": "Main"
+  },
+  {
+    "Name": "x:CT_MeasureDimensionMap/x:map",
+    "ClassName": "MeasureDimensionMap"
+  },
+  {
+    "Name": "x:CT_Map/x:Map",
+    "ClassName": "Map"
+  },
+  {
+    "Name": "x:CT_MapInfo/x:MapInfo",
+    "ClassName": "MapInfo",
+    "PartClassName": "CustomXmlMappingsPart"
+  },
+  {
+    "Name": "x:CT_MeasureDimensionMaps/x:maps",
+    "ClassName": "Maps"
+  },
+  {
+    "Name": "x:CT_Mdx/x:mdx",
+    "ClassName": "Mdx"
+  },
+  {
+    "Name": "x:CT_MdxMetadata/x:mdxMetadata",
+    "ClassName": "MdxMetadata"
+  },
+  {
+    "Name": "x:CT_MeasureGroup/x:measureGroup",
+    "ClassName": "MeasureGroup"
+  },
+  {
+    "Name": "x:CT_MeasureGroups/x:measureGroups",
+    "ClassName": "MeasureGroups"
+  },
+  {
+    "Name": "x:CT_Member/x:member",
+    "ClassName": "Member"
+  },
+  {
+    "Name": "x:CT_Members/x:members",
+    "ClassName": "Members"
+  },
+  {
+    "Name": "x:CT_MergeCell/x:mergeCell",
+    "ClassName": "MergeCell"
+  },
+  {
+    "Name": "x:CT_MergeCells/x:mergeCells",
+    "ClassName": "MergeCells"
+  },
+  {
+    "Name": "x:CT_Metadata/x:metadata",
+    "ClassName": "Metadata",
+    "PartClassName": "CellMetadataPart"
+  },
+  {
+    "Name": "x:CT_MetadataStrings/x:metadataStrings",
+    "ClassName": "MetadataStrings"
+  },
+  {
+    "Name": "x:CT_MetadataType/x:metadataType",
+    "ClassName": "MetadataType"
+  },
+  {
+    "Name": "x:CT_MetadataTypes/x:metadataTypes",
+    "ClassName": "MetadataTypes"
+  },
+  {
+    "Name": "x:CT_MemberProperty/x:mp",
+    "ClassName": "MemberProperty"
+  },
+  {
+    "Name": "x:CT_X/x:mpMap",
+    "ClassName": "MemberPropertiesMap"
+  },
+  {
+    "Name": "x:CT_MemberProperties/x:mps",
+    "ClassName": "MemberProperties"
+  },
+  {
+    "Name": "x:CT_MRUColors/x:mruColors",
+    "ClassName": "MruColors"
+  },
+  {
+    "Name": "x:CT_MdxSet/x:ms",
+    "ClassName": "MdxSet"
+  },
+  {
+    "Name": "x:CT_MetadataStringIndex/x:n",
+    "ClassName": "NameIndex"
+  },
+  {
+    "Name": "x:CT_Number/x:n",
+    "ClassName": "NumberItem"
+  },
+  {
+    "Name": "x:CT_FontNameNonEmpty/x:name",
+    "ClassName": "FontName"
+  },
+  {
+    "Name": "x:CT_NewCell/x:nc",
+    "ClassName": "NewCell"
+  },
+  {
+    "Name": "x:CT_Dxf/x:ndxf",
+    "ClassName": "NewDifferentialFormat"
+  },
+  {
+    "Name": "x:CT_NumFmt/x:numFmt",
+    "ClassName": "NumberingFormat"
+  },
+  {
+    "Name": "x:CT_NumFmts/x:numFmts",
+    "ClassName": "NumberingFormats"
+  },
+  {
+    "Name": "x:CT_ObjectPr/x:objectPr",
+    "ClassName": "EmbeddedObjectProperties"
+  },
+  {
+    "Name": "x:CT_Cell/x:oc",
+    "ClassName": "OldCell"
+  },
+  {
+    "Name": "x:CT_Xstring/x:oddFooter",
+    "ClassName": "OddFooter"
+  },
+  {
+    "Name": "x:CT_Xstring/x:oddHeader",
+    "ClassName": "OddHeader"
+  },
+  {
+    "Name": "x:CT_Dxf/x:odxf",
+    "ClassName": "OldDifferentialFormat"
+  },
+  {
+    "Name": "x:CT_OlapPr/x:olapPr",
+    "ClassName": "OlapProperties"
+  },
+  {
+    "Name": "x:CT_Xstring/x:oldFormula",
+    "ClassName": "OldFormula"
+  },
+  {
+    "Name": "x:CT_OleItem/x:oleItem",
+    "ClassName": "OleItem"
+  },
+  {
+    "Name": "x:CT_OleItems/x:oleItems",
+    "ClassName": "OleItems"
+  },
+  {
+    "Name": "x:CT_OleLink/x:oleLink",
+    "ClassName": "OleLink"
+  },
+  {
+    "Name": "x:CT_OleObject/x:oleObject",
+    "ClassName": "OleObject"
+  },
+  {
+    "Name": "x:CT_OleObjects/x:oleObjects",
+    "ClassName": "OleObjects"
+  },
+  {
+    "Name": "x:CT_OleSize/x:oleSize",
+    "ClassName": "OleSize"
+  },
+  {
+    "Name": "x:CT_BooleanProperty/x:outline",
+    "ClassName": "Outline"
+  },
+  {
+    "Name": "x:CT_OutlinePr/x:outlinePr",
+    "ClassName": "OutlineProperties"
+  },
+  {
+    "Name": "x:CT_MdxMemeberProp/x:p",
+    "ClassName": "MdxMemberProp"
+  },
+  {
+    "Name": "x:CT_PCDSCPage/x:page",
+    "ClassName": "Page"
+  },
+  {
+    "Name": "x:CT_PageField/x:pageField",
+    "ClassName": "PageField"
+  },
+  {
+    "Name": "x:CT_PageFields/x:pageFields",
+    "ClassName": "PageFields"
+  },
+  {
+    "Name": "x:CT_PageItem/x:pageItem",
+    "ClassName": "PageItem"
+  },
+  {
+    "Name": "x:CT_PageMargins/x:pageMargins",
+    "ClassName": "PageMargins"
+  },
+  {
+    "Name": "x:CT_Pages/x:pages",
+    "ClassName": "Pages"
+  },
+  {
+    "Name": "x:CT_CsPageSetup/x:pageSetup",
+    "ClassName": "ChartSheetPageSetup"
+  },
+  {
+    "Name": "x:CT_PageSetup/x:pageSetup",
+    "ClassName": "PageSetup"
+  },
+  {
+    "Name": "x:CT_PageSetUpPr/x:pageSetUpPr",
+    "ClassName": "PageSetupProperties"
+  },
+  {
+    "Name": "x:CT_Pane/x:pane",
+    "ClassName": "Pane"
+  },
+  {
+    "Name": "x:CT_Parameter/x:parameter",
+    "ClassName": "Parameter"
+  },
+  {
+    "Name": "x:CT_Parameters/x:parameters",
+    "ClassName": "Parameters"
+  },
+  {
+    "Name": "x:CT_PatternFill/x:patternFill",
+    "ClassName": "PatternFill"
+  },
+  {
+    "Name": "x:CT_PhoneticPr/x:phoneticPr",
+    "ClassName": "PhoneticProperties"
+  },
+  {
+    "Name": "x:CT_SheetBackgroundPicture/x:picture",
+    "ClassName": "Picture"
+  },
+  {
+    "Name": "x:CT_PivotArea/x:pivotArea",
+    "ClassName": "PivotArea"
+  },
+  {
+    "Name": "x:CT_PivotAreas/x:pivotAreas",
+    "ClassName": "PivotAreas"
+  },
+  {
+    "Name": "x:CT_PivotCache/x:pivotCache",
+    "ClassName": "PivotCache"
+  },
+  {
+    "Name": "x:CT_PivotCacheDefinition/x:pivotCacheDefinition",
+    "ClassName": "PivotCacheDefinition",
+    "PartClassName": "PivotTableCacheDefinitionPart"
+  },
+  {
+    "Name": "x:CT_PivotCacheRecords/x:pivotCacheRecords",
+    "ClassName": "PivotCacheRecords",
+    "PartClassName": "PivotTableCacheRecordsPart"
+  },
+  {
+    "Name": "x:CT_PivotCaches/x:pivotCaches",
+    "ClassName": "PivotCaches"
+  },
+  {
+    "Name": "x:CT_PivotField/x:pivotField",
+    "ClassName": "PivotField"
+  },
+  {
+    "Name": "x:CT_PivotFields/x:pivotFields",
+    "ClassName": "PivotFields"
+  },
+  {
+    "Name": "x:CT_PivotHierarchies/x:pivotHierarchies",
+    "ClassName": "PivotHierarchies"
+  },
+  {
+    "Name": "x:CT_PivotHierarchy/x:pivotHierarchy",
+    "ClassName": "PivotHierarchy"
+  },
+  {
+    "Name": "x:CT_PivotSelection/x:pivotSelection",
+    "ClassName": "PivotSelection"
+  },
+  {
+    "Name": "x:CT_pivotTableDefinition/x:pivotTableDefinition",
+    "ClassName": "PivotTableDefinition",
+    "PartClassName": "PivotTablePart"
+  },
+  {
+    "Name": "x:CT_PivotTableStyle/x:pivotTableStyleInfo",
+    "ClassName": "PivotTableStyle"
+  },
+  {
+    "Name": "x:CT_PrintOptions/x:printOptions",
+    "ClassName": "PrintOptions"
+  },
+  {
+    "Name": "x:CT_ProtectedRange/x:protectedRange",
+    "ClassName": "ProtectedRange"
+  },
+  {
+    "Name": "x:CT_ProtectedRanges/x:protectedRanges",
+    "ClassName": "ProtectedRanges"
+  },
+  {
+    "Name": "x:CT_CellProtection/x:protection",
+    "ClassName": "Protection"
+  },
+  {
+    "Name": "x:CT_Query/x:query",
+    "ClassName": "Query"
+  },
+  {
+    "Name": "x:CT_QueryCache/x:queryCache",
+    "ClassName": "QueryCache"
+  },
+  {
+    "Name": "x:CT_QueryTable/x:queryTable",
+    "ClassName": "QueryTable",
+    "PartClassName": "QueryTablePart"
+  },
+  {
+    "Name": "x:CT_QueryTableDeletedFields/x:queryTableDeletedFields",
+    "ClassName": "QueryTableDeletedFields"
+  },
+  {
+    "Name": "x:CT_QueryTableField/x:queryTableField",
+    "ClassName": "QueryTableField"
+  },
+  {
+    "Name": "x:CT_QueryTableFields/x:queryTableFields",
+    "ClassName": "QueryTableFields"
+  },
+  {
+    "Name": "x:CT_QueryTableRefresh/x:queryTableRefresh",
+    "ClassName": "QueryTableRefresh"
+  },
+  {
+    "Name": "x:CT_Record/x:r",
+    "ClassName": "PivotCacheRecord"
+  },
+  {
+    "Name": "x:CT_RElt/x:r",
+    "ClassName": "Run"
+  },
+  {
+    "Name": "x:CT_RevisionAutoFormatting/x:raf",
+    "ClassName": "RevisionAutoFormat"
+  },
+  {
+    "Name": "x:CT_RangePr/x:rangePr",
+    "ClassName": "RangeProperties"
+  },
+  {
+    "Name": "x:CT_RangeSet/x:rangeSet",
+    "ClassName": "RangeSet"
+  },
+  {
+    "Name": "x:CT_RangeSets/x:rangeSets",
+    "ClassName": "RangeSets"
+  },
+  {
+    "Name": "x:CT_MetadataRecord/x:rc",
+    "ClassName": "MetadataRecord"
+  },
+  {
+    "Name": "x:CT_RevisionCellChange/x:rcc",
+    "ClassName": "RevisionCellChange"
+  },
+  {
+    "Name": "x:CT_RevisionConflict/x:rcft",
+    "ClassName": "RevisionConflict"
+  },
+  {
+    "Name": "x:CT_RevisionComment/x:rcmt",
+    "ClassName": "RevisionComment"
+  },
+  {
+    "Name": "x:CT_RevisionCustomView/x:rcv",
+    "ClassName": "RevisionCustomView"
+  },
+  {
+    "Name": "x:CT_RevisionDefinedName/x:rdn",
+    "ClassName": "RevisionDefinedName"
+  },
+  {
+    "Name": "x:CT_PivotAreaReference/x:reference",
+    "ClassName": "PivotAreaReference"
+  },
+  {
+    "Name": "x:CT_PivotAreaReferences/x:references",
+    "ClassName": "PivotAreaReferences"
+  },
+  {
+    "Name": "x:CT_Reviewed/x:reviewed",
+    "ClassName": "Reviewed"
+  },
+  {
+    "Name": "x:CT_ReviewedRevisions/x:reviewedList",
+    "ClassName": "ReviewedList"
+  },
+  {
+    "Name": "x:CT_Revisions/x:revisions",
+    "ClassName": "Revisions",
+    "PartClassName": "WorkbookRevisionLogPart"
+  },
+  {
+    "Name": "x:CT_RevisionFormatting/x:rfmt",
+    "ClassName": "RevisionFormat"
+  },
+  {
+    "Name": "x:CT_FontName/x:rFont",
+    "ClassName": "RunFont"
+  },
+  {
+    "Name": "x:CT_RgbColor/x:rgbColor",
+    "ClassName": "RgbColor"
+  },
+  {
+    "Name": "x:CT_BorderPr/x:right",
+    "ClassName": "RightBorder"
+  },
+  {
+    "Name": "x:CT_RevisionInsertSheet/x:ris",
+    "ClassName": "RevisionInsertSheet"
+  },
+  {
+    "Name": "x:CT_RevisionMove/x:rm",
+    "ClassName": "RevisionMove"
+  },
+  {
+    "Name": "x:CT_ExternalRow/x:row",
+    "ClassName": "ExternalRow"
+  },
+  {
+    "Name": "x:CT_Row/x:row",
+    "ClassName": "Row"
+  },
+  {
+    "Name": "x:CT_PageBreak/x:rowBreaks",
+    "ClassName": "RowBreaks"
+  },
+  {
+    "Name": "x:CT_RowFields/x:rowFields",
+    "ClassName": "RowFields"
+  },
+  {
+    "Name": "x:CT_RowHierarchiesUsage/x:rowHierarchiesUsage",
+    "ClassName": "RowHierarchiesUsage"
+  },
+  {
+    "Name": "x:CT_HierarchyUsage/x:rowHierarchyUsage",
+    "ClassName": "RowHierarchyUsage"
+  },
+  {
+    "Name": "x:CT_rowItems/x:rowItems",
+    "ClassName": "RowItems"
+  },
+  {
+    "Name": "x:CT_PhoneticRun/x:rPh",
+    "ClassName": "PhoneticRun"
+  },
+  {
+    "Name": "x:CT_RPrElt/x:rPr",
+    "ClassName": "RunProperties"
+  },
+  {
+    "Name": "x:CT_RevisionQueryTableField/x:rqt",
+    "ClassName": "RevisionQueryTable"
+  },
+  {
+    "Name": "x:CT_RevisionRowColumn/x:rrc",
+    "ClassName": "RevisionRowColumn"
+  },
+  {
+    "Name": "x:CT_RevisionSheetRename/x:rsnm",
+    "ClassName": "RevisionSheetName"
+  },
+  {
+    "Name": "x:CT_String/x:s",
+    "ClassName": "StringItem"
+  },
+  {
+    "Name": "x:CT_XStringElement/x:s",
+    "ClassName": "CharacterValue"
+  },
+  {
+    "Name": "x:CT_Scenario/x:scenario",
+    "ClassName": "Scenario"
+  },
+  {
+    "Name": "x:CT_Scenarios/x:scenarios",
+    "ClassName": "Scenarios"
+  },
+  {
+    "Name": "x:CT_Schema/x:Schema",
+    "ClassName": "Schema"
+  },
+  {
+    "Name": "x:CT_FontScheme/x:scheme",
+    "ClassName": "FontScheme"
+  },
+  {
+    "Name": "x:CT_Selection/x:selection",
+    "ClassName": "Selection"
+  },
+  {
+    "Name": "x:CT_ServerFormat/x:serverFormat",
+    "ClassName": "ServerFormat"
+  },
+  {
+    "Name": "x:CT_ServerFormats/x:serverFormats",
+    "ClassName": "ServerFormats"
+  },
+  {
+    "Name": "x:CT_Set/x:set",
+    "ClassName": "TupleSet"
+  },
+  {
+    "Name": "x:CT_Sets/x:sets",
+    "ClassName": "Sets"
+  },
+  {
+    "Name": "x:CT_BooleanProperty/x:shadow",
+    "ClassName": "Shadow"
+  },
+  {
+    "Name": "x:CT_SharedItems/x:sharedItems",
+    "ClassName": "SharedItems"
+  },
+  {
+    "Name": "x:CT_Sheet/x:sheet",
+    "ClassName": "Sheet"
+  },
+  {
+    "Name": "x:CT_SheetCalcPr/x:sheetCalcPr",
+    "ClassName": "SheetCalculationProperties"
+  },
+  {
+    "Name": "x:CT_ExternalSheetData/x:sheetData",
+    "ClassName": "ExternalSheetData"
+  },
+  {
+    "Name": "x:CT_SheetData/x:sheetData",
+    "ClassName": "SheetData"
+  },
+  {
+    "Name": "x:CT_ExternalSheetDataSet/x:sheetDataSet",
+    "ClassName": "SheetDataSet"
+  },
+  {
+    "Name": "x:CT_SheetFormatPr/x:sheetFormatPr",
+    "ClassName": "SheetFormatProperties"
+  },
+  {
+    "Name": "x:CT_SheetId/x:sheetId",
+    "ClassName": "SheetId"
+  },
+  {
+    "Name": "x:CT_SheetIdMap/x:sheetIdMap",
+    "ClassName": "SheetIdMap"
+  },
+  {
+    "Name": "x:CT_ExternalSheetName/x:sheetName",
+    "ClassName": "SheetName"
+  },
+  {
+    "Name": "x:CT_ExternalSheetNames/x:sheetNames",
+    "ClassName": "SheetNames"
+  },
+  {
+    "Name": "x:CT_ChartsheetPr/x:sheetPr",
+    "ClassName": "ChartSheetProperties"
+  },
+  {
+    "Name": "x:CT_SheetPr/x:sheetPr",
+    "ClassName": "SheetProperties"
+  },
+  {
+    "Name": "x:CT_ChartsheetProtection/x:sheetProtection",
+    "ClassName": "ChartSheetProtection"
+  },
+  {
+    "Name": "x:CT_SheetProtection/x:sheetProtection",
+    "ClassName": "SheetProtection"
+  },
+  {
+    "Name": "x:CT_Sheets/x:sheets",
+    "ClassName": "Sheets"
+  },
+  {
+    "Name": "x:CT_ChartsheetView/x:sheetView",
+    "ClassName": "ChartSheetView"
+  },
+  {
+    "Name": "x:CT_SheetView/x:sheetView",
+    "ClassName": "SheetView"
+  },
+  {
+    "Name": "x:CT_ChartsheetViews/x:sheetViews",
+    "ClassName": "ChartSheetViews"
+  },
+  {
+    "Name": "x:CT_SheetViews/x:sheetViews",
+    "ClassName": "SheetViews"
+  },
+  {
+    "Name": "x:CT_Rst/x:si",
+    "ClassName": "SharedStringItem"
+  },
+  {
+    "Name": "x:CT_SingleXmlCell/x:singleXmlCell",
+    "ClassName": "SingleXmlCell"
+  },
+  {
+    "Name": "x:CT_SingleXmlCells/x:singleXmlCells",
+    "ClassName": "SingleXmlCells",
+    "PartClassName": "SingleCellTablePart"
+  },
+  {
+    "Name": "x:CT_Tuples/x:sortByTuple",
+    "ClassName": "SortByTuple"
+  },
+  {
+    "Name": "x:CT_SortCondition/x:sortCondition",
+    "ClassName": "SortCondition"
+  },
+  {
+    "Name": "x:CT_SortState/x:sortState",
+    "ClassName": "SortState"
+  },
+  {
+    "Name": "x:CT_Sst/x:sst",
+    "ClassName": "SharedStringTable",
+    "PartClassName": "SharedStringTablePart"
+  },
+  {
+    "Name": "x:CT_BorderPr/x:start",
+    "ClassName": "StartBorder"
+  },
+  {
+    "Name": "x:CT_GradientStop/x:stop",
+    "ClassName": "GradientStop"
+  },
+  {
+    "Name": "x:CT_Xstring/x:stp",
+    "ClassName": "Subtopic"
+  },
+  {
+    "Name": "x:CT_BooleanProperty/x:strike",
+    "ClassName": "Strike"
+  },
+  {
+    "Name": "x:CT_Stylesheet/x:styleSheet",
+    "ClassName": "Stylesheet",
+    "PartClassName": "WorkbookStylesPart"
+  },
+  {
+    "Name": "x:CT_FontSize/x:sz",
+    "ClassName": "FontSize"
+  },
+  {
+    "Name": "x:CT_MdxTuple/x:t",
+    "ClassName": "MdxTuple"
+  },
+  {
+    "Name": "x:CT_Xstring/x:t",
+    "ClassName": "Text"
+  },
+  {
+    "Name": "x:CT_Color/x:tabColor",
+    "ClassName": "TabColor"
+  },
+  {
+    "Name": "x:CT_Table/x:table",
+    "ClassName": "Table",
+    "PartClassName": "TableDefinitionPart"
+  },
+  {
+    "Name": "x:CT_TableColumn/x:tableColumn",
+    "ClassName": "TableColumn"
+  },
+  {
+    "Name": "x:CT_TableColumns/x:tableColumns",
+    "ClassName": "TableColumns"
+  },
+  {
+    "Name": "x:CT_TablePart/x:tablePart",
+    "ClassName": "TablePart"
+  },
+  {
+    "Name": "x:CT_TableParts/x:tableParts",
+    "ClassName": "TableParts"
+  },
+  {
+    "Name": "x:CT_Tables/x:tables",
+    "ClassName": "Tables"
+  },
+  {
+    "Name": "x:CT_TableStyle/x:tableStyle",
+    "ClassName": "TableStyle"
+  },
+  {
+    "Name": "x:CT_TableStyleElement/x:tableStyleElement",
+    "ClassName": "TableStyleElement"
+  },
+  {
+    "Name": "x:CT_TableStyleInfo/x:tableStyleInfo",
+    "ClassName": "TableStyleInfo"
+  },
+  {
+    "Name": "x:CT_TableStyles/x:tableStyles",
+    "ClassName": "TableStyles"
+  },
+  {
+    "Name": "x:CT_Rst/x:text",
+    "ClassName": "CommentText"
+  },
+  {
+    "Name": "x:CT_TextField/x:textField",
+    "ClassName": "TextField"
+  },
+  {
+    "Name": "x:CT_TextFields/x:textFields",
+    "ClassName": "TextFields"
+  },
+  {
+    "Name": "x:CT_TextPr/x:textPr",
+    "ClassName": "TextProperties"
+  },
+  {
+    "Name": "xdr:CT_Marker/x:to",
+    "ClassName": "ToMarker"
+  },
+  {
+    "Name": "x:CT_BorderPr/x:top",
+    "ClassName": "TopBorder"
+  },
+  {
+    "Name": "x:CT_Top10/x:top10",
+    "ClassName": "Top10"
+  },
+  {
+    "Name": "x:CT_TableFormula/x:totalsRowFormula",
+    "ClassName": "TotalsRowFormula"
+  },
+  {
+    "Name": "x:CT_VolTopic/x:tp",
+    "ClassName": "Topic"
+  },
+  {
+    "Name": "x:CT_Tuple/x:tpl",
+    "ClassName": "Tuple"
+  },
+  {
+    "Name": "x:CT_Tuples/x:tpls",
+    "ClassName": "Tuples"
+  },
+  {
+    "Name": "x:CT_VolTopicRef/x:tr",
+    "ClassName": "TopicReferences"
+  },
+  {
+    "Name": "x:CT_TupleCache/x:tupleCache",
+    "ClassName": "TupleCache"
+  },
+  {
+    "Name": "x:CT_UnderlineProperty/x:u",
+    "ClassName": "Underline"
+  },
+  {
+    "Name": "x:CT_UndoInfo/x:undo",
+    "ClassName": "Undo"
+  },
+  {
+    "Name": "x:CT_SharedUser/x:userInfo",
+    "ClassName": "UserInfo"
+  },
+  {
+    "Name": "x:CT_Users/x:users",
+    "ClassName": "Users",
+    "PartClassName": "WorkbookUserDataPart"
+  },
+  {
+    "Name": "x:CT_Xstring/x:v",
+    "ClassName": "CellValue"
+  },
+  {
+    "Name": "x:ST_Xstring/x:v",
+    "ClassName": "Xstring"
+  },
+  {
+    "Name": "x:CT_Xstring/x:val",
+    "ClassName": "DdeLinkValue"
+  },
+  {
+    "Name": "x:CT_DdeValue/x:value",
+    "ClassName": "Value"
+  },
+  {
+    "Name": "x:CT_MetadataBlocks/x:valueMetadata",
+    "ClassName": "ValueMetadata"
+  },
+  {
+    "Name": "x:CT_DdeValues/x:values",
+    "ClassName": "Values"
+  },
+  {
+    "Name": "x:CT_VerticalAlignFontProperty/x:vertAlign",
+    "ClassName": "VerticalTextAlignment"
+  },
+  {
+    "Name": "x:CT_BorderPr/x:vertical",
+    "ClassName": "VerticalBorder"
+  },
+  {
+    "Name": "x:CT_VolType/x:volType",
+    "ClassName": "VolatileType"
+  },
+  {
+    "Name": "x:CT_VolTypes/x:volTypes",
+    "ClassName": "VolatileTypes",
+    "PartClassName": "VolatileDependenciesPart"
+  },
+  {
+    "Name": "x:CT_WebPr/x:webPr",
+    "ClassName": "WebQueryProperties"
+  },
+  {
+    "Name": "x:CT_WebPublishing/x:webPublishing",
+    "ClassName": "WebPublishing"
+  },
+  {
+    "Name": "x:CT_WebPublishItem/x:webPublishItem",
+    "ClassName": "WebPublishItem"
+  },
+  {
+    "Name": "x:CT_WebPublishItems/x:webPublishItems",
+    "ClassName": "WebPublishItems"
+  },
+  {
+    "Name": "x:CT_WebPublishObject/x:webPublishObject",
+    "ClassName": "WebPublishObject"
+  },
+  {
+    "Name": "x:CT_WebPublishObjects/x:webPublishObjects",
+    "ClassName": "WebPublishObjects"
+  },
+  {
+    "Name": "x:CT_Workbook/x:workbook",
+    "ClassName": "Workbook",
+    "PartClassName": "WorkbookPart"
+  },
+  {
+    "Name": "x:CT_WorkbookPr/x:workbookPr",
+    "ClassName": "WorkbookProperties"
+  },
+  {
+    "Name": "x:CT_WorkbookProtection/x:workbookProtection",
+    "ClassName": "WorkbookProtection"
+  },
+  {
+    "Name": "x:CT_BookView/x:workbookView",
+    "ClassName": "WorkbookView"
+  },
+  {
+    "Name": "x:CT_Worksheet/x:worksheet",
+    "ClassName": "Worksheet",
+    "PartClassName": "WorksheetPart"
+  },
+  {
+    "Name": "x:CT_WorksheetSource/x:worksheetSource",
+    "ClassName": "WorksheetSource"
+  },
+  {
+    "Name": "x:CT_Index/x:x",
+    "ClassName": "FieldItem"
+  },
+  {
+    "Name": "x:CT_X/x:x",
+    "ClassName": "MemberPropertyIndex"
+  },
+  {
+    "Name": "x:CT_Xf/x:xf",
+    "ClassName": "CellFormat"
+  },
+  {
+    "Name": "x:CT_XmlCellPr/x:xmlCellPr",
+    "ClassName": "XmlCellProperties"
+  },
+  {
+    "Name": "x:CT_XmlColumnPr/x:xmlColumnPr",
+    "ClassName": "XmlColumnProperties"
+  },
+  {
+    "Name": "x:CT_XmlPr/x:xmlPr",
+    "ClassName": "XmlProperties"
+  }
+]

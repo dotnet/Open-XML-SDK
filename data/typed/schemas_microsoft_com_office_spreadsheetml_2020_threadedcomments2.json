@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "xsd:unsignedInt/xltc2:checksum",
+    "ClassName": "XsdunsignedInt"
+  },
+  {
+    "Name": "x:CT_ExtensionList/xltc2:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "xltc2:CT_CommentHyperlink/xltc2:hyperlink",
+    "ClassName": "CommentHyperlink"
+  }
+]

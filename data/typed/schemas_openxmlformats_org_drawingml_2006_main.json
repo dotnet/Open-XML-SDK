@@ -1,0 +1,1537 @@
+[
+  {
+    "Name": "a:CT_AdjPoint2D/",
+    "ClassName": "AdjustPoint2DType"
+  },
+  {
+    "Name": "a:CT_AudioCDTime/",
+    "ClassName": "AudioCDTimeType"
+  },
+  {
+    "Name": "a:CT_Bevel/",
+    "ClassName": "BevelType"
+  },
+  {
+    "Name": "a:CT_Color/",
+    "ClassName": "ColorType"
+  },
+  {
+    "Name": "a:CT_Color2/",
+    "ClassName": "Color2Type"
+  },
+  {
+    "Name": "a:CT_ColorMapping/",
+    "ClassName": "ColorMappingType"
+  },
+  {
+    "Name": "a:CT_Connection/",
+    "ClassName": "ConnectionType"
+  },
+  {
+    "Name": "a:CT_DefaultShapeDefinition/",
+    "ClassName": "DefaultShapeDefinitionType"
+  },
+  {
+    "Name": "a:CT_EffectContainer/",
+    "ClassName": "EffectContainerType"
+  },
+  {
+    "Name": "a:CT_EmbeddedWAVAudioFile/",
+    "ClassName": "EmbeddedWavAudioFileType"
+  },
+  {
+    "Name": "a:CT_EmptyElement/",
+    "ClassName": "EmptyType"
+  },
+  {
+    "Name": "a:CT_FontCollection/",
+    "ClassName": "FontCollectionType"
+  },
+  {
+    "Name": "a:CT_GeomGuideList/",
+    "ClassName": "GeometryGuideListType"
+  },
+  {
+    "Name": "a:CT_Hyperlink/",
+    "ClassName": "HyperlinkType"
+  },
+  {
+    "Name": "a:CT_LineEndProperties/",
+    "ClassName": "LineEndPropertiesType"
+  },
+  {
+    "Name": "a:CT_LineProperties/",
+    "ClassName": "LinePropertiesType"
+  },
+  {
+    "Name": "a:CT_Percentage/",
+    "ClassName": "PercentageType"
+  },
+  {
+    "Name": "a:CT_Point2D/",
+    "ClassName": "Point2DType"
+  },
+  {
+    "Name": "a:CT_PositiveFixedPercentage/",
+    "ClassName": "PositiveFixedPercentageType"
+  },
+  {
+    "Name": "a:CT_PositivePercentage/",
+    "ClassName": "PositivePercentageType"
+  },
+  {
+    "Name": "a:CT_PositiveSize2D/",
+    "ClassName": "PositiveSize2DType"
+  },
+  {
+    "Name": "a:CT_Ratio/",
+    "ClassName": "RatioType"
+  },
+  {
+    "Name": "a:CT_RelativeRect/",
+    "ClassName": "RelativeRectangleType"
+  },
+  {
+    "Name": "a:CT_StyleMatrixReference/",
+    "ClassName": "StyleMatrixReferenceType"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/",
+    "ClassName": "TablePartStyleType"
+  },
+  {
+    "Name": "a:CT_TableStyle/",
+    "ClassName": "TableStyleType"
+  },
+  {
+    "Name": "a:CT_TextCharacterProperties/",
+    "ClassName": "TextCharacterPropertiesType"
+  },
+  {
+    "Name": "a:CT_TextFont/",
+    "ClassName": "TextFontType"
+  },
+  {
+    "Name": "a:CT_TextParagraphProperties/",
+    "ClassName": "TextParagraphPropertiesType"
+  },
+  {
+    "Name": "a:CT_TextSpacing/",
+    "ClassName": "TextSpacingType"
+  },
+  {
+    "Name": "a:CT_ThemeableLineStyle/",
+    "ClassName": "ThemeableLineStyleType"
+  },
+  {
+    "Name": "a:CT_Vector3D/",
+    "ClassName": "Vector3DType"
+  },
+  {
+    "Name": "a:CT_Color2/a:accent1",
+    "ClassName": "Accent1Color"
+  },
+  {
+    "Name": "a:CT_Color2/a:accent2",
+    "ClassName": "Accent2Color"
+  },
+  {
+    "Name": "a:CT_Color2/a:accent3",
+    "ClassName": "Accent3Color"
+  },
+  {
+    "Name": "a:CT_Color2/a:accent4",
+    "ClassName": "Accent4Color"
+  },
+  {
+    "Name": "a:CT_Color2/a:accent5",
+    "ClassName": "Accent5Color"
+  },
+  {
+    "Name": "a:CT_Color2/a:accent6",
+    "ClassName": "Accent6Color"
+  },
+  {
+    "Name": "a:CT_AdjustHandleList/a:ahLst",
+    "ClassName": "AdjustHandleList"
+  },
+  {
+    "Name": "a:CT_PolarAdjustHandle/a:ahPolar",
+    "ClassName": "AdjustHandlePolar"
+  },
+  {
+    "Name": "a:CT_XYAdjustHandle/a:ahXY",
+    "ClassName": "AdjustHandleXY"
+  },
+  {
+    "Name": "a:CT_PositiveFixedPercentage/a:alpha",
+    "ClassName": "Alpha"
+  },
+  {
+    "Name": "a:CT_AlphaBiLevelEffect/a:alphaBiLevel",
+    "ClassName": "AlphaBiLevel"
+  },
+  {
+    "Name": "a:CT_AlphaCeilingEffect/a:alphaCeiling",
+    "ClassName": "AlphaCeiling"
+  },
+  {
+    "Name": "a:CT_AlphaFloorEffect/a:alphaFloor",
+    "ClassName": "AlphaFloor"
+  },
+  {
+    "Name": "a:CT_AlphaInverseEffect/a:alphaInv",
+    "ClassName": "AlphaInverse"
+  },
+  {
+    "Name": "a:CT_AlphaModulateEffect/a:alphaMod",
+    "ClassName": "AlphaModulationEffect"
+  },
+  {
+    "Name": "a:CT_PositivePercentage/a:alphaMod",
+    "ClassName": "AlphaModulation"
+  },
+  {
+    "Name": "a:CT_AlphaModulateFixedEffect/a:alphaModFix",
+    "ClassName": "AlphaModulationFixed"
+  },
+  {
+    "Name": "a:CT_FixedPercentage/a:alphaOff",
+    "ClassName": "AlphaOffset"
+  },
+  {
+    "Name": "a:CT_AlphaOutsetEffect/a:alphaOutset",
+    "ClassName": "AlphaOutset"
+  },
+  {
+    "Name": "a:CT_AlphaReplaceEffect/a:alphaRepl",
+    "ClassName": "AlphaReplace"
+  },
+  {
+    "Name": "a:CT_Point3D/a:anchor",
+    "ClassName": "Anchor"
+  },
+  {
+    "Name": "a:CT_Path2DArcTo/a:arcTo",
+    "ClassName": "ArcTo"
+  },
+  {
+    "Name": "a:CT_AudioCD/a:audioCd",
+    "ClassName": "AudioFromCD"
+  },
+  {
+    "Name": "a:CT_AudioFile/a:audioFile",
+    "ClassName": "AudioFromFile"
+  },
+  {
+    "Name": "a:CT_GeomGuideList/a:avLst",
+    "ClassName": "AdjustValueList"
+  },
+  {
+    "Name": "a:CT_Backdrop/a:backdrop",
+    "ClassName": "Backdrop"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/a:band1H",
+    "ClassName": "Band1Horizontal"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/a:band1V",
+    "ClassName": "Band1Vertical"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/a:band2H",
+    "ClassName": "Band2Horizontal"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/a:band2V",
+    "ClassName": "Band2Vertical"
+  },
+  {
+    "Name": "a:CT_Bevel/a:bevel",
+    "ClassName": "Bevel"
+  },
+  {
+    "Name": "a:CT_LineJoinBevel/a:bevel",
+    "ClassName": "LineJoinBevel"
+  },
+  {
+    "Name": "a:CT_Bevel/a:bevelB",
+    "ClassName": "BevelBottom"
+  },
+  {
+    "Name": "a:CT_Bevel/a:bevelT",
+    "ClassName": "BevelTop"
+  },
+  {
+    "Name": "a:CT_Color/a:bgClr",
+    "ClassName": "BackgroundColor"
+  },
+  {
+    "Name": "a:CT_BackgroundFillStyleList/a:bgFillStyleLst",
+    "ClassName": "BackgroundFillStyleList"
+  },
+  {
+    "Name": "a:CT_BiLevelEffect/a:biLevel",
+    "ClassName": "BiLevel"
+  },
+  {
+    "Name": "a:CT_AnimationChartBuildProperties/a:bldChart",
+    "ClassName": "BuildChart"
+  },
+  {
+    "Name": "a:CT_AnimationDgmBuildProperties/a:bldDgm",
+    "ClassName": "BuildDiagram"
+  },
+  {
+    "Name": "a:CT_BlendEffect/a:blend",
+    "ClassName": "Blend"
+  },
+  {
+    "Name": "a:CT_Blip/a:blip",
+    "ClassName": "Blip"
+  },
+  {
+    "Name": "a:CT_BlipFillProperties/a:blipFill",
+    "ClassName": "BlipFill"
+  },
+  {
+    "Name": "a:CT_Percentage/a:blue",
+    "ClassName": "Blue"
+  },
+  {
+    "Name": "a:CT_Percentage/a:blueMod",
+    "ClassName": "BlueModulation"
+  },
+  {
+    "Name": "a:CT_Percentage/a:blueOff",
+    "ClassName": "BlueOffset"
+  },
+  {
+    "Name": "a:CT_BlurEffect/a:blur",
+    "ClassName": "Blur"
+  },
+  {
+    "Name": "a:CT_TextBodyProperties/a:bodyPr",
+    "ClassName": "BodyProperties"
+  },
+  {
+    "Name": "a:CT_ThemeableLineStyle/a:bottom",
+    "ClassName": "BottomBorder"
+  },
+  {
+    "Name": "a:CT_TextLineBreak/a:br",
+    "ClassName": "Break"
+  },
+  {
+    "Name": "a:CT_TextAutonumberBullet/a:buAutoNum",
+    "ClassName": "AutoNumberedBullet"
+  },
+  {
+    "Name": "a:CT_TextBlipBullet/a:buBlip",
+    "ClassName": "PictureBullet"
+  },
+  {
+    "Name": "a:CT_TextCharBullet/a:buChar",
+    "ClassName": "CharacterBullet"
+  },
+  {
+    "Name": "a:CT_Color/a:buClr",
+    "ClassName": "BulletColor"
+  },
+  {
+    "Name": "a:CT_TextBulletColorFollowText/a:buClrTx",
+    "ClassName": "BulletColorText"
+  },
+  {
+    "Name": "a:CT_TextFont/a:buFont",
+    "ClassName": "BulletFont"
+  },
+  {
+    "Name": "a:CT_TextBulletTypefaceFollowText/a:buFontTx",
+    "ClassName": "BulletFontText"
+  },
+  {
+    "Name": "a:CT_TextNoBullet/a:buNone",
+    "ClassName": "NoBullet"
+  },
+  {
+    "Name": "a:CT_TextBulletSizePercent/a:buSzPct",
+    "ClassName": "BulletSizePercentage"
+  },
+  {
+    "Name": "a:CT_TextBulletSizePoint/a:buSzPts",
+    "ClassName": "BulletSizePoints"
+  },
+  {
+    "Name": "a:CT_TextBulletSizeFollowText/a:buSzTx",
+    "ClassName": "BulletSizeText"
+  },
+  {
+    "Name": "a:CT_Camera/a:camera",
+    "ClassName": "Camera"
+  },
+  {
+    "Name": "a:CT_Cell3D/a:cell3D",
+    "ClassName": "Cell3DProperties"
+  },
+  {
+    "Name": "a:CT_AnimationChartElement/a:chart",
+    "ClassName": "Chart"
+  },
+  {
+    "Name": "a:CT_PositiveSize2D/a:chExt",
+    "ClassName": "ChildExtents"
+  },
+  {
+    "Name": "a:CT_Point2D/a:chOff",
+    "ClassName": "ChildOffset"
+  },
+  {
+    "Name": "a:CT_Path2DClose/a:close",
+    "ClassName": "CloseShapePath"
+  },
+  {
+    "Name": "a:CT_ColorChangeEffect/a:clrChange",
+    "ClassName": "ColorChange"
+  },
+  {
+    "Name": "a:CT_Color/a:clrFrom",
+    "ClassName": "ColorFrom"
+  },
+  {
+    "Name": "a:CT_ColorMapping/a:clrMap",
+    "ClassName": "ColorMap"
+  },
+  {
+    "Name": "a:CT_ColorReplaceEffect/a:clrRepl",
+    "ClassName": "ColorReplacement"
+  },
+  {
+    "Name": "a:CT_ColorScheme/a:clrScheme",
+    "ClassName": "ColorScheme"
+  },
+  {
+    "Name": "a:CT_Color/a:clrTo",
+    "ClassName": "ColorTo"
+  },
+  {
+    "Name": "a:CT_NonVisualConnectorProperties/a:cNvCxnSpPr",
+    "ClassName": "NonVisualConnectorShapeDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualGraphicFrameProperties/a:cNvGraphicFramePr",
+    "ClassName": "NonVisualGraphicFrameDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualGroupDrawingShapeProps/a:cNvGrpSpPr",
+    "ClassName": "NonVisualGroupShapeDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualPictureProperties/a:cNvPicPr",
+    "ClassName": "NonVisualPictureDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/a:cNvPr",
+    "ClassName": "NonVisualDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingShapeProps/a:cNvSpPr",
+    "ClassName": "NonVisualShapeDrawingProperties"
+  },
+  {
+    "Name": "a:CT_ComplementTransform/a:comp",
+    "ClassName": "Complement"
+  },
+  {
+    "Name": "a:CT_EffectContainer/a:cont",
+    "ClassName": "EffectContainer"
+  },
+  {
+    "Name": "a:CT_Color/a:contourClr",
+    "ClassName": "ContourColor"
+  },
+  {
+    "Name": "a:CT_TextFont/a:cs",
+    "ClassName": "ComplexScriptFont"
+  },
+  {
+    "Name": "a:CT_Path2DCubicBezierTo/a:cubicBezTo",
+    "ClassName": "CubicBezierCurveTo"
+  },
+  {
+    "Name": "a:CT_CustomColor/a:custClr",
+    "ClassName": "CustomColor"
+  },
+  {
+    "Name": "a:CT_CustomColorList/a:custClrLst",
+    "ClassName": "CustomColorList"
+  },
+  {
+    "Name": "a:CT_DashStopList/a:custDash",
+    "ClassName": "CustomDash"
+  },
+  {
+    "Name": "a:CT_CustomGeometry2D/a:custGeom",
+    "ClassName": "CustomGeometry"
+  },
+  {
+    "Name": "a:CT_ConnectionSite/a:cxn",
+    "ClassName": "ConnectionSite"
+  },
+  {
+    "Name": "a:CT_ConnectionSiteList/a:cxnLst",
+    "ClassName": "ConnectionSiteList"
+  },
+  {
+    "Name": "a:CT_GvmlConnector/a:cxnSp",
+    "ClassName": "ConnectionShape"
+  },
+  {
+    "Name": "a:CT_ConnectorLocking/a:cxnSpLocks",
+    "ClassName": "ConnectionShapeLocks"
+  },
+  {
+    "Name": "a:CT_TextParagraphProperties/a:defPPr",
+    "ClassName": "DefaultParagraphProperties"
+  },
+  {
+    "Name": "a:CT_TextCharacterProperties/a:defRPr",
+    "ClassName": "DefaultRunProperties"
+  },
+  {
+    "Name": "a:CT_AnimationDgmElement/a:dgm",
+    "ClassName": "Diagram"
+  },
+  {
+    "Name": "a:CT_Color2/a:dk1",
+    "ClassName": "Dark1Color"
+  },
+  {
+    "Name": "a:CT_Color2/a:dk2",
+    "ClassName": "Dark2Color"
+  },
+  {
+    "Name": "a:CT_DashStop/a:ds",
+    "ClassName": "DashStop"
+  },
+  {
+    "Name": "a:CT_DuotoneEffect/a:duotone",
+    "ClassName": "Duotone"
+  },
+  {
+    "Name": "a:CT_TextFont/a:ea",
+    "ClassName": "EastAsianFont"
+  },
+  {
+    "Name": "a:CT_EffectProperties/a:effect",
+    "ClassName": "EffectPropertiesType"
+  },
+  {
+    "Name": "a:CT_EffectReference/a:effect",
+    "ClassName": "Effect"
+  },
+  {
+    "Name": "a:CT_EffectContainer/a:effectDag",
+    "ClassName": "EffectDag"
+  },
+  {
+    "Name": "a:CT_EffectList/a:effectLst",
+    "ClassName": "EffectList"
+  },
+  {
+    "Name": "a:CT_StyleMatrixReference/a:effectRef",
+    "ClassName": "EffectReference"
+  },
+  {
+    "Name": "a:CT_EffectStyleItem/a:effectStyle",
+    "ClassName": "EffectStyle"
+  },
+  {
+    "Name": "a:CT_EffectStyleList/a:effectStyleLst",
+    "ClassName": "EffectStyleList"
+  },
+  {
+    "Name": "a:CT_AudioCDTime/a:end",
+    "ClassName": "EndTime"
+  },
+  {
+    "Name": "a:CT_Connection/a:endCxn",
+    "ClassName": "EndConnection"
+  },
+  {
+    "Name": "a:CT_TextCharacterProperties/a:endParaRPr",
+    "ClassName": "EndParagraphRunProperties"
+  },
+  {
+    "Name": "a:CT_BlipExtension/a:ext",
+    "ClassName": "BlipExtension"
+  },
+  {
+    "Name": "a:CT_ConnectorLockingExtension/a:ext",
+    "ClassName": "ConnectorLockingExtension"
+  },
+  {
+    "Name": "a:CT_DataModelExtension/a:ext",
+    "ClassName": "DataModelExtension"
+  },
+  {
+    "Name": "a:CT_GvmlGroupShapeExtension/a:ext",
+    "ClassName": "GvmlGroupShapeExtension"
+  },
+  {
+    "Name": "a:CT_HyperlinkExtension/a:ext",
+    "ClassName": "HyperlinkExtension"
+  },
+  {
+    "Name": "a:CT_LinePropertiesExtension/a:ext",
+    "ClassName": "LinePropertiesExtension"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingPropsExtension/a:ext",
+    "ClassName": "NonVisualDrawingPropertiesExtension"
+  },
+  {
+    "Name": "a:CT_NonVisualGroupDrawingShapePropsExtension/a:ext",
+    "ClassName": "NonVisualGroupDrawingShapePropsExtension"
+  },
+  {
+    "Name": "a:CT_NonVisualPicturePropertiesExtension/a:ext",
+    "ClassName": "NonVisualPicturePropertiesExtension"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtension/a:ext",
+    "ClassName": "Extension"
+  },
+  {
+    "Name": "a:CT_OfficeStyleSheetExtension/a:ext",
+    "ClassName": "OfficeStyleSheetExtension"
+  },
+  {
+    "Name": "a:CT_PositiveSize2D/a:ext",
+    "ClassName": "Extents"
+  },
+  {
+    "Name": "a:CT_PtExtension/a:ext",
+    "ClassName": "PtExtension"
+  },
+  {
+    "Name": "a:CT_ShapePropertiesExtension/a:ext",
+    "ClassName": "ShapePropertiesExtension"
+  },
+  {
+    "Name": "a:CT_BlipExtensionList/a:extLst",
+    "ClassName": "BlipExtensionList"
+  },
+  {
+    "Name": "a:CT_ConnectorLockingExtensionList/a:extLst",
+    "ClassName": "ConnectorLockingExtensionList"
+  },
+  {
+    "Name": "a:CT_GvmlGroupShapeExtensionList/a:extLst",
+    "ClassName": "GvmlGroupShapeExtensionList"
+  },
+  {
+    "Name": "a:CT_HyperlinkExtensionList/a:extLst",
+    "ClassName": "HyperlinkExtensionList"
+  },
+  {
+    "Name": "a:CT_LinePropertiesExtensionList/a:extLst",
+    "ClassName": "LinePropertiesExtensionList"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingPropsExtensionList/a:extLst",
+    "ClassName": "NonVisualDrawingPropertiesExtensionList"
+  },
+  {
+    "Name": "a:CT_NonVisualGroupDrawingShapePropsExtensionList/a:extLst",
+    "ClassName": "NonVisualGroupDrawingShapePropsExtensionList"
+  },
+  {
+    "Name": "a:CT_NonVisualPicturePropertiesExtensionList/a:extLst",
+    "ClassName": "NonVisualPicturePropertiesExtensionList"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "a:CT_OfficeStyleSheetExtensionList/a:extLst",
+    "ClassName": "OfficeStyleSheetExtensionList"
+  },
+  {
+    "Name": "a:CT_ShapePropertiesExtensionList/a:extLst",
+    "ClassName": "ShapePropertiesExtensionList"
+  },
+  {
+    "Name": "a:CT_ColorSchemeAndMapping/a:extraClrScheme",
+    "ClassName": "ExtraColorScheme"
+  },
+  {
+    "Name": "a:CT_ColorSchemeList/a:extraClrSchemeLst",
+    "ClassName": "ExtraColorSchemeList"
+  },
+  {
+    "Name": "a:CT_Color/a:extrusionClr",
+    "ClassName": "ExtrusionColor"
+  },
+  {
+    "Name": "a:CT_Color/a:fgClr",
+    "ClassName": "ForegroundColor"
+  },
+  {
+    "Name": "a:CT_FillEffect/a:fill",
+    "ClassName": "Fill"
+  },
+  {
+    "Name": "a:CT_FillProperties/a:fill",
+    "ClassName": "FillProperties"
+  },
+  {
+    "Name": "a:CT_FillOverlayEffect/a:fillOverlay",
+    "ClassName": "FillOverlay"
+  },
+  {
+    "Name": "a:CT_RelativeRect/a:fillRect",
+    "ClassName": "FillRectangle"
+  },
+  {
+    "Name": "a:CT_StyleMatrixReference/a:fillRef",
+    "ClassName": "FillReference"
+  },
+  {
+    "Name": "a:CT_FillStyleList/a:fillStyleLst",
+    "ClassName": "FillStyleList"
+  },
+  {
+    "Name": "a:CT_RelativeRect/a:fillToRect",
+    "ClassName": "FillToRectangle"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/a:firstCol",
+    "ClassName": "FirstColumn"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/a:firstRow",
+    "ClassName": "FirstRow"
+  },
+  {
+    "Name": "a:CT_FlatText/a:flatTx",
+    "ClassName": "FlatText"
+  },
+  {
+    "Name": "a:CT_TextField/a:fld",
+    "ClassName": "Field"
+  },
+  {
+    "Name": "a:CT_StyleMatrix/a:fmtScheme",
+    "ClassName": "FormatScheme"
+  },
+  {
+    "Name": "a:CT_Color2/a:folHlink",
+    "ClassName": "FollowedHyperlinkColor"
+  },
+  {
+    "Name": "a:CT_FontCollection/a:font",
+    "ClassName": "Fonts"
+  },
+  {
+    "Name": "a:CT_SupplementalFont/a:font",
+    "ClassName": "SupplementalFont"
+  },
+  {
+    "Name": "a:CT_FontReference/a:fontRef",
+    "ClassName": "FontReference"
+  },
+  {
+    "Name": "a:CT_FontScheme/a:fontScheme",
+    "ClassName": "FontScheme"
+  },
+  {
+    "Name": "a:CT_GammaTransform/a:gamma",
+    "ClassName": "Gamma"
+  },
+  {
+    "Name": "a:CT_GeomGuide/a:gd",
+    "ClassName": "ShapeGuide"
+  },
+  {
+    "Name": "a:CT_GeomGuideList/a:gdLst",
+    "ClassName": "ShapeGuideList"
+  },
+  {
+    "Name": "a:CT_GlowEffect/a:glow",
+    "ClassName": "Glow"
+  },
+  {
+    "Name": "a:CT_GradientFillProperties/a:gradFill",
+    "ClassName": "GradientFill"
+  },
+  {
+    "Name": "a:CT_GraphicalObject/a:graphic",
+    "ClassName": "Graphic"
+  },
+  {
+    "Name": "a:CT_GraphicalObjectData/a:graphicData",
+    "ClassName": "GraphicData"
+  },
+  {
+    "Name": "a:CT_GvmlGraphicalObjectFrame/a:graphicFrame",
+    "ClassName": "GraphicFrame"
+  },
+  {
+    "Name": "a:CT_GraphicalObjectFrameLocking/a:graphicFrameLocks",
+    "ClassName": "GraphicFrameLocks"
+  },
+  {
+    "Name": "a:CT_GrayscaleTransform/a:gray",
+    "ClassName": "Gray"
+  },
+  {
+    "Name": "a:CT_GrayscaleEffect/a:grayscl",
+    "ClassName": "Grayscale"
+  },
+  {
+    "Name": "a:CT_Percentage/a:green",
+    "ClassName": "Green"
+  },
+  {
+    "Name": "a:CT_Percentage/a:greenMod",
+    "ClassName": "GreenModulation"
+  },
+  {
+    "Name": "a:CT_Percentage/a:greenOff",
+    "ClassName": "GreenOffset"
+  },
+  {
+    "Name": "a:CT_TableCol/a:gridCol",
+    "ClassName": "GridColumn"
+  },
+  {
+    "Name": "a:CT_GroupFillProperties/a:grpFill",
+    "ClassName": "GroupFill"
+  },
+  {
+    "Name": "a:CT_GvmlGroupShape/a:grpSp",
+    "ClassName": "GroupShape"
+  },
+  {
+    "Name": "a:CT_GroupLocking/a:grpSpLocks",
+    "ClassName": "GroupShapeLocks"
+  },
+  {
+    "Name": "a:CT_GroupShapeProperties/a:grpSpPr",
+    "ClassName": "VisualGroupShapeProperties"
+  },
+  {
+    "Name": "a:CT_GradientStop/a:gs",
+    "ClassName": "GradientStop"
+  },
+  {
+    "Name": "a:CT_GradientStopList/a:gsLst",
+    "ClassName": "GradientStopList"
+  },
+  {
+    "Name": "a:CT_LineEndProperties/a:headEnd",
+    "ClassName": "HeadEnd"
+  },
+  {
+    "Name": "a:CT_Color/a:highlight",
+    "ClassName": "Highlight"
+  },
+  {
+    "Name": "a:CT_Color2/a:hlink",
+    "ClassName": "Hyperlink"
+  },
+  {
+    "Name": "a:CT_Hyperlink/a:hlinkClick",
+    "ClassName": "HyperlinkOnClick"
+  },
+  {
+    "Name": "a:CT_Hyperlink/a:hlinkHover",
+    "ClassName": "HyperlinkOnHover"
+  },
+  {
+    "Name": "a:CT_Hyperlink/a:hlinkMouseOver",
+    "ClassName": "HyperlinkOnMouseOver"
+  },
+  {
+    "Name": "a:CT_HSLEffect/a:hsl",
+    "ClassName": "Hsl"
+  },
+  {
+    "Name": "a:CT_HslColor/a:hslClr",
+    "ClassName": "HslColor"
+  },
+  {
+    "Name": "a:CT_PositiveFixedAngle/a:hue",
+    "ClassName": "Hue"
+  },
+  {
+    "Name": "a:CT_PositivePercentage/a:hueMod",
+    "ClassName": "HueModulation"
+  },
+  {
+    "Name": "a:CT_Angle/a:hueOff",
+    "ClassName": "HueOffset"
+  },
+  {
+    "Name": "a:CT_InnerShadowEffect/a:innerShdw",
+    "ClassName": "InnerShadow"
+  },
+  {
+    "Name": "a:CT_ThemeableLineStyle/a:insideH",
+    "ClassName": "InsideHorizontalBorder"
+  },
+  {
+    "Name": "a:CT_ThemeableLineStyle/a:insideV",
+    "ClassName": "InsideVerticalBorder"
+  },
+  {
+    "Name": "a:CT_InverseTransform/a:inv",
+    "ClassName": "Inverse"
+  },
+  {
+    "Name": "a:CT_InverseGammaTransform/a:invGamma",
+    "ClassName": "InverseGamma"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/a:lastCol",
+    "ClassName": "LastColumn"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/a:lastRow",
+    "ClassName": "LastRow"
+  },
+  {
+    "Name": "a:CT_TextFont/a:latin",
+    "ClassName": "LatinFont"
+  },
+  {
+    "Name": "a:CT_ThemeableLineStyle/a:left",
+    "ClassName": "LeftBorder"
+  },
+  {
+    "Name": "a:CT_LightRig/a:lightRig",
+    "ClassName": "LightRig"
+  },
+  {
+    "Name": "a:CT_LinearShadeProperties/a:lin",
+    "ClassName": "LinearGradientFill"
+  },
+  {
+    "Name": "a:CT_LineProperties/a:ln",
+    "ClassName": "Outline"
+  },
+  {
+    "Name": "a:CT_LineProperties/a:lnB",
+    "ClassName": "BottomBorderLineProperties"
+  },
+  {
+    "Name": "a:CT_LineProperties/a:lnBlToTr",
+    "ClassName": "BottomLeftToTopRightBorderLineProperties"
+  },
+  {
+    "Name": "a:CT_DefaultShapeDefinition/a:lnDef",
+    "ClassName": "LineDefault"
+  },
+  {
+    "Name": "a:CT_LineProperties/a:lnL",
+    "ClassName": "LeftBorderLineProperties"
+  },
+  {
+    "Name": "a:CT_LineProperties/a:lnR",
+    "ClassName": "RightBorderLineProperties"
+  },
+  {
+    "Name": "a:CT_StyleMatrixReference/a:lnRef",
+    "ClassName": "LineReference"
+  },
+  {
+    "Name": "a:CT_TextSpacing/a:lnSpc",
+    "ClassName": "LineSpacing"
+  },
+  {
+    "Name": "a:CT_LineStyleList/a:lnStyleLst",
+    "ClassName": "LineStyleList"
+  },
+  {
+    "Name": "a:CT_LineProperties/a:lnT",
+    "ClassName": "TopBorderLineProperties"
+  },
+  {
+    "Name": "a:CT_LineProperties/a:lnTlToBr",
+    "ClassName": "TopLeftToBottomRightBorderLineProperties"
+  },
+  {
+    "Name": "a:CT_Path2DLineTo/a:lnTo",
+    "ClassName": "LineTo"
+  },
+  {
+    "Name": "a:CT_TextListStyle/a:lstStyle",
+    "ClassName": "ListStyle"
+  },
+  {
+    "Name": "a:CT_Color2/a:lt1",
+    "ClassName": "Light1Color"
+  },
+  {
+    "Name": "a:CT_Color2/a:lt2",
+    "ClassName": "Light2Color"
+  },
+  {
+    "Name": "a:CT_LuminanceEffect/a:lum",
+    "ClassName": "LuminanceEffect"
+  },
+  {
+    "Name": "a:CT_Percentage/a:lum",
+    "ClassName": "Luminance"
+  },
+  {
+    "Name": "a:CT_Percentage/a:lumMod",
+    "ClassName": "LuminanceModulation"
+  },
+  {
+    "Name": "a:CT_Percentage/a:lumOff",
+    "ClassName": "LuminanceOffset"
+  },
+  {
+    "Name": "a:CT_TextParagraphProperties/a:lvl1pPr",
+    "ClassName": "Level1ParagraphProperties"
+  },
+  {
+    "Name": "a:CT_TextParagraphProperties/a:lvl2pPr",
+    "ClassName": "Level2ParagraphProperties"
+  },
+  {
+    "Name": "a:CT_TextParagraphProperties/a:lvl3pPr",
+    "ClassName": "Level3ParagraphProperties"
+  },
+  {
+    "Name": "a:CT_TextParagraphProperties/a:lvl4pPr",
+    "ClassName": "Level4ParagraphProperties"
+  },
+  {
+    "Name": "a:CT_TextParagraphProperties/a:lvl5pPr",
+    "ClassName": "Level5ParagraphProperties"
+  },
+  {
+    "Name": "a:CT_TextParagraphProperties/a:lvl6pPr",
+    "ClassName": "Level6ParagraphProperties"
+  },
+  {
+    "Name": "a:CT_TextParagraphProperties/a:lvl7pPr",
+    "ClassName": "Level7ParagraphProperties"
+  },
+  {
+    "Name": "a:CT_TextParagraphProperties/a:lvl8pPr",
+    "ClassName": "Level8ParagraphProperties"
+  },
+  {
+    "Name": "a:CT_TextParagraphProperties/a:lvl9pPr",
+    "ClassName": "Level9ParagraphProperties"
+  },
+  {
+    "Name": "a:CT_FontCollection/a:majorFont",
+    "ClassName": "MajorFont"
+  },
+  {
+    "Name": "a:CT_EmptyElement/a:masterClrMapping",
+    "ClassName": "MasterColorMapping"
+  },
+  {
+    "Name": "a:CT_FontCollection/a:minorFont",
+    "ClassName": "MinorFont"
+  },
+  {
+    "Name": "a:CT_LineJoinMiterProperties/a:miter",
+    "ClassName": "Miter"
+  },
+  {
+    "Name": "a:CT_Path2DMoveTo/a:moveTo",
+    "ClassName": "MoveTo"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/a:neCell",
+    "ClassName": "NortheastCell"
+  },
+  {
+    "Name": "a:CT_TextNoAutofit/a:noAutofit",
+    "ClassName": "NoAutoFit"
+  },
+  {
+    "Name": "a:CT_NoFillProperties/a:noFill",
+    "ClassName": "NoFill"
+  },
+  {
+    "Name": "a:CT_Vector3D/a:norm",
+    "ClassName": "Normal"
+  },
+  {
+    "Name": "a:CT_TextNormalAutofit/a:normAutofit",
+    "ClassName": "NormalAutoFit"
+  },
+  {
+    "Name": "a:CT_GvmlConnectorNonVisual/a:nvCxnSpPr",
+    "ClassName": "NonVisualConnectionShapeProperties"
+  },
+  {
+    "Name": "a:CT_GvmlGraphicFrameNonVisual/a:nvGraphicFramePr",
+    "ClassName": "NonVisualGraphicFrameProperties"
+  },
+  {
+    "Name": "a:CT_GvmlGroupShapeNonVisual/a:nvGrpSpPr",
+    "ClassName": "NonVisualGroupShapeProperties"
+  },
+  {
+    "Name": "a:CT_GvmlPictureNonVisual/a:nvPicPr",
+    "ClassName": "NonVisualPictureProperties"
+  },
+  {
+    "Name": "a:CT_GvmlShapeNonVisual/a:nvSpPr",
+    "ClassName": "NonVisualShapeProperties"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/a:nwCell",
+    "ClassName": "NorthwestCell"
+  },
+  {
+    "Name": "a:CT_ObjectStyleDefaults/a:objectDefaults",
+    "ClassName": "ObjectDefaults"
+  },
+  {
+    "Name": "a:CT_Point2D/a:off",
+    "ClassName": "Offset"
+  },
+  {
+    "Name": "a:CT_OuterShadowEffect/a:outerShdw",
+    "ClassName": "OuterShadow"
+  },
+  {
+    "Name": "a:CT_ColorMapping/a:overrideClrMapping",
+    "ClassName": "OverrideColorMapping"
+  },
+  {
+    "Name": "a:CT_TextParagraph/a:p",
+    "ClassName": "Paragraph"
+  },
+  {
+    "Name": "a:CT_Path2D/a:path",
+    "ClassName": "Path"
+  },
+  {
+    "Name": "a:CT_PathShadeProperties/a:path",
+    "ClassName": "PathGradientFill"
+  },
+  {
+    "Name": "a:CT_Path2DList/a:pathLst",
+    "ClassName": "PathList"
+  },
+  {
+    "Name": "a:CT_PatternFillProperties/a:pattFill",
+    "ClassName": "PatternFill"
+  },
+  {
+    "Name": "a:CT_GvmlPicture/a:pic",
+    "ClassName": "Picture"
+  },
+  {
+    "Name": "a:CT_PictureLocking/a:picLocks",
+    "ClassName": "PictureLocks"
+  },
+  {
+    "Name": "a:CT_AdjPoint2D/a:pos",
+    "ClassName": "Position"
+  },
+  {
+    "Name": "a:CT_TextParagraphProperties/a:pPr",
+    "ClassName": "ParagraphProperties"
+  },
+  {
+    "Name": "a:CT_PresetColor/a:prstClr",
+    "ClassName": "PresetColor"
+  },
+  {
+    "Name": "a:CT_PresetLineDashProperties/a:prstDash",
+    "ClassName": "PresetDash"
+  },
+  {
+    "Name": "a:CT_PresetGeometry2D/a:prstGeom",
+    "ClassName": "PresetGeometry"
+  },
+  {
+    "Name": "a:CT_PresetShadowEffect/a:prstShdw",
+    "ClassName": "PresetShadow"
+  },
+  {
+    "Name": "a:CT_PresetTextShape/a:prstTxWarp",
+    "ClassName": "PresetTextWrap"
+  },
+  {
+    "Name": "a:CT_AdjPoint2D/a:pt",
+    "ClassName": "Point"
+  },
+  {
+    "Name": "a:CT_Path2DQuadBezierTo/a:quadBezTo",
+    "ClassName": "QuadraticBezierCurveTo"
+  },
+  {
+    "Name": "a:CT_QuickTimeFile/a:quickTimeFile",
+    "ClassName": "QuickTimeFromFile"
+  },
+  {
+    "Name": "a:CT_RegularTextRun/a:r",
+    "ClassName": "Run"
+  },
+  {
+    "Name": "a:CT_GeomRect/a:rect",
+    "ClassName": "Rectangle"
+  },
+  {
+    "Name": "a:CT_Percentage/a:red",
+    "ClassName": "Red"
+  },
+  {
+    "Name": "a:CT_Percentage/a:redMod",
+    "ClassName": "RedModulation"
+  },
+  {
+    "Name": "a:CT_Percentage/a:redOff",
+    "ClassName": "RedOffset"
+  },
+  {
+    "Name": "a:CT_ReflectionEffect/a:reflection",
+    "ClassName": "Reflection"
+  },
+  {
+    "Name": "a:CT_RelativeOffsetEffect/a:relOff",
+    "ClassName": "RelativeOffset"
+  },
+  {
+    "Name": "a:CT_ThemeableLineStyle/a:right",
+    "ClassName": "RightBorder"
+  },
+  {
+    "Name": "a:CT_SphereCoords/a:rot",
+    "ClassName": "Rotation"
+  },
+  {
+    "Name": "a:CT_LineJoinRound/a:round",
+    "ClassName": "Round"
+  },
+  {
+    "Name": "a:CT_TextCharacterProperties/a:rPr",
+    "ClassName": "RunProperties"
+  },
+  {
+    "Name": "a:CT_Bool/a:rtl",
+    "ClassName": "RightToLeft"
+  },
+  {
+    "Name": "a:CT_Percentage/a:sat",
+    "ClassName": "Saturation"
+  },
+  {
+    "Name": "a:CT_Percentage/a:satMod",
+    "ClassName": "SaturationModulation"
+  },
+  {
+    "Name": "a:CT_Percentage/a:satOff",
+    "ClassName": "SaturationOffset"
+  },
+  {
+    "Name": "a:CT_Scene3D/a:scene3d",
+    "ClassName": "Scene3DType"
+  },
+  {
+    "Name": "a:CT_SchemeColor/a:schemeClr",
+    "ClassName": "SchemeColor"
+  },
+  {
+    "Name": "a:CT_ScRgbColor/a:scrgbClr",
+    "ClassName": "RgbColorModelPercentage"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/a:seCell",
+    "ClassName": "SoutheastCell"
+  },
+  {
+    "Name": "a:CT_PositiveFixedPercentage/a:shade",
+    "ClassName": "Shade"
+  },
+  {
+    "Name": "a:CT_EmbeddedWAVAudioFile/a:snd",
+    "ClassName": "HyperlinkSound"
+  },
+  {
+    "Name": "a:CT_SoftEdgesEffect/a:softEdge",
+    "ClassName": "SoftEdge"
+  },
+  {
+    "Name": "a:CT_SolidColorFillProperties/a:solidFill",
+    "ClassName": "SolidFill"
+  },
+  {
+    "Name": "a:CT_GvmlShape/a:sp",
+    "ClassName": "Shape"
+  },
+  {
+    "Name": "a:CT_Shape3D/a:sp3d",
+    "ClassName": "Shape3DType"
+  },
+  {
+    "Name": "a:CT_TextShapeAutofit/a:spAutoFit",
+    "ClassName": "ShapeAutoFit"
+  },
+  {
+    "Name": "a:CT_TextSpacing/a:spcAft",
+    "ClassName": "SpaceAfter"
+  },
+  {
+    "Name": "a:CT_TextSpacing/a:spcBef",
+    "ClassName": "SpaceBefore"
+  },
+  {
+    "Name": "a:CT_TextSpacingPercent/a:spcPct",
+    "ClassName": "SpacingPercent"
+  },
+  {
+    "Name": "a:CT_TextSpacingPoint/a:spcPts",
+    "ClassName": "SpacingPoints"
+  },
+  {
+    "Name": "a:CT_DefaultShapeDefinition/a:spDef",
+    "ClassName": "ShapeDefault"
+  },
+  {
+    "Name": "a:CT_ShapeLocking/a:spLocks",
+    "ClassName": "ShapeLocks"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/a:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "a:CT_RelativeRect/a:srcRect",
+    "ClassName": "SourceRectangle"
+  },
+  {
+    "Name": "a:CT_SRgbColor/a:srgbClr",
+    "ClassName": "RgbColorModelHex"
+  },
+  {
+    "Name": "a:CT_AudioCDTime/a:st",
+    "ClassName": "StartTime"
+  },
+  {
+    "Name": "a:CT_Connection/a:stCxn",
+    "ClassName": "StartConnection"
+  },
+  {
+    "Name": "a:CT_StretchInfoProperties/a:stretch",
+    "ClassName": "Stretch"
+  },
+  {
+    "Name": "a:CT_ShapeStyle/a:style",
+    "ClassName": "ShapeStyle"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/a:swCell",
+    "ClassName": "SouthwestCell"
+  },
+  {
+    "Name": "a:CT_Ratio/a:sx",
+    "ClassName": "ScaleX"
+  },
+  {
+    "Name": "a:CT_Ratio/a:sy",
+    "ClassName": "ScaleY"
+  },
+  {
+    "Name": "a:CT_TextFont/a:sym",
+    "ClassName": "SymbolFont"
+  },
+  {
+    "Name": "a:CT_SystemColor/a:sysClr",
+    "ClassName": "SystemColor"
+  },
+  {
+    "Name": "xsd:string/a:t",
+    "ClassName": "Text"
+  },
+  {
+    "Name": "a:CT_TextTabStop/a:tab",
+    "ClassName": "TabStop"
+  },
+  {
+    "Name": "a:CT_TableStyle/a:tableStyle",
+    "ClassName": "TableStyle"
+  },
+  {
+    "Name": "a:ST_Guid/a:tableStyleId",
+    "ClassName": "TableStyleId"
+  },
+  {
+    "Name": "a:CT_TextTabStopList/a:tabLst",
+    "ClassName": "TabStopList"
+  },
+  {
+    "Name": "a:CT_LineEndProperties/a:tailEnd",
+    "ClassName": "TailEnd"
+  },
+  {
+    "Name": "a:CT_Table/a:tbl",
+    "ClassName": "Table"
+  },
+  {
+    "Name": "a:CT_TableBackgroundStyle/a:tblBg",
+    "ClassName": "TableBackground"
+  },
+  {
+    "Name": "a:CT_TableGrid/a:tblGrid",
+    "ClassName": "TableGrid"
+  },
+  {
+    "Name": "a:CT_TableProperties/a:tblPr",
+    "ClassName": "TableProperties"
+  },
+  {
+    "Name": "a:CT_TableStyle/a:tblStyle",
+    "ClassName": "TableStyleEntry"
+  },
+  {
+    "Name": "a:CT_TableStyleList/a:tblStyleLst",
+    "ClassName": "TableStyleList",
+    "PartClassName": "TableStylesPart"
+  },
+  {
+    "Name": "a:CT_TableCell/a:tc",
+    "ClassName": "TableCell"
+  },
+  {
+    "Name": "a:CT_TableCellBorderStyle/a:tcBdr",
+    "ClassName": "TableCellBorders"
+  },
+  {
+    "Name": "a:CT_TableCellProperties/a:tcPr",
+    "ClassName": "TableCellProperties"
+  },
+  {
+    "Name": "a:CT_TableStyleCellStyle/a:tcStyle",
+    "ClassName": "TableCellStyle"
+  },
+  {
+    "Name": "a:CT_TableStyleTextStyle/a:tcTxStyle",
+    "ClassName": "TableCellTextStyle"
+  },
+  {
+    "Name": "a:CT_OfficeStyleSheet/a:theme",
+    "ClassName": "Theme",
+    "PartClassName": "ThemePart"
+  },
+  {
+    "Name": "a:CT_BaseStyles/a:themeElements",
+    "ClassName": "ThemeElements"
+  },
+  {
+    "Name": "a:CT_EmptyElement/a:themeManager",
+    "ClassName": "ThemeManager"
+  },
+  {
+    "Name": "a:CT_BaseStylesOverride/a:themeOverride",
+    "ClassName": "ThemeOverride",
+    "PartClassName": "ThemeOverridePart"
+  },
+  {
+    "Name": "a:CT_TileInfoProperties/a:tile",
+    "ClassName": "Tile"
+  },
+  {
+    "Name": "a:CT_RelativeRect/a:tileRect",
+    "ClassName": "TileRectangle"
+  },
+  {
+    "Name": "a:CT_PositiveFixedPercentage/a:tint",
+    "ClassName": "Tint"
+  },
+  {
+    "Name": "a:CT_TintEffect/a:tint",
+    "ClassName": "TintEffect"
+  },
+  {
+    "Name": "a:CT_ThemeableLineStyle/a:tl2br",
+    "ClassName": "TopLeftToBottomRightBorder"
+  },
+  {
+    "Name": "a:CT_ThemeableLineStyle/a:top",
+    "ClassName": "TopBorder"
+  },
+  {
+    "Name": "a:CT_TableRow/a:tr",
+    "ClassName": "TableRow"
+  },
+  {
+    "Name": "a:CT_ThemeableLineStyle/a:tr2bl",
+    "ClassName": "TopRightToBottomLeftBorder"
+  },
+  {
+    "Name": "a:CT_TextBody/a:txBody",
+    "ClassName": "TextBody"
+  },
+  {
+    "Name": "a:CT_DefaultShapeDefinition/a:txDef",
+    "ClassName": "TextDefault"
+  },
+  {
+    "Name": "a:CT_GvmlTextShape/a:txSp",
+    "ClassName": "TextShape"
+  },
+  {
+    "Name": "a:CT_TextUnderlineFillGroupWrapper/a:uFill",
+    "ClassName": "UnderlineFill"
+  },
+  {
+    "Name": "a:CT_TextUnderlineFillFollowText/a:uFillTx",
+    "ClassName": "UnderlineFillText"
+  },
+  {
+    "Name": "a:CT_LineProperties/a:uLn",
+    "ClassName": "Underline"
+  },
+  {
+    "Name": "a:CT_TextUnderlineLineFollowText/a:uLnTx",
+    "ClassName": "UnderlineFollowsText"
+  },
+  {
+    "Name": "a:CT_Vector3D/a:up",
+    "ClassName": "UpVector"
+  },
+  {
+    "Name": "a:CT_GvmlUseShapeRectangle/a:useSpRect",
+    "ClassName": "UseShapeRectangle"
+  },
+  {
+    "Name": "a:CT_VideoFile/a:videoFile",
+    "ClassName": "VideoFromFile"
+  },
+  {
+    "Name": "a:CT_EmbeddedWAVAudioFile/a:wavAudioFile",
+    "ClassName": "WaveAudioFile"
+  },
+  {
+    "Name": "a:CT_TablePartStyle/a:wholeTbl",
+    "ClassName": "WholeTable"
+  },
+  {
+    "Name": "a:CT_GroupTransform2D/a:xfrm",
+    "ClassName": "TransformGroup"
+  },
+  {
+    "Name": "a:CT_Transform2D/a:xfrm",
+    "ClassName": "Transform2D"
+  },
+  {
+    "Name": "a:CT_TransformEffect/a:xfrm",
+    "ClassName": "TransformEffect"
+  }
+]

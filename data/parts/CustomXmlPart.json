@@ -1,0 +1,16 @@
+{
+  "Name": "CustomXmlPart",
+  "Base": "OpenXmlPart",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
+  "Target": "item",
+  "Paths": {
+    "General": "../customXML"
+  },
+  "Children": [
+    {
+      "ApiName": "CustomXmlPropertiesPart",
+      "Name": "CustomXmlPropertiesPart",
+      "HasFixedContent": true
+    }
+  ]
+}

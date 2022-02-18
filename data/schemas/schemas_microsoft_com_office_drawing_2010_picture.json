@@ -1,0 +1,82 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2010/picture",
+  "Types": [
+    {
+      "Name": "a:CT_ShapeStyle/pic14:style",
+      "ClassName": "ShapeStyle",
+      "Summary": "Defines the ShapeStyle Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_StyleMatrixReference/a:lnRef",
+          "PropertyName": "LineReference"
+        },
+        {
+          "Name": "a:CT_StyleMatrixReference/a:fillRef",
+          "PropertyName": "FillReference"
+        },
+        {
+          "Name": "a:CT_StyleMatrixReference/a:effectRef",
+          "PropertyName": "EffectReference"
+        },
+        {
+          "Name": "a:CT_FontReference/a:fontRef",
+          "PropertyName": "FontReference",
+          "PropertyComments": "Font Reference"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_StyleMatrixReference/a:lnRef"
+          },
+          {
+            "Name": "a:CT_StyleMatrixReference/a:fillRef"
+          },
+          {
+            "Name": "a:CT_StyleMatrixReference/a:effectRef"
+          },
+          {
+            "Name": "a:CT_FontReference/a:fontRef"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/pic14:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

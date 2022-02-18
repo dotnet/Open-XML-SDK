@@ -1,0 +1,10 @@
+{
+  "Name": "EmbeddedControlPersistenceBinaryDataPart",
+  "Base": "OpenXmlPart",
+  "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
+  "Target": "ActiveXControl",
+  "Extension": ".bin",
+  "Paths": {
+    "General": "."
+  }
+}

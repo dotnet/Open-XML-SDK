@@ -1,0 +1,12 @@
+{
+  "Root": "x:CT_QueryTable",
+  "Name": "QueryTablePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.queryTable\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable",
+  "Target": "queryTable",
+  "RootElement": "queryTable",
+  "Paths": {
+    "General": "../queryTables"
+  }
+}

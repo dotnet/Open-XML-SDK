@@ -1,0 +1,1032 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/word/2006/wordml",
+  "Types": [
+    {
+      "Name": "wne:CT_Tcg/wne:tcg",
+      "ClassName": "TemplateCommandGroup",
+      "Summary": "Defines the TemplateCommandGroup Class.",
+      "Part": "CustomizationPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "wne:CT_Keymaps/wne:keymaps"
+        },
+        {
+          "Name": "wne:CT_Keymaps/wne:keymapsBad"
+        },
+        {
+          "Name": "wne:CT_Toolbars/wne:toolbars"
+        },
+        {
+          "Name": "wne:CT_Acds/wne:acds"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wne:CT_Keymaps/wne:keymaps",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "wne:CT_Keymaps/wne:keymapsBad",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "wne:CT_Toolbars/wne:toolbars",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "wne:CT_Acds/wne:acds",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wne:CT_Mcds/wne:mcds",
+      "ClassName": "Mcds",
+      "Summary": "Defines the Mcds Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "wne:CT_Mcd/wne:mcd"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wne:CT_Mcd/wne:mcd",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wne:CT_VbaSuppData/wne:vbaSuppData",
+      "ClassName": "VbaSuppData",
+      "Summary": "Defines the VbaSuppData Class.",
+      "Part": "VbaDataPart",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "wne:CT_DocEvents/wne:docEvents",
+          "PropertyName": "DocEvents"
+        },
+        {
+          "Name": "wne:CT_Mcds/wne:mcds",
+          "PropertyName": "Mcds"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wne:CT_DocEvents/wne:docEvents",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "wne:CT_Mcds/wne:mcds",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wne:CT_HashedRecipients/wne:recipients",
+      "ClassName": "MailMergeRecipients",
+      "Summary": "Defines the MailMergeRecipients Class.",
+      "BaseClass": "OpenXmlPartRootElement",
+      "Children": [
+        {
+          "Name": "wne:CT_HashedRecipientData/wne:recipientData"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wne:CT_HashedRecipientData/wne:recipientData",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wne:CT_Fci/wne:fci",
+      "ClassName": "FixedCommandKeyboardCustomization",
+      "Summary": "Defines the FixedCommandKeyboardCustomization Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "wne:fciName",
+          "PropertyName": "CommandName",
+          "Type": "StringValue",
+          "PropertyComments": "fciName"
+        },
+        {
+          "QName": "wne:fciIndex",
+          "PropertyName": "CommandIndex",
+          "Type": "HexBinaryValue",
+          "PropertyComments": "fciIndex",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "2"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "wne:swArg",
+          "PropertyName": "Argument",
+          "Type": "HexBinaryValue",
+          "PropertyComments": "swArg",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "2"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "wne:CT_MacroWll/wne:macro",
+      "ClassName": "MacroKeyboardCustomization",
+      "Summary": "Defines the MacroKeyboardCustomization Class.",
+      "BaseClass": "MacroWllType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "wne:CT_MacroWll/wne:wll",
+      "ClassName": "WllMacroKeyboardCustomization",
+      "Summary": "Defines the WllMacroKeyboardCustomization Class.",
+      "BaseClass": "MacroWllType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "wne:CT_MacroWll/",
+      "ClassName": "MacroWllType",
+      "Summary": "Defines the MacroWllType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "wne:macroName",
+          "PropertyName": "MacroName",
+          "Type": "StringValue",
+          "PropertyComments": "macroName"
+        }
+      ]
+    },
+    {
+      "Name": "wne:CT_AcdKeymap/wne:acd",
+      "ClassName": "AllocatedCommandKeyboardCustomization",
+      "Summary": "Defines the AllocatedCommandKeyboardCustomization Class.",
+      "BaseClass": "AcceleratorKeymapType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "wne:CT_AcdKeymap/wne:acdEntry",
+      "ClassName": "AllocatedCommandManifestEntry",
+      "Summary": "Defines the AllocatedCommandManifestEntry Class.",
+      "BaseClass": "AcceleratorKeymapType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "wne:CT_AcdKeymap/",
+      "ClassName": "AcceleratorKeymapType",
+      "Summary": "Defines the AcceleratorKeymapType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "wne:acdName",
+          "PropertyName": "AcceleratorName",
+          "Type": "StringValue",
+          "PropertyComments": "acdName"
+        }
+      ]
+    },
+    {
+      "Name": "wne:CT_LongHexNumber/wne:wch",
+      "ClassName": "CharacterInsertion",
+      "Summary": "Defines the CharacterInsertion Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "wne:val",
+          "PropertyName": "Val",
+          "Type": "HexBinaryValue",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "4"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "wne:CT_Keymap/wne:keymap",
+      "ClassName": "KeyMapEntry",
+      "Summary": "Defines the KeyMapEntry Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "wne:chmPrimary",
+          "PropertyName": "CharacterMapPrimary",
+          "Type": "HexBinaryValue",
+          "PropertyComments": "chmPrimary",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "2"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "wne:chmSecondary",
+          "PropertyName": "CharacterMapSecondary",
+          "Type": "HexBinaryValue",
+          "PropertyComments": "chmSecondary",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "2"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "wne:kcmPrimary",
+          "PropertyName": "KeyCodePrimary",
+          "Type": "HexBinaryValue",
+          "PropertyComments": "kcmPrimary",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "2"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "wne:kcmSecondary",
+          "PropertyName": "KeyCodeSecondary",
+          "Type": "HexBinaryValue",
+          "PropertyComments": "kcmSecondary",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "2"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "wne:mask",
+          "PropertyName": "Mask",
+          "Type": "OnOffValue",
+          "PropertyComments": "mask"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "wne:CT_Fci/wne:fci",
+          "PropertyName": "FixedCommandKeyboardCustomization"
+        },
+        {
+          "Name": "wne:CT_MacroWll/wne:macro",
+          "PropertyName": "MacroKeyboardCustomization"
+        },
+        {
+          "Name": "wne:CT_AcdKeymap/wne:acd",
+          "PropertyName": "AllocatedCommandKeyboardCustomization"
+        },
+        {
+          "Name": "wne:CT_MacroWll/wne:wll",
+          "PropertyName": "WllMacroKeyboardCustomization"
+        },
+        {
+          "Name": "wne:CT_LongHexNumber/wne:wch",
+          "PropertyName": "CharacterInsertion"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {
+            "Max": 1
+          }
+        ],
+        "Items": [
+          {
+            "Name": "wne:CT_Fci/wne:fci"
+          },
+          {
+            "Name": "wne:CT_MacroWll/wne:macro"
+          },
+          {
+            "Name": "wne:CT_AcdKeymap/wne:acd"
+          },
+          {
+            "Name": "wne:CT_MacroWll/wne:wll"
+          },
+          {
+            "Name": "wne:CT_LongHexNumber/wne:wch"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wne:CT_Acd/wne:acd",
+      "ClassName": "AllocatedCommand",
+      "Summary": "Defines the AllocatedCommand Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "wne:argValue",
+          "PropertyName": "ArgumentValue",
+          "Type": "StringValue",
+          "PropertyComments": "argValue"
+        },
+        {
+          "QName": "wne:fciBasedOn",
+          "PropertyName": "CommandBasedOn",
+          "Type": "StringValue",
+          "PropertyComments": "fciBasedOn"
+        },
+        {
+          "QName": "wne:fciIndexBasedOn",
+          "PropertyName": "CommandIndexBasedOn",
+          "Type": "HexBinaryValue",
+          "PropertyComments": "fciIndexBasedOn",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "2"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "wne:acdName",
+          "PropertyName": "AcceleratorName",
+          "Type": "StringValue",
+          "PropertyComments": "acdName"
+        }
+      ]
+    },
+    {
+      "Name": "wne:CT_Mcd/wne:mcd",
+      "ClassName": "Mcd",
+      "Summary": "Defines the Mcd Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "wne:macroName",
+          "Type": "StringValue",
+          "PropertyComments": "macroName"
+        },
+        {
+          "QName": "wne:name",
+          "Type": "StringValue",
+          "PropertyComments": "name"
+        },
+        {
+          "QName": "wne:menuHelp",
+          "Type": "StringValue",
+          "PropertyComments": "menuHelp"
+        },
+        {
+          "QName": "wne:bEncrypt",
+          "Type": "HexBinaryValue",
+          "PropertyComments": "bEncrypt",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "1"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "wne:cmg",
+          "Type": "HexBinaryValue",
+          "PropertyComments": "cmg",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "1"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xsd:string/wne:eventDocNew",
+      "ClassName": "EventDocNewXsdString",
+      "Summary": "Defines the EventDocNewXsdString Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/wne:eventDocOpen",
+      "ClassName": "EventDocOpenXsdString",
+      "Summary": "Defines the EventDocOpenXsdString Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/wne:eventDocClose",
+      "ClassName": "EventDocCloseXsdString",
+      "Summary": "Defines the EventDocCloseXsdString Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/wne:eventDocSync",
+      "ClassName": "EventDocSyncXsdString",
+      "Summary": "Defines the EventDocSyncXsdString Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/wne:eventDocXmlAfterInsert",
+      "ClassName": "EventDocXmlAfterInsertXsdString",
+      "Summary": "Defines the EventDocXmlAfterInsertXsdString Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/wne:eventDocXmlBeforeDelete",
+      "ClassName": "EventDocXmlBeforeDeleteXsdString",
+      "Summary": "Defines the EventDocXmlBeforeDeleteXsdString Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/wne:eventDocContentControlAfterInsert",
+      "ClassName": "EventDocContentControlAfterInsertXsdString",
+      "Summary": "Defines the EventDocContentControlAfterInsertXsdString Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/wne:eventDocContentControlBeforeDelete",
+      "ClassName": "EventDocContentControlBeforeDeleteXsdString",
+      "Summary": "Defines the EventDocContentControlBeforeDeleteXsdString Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/wne:eventDocContentControlOnExit",
+      "ClassName": "EventDocContentControlOnExistXsdString",
+      "Summary": "Defines the EventDocContentControlOnExistXsdString Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/wne:eventDocContentControlOnEnter",
+      "ClassName": "EventDocContentControlOnEnterXsdString",
+      "Summary": "Defines the EventDocContentControlOnEnterXsdString Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/wne:eventDocStoreUpdate",
+      "ClassName": "EventDocStoreUpdateXsdString",
+      "Summary": "Defines the EventDocStoreUpdateXsdString Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/wne:eventDocContentControlContentUpdate",
+      "ClassName": "EventDocContentControlUpdateXsdString",
+      "Summary": "Defines the EventDocContentControlUpdateXsdString Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/wne:eventDocBuildingBlockAfterInsert",
+      "ClassName": "EventDocBuildingBlockAfterInsertXsdString",
+      "Summary": "Defines the EventDocBuildingBlockAfterInsertXsdString Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "wne:CT_DocEvents/wne:docEvents",
+      "ClassName": "DocEvents",
+      "Summary": "Defines the DocEvents Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "xsd:string/wne:eventDocNew",
+          "PropertyName": "EventDocNewXsdString"
+        },
+        {
+          "Name": "xsd:string/wne:eventDocOpen",
+          "PropertyName": "EventDocOpenXsdString"
+        },
+        {
+          "Name": "xsd:string/wne:eventDocClose",
+          "PropertyName": "EventDocCloseXsdString"
+        },
+        {
+          "Name": "xsd:string/wne:eventDocSync",
+          "PropertyName": "EventDocSyncXsdString"
+        },
+        {
+          "Name": "xsd:string/wne:eventDocXmlAfterInsert",
+          "PropertyName": "EventDocXmlAfterInsertXsdString"
+        },
+        {
+          "Name": "xsd:string/wne:eventDocXmlBeforeDelete",
+          "PropertyName": "EventDocXmlBeforeDeleteXsdString"
+        },
+        {
+          "Name": "xsd:string/wne:eventDocContentControlAfterInsert",
+          "PropertyName": "EventDocContentControlAfterInsertXsdString"
+        },
+        {
+          "Name": "xsd:string/wne:eventDocContentControlBeforeDelete",
+          "PropertyName": "EventDocContentControlBeforeDeleteXsdString"
+        },
+        {
+          "Name": "xsd:string/wne:eventDocContentControlOnExit",
+          "PropertyName": "EventDocContentControlOnExistXsdString"
+        },
+        {
+          "Name": "xsd:string/wne:eventDocContentControlOnEnter",
+          "PropertyName": "EventDocContentControlOnEnterXsdString"
+        },
+        {
+          "Name": "xsd:string/wne:eventDocStoreUpdate",
+          "PropertyName": "EventDocStoreUpdateXsdString"
+        },
+        {
+          "Name": "xsd:string/wne:eventDocContentControlContentUpdate",
+          "PropertyName": "EventDocContentControlUpdateXsdString"
+        },
+        {
+          "Name": "xsd:string/wne:eventDocBuildingBlockAfterInsert",
+          "PropertyName": "EventDocBuildingBlockAfterInsertXsdString"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xsd:string/wne:eventDocNew",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/wne:eventDocOpen",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/wne:eventDocClose",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/wne:eventDocSync",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/wne:eventDocXmlAfterInsert",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/wne:eventDocXmlBeforeDelete",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/wne:eventDocContentControlAfterInsert",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/wne:eventDocContentControlBeforeDelete",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/wne:eventDocContentControlOnExit",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/wne:eventDocContentControlOnEnter",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/wne:eventDocStoreUpdate",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/wne:eventDocContentControlContentUpdate",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/wne:eventDocBuildingBlockAfterInsert",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wne:CT_AcdManifest/wne:acdManifest",
+      "ClassName": "AllocatedCommandManifest",
+      "Summary": "Defines the AllocatedCommandManifest Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "wne:CT_AcdKeymap/wne:acdEntry"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wne:CT_AcdKeymap/wne:acdEntry",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wne:CT_Rel/wne:toolbarData",
+      "ClassName": "ToolbarData",
+      "Summary": "Defines the ToolbarData Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "wne:CT_Keymaps/wne:keymaps",
+      "ClassName": "KeyMapCustomizations",
+      "Summary": "Defines the KeyMapCustomizations Class.",
+      "BaseClass": "KeymapsType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "wne:CT_Keymap/wne:keymap"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wne:CT_Keymap/wne:keymap",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wne:CT_Keymaps/wne:keymapsBad",
+      "ClassName": "MismatchedKeyMapCustomization",
+      "Summary": "Defines the MismatchedKeyMapCustomization Class.",
+      "BaseClass": "KeymapsType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "wne:CT_Keymap/wne:keymap"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wne:CT_Keymap/wne:keymap",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wne:CT_Keymaps/",
+      "ClassName": "KeymapsType",
+      "Summary": "Defines the KeymapsType Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "AdditionalElements": [
+        "wne:CT_Keymap/wne:keymap"
+      ],
+      "Children": [
+        {
+          "Name": "wne:CT_Keymap/wne:keymap"
+        }
+      ]
+    },
+    {
+      "Name": "wne:CT_Toolbars/wne:toolbars",
+      "ClassName": "Toolbars",
+      "Summary": "Defines the Toolbars Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "wne:CT_AcdManifest/wne:acdManifest"
+        },
+        {
+          "Name": "wne:CT_Rel/wne:toolbarData"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wne:CT_AcdManifest/wne:acdManifest",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "wne:CT_Rel/wne:toolbarData",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wne:CT_Acds/wne:acds",
+      "ClassName": "AllocatedCommands",
+      "Summary": "Defines the AllocatedCommands Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "wne:CT_Acd/wne:acd"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wne:CT_Acd/wne:acd",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wne:CT_OnOff/wne:active",
+      "ClassName": "RecordIncluded",
+      "Summary": "Defines the RecordIncluded Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "wne:val",
+          "PropertyName": "Val",
+          "Type": "OnOffValue",
+          "PropertyComments": "val"
+        }
+      ]
+    },
+    {
+      "Name": "wne:CT_DecimalNumber/wne:hash",
+      "ClassName": "RecordHashCode",
+      "Summary": "Defines the RecordHashCode Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "wne:val",
+          "PropertyName": "Val",
+          "Type": "IntegerValue",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "wne:CT_HashedRecipientData/wne:recipientData",
+      "ClassName": "SingleDataSourceRecord",
+      "Summary": "Defines the SingleDataSourceRecord Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "wne:CT_OnOff/wne:active",
+          "PropertyName": "RecordIncluded"
+        },
+        {
+          "Name": "wne:CT_DecimalNumber/wne:hash",
+          "PropertyName": "RecordHashCode"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wne:CT_OnOff/wne:active",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "wne:CT_DecimalNumber/wne:hash"
+          }
+        ]
+      }
+    }
+  ]
+}

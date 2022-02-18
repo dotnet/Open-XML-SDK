@@ -1,0 +1,97 @@
+{
+  "Root": "p:CT_Presentation",
+  "Name": "PresentationPart",
+  "Base": "OpenXmlPart",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument",
+  "Target": "presentation",
+  "RootElement": "presentation",
+  "Paths": {
+    "General": "ppt"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "CustomXmlParts",
+      "Name": "CustomXmlPart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "FontParts",
+      "Name": "FontPart"
+    },
+    {
+      "ApiName": "PresentationPropertiesPart",
+      "Name": "PresentationPropertiesPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "TableStylesPart",
+      "Name": "TableStylesPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "ThemePart",
+      "Name": "ThemePart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "ViewPropertiesPart",
+      "Name": "ViewPropertiesPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "NotesMasterPart",
+      "Name": "NotesMasterPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "SlideParts",
+      "Name": "SlidePart",
+      "HasFixedContent": true
+    },
+    {
+      "MinOccursIsNonZero": true,
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "SlideMasterParts",
+      "Name": "SlideMasterPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "UserDefinedTagsPart",
+      "Name": "UserDefinedTagsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "CommentAuthorsPart",
+      "Name": "CommentAuthorsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "HandoutMasterPart",
+      "Name": "HandoutMasterPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "LegacyDiagramTextInfoPart",
+      "Name": "LegacyDiagramTextInfoPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "VbaProjectPart",
+      "Name": "VbaProjectPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "commentParts",
+      "Name": "PowerPointCommentPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "authorsPart",
+      "Name": "PowerPointAuthorsPart",
+      "HasFixedContent": true
+    }
+  ]
+}

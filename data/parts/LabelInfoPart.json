@@ -1,0 +1,13 @@
+{
+  "Root": "clbl:CT_ClassificationLabelList",
+  "Name": "LabelInfoPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-office.classificationlabels\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2020/02/relationships/classificationlabels",
+  "Target": "LabelInfo",
+  "RootElement": "labelList",
+  "Paths": {
+    "General": "docMetadata"
+  },
+  "Version": "Office2021"
+}

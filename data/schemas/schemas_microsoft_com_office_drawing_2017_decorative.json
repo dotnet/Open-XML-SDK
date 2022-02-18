@@ -1,0 +1,21 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2017/decorative",
+  "Types": [
+    {
+      "Name": "adec:CT_Decorative/adec:decorative",
+      "ClassName": "Decorative",
+      "Summary": "Defines the Decorative Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "val"
+        }
+      ]
+    }
+  ]
+}

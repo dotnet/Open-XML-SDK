@@ -1,0 +1,60 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/word/2015/wordml/symex",
+  "Types": [
+    {
+      "Name": "w16se:CT_SymEx/w16se:symEx",
+      "ClassName": "SymEx",
+      "Summary": "Defines the SymEx Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": "w16se:font",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "font",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2016"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w16se:char",
+          "Type": "HexBinaryValue",
+          "Version": "Office2016",
+          "PropertyComments": "char",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2016"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "4"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

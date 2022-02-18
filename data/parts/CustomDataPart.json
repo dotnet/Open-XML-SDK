@@ -1,0 +1,11 @@
+{
+  "Name": "CustomDataPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/binary",
+  "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/customData",
+  "Target": "customData",
+  "Paths": {
+    "General": "customData"
+  },
+  "Version": "Office2010"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "x16:CT_CalculatedTimeColumn/x16:calculatedTimeColumn",
+    "ClassName": "CalculatedTimeColumn"
+  },
+  {
+    "Name": "x16:CT_ModelTimeGrouping/x16:modelTimeGrouping",
+    "ClassName": "ModelTimeGrouping"
+  },
+  {
+    "Name": "x16:CT_ModelTimeGroupings/x16:modelTimeGroupings",
+    "ClassName": "ModelTimeGroupings"
+  }
+]

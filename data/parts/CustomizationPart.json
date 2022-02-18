@@ -1,0 +1,19 @@
+{
+  "Root": "wne:CT_Tcg",
+  "Name": "CustomizationPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-word.keyMapCustomizations\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations",
+  "Target": "customizations",
+  "RootElement": "tcg",
+  "Paths": {
+    "General": "."
+  },
+  "Children": [
+    {
+      "ApiName": "WordAttachedToolbarsPart",
+      "Name": "WordAttachedToolbarsPart",
+      "HasFixedContent": true
+    }
+  ]
+}

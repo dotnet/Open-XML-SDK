@@ -1,0 +1,108 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/2006/coverPageProps",
+  "Types": [
+    {
+      "Name": "cppr:CT_CoverPageProperties/cppr:CoverPageProperties",
+      "ClassName": "CoverPageProperties",
+      "Summary": "Defines the CoverPageProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "cppr:ST_PublishDate/cppr:PublishDate",
+          "PropertyName": "PublishDate"
+        },
+        {
+          "Name": "xsd:string/cppr:Abstract",
+          "PropertyName": "DocumentAbstract"
+        },
+        {
+          "Name": "xsd:string/cppr:CompanyAddress",
+          "PropertyName": "CompanyAddress"
+        },
+        {
+          "Name": "xsd:string/cppr:CompanyPhone",
+          "PropertyName": "CompanyPhoneNumber"
+        },
+        {
+          "Name": "xsd:string/cppr:CompanyFax",
+          "PropertyName": "CompanyFaxNumber"
+        },
+        {
+          "Name": "xsd:string/cppr:CompanyEmail",
+          "PropertyName": "CompanyEmailAddress"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cppr:ST_PublishDate/cppr:PublishDate"
+          },
+          {
+            "Name": "xsd:string/cppr:Abstract"
+          },
+          {
+            "Name": "xsd:string/cppr:CompanyAddress"
+          },
+          {
+            "Name": "xsd:string/cppr:CompanyPhone"
+          },
+          {
+            "Name": "xsd:string/cppr:CompanyFax"
+          },
+          {
+            "Name": "xsd:string/cppr:CompanyEmail"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cppr:ST_PublishDate/cppr:PublishDate",
+      "ClassName": "PublishDate",
+      "Summary": "Defines the PublishDate Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/cppr:Abstract",
+      "ClassName": "DocumentAbstract",
+      "Summary": "Defines the DocumentAbstract Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/cppr:CompanyAddress",
+      "ClassName": "CompanyAddress",
+      "Summary": "Defines the CompanyAddress Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/cppr:CompanyPhone",
+      "ClassName": "CompanyPhoneNumber",
+      "Summary": "Defines the CompanyPhoneNumber Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/cppr:CompanyFax",
+      "ClassName": "CompanyFaxNumber",
+      "Summary": "Defines the CompanyFaxNumber Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/cppr:CompanyEmail",
+      "ClassName": "CompanyEmailAddress",
+      "Summary": "Defines the CompanyEmailAddress Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    }
+  ]
+}

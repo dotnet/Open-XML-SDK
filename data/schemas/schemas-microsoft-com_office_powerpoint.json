@@ -1,0 +1,27 @@
+{
+  "TargetNamespace": "urn:schemas-microsoft-com:office:powerpoint",
+  "Types": [
+    {
+      "Name": "pvml:CT_Empty/pvml:iscomment",
+      "ClassName": "InkAnnotationFlag",
+      "Summary": "Ink Annotation Flag.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true
+    },
+    {
+      "Name": "pvml:CT_Rel/pvml:textdata",
+      "ClassName": "TextData",
+      "Summary": "VML Diagram Text.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "Text Reference"
+        }
+      ]
+    }
+  ]
+}

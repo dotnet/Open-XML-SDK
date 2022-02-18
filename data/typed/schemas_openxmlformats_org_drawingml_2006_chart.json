@@ -1,0 +1,1300 @@
+[
+  {
+    "Name": "c:CT_AxDataSource/",
+    "ClassName": "AxisDataSourceType"
+  },
+  {
+    "Name": "c:CT_AxisUnit/",
+    "ClassName": "AxisUnitType"
+  },
+  {
+    "Name": "c:CT_Boolean/",
+    "ClassName": "BooleanType"
+  },
+  {
+    "Name": "c:CT_ChartLines/",
+    "ClassName": "ChartLinesType"
+  },
+  {
+    "Name": "c:CT_Double/",
+    "ClassName": "DoubleType"
+  },
+  {
+    "Name": "c:CT_GapAmount/",
+    "ClassName": "GapAmountType"
+  },
+  {
+    "Name": "c:CT_LayoutMode/",
+    "ClassName": "LayoutModeType"
+  },
+  {
+    "Name": "c:CT_NumData/",
+    "ClassName": "NumberDataType"
+  },
+  {
+    "Name": "c:CT_NumDataSource/",
+    "ClassName": "NumberDataSourceType"
+  },
+  {
+    "Name": "c:CT_RelId/",
+    "ClassName": "RelationshipIdType"
+  },
+  {
+    "Name": "c:CT_Skip/",
+    "ClassName": "SkipType"
+  },
+  {
+    "Name": "c:CT_StrData/",
+    "ClassName": "StringDataType"
+  },
+  {
+    "Name": "c:CT_Surface/",
+    "ClassName": "SurfaceType"
+  },
+  {
+    "Name": "a:CT_TextBody/",
+    "ClassName": "TextBodyType"
+  },
+  {
+    "Name": "c:CT_TickMark/",
+    "ClassName": "TickMarkType"
+  },
+  {
+    "Name": "c:CT_TimeUnit/",
+    "ClassName": "TimeUnitType"
+  },
+  {
+    "Name": "c:CT_UnsignedInt/",
+    "ClassName": "UnsignedIntegerType"
+  },
+  {
+    "Name": "c:CT_UpDownBar/",
+    "ClassName": "UpDownBarType"
+  },
+  {
+    "Name": "c:CT_Boolean/c:applyToEnd",
+    "ClassName": "ApplyToEnd"
+  },
+  {
+    "Name": "c:CT_Boolean/c:applyToFront",
+    "ClassName": "ApplyToFront"
+  },
+  {
+    "Name": "c:CT_Boolean/c:applyToSides",
+    "ClassName": "ApplyToSides"
+  },
+  {
+    "Name": "c:CT_Area3DChart/c:area3DChart",
+    "ClassName": "Area3DChart"
+  },
+  {
+    "Name": "c:CT_AreaChart/c:areaChart",
+    "ClassName": "AreaChart"
+  },
+  {
+    "Name": "c:CT_Boolean/c:auto",
+    "ClassName": "AutoLabeled"
+  },
+  {
+    "Name": "c:CT_Boolean/c:autoTitleDeleted",
+    "ClassName": "AutoTitleDeleted"
+  },
+  {
+    "Name": "c:CT_Boolean/c:autoUpdate",
+    "ClassName": "AutoUpdate"
+  },
+  {
+    "Name": "c:CT_UnsignedInt/c:axId",
+    "ClassName": "AxisId"
+  },
+  {
+    "Name": "c:CT_AxPos/c:axPos",
+    "ClassName": "AxisPosition"
+  },
+  {
+    "Name": "c:CT_Surface/c:backWall",
+    "ClassName": "BackWall"
+  },
+  {
+    "Name": "c:CT_Double/c:backward",
+    "ClassName": "Backward"
+  },
+  {
+    "Name": "c:CT_BandFmt/c:bandFmt",
+    "ClassName": "BandFormat"
+  },
+  {
+    "Name": "c:CT_BandFmts/c:bandFmts",
+    "ClassName": "BandFormats"
+  },
+  {
+    "Name": "c:CT_Bar3DChart/c:bar3DChart",
+    "ClassName": "Bar3DChart"
+  },
+  {
+    "Name": "c:CT_BarChart/c:barChart",
+    "ClassName": "BarChart"
+  },
+  {
+    "Name": "c:CT_BarDir/c:barDir",
+    "ClassName": "BarDirection"
+  },
+  {
+    "Name": "c:CT_TimeUnit/c:baseTimeUnit",
+    "ClassName": "BaseTimeUnit"
+  },
+  {
+    "Name": "c:CT_Boolean/c:bubble3D",
+    "ClassName": "Bubble3D"
+  },
+  {
+    "Name": "c:CT_BubbleChart/c:bubbleChart",
+    "ClassName": "BubbleChart"
+  },
+  {
+    "Name": "c:CT_BubbleScale/c:bubbleScale",
+    "ClassName": "BubbleScale"
+  },
+  {
+    "Name": "c:CT_NumDataSource/c:bubbleSize",
+    "ClassName": "BubbleSize"
+  },
+  {
+    "Name": "c:CT_BuiltInUnit/c:builtInUnit",
+    "ClassName": "BuiltInUnit"
+  },
+  {
+    "Name": "c:CT_AxDataSource/c:cat",
+    "ClassName": "CategoryAxisData"
+  },
+  {
+    "Name": "c:CT_CatAx/c:catAx",
+    "ClassName": "CategoryAxis"
+  },
+  {
+    "Name": "c:CT_Chart/c:chart",
+    "ClassName": "Chart"
+  },
+  {
+    "Name": "c:CT_RelId/c:chart",
+    "ClassName": "ChartReference"
+  },
+  {
+    "Name": "c:CT_Boolean/c:chartObject",
+    "ClassName": "ChartObject"
+  },
+  {
+    "Name": "c:CT_ChartSpace/c:chartSpace",
+    "ClassName": "ChartSpace",
+    "PartClassName": "ChartPart"
+  },
+  {
+    "Name": "a:CT_ColorMapping/c:clrMapOvr",
+    "ClassName": "ColorMapOverride"
+  },
+  {
+    "Name": "c:CT_UnsignedInt/c:crossAx",
+    "ClassName": "CrossingAxis"
+  },
+  {
+    "Name": "c:CT_CrossBetween/c:crossBetween",
+    "ClassName": "CrossBetween"
+  },
+  {
+    "Name": "c:CT_Crosses/c:crosses",
+    "ClassName": "Crosses"
+  },
+  {
+    "Name": "c:CT_Double/c:crossesAt",
+    "ClassName": "CrossesAt"
+  },
+  {
+    "Name": "c:CT_CustSplit/c:custSplit",
+    "ClassName": "CustomSplit"
+  },
+  {
+    "Name": "c:CT_Double/c:custUnit",
+    "ClassName": "CustomDisplayUnit"
+  },
+  {
+    "Name": "c:CT_Boolean/c:data",
+    "ClassName": "Data"
+  },
+  {
+    "Name": "c:CT_Boolean/c:date1904",
+    "ClassName": "Date1904"
+  },
+  {
+    "Name": "c:CT_DateAx/c:dateAx",
+    "ClassName": "DateAxis"
+  },
+  {
+    "Name": "c:CT_Boolean/c:delete",
+    "ClassName": "Delete"
+  },
+  {
+    "Name": "c:CT_DepthPercent/c:depthPercent",
+    "ClassName": "DepthPercent"
+  },
+  {
+    "Name": "c:CT_DispBlanksAs/c:dispBlanksAs",
+    "ClassName": "DisplayBlanksAs"
+  },
+  {
+    "Name": "c:CT_Boolean/c:dispEq",
+    "ClassName": "DisplayEquation"
+  },
+  {
+    "Name": "c:CT_Boolean/c:dispRSqr",
+    "ClassName": "DisplayRSquaredValue"
+  },
+  {
+    "Name": "c:CT_DispUnits/c:dispUnits",
+    "ClassName": "DisplayUnits"
+  },
+  {
+    "Name": "c:CT_DispUnitsLbl/c:dispUnitsLbl",
+    "ClassName": "DisplayUnitsLabel"
+  },
+  {
+    "Name": "c:CT_DLbl/c:dLbl",
+    "ClassName": "DataLabel"
+  },
+  {
+    "Name": "c:CT_DLblPos/c:dLblPos",
+    "ClassName": "DataLabelPosition"
+  },
+  {
+    "Name": "c:CT_DLbls/c:dLbls",
+    "ClassName": "DataLabels"
+  },
+  {
+    "Name": "c:CT_DoughnutChart/c:doughnutChart",
+    "ClassName": "DoughnutChart"
+  },
+  {
+    "Name": "c:CT_UpDownBar/c:downBars",
+    "ClassName": "DownBars"
+  },
+  {
+    "Name": "c:CT_DPt/c:dPt",
+    "ClassName": "DataPoint"
+  },
+  {
+    "Name": "c:CT_ChartLines/c:dropLines",
+    "ClassName": "DropLines"
+  },
+  {
+    "Name": "c:CT_DTable/c:dTable",
+    "ClassName": "DataTable"
+  },
+  {
+    "Name": "c:CT_ErrBars/c:errBars",
+    "ClassName": "ErrorBars"
+  },
+  {
+    "Name": "c:CT_ErrBarType/c:errBarType",
+    "ClassName": "ErrorBarType"
+  },
+  {
+    "Name": "c:CT_ErrDir/c:errDir",
+    "ClassName": "ErrorDirection"
+  },
+  {
+    "Name": "c:CT_ErrValType/c:errValType",
+    "ClassName": "ErrorBarValueType"
+  },
+  {
+    "Name": "c:ST_Xstring/c:evenFooter",
+    "ClassName": "EvenFooter"
+  },
+  {
+    "Name": "c:ST_Xstring/c:evenHeader",
+    "ClassName": "EvenHeader"
+  },
+  {
+    "Name": "c:CT_UnsignedInt/c:explosion",
+    "ClassName": "Explosion"
+  },
+  {
+    "Name": "c:CT_Area3DChartExtension/c:ext",
+    "ClassName": "Area3DChartExtension"
+  },
+  {
+    "Name": "c:CT_AreaChartExtension/c:ext",
+    "ClassName": "AreaChartExtension"
+  },
+  {
+    "Name": "c:CT_AreaSerExtension/c:ext",
+    "ClassName": "AreaSerExtension"
+  },
+  {
+    "Name": "c:CT_Bar3DChartExtension/c:ext",
+    "ClassName": "Bar3DChartExtension"
+  },
+  {
+    "Name": "c:CT_BarChartExtension/c:ext",
+    "ClassName": "BarChartExtension"
+  },
+  {
+    "Name": "c:CT_BarSerExtension/c:ext",
+    "ClassName": "BarSerExtension"
+  },
+  {
+    "Name": "c:CT_BubbleChartExtension/c:ext",
+    "ClassName": "BubbleChartExtension"
+  },
+  {
+    "Name": "c:CT_BubbleSerExtension/c:ext",
+    "ClassName": "BubbleSerExtension"
+  },
+  {
+    "Name": "c:CT_CatAxExtension/c:ext",
+    "ClassName": "CatAxExtension"
+  },
+  {
+    "Name": "c:CT_ChartSpaceExtension/c:ext",
+    "ClassName": "ChartSpaceExtension"
+  },
+  {
+    "Name": "c16r3:CT_DataDisplayOptions16/c:ext",
+    "ClassName": "DataDisplayOptions16"
+  },
+  {
+    "Name": "c:CT_DateAxExtension/c:ext",
+    "ClassName": "DateAxExtension"
+  },
+  {
+    "Name": "c:CT_DLblExtension/c:ext",
+    "ClassName": "DLblExtension"
+  },
+  {
+    "Name": "c:CT_DLblsExtension/c:ext",
+    "ClassName": "DLblsExtension"
+  },
+  {
+    "Name": "c:CT_Extension/c:ext",
+    "ClassName": "Extension"
+  },
+  {
+    "Name": "c:CT_Line3DChartExtension/c:ext",
+    "ClassName": "Line3DChartExtension"
+  },
+  {
+    "Name": "c:CT_LineChartExtension/c:ext",
+    "ClassName": "LineChartExtension"
+  },
+  {
+    "Name": "c:CT_LineSerExtension/c:ext",
+    "ClassName": "LineSerExtension"
+  },
+  {
+    "Name": "c:CT_MultiLvlStrRefExtension/c:ext",
+    "ClassName": "MultiLvlStrRefExtension"
+  },
+  {
+    "Name": "c:CT_NumRefExtension/c:ext",
+    "ClassName": "NumRefExtension"
+  },
+  {
+    "Name": "c:CT_Pie3DChartExtension/c:ext",
+    "ClassName": "Pie3DChartExtension"
+  },
+  {
+    "Name": "c:CT_PieChartExtension/c:ext",
+    "ClassName": "PieChartExtension"
+  },
+  {
+    "Name": "c:CT_PieSerExtension/c:ext",
+    "ClassName": "PieSerExtension"
+  },
+  {
+    "Name": "c:CT_RadarChartExtension/c:ext",
+    "ClassName": "RadarChartExtension"
+  },
+  {
+    "Name": "c:CT_RadarSerExtension/c:ext",
+    "ClassName": "RadarSerExtension"
+  },
+  {
+    "Name": "c:CT_ScatterChartExtension/c:ext",
+    "ClassName": "ScatterChartExtension"
+  },
+  {
+    "Name": "c:CT_ScatterSerExtension/c:ext",
+    "ClassName": "ScatterSerExtension"
+  },
+  {
+    "Name": "c:CT_SerAxExtension/c:ext",
+    "ClassName": "SerAxExtension"
+  },
+  {
+    "Name": "c:CT_StockChartExtension/c:ext",
+    "ClassName": "StockChartExtension"
+  },
+  {
+    "Name": "c:CT_StrDataExtension/c:ext",
+    "ClassName": "StrDataExtension"
+  },
+  {
+    "Name": "c:CT_StrRefExtension/c:ext",
+    "ClassName": "StrRefExtension"
+  },
+  {
+    "Name": "c:CT_Surface3DChartExtension/c:ext",
+    "ClassName": "Surface3DChartExtension"
+  },
+  {
+    "Name": "c:CT_SurfaceChartExtension/c:ext",
+    "ClassName": "SurfaceChartExtension"
+  },
+  {
+    "Name": "c:CT_SurfaceSerExtension/c:ext",
+    "ClassName": "SurfaceSerExtension"
+  },
+  {
+    "Name": "c:CT_ValAxExtension/c:ext",
+    "ClassName": "ValAxExtension"
+  },
+  {
+    "Name": "c:CT_ExternalData/c:externalData",
+    "ClassName": "ExternalData"
+  },
+  {
+    "Name": "c:CT_Area3DChartExtensionList/c:extLst",
+    "ClassName": "Area3DChartExtensionList"
+  },
+  {
+    "Name": "c:CT_AreaChartExtensionList/c:extLst",
+    "ClassName": "AreaChartExtensionList"
+  },
+  {
+    "Name": "c:CT_AreaSerExtensionList/c:extLst",
+    "ClassName": "AreaSerExtensionList"
+  },
+  {
+    "Name": "c:CT_Bar3DChartExtensionList/c:extLst",
+    "ClassName": "Bar3DChartExtensionList"
+  },
+  {
+    "Name": "c:CT_BarChartExtensionList/c:extLst",
+    "ClassName": "BarChartExtensionList"
+  },
+  {
+    "Name": "c:CT_BarSerExtensionList/c:extLst",
+    "ClassName": "BarSerExtensionList"
+  },
+  {
+    "Name": "c:CT_BubbleChartExtensionList/c:extLst",
+    "ClassName": "BubbleChartExtensionList"
+  },
+  {
+    "Name": "c:CT_BubbleSerExtensionList/c:extLst",
+    "ClassName": "BubbleSerExtensionList"
+  },
+  {
+    "Name": "c:CT_CatAxExtensionList/c:extLst",
+    "ClassName": "CatAxExtensionList"
+  },
+  {
+    "Name": "c:CT_ChartExtensionList/c:extLst",
+    "ClassName": "ChartExtensionList"
+  },
+  {
+    "Name": "c:CT_ChartSpaceExtensionList/c:extLst",
+    "ClassName": "ChartSpaceExtensionList"
+  },
+  {
+    "Name": "c:CT_DateAxExtensionList/c:extLst",
+    "ClassName": "DateAxExtensionList"
+  },
+  {
+    "Name": "c:CT_DLblExtensionList/c:extLst",
+    "ClassName": "DLblExtensionList"
+  },
+  {
+    "Name": "c:CT_DLblsExtensionList/c:extLst",
+    "ClassName": "DLblsExtensionList"
+  },
+  {
+    "Name": "c:CT_ExtensionList/c:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "c:CT_Line3DChartExtensionList/c:extLst",
+    "ClassName": "Line3DChartExtensionList"
+  },
+  {
+    "Name": "c:CT_LineChartExtensionList/c:extLst",
+    "ClassName": "LineChartExtensionList"
+  },
+  {
+    "Name": "c:CT_LineSerExtensionList/c:extLst",
+    "ClassName": "LineSerExtensionList"
+  },
+  {
+    "Name": "c:CT_MultiLvlStrRefExtensionList/c:extLst",
+    "ClassName": "MultiLvlStrRefExtensionList"
+  },
+  {
+    "Name": "c:CT_NumRefExtensionList/c:extLst",
+    "ClassName": "NumRefExtensionList"
+  },
+  {
+    "Name": "c:CT_Pie3DChartExtensionList/c:extLst",
+    "ClassName": "Pie3DChartExtensionList"
+  },
+  {
+    "Name": "c:CT_PieChartExtensionList/c:extLst",
+    "ClassName": "PieChartExtensionList"
+  },
+  {
+    "Name": "c:CT_PieSerExtensionList/c:extLst",
+    "ClassName": "PieSerExtensionList"
+  },
+  {
+    "Name": "c:CT_RadarChartExtensionList/c:extLst",
+    "ClassName": "RadarChartExtensionList"
+  },
+  {
+    "Name": "c:CT_RadarSerExtensionList/c:extLst",
+    "ClassName": "RadarSerExtensionList"
+  },
+  {
+    "Name": "c:CT_ScatterChartExtensionList/c:extLst",
+    "ClassName": "ScatterChartExtensionList"
+  },
+  {
+    "Name": "c:CT_ScatterSerExtensionList/c:extLst",
+    "ClassName": "ScatterSerExtensionList"
+  },
+  {
+    "Name": "c:CT_SerAxExtensionList/c:extLst",
+    "ClassName": "SerAxExtensionList"
+  },
+  {
+    "Name": "c:CT_StockChartExtensionList/c:extLst",
+    "ClassName": "StockChartExtensionList"
+  },
+  {
+    "Name": "c:CT_StrDataExtensionList/c:extLst",
+    "ClassName": "StrDataExtensionList"
+  },
+  {
+    "Name": "c:CT_StrRefExtensionList/c:extLst",
+    "ClassName": "StrRefExtensionList"
+  },
+  {
+    "Name": "c:CT_Surface3DChartExtensionList/c:extLst",
+    "ClassName": "Surface3DChartExtensionList"
+  },
+  {
+    "Name": "c:CT_SurfaceChartExtensionList/c:extLst",
+    "ClassName": "SurfaceChartExtensionList"
+  },
+  {
+    "Name": "c:CT_SurfaceSerExtensionList/c:extLst",
+    "ClassName": "SurfaceSerExtensionList"
+  },
+  {
+    "Name": "c:CT_ValAxExtensionList/c:extLst",
+    "ClassName": "ValAxExtensionList"
+  },
+  {
+    "Name": "xsd:string/c:f",
+    "ClassName": "Formula"
+  },
+  {
+    "Name": "c:ST_Xstring/c:firstFooter",
+    "ClassName": "FirstFooter"
+  },
+  {
+    "Name": "c:ST_Xstring/c:firstHeader",
+    "ClassName": "FirstHeader"
+  },
+  {
+    "Name": "c:CT_FirstSliceAng/c:firstSliceAng",
+    "ClassName": "FirstSliceAngle"
+  },
+  {
+    "Name": "c:CT_Surface/c:floor",
+    "ClassName": "Floor"
+  },
+  {
+    "Name": "c:CT_UnsignedInt/c:fmtId",
+    "ClassName": "FormatId"
+  },
+  {
+    "Name": "c:ST_Xstring/c:formatCode",
+    "ClassName": "FormatCode"
+  },
+  {
+    "Name": "c:CT_Boolean/c:formatting",
+    "ClassName": "Formatting"
+  },
+  {
+    "Name": "c:CT_Double/c:forward",
+    "ClassName": "Forward"
+  },
+  {
+    "Name": "c:CT_GapAmount/c:gapDepth",
+    "ClassName": "GapDepth"
+  },
+  {
+    "Name": "c:CT_GapAmount/c:gapWidth",
+    "ClassName": "GapWidth"
+  },
+  {
+    "Name": "c:CT_BarGrouping/c:grouping",
+    "ClassName": "BarGrouping"
+  },
+  {
+    "Name": "c:CT_Grouping/c:grouping",
+    "ClassName": "Grouping"
+  },
+  {
+    "Name": "c:CT_Double/c:h",
+    "ClassName": "Height"
+  },
+  {
+    "Name": "c:CT_HeaderFooter/c:headerFooter",
+    "ClassName": "HeaderFooter"
+  },
+  {
+    "Name": "c:CT_ChartLines/c:hiLowLines",
+    "ClassName": "HighLowLines"
+  },
+  {
+    "Name": "c:CT_LayoutMode/c:hMode",
+    "ClassName": "HeightMode"
+  },
+  {
+    "Name": "c:CT_HoleSize/c:holeSize",
+    "ClassName": "HoleSize"
+  },
+  {
+    "Name": "c:CT_HPercent/c:hPercent",
+    "ClassName": "HeightPercent"
+  },
+  {
+    "Name": "c:CT_UnsignedInt/c:idx",
+    "ClassName": "Index"
+  },
+  {
+    "Name": "c:CT_Double/c:intercept",
+    "ClassName": "Intercept"
+  },
+  {
+    "Name": "c:CT_Boolean/c:invertIfNegative",
+    "ClassName": "InvertIfNegative"
+  },
+  {
+    "Name": "c:CT_TextLanguageID/c:lang",
+    "ClassName": "EditingLanguage"
+  },
+  {
+    "Name": "c:CT_Layout/c:layout",
+    "ClassName": "Layout"
+  },
+  {
+    "Name": "c:CT_LayoutTarget/c:layoutTarget",
+    "ClassName": "LayoutTarget"
+  },
+  {
+    "Name": "c:CT_LblAlgn/c:lblAlgn",
+    "ClassName": "LabelAlignment"
+  },
+  {
+    "Name": "c:CT_LblOffset/c:lblOffset",
+    "ClassName": "LabelOffset"
+  },
+  {
+    "Name": "c:CT_ChartLines/c:leaderLines",
+    "ClassName": "LeaderLines"
+  },
+  {
+    "Name": "c:CT_RelId/c:legacyDrawingHF",
+    "ClassName": "LegacyDrawingHeaderFooter"
+  },
+  {
+    "Name": "c:CT_Legend/c:legend",
+    "ClassName": "Legend"
+  },
+  {
+    "Name": "c:CT_LegendEntry/c:legendEntry",
+    "ClassName": "LegendEntry"
+  },
+  {
+    "Name": "c:CT_LegendPos/c:legendPos",
+    "ClassName": "LegendPosition"
+  },
+  {
+    "Name": "c:CT_Line3DChart/c:line3DChart",
+    "ClassName": "Line3DChart"
+  },
+  {
+    "Name": "c:CT_LineChart/c:lineChart",
+    "ClassName": "LineChart"
+  },
+  {
+    "Name": "c:CT_LogBase/c:logBase",
+    "ClassName": "LogBase"
+  },
+  {
+    "Name": "c:CT_Lvl/c:lvl",
+    "ClassName": "Level"
+  },
+  {
+    "Name": "c:CT_ChartLines/c:majorGridlines",
+    "ClassName": "MajorGridlines"
+  },
+  {
+    "Name": "c:CT_TickMark/c:majorTickMark",
+    "ClassName": "MajorTickMark"
+  },
+  {
+    "Name": "c:CT_TimeUnit/c:majorTimeUnit",
+    "ClassName": "MajorTimeUnit"
+  },
+  {
+    "Name": "c:CT_AxisUnit/c:majorUnit",
+    "ClassName": "MajorUnit"
+  },
+  {
+    "Name": "c:CT_ManualLayout/c:manualLayout",
+    "ClassName": "ManualLayout"
+  },
+  {
+    "Name": "c:CT_Boolean/c:marker",
+    "ClassName": "ShowMarker"
+  },
+  {
+    "Name": "c:CT_Marker/c:marker",
+    "ClassName": "Marker"
+  },
+  {
+    "Name": "c:CT_Double/c:max",
+    "ClassName": "MaxAxisValue"
+  },
+  {
+    "Name": "c:CT_Double/c:min",
+    "ClassName": "MinAxisValue"
+  },
+  {
+    "Name": "c:CT_ChartLines/c:minorGridlines",
+    "ClassName": "MinorGridlines"
+  },
+  {
+    "Name": "c:CT_TickMark/c:minorTickMark",
+    "ClassName": "MinorTickMark"
+  },
+  {
+    "Name": "c:CT_TimeUnit/c:minorTimeUnit",
+    "ClassName": "MinorTimeUnit"
+  },
+  {
+    "Name": "c:CT_AxisUnit/c:minorUnit",
+    "ClassName": "MinorUnit"
+  },
+  {
+    "Name": "c:CT_NumDataSource/c:minus",
+    "ClassName": "Minus"
+  },
+  {
+    "Name": "c:CT_MultiLvlStrData/c:multiLvlStrCache",
+    "ClassName": "MultiLevelStringCache"
+  },
+  {
+    "Name": "c:CT_MultiLvlStrRef/c:multiLvlStrRef",
+    "ClassName": "MultiLevelStringReference"
+  },
+  {
+    "Name": "c:ST_Xstring/c:name",
+    "ClassName": "PivotTableName"
+  },
+  {
+    "Name": "xsd:string/c:name",
+    "ClassName": "TrendlineName"
+  },
+  {
+    "Name": "c:CT_Boolean/c:noEndCap",
+    "ClassName": "NoEndCap"
+  },
+  {
+    "Name": "c:CT_Boolean/c:noMultiLvlLbl",
+    "ClassName": "NoMultiLevelLabels"
+  },
+  {
+    "Name": "c:CT_NumData/c:numCache",
+    "ClassName": "NumberingCache"
+  },
+  {
+    "Name": "c:CT_NumFmt/c:numFmt",
+    "ClassName": "NumberingFormat"
+  },
+  {
+    "Name": "c:CT_NumData/c:numLit",
+    "ClassName": "NumberLiteral"
+  },
+  {
+    "Name": "c:CT_NumRef/c:numRef",
+    "ClassName": "NumberReference"
+  },
+  {
+    "Name": "c:ST_Xstring/c:oddFooter",
+    "ClassName": "OddFooter"
+  },
+  {
+    "Name": "c:ST_Xstring/c:oddHeader",
+    "ClassName": "OddHeader"
+  },
+  {
+    "Name": "c:CT_OfPieChart/c:ofPieChart",
+    "ClassName": "OfPieChart"
+  },
+  {
+    "Name": "c:CT_OfPieType/c:ofPieType",
+    "ClassName": "OfPieType"
+  },
+  {
+    "Name": "c:CT_Order/c:order",
+    "ClassName": "PolynomialOrder"
+  },
+  {
+    "Name": "c:CT_UnsignedInt/c:order",
+    "ClassName": "Order"
+  },
+  {
+    "Name": "c:CT_Orientation/c:orientation",
+    "ClassName": "Orientation"
+  },
+  {
+    "Name": "c:CT_Overlap/c:overlap",
+    "ClassName": "Overlap"
+  },
+  {
+    "Name": "c:CT_Boolean/c:overlay",
+    "ClassName": "Overlay"
+  },
+  {
+    "Name": "c:CT_PageMargins/c:pageMargins",
+    "ClassName": "PageMargins"
+  },
+  {
+    "Name": "c:CT_PageSetup/c:pageSetup",
+    "ClassName": "PageSetup"
+  },
+  {
+    "Name": "c:CT_Period/c:period",
+    "ClassName": "Period"
+  },
+  {
+    "Name": "c:CT_Perspective/c:perspective",
+    "ClassName": "Perspective"
+  },
+  {
+    "Name": "c:CT_PictureFormat/c:pictureFormat",
+    "ClassName": "PictureFormat"
+  },
+  {
+    "Name": "c:CT_PictureOptions/c:pictureOptions",
+    "ClassName": "PictureOptions"
+  },
+  {
+    "Name": "c:CT_PictureStackUnit/c:pictureStackUnit",
+    "ClassName": "PictureStackUnit"
+  },
+  {
+    "Name": "c:CT_Pie3DChart/c:pie3DChart",
+    "ClassName": "Pie3DChart"
+  },
+  {
+    "Name": "c:CT_PieChart/c:pieChart",
+    "ClassName": "PieChart"
+  },
+  {
+    "Name": "c:CT_PivotFmt/c:pivotFmt",
+    "ClassName": "PivotFormat"
+  },
+  {
+    "Name": "c:CT_PivotFmts/c:pivotFmts",
+    "ClassName": "PivotFormats"
+  },
+  {
+    "Name": "c:CT_PivotSource/c:pivotSource",
+    "ClassName": "PivotSource"
+  },
+  {
+    "Name": "c:CT_PlotArea/c:plotArea",
+    "ClassName": "PlotArea"
+  },
+  {
+    "Name": "c:CT_Boolean/c:plotVisOnly",
+    "ClassName": "PlotVisibleOnly"
+  },
+  {
+    "Name": "c:CT_NumDataSource/c:plus",
+    "ClassName": "Plus"
+  },
+  {
+    "Name": "c:CT_PrintSettings/c:printSettings",
+    "ClassName": "PrintSettings"
+  },
+  {
+    "Name": "c:CT_Protection/c:protection",
+    "ClassName": "Protection"
+  },
+  {
+    "Name": "c:CT_NumVal/c:pt",
+    "ClassName": "NumericPoint"
+  },
+  {
+    "Name": "c:CT_StrVal/c:pt",
+    "ClassName": "StringPoint"
+  },
+  {
+    "Name": "c:CT_UnsignedInt/c:ptCount",
+    "ClassName": "PointCount"
+  },
+  {
+    "Name": "c:CT_RadarChart/c:radarChart",
+    "ClassName": "RadarChart"
+  },
+  {
+    "Name": "c:CT_RadarStyle/c:radarStyle",
+    "ClassName": "RadarStyle"
+  },
+  {
+    "Name": "c:CT_Boolean/c:rAngAx",
+    "ClassName": "RightAngleAxes"
+  },
+  {
+    "Name": "a:CT_TextBody/c:rich",
+    "ClassName": "RichText"
+  },
+  {
+    "Name": "c:CT_RotX/c:rotX",
+    "ClassName": "RotateX"
+  },
+  {
+    "Name": "c:CT_RotY/c:rotY",
+    "ClassName": "RotateY"
+  },
+  {
+    "Name": "c:CT_Boolean/c:roundedCorners",
+    "ClassName": "RoundedCorners"
+  },
+  {
+    "Name": "c:CT_Scaling/c:scaling",
+    "ClassName": "Scaling"
+  },
+  {
+    "Name": "c:CT_ScatterChart/c:scatterChart",
+    "ClassName": "ScatterChart"
+  },
+  {
+    "Name": "c:CT_ScatterStyle/c:scatterStyle",
+    "ClassName": "ScatterStyle"
+  },
+  {
+    "Name": "c:CT_UnsignedInt/c:secondPiePt",
+    "ClassName": "SecondPiePoint"
+  },
+  {
+    "Name": "c:CT_SecondPieSize/c:secondPieSize",
+    "ClassName": "SecondPieSize"
+  },
+  {
+    "Name": "c:CT_Boolean/c:selection",
+    "ClassName": "Selection"
+  },
+  {
+    "Name": "xsd:string/c:separator",
+    "ClassName": "Separator"
+  },
+  {
+    "Name": "c:CT_AreaSer/c:ser",
+    "ClassName": "AreaChartSeries"
+  },
+  {
+    "Name": "c:CT_BarSer/c:ser",
+    "ClassName": "BarChartSeries"
+  },
+  {
+    "Name": "c:CT_BubbleSer/c:ser",
+    "ClassName": "BubbleChartSeries"
+  },
+  {
+    "Name": "c:CT_LineSer/c:ser",
+    "ClassName": "LineChartSeries"
+  },
+  {
+    "Name": "c:CT_PieSer/c:ser",
+    "ClassName": "PieChartSeries"
+  },
+  {
+    "Name": "c:CT_RadarSer/c:ser",
+    "ClassName": "RadarChartSeries"
+  },
+  {
+    "Name": "c:CT_ScatterSer/c:ser",
+    "ClassName": "ScatterChartSeries"
+  },
+  {
+    "Name": "c:CT_SurfaceSer/c:ser",
+    "ClassName": "SurfaceChartSeries"
+  },
+  {
+    "Name": "c:CT_SerAx/c:serAx",
+    "ClassName": "SeriesAxis"
+  },
+  {
+    "Name": "c:CT_ChartLines/c:serLines",
+    "ClassName": "SeriesLines"
+  },
+  {
+    "Name": "c:CT_Shape/c:shape",
+    "ClassName": "Shape"
+  },
+  {
+    "Name": "c:CT_Boolean/c:showBubbleSize",
+    "ClassName": "ShowBubbleSize"
+  },
+  {
+    "Name": "c:CT_Boolean/c:showCatName",
+    "ClassName": "ShowCategoryName"
+  },
+  {
+    "Name": "c:CT_Boolean/c:showDLblsOverMax",
+    "ClassName": "ShowDataLabelsOverMaximum"
+  },
+  {
+    "Name": "c:CT_Boolean/c:showHorzBorder",
+    "ClassName": "ShowHorizontalBorder"
+  },
+  {
+    "Name": "c:CT_Boolean/c:showKeys",
+    "ClassName": "ShowKeys"
+  },
+  {
+    "Name": "c:CT_Boolean/c:showLeaderLines",
+    "ClassName": "ShowLeaderLines"
+  },
+  {
+    "Name": "c:CT_Boolean/c:showLegendKey",
+    "ClassName": "ShowLegendKey"
+  },
+  {
+    "Name": "c:CT_Boolean/c:showNegBubbles",
+    "ClassName": "ShowNegativeBubbles"
+  },
+  {
+    "Name": "c:CT_Boolean/c:showOutline",
+    "ClassName": "ShowOutlineBorder"
+  },
+  {
+    "Name": "c:CT_Boolean/c:showPercent",
+    "ClassName": "ShowPercent"
+  },
+  {
+    "Name": "c:CT_Boolean/c:showSerName",
+    "ClassName": "ShowSeriesName"
+  },
+  {
+    "Name": "c:CT_Boolean/c:showVal",
+    "ClassName": "ShowValue"
+  },
+  {
+    "Name": "c:CT_Boolean/c:showVertBorder",
+    "ClassName": "ShowVerticalBorder"
+  },
+  {
+    "Name": "c:CT_Surface/c:sideWall",
+    "ClassName": "SideWall"
+  },
+  {
+    "Name": "c:CT_MarkerSize/c:size",
+    "ClassName": "Size"
+  },
+  {
+    "Name": "c:CT_SizeRepresents/c:sizeRepresents",
+    "ClassName": "SizeRepresents"
+  },
+  {
+    "Name": "c:CT_Boolean/c:smooth",
+    "ClassName": "Smooth"
+  },
+  {
+    "Name": "c:CT_Double/c:splitPos",
+    "ClassName": "SplitPosition"
+  },
+  {
+    "Name": "c:CT_SplitType/c:splitType",
+    "ClassName": "SplitType"
+  },
+  {
+    "Name": "a:CT_ChartShapeProperties/c:spPr",
+    "ClassName": "ChartShapeProperties"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/c:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "c:CT_StockChart/c:stockChart",
+    "ClassName": "StockChart"
+  },
+  {
+    "Name": "c:CT_StrData/c:strCache",
+    "ClassName": "StringCache"
+  },
+  {
+    "Name": "c:CT_StrData/c:strLit",
+    "ClassName": "StringLiteral"
+  },
+  {
+    "Name": "c:CT_StrRef/c:strRef",
+    "ClassName": "StringReference"
+  },
+  {
+    "Name": "c:CT_Style/c:style",
+    "ClassName": "Style"
+  },
+  {
+    "Name": "c:CT_Surface3DChart/c:surface3DChart",
+    "ClassName": "Surface3DChart"
+  },
+  {
+    "Name": "c:CT_SurfaceChart/c:surfaceChart",
+    "ClassName": "SurfaceChart"
+  },
+  {
+    "Name": "c:CT_MarkerStyle/c:symbol",
+    "ClassName": "Symbol"
+  },
+  {
+    "Name": "c:CT_WallThickness/c:thickness",
+    "ClassName": "Thickness"
+  },
+  {
+    "Name": "c:CT_TickLblPos/c:tickLblPos",
+    "ClassName": "TickLabelPosition"
+  },
+  {
+    "Name": "c:CT_Skip/c:tickLblSkip",
+    "ClassName": "TickLabelSkip"
+  },
+  {
+    "Name": "c:CT_Skip/c:tickMarkSkip",
+    "ClassName": "TickMarkSkip"
+  },
+  {
+    "Name": "c:CT_Title/c:title",
+    "ClassName": "Title"
+  },
+  {
+    "Name": "c:CT_Trendline/c:trendline",
+    "ClassName": "Trendline"
+  },
+  {
+    "Name": "c:CT_TrendlineLbl/c:trendlineLbl",
+    "ClassName": "TrendlineLabel"
+  },
+  {
+    "Name": "c:CT_TrendlineType/c:trendlineType",
+    "ClassName": "TrendlineType"
+  },
+  {
+    "Name": "c:CT_SerTx/c:tx",
+    "ClassName": "SeriesText"
+  },
+  {
+    "Name": "c:CT_Tx/c:tx",
+    "ClassName": "ChartText"
+  },
+  {
+    "Name": "a:CT_TextBody/c:txPr",
+    "ClassName": "TextProperties"
+  },
+  {
+    "Name": "c:CT_UpDownBar/c:upBars",
+    "ClassName": "UpBars"
+  },
+  {
+    "Name": "c:CT_UpDownBars/c:upDownBars",
+    "ClassName": "UpDownBars"
+  },
+  {
+    "Name": "c:CT_Boolean/c:userInterface",
+    "ClassName": "UserInterface"
+  },
+  {
+    "Name": "cdr:CT_Drawing/c:userShapes",
+    "ClassName": "UserShapes",
+    "PartClassName": "ChartDrawingPart"
+  },
+  {
+    "Name": "c:CT_RelId/c:userShapes",
+    "ClassName": "UserShapesReference"
+  },
+  {
+    "Name": "c:ST_Xstring/c:v",
+    "ClassName": "NumericValue"
+  },
+  {
+    "Name": "c:CT_Double/c:val",
+    "ClassName": "ErrorBarValue"
+  },
+  {
+    "Name": "c:CT_NumDataSource/c:val",
+    "ClassName": "Values"
+  },
+  {
+    "Name": "c:CT_ValAx/c:valAx",
+    "ClassName": "ValueAxis"
+  },
+  {
+    "Name": "c:CT_Boolean/c:varyColors",
+    "ClassName": "VaryColors"
+  },
+  {
+    "Name": "c:CT_View3D/c:view3D",
+    "ClassName": "View3D"
+  },
+  {
+    "Name": "c:CT_Double/c:w",
+    "ClassName": "Width"
+  },
+  {
+    "Name": "c:CT_Boolean/c:wireframe",
+    "ClassName": "Wireframe"
+  },
+  {
+    "Name": "c:CT_LayoutMode/c:wMode",
+    "ClassName": "WidthMode"
+  },
+  {
+    "Name": "c:CT_Double/c:x",
+    "ClassName": "Left"
+  },
+  {
+    "Name": "c:CT_LayoutMode/c:xMode",
+    "ClassName": "LeftMode"
+  },
+  {
+    "Name": "c:CT_AxDataSource/c:xVal",
+    "ClassName": "XValues"
+  },
+  {
+    "Name": "c:CT_Double/c:y",
+    "ClassName": "Top"
+  },
+  {
+    "Name": "c:CT_LayoutMode/c:yMode",
+    "ClassName": "TopMode"
+  },
+  {
+    "Name": "c:CT_NumDataSource/c:yVal",
+    "ClassName": "YValues"
+  }
+]

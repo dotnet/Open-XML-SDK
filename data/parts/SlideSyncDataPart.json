@@ -1,0 +1,12 @@
+{
+  "Root": "p:CT_SlideSyncProperties",
+  "Name": "SlideSyncDataPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slideUpdateInfo\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideUpdateInfo",
+  "Target": "slideUpdateInfo",
+  "RootElement": "sldSyncPr",
+  "Paths": {
+    "General": "slideUpdateInfo"
+  }
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "Name": "x:CT_ExtensionList/xlrd:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "xlrd:CT_RichValueFallback/xlrd:fb",
+    "ClassName": "RichValueFallback"
+  },
+  {
+    "Name": "xlrd:CT_Key/xlrd:k",
+    "ClassName": "Key"
+  },
+  {
+    "Name": "xlrd:CT_RichValue/xlrd:rv",
+    "ClassName": "RichValue"
+  },
+  {
+    "Name": "xlrd:CT_RichValueBlock/xlrd:rvb",
+    "ClassName": "RichValueBlock"
+  },
+  {
+    "Name": "xlrd:CT_RichValueData/xlrd:rvData",
+    "ClassName": "RichValueData",
+    "PartClassName": "RdRichValuePart"
+  },
+  {
+    "Name": "xlrd:CT_RichValueStructures/xlrd:rvStructures",
+    "ClassName": "RichValueStructures",
+    "PartClassName": "RdRichValueStructurePart"
+  },
+  {
+    "Name": "xlrd:CT_RichValueStructure/xlrd:s",
+    "ClassName": "RichValueStructure"
+  },
+  {
+    "Name": "xlrd:CT_Value/xlrd:v",
+    "ClassName": "Value"
+  }
+]

@@ -1,0 +1,534 @@
+[
+  {
+    "Name": "m:CT_Char/",
+    "ClassName": "CharType"
+  },
+  {
+    "Name": "m:CT_LimLoc/",
+    "ClassName": "LimitLocationType"
+  },
+  {
+    "Name": "m:CT_OMathArg/",
+    "ClassName": "OfficeMathArgumentType"
+  },
+  {
+    "Name": "m:CT_OMathJc/",
+    "ClassName": "OfficeMathJustificationType"
+  },
+  {
+    "Name": "m:CT_OnOff/",
+    "ClassName": "OnOffType"
+  },
+  {
+    "Name": "m:CT_SpacingRule/",
+    "ClassName": "SpacingRuleType"
+  },
+  {
+    "Name": "m:CT_TopBot/",
+    "ClassName": "TopBottomType"
+  },
+  {
+    "Name": "m:CT_TwipsMeasure/",
+    "ClassName": "TwipsMeasureType"
+  },
+  {
+    "Name": "m:CT_UnSignedShort/",
+    "ClassName": "UnsignedShortType"
+  },
+  {
+    "Name": "m:CT_Acc/m:acc",
+    "ClassName": "Accent"
+  },
+  {
+    "Name": "m:CT_AccPr/m:accPr",
+    "ClassName": "AccentProperties"
+  },
+  {
+    "Name": "m:CT_OnOff/m:aln",
+    "ClassName": "Alignment"
+  },
+  {
+    "Name": "m:CT_OnOff/m:alnScr",
+    "ClassName": "AlignScripts"
+  },
+  {
+    "Name": "m:CT_OMathArgPr/m:argPr",
+    "ClassName": "ArgumentProperties"
+  },
+  {
+    "Name": "m:CT_Integer2/m:argSz",
+    "ClassName": "ArgumentSize"
+  },
+  {
+    "Name": "m:CT_Bar/m:bar",
+    "ClassName": "Bar"
+  },
+  {
+    "Name": "m:CT_BarPr/m:barPr",
+    "ClassName": "BarProperties"
+  },
+  {
+    "Name": "m:CT_YAlign/m:baseJc",
+    "ClassName": "BaseJustification"
+  },
+  {
+    "Name": "m:CT_Char/m:begChr",
+    "ClassName": "BeginChar"
+  },
+  {
+    "Name": "m:CT_BorderBox/m:borderBox",
+    "ClassName": "BorderBox"
+  },
+  {
+    "Name": "m:CT_BorderBoxPr/m:borderBoxPr",
+    "ClassName": "BorderBoxProperties"
+  },
+  {
+    "Name": "m:CT_Box/m:box",
+    "ClassName": "Box"
+  },
+  {
+    "Name": "m:CT_BoxPr/m:boxPr",
+    "ClassName": "BoxProperties"
+  },
+  {
+    "Name": "m:CT_ManualBreak/m:brk",
+    "ClassName": "Break"
+  },
+  {
+    "Name": "m:CT_BreakBin/m:brkBin",
+    "ClassName": "BreakBinary"
+  },
+  {
+    "Name": "m:CT_BreakBinSub/m:brkBinSub",
+    "ClassName": "BreakBinarySubtraction"
+  },
+  {
+    "Name": "m:CT_UnSignedShort/m:cGp",
+    "ClassName": "ColumnGap"
+  },
+  {
+    "Name": "m:CT_SpacingRule/m:cGpRule",
+    "ClassName": "ColumnGapRule"
+  },
+  {
+    "Name": "m:CT_Char/m:chr",
+    "ClassName": "AccentChar"
+  },
+  {
+    "Name": "m:CT_Integer64/m:count",
+    "ClassName": "MatrixColumnCount"
+  },
+  {
+    "Name": "m:CT_TwipsMeasure/m:cSp",
+    "ClassName": "ColumnSpacing"
+  },
+  {
+    "Name": "m:CT_CtrlPr/m:ctrlPr",
+    "ClassName": "ControlProperties"
+  },
+  {
+    "Name": "m:CT_D/m:d",
+    "ClassName": "Delimiter"
+  },
+  {
+    "Name": "m:CT_OMathJc/m:defJc",
+    "ClassName": "DefaultJustification"
+  },
+  {
+    "Name": "m:CT_OMathArg/m:deg",
+    "ClassName": "Degree"
+  },
+  {
+    "Name": "m:CT_OnOff/m:degHide",
+    "ClassName": "HideDegree"
+  },
+  {
+    "Name": "m:CT_OMathArg/m:den",
+    "ClassName": "Denominator"
+  },
+  {
+    "Name": "m:CT_OnOff/m:diff",
+    "ClassName": "Differential"
+  },
+  {
+    "Name": "m:CT_OnOff/m:dispDef",
+    "ClassName": "DisplayDefaults"
+  },
+  {
+    "Name": "m:CT_DPr/m:dPr",
+    "ClassName": "DelimiterProperties"
+  },
+  {
+    "Name": "m:CT_OMathArg/m:e",
+    "ClassName": "Base"
+  },
+  {
+    "Name": "m:CT_Char/m:endChr",
+    "ClassName": "EndChar"
+  },
+  {
+    "Name": "m:CT_EqArr/m:eqArr",
+    "ClassName": "EquationArray"
+  },
+  {
+    "Name": "m:CT_EqArrPr/m:eqArrPr",
+    "ClassName": "EquationArrayProperties"
+  },
+  {
+    "Name": "m:CT_F/m:f",
+    "ClassName": "Fraction"
+  },
+  {
+    "Name": "m:CT_OMathArg/m:fName",
+    "ClassName": "FunctionName"
+  },
+  {
+    "Name": "m:CT_FPr/m:fPr",
+    "ClassName": "FractionProperties"
+  },
+  {
+    "Name": "m:CT_Func/m:func",
+    "ClassName": "MathFunction"
+  },
+  {
+    "Name": "m:CT_FuncPr/m:funcPr",
+    "ClassName": "FunctionProperties"
+  },
+  {
+    "Name": "m:CT_GroupChr/m:groupChr",
+    "ClassName": "GroupChar"
+  },
+  {
+    "Name": "m:CT_GroupChrPr/m:groupChrPr",
+    "ClassName": "GroupCharProperties"
+  },
+  {
+    "Name": "m:CT_OnOff/m:grow",
+    "ClassName": "GrowOperators"
+  },
+  {
+    "Name": "m:CT_OnOff/m:hideBot",
+    "ClassName": "HideBottom"
+  },
+  {
+    "Name": "m:CT_OnOff/m:hideLeft",
+    "ClassName": "HideLeft"
+  },
+  {
+    "Name": "m:CT_OnOff/m:hideRight",
+    "ClassName": "HideRight"
+  },
+  {
+    "Name": "m:CT_OnOff/m:hideTop",
+    "ClassName": "HideTop"
+  },
+  {
+    "Name": "m:CT_TwipsMeasure/m:interSp",
+    "ClassName": "InterSpacing"
+  },
+  {
+    "Name": "m:CT_LimLoc/m:intLim",
+    "ClassName": "IntegralLimitLocation"
+  },
+  {
+    "Name": "m:CT_TwipsMeasure/m:intraSp",
+    "ClassName": "IntraSpacing"
+  },
+  {
+    "Name": "m:CT_OMathJc/m:jc",
+    "ClassName": "Justification"
+  },
+  {
+    "Name": "m:CT_OMathArg/m:lim",
+    "ClassName": "Limit"
+  },
+  {
+    "Name": "m:CT_LimLoc/m:limLoc",
+    "ClassName": "LimitLocation"
+  },
+  {
+    "Name": "m:CT_LimLow/m:limLow",
+    "ClassName": "LimitLower"
+  },
+  {
+    "Name": "m:CT_LimLowPr/m:limLowPr",
+    "ClassName": "LimitLowerProperties"
+  },
+  {
+    "Name": "m:CT_LimUpp/m:limUpp",
+    "ClassName": "LimitUpper"
+  },
+  {
+    "Name": "m:CT_LimUppPr/m:limUppPr",
+    "ClassName": "LimitUpperProperties"
+  },
+  {
+    "Name": "m:CT_OnOff/m:lit",
+    "ClassName": "Literal"
+  },
+  {
+    "Name": "m:CT_TwipsMeasure/m:lMargin",
+    "ClassName": "LeftMargin"
+  },
+  {
+    "Name": "m:CT_M/m:m",
+    "ClassName": "Matrix"
+  },
+  {
+    "Name": "m:CT_FontFace/m:mathFont",
+    "ClassName": "MathFont"
+  },
+  {
+    "Name": "m:CT_MathPr/m:mathPr",
+    "ClassName": "MathProperties"
+  },
+  {
+    "Name": "m:CT_OnOff/m:maxDist",
+    "ClassName": "MaxDistribution"
+  },
+  {
+    "Name": "m:CT_MC/m:mc",
+    "ClassName": "MatrixColumn"
+  },
+  {
+    "Name": "m:CT_XAlign/m:mcJc",
+    "ClassName": "MatrixColumnJustification"
+  },
+  {
+    "Name": "m:CT_MCPr/m:mcPr",
+    "ClassName": "MatrixColumnProperties"
+  },
+  {
+    "Name": "m:CT_MCS/m:mcs",
+    "ClassName": "MatrixColumns"
+  },
+  {
+    "Name": "m:CT_MPr/m:mPr",
+    "ClassName": "MatrixProperties"
+  },
+  {
+    "Name": "m:CT_MR/m:mr",
+    "ClassName": "MatrixRow"
+  },
+  {
+    "Name": "m:CT_Nary/m:nary",
+    "ClassName": "Nary"
+  },
+  {
+    "Name": "m:CT_LimLoc/m:naryLim",
+    "ClassName": "NaryLimitLocation"
+  },
+  {
+    "Name": "m:CT_NaryPr/m:naryPr",
+    "ClassName": "NaryProperties"
+  },
+  {
+    "Name": "m:CT_OnOff/m:noBreak",
+    "ClassName": "NoBreak"
+  },
+  {
+    "Name": "m:CT_OnOff/m:nor",
+    "ClassName": "NormalText"
+  },
+  {
+    "Name": "m:CT_OMathArg/m:num",
+    "ClassName": "Numerator"
+  },
+  {
+    "Name": "m:CT_OnOff/m:objDist",
+    "ClassName": "ObjectDistribution"
+  },
+  {
+    "Name": "m:CT_OMath/m:oMath",
+    "ClassName": "OfficeMath"
+  },
+  {
+    "Name": "m:CT_OMathPara/m:oMathPara",
+    "ClassName": "Paragraph"
+  },
+  {
+    "Name": "m:CT_OMathParaPr/m:oMathParaPr",
+    "ClassName": "ParagraphProperties"
+  },
+  {
+    "Name": "m:CT_OnOff/m:opEmu",
+    "ClassName": "OperatorEmulator"
+  },
+  {
+    "Name": "m:CT_Phant/m:phant",
+    "ClassName": "Phantom"
+  },
+  {
+    "Name": "m:CT_PhantPr/m:phantPr",
+    "ClassName": "PhantomProperties"
+  },
+  {
+    "Name": "m:CT_OnOff/m:plcHide",
+    "ClassName": "HidePlaceholder"
+  },
+  {
+    "Name": "m:CT_TopBot/m:pos",
+    "ClassName": "Position"
+  },
+  {
+    "Name": "m:CT_TwipsMeasure/m:postSp",
+    "ClassName": "PostSpacing"
+  },
+  {
+    "Name": "m:CT_TwipsMeasure/m:preSp",
+    "ClassName": "PreSpacing"
+  },
+  {
+    "Name": "m:CT_R/m:r",
+    "ClassName": "Run"
+  },
+  {
+    "Name": "m:CT_Rad/m:rad",
+    "ClassName": "Radical"
+  },
+  {
+    "Name": "m:CT_RadPr/m:radPr",
+    "ClassName": "RadicalProperties"
+  },
+  {
+    "Name": "m:CT_TwipsMeasure/m:rMargin",
+    "ClassName": "RightMargin"
+  },
+  {
+    "Name": "m:CT_RPR/m:rPr",
+    "ClassName": "RunProperties"
+  },
+  {
+    "Name": "m:CT_UnSignedShort/m:rSp",
+    "ClassName": "RowSpacing"
+  },
+  {
+    "Name": "m:CT_SpacingRule/m:rSpRule",
+    "ClassName": "RowSpacingRule"
+  },
+  {
+    "Name": "m:CT_Script/m:scr",
+    "ClassName": "Script"
+  },
+  {
+    "Name": "m:CT_Char/m:sepChr",
+    "ClassName": "SeparatorChar"
+  },
+  {
+    "Name": "m:CT_OnOff/m:show",
+    "ClassName": "ShowPhantom"
+  },
+  {
+    "Name": "m:CT_Shp/m:shp",
+    "ClassName": "Shape"
+  },
+  {
+    "Name": "m:CT_OnOff/m:smallFrac",
+    "ClassName": "SmallFraction"
+  },
+  {
+    "Name": "m:CT_SPre/m:sPre",
+    "ClassName": "PreSubSuper"
+  },
+  {
+    "Name": "m:CT_SPrePr/m:sPrePr",
+    "ClassName": "PreSubSuperProperties"
+  },
+  {
+    "Name": "m:CT_SSub/m:sSub",
+    "ClassName": "Subscript"
+  },
+  {
+    "Name": "m:CT_SSubPr/m:sSubPr",
+    "ClassName": "SubscriptProperties"
+  },
+  {
+    "Name": "m:CT_SSubSup/m:sSubSup",
+    "ClassName": "SubSuperscript"
+  },
+  {
+    "Name": "m:CT_SSubSupPr/m:sSubSupPr",
+    "ClassName": "SubSuperscriptProperties"
+  },
+  {
+    "Name": "m:CT_SSup/m:sSup",
+    "ClassName": "Superscript"
+  },
+  {
+    "Name": "m:CT_SSupPr/m:sSupPr",
+    "ClassName": "SuperscriptProperties"
+  },
+  {
+    "Name": "m:CT_OnOff/m:strikeBLTR",
+    "ClassName": "StrikeBottomLeftToTopRight"
+  },
+  {
+    "Name": "m:CT_OnOff/m:strikeH",
+    "ClassName": "StrikeHorizontal"
+  },
+  {
+    "Name": "m:CT_OnOff/m:strikeTLBR",
+    "ClassName": "StrikeTopLeftToBottomRight"
+  },
+  {
+    "Name": "m:CT_OnOff/m:strikeV",
+    "ClassName": "StrikeVertical"
+  },
+  {
+    "Name": "m:CT_Style/m:sty",
+    "ClassName": "Style"
+  },
+  {
+    "Name": "m:CT_OMathArg/m:sub",
+    "ClassName": "SubArgument"
+  },
+  {
+    "Name": "m:CT_OnOff/m:subHide",
+    "ClassName": "HideSubArgument"
+  },
+  {
+    "Name": "m:CT_OMathArg/m:sup",
+    "ClassName": "SuperArgument"
+  },
+  {
+    "Name": "m:CT_OnOff/m:supHide",
+    "ClassName": "HideSuperArgument"
+  },
+  {
+    "Name": "m:CT_Text/m:t",
+    "ClassName": "Text"
+  },
+  {
+    "Name": "m:CT_OnOff/m:transp",
+    "ClassName": "Transparent"
+  },
+  {
+    "Name": "m:CT_FType/m:type",
+    "ClassName": "FractionType"
+  },
+  {
+    "Name": "m:CT_TopBot/m:vertJc",
+    "ClassName": "VerticalJustification"
+  },
+  {
+    "Name": "m:CT_TwipsMeasure/m:wrapIndent",
+    "ClassName": "WrapIndent"
+  },
+  {
+    "Name": "m:CT_OnOff/m:wrapRight",
+    "ClassName": "WrapRight"
+  },
+  {
+    "Name": "m:CT_OnOff/m:zeroAsc",
+    "ClassName": "ZeroAscent"
+  },
+  {
+    "Name": "m:CT_OnOff/m:zeroDesc",
+    "ClassName": "ZeroDescent"
+  },
+  {
+    "Name": "m:CT_OnOff/m:zeroWid",
+    "ClassName": "ZeroWidth"
+  }
+]

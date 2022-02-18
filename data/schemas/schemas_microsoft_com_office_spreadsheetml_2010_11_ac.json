@@ -1,0 +1,27 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac",
+  "Types": [
+    {
+      "Name": "x15ac:CT_AbsolutePath/x15ac:absPath",
+      "ClassName": "AbsolutePath",
+      "Summary": "Defines the AbsolutePath Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":url",
+          "PropertyName": "Url",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "url",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

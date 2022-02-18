@@ -1,0 +1,13 @@
+{
+  "Root": "w16cex:CT_CommentsExtensible",
+  "Name": "WordCommentsExtensiblePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2018/08/relationships/commentsExtensible",
+  "Target": "commentsExtensible",
+  "RootElement": "commentsExtensible",
+  "Paths": {
+    "General": "."
+  },
+  "Version": "Office2021"
+}

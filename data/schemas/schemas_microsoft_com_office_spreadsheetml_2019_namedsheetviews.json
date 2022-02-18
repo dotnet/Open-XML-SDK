@@ -1,0 +1,884 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews",
+  "Types": [
+    {
+      "Name": "xnsv:CT_NamedSheetViews/xnsv:namedSheetViews",
+      "ClassName": "NamedSheetViews",
+      "Summary": "Defines the NamedSheetViews Class.",
+      "Part": "NamedSheetViewsPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "xnsv:CT_NamedSheetView/xnsv:namedSheetView"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xnsv:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xnsv:CT_NamedSheetView/xnsv:namedSheetView",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xnsv:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xnsv:CT_NamedSheetView/xnsv:namedSheetView",
+      "ClassName": "NamedSheetView",
+      "Summary": "Defines the NamedSheetView Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xnsv:CT_NsvFilter/xnsv:nsvFilter"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xnsv:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xnsv:CT_NsvFilter/xnsv:nsvFilter",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xnsv:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ExtensionList/xnsv:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "x:CT_Extension/x:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "x:CT_Extension/x:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xnsv:CT_NsvFilter/xnsv:nsvFilter",
+      "ClassName": "NsvFilter",
+      "Summary": "Defines the NsvFilter Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":filterId",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "filterId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":ref",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "ref"
+        },
+        {
+          "QName": ":tableId",
+          "Type": "UInt32Value",
+          "Version": "Office2021",
+          "PropertyComments": "tableId"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xnsv:CT_ColumnFilter/xnsv:columnFilter"
+        },
+        {
+          "Name": "xnsv:CT_SortRules/xnsv:sortRules"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xnsv:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xnsv:CT_ColumnFilter/xnsv:columnFilter",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "xnsv:CT_SortRules/xnsv:sortRules",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xnsv:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xnsv:CT_ColumnFilter/xnsv:columnFilter",
+      "ClassName": "ColumnFilter",
+      "Summary": "Defines the ColumnFilter Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":colId",
+          "Type": "UInt32Value",
+          "Version": "Office2021",
+          "PropertyComments": "colId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_Dxf/xnsv:dxf",
+          "PropertyName": "DifferentialFormatType"
+        },
+        {
+          "Name": "x:CT_FilterColumn/xnsv:filter"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xnsv:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_Dxf/xnsv:dxf",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "x:CT_FilterColumn/xnsv:filter",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xnsv:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xnsv:CT_SortRules/xnsv:sortRules",
+      "ClassName": "SortRules",
+      "Summary": "Defines the SortRules Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":sortMethod",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SortMethodValues\u003E",
+          "Version": "Office2021",
+          "PropertyComments": "sortMethod"
+        },
+        {
+          "QName": ":caseSensitive",
+          "Type": "BooleanValue",
+          "Version": "Office2021",
+          "PropertyComments": "caseSensitive"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xnsv:CT_SortRule/xnsv:sortRule"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xnsv:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xnsv:CT_SortRule/xnsv:sortRule",
+            "Occurs": [
+              {
+                "Max": 64
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xnsv:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_Dxf/xnsv:dxf",
+      "ClassName": "DifferentialFormatType",
+      "Summary": "Defines the DifferentialFormatType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "x:CT_Font/x:font",
+          "PropertyName": "Font",
+          "PropertyComments": "Font Properties"
+        },
+        {
+          "Name": "x:CT_NumFmt/x:numFmt",
+          "PropertyName": "NumberingFormat",
+          "PropertyComments": "Number Format"
+        },
+        {
+          "Name": "x:CT_Fill/x:fill",
+          "PropertyName": "Fill",
+          "PropertyComments": "Fill"
+        },
+        {
+          "Name": "x:CT_CellAlignment/x:alignment",
+          "PropertyName": "Alignment",
+          "PropertyComments": "Alignment"
+        },
+        {
+          "Name": "x:CT_Border/x:border",
+          "PropertyName": "Border",
+          "PropertyComments": "Border Properties"
+        },
+        {
+          "Name": "x:CT_CellProtection/x:protection",
+          "PropertyName": "Protection",
+          "PropertyComments": "Protection Properties"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x:extLst",
+          "PropertyName": "ExtensionList",
+          "PropertyComments": "Future Feature Data Storage Area"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_Font/x:font",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_NumFmt/x:numFmt",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_Fill/x:fill",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_CellAlignment/x:alignment",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_Border/x:border",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_CellProtection/x:protection",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_ExtensionList/x:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_FilterColumn/xnsv:filter",
+      "ClassName": "FilterColumn",
+      "Summary": "Defines the FilterColumn Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":colId",
+          "PropertyName": "ColumnId",
+          "Type": "UInt32Value",
+          "PropertyComments": "Filter Column Data",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":hiddenButton",
+          "PropertyName": "HiddenButton",
+          "Type": "BooleanValue",
+          "PropertyComments": "Hidden AutoFilter Button"
+        },
+        {
+          "QName": ":showButton",
+          "PropertyName": "ShowButton",
+          "Type": "BooleanValue",
+          "PropertyComments": "Show Filter Button"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_Filters/x:filters",
+          "PropertyName": "Filters",
+          "PropertyComments": "Filter Criteria"
+        },
+        {
+          "Name": "x:CT_Top10/x:top10",
+          "PropertyName": "Top10",
+          "PropertyComments": "Top 10"
+        },
+        {
+          "Name": "x14:CT_CustomFilters/x14:customFilters",
+          "PropertyName": "CustomFilters14"
+        },
+        {
+          "Name": "x:CT_CustomFilters/x:customFilters",
+          "PropertyName": "CustomFilters",
+          "PropertyComments": "Custom Filters"
+        },
+        {
+          "Name": "x:CT_DynamicFilter/x:dynamicFilter",
+          "PropertyName": "DynamicFilter",
+          "PropertyComments": "Dynamic Filter"
+        },
+        {
+          "Name": "x:CT_ColorFilter/x:colorFilter",
+          "PropertyName": "ColorFilter",
+          "PropertyComments": "Color Filter Criteria"
+        },
+        {
+          "Name": "x14:CT_IconFilter/x14:iconFilter",
+          "PropertyName": "IconFilter14"
+        },
+        {
+          "Name": "x:CT_IconFilter/x:iconFilter",
+          "PropertyName": "IconFilter",
+          "PropertyComments": "Icon Filter"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {
+            "Max": 1
+          }
+        ],
+        "Items": [
+          {
+            "Name": "x:CT_Filters/x:filters",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_Top10/x:top10",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x14:CT_CustomFilters/x14:customFilters",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_CustomFilters/x:customFilters",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_DynamicFilter/x:dynamicFilter",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_ColorFilter/x:colorFilter",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x14:CT_IconFilter/x14:iconFilter",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_IconFilter/x:iconFilter",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_ExtensionList/x:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xnsv:CT_SortRule/xnsv:sortRule",
+      "ClassName": "SortRule",
+      "Summary": "Defines the SortRule Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":colId",
+          "Type": "UInt32Value",
+          "Version": "Office2021",
+          "PropertyComments": "colId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_Dxf/xnsv:dxf",
+          "PropertyName": "DifferentialFormatType"
+        },
+        {
+          "Name": "x14:CT_SortCondition/xnsv:sortCondition"
+        },
+        {
+          "Name": "xlrd2:CT_RichSortCondition/xnsv:richSortCondition"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_Dxf/xnsv:dxf",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Name": "x14:CT_SortCondition/xnsv:sortCondition",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ],
+                "InitialVersion": "Office2021"
+              },
+              {
+                "Name": "xlrd2:CT_RichSortCondition/xnsv:richSortCondition",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ],
+                "InitialVersion": "Office2021"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x14:CT_SortCondition/xnsv:sortCondition",
+      "ClassName": "SortCondition",
+      "Summary": "Defines the SortCondition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":descending",
+          "PropertyName": "Descending",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "descending"
+        },
+        {
+          "QName": ":sortBy",
+          "PropertyName": "SortBy",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SortByValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "sortBy"
+        },
+        {
+          "QName": ":ref",
+          "PropertyName": "Reference",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "ref",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":customList",
+          "PropertyName": "CustomList",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "customList"
+        },
+        {
+          "QName": ":dxfId",
+          "PropertyName": "FormatId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "dxfId"
+        },
+        {
+          "QName": ":iconSet",
+          "PropertyName": "IconSet",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "iconSet"
+        },
+        {
+          "QName": ":iconId",
+          "PropertyName": "IconId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "iconId"
+        }
+      ]
+    },
+    {
+      "Name": "xlrd2:CT_RichSortCondition/xnsv:richSortCondition",
+      "ClassName": "RichSortCondition",
+      "Summary": "Defines the RichSortCondition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":richSortKey",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "richSortKey"
+        },
+        {
+          "QName": ":descending",
+          "PropertyName": "Descending",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "descending"
+        },
+        {
+          "QName": ":sortBy",
+          "PropertyName": "SortBy",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SortByValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "sortBy"
+        },
+        {
+          "QName": ":ref",
+          "PropertyName": "Reference",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "ref",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":customList",
+          "PropertyName": "CustomList",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "customList"
+        },
+        {
+          "QName": ":dxfId",
+          "PropertyName": "FormatId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "dxfId"
+        },
+        {
+          "QName": ":iconSet",
+          "PropertyName": "IconSet",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "iconSet"
+        },
+        {
+          "QName": ":iconId",
+          "PropertyName": "IconId",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "iconId"
+        }
+      ]
+    }
+  ]
+}

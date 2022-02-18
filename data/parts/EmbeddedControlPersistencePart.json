@@ -1,0 +1,17 @@
+{
+  "Name": "EmbeddedControlPersistencePart",
+  "Base": "OpenXmlPart",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
+  "Target": "control",
+  "Extension": ".bin",
+  "Paths": {
+    "General": "embeddings"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedControlPersistenceBinaryDataParts",
+      "Name": "EmbeddedControlPersistenceBinaryDataPart"
+    }
+  ]
+}

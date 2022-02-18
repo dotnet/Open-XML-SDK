@@ -1,0 +1,211 @@
+{
+  "Root": "w:CT_Document",
+  "Name": "MainDocumentPart",
+  "Base": "OpenXmlPart",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument",
+  "Target": "document",
+  "RootElement": "document",
+  "Paths": {
+    "General": "word"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "CustomXmlParts",
+      "Name": "CustomXmlPart"
+    },
+    {
+      "ApiName": "GlossaryDocumentPart",
+      "Name": "GlossaryDocumentPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "ThemePart",
+      "Name": "ThemePart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "ThumbnailPart",
+      "Name": "ThumbnailPart"
+    },
+    {
+      "ApiName": "WordprocessingCommentsPart",
+      "Name": "WordprocessingCommentsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "DocumentSettingsPart",
+      "Name": "DocumentSettingsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "EndnotesPart",
+      "Name": "EndnotesPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "FontTablePart",
+      "Name": "FontTablePart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "FootnotesPart",
+      "Name": "FootnotesPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "NumberingDefinitionsPart",
+      "Name": "NumberingDefinitionsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "StyleDefinitionsPart",
+      "Name": "StyleDefinitionsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "StylesWithEffectsPart",
+      "Name": "StylesWithEffectsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "WebSettingsPart",
+      "Name": "WebSettingsPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "FooterParts",
+      "Name": "FooterPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "HeaderParts",
+      "Name": "HeaderPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "WordprocessingPrinterSettingsParts",
+      "Name": "WordprocessingPrinterSettingsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "CustomizationPart",
+      "Name": "CustomizationPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "VbaProjectPart",
+      "Name": "VbaProjectPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "WordprocessingCommentsExPart",
+      "Name": "WordprocessingCommentsExPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "WordprocessingPeoplePart",
+      "Name": "WordprocessingPeoplePart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "WordprocessingCommentsIdsPart",
+      "Name": "WordprocessingCommentsIdsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "DocumentTasksPart",
+      "Name": "DocumentTasksPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "WordCommentsExtensiblePart",
+      "Name": "WordCommentsExtensiblePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "AlternativeFormatImportParts",
+      "Name": "AlternativeFormatImportPart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ChartParts",
+      "Name": "ChartPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ExtendedChartParts",
+      "Name": "ExtendedChartPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramColorsParts",
+      "Name": "DiagramColorsPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramDataParts",
+      "Name": "DiagramDataPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramPersistLayoutParts",
+      "Name": "DiagramPersistLayoutPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramLayoutDefinitionParts",
+      "Name": "DiagramLayoutDefinitionPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramStyleParts",
+      "Name": "DiagramStylePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedControlPersistenceParts",
+      "Name": "EmbeddedControlPersistencePart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedObjectParts",
+      "Name": "EmbeddedObjectPart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedPackageParts",
+      "Name": "EmbeddedPackagePart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "IsDataPartReference": true,
+      "ApiName": "VideoReferenceRelationships",
+      "Name": "VideoReferenceRelationship"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "Model3DReferenceRelationshipParts",
+      "Name": "Model3DReferenceRelationshipPart",
+      "HasFixedContent": true
+    }
+  ]
+}

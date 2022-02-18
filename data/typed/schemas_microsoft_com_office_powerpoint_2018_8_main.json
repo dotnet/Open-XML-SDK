@@ -1,0 +1,48 @@
+[
+  {
+    "Name": "p188:CT_Author/p188:author",
+    "ClassName": "Author"
+  },
+  {
+    "Name": "p188:CT_AuthorList/p188:authorLst",
+    "ClassName": "AuthorList",
+    "PartClassName": "PowerPointAuthorsPart"
+  },
+  {
+    "Name": "p188:CT_Comment/p188:cm",
+    "ClassName": "Comment"
+  },
+  {
+    "Name": "p188:CT_CommentList/p188:cmLst",
+    "ClassName": "CommentList",
+    "PartClassName": "PowerPointCommentPart"
+  },
+  {
+    "Name": "p188:CT_CommentRelationship/p188:commentRel",
+    "ClassName": "CommentRelationship"
+  },
+  {
+    "Name": "p:CT_ExtensionList/p188:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "a:CT_Point2D/p188:pos",
+    "ClassName": "Point2DType"
+  },
+  {
+    "Name": "p188:CT_CommentReply/p188:reply",
+    "ClassName": "CommentReply"
+  },
+  {
+    "Name": "p188:CT_CommentReplyList/p188:replyLst",
+    "ClassName": "CommentReplyList"
+  },
+  {
+    "Name": "a:CT_TextBody/p188:txBody",
+    "ClassName": "TextBodyType"
+  },
+  {
+    "Name": "p188:CT_CommentUnknownAnchor/p188:unknownAnchor",
+    "ClassName": "CommentUnknownAnchor"
+  }
+]

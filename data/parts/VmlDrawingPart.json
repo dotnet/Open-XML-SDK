@@ -1,0 +1,24 @@
+{
+  "Name": "VmlDrawingPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
+  "Target": "vmldrawing",
+  "Extension": ".vml",
+  "Paths": {
+    "General": "../drawings"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "LegacyDiagramTextParts",
+      "Name": "LegacyDiagramTextPart",
+      "HasFixedContent": true
+    }
+  ]
+}
