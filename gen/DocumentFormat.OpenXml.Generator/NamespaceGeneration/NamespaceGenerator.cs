@@ -22,7 +22,7 @@ public class NamespaceGenerator : IIncrementalGenerator
                 {
                     var ooxmlContext = new OpenXmlGeneratorContext().LoadNamespaces(data.Left, context.CancellationToken);
 
-                    context.AddSource("Namespaces", ooxmlContext.Namespaces.Generate());
+                    context.AddSource("Namespaces", ooxmlContext.KnownNamespaces.Generate());
                 }
             }
             catch (Exception)

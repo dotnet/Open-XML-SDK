@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Generator
 
             foreach (var n in namespaces)
             {
-                var deserialized = OpenXmlGeneratorContext.Load<NamespaceInfo[]>(n.GetText(token)?.ToString());
+                var deserialized = OpenXmlGeneratorContext.Deserialize<NamespaceInfo[]>(n.GetText(token)?.ToString());
 
                 if (deserialized is not null)
                 {
@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Generator
                 }
             }
 
-            return context with { Namespaces = builder.ToImmutable() };
+            return context with { KnownNamespaces = builder.ToImmutable() };
         }
     }
 }

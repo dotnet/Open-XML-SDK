@@ -12,15 +12,17 @@ namespace DocumentFormat.OpenXml.Generator;
 
 public record OpenXmlGeneratorContext
 {
-    public static JsonSerializer Serializer { get; } = JsonSerializer.CreateDefault(new JsonSerializerSettings
+    private static readonly JsonSerializerSettings _settings = new()
     {
         Converters =
-            {
-                new StringEnumConverter(),
-                new QualifiedNameConverter(),
-                new TypedQNameConverter(),
-            },
-    });
+        {
+            new StringEnumConverter(),
+            new QualifiedNameConverter(),
+            new TypedQNameConverter(),
+        },
+    };
+
+    public static T? Deserialize<T>(string? content) => content is null ? default : JsonConvert.DeserializeObject<T>(content, _settings);
 
     public ImmutableArray<NamespaceInfo> KnownNamespaces { get; init; } = ImmutableArray.Create<NamespaceInfo>();
 
