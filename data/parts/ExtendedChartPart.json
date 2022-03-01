@@ -1,0 +1,46 @@
+{
+  "Root": "cx:CT_ChartSpace",
+  "Name": "ExtendedChartPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-office.chartex\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
+  "Target": "chart",
+  "RootElement": "chartSpace",
+  "Paths": {
+    "General": "extendedCharts"
+  },
+  "Children": [
+    {
+      "ApiName": "ChartDrawingPart",
+      "Name": "ChartDrawingPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "EmbeddedPackagePart",
+      "Name": "EmbeddedPackagePart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    },
+    {
+      "ApiName": "ThemeOverridePart",
+      "Name": "ThemeOverridePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ChartStyleParts",
+      "Name": "ChartStylePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ChartColorStyleParts",
+      "Name": "ChartColorStylePart",
+      "HasFixedContent": true
+    }
+  ]
+}

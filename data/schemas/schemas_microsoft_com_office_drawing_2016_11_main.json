@@ -1,0 +1,26 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2016/11/main",
+  "Types": [
+    {
+      "Name": "a1611:CT_PictureAttributionSourceURL/a1611:picAttrSrcUrl",
+      "ClassName": "PictureAttributionSourceURL",
+      "Summary": "Defines the PictureAttributionSourceURL Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

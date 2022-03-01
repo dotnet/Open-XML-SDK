@@ -1,0 +1,13 @@
+{
+  "Root": "xlrd2:CT_RichStylesheet",
+  "Name": "RichStylesPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.richstyles\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/richStyles",
+  "Target": "richStyles",
+  "RootElement": "richStyleSheet",
+  "Paths": {
+    "General": "richData"
+  },
+  "Version": "Office2019"
+}

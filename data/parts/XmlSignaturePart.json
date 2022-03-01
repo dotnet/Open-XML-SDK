@@ -1,0 +1,11 @@
+{
+  "Name": "XmlSignaturePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-package.digital-signature-xmlsignature\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature",
+  "Target": "sig",
+  "RootElement": "Signature",
+  "Paths": {
+    "General": "_xmlsignatures"
+  }
+}

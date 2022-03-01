@@ -1,0 +1,13 @@
+{
+  "Root": "p188:CT_AuthorList",
+  "Name": "PowerPointAuthorsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-powerpoint.authors\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2018/10/relationships/authors",
+  "Target": "authors",
+  "RootElement": "authorLst",
+  "Paths": {
+    "General": "."
+  },
+  "Version": "Office2021"
+}

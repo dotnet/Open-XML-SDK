@@ -1,0 +1,12 @@
+{
+  "Root": "a:CT_TableStyleList",
+  "Name": "TableStylesPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.tableStyles\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles",
+  "Target": "tableStyles",
+  "RootElement": "tblStyleLst",
+  "Paths": {
+    "General": "."
+  }
+}

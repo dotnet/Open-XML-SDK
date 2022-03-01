@@ -1,0 +1,17 @@
+{
+  "Name": "VbaProjectPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-office.vbaProject",
+  "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
+  "Target": "vbaProject",
+  "Paths": {
+    "General": "."
+  },
+  "Children": [
+    {
+      "ApiName": "VbaDataPart",
+      "Name": "VbaDataPart",
+      "HasFixedContent": true
+    }
+  ]
+}

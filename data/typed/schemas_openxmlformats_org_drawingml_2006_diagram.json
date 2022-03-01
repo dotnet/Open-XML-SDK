@@ -1,0 +1,334 @@
+[
+  {
+    "Name": "dgm:CT_Colors/",
+    "ClassName": "ColorsType"
+  },
+  {
+    "Name": "dgm:CT_LayoutVariablePropertySet/",
+    "ClassName": "LayoutVariablePropertySetType"
+  },
+  {
+    "Name": "dgm:CT_SampleData/",
+    "ClassName": "SampleDataType"
+  },
+  {
+    "Name": "dgm:CT_Adj/dgm:adj",
+    "ClassName": "Adjust"
+  },
+  {
+    "Name": "dgm:CT_AdjLst/dgm:adjLst",
+    "ClassName": "AdjustList"
+  },
+  {
+    "Name": "dgm:CT_Algorithm/dgm:alg",
+    "ClassName": "Algorithm"
+  },
+  {
+    "Name": "dgm:CT_AnimLvl/dgm:animLvl",
+    "ClassName": "AnimationLevel"
+  },
+  {
+    "Name": "dgm:CT_AnimOne/dgm:animOne",
+    "ClassName": "AnimateOneByOne"
+  },
+  {
+    "Name": "a:CT_BackgroundFormatting/dgm:bg",
+    "ClassName": "Background"
+  },
+  {
+    "Name": "dgm:CT_BulletEnabled/dgm:bulletEnabled",
+    "ClassName": "BulletEnabled"
+  },
+  {
+    "Name": "dgm:CT_Category/dgm:cat",
+    "ClassName": "Category"
+  },
+  {
+    "Name": "dgm:CT_CTCategory/dgm:cat",
+    "ClassName": "ColorTransformCategory"
+  },
+  {
+    "Name": "dgm:CT_SDCategory/dgm:cat",
+    "ClassName": "StyleDisplayCategory"
+  },
+  {
+    "Name": "dgm:CT_Categories/dgm:catLst",
+    "ClassName": "CategoryList"
+  },
+  {
+    "Name": "dgm:CT_CTCategories/dgm:catLst",
+    "ClassName": "ColorTransformCategories"
+  },
+  {
+    "Name": "dgm:CT_SDCategories/dgm:catLst",
+    "ClassName": "StyleDisplayCategories"
+  },
+  {
+    "Name": "dgm:CT_ChildMax/dgm:chMax",
+    "ClassName": "MaxNumberOfChildren"
+  },
+  {
+    "Name": "dgm:CT_Choose/dgm:choose",
+    "ClassName": "Choose"
+  },
+  {
+    "Name": "dgm:CT_ChildPref/dgm:chPref",
+    "ClassName": "PreferredNumberOfChildren"
+  },
+  {
+    "Name": "dgm:CT_SampleData/dgm:clrData",
+    "ClassName": "ColorData"
+  },
+  {
+    "Name": "dgm:CT_ColorTransform/dgm:colorsDef",
+    "ClassName": "ColorsDefinition",
+    "PartClassName": "DiagramColorsPart"
+  },
+  {
+    "Name": "dgm:CT_ColorTransformHeader/dgm:colorsDefHdr",
+    "ClassName": "ColorsDefinitionHeader"
+  },
+  {
+    "Name": "dgm:CT_ColorTransformHeaderLst/dgm:colorsDefHdrLst",
+    "ClassName": "ColorsDefinitionHeaderList"
+  },
+  {
+    "Name": "dgm:CT_Constraint/dgm:constr",
+    "ClassName": "Constraint"
+  },
+  {
+    "Name": "dgm:CT_Constraints/dgm:constrLst",
+    "ClassName": "Constraints"
+  },
+  {
+    "Name": "dgm:CT_Cxn/dgm:cxn",
+    "ClassName": "Connection"
+  },
+  {
+    "Name": "dgm:CT_CxnList/dgm:cxnLst",
+    "ClassName": "ConnectionList"
+  },
+  {
+    "Name": "dgm:CT_DataModel/dgm:dataModel",
+    "ClassName": "DataModel"
+  },
+  {
+    "Name": "dgm:CT_DataModelRoot/dgm:dataModel",
+    "ClassName": "DataModelRoot",
+    "PartClassName": "DiagramDataPart"
+  },
+  {
+    "Name": "dgm:CT_CTDescription/dgm:desc",
+    "ClassName": "ColorTransformDescription"
+  },
+  {
+    "Name": "dgm:CT_Description/dgm:desc",
+    "ClassName": "Description"
+  },
+  {
+    "Name": "dgm:CT_SDDescription/dgm:desc",
+    "ClassName": "StyleLabelDescription"
+  },
+  {
+    "Name": "dgm:CT_Direction/dgm:dir",
+    "ClassName": "Direction"
+  },
+  {
+    "Name": "dgm:CT_Colors/dgm:effectClrLst",
+    "ClassName": "EffectColorList"
+  },
+  {
+    "Name": "dgm:CT_Otherwise/dgm:else",
+    "ClassName": "DiagramChooseElse"
+  },
+  {
+    "Name": "dgm:CT_DiagramDefinitionExtension/dgm:ext",
+    "ClassName": "DiagramDefinitionExtension"
+  },
+  {
+    "Name": "a:CT_DataModelExtensionList/dgm:extLst",
+    "ClassName": "DataModelExtensionList"
+  },
+  {
+    "Name": "dgm:CT_DiagramDefinitionExtensionList/dgm:extLst",
+    "ClassName": "DiagramDefinitionExtensionList"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/dgm:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "a:CT_PtExtensionList/dgm:extLst",
+    "ClassName": "PtExtensionList"
+  },
+  {
+    "Name": "dgm:CT_Colors/dgm:fillClrLst",
+    "ClassName": "FillColorList"
+  },
+  {
+    "Name": "dgm:CT_ForEach/dgm:forEach",
+    "ClassName": "ForEach"
+  },
+  {
+    "Name": "dgm:CT_HierBranchStyle/dgm:hierBranch",
+    "ClassName": "HierarchyBranch"
+  },
+  {
+    "Name": "dgm:CT_When/dgm:if",
+    "ClassName": "DiagramChooseIf"
+  },
+  {
+    "Name": "dgm:CT_DiagramDefinition/dgm:layoutDef",
+    "ClassName": "LayoutDefinition",
+    "PartClassName": "DiagramLayoutDefinitionPart"
+  },
+  {
+    "Name": "dgm:CT_DiagramDefinitionHeader/dgm:layoutDefHdr",
+    "ClassName": "LayoutDefinitionHeader"
+  },
+  {
+    "Name": "dgm:CT_DiagramDefinitionHeaderLst/dgm:layoutDefHdrLst",
+    "ClassName": "LayoutDefinitionHeaderList"
+  },
+  {
+    "Name": "dgm:CT_LayoutNode/dgm:layoutNode",
+    "ClassName": "LayoutNode"
+  },
+  {
+    "Name": "dgm:CT_Colors/dgm:linClrLst",
+    "ClassName": "LineColorList"
+  },
+  {
+    "Name": "dgm:CT_OrgChart/dgm:orgChart",
+    "ClassName": "OrganizationChart"
+  },
+  {
+    "Name": "dgm:CT_Parameter/dgm:param",
+    "ClassName": "Parameter"
+  },
+  {
+    "Name": "dgm:CT_LayoutVariablePropertySet/dgm:presLayoutVars",
+    "ClassName": "PresentationLayoutVariables"
+  },
+  {
+    "Name": "dgm:CT_PresentationOf/dgm:presOf",
+    "ClassName": "PresentationOf"
+  },
+  {
+    "Name": "dgm:CT_ElemPropSet/dgm:prSet",
+    "ClassName": "PropertySet"
+  },
+  {
+    "Name": "dgm:CT_Pt/dgm:pt",
+    "ClassName": "Point"
+  },
+  {
+    "Name": "dgm:CT_PtList/dgm:ptLst",
+    "ClassName": "PointList"
+  },
+  {
+    "Name": "dgm:CT_RelIds/dgm:relIds",
+    "ClassName": "RelationshipIds"
+  },
+  {
+    "Name": "dgm:CT_ResizeHandles/dgm:resizeHandles",
+    "ClassName": "ResizeHandles"
+  },
+  {
+    "Name": "dgm:CT_NumericRule/dgm:rule",
+    "ClassName": "Rule"
+  },
+  {
+    "Name": "dgm:CT_Rules/dgm:ruleLst",
+    "ClassName": "RuleList"
+  },
+  {
+    "Name": "dgm:CT_SampleData/dgm:sampData",
+    "ClassName": "SampleData"
+  },
+  {
+    "Name": "a:CT_Scene3D/dgm:scene3d",
+    "ClassName": "Scene3D"
+  },
+  {
+    "Name": "dgm:CT_Shape/dgm:shape",
+    "ClassName": "Shape"
+  },
+  {
+    "Name": "a:CT_Shape3D/dgm:sp3d",
+    "ClassName": "Shape3D"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/dgm:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "a:CT_ShapeStyle/dgm:style",
+    "ClassName": "Style"
+  },
+  {
+    "Name": "dgm:CT_SampleData/dgm:styleData",
+    "ClassName": "StyleData"
+  },
+  {
+    "Name": "dgm:CT_StyleDefinition/dgm:styleDef",
+    "ClassName": "StyleDefinition",
+    "PartClassName": "DiagramStylePart"
+  },
+  {
+    "Name": "dgm:CT_StyleDefinitionHeader/dgm:styleDefHdr",
+    "ClassName": "StyleDefinitionHeader"
+  },
+  {
+    "Name": "dgm:CT_StyleDefinitionHeaderLst/dgm:styleDefHdrLst",
+    "ClassName": "StyleDefinitionHeaderList"
+  },
+  {
+    "Name": "dgm:CT_CTStyleLabel/dgm:styleLbl",
+    "ClassName": "ColorTransformStyleLabel"
+  },
+  {
+    "Name": "dgm:CT_StyleLabel/dgm:styleLbl",
+    "ClassName": "StyleLabel"
+  },
+  {
+    "Name": "a:CT_TextBody/dgm:t",
+    "ClassName": "TextBody"
+  },
+  {
+    "Name": "dgm:CT_CTName/dgm:title",
+    "ClassName": "ColorDefinitionTitle"
+  },
+  {
+    "Name": "dgm:CT_Name/dgm:title",
+    "ClassName": "Title"
+  },
+  {
+    "Name": "dgm:CT_SDName/dgm:title",
+    "ClassName": "StyleDefinitionTitle"
+  },
+  {
+    "Name": "dgm:CT_Colors/dgm:txEffectClrLst",
+    "ClassName": "TextEffectColorList"
+  },
+  {
+    "Name": "dgm:CT_Colors/dgm:txFillClrLst",
+    "ClassName": "TextFillColorList"
+  },
+  {
+    "Name": "dgm:CT_Colors/dgm:txLinClrLst",
+    "ClassName": "TextLineColorList"
+  },
+  {
+    "Name": "dgm:CT_TextProps/dgm:txPr",
+    "ClassName": "TextProperties"
+  },
+  {
+    "Name": "dgm:CT_LayoutVariablePropertySet/dgm:varLst",
+    "ClassName": "VariableList"
+  },
+  {
+    "Name": "a:CT_WholeE2oFormatting/dgm:whole",
+    "ClassName": "Whole"
+  }
+]

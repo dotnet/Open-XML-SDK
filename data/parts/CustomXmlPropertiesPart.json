@@ -1,0 +1,12 @@
+{
+  "Root": "ds:CT_DatastoreItem",
+  "Name": "CustomXmlPropertiesPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.customXmlProperties\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps",
+  "Target": "itemProps",
+  "RootElement": "datastoreItem",
+  "Paths": {
+    "General": "."
+  }
+}

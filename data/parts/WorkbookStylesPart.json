@@ -1,0 +1,12 @@
+{
+  "Root": "x:CT_Stylesheet",
+  "Name": "WorkbookStylesPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.styles\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles",
+  "Target": "styles",
+  "RootElement": "styleSheet",
+  "Paths": {
+    "General": "."
+  }
+}

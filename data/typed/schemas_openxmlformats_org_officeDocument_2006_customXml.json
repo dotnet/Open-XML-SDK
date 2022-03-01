@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "ds:CT_DatastoreItem/ds:datastoreItem",
+    "ClassName": "DataStoreItem",
+    "PartClassName": "CustomXmlPropertiesPart"
+  },
+  {
+    "Name": "ds:CT_DatastoreSchemaRef/ds:schemaRef",
+    "ClassName": "SchemaReference"
+  },
+  {
+    "Name": "ds:CT_DatastoreSchemaRefs/ds:schemaRefs",
+    "ClassName": "SchemaReferences"
+  }
+]

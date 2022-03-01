@@ -1,0 +1,58 @@
+{
+  "Root": "x:CT_Macrosheet",
+  "Name": "MacroSheetPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.macrosheet\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet",
+  "Target": "sheet",
+  "RootElement": "macrosheet",
+  "Paths": {
+    "General": "macrosheets"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "SpreadsheetPrinterSettingsParts",
+      "Name": "SpreadsheetPrinterSettingsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "DrawingsPart",
+      "Name": "DrawingsPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "VmlDrawingParts",
+      "Name": "VmlDrawingPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "WorksheetCommentsPart",
+      "Name": "WorksheetCommentsPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "CustomPropertyParts",
+      "Name": "CustomPropertyPart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedObjectParts",
+      "Name": "EmbeddedObjectPart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedPackageParts",
+      "Name": "EmbeddedPackagePart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    }
+  ]
+}

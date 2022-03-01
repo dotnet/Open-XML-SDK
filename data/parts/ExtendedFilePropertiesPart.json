@@ -1,0 +1,12 @@
+{
+  "Root": "ap:CT_Properties",
+  "Name": "ExtendedFilePropertiesPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.extended-properties\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties",
+  "Target": "app",
+  "RootElement": "Properties",
+  "Paths": {
+    "General": "docProps"
+  }
+}

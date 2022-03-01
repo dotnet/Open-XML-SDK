@@ -1,0 +1,46 @@
+{
+  "Root": "c:CT_ChartSpace",
+  "Name": "ChartPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
+  "Target": "chart",
+  "RootElement": "chartSpace",
+  "Paths": {
+    "General": "charts"
+  },
+  "Children": [
+    {
+      "ApiName": "ChartDrawingPart",
+      "Name": "ChartDrawingPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "EmbeddedPackagePart",
+      "Name": "EmbeddedPackagePart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    },
+    {
+      "ApiName": "ThemeOverridePart",
+      "Name": "ThemeOverridePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ChartStyleParts",
+      "Name": "ChartStylePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ChartColorStyleParts",
+      "Name": "ChartColorStylePart",
+      "HasFixedContent": true
+    }
+  ]
+}

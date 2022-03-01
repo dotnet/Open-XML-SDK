@@ -1,0 +1,12 @@
+{
+  "Root": "w:CT_WebSettings",
+  "Name": "WebSettingsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.webSettings\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings",
+  "Target": "webSettings",
+  "RootElement": "webSettings",
+  "Paths": {
+    "General": "."
+  }
+}

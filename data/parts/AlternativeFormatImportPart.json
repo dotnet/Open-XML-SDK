@@ -1,0 +1,10 @@
+{
+  "Name": "AlternativeFormatImportPart",
+  "Base": "OpenXmlPart",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk",
+  "Target": "afchunk",
+  "Extension": ".dat",
+  "Paths": {
+    "General": "."
+  }
+}

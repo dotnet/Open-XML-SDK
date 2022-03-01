@@ -1,0 +1,12 @@
+{
+  "Root": "wne:CT_VbaSuppData",
+  "Name": "VbaDataPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-word.vbaData\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/wordVbaData",
+  "Target": "vbaData",
+  "RootElement": "vbaSuppData",
+  "Paths": {
+    "General": "."
+  }
+}

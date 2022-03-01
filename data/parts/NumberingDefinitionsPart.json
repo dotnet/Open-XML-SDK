@@ -1,0 +1,19 @@
+{
+  "Root": "w:CT_Numbering",
+  "Name": "NumberingDefinitionsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering",
+  "Target": "numbering",
+  "RootElement": "numbering",
+  "Paths": {
+    "General": "."
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    }
+  ]
+}

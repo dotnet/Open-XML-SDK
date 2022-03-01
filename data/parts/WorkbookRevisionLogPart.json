@@ -1,0 +1,12 @@
+{
+  "Root": "x:CT_Revisions",
+  "Name": "WorkbookRevisionLogPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionLog\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionLog",
+  "Target": "revisionLog",
+  "RootElement": "revisions",
+  "Paths": {
+    "General": "."
+  }
+}

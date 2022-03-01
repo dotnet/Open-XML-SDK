@@ -1,0 +1,13 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac",
+  "Types": [
+    {
+      "Name": "x:ST_Xstring/x12ac:list",
+      "ClassName": "List",
+      "Summary": "Defines the List Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2013"
+    }
+  ]
+}

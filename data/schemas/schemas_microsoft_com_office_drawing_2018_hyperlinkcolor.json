@@ -1,0 +1,57 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor",
+  "Types": [
+    {
+      "Name": "ahyp:CT_HyperlinkColor/ahyp:hlinkClr",
+      "ClassName": "HyperlinkColor",
+      "Summary": "Defines the HyperlinkColor Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum\u003E",
+          "Version": "Office2019",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "ahyp:ST_HyperlinkColor",
+      "Name": "HyperlinkColorEnum",
+      "Facets": [
+        {
+          "Version": "Office2019",
+          "Value": "hlink",
+          "Name": "HLink"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "tx",
+          "Name": "Tx"
+        }
+      ],
+      "Version": "Office2019"
+    }
+  ]
+}

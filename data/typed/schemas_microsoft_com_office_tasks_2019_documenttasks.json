@@ -1,0 +1,83 @@
+[
+  {
+    "Name": "t:CT_TaskUser/",
+    "ClassName": "OpenXmlTaskUserElement"
+  },
+  {
+    "Name": "t:CT_TaskAnchor/t:Anchor",
+    "ClassName": "TaskAnchor"
+  },
+  {
+    "Name": "t:CT_TaskUser/t:Assign",
+    "ClassName": "AssignTaskUser"
+  },
+  {
+    "Name": "t:CT_TaskUser/t:Attribution",
+    "ClassName": "AttributionTaskUser"
+  },
+  {
+    "Name": "t:CT_CommentAnchor/t:Comment",
+    "ClassName": "CommentAnchor"
+  },
+  {
+    "Name": "t:CT_TaskCreateEventInfo/t:Create",
+    "ClassName": "TaskCreateEventInfo"
+  },
+  {
+    "Name": "t:CT_TaskDeleteEventInfo/t:Delete",
+    "ClassName": "TaskDeleteEventInfo"
+  },
+  {
+    "Name": "t:CT_TaskHistoryEvent/t:Event",
+    "ClassName": "TaskHistoryEvent"
+  },
+  {
+    "Name": "oel:CT_ExtensionList/t:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "t:CT_TaskHistory/t:History",
+    "ClassName": "TaskHistory"
+  },
+  {
+    "Name": "t:CT_TaskPriorityEventInfo/t:Priority",
+    "ClassName": "TaskPriorityEventInfo"
+  },
+  {
+    "Name": "t:CT_TaskProgressEventInfo/t:Progress",
+    "ClassName": "TaskProgressEventInfo"
+  },
+  {
+    "Name": "t:CT_TaskScheduleEventInfo/t:Schedule",
+    "ClassName": "TaskScheduleEventInfo"
+  },
+  {
+    "Name": "t:CT_TaskTitleEventInfo/t:SetTitle",
+    "ClassName": "TaskTitleEventInfo"
+  },
+  {
+    "Name": "t:CT_Task/t:Task",
+    "ClassName": "Task"
+  },
+  {
+    "Name": "t:CT_Tasks/t:Tasks",
+    "ClassName": "Tasks",
+    "PartClassName": "DocumentTasksPart"
+  },
+  {
+    "Name": "t:CT_TaskUser/t:Unassign",
+    "ClassName": "UnassignTaskUser"
+  },
+  {
+    "Name": "t:CT_TaskUnassignAll/t:UnassignAll",
+    "ClassName": "TaskUnassignAll"
+  },
+  {
+    "Name": "t:CT_TaskUndeleteEventInfo/t:Undelete",
+    "ClassName": "TaskUndeleteEventInfo"
+  },
+  {
+    "Name": "t:CT_TaskUndo/t:Undo",
+    "ClassName": "TaskUndo"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "Root": "x:CT_Table",
+  "Name": "TableDefinitionPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.table\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table",
+  "Target": "table",
+  "RootElement": "table",
+  "Paths": {
+    "General": "../tables"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "QueryTableParts",
+      "Name": "QueryTablePart",
+      "HasFixedContent": true
+    }
+  ]
+}

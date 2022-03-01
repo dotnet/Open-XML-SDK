@@ -1,0 +1,281 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed",
+  "Types": [
+    {
+      "Name": "alf:CT_BackgroundNormalProperties/alf:Normal",
+      "ClassName": "BackgroundNormalProperties",
+      "Summary": "Defines the BackgroundNormalProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/alf:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/alf:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "alf:CT_BackgroundRemovedProperties/alf:Removed",
+      "ClassName": "BackgroundRemovedProperties",
+      "Summary": "Defines the BackgroundRemovedProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/alf:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/alf:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "alf:CT_BackgroundBlurProperties/alf:Blur",
+      "ClassName": "BackgroundBlurProperties",
+      "Summary": "Defines the BackgroundBlurProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/alf:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/alf:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "alf:CT_BackgroundCustomProperties/alf:Custom",
+      "ClassName": "BackgroundCustomProperties",
+      "Summary": "Defines the BackgroundCustomProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/alf:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/alf:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "alf:CT_LiveFeedProperties/alf:liveFeedProps",
+      "ClassName": "LiveFeedProperties",
+      "Summary": "Defines the LiveFeedProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "alf:CT_LiveFeedBackgroundProperties/alf:backgroundProps",
+          "PropertyName": "LiveFeedBackgroundProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/alf:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "alf:CT_LiveFeedBackgroundProperties/alf:backgroundProps",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/alf:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/alf:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "alf:CT_LiveFeedBackgroundProperties/alf:backgroundProps",
+      "ClassName": "LiveFeedBackgroundProperties",
+      "Summary": "Defines the LiveFeedBackgroundProperties Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "alf:CT_BackgroundNormalProperties/alf:Normal"
+        },
+        {
+          "Name": "alf:CT_BackgroundRemovedProperties/alf:Removed"
+        },
+        {
+          "Name": "alf:CT_BackgroundBlurProperties/alf:Blur"
+        },
+        {
+          "Name": "alf:CT_BackgroundCustomProperties/alf:Custom"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/alf:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "alf:CT_BackgroundNormalProperties/alf:Normal",
+                    "Occurs": [
+                      {
+                        "Max": 1
+                      }
+                    ],
+                    "InitialVersion": "Office2021"
+                  },
+                  {
+                    "Name": "alf:CT_BackgroundRemovedProperties/alf:Removed",
+                    "Occurs": [
+                      {
+                        "Max": 1
+                      }
+                    ],
+                    "InitialVersion": "Office2021"
+                  },
+                  {
+                    "Name": "alf:CT_BackgroundBlurProperties/alf:Blur",
+                    "Occurs": [
+                      {
+                        "Max": 1
+                      }
+                    ],
+                    "InitialVersion": "Office2021"
+                  },
+                  {
+                    "Name": "alf:CT_BackgroundCustomProperties/alf:Custom",
+                    "Occurs": [
+                      {
+                        "Max": 1
+                      }
+                    ],
+                    "InitialVersion": "Office2021"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/alf:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    }
+  ]
+}

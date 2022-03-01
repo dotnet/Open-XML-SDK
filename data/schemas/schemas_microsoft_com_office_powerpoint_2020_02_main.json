@@ -1,0 +1,148 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2020/02/main",
+  "Types": [
+    {
+      "Name": "p202:CT_DesignerTagList/p202:designTagLst",
+      "ClassName": "DesignerTagList",
+      "Summary": "Defines the DesignerTagList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "p202:CT_DesignerTag/p202:designTag"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p202:CT_DesignerTag/p202:designTag",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p202:CT_DesignerDrawingProps/p202:designPr",
+      "ClassName": "DesignerDrawingProps",
+      "Summary": "Defines the DesignerDrawingProps Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":edtDesignElem",
+          "Type": "BooleanValue",
+          "Version": "Office2021",
+          "PropertyComments": "edtDesignElem"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "p202:CT_DesignerTagList/p202:designTagLst",
+          "PropertyName": "DesignerTagList"
+        },
+        {
+          "Name": "p:CT_ExtensionList/p202:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p202:CT_DesignerTagList/p202:designTagLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "p:CT_ExtensionList/p202:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p202:CT_DesignerTag/p202:designTag",
+      "ClassName": "DesignerTag",
+      "Summary": "Defines the DesignerTag Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":val",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p:CT_ExtensionList/p202:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "p:CT_Extension/p:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "p:CT_Extension/p:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

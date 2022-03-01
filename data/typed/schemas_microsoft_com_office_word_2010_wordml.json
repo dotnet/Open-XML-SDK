@@ -1,0 +1,294 @@
+[
+  {
+    "Name": "w14:CT_Bevel/",
+    "ClassName": "BevelType"
+  },
+  {
+    "Name": "w14:CT_Color/",
+    "ClassName": "ColorType"
+  },
+  {
+    "Name": "w14:CT_OnOff/",
+    "ClassName": "OnOffType"
+  },
+  {
+    "Name": "w14:CT_Percentage/",
+    "ClassName": "PercentageType"
+  },
+  {
+    "Name": "w14:CT_PositiveFixedPercentage/",
+    "ClassName": "PositiveFixedPercentageType"
+  },
+  {
+    "Name": "w14:CT_SdtCheckboxSymbol/",
+    "ClassName": "CheckBoxSymbolType"
+  },
+  {
+    "Name": "w14:CT_PositiveFixedPercentage/w14:alpha",
+    "ClassName": "Alpha"
+  },
+  {
+    "Name": "w:CT_Empty/w14:bevel",
+    "ClassName": "BevelEmpty"
+  },
+  {
+    "Name": "w14:CT_Bevel/w14:bevelB",
+    "ClassName": "BevelBottom"
+  },
+  {
+    "Name": "w14:CT_Bevel/w14:bevelT",
+    "ClassName": "BevelTop"
+  },
+  {
+    "Name": "w14:CT_Camera/w14:camera",
+    "ClassName": "Camera"
+  },
+  {
+    "Name": "w14:CT_SdtCheckbox/w14:checkbox",
+    "ClassName": "SdtContentCheckBox"
+  },
+  {
+    "Name": "w14:CT_OnOff/w14:checked",
+    "ClassName": "Checked"
+  },
+  {
+    "Name": "w14:CT_SdtCheckboxSymbol/w14:checkedState",
+    "ClassName": "CheckedState"
+  },
+  {
+    "Name": "w14:CT_OnOff/w14:cntxtAlts",
+    "ClassName": "ContextualAlternatives"
+  },
+  {
+    "Name": "a14:CT_NonVisualInkContentPartProperties/w14:cNvContentPartPr",
+    "ClassName": "NonVisualInkContentPartProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/w14:cNvPr",
+    "ClassName": "NonVisualDrawingProperties"
+  },
+  {
+    "Name": "w:CT_RunTrackChange/w14:conflictDel",
+    "ClassName": "RunConflictDeletion"
+  },
+  {
+    "Name": "w:CT_TrackChange/w14:conflictDel",
+    "ClassName": "ConflictDeletion"
+  },
+  {
+    "Name": "w:CT_RunTrackChange/w14:conflictIns",
+    "ClassName": "RunConflictInsertion"
+  },
+  {
+    "Name": "w:CT_TrackChange/w14:conflictIns",
+    "ClassName": "ConflictInsertion"
+  },
+  {
+    "Name": "w14:CT_OnOff/w14:conflictMode",
+    "ClassName": "ConflictMode"
+  },
+  {
+    "Name": "w14:CT_WordContentPart/w14:contentPart",
+    "ClassName": "ContentPart"
+  },
+  {
+    "Name": "w14:CT_Color/w14:contourClr",
+    "ClassName": "ContourColor"
+  },
+  {
+    "Name": "w:CT_Markup/w14:customXmlConflictDelRangeEnd",
+    "ClassName": "CustomXmlConflictDeletionRangeEnd"
+  },
+  {
+    "Name": "w:CT_TrackChange/w14:customXmlConflictDelRangeStart",
+    "ClassName": "CustomXmlConflictDeletionRangeStart"
+  },
+  {
+    "Name": "w:CT_Markup/w14:customXmlConflictInsRangeEnd",
+    "ClassName": "CustomXmlConflictInsertionRangeEnd"
+  },
+  {
+    "Name": "w:CT_TrackChange/w14:customXmlConflictInsRangeStart",
+    "ClassName": "CustomXmlConflictInsertionRangeStart"
+  },
+  {
+    "Name": "w14:CT_DefaultImageDpi/w14:defaultImageDpi",
+    "ClassName": "DefaultImageDpi"
+  },
+  {
+    "Name": "w14:CT_OnOff/w14:discardImageEditingData",
+    "ClassName": "DiscardImageEditingData"
+  },
+  {
+    "Name": "w14:CT_LongHexNumber/w14:docId",
+    "ClassName": "DocumentId"
+  },
+  {
+    "Name": "w:CT_Empty/w14:entityPicker",
+    "ClassName": "EntityPickerEmpty"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/w14:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "w14:CT_Color/w14:extrusionClr",
+    "ClassName": "ExtrusionColor"
+  },
+  {
+    "Name": "w14:CT_RelativeRect/w14:fillToRect",
+    "ClassName": "FillToRectangle"
+  },
+  {
+    "Name": "w14:CT_Glow/w14:glow",
+    "ClassName": "Glow"
+  },
+  {
+    "Name": "w14:CT_GradientFillProperties/w14:gradFill",
+    "ClassName": "GradientFillProperties"
+  },
+  {
+    "Name": "w14:CT_GradientStop/w14:gs",
+    "ClassName": "GradientStop"
+  },
+  {
+    "Name": "w14:CT_GradientStopList/w14:gsLst",
+    "ClassName": "GradientStopList"
+  },
+  {
+    "Name": "w14:CT_PositivePercentage/w14:hueMod",
+    "ClassName": "HueModulation"
+  },
+  {
+    "Name": "w14:CT_Ligatures/w14:ligatures",
+    "ClassName": "Ligatures"
+  },
+  {
+    "Name": "w14:CT_LightRig/w14:lightRig",
+    "ClassName": "LightRig"
+  },
+  {
+    "Name": "w14:CT_LinearShadeProperties/w14:lin",
+    "ClassName": "LinearShadeProperties"
+  },
+  {
+    "Name": "w14:CT_Percentage/w14:lum",
+    "ClassName": "Luminance"
+  },
+  {
+    "Name": "w14:CT_Percentage/w14:lumMod",
+    "ClassName": "LuminanceModulation"
+  },
+  {
+    "Name": "w14:CT_Percentage/w14:lumOff",
+    "ClassName": "LuminanceOffset"
+  },
+  {
+    "Name": "w14:CT_LineJoinMiterProperties/w14:miter",
+    "ClassName": "LineJoinMiterProperties"
+  },
+  {
+    "Name": "w:CT_Empty/w14:noFill",
+    "ClassName": "NoFillEmpty"
+  },
+  {
+    "Name": "w14:CT_NumForm/w14:numForm",
+    "ClassName": "NumberingFormat"
+  },
+  {
+    "Name": "w14:CT_NumSpacing/w14:numSpacing",
+    "ClassName": "NumberSpacing"
+  },
+  {
+    "Name": "w14:CT_WordContentPartNonVisual/w14:nvContentPartPr",
+    "ClassName": "WordNonVisualContentPartShapeProperties"
+  },
+  {
+    "Name": "w14:CT_PathShadeProperties/w14:path",
+    "ClassName": "PathShadeProperties"
+  },
+  {
+    "Name": "w14:CT_Props3D/w14:props3d",
+    "ClassName": "Properties3D"
+  },
+  {
+    "Name": "w14:CT_PresetLineDashProperties/w14:prstDash",
+    "ClassName": "PresetLineDashProperties"
+  },
+  {
+    "Name": "w14:CT_Reflection/w14:reflection",
+    "ClassName": "Reflection"
+  },
+  {
+    "Name": "w14:CT_SphereCoords/w14:rot",
+    "ClassName": "SphereCoordinates"
+  },
+  {
+    "Name": "w:CT_Empty/w14:round",
+    "ClassName": "RoundEmpty"
+  },
+  {
+    "Name": "w14:CT_Percentage/w14:sat",
+    "ClassName": "Saturation"
+  },
+  {
+    "Name": "w14:CT_Percentage/w14:satMod",
+    "ClassName": "SaturationModulation"
+  },
+  {
+    "Name": "w14:CT_Percentage/w14:satOff",
+    "ClassName": "SaturationOffset"
+  },
+  {
+    "Name": "w14:CT_Scene3D/w14:scene3d",
+    "ClassName": "Scene3D"
+  },
+  {
+    "Name": "w14:CT_SchemeColor/w14:schemeClr",
+    "ClassName": "SchemeColor"
+  },
+  {
+    "Name": "w14:CT_PositiveFixedPercentage/w14:shade",
+    "ClassName": "Shade"
+  },
+  {
+    "Name": "w14:CT_Shadow/w14:shadow",
+    "ClassName": "Shadow"
+  },
+  {
+    "Name": "w14:CT_SolidColorFillProperties/w14:solidFill",
+    "ClassName": "SolidColorFillProperties"
+  },
+  {
+    "Name": "w14:CT_SRgbColor/w14:srgbClr",
+    "ClassName": "RgbColorModelHex"
+  },
+  {
+    "Name": "w14:CT_StyleSet/w14:styleSet",
+    "ClassName": "StyleSet"
+  },
+  {
+    "Name": "w14:CT_StylisticSets/w14:stylisticSets",
+    "ClassName": "StylisticSets"
+  },
+  {
+    "Name": "w14:CT_FillTextEffect/w14:textFill",
+    "ClassName": "FillTextEffect"
+  },
+  {
+    "Name": "w14:CT_TextOutlineEffect/w14:textOutline",
+    "ClassName": "TextOutlineEffect"
+  },
+  {
+    "Name": "w14:CT_PositiveFixedPercentage/w14:tint",
+    "ClassName": "Tint"
+  },
+  {
+    "Name": "w14:CT_SdtCheckboxSymbol/w14:uncheckedState",
+    "ClassName": "UncheckedState"
+  },
+  {
+    "Name": "a:CT_Transform2D/w14:xfrm",
+    "ClassName": "Transform2D"
+  }
+]

@@ -1,0 +1,411 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command",
+  "Types": [
+    {
+      "Name": "pc:CT_CommentAuthorMonikerList/pc:cmAuthorMkLst",
+      "ClassName": "CommentAuthorMonikerList",
+      "Summary": "Defines the CommentAuthorMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_CommentMonikerList/pc:cmMkLst",
+      "ClassName": "CommentMonikerList",
+      "Summary": "Defines the CommentMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_StringTagMonikerList/pc:tagMkLst",
+      "ClassName": "StringTagMonikerList",
+      "Summary": "Defines the StringTagMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_CustomShowMonikerList/pc:custShowMkLst",
+      "ClassName": "CustomShowMonikerList",
+      "Summary": "Defines the CustomShowMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_DocumentMonikerList/pc:docMkLst",
+      "ClassName": "DocumentMonikerList",
+      "Summary": "Defines the DocumentMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_SectionMonikerList/pc:sectionMkLst",
+      "ClassName": "SectionMonikerList",
+      "Summary": "Defines the SectionMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_SlideBaseMonikerList/pc:sldBaseMkLst",
+      "ClassName": "SlideBaseMonikerList",
+      "Summary": "Defines the SlideBaseMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_SlideLayoutMonikerList/pc:sldLayoutMkLst",
+      "ClassName": "SlideLayoutMonikerList",
+      "Summary": "Defines the SlideLayoutMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_MainMasterMonikerList/pc:sldMasterMkLst",
+      "ClassName": "MainMasterMonikerList",
+      "Summary": "Defines the MainMasterMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_SlideMonikerList/pc:sldMkLst",
+      "ClassName": "SlideMonikerList",
+      "Summary": "Defines the SlideMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_SlidePosMonikerList/pc:sldPosMkLst",
+      "ClassName": "SlidePosMonikerList",
+      "Summary": "Defines the SlidePosMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_NotesMonikerList/pc:notesMkLst",
+      "ClassName": "NotesMonikerList",
+      "Summary": "Defines the NotesMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_NotesTextMonikerList/pc:notesTxtMkLst",
+      "ClassName": "NotesTextMonikerList",
+      "Summary": "Defines the NotesTextMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_NotesMasterMonikerList/pc:notesMasterMkLst",
+      "ClassName": "NotesMasterMonikerList",
+      "Summary": "Defines the NotesMasterMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_HandoutMonikerList/pc:handoutMkLst",
+      "ClassName": "HandoutMonikerList",
+      "Summary": "Defines the HandoutMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_AnimationEffectMonikerList/pc:animEffectMkLst",
+      "ClassName": "AnimEffectMkLstAnimationEffectMonikerList",
+      "Summary": "Defines the AnimEffectMkLstAnimationEffectMonikerList Class.",
+      "BaseClass": "OpenXmlAnimationEffectMonikerListElement",
+      "IsDerived": true,
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_AnimationEffectMonikerList/pc:animEffectParentMkLst",
+      "ClassName": "AnimEffectParentMkLstAnimationEffectMonikerList",
+      "Summary": "Defines the AnimEffectParentMkLstAnimationEffectMonikerList Class.",
+      "BaseClass": "OpenXmlAnimationEffectMonikerListElement",
+      "IsDerived": true,
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_AnimationEffectMonikerList/",
+      "ClassName": "OpenXmlAnimationEffectMonikerListElement",
+      "Summary": "Defines the OpenXmlAnimationEffectMonikerListElement Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "pc:CT_OsfTaskPaneAppMonikerList/pc:tkAppMkLst",
+      "ClassName": "OsfTaskPaneAppMonikerList",
+      "Summary": "Defines the OsfTaskPaneAppMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_SummaryZoomMonikerList/pc:tocMkLst",
+      "ClassName": "SummaryZoomMonikerList",
+      "Summary": "Defines the SummaryZoomMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_SectionLinkObjMonikerList/pc:sectionLnkObjMkLst",
+      "ClassName": "SectionLinkObjMonikerList",
+      "Summary": "Defines the SectionLinkObjMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_DesignerTagMonikerList/pc:designTagMkLst",
+      "ClassName": "DesignerTagMonikerList",
+      "Summary": "Defines the DesignerTagMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc:CT_CustomXmlPartMonikerList/pc:cXmlMkLst",
+      "ClassName": "CustomXmlPartMonikerList",
+      "Summary": "Defines the CustomXmlPartMonikerList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

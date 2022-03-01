@@ -1,0 +1,20 @@
+{
+  "Root": "p:CT_ViewProperties",
+  "Name": "ViewPropertiesPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.viewProps\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps",
+  "Target": "viewProps",
+  "RootElement": "viewPr",
+  "Paths": {
+    "General": "."
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "SlideParts",
+      "Name": "SlidePart",
+      "HasFixedContent": true
+    }
+  ]
+}

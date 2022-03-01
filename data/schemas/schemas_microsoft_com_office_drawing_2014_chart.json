@@ -1,0 +1,1058 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2014/chart",
+  "Types": [
+    {
+      "Name": "a:CT_ShapeProperties/c16:spPr",
+      "ClassName": "ShapeProperties",
+      "Summary": "Defines the ShapeProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":bwMode",
+          "PropertyName": "BlackWhiteMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "PropertyComments": "Black and White Mode",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Transform2D/a:xfrm",
+          "PropertyName": "Transform2D",
+          "PropertyComments": "2D Transform for Individual Objects"
+        },
+        {
+          "Name": "a:CT_CustomGeometry2D/a:custGeom"
+        },
+        {
+          "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+        },
+        {
+          "Name": "a:CT_NoFillProperties/a:noFill"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+        },
+        {
+          "Name": "a:CT_GradientFillProperties/a:gradFill"
+        },
+        {
+          "Name": "a:CT_BlipFillProperties/a:blipFill"
+        },
+        {
+          "Name": "a:CT_PatternFillProperties/a:pattFill"
+        },
+        {
+          "Name": "a:CT_GroupFillProperties/a:grpFill"
+        },
+        {
+          "Name": "a:CT_LineProperties/a:ln"
+        },
+        {
+          "Name": "a:CT_EffectList/a:effectLst"
+        },
+        {
+          "Name": "a:CT_EffectContainer/a:effectDag"
+        },
+        {
+          "Name": "a:CT_Scene3D/a:scene3d"
+        },
+        {
+          "Name": "a:CT_Shape3D/a:sp3d"
+        },
+        {
+          "Name": "a:CT_ShapePropertiesExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Transform2D/a:xfrm",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_CustomGeometry2D/a:custGeom"
+                  },
+                  {
+                    "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_NoFillProperties/a:noFill"
+                  },
+                  {
+                    "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+                  },
+                  {
+                    "Name": "a:CT_GradientFillProperties/a:gradFill"
+                  },
+                  {
+                    "Name": "a:CT_BlipFillProperties/a:blipFill"
+                  },
+                  {
+                    "Name": "a:CT_PatternFillProperties/a:pattFill"
+                  },
+                  {
+                    "Name": "a:CT_GroupFillProperties/a:grpFill"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_LineProperties/a:ln",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_EffectList/a:effectLst"
+                  },
+                  {
+                    "Name": "a:CT_EffectContainer/a:effectDag"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Scene3D/a:scene3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Shape3D/a:sp3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_ShapePropertiesExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_UnsignedInt/c16:explosion",
+      "ClassName": "UnsignedIntegerType",
+      "Summary": "Defines the UnsignedIntegerType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "UInt32Value",
+          "PropertyComments": "Integer Value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "c:CT_Boolean/c16:invertIfNegative",
+      "ClassName": "InvertIfNegativeBoolean",
+      "Summary": "Defines the InvertIfNegativeBoolean Class.",
+      "BaseClass": "BooleanType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "c:CT_Boolean/c16:bubble3D",
+      "ClassName": "Bubble3DBoolean",
+      "Summary": "Defines the Bubble3DBoolean Class.",
+      "BaseClass": "BooleanType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "c:CT_Boolean/",
+      "ClassName": "BooleanType",
+      "Summary": "Defines the BooleanType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "BooleanValue",
+          "PropertyComments": "Boolean Value"
+        }
+      ]
+    },
+    {
+      "Name": "c:CT_Marker/c16:marker",
+      "ClassName": "Marker",
+      "Summary": "Defines the Marker Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c:CT_MarkerStyle/c:symbol",
+          "PropertyName": "Symbol",
+          "PropertyComments": "Symbol"
+        },
+        {
+          "Name": "c:CT_MarkerSize/c:size",
+          "PropertyName": "Size",
+          "PropertyComments": "Size"
+        },
+        {
+          "Name": "a:CT_ChartShapeProperties/c:spPr",
+          "PropertyName": "ChartShapeProperties"
+        },
+        {
+          "Name": "c:CT_ExtensionList/c:extLst",
+          "PropertyName": "ExtensionList",
+          "PropertyComments": "Chart Extensibility"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_MarkerStyle/c:symbol",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_MarkerSize/c:size",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_ChartShapeProperties/c:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_ExtensionList/c:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_DLbl/c16:dLbl",
+      "ClassName": "DLbl",
+      "Summary": "Defines the DLbl Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c:CT_UnsignedInt/c:idx",
+          "PropertyName": "Index"
+        },
+        {
+          "Name": "c:CT_Boolean/c:delete"
+        },
+        {
+          "Name": "c:CT_Layout/c:layout"
+        },
+        {
+          "Name": "c:CT_Tx/c:tx"
+        },
+        {
+          "Name": "c:CT_NumFmt/c:numFmt"
+        },
+        {
+          "Name": "a:CT_ChartShapeProperties/c:spPr"
+        },
+        {
+          "Name": "a:CT_TextBody/c:txPr"
+        },
+        {
+          "Name": "c:CT_DLblPos/c:dLblPos"
+        },
+        {
+          "Name": "c:CT_Boolean/c:showLegendKey"
+        },
+        {
+          "Name": "c:CT_Boolean/c:showVal"
+        },
+        {
+          "Name": "c:CT_Boolean/c:showCatName"
+        },
+        {
+          "Name": "c:CT_Boolean/c:showSerName"
+        },
+        {
+          "Name": "c:CT_Boolean/c:showPercent"
+        },
+        {
+          "Name": "c:CT_Boolean/c:showBubbleSize"
+        },
+        {
+          "Name": "xsd:string/c:separator"
+        },
+        {
+          "Name": "c:CT_DLblExtensionList/c:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_UnsignedInt/c:idx"
+          },
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "c:CT_Boolean/c:delete"
+              },
+              {
+                "Kind": "Group",
+                "Items": [
+                  {
+                    "Kind": "Sequence",
+                    "Items": [
+                      {
+                        "Name": "c:CT_Layout/c:layout",
+                        "Occurs": [
+                          {
+                            "Max": 1
+                          }
+                        ]
+                      },
+                      {
+                        "Name": "c:CT_Tx/c:tx",
+                        "Occurs": [
+                          {
+                            "Max": 1
+                          }
+                        ]
+                      },
+                      {
+                        "Kind": "Group",
+                        "Items": [
+                          {
+                            "Kind": "Sequence",
+                            "Items": [
+                              {
+                                "Name": "c:CT_NumFmt/c:numFmt",
+                                "Occurs": [
+                                  {
+                                    "Max": 1
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "a:CT_ChartShapeProperties/c:spPr",
+                                "Occurs": [
+                                  {
+                                    "Max": 1
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "a:CT_TextBody/c:txPr",
+                                "Occurs": [
+                                  {
+                                    "Max": 1
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "c:CT_DLblPos/c:dLblPos",
+                                "Occurs": [
+                                  {
+                                    "Max": 1
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "c:CT_Boolean/c:showLegendKey",
+                                "Occurs": [
+                                  {
+                                    "Max": 1
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "c:CT_Boolean/c:showVal",
+                                "Occurs": [
+                                  {
+                                    "Max": 1
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "c:CT_Boolean/c:showCatName",
+                                "Occurs": [
+                                  {
+                                    "Max": 1
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "c:CT_Boolean/c:showSerName",
+                                "Occurs": [
+                                  {
+                                    "Max": 1
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "c:CT_Boolean/c:showPercent",
+                                "Occurs": [
+                                  {
+                                    "Max": 1
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "c:CT_Boolean/c:showBubbleSize",
+                                "Occurs": [
+                                  {
+                                    "Max": 1
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "xsd:string/c:separator",
+                                "Occurs": [
+                                  {
+                                    "Max": 1
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_DLblExtensionList/c:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+      "ClassName": "CategoryFilterExceptions",
+      "Summary": "Defines the CategoryFilterExceptions Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c16:CT_CategoryFilterException/c16:categoryFilterException"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c16:CT_CategoryFilterException/c16:categoryFilterException",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c16:CT_PivotOptions16/c16:pivotOptions16",
+      "ClassName": "PivotOptions16",
+      "Summary": "Defines the PivotOptions16 Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c16:CT_BooleanFalse/c16:showExpandCollapseFieldButtons",
+          "PropertyName": "BooleanFalse"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c16:CT_BooleanFalse/c16:showExpandCollapseFieldButtons",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+      "ClassName": "ChartDataPointUniqueIDMap",
+      "Summary": "Defines the ChartDataPointUniqueIDMap Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c16:CT_ChartDataPointUniqueIDMapEntry/c16:ptentry"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c16:CT_ChartDataPointUniqueIDMapEntry/c16:ptentry",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+      "ClassName": "UniqueIdChartUniqueID",
+      "Summary": "Defines the UniqueIdChartUniqueID Class.",
+      "BaseClass": "UniqueIDChart",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "c16:CT_ChartUniqueID/c16:uniqueID",
+      "ClassName": "UniqueID",
+      "Summary": "Defines the UniqueID Class.",
+      "BaseClass": "UniqueIDChart",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "c16:CT_ChartUniqueID/",
+      "ClassName": "UniqueIDChart",
+      "Summary": "Defines the UniqueIDChart Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "c16:CT_CategoryFilterException/c16:categoryFilterException",
+      "ClassName": "CategoryFilterException",
+      "Summary": "Defines the CategoryFilterException Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+          "PropertyName": "UniqueIdChartUniqueID"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/c16:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "c:CT_UnsignedInt/c16:explosion",
+          "PropertyName": "UnsignedIntegerType"
+        },
+        {
+          "Name": "c:CT_Boolean/c16:invertIfNegative",
+          "PropertyName": "InvertIfNegativeBoolean"
+        },
+        {
+          "Name": "c:CT_Boolean/c16:bubble3D",
+          "PropertyName": "Bubble3DBoolean"
+        },
+        {
+          "Name": "c:CT_Marker/c16:marker",
+          "PropertyName": "Marker"
+        },
+        {
+          "Name": "c:CT_DLbl/c16:dLbl",
+          "PropertyName": "DLbl"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/c16:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c:CT_UnsignedInt/c16:explosion",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c:CT_Boolean/c16:invertIfNegative",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c:CT_Boolean/c16:bubble3D",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c:CT_Marker/c16:marker",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c:CT_DLbl/c16:dLbl",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_NumData/c16:numCache",
+      "ClassName": "NumberDataType",
+      "Summary": "Defines the NumberDataType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c:ST_Xstring/c:formatCode",
+          "PropertyName": "FormatCode",
+          "PropertyComments": "Format Code"
+        },
+        {
+          "Name": "c:CT_UnsignedInt/c:ptCount",
+          "PropertyName": "PointCount",
+          "PropertyComments": "Point Count"
+        },
+        {
+          "Name": "c:CT_NumVal/c:pt"
+        },
+        {
+          "Name": "c:CT_ExtensionList/c:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:ST_Xstring/c:formatCode",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_UnsignedInt/c:ptCount",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_NumVal/c:pt",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "c:CT_ExtensionList/c:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c16:CT_NumFilteredLiteralCache/c16:filteredLitCache",
+      "ClassName": "NumFilteredLiteralCache",
+      "Summary": "Defines the NumFilteredLiteralCache Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c:CT_NumData/c16:numCache",
+          "PropertyName": "NumberDataType"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_NumData/c16:numCache",
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_StrData/c16:strCache",
+      "ClassName": "StringDataType",
+      "Summary": "Defines the StringDataType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c:CT_UnsignedInt/c:ptCount",
+          "PropertyName": "PointCount"
+        },
+        {
+          "Name": "c:CT_StrVal/c:pt"
+        },
+        {
+          "Name": "c:CT_StrDataExtensionList/c:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_UnsignedInt/c:ptCount",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_StrVal/c:pt",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "c:CT_StrDataExtensionList/c:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c16:CT_StrFilteredLiteralCache/c16:filteredLitCache",
+      "ClassName": "StrFilteredLiteralCache",
+      "Summary": "Defines the StrFilteredLiteralCache Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c:CT_StrData/c16:strCache",
+          "PropertyName": "StringDataType"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_StrData/c16:strCache",
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_MultiLvlStrData/c16:multiLvlStrCache",
+      "ClassName": "MultiLvlStrData",
+      "Summary": "Defines the MultiLvlStrData Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c:CT_UnsignedInt/c:ptCount",
+          "PropertyName": "PointCount"
+        },
+        {
+          "Name": "c:CT_Lvl/c:lvl"
+        },
+        {
+          "Name": "c:CT_ExtensionList/c:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_UnsignedInt/c:ptCount",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Lvl/c:lvl",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "c:CT_ExtensionList/c:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c16:CT_MultiLvlStrFilteredLiteralCache/c16:filteredLitCache",
+      "ClassName": "MultiLvlStrFilteredLiteralCache",
+      "Summary": "Defines the MultiLvlStrFilteredLiteralCache Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c:CT_MultiLvlStrData/c16:multiLvlStrCache",
+          "PropertyName": "MultiLvlStrData"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_MultiLvlStrData/c16:multiLvlStrCache",
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c16:CT_LiteralDataChart/c16:literalDataChart",
+      "ClassName": "LiteralDataChart",
+      "Summary": "Defines the LiteralDataChart Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "c16:CT_BooleanFalse/c16:showExpandCollapseFieldButtons",
+      "ClassName": "BooleanFalse",
+      "Summary": "Defines the BooleanFalse Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "val"
+        }
+      ]
+    },
+    {
+      "Name": "xsd:unsignedInt/c16:ptidx",
+      "ClassName": "XsdunsignedInt",
+      "Summary": "Defines the XsdunsignedInt Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2016",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:unsignedInt",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "c16:CT_ChartDataPointUniqueIDMapEntry/c16:ptentry",
+      "ClassName": "ChartDataPointUniqueIDMapEntry",
+      "Summary": "Defines the ChartDataPointUniqueIDMapEntry Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "xsd:unsignedInt/c16:ptidx",
+          "PropertyName": "XsdunsignedInt"
+        },
+        {
+          "Name": "c16:CT_ChartUniqueID/c16:uniqueID",
+          "PropertyName": "UniqueID"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xsd:unsignedInt/c16:ptidx",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartUniqueID/c16:uniqueID",
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    }
+  ]
+}

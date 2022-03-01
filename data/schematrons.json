@@ -1,0 +1,4864 @@
+[
+  {
+    "Context": "w:control",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@w:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/control\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:embedBold",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@w:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/font\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:endnote",
+    "Test": "count(distinct-values(//w:endnotes/w:endnote/@w:id)) = count(//w:endnotes/w:endnote/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:endnote",
+    "Test": "count(distinct-values(//w:endnotePr/w:endnote/@w:id)) = count(//w:endnotePr/w:endnote/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:footnote",
+    "Test": "count(distinct-values(//w:footnotePr/w:footnote/@w:id)) = count(//w:footnotePr/w:footnote/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:footnote",
+    "Test": "count(distinct-values(//w:footnotes/w:footnote/@w:id)) = count(//w:footnotes/w:footnote/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:footnoteReference",
+    "Test": "Index-of(document(\u0027Part:FootnotesPart\u0027)//w:footnotes/w:footnote/@w:id, @w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:decimalSymbol",
+    "Test": "matches(@w:val, \u0022.{1}\u0022)",
+    "App": "All"
+  },
+  {
+    "Context": "w:listSeparator",
+    "Test": "matches(@w:val, \u0022.{1}\u0022)",
+    "App": "All"
+  },
+  {
+    "Context": "w:altChunk",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@w:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "x:customWorkbookView",
+    "Test": "@x:windowWidth \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:customWorkbookView",
+    "Test": "@x:tabRatio \u003C= 1000",
+    "App": "All"
+  },
+  {
+    "Context": "x:customWorkbookView",
+    "Test": "@x:activeSheetId \u003E= 1 and @x:activeSheetId \u003C= 65534",
+    "App": "All"
+  },
+  {
+    "Context": "x:fileSharing",
+    "Test": "string-length(@x:userName) \u003E= 1 and string-length(@x:userName) \u003C= 54",
+    "App": "All"
+  },
+  {
+    "Context": "x:fileVersion",
+    "Test": "string-length(@x:appName) \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:fileVersion",
+    "Test": "string-length(@x:lastEdited) \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:fileVersion",
+    "Test": "string-length(@x:lowestEdited) \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:fileVersion",
+    "Test": "string-length(@x:rupBuild) \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:functionGroups",
+    "Test": "@x:builtInGroupCount \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheet",
+    "Test": "matches(@x:name, \u0022[^\\\u0027*\\[\\]/\\\\:?]{1}[^*\\[\\]/\\\\:?]*\u0022)",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheet",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 31",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheet",
+    "Test": "count(distinct-values(lower-case(//x:sheet/@x:name))) = count(lower-case(//x:sheet/@x:name))",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheet",
+    "Test": "count(distinct-values(//x:sheet/@x:sheetId)) = count(//x:sheet/@x:sheetId)",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheet",
+    "Test": "@x:sheetId \u003E= 1 and @x:sheetId \u003C= 65534",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheet",
+    "Test": "string-length(@x:id) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:workbookView",
+    "Test": "@x:windowWidth \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:workbookView",
+    "Test": "@x:windowHeight \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:workbookView",
+    "Test": "@x:tabRatio \u003C= 1000",
+    "App": "All"
+  },
+  {
+    "Context": "x:workbookView",
+    "Test": "@x:activeTab \u003E= 0 and @x:activeTab \u003C= 32766",
+    "App": "All"
+  },
+  {
+    "Context": "x:c",
+    "Test": "@x:cm \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:c",
+    "Test": "@x:cm \u003C count(document(\u0027Part:/WorkbookPart/CellMetadataPart\u0027)//x:cellMetadata/x:bk) \u002B 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:c",
+    "Test": "@x:vm \u003C= 2147483648",
+    "App": "All"
+  },
+  {
+    "Context": "x:c",
+    "Test": "@x:vm \u003C count(document(\u0027Part:/WorkbookPart/CellMetadataPart\u0027)//x:valueMetadata/x:bk) \u002B 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:c",
+    "Test": "@x:s \u003E= 0 and @x:s \u003C= 65490",
+    "App": "All"
+  },
+  {
+    "Context": "x:c",
+    "Test": "@x:s \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:cellXfs/x:xf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:cellWatch",
+    "Test": "count(distinct-values(ancestor::x:cellWatches//x:cellWatch/@x:r)) = count(ancestor::x:cellWatches//x:cellWatch/@x:r)",
+    "App": "All"
+  },
+  {
+    "Context": "x:cfRule",
+    "Test": "(@x:operator and @x:type = cells) or @x:type != cells",
+    "App": "All"
+  },
+  {
+    "Context": "x:cfRule",
+    "Test": "(@x:timePeriod and @x:type = timePeriod) or @x:type != timePeriod",
+    "App": "All"
+  },
+  {
+    "Context": "x:col",
+    "Test": "@x:outlineLevel \u003E= 0 and @x:outlineLevel \u003C= 7",
+    "App": "All"
+  },
+  {
+    "Context": "x:col",
+    "Test": "@x:min \u003E= 1 and @x:min \u003C= 16384",
+    "App": "All"
+  },
+  {
+    "Context": "x:col",
+    "Test": "@x:max \u003E= 1 and @x:max \u003C= 16384",
+    "App": "All"
+  },
+  {
+    "Context": "x:col",
+    "Test": "@x:width \u003E= 0 and @x:width \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:col",
+    "Test": "@x:style \u003E= 0 and @x:style \u003C= 65429",
+    "App": "All"
+  },
+  {
+    "Context": "x:colBreaks",
+    "Test": "@x:count \u003C= 1023",
+    "App": "All"
+  },
+  {
+    "Context": "x:colBreaks",
+    "Test": "@x:manualBreakCount \u003C= 1023",
+    "App": "All"
+  },
+  {
+    "Context": "x:conditionalFormatting",
+    "Test": "string-length(@x:sqref) \u003E= 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:control",
+    "Test": "@x:shapeId \u003E= 1 and @x:shapeId \u003C= 67098623",
+    "App": "All"
+  },
+  {
+    "Context": "x:customPr",
+    "Test": "count(distinct-values(lower-case(//x:customPr/@x:name))) = count(lower-case(//x:customPr/@x:name))",
+    "App": "All"
+  },
+  {
+    "Context": "x:customSheetView",
+    "Test": "@x:scale \u003E= 10 and @x:scale \u003C= 400",
+    "App": "All"
+  },
+  {
+    "Context": "x:customSheetView",
+    "Test": "@x:colorId \u003C= 64",
+    "App": "All"
+  },
+  {
+    "Context": "x:customSheetView",
+    "Test": "@x:guid != 00000000-0000-0000-0000-000000000000",
+    "App": "All"
+  },
+  {
+    "Context": "x:dataValidation",
+    "Test": "@x:sqref \u003E= 1 and @x:sqref \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:dataValidation",
+    "Test": "string-length(@x:errorTitle) \u003C= 32",
+    "App": "All"
+  },
+  {
+    "Context": "x:dataValidation",
+    "Test": "string-length(@x:promptTitle) \u003C= 32",
+    "App": "All"
+  },
+  {
+    "Context": "x:f",
+    "Test": "@x:bx = false",
+    "App": "All"
+  },
+  {
+    "Context": "x:f",
+    "Test": "(@x:si and @x:t = shared) or @x:t != shared",
+    "App": "All"
+  },
+  {
+    "Context": "x:hyperlink",
+    "Test": "string-length(@x:location) \u003E= 0 and string-length(@x:location) \u003C= 2084",
+    "App": "All"
+  },
+  {
+    "Context": "x:hyperlink",
+    "Test": "string-length(@x:display) \u003E= 0 and string-length(@x:display) \u003C= 2084",
+    "App": "All"
+  },
+  {
+    "Context": "x:hyperlink",
+    "Test": "string-length(@x:tooltip) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:ignoredError",
+    "Test": "@x:sqref \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:oleObject",
+    "Test": "matches(@x:progId, \u0022[^\\d].*\u0022)",
+    "App": "All"
+  },
+  {
+    "Context": "x:oleObject",
+    "Test": "string-length(@x:progId) \u003C= 39",
+    "App": "All"
+  },
+  {
+    "Context": "x:oleObject",
+    "Test": "@x:shapeId \u003E= 1 and @x:shapeId \u003C= 67098623",
+    "App": "All"
+  },
+  {
+    "Context": "x:pageMargins",
+    "Test": "@x:left \u003E= 0 and @x:left \u003C 49",
+    "App": "All"
+  },
+  {
+    "Context": "x:pageMargins",
+    "Test": "@x:right \u003E= 0 and @x:right \u003C 49",
+    "App": "All"
+  },
+  {
+    "Context": "x:pageMargins",
+    "Test": "@x:top \u003E= 0 and @x:top \u003C 49",
+    "App": "All"
+  },
+  {
+    "Context": "x:pageMargins",
+    "Test": "@x:bottom \u003E= 0 and @x:bottom \u003C 49",
+    "App": "All"
+  },
+  {
+    "Context": "x:pageMargins",
+    "Test": "@x:header \u003E= 0 and @x:header \u003C 49",
+    "App": "All"
+  },
+  {
+    "Context": "x:pageMargins",
+    "Test": "@x:footer \u003E= 0 and @x:footer \u003C 49",
+    "App": "All"
+  },
+  {
+    "Context": "x:pivotSelection",
+    "Test": "@x:axis != axisValues",
+    "App": "All"
+  },
+  {
+    "Context": "x:protectedRange",
+    "Test": "count(distinct-values(ancestor::x:protectedRanges//x:protectedRange/@x:name)) = count(ancestor::x:protectedRanges//x:protectedRange/@x:name)",
+    "App": "All"
+  },
+  {
+    "Context": "x:protectedRange",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 255",
+    "App": "Word"
+  },
+  {
+    "Context": "x:protectedRange",
+    "Test": "@x:sqref \u003E= 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:row",
+    "Test": "@x:r \u003E= 1 and @x:r \u003C= 1048576",
+    "App": "All"
+  },
+  {
+    "Context": "x:row",
+    "Test": "@x:outlineLevel \u003E= 0 and @x:outlineLevel \u003C= 7",
+    "App": "All"
+  },
+  {
+    "Context": "x:row",
+    "Test": "@x:s \u003E= 0 and @x:s \u003C= 65490",
+    "App": "All"
+  },
+  {
+    "Context": "x:rowBreaks",
+    "Test": "@x:count \u003C= 1022",
+    "App": "All"
+  },
+  {
+    "Context": "x:rowBreaks",
+    "Test": "@x:manualBreakCount \u003C= 1022",
+    "App": "All"
+  },
+  {
+    "Context": "x:scenario",
+    "Test": "count(distinct-values(ancestor::x:worksheet//x:scenario/@x:name)) = count(ancestor::x:worksheet//x:scenario/@x:name)",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetFormatPr",
+    "Test": "@x:outlineLevelCol \u003E= 0 and @x:outlineLevelCol \u003C= 7",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetFormatPr",
+    "Test": "@x:outlineLevelRow \u003E= 0 and @x:outlineLevelRow \u003C= 7",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetFormatPr",
+    "Test": "@x:baseColWidth \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetFormatPr",
+    "Test": "@x:defaultColWidth \u003E= 0 and @x:defaultColWidth \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetPr",
+    "Test": "matches(@x:codeName, \u0022[\\p{L}\\P{IsBasicLatin}][_\\d\\p{L}\\P{IsBasicLatin}]*\u0022)",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetPr",
+    "Test": "string-length(@x:codeName) \u003C= 32",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetView",
+    "Test": "@x:colorId \u003C= 64",
+    "App": "All"
+  },
+  {
+    "Context": "x:tabColor",
+    "Test": "(@x:auto and @x:indexed) or (@x:auto and @x:rgb) or (@x:auto and @x:theme) or (@x:indexed and @x:rgb) or (@x:indexed and @x:theme) or (@x:rgb and @x:theme)",
+    "App": "All"
+  },
+  {
+    "Context": "x:webPublishItem",
+    "Test": "string-length(@x:title) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:webPublishItem",
+    "Test": "string-length(@x:destinationFile) \u003E= 1 and string-length(@x:destinationFile) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:webPublishItem",
+    "Test": "string-length(@x:divId) \u003E= 1 and string-length(@x:divId) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:webPublishItem",
+    "Test": "@x:id \u003E= 1 and @x:id \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:webPublishItem",
+    "Test": "count(distinct-values(//x:webPublishItem/@x:id)) = count(//x:webPublishItem/@x:id)",
+    "App": "All"
+  },
+  {
+    "Context": "x:webPublishItem",
+    "Test": "(@x:sourceRef and @x:sourceType = range) or @x:sourceType != range",
+    "App": "All"
+  },
+  {
+    "Context": "x:webPublishItem",
+    "Test": "@x:sourceRef and @x:sourceType != range",
+    "App": "All"
+  },
+  {
+    "Context": "x:sst",
+    "Test": "@x:uniqueCount \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:sst",
+    "Test": "@x:count \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:sz",
+    "Test": "@x:val \u003E= 1 and @x:val \u003C= 409.55",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "string-length(@x:name) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "@x:totalsRowLabel and @x:totalsRowFunction = custom",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "string-length(@x:headerRowCellStyle) \u003E= 1 and string-length(@x:headerRowCellStyle) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "string-length(@x:totalsRowCellStyle) \u003E= 1 and string-length(@x:totalsRowCellStyle) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "@x:queryTableFieldId \u003E= 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "@x:id \u003E= 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "string-length(@x:totalsRowLabel) \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "string-length(@x:dataCellStyle) \u003E= 1 and string-length(@x:dataCellStyle) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:xmlColumnPr",
+    "Test": "string-length(@x:xpath) \u003C= 32000",
+    "App": "All"
+  },
+  {
+    "Context": "x:singleXmlCell",
+    "Test": "@x:id \u003E= 1 and @x:id \u003C= 4294967294",
+    "App": "All"
+  },
+  {
+    "Context": "x:singleXmlCell",
+    "Test": "@x:connectionId \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:xmlCellPr",
+    "Test": "@x:id = 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:xmlPr",
+    "Test": "string-length(@x:xpath) \u003E= 0 and string-length(@x:xpath) \u003C= 32000",
+    "App": "All"
+  },
+  {
+    "Context": "x:xmlPr",
+    "Test": "@x:mapId \u003E= 1 and @x:mapId \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:c",
+    "Test": "@x:l and @x:s",
+    "App": "All"
+  },
+  {
+    "Context": "x:cellStyle",
+    "Test": "string-length(@x:name) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:cellStyle",
+    "Test": "@x:builtinId \u003E= 0 and @x:builtinId \u003C= 53",
+    "App": "All"
+  },
+  {
+    "Context": "x:cellStyle",
+    "Test": "@x:iLevel \u003E= 0 and @x:iLevel \u003C= 7",
+    "App": "All"
+  },
+  {
+    "Context": "x:cellStyle",
+    "Test": "count(distinct-values(ancestor::x:cellStyles//x:cellStyle/@x:xfId)) = count(ancestor::x:cellStyles//x:cellStyle/@x:xfId)",
+    "App": "All"
+  },
+  {
+    "Context": "x:table",
+    "Test": "@x:dataDxfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:dxf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:table",
+    "Test": "@x:headerRowBorderDxfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:dxf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:table",
+    "Test": "@x:headerRowDxfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:dxf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:table",
+    "Test": "@x:tableBorderDxfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:dxf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:table",
+    "Test": "@x:totalsRowBorderDxfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:dxf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:table",
+    "Test": "@x:totalsRowDxfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:dxf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:gradientFill",
+    "Test": "@x:top \u003E= 0 and @x:top \u003C= 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:gradientFill",
+    "Test": "@x:bottom \u003E= 0 and @x:bottom \u003C= 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:gradientFill",
+    "Test": "@x:left \u003E= 0 and @x:left \u003C= 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:gradientFill",
+    "Test": "@x:right \u003E= 0 and @x:right \u003C= 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:gradientFill",
+    "Test": "@x:degree \u003E= -1.7E308 and @x:degree \u003C= 1.7E308",
+    "App": "All"
+  },
+  {
+    "Context": "x:numFmt",
+    "Test": "string-length(@x:formatCode) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:stop",
+    "Test": "@x:position \u003E= 0 and @x:position \u003C= 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableStyleElement",
+    "Test": "@x:size \u003E= 1 and @x:size \u003C= 9",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableStyles",
+    "Test": "string-length(@x:defaultTableStyle) \u003E= 1 and string-length(@x:defaultTableStyle) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:rc",
+    "Test": "@x:t \u003C count(document(\u0027Part:.\u0027)//x:metadataType) \u002B 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:rc",
+    "Test": "@x:t \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:connection",
+    "Test": "count(distinct-values(//x:connection/@x:name)) = count(//x:connection/@x:name)",
+    "App": "All"
+  },
+  {
+    "Context": "x:connection",
+    "Test": "@x:type \u003E= 1 and @x:type \u003C= 8",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetData",
+    "Test": "@x:sheetId \u003E= 0 and @x:sheetId \u003C= 65533",
+    "App": "All"
+  },
+  {
+    "Context": "x:DataBinding",
+    "Test": "count(distinct-values(//x:DataBinding/@x:DataBindingName)) = count(//x:DataBinding/@x:DataBindingName)",
+    "App": "All"
+  },
+  {
+    "Context": "x:DataBinding",
+    "Test": "count(distinct-values(//x:DataBinding/@x:FileBindingName)) = count(//x:DataBinding/@x:FileBindingName)",
+    "App": "All"
+  },
+  {
+    "Context": "pic:cNvPr",
+    "Test": "count(distinct-values(ancestor::a:graphicData//pic:cNvPr/@pic:id)) = count(ancestor::a:graphicData//pic:cNvPr/@pic:id)",
+    "App": "All"
+  },
+  {
+    "Context": "wp:docPr",
+    "Test": "count(distinct-values(//wp:docPr/@wp:id)) = count(//wp:docPr/@wp:id)",
+    "App": "All"
+  },
+  {
+    "Context": "xdr:cNvPr",
+    "Test": "count(distinct-values(//xdr:cNvPr/@xdr:id)) = count(//xdr:cNvPr/@xdr:id)",
+    "App": "All"
+  },
+  {
+    "Context": "cdr:cNvPr",
+    "Test": "count(distinct-values(//cdr:cNvPr/@id)) = count(//cdr:cNvPr/@id)",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:relIds",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@dgm:cs]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:relIds",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@dgm:dm]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:relIds",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@dgm:lo]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:relIds",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@dgm:qs]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:shape",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@dgm:blip]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/image\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "v:arc",
+    "Test": "@v:dgmlayout = 0 or @v:dgmlayout = 1 or @v:dgmlayout = 2 or @v:dgmlayout = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:arc",
+    "Test": "@v:dgmlayoutmru = 0 or @v:dgmlayoutmru = 1 or @v:dgmlayoutmru = 2 or @v:dgmlayoutmru = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:arc",
+    "Test": "@v:hrpct \u003E= 0 and @v:hrpct \u003C= 1000",
+    "App": "All"
+  },
+  {
+    "Context": "v:arc",
+    "Test": "@ovml:dgmnodekind \u003E= 0 and @ovml:dgmnodekind \u003C= 6",
+    "App": "All"
+  },
+  {
+    "Context": "v:arc",
+    "Test": "@v:spt = 19",
+    "App": "All"
+  },
+  {
+    "Context": "v:curve",
+    "Test": "@v:dgmlayout = 0 or @v:dgmlayout = 1 or @v:dgmlayout = 2 or @v:dgmlayout = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:curve",
+    "Test": "@v:dgmlayoutmru = 0 or @v:dgmlayoutmru = 1 or @v:dgmlayoutmru = 2 or @v:dgmlayoutmru = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:fill",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/image\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "v:imagedata",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@v:href]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/image\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "v:imagedata",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/image\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "v:imagedata",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@v:pict]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/image\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "v:imagedata",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@v:relid]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/image\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "v:stroke",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/image\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "v:group",
+    "Test": "@v:tableproperties = 1 or @v:tableproperties = 2 or @v:tableproperties = 3",
+    "App": "All"
+  },
+  {
+    "Context": "x:pivotCache",
+    "Test": "count(distinct-values(ancestor::x:pivotCaches//x:pivotCache/@x:cacheId)) = count(ancestor::x:pivotCaches//x:pivotCache/@x:cacheId)",
+    "App": "All"
+  },
+  {
+    "Context": "x:cfRule",
+    "Test": "@x:dxfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:dxf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:col",
+    "Test": "@x:style \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:xf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:pivotArea",
+    "Test": "@x:fieldPosition \u003E= 0 and @x:fieldPosition \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetView",
+    "Test": "@x:zoomScale \u003E= 10 and @x:zoomScale \u003C= 400",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetView",
+    "Test": "@x:zoomScaleNormal \u003E= 10 and @x:zoomScaleNormal \u003C= 400",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetView",
+    "Test": "@x:zoomScalePageLayoutView \u003E= 10 and @x:zoomScalePageLayoutView \u003C= 400",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetView",
+    "Test": "@x:zoomScaleSheetLayoutView \u003E= 10 and @x:zoomScaleSheetLayoutView \u003C= 400",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetView",
+    "Test": "@x:workbookViewId \u003C count(document(\u0027Part:/WorkbookPart\u0027)//x:workbookView) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:tabColor",
+    "Test": "@x:tint \u003E= -1.0 and @x:tint \u003C= 1.0",
+    "App": "All"
+  },
+  {
+    "Context": "x:colorFilter",
+    "Test": "@x:dxfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:dxf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:dateGroupItem",
+    "Test": "@x:day \u003E= 1 and @x:day \u003C= 31",
+    "App": "All"
+  },
+  {
+    "Context": "x:dateGroupItem",
+    "Test": "@x:hour \u003E= 0 and @x:hour \u003C= 23",
+    "App": "All"
+  },
+  {
+    "Context": "x:dateGroupItem",
+    "Test": "@x:minute \u003E= 0 and @x:minute \u003C= 59",
+    "App": "All"
+  },
+  {
+    "Context": "x:dateGroupItem",
+    "Test": "@x:month \u003E= 1 and @x:month \u003C= 12",
+    "App": "All"
+  },
+  {
+    "Context": "x:dateGroupItem",
+    "Test": "@x:second \u003E= 0 and @x:second \u003C= 59",
+    "App": "All"
+  },
+  {
+    "Context": "x:dateGroupItem",
+    "Test": "@x:year \u003E= 1000 and @x:year \u003C= 9999",
+    "App": "All"
+  },
+  {
+    "Context": "x:charset",
+    "Test": "@x:val \u003E= 0 and @x:val \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:phoneticPr",
+    "Test": "@x:fontId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:font) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:rFont",
+    "Test": "string-length(@x:val) \u003E= 0 and string-length(@x:val) \u003C= 31",
+    "App": "All"
+  },
+  {
+    "Context": "x:rPh",
+    "Test": "@x:sb \u003C @x:eb",
+    "App": "All"
+  },
+  {
+    "Context": "x:table",
+    "Test": "Index-of(document(\u0027Part:/WorkbookPart/ConnectionsPart\u0027)//x:connection/@x:id, @x:connectionId)",
+    "App": "All"
+  },
+  {
+    "Context": "x:table",
+    "Test": "@x:id != 0 and @x:id != \u0027\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "@x:dataDxfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:dxfs/x:dxf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "@x:headerRowDxfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:dxf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "count(distinct-values(ancestor::x:table//x:tableColumn/@x:id)) = count(ancestor::x:table//x:tableColumn/@x:id)",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "count(distinct-values(ancestor::x:table//x:tableColumn/@x:name)) = count(ancestor::x:table//x:tableColumn/@x:name)",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "@x:totalsRowDxfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:dxf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:xmlColumnPr",
+    "Test": "Index-of(document(\u0027Part:CustomXmlMappingsPart\u0027)//x:Map/@x:ID, @x:mapId)",
+    "App": "All"
+  },
+  {
+    "Context": "x:singleXmlCell",
+    "Test": "count(distinct-values(//x:singleXmlCell/@x:id)) = count(//x:singleXmlCell/@x:id)",
+    "App": "All"
+  },
+  {
+    "Context": "x:xmlCellPr",
+    "Test": "count(distinct-values(//x:xmlCellPr/@x:uniqueName)) = count(//x:xmlCellPr/@x:uniqueName)",
+    "App": "All"
+  },
+  {
+    "Context": "x:c",
+    "Test": "Index-of(document(\u0027Part:/WorkbookPart\u0027)//x:sheet/@x:sheetId, @x:i)",
+    "App": "All"
+  },
+  {
+    "Context": "x:comment",
+    "Test": "@x:authorId \u003C count(document(\u0027Part:.\u0027)//x:author) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:comment",
+    "Test": "count(distinct-values(lower-case(//x:comment/@x:guid))) = count(lower-case(//x:comment/@x:guid))",
+    "App": "All"
+  },
+  {
+    "Context": "x:alignment",
+    "Test": "@x:readingOrder \u003E= 0 and @x:readingOrder \u003C= 2",
+    "App": "All"
+  },
+  {
+    "Context": "x:bgColor",
+    "Test": "@x:tint \u003E= -1.0 and @x:tint \u003C= 1.0",
+    "App": "All"
+  },
+  {
+    "Context": "x:cellStyle",
+    "Test": "@x:xfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:xf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:fgColor",
+    "Test": "@x:tint \u003E= -1.0 and @x:tint \u003C= 1.0",
+    "App": "All"
+  },
+  {
+    "Context": "x:tableStyleElement",
+    "Test": "@x:dxfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:dxf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:xf",
+    "Test": "@x:borderId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:border) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:xf",
+    "Test": "@x:borderId \u003E= 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:xf",
+    "Test": "@x:fillId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:fill) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:xf",
+    "Test": "@x:fontId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:font) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:xf",
+    "Test": "@x:xfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:cellStyleXfs/x:xf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:cellMetadata",
+    "Test": "@x:count \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:futureMetadata",
+    "Test": "@x:count \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:futureMetadata",
+    "Test": "count(distinct-values(ancestor::x:metadata//x:futureMetadata/@x:name)) = count(ancestor::x:metadata//x:futureMetadata/@x:name)",
+    "App": "All"
+  },
+  {
+    "Context": "x:futureMetadata",
+    "Test": "@x:name != XLMDX",
+    "App": "All"
+  },
+  {
+    "Context": "x:futureMetadata",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:k",
+    "Test": "@x:n \u003C count(document(\u0027Part:.\u0027)//x:metadataStrings/x:s) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:k",
+    "Test": "@x:n \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:k",
+    "Test": "@x:np \u003C count(document(\u0027Part:/WorkbookPart/CellMetadataPart\u0027)//x:metadataStrings/x:s) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:k",
+    "Test": "@x:np \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:mdx",
+    "Test": "@x:n \u003C count(document(\u0027Part:/WorkbookPart/CellMetadataPart\u0027)//x:metadataStrings/x:s) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:mdx",
+    "Test": "@x:n \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:mdxMetadata",
+    "Test": "@x:count \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:metadataStrings",
+    "Test": "@x:count \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:metadataType",
+    "Test": "count(distinct-values(ancestor::x:metadataTypes//x:metadataType/@x:name)) = count(ancestor::x:metadataTypes//x:metadataType/@x:name)",
+    "App": "All"
+  },
+  {
+    "Context": "x:metadataType",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:metadataTypes",
+    "Test": "@x:count \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:ms",
+    "Test": "@x:ns \u003C count(document(\u0027Part:/WorkbookPart/CellMetadataPart\u0027)//x:metadataStrings/x:s) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:ms",
+    "Test": "@x:ns \u003E= 0 and @x:ns \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:ms",
+    "Test": "@x:c \u003E= 0 and @x:c \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:n",
+    "Test": "@x:x \u003E= 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:n",
+    "Test": "@x:x \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:p",
+    "Test": "@x:n \u003C count(document(\u0027Part:/WorkbookPart/CellMetadataPart\u0027)//x:metadataStrings/x:s) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:p",
+    "Test": "@x:n \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:p",
+    "Test": "@x:np \u003C count(document(\u0027Part:/WorkbookPart/CellMetadataPart\u0027)//x:metadataStrings/x:s) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:p",
+    "Test": "@x:np \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:t",
+    "Test": "@x:si \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:t",
+    "Test": "@x:si \u003C count(document(\u0027Part:/WorkbookPart/CellMetadataPart\u0027)//x:metadataStrings/x:s) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:t",
+    "Test": "@x:c \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:t",
+    "Test": "@x:fi \u003C= 58",
+    "App": "All"
+  },
+  {
+    "Context": "x:valueMetadata",
+    "Test": "@x:count \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:cacheField",
+    "Test": "count(distinct-values(//x:cacheField/@x:name)) = count(//x:cacheField/@x:name)",
+    "App": "All"
+  },
+  {
+    "Context": "x:cacheHierarchy",
+    "Test": "count(distinct-values(//x:cacheHierarchy/@x:allUniqueName)) = count(//x:cacheHierarchy/@x:allUniqueName)",
+    "App": "All"
+  },
+  {
+    "Context": "x:cacheHierarchy",
+    "Test": "count(distinct-values(//x:cacheHierarchy/@x:defaultMemberUniqueName)) = count(//x:cacheHierarchy/@x:defaultMemberUniqueName)",
+    "App": "All"
+  },
+  {
+    "Context": "x:cacheHierarchy",
+    "Test": "count(distinct-values(//x:cacheHierarchy/@x:uniqueName)) = count(//x:cacheHierarchy/@x:uniqueName)",
+    "App": "All"
+  },
+  {
+    "Context": "x:cacheSource",
+    "Test": "Index-of(document(\u0027Part:/WorkbookPart/ConnectionsPart\u0027)//x:connection/@x:id, @x:connectionId)",
+    "App": "All"
+  },
+  {
+    "Context": "x:cacheSource",
+    "Test": "count(distinct-values(//x:cacheSource/@x:connectionId)) = count(//x:cacheSource/@x:connectionId)",
+    "App": "All"
+  },
+  {
+    "Context": "x:calculatedMember",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 63999",
+    "App": "All"
+  },
+  {
+    "Context": "x:calculatedMember",
+    "Test": "@x:hierarchy and @x:set = 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:calculatedMember",
+    "Test": "(@x:hierarchy and @x:set = 0) or @x:set != 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:calculatedMember",
+    "Test": "@x:parent and @x:set = 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:calculatedMember",
+    "Test": "@x:memberName and @x:set = 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:calculatedMember",
+    "Test": "(@x:memberName and @x:set = 0) or @x:set != 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:conditionalFormat",
+    "Test": "((@x:type = none or @x:type = all) and (@x:scope = data or @x:scope = selection)) or (@x:scope != data and @x:scope != selection)",
+    "App": "All"
+  },
+  {
+    "Context": "x:dataField",
+    "Test": "@x:fld \u003C count(document(\u0027Part:.\u0027)//x:pivotField) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:dimension",
+    "Test": "count(distinct-values(//x:dimensions/x:dimension/@x:uniqueName)) = count(//x:dimensions/x:dimension/@x:uniqueName)",
+    "App": "All"
+  },
+  {
+    "Context": "x:e",
+    "Test": "@x:in \u003C count(document(\u0027Part:.\u0027)//x:serverFormat) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:field",
+    "Test": "count(distinct-values(ancestor::x:colFields//x:field/@x:x)) = count(ancestor::x:colFields//x:field/@x:x)",
+    "App": "All"
+  },
+  {
+    "Context": "x:fieldUsage",
+    "Test": "@x:x \u003C count(document(\u0027Part:.\u0027)//x:cacheField) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:fieldUsage",
+    "Test": "@x:x \u003E= -1",
+    "App": "All"
+  },
+  {
+    "Context": "x:filter",
+    "Test": "@x:fld \u003C count(document(\u0027Part:.\u0027)//x:pivotField) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:filter",
+    "Test": "count(distinct-values(lower-case(//x:pivotTableDefinition/x:filters/x:filter/@x:id))) = count(lower-case(//x:pivotTableDefinition/x:filters/x:filter/@x:id))",
+    "App": "All"
+  },
+  {
+    "Context": "x:filter",
+    "Test": "@x:iMeasureFld \u003C count(document(\u0027Part:.\u0027)//x:pivotField) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:filter",
+    "Test": "@x:iMeasureHier \u003C count(document(\u0027Part:.\u0027)//x:pivotHierarchy) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:format",
+    "Test": "@x:dxfId \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:dxf) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:group",
+    "Test": "count(distinct-values(ancestor::x:groups//x:group/@x:id)) = count(ancestor::x:groups//x:group/@x:id)",
+    "App": "All"
+  },
+  {
+    "Context": "x:group",
+    "Test": "@x:id \u003E= 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:group",
+    "Test": "string-length(@x:uniqueParent) \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:group",
+    "Test": "count(distinct-values(//x:group/@x:uniqueName)) = count(//x:group/@x:uniqueName)",
+    "App": "All"
+  },
+  {
+    "Context": "x:groupLevel",
+    "Test": "count(distinct-values(//x:groupLevel/@x:uniqueName)) = count(//x:groupLevel/@x:uniqueName)",
+    "App": "All"
+  },
+  {
+    "Context": "x:groupMember",
+    "Test": "count(distinct-values(//x:groupMember/@x:uniqueName)) = count(//x:groupMember/@x:uniqueName)",
+    "App": "All"
+  },
+  {
+    "Context": "x:i",
+    "Test": "@x:i \u003C count(document(\u0027Part:.\u0027)//x:dataField) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:item",
+    "Test": "count(distinct-values(ancestor::x:pivotField//x:item/@x:n)) = count(ancestor::x:pivotField//x:item/@x:n)",
+    "App": "All"
+  },
+  {
+    "Context": "x:item",
+    "Test": "@x:t != blank and @x:t != grand",
+    "App": "All"
+  },
+  {
+    "Context": "x:kpi",
+    "Test": "count(distinct-values(//x:kpi/@x:goal)) = count(//x:kpi/@x:goal)",
+    "App": "All"
+  },
+  {
+    "Context": "x:kpi",
+    "Test": "count(distinct-values(//x:kpi/@x:status)) = count(//x:kpi/@x:status)",
+    "App": "All"
+  },
+  {
+    "Context": "x:kpi",
+    "Test": "count(distinct-values(//x:kpi/@x:trend)) = count(//x:kpi/@x:trend)",
+    "App": "All"
+  },
+  {
+    "Context": "x:kpi",
+    "Test": "count(distinct-values(//x:kpi/@x:uniqueName)) = count(//x:kpi/@x:uniqueName)",
+    "App": "All"
+  },
+  {
+    "Context": "x:kpi",
+    "Test": "count(distinct-values(//x:kpi/@x:value)) = count(//x:kpi/@x:value)",
+    "App": "All"
+  },
+  {
+    "Context": "x:kpi",
+    "Test": "count(distinct-values(//x:kpi/@x:weight)) = count(//x:kpi/@x:weight)",
+    "App": "All"
+  },
+  {
+    "Context": "x:m",
+    "Test": "@x:in \u003C count(document(\u0027Part:.\u0027)//x:serverFormat) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:mp",
+    "Test": "@x:field \u003C count(document(\u0027Part:PivotTableCacheDefinitionPart\u0027)//x:cacheField) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:mpMap",
+    "Test": "@x:v \u003C count(document(\u0027Part:.\u0027)//x:cacheField) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:n",
+    "Test": "@x:in \u003C count(document(\u0027Part:.\u0027)//x:serverFormat) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:pageField",
+    "Test": "@x:fld \u003C count(document(\u0027Part:PivotTableCacheDefinitionPart\u0027)//x:cacheField) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:pageField",
+    "Test": "count(distinct-values(//x:pageField/@x:name)) = count(//x:pageField/@x:name)",
+    "App": "All"
+  },
+  {
+    "Context": "x:pivotCacheDefinition",
+    "Test": "string-length(@x:refreshedBy) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:pivotField",
+    "Test": "@x:axis != axisValues",
+    "App": "All"
+  },
+  {
+    "Context": "x:pivotHierarchy",
+    "Test": "string-length(@x:caption) \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:pivotTableDefinition",
+    "Test": "@x:autoFormatId \u003E= 0 and @x:autoFormatId \u003C= 16",
+    "App": "All"
+  },
+  {
+    "Context": "x:pivotTableDefinition",
+    "Test": "Index-of(document(\u0027Part:/WorkbookPart\u0027)//x:pivotCache/@x:cacheId, @x:cacheId)",
+    "App": "All"
+  },
+  {
+    "Context": "x:pivotTableDefinition",
+    "Test": "@x:indent \u003C= 127",
+    "App": "All"
+  },
+  {
+    "Context": "x:pivotTableDefinition",
+    "Test": "@x:pageWrap \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:query",
+    "Test": "string-length(@x:mdx) \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:rangePr",
+    "Test": "@x:startNum \u003C @x:endNum",
+    "App": "All"
+  },
+  {
+    "Context": "x:rangeSet",
+    "Test": "@x:name and @x:ref",
+    "App": "All"
+  },
+  {
+    "Context": "x:rangeSet",
+    "Test": "string-length(@x:sheet) \u003E= 1 and string-length(@x:sheet) \u003C= 31",
+    "App": "All"
+  },
+  {
+    "Context": "x:s",
+    "Test": "@x:in \u003C count(document(\u0027Part:.\u0027)//x:serverFormat) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:serverFormat",
+    "Test": "@x:culture and @x:format",
+    "App": "All"
+  },
+  {
+    "Context": "x:serverFormat",
+    "Test": "string-length(@x:culture) \u003C= 31",
+    "App": "All"
+  },
+  {
+    "Context": "x:serverFormat",
+    "Test": "string-length(@x:format) \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:sharedItems",
+    "Test": "@x:maxValue != NaN and @x:maxValue != INF and @x:maxValue != -INF",
+    "App": "All"
+  },
+  {
+    "Context": "x:sharedItems",
+    "Test": "@x:minValue != NaN and @x:minValue != INF and @x:minValue != -INF",
+    "App": "All"
+  },
+  {
+    "Context": "x:sharedItems",
+    "Test": "@x:minValue \u003C= @x:maxValue",
+    "App": "All"
+  },
+  {
+    "Context": "x:tpl",
+    "Test": "@x:fld \u003C count(document(\u0027Part:.\u0027)//x:cacheField) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:tpl",
+    "Test": "@x:hier \u003C count(document(\u0027Part:.\u0027)//x:cacheHierarchy) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:worksheetSource",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:worksheetSource",
+    "Test": "string-length(@x:sheet) \u003C= 31",
+    "App": "All"
+  },
+  {
+    "Context": "x:headers",
+    "Test": "@x:version \u003E= 1 and @x:version \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:headers",
+    "Test": "@x:preserveHistory \u003E= 0 and @x:preserveHistory \u003C= 32768",
+    "App": "All"
+  },
+  {
+    "Context": "x:headers",
+    "Test": "@x:revisionId \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:headers",
+    "Test": "@x:guid != 00000000-0000-0000-0000-000000000000",
+    "App": "All"
+  },
+  {
+    "Context": "x:oc",
+    "Test": "@x:cm \u003C count(document(\u0027Part:/WorkbookPart/CellMetadataPart\u0027)//x:cellMetadata) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:oc",
+    "Test": "@x:s \u003C count(document(\u0027Part:/WorkbookPart/WorkbookStylesPart\u0027)//x:cellStyle) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:oc",
+    "Test": "@x:vm \u003C count(document(\u0027Part:/WorkbookPart/CellMetadataPart\u0027)//x:valueMetadata) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:raf",
+    "Test": "@x:autoFormatId \u003E= 0 and @x:autoFormatId \u003C= 16",
+    "App": "All"
+  },
+  {
+    "Context": "x:rcft",
+    "Test": "@x:sheetId \u003E= 0 and @x:sheetId \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rcmt",
+    "Test": "string-length(@x:author) \u003E= 1 and string-length(@x:author) \u003C= 52",
+    "App": "All"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "@x:functionGroupId \u003E= 1 and @x:functionGroupId \u003C= 14",
+    "App": "All"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "@x:localSheetId \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "string-length(@x:customMenu) \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "string-length(@x:oldCustomMenu) \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "string-length(@x:description) \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "string-length(@x:oldDescription) \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "string-length(@x:help) \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "string-length(@x:oldHelp) \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "string-length(@x:statusBar) \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "string-length(@x:oldStatusBar) \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "count(distinct-values(ancestor::x:revisions//x:rdn/@x:name)) = count(ancestor::x:revisions//x:rdn/@x:name)",
+    "App": "All"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "matches(@x:name, \u0022[a-zA-Z_\\\\][a-zA-Z0-9_.]*\u0022)",
+    "App": "All"
+  },
+  {
+    "Context": "x:reviewed",
+    "Test": "@x:rId \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:rfmt",
+    "Test": "@x:sheetId \u003E= 0 and @x:sheetId \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rm",
+    "Test": "@x:sheetId \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rm",
+    "Test": "@x:sourceSheetId \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rrc",
+    "Test": "string-length(@x:sId) \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:rsnm",
+    "Test": "string-length(@x:sheetId) \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetId",
+    "Test": "@x:val \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:undo",
+    "Test": "@x:sId \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "x:undo",
+    "Test": "(@x:ref3D = false and @x:nf = true) or @x:nf != true",
+    "App": "All"
+  },
+  {
+    "Context": "x:undo",
+    "Test": "@x:dn and @x:r",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTable",
+    "Test": "(@x:backgroundRefresh = true and @x:firstBackgroundRefresh = true) or @x:firstBackgroundRefresh != true",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTable",
+    "Test": "@x:connectionId \u003E= 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTable",
+    "Test": "Index-of(document(\u0027Part:/WorkbookPart/ConnectionsPart\u0027)//x:connection/@x:id, @x:connectionId)",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTable",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTableField",
+    "Test": "count(distinct-values(//x:queryTableField/@x:id)) = count(//x:queryTableField/@x:id)",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTableField",
+    "Test": "count(distinct-values(//x:queryTableField/@x:name)) = count(//x:queryTableField/@x:name)",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTableField",
+    "Test": "string-length(@x:name) \u003E= 0 and string-length(@x:name) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTableField",
+    "Test": "(@x:dataBound = true and @x:clipped = true) or @x:clipped != true",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTableField",
+    "Test": "(@x:dataBound = false and @x:fillFormulas = true) or @x:fillFormulas != true",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTableField",
+    "Test": "(@x:dataBound = true and @x:rowNumbers = true) or @x:rowNumbers != true",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTableRefresh",
+    "Test": "@x:unboundColumnsLeft \u003C= 16383",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTableRefresh",
+    "Test": "@x:unboundColumnsRight \u003C= 16383",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTableRefresh",
+    "Test": "@x:nextId \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:queryTableRefresh",
+    "Test": "@x:minimumVersion \u003E= 0 and @x:minimumVersion \u003C= 31",
+    "App": "All"
+  },
+  {
+    "Context": "x:connection",
+    "Test": "count(distinct-values(//x:connection/@x:id)) = count(//x:connection/@x:id)",
+    "App": "All"
+  },
+  {
+    "Context": "x:dbPr",
+    "Test": "@x:commandType \u003E= 1 and @x:commandType \u003C= 5",
+    "App": "All"
+  },
+  {
+    "Context": "x:olapPr",
+    "Test": "@x:rowDrillCount \u003E= 1 and @x:rowDrillCount \u003C= 1048576",
+    "App": "All"
+  },
+  {
+    "Context": "x:parameter",
+    "Test": "string-length(@x:name) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:parameter",
+    "Test": "@x:sqlType = -22 or @x:sqlType = -20 or @x:sqlType = -11 or @x:sqlType = -10 or @x:sqlType = -9 or @x:sqlType = -8 or @x:sqlType = -7 or @x:sqlType = -6 or @x:sqlType = -5 or @x:sqlType = -4 or @x:sqlType = -3 or @x:sqlType = -2 or @x:sqlType = -1 or @x:sqlType = 0 or @x:sqlType = 1 or @x:sqlType = 2 or @x:sqlType = 3 or @x:sqlType = 4 or @x:sqlType = 5 or @x:sqlType = 6 or @x:sqlType = 7 or @x:sqlType = 8 or @x:sqlType = 9 or @x:sqlType = 10 or @x:sqlType = 11 or @x:sqlType = 12 or @x:sqlType = 101 or @x:sqlType = 102 or @x:sqlType = 103 or @x:sqlType = 104 or @x:sqlType = 105 or @x:sqlType = 106 or @x:sqlType = 107 or @x:sqlType = 108 or @x:sqlType = 109 or @x:sqlType = 110 or @x:sqlType = 111 or @x:sqlType = 112 or @x:sqlType = 113",
+    "App": "All"
+  },
+  {
+    "Context": "x:parameter",
+    "Test": "string-length(@x:string) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:parameter",
+    "Test": "(@x:cell and @x:parameterType = cell) or @x:parameterType != cell",
+    "App": "All"
+  },
+  {
+    "Context": "x:parameter",
+    "Test": "string-length(@x:prompt) \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:textField",
+    "Test": "@x:position \u003E= 0 and @x:position \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:textPr",
+    "Test": "string-length(@x:decimal) \u003E= 1 and string-length(@x:decimal) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:textPr",
+    "Test": "string-length(@x:thousands) \u003E= 1 and string-length(@x:thousands) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:cell",
+    "Test": "@x:t != s",
+    "App": "All"
+  },
+  {
+    "Context": "x:cell",
+    "Test": "@x:vm \u003C count(document(\u0027Part:/WorkbookPart/CellMetadataPart\u0027)//x:valueMetadata) \u002B 0",
+    "App": "All"
+  },
+  {
+    "Context": "x:ddeItem",
+    "Test": "string-length(@x:name) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:ddeItem",
+    "Test": "(@x:name = StdDocumentName and @x:ole = true) or @x:ole != true",
+    "App": "All"
+  },
+  {
+    "Context": "x:ddeLink",
+    "Test": "string-length(@x:ddeService) \u003E= 1 and string-length(@x:ddeService) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:ddeLink",
+    "Test": "string-length(@x:ddeTopic) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:definedName",
+    "Test": "@x:sheetId \u003E= 0 and @x:sheetId \u003C= 65533",
+    "App": "All"
+  },
+  {
+    "Context": "x:oleItem",
+    "Test": "string-length(@x:name) \u003E= 0 and string-length(@x:name) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:oleLink",
+    "Test": "string-length(@x:progId) \u003E= 1 and string-length(@x:progId) \u003C= 255",
+    "App": "All"
+  },
+  {
+    "Context": "x:row",
+    "Test": "@x:r \u003C= 1048576",
+    "App": "All"
+  },
+  {
+    "Context": "x:webPr",
+    "Test": "string-length(@x:url) \u003E= 1",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheetName",
+    "Test": "string-length(@x:val) \u003C= 31",
+    "App": "All"
+  },
+  {
+    "Context": "x:DataBinding",
+    "Test": "@x:DataBindingLoadMode \u003E= 0 and @x:DataBindingLoadMode \u003C= 4",
+    "App": "All"
+  },
+  {
+    "Context": "x:DataBinding",
+    "Test": "@x:ConnectionID and @x:FileBinding = false",
+    "App": "All"
+  },
+  {
+    "Context": "x:DataBinding",
+    "Test": "(@x:ConnectionID and @x:FileBinding = true) or @x:FileBinding != true",
+    "App": "All"
+  },
+  {
+    "Context": "x:Map",
+    "Test": "count(distinct-values(//x:Map/@x:SchemaID)) = count(//x:Map/@x:SchemaID)",
+    "App": "All"
+  },
+  {
+    "Context": "x:Map",
+    "Test": "string-length(@x:Name) \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:Map",
+    "Test": "string-length(@x:RootElement) \u003C= 65535",
+    "App": "All"
+  },
+  {
+    "Context": "x:Map",
+    "Test": "@x:ID \u003E= 1 and @x:ID \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "x:Schema",
+    "Test": "count(distinct-values(//x:Schema/@x:ID)) = count(//x:Schema/@x:ID)",
+    "App": "All"
+  },
+  {
+    "Context": "p:sldRg",
+    "Test": "@p:st \u003C= @p:end",
+    "App": "All"
+  },
+  {
+    "Context": "p:sldMasterId",
+    "Test": "count(distinct-values(lower-case(//p:sldMasterId/@id))) = count(lower-case(//p:sldMasterId/@id))",
+    "App": "All"
+  },
+  {
+    "Context": "p:sldLayoutId",
+    "Test": "count(distinct-values(//p:sldLayoutId/@id)) = count(//p:sldLayoutId/@id)",
+    "App": "All"
+  },
+  {
+    "Context": "p:cmAuthor",
+    "Test": "count(distinct-values(lower-case(//p:cmAuthor/@p:id))) = count(lower-case(//p:cmAuthor/@p:id))",
+    "App": "All"
+  },
+  {
+    "Context": "p:cmAuthor",
+    "Test": "@p:id \u003E= 0",
+    "App": "All"
+  },
+  {
+    "Context": "p:cmAuthor",
+    "Test": "count(distinct-values(ancestor::p:cmAuthorLst//p:cmAuthor/@p:clrIdx)) = count(ancestor::p:cmAuthorLst//p:cmAuthor/@p:clrIdx)",
+    "App": "All"
+  },
+  {
+    "Context": "a:hlinkHover",
+    "Test": "@a:id",
+    "App": "All"
+  },
+  {
+    "Context": "a:lum",
+    "Test": "@a:val \u003E= 0 and @a:val \u003C= 100000",
+    "App": "All"
+  },
+  {
+    "Context": "a:tblStyle",
+    "Test": "count(distinct-values(//a:tblStyle/@a:styleId)) = count(//a:tblStyle/@a:styleId)",
+    "App": "All"
+  },
+  {
+    "Context": "a:hlinkClick",
+    "Test": "@a:id",
+    "App": "All"
+  },
+  {
+    "Context": "a:hlinkMouseOver",
+    "Test": "@a:id",
+    "App": "All"
+  },
+  {
+    "Context": "a:tableStyle",
+    "Test": "count(distinct-values(//a:tableStyle/@a:styleId)) = count(//a:tableStyle/@a:styleId)",
+    "App": "All"
+  },
+  {
+    "Context": "a:tc",
+    "Test": "@a:rowSpan \u003E= 1",
+    "App": "All"
+  },
+  {
+    "Context": "a:tc",
+    "Test": "@a:gridSpan \u003E= 1",
+    "App": "All"
+  },
+  {
+    "Context": "a:ds",
+    "Test": "@a:d \u003E= 1",
+    "App": "All"
+  },
+  {
+    "Context": "a:ds",
+    "Test": "@a:sp \u003E= 1",
+    "App": "All"
+  },
+  {
+    "Context": "comp:legacyDrawing",
+    "Test": "count(distinct-values(//comp:legacyDrawing/@comp:spid)) = count(//comp:legacyDrawing/@comp:spid)",
+    "App": "All"
+  },
+  {
+    "Context": "xdr:cxnSp",
+    "Test": "string-length(@xdr:macro) \u003E= 0 and string-length(@xdr:macro) \u003C= 256",
+    "App": "All"
+  },
+  {
+    "Context": "xdr:graphicFrame",
+    "Test": "string-length(@xdr:macro) \u003E= 0 and string-length(@xdr:macro) \u003C= 256",
+    "App": "All"
+  },
+  {
+    "Context": "xdr:sp",
+    "Test": "string-length(@xdr:macro) \u003E= 0 and string-length(@xdr:macro) \u003C= 256",
+    "App": "All"
+  },
+  {
+    "Context": "c:axId",
+    "Test": "@c:val \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "c:backward",
+    "Test": "@c:val \u003E= 0",
+    "App": "All"
+  },
+  {
+    "Context": "c:crossesAt",
+    "Test": "@c:val != INF and @c:val != -INF and @c:val != NaN",
+    "App": "All"
+  },
+  {
+    "Context": "c:crossAx",
+    "Test": "@c:val \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "c:custUnit",
+    "Test": "@c:val != INF and @c:val != -INF and @c:val != NaN",
+    "App": "All"
+  },
+  {
+    "Context": "c:explosion",
+    "Test": "@c:val \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "c:fmtId",
+    "Test": "@c:val \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "c:forward",
+    "Test": "@c:val != INF and @c:val != -INF and @c:val != NaN",
+    "App": "All"
+  },
+  {
+    "Context": "c:forward",
+    "Test": "@c:val \u003E= 0",
+    "App": "All"
+  },
+  {
+    "Context": "c:idx",
+    "Test": "@c:val \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "c:order",
+    "Test": "@c:val \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "c:pageMargins",
+    "Test": "@c:b \u003E= 0 and @c:b \u003C 49",
+    "App": "All"
+  },
+  {
+    "Context": "c:pageMargins",
+    "Test": "@c:footer \u003E= 0 and @c:footer \u003C 49",
+    "App": "All"
+  },
+  {
+    "Context": "c:pageMargins",
+    "Test": "@c:header \u003E= 0 and @c:header \u003C 49",
+    "App": "All"
+  },
+  {
+    "Context": "c:pageMargins",
+    "Test": "@c:l \u003E= 0 and @c:l \u003C 49",
+    "App": "All"
+  },
+  {
+    "Context": "c:pageMargins",
+    "Test": "@c:r \u003E= 0 and @c:r \u003C 49",
+    "App": "All"
+  },
+  {
+    "Context": "c:pageMargins",
+    "Test": "@c:t \u003E= 0 and @c:t \u003C 49",
+    "App": "All"
+  },
+  {
+    "Context": "c:pageSetup",
+    "Test": "@c:copies \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "c:pt",
+    "Test": "@c:idx \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "c:pt",
+    "Test": "@c:idx \u003E= 0 and @c:idx \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "c:ptCount",
+    "Test": "@c:val \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "c:secondPiePt",
+    "Test": "@c:val \u003C= 2147483647",
+    "App": "All"
+  },
+  {
+    "Context": "c:splitPos",
+    "Test": "@c:val != INF and @c:val != -INF and @c:val != NaN",
+    "App": "All"
+  },
+  {
+    "Context": "cdr:cxnSp",
+    "Test": "string-length(@cdr:macro) \u003E= 0 and string-length(@cdr:macro) \u003C= 256",
+    "App": "All"
+  },
+  {
+    "Context": "cdr:graphicFrame",
+    "Test": "string-length(@cdr:macro) \u003E= 0 and string-length(@cdr:macro) \u003C= 256",
+    "App": "All"
+  },
+  {
+    "Context": "cdr:pic",
+    "Test": "string-length(@cdr:macro) \u003E= 0 and string-length(@cdr:macro) \u003C= 256",
+    "App": "All"
+  },
+  {
+    "Context": "cdr:sp",
+    "Test": "string-length(@cdr:macro) \u003E= 0 and string-length(@cdr:macro) \u003C= 256",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:choose",
+    "Test": "count(distinct-values(//dgm:choose/@dgm:name)) = count(//dgm:choose/@dgm:name)",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:else",
+    "Test": "count(distinct-values(//dgm:else/@dgm:name)) = count(//dgm:else/@dgm:name)",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:forEach",
+    "Test": "count(distinct-values(//dgm:forEach/@dgm:name)) = count(//dgm:forEach/@dgm:name)",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:if",
+    "Test": "count(distinct-values(//dgm:if/@dgm:name)) = count(//dgm:if/@dgm:name)",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:layoutNode",
+    "Test": "count(distinct-values(//dgm:layoutNode/@dgm:name)) = count(//dgm:layoutNode/@dgm:name)",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:cxn",
+    "Test": "count(distinct-values(ancestor::dgm:cxnLst//dgm:cxn/@dgm:modelId)) = count(ancestor::dgm:cxnLst//dgm:cxn/@dgm:modelId)",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:cxn",
+    "Test": "count(distinct-values(//dgm:cxn/@dgm:parTransId)) = count(//dgm:cxn/@dgm:parTransId)",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:colorsDef",
+    "Test": "@dgm:minVer = 12.0",
+    "App": "All"
+  },
+  {
+    "Context": "v:arc",
+    "Test": "count(distinct-values(//v:arc/@v:id)) = count(//v:arc/@v:id)",
+    "App": "All"
+  },
+  {
+    "Context": "v:background",
+    "Test": "count(distinct-values(//v:background/@v:id)) = count(//v:background/@v:id)",
+    "App": "All"
+  },
+  {
+    "Context": "v:curve",
+    "Test": "@v:spt = 0",
+    "App": "All"
+  },
+  {
+    "Context": "v:curve",
+    "Test": "count(distinct-values(//v:curve/@v:id)) = count(//v:curve/@v:id)",
+    "App": "All"
+  },
+  {
+    "Context": "v:fill",
+    "Test": "matches(@v:focus, \u0022-?(\\d{1,2}|100)%\u0022)",
+    "App": "All"
+  },
+  {
+    "Context": "v:fill",
+    "Test": "count(distinct-values(lower-case(//v:fill/@id))) = count(lower-case(//v:fill/@id))",
+    "App": "All"
+  },
+  {
+    "Context": "v:fill",
+    "Test": "@v:angle \u003E= -32767 and @v:angle \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "v:fill",
+    "Test": "@v:origin \u003E= -32767 and @v:origin \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "v:fill",
+    "Test": "@v:title != slashes and @v:title != colons",
+    "App": "All"
+  },
+  {
+    "Context": "v:group",
+    "Test": "@v:dgmlayout = 0 or @v:dgmlayout = 1 or @v:dgmlayout = 2 or @v:dgmlayout = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:group",
+    "Test": "@v:dgmlayoutmru = 0 or @v:dgmlayoutmru = 1 or @v:dgmlayoutmru = 2 or @v:dgmlayoutmru = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:group",
+    "Test": "count(distinct-values(//v:group/@v:id)) = count(//v:group/@v:id)",
+    "App": "All"
+  },
+  {
+    "Context": "v:image",
+    "Test": "@v:dgmlayout = 0 or @v:dgmlayout = 1 or @v:dgmlayout = 2 or @v:dgmlayout = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:image",
+    "Test": "@v:dgmlayoutmru = 0 or @v:dgmlayoutmru = 1 or @v:dgmlayoutmru = 2 or @v:dgmlayoutmru = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:image",
+    "Test": "count(distinct-values(//v:image/@id)) = count(//v:image/@id)",
+    "App": "All"
+  },
+  {
+    "Context": "v:image",
+    "Test": "@v:spt = 75",
+    "App": "All"
+  },
+  {
+    "Context": "v:imagedata",
+    "Test": "count(distinct-values(lower-case(//v:imagedata/@id))) = count(lower-case(//v:imagedata/@id))",
+    "App": "All"
+  },
+  {
+    "Context": "v:imagedata",
+    "Test": "@v:blacklevel \u003E= -0.5 and @v:blacklevel \u003C= 0.5",
+    "App": "All"
+  },
+  {
+    "Context": "v:line",
+    "Test": "@v:dgmlayout = 0 or @v:dgmlayout = 1 or @v:dgmlayout = 2 or @v:dgmlayout = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:line",
+    "Test": "@v:spt = 20",
+    "App": "All"
+  },
+  {
+    "Context": "v:oval",
+    "Test": "@v:dgmlayout = 0 or @v:dgmlayout = 1 or @v:dgmlayout = 2 or @v:dgmlayout = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:oval",
+    "Test": "@v:dgmlayoutmru = 0 or @v:dgmlayoutmru = 1 or @v:dgmlayoutmru = 2 or @v:dgmlayoutmru = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:oval",
+    "Test": "count(distinct-values(//v:oval/@v:id)) = count(//v:oval/@v:id)",
+    "App": "All"
+  },
+  {
+    "Context": "v:oval",
+    "Test": "@v:spt = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:path",
+    "Test": "count(distinct-values(//v:path/@v:id)) = count(//v:path/@v:id)",
+    "App": "All"
+  },
+  {
+    "Context": "v:polyline",
+    "Test": "@v:dgmlayout = 0 or @v:dgmlayout = 1 or @v:dgmlayout = 2 or @v:dgmlayout = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:polyline",
+    "Test": "@v:dgmlayoutmru = 0 or @v:dgmlayoutmru = 1 or @v:dgmlayoutmru = 2 or @v:dgmlayoutmru = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:polyline",
+    "Test": "@v:spt = 0",
+    "App": "All"
+  },
+  {
+    "Context": "v:rect",
+    "Test": "@v:dgmlayout = 0 or @v:dgmlayout = 1 or @v:dgmlayout = 2 or @v:dgmlayout = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:rect",
+    "Test": "@v:dgmlayoutmru = 0 or @v:dgmlayoutmru = 1 or @v:dgmlayoutmru = 2 or @v:dgmlayoutmru = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:rect",
+    "Test": "count(distinct-values(//v:rect/@v:id)) = count(//v:rect/@v:id)",
+    "App": "All"
+  },
+  {
+    "Context": "v:rect",
+    "Test": "@v:spt = 1",
+    "App": "All"
+  },
+  {
+    "Context": "v:roundrect",
+    "Test": "@v:dgmlayout = 0 or @v:dgmlayout = 1 or @v:dgmlayout = 2 or @v:dgmlayout = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:roundrect",
+    "Test": "@v:dgmlayoutmru = 0 or @v:dgmlayoutmru = 1 or @v:dgmlayoutmru = 2 or @v:dgmlayoutmru = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:roundrect",
+    "Test": "count(distinct-values(//v:roundrect/@v:id)) = count(//v:roundrect/@v:id)",
+    "App": "All"
+  },
+  {
+    "Context": "v:roundrect",
+    "Test": "@v:spt = 2",
+    "App": "All"
+  },
+  {
+    "Context": "v:shadow",
+    "Test": "count(distinct-values(//v:shadow/@v:id)) = count(//v:shadow/@v:id)",
+    "App": "All"
+  },
+  {
+    "Context": "v:shape",
+    "Test": "@v:dgmlayout = 0 or @v:dgmlayout = 1 or @v:dgmlayout = 2 or @v:dgmlayout = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:shape",
+    "Test": "@v:dgmlayoutmru = 0 or @v:dgmlayoutmru = 1 or @v:dgmlayoutmru = 2 or @v:dgmlayoutmru = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:shape",
+    "Test": "count(distinct-values(//v:shape/@v:id)) = count(//v:shape/@v:id)",
+    "App": "All"
+  },
+  {
+    "Context": "v:shapetype",
+    "Test": "@v:dgmlayout = 0 or @v:dgmlayout = 1 or @v:dgmlayout = 2 or @v:dgmlayout = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:shapetype",
+    "Test": "@v:dgmlayoutmru = 0 or @v:dgmlayoutmru = 1 or @v:dgmlayoutmru = 2 or @v:dgmlayoutmru = 3",
+    "App": "All"
+  },
+  {
+    "Context": "v:shapetype",
+    "Test": "count(distinct-values(//v:shapetype/@v:id)) = count(//v:shapetype/@v:id)",
+    "App": "All"
+  },
+  {
+    "Context": "v:stroke",
+    "Test": "count(distinct-values(lower-case(//v:stroke/@id))) = count(lower-case(//v:stroke/@id))",
+    "App": "All"
+  },
+  {
+    "Context": "v:stroke",
+    "Test": "@v:miterlimit \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "v:stroke",
+    "Test": "@v:weight \u003E= 0 and @v:weight \u003C= 20116800",
+    "App": "All"
+  },
+  {
+    "Context": "v:textbox",
+    "Test": "count(distinct-values(//v:textbox/@v:id)) = count(//v:textbox/@v:id)",
+    "App": "All"
+  },
+  {
+    "Context": "v:textpath",
+    "Test": "count(distinct-values(//v:textpath/@v:id)) = count(//v:textpath/@v:id)",
+    "App": "All"
+  },
+  {
+    "Context": "ovml:bottom",
+    "Test": "@ovml:weight \u003E= 0 and @ovml:weight \u003C= 20116800",
+    "App": "All"
+  },
+  {
+    "Context": "ovml:bottom",
+    "Test": "@ovml:miterlimit \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "ovml:callout",
+    "Test": "@ovml:type = rightAngle or @ovml:type = oneSegment or @ovml:type = twoSegment or @ovml:type = threeSegment",
+    "App": "All"
+  },
+  {
+    "Context": "ovml:column",
+    "Test": "@ovml:dashstyle = solid or @ovml:dashstyle = shortdash or @ovml:dashstyle = shortdot or @ovml:dashstyle = shortdashdot or @ovml:dashstyle = shortdashdotdot or @ovml:dashstyle = dot or @ovml:dashstyle = dash or @ovml:dashstyle = longdash or @ovml:dashstyle = longdashdotdot or @ovml:dashstyle = dashdot",
+    "App": "All"
+  },
+  {
+    "Context": "ovml:extrusion",
+    "Test": "@ovml:facet \u003E= 1 and @ovml:facet \u003C= 65536",
+    "App": "All"
+  },
+  {
+    "Context": "ovml:extrusion",
+    "Test": "matches(@ovml:edge, \u0022(\\d{1,5}|1[0-6][0-8]\\d{3}|1690[0-8]\\d|16909[0-3])pt\u0022)",
+    "App": "All"
+  },
+  {
+    "Context": "ovml:extrusion",
+    "Test": "@ovml:orientationangle \u003E= -32767f and @ovml:orientationangle \u003C= 32767f",
+    "App": "All"
+  },
+  {
+    "Context": "ovml:extrusion",
+    "Test": "@ovml:skewangle \u003E= -32767 and @ovml:skewangle \u003C= 32767",
+    "App": "All"
+  },
+  {
+    "Context": "ovml:OLEObject",
+    "Test": "matches(@ovml:ObjectID, \u0022_(\\d{1,9}|1\\d{9}|20\\d{8}|21[0-3]\\d{7}|214[0-6]\\d{6}|2147[0-3]\\d{5}|21474[0-7]\\d{4}|214748[0-2]\\d{3}|2147483[0-5]\\d{2}|21474836[0-3]\\d|214748364[0-7])\u0022)",
+    "App": "All"
+  },
+  {
+    "Context": "ovml:OLEObject",
+    "Test": "Index-of(document(\u0027Part:.\u0027)//v:shape/@id, @ShapeID)",
+    "App": "All"
+  },
+  {
+    "Context": "ovml:signatureline",
+    "Test": "count(distinct-values(//ovml:signatureline/@ovml:id)) = count(//ovml:signatureline/@ovml:id)",
+    "App": "All"
+  },
+  {
+    "Context": "op:property",
+    "Test": "@op:pid \u003E= 2",
+    "App": "All"
+  },
+  {
+    "Context": "op:property",
+    "Test": "count(distinct-values(lower-case(//op:property/@op:name))) = count(lower-case(//op:property/@op:name))",
+    "App": "All"
+  },
+  {
+    "Context": "vt:vstream",
+    "Test": "count(distinct-values(//vt:vstream/@vt:version)) = count(//vt:vstream/@vt:version)",
+    "App": "All"
+  },
+  {
+    "Context": "w:abstractNum",
+    "Test": "count(distinct-values(//w:abstractNum/@w:abstractNumId)) = count(//w:abstractNum/@w:abstractNumId)",
+    "App": "All"
+  },
+  {
+    "Context": "w:num",
+    "Test": "string-length(@w:numId) \u003C= 32",
+    "App": "Word"
+  },
+  {
+    "Context": "w:numPicBullet",
+    "Test": "count(distinct-values(//w:numPicBullet/@w:numPicBulletId)) = count(//w:numPicBullet/@w:numPicBulletId)",
+    "App": "All"
+  },
+  {
+    "Context": "w:pStyle",
+    "Test": "string-length(@w:val) \u003C= 253",
+    "App": "Word"
+  },
+  {
+    "Context": "w:footerReference",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:headerReference",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/header\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:endnote",
+    "Test": "Index-of(document(\u0027Part:/MainDocumentPart/EndnotesPart\u0027)//w:endnotes/w:endnote/@w:id, @w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:footnote",
+    "Test": "Index-of(document(\u0027Part:/MainDocumentPart/FootnotesPart\u0027)//w:footnotes/w:footnote/@w:id, @w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:guid",
+    "Test": "count(distinct-values(lower-case(//w:guid/@w:val))) = count(lower-case(//w:guid/@w:val))",
+    "App": "All"
+  },
+  {
+    "Context": "w:comment",
+    "Test": "count(distinct-values(//w:comment/@w:id)) = count(//w:comment/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:commentRangeEnd",
+    "Test": "count(distinct-values(//w:commentRangeEnd/@w:id)) = count(//w:commentRangeEnd/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:commentRangeEnd",
+    "Test": "Index-of(document(\u0027Part:WordprocessingCommentsPart\u0027)//w:comment/@w:id, @w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:commentRangeStart",
+    "Test": "count(distinct-values(//w:commentRangeStart/@w:id)) = count(//w:commentRangeStart/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:commentRangeStart",
+    "Test": "Index-of(document(\u0027Part:WordprocessingCommentsPart\u0027)//w:comment/@w:id, @w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:commentReference",
+    "Test": "count(distinct-values(//w:commentReference/@w:id)) = count(//w:commentReference/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:commentReference",
+    "Test": "Index-of(document(\u0027Part:WordprocessingCommentsPart\u0027)//w:comment/@w:id, @w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:cellDel",
+    "Test": "count(distinct-values(//w:cellDel/@w:id)) = count(//w:cellDel/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:cellIns",
+    "Test": "count(distinct-values(//w:cellIns/@w:id)) = count(//w:cellIns/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:cellMerge",
+    "Test": "count(distinct-values(//w:cellMerge/@w:id)) = count(//w:cellMerge/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:customXmlDelRangeEnd",
+    "Test": "count(distinct-values(lower-case(//w:customXmlDelRangeEnd/@w:id))) = count(lower-case(//w:customXmlDelRangeEnd/@w:id))",
+    "App": "All"
+  },
+  {
+    "Context": "w:customXmlDelRangeStart",
+    "Test": "count(distinct-values(lower-case(//w:customXmlDelRangeStart/@w:id))) = count(lower-case(//w:customXmlDelRangeStart/@w:id))",
+    "App": "All"
+  },
+  {
+    "Context": "w:customXmlInsRangeEnd",
+    "Test": "count(distinct-values(//w:customXmlInsRangeEnd/@w:id)) = count(//w:customXmlInsRangeEnd/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:customXmlInsRangeStart",
+    "Test": "count(distinct-values(//w:customXmlInsRangeStart/@w:id)) = count(//w:customXmlInsRangeStart/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:customXmlMoveFromRangeEnd",
+    "Test": "count(distinct-values(//w:customXmlMoveFromRangeEnd/@w:id)) = count(//w:customXmlMoveFromRangeEnd/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:customXmlMoveFromRangeStart",
+    "Test": "count(distinct-values(//w:customXmlMoveFromRangeStart/@w:id)) = count(//w:customXmlMoveFromRangeStart/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:customXmlMoveToRangeStart",
+    "Test": "count(distinct-values(//w:customXmlMoveToRangeStart/@w:id)) = count(//w:customXmlMoveToRangeStart/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w14:conflictIns/w:moveFrom/@w:id)) = count(//w14:conflictIns/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w14:conflictDel/w:moveFrom/@w:id)) = count(//w14:conflictDel/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//m:oMathPara/w:moveFrom/@w:id)) = count(//m:oMathPara/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//m:oMath/w:moveFrom/@w:id)) = count(//m:oMath/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//m:e/w:moveFrom/@w:id)) = count(//m:e/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//m:num/w:moveFrom/@w:id)) = count(//m:num/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//m:den/w:moveFrom/@w:id)) = count(//m:den/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//m:fName/w:moveFrom/@w:id)) = count(//m:fName/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//m:lim/w:moveFrom/@w:id)) = count(//m:lim/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//m:sub/w:moveFrom/@w:id)) = count(//m:sub/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//m:sup/w:moveFrom/@w:id)) = count(//m:sup/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//m:deg/w:moveFrom/@w:id)) = count(//m:deg/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:customXml/w:moveFrom/@w:id)) = count(//w:customXml/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:fldSimple/w:moveFrom/@w:id)) = count(//w:fldSimple/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:hyperlink/w:moveFrom/@w:id)) = count(//w:hyperlink/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:ins/w:moveFrom/@w:id)) = count(//w:ins/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:del/w:moveFrom/@w:id)) = count(//w:del/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:moveFrom/w:moveFrom/@w:id)) = count(//w:moveFrom/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:moveTo/w:moveFrom/@w:id)) = count(//w:moveTo/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:p/w:moveFrom/@w:id)) = count(//w:p/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:tbl/w:moveFrom/@w:id)) = count(//w:tbl/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:tr/w:moveFrom/@w:id)) = count(//w:tr/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:tc/w:moveFrom/@w:id)) = count(//w:tc/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:bdo/w:moveFrom/@w:id)) = count(//w:bdo/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:dir/w:moveFrom/@w:id)) = count(//w:dir/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:txbxContent/w:moveFrom/@w:id)) = count(//w:txbxContent/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:hdr/w:moveFrom/@w:id)) = count(//w:hdr/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:ftr/w:moveFrom/@w:id)) = count(//w:ftr/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:rt/w:moveFrom/@w:id)) = count(//w:rt/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:rubyBase/w:moveFrom/@w:id)) = count(//w:rubyBase/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:sdtContent/w:moveFrom/@w:id)) = count(//w:sdtContent/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:footnote/w:moveFrom/@w:id)) = count(//w:footnote/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:endnote/w:moveFrom/@w:id)) = count(//w:endnote/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:body/w:moveFrom/@w:id)) = count(//w:body/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFrom",
+    "Test": "count(distinct-values(//w:docPartBody/w:moveFrom/@w:id)) = count(//w:docPartBody/w:moveFrom/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFromRangeEnd",
+    "Test": "count(distinct-values(//w:moveFromRangeEnd/@w:id)) = count(//w:moveFromRangeEnd/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveFromRangeStart",
+    "Test": "count(distinct-values(//w:moveFromRangeStart/@w:id)) = count(//w:moveFromRangeStart/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w14:conflictIns/w:moveTo/@w:id)) = count(//w14:conflictIns/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w14:conflictDel/w:moveTo/@w:id)) = count(//w14:conflictDel/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//m:oMathPara/w:moveTo/@w:id)) = count(//m:oMathPara/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//m:oMath/w:moveTo/@w:id)) = count(//m:oMath/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//m:e/w:moveTo/@w:id)) = count(//m:e/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//m:num/w:moveTo/@w:id)) = count(//m:num/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//m:den/w:moveTo/@w:id)) = count(//m:den/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//m:fName/w:moveTo/@w:id)) = count(//m:fName/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//m:lim/w:moveTo/@w:id)) = count(//m:lim/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//m:sub/w:moveTo/@w:id)) = count(//m:sub/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//m:sup/w:moveTo/@w:id)) = count(//m:sup/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//m:deg/w:moveTo/@w:id)) = count(//m:deg/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:customXml/w:moveTo/@w:id)) = count(//w:customXml/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:fldSimple/w:moveTo/@w:id)) = count(//w:fldSimple/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:hyperlink/w:moveTo/@w:id)) = count(//w:hyperlink/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:ins/w:moveTo/@w:id)) = count(//w:ins/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:del/w:moveTo/@w:id)) = count(//w:del/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:moveFrom/w:moveTo/@w:id)) = count(//w:moveFrom/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:moveTo/w:moveTo/@w:id)) = count(//w:moveTo/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:p/w:moveTo/@w:id)) = count(//w:p/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:tbl/w:moveTo/@w:id)) = count(//w:tbl/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:tr/w:moveTo/@w:id)) = count(//w:tr/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:tc/w:moveTo/@w:id)) = count(//w:tc/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:bdo/w:moveTo/@w:id)) = count(//w:bdo/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:dir/w:moveTo/@w:id)) = count(//w:dir/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:txbxContent/w:moveTo/@w:id)) = count(//w:txbxContent/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:hdr/w:moveTo/@w:id)) = count(//w:hdr/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:ftr/w:moveTo/@w:id)) = count(//w:ftr/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:rt/w:moveTo/@w:id)) = count(//w:rt/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:rubyBase/w:moveTo/@w:id)) = count(//w:rubyBase/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:sdtContent/w:moveTo/@w:id)) = count(//w:sdtContent/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:footnote/w:moveTo/@w:id)) = count(//w:footnote/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:endnote/w:moveTo/@w:id)) = count(//w:endnote/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:body/w:moveTo/@w:id)) = count(//w:body/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveTo",
+    "Test": "count(distinct-values(//w:docPartBody/w:moveTo/@w:id)) = count(//w:docPartBody/w:moveTo/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveToRangeEnd",
+    "Test": "count(distinct-values(//w:moveToRangeEnd/@w:id)) = count(//w:moveToRangeEnd/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:moveToRangeStart",
+    "Test": "count(distinct-values(lower-case(//w:moveToRangeStart/@w:id))) = count(lower-case(//w:moveToRangeStart/@w:id))",
+    "App": "All"
+  },
+  {
+    "Context": "w:numberingChange",
+    "Test": "count(distinct-values(//w:numberingChange/@w:id)) = count(//w:numberingChange/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:numberingChange",
+    "Test": "string-length(@w:original) \u003C= 15",
+    "App": "All"
+  },
+  {
+    "Context": "w:pPrChange",
+    "Test": "count(distinct-values(//w:pPrChange/@w:id)) = count(//w:pPrChange/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:sectPrChange",
+    "Test": "count(distinct-values(//w:sectPrChange/@w:id)) = count(//w:sectPrChange/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:tblGridChange",
+    "Test": "count(distinct-values(//w:tblGridChange/@w:id)) = count(//w:tblGridChange/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:tblPrChange",
+    "Test": "count(distinct-values(//w:tblPrChange/@w:id)) = count(//w:tblPrChange/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:tblPrExChange",
+    "Test": "count(distinct-values(//w:tblPrExChange/@w:id)) = count(//w:tblPrExChange/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:tcPrChange",
+    "Test": "count(distinct-values(//w:tcPrChange/@w:id)) = count(//w:tcPrChange/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:trPrChange",
+    "Test": "count(distinct-values(//w:trPrChange/@w:id)) = count(//w:trPrChange/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:bookmarkEnd",
+    "Test": "count(distinct-values(//w:bookmarkEnd/@w:id)) = count(//w:bookmarkEnd/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:bookmarkStart",
+    "Test": "count(distinct-values(//w:bookmarkStart/@w:id)) = count(//w:bookmarkStart/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:permEnd",
+    "Test": "count(distinct-values(//w:permEnd/@w:id)) = count(//w:permEnd/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:permStart",
+    "Test": "count(distinct-values(//w:permStart/@w:id)) = count(//w:permStart/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:dataSource",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@w:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/mailMergeSource\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:recipientData",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@w:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:src",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/mailMergeSource\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:attachedTemplate",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:autoCaption",
+    "Test": "count(distinct-values(//w:autoCaption/@w:name)) = count(//w:autoCaption/@w:name)",
+    "App": "All"
+  },
+  {
+    "Context": "w:documentProtection",
+    "Test": "@w:cryptAlgorithmSid = 1 or @w:cryptAlgorithmSid = 2 or @w:cryptAlgorithmSid = 3 or @w:cryptAlgorithmSid = 4 or @w:cryptAlgorithmSid = 12 or @w:cryptAlgorithmSid = 13 or @w:cryptAlgorithmSid = 14",
+    "App": "All"
+  },
+  {
+    "Context": "w:saveThroughXslt",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/transform\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:stylePaneFormatFilter",
+    "Test": "@w:val != 0x0040 and @w:val != 0x0080 and @w:val != 0x0800",
+    "App": "Word"
+  },
+  {
+    "Context": "w:div",
+    "Test": "count(distinct-values(//w:div/@w:id)) = count(//w:div/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:sourceFileName",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@w:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/frame\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:subDoc",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@w:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/subDocument\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:outlineLvl",
+    "Test": "@w:val \u003E= 0 and @w:val \u003C= 9",
+    "App": "All"
+  },
+  {
+    "Context": "w:control",
+    "Test": "count(distinct-values(//w:control/@w:name)) = count(//w:control/@w:name)",
+    "App": "All"
+  },
+  {
+    "Context": "w:bottom",
+    "Test": "@w:type",
+    "App": "Word"
+  },
+  {
+    "Context": "w:bottom",
+    "Test": "@w:w",
+    "App": "Word"
+  },
+  {
+    "Context": "w:divId",
+    "Test": "@w:val != 0",
+    "App": "Word"
+  },
+  {
+    "Context": "w:printerSettings",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@w:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:name",
+    "Test": "matches(@w:val, \u0022[^,]*\u0022)",
+    "App": "Word"
+  },
+  {
+    "Context": "w:style",
+    "Test": "count(distinct-values(//w:styles/w:style/@w:styleId)) = count(//w:styles/w:style/@w:styleId)",
+    "App": "All"
+  },
+  {
+    "Context": "w:embedBoldItalic",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@w:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/font\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:embedItalic",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@w:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/font\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "w:embedRegular",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@w:id]/@Type = \u0027http://schemas.openxmlformats.org/officeDocument/2006/relationships/font\u0027",
+    "App": "All"
+  },
+  {
+    "Context": "sl:schema",
+    "Test": "string-length(@sl:manifestLocation) \u003C= 2083",
+    "App": "Word"
+  },
+  {
+    "Context": "sl:schema",
+    "Test": "string-length(@sl:schemaLocation) \u003C= 2083",
+    "App": "Word"
+  },
+  {
+    "Context": "sl:schema",
+    "Test": "string-length(@sl:uri) \u003C= 255",
+    "App": "Word"
+  },
+  {
+    "Context": "x:oleItem",
+    "Test": "string-length(@x:name) \u003E= 1",
+    "App": "All"
+  },
+  {
+    "Context": "p:modifyVerifier",
+    "Test": "@p:cryptAlgorithmSid = 1 or @p:cryptAlgorithmSid = 2 or @p:cryptAlgorithmSid = 3 or @p:cryptAlgorithmSid = 4 or @p:cryptAlgorithmSid = 5 or @p:cryptAlgorithmSid = 6 or @p:cryptAlgorithmSid = 7 or @p:cryptAlgorithmSid = 8 or @p:cryptAlgorithmSid = 9 or @p:cryptAlgorithmSid = 10 or @p:cryptAlgorithmSid = 11 or @p:cryptAlgorithmSid = 12 or @p:cryptAlgorithmSid = 13 or @p:cryptAlgorithmSid = 14",
+    "App": "Word, Excel"
+  },
+  {
+    "Context": "x:undo",
+    "Test": "@x:dn and @x:sId",
+    "App": "All"
+  },
+  {
+    "Context": "w:del",
+    "Test": "count(distinct-values(//w:del/@w:id)) = count(//w:del/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:ins",
+    "Test": "count(distinct-values(//w:ins/@w:id)) = count(//w:ins/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "w:rPrChange",
+    "Test": "count(distinct-values(//w:rPrChange/@w:id)) = count(//w:rPrChange/@w:id)",
+    "App": "All"
+  },
+  {
+    "Context": "p:sldId",
+    "Test": "count(distinct-values(//p:sldId/@:id)) = count(//p:sldId/@:id)",
+    "App": "All"
+  },
+  {
+    "Context": "p:sldLayoutId",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "p:sldId",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "x:sheet",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "p:sldMasterId",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "v:stroke",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "a:hlinkClick",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "c:chart",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "x:hyperlink",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "x:drawing",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "w:attachedTemplate",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "v:fill",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "p:oleObj",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "c:externalData",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "x:pivotCache",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "p:notesMasterId",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "v:imagedata",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "w:footerReference",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "w:headerReference",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "w:hyperlink",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "p:handoutMasterId",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "x:legacyDrawing",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "w:embedRegular",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "p:sld",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "a:hlinkMouseOver",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "x:worksheetSource",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:shape",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:blip]",
+    "App": "All"
+  },
+  {
+    "Context": "a:blip",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:embed]",
+    "App": "All"
+  },
+  {
+    "Context": "a:blip",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:link]",
+    "App": "All"
+  },
+  {
+    "Context": "dgm:relIds",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:dm]",
+    "App": "All"
+  },
+  {
+    "Context": "v:imagedata",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:href]",
+    "App": "All"
+  },
+  {
+    "Context": "w:altChunk",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "App": "All"
+  },
+  {
+    "Context": "x:customWorkbookView",
+    "Test": "@x:guid != 00000000-0000-0000-0000-000000000000",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:customWorkbookView",
+    "Test": "@x:windowHeight \u003C= 2147483647",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:definedName",
+    "Test": "string-length(@x:comment) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:definedName",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:definedName",
+    "Test": "@x:localSheetId \u003C= 32766",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:functionGroup",
+    "Test": "string-length(@x:name) \u003C= 32",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:webPublishObject",
+    "Test": "string-length(@x:title) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:webPublishObject",
+    "Test": "string-length(@x:sourceObject) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:webPublishObject",
+    "Test": "string-length(@x:destinationFile) \u003E= 1 and string-length(@x:destinationFile) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:webPublishObject",
+    "Test": "string-length(@x:divId) \u003E= 1 and string-length(@x:divId) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:webPublishObject",
+    "Test": "@x:id \u003E= 1 and @x:id \u003C= 2147483647",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:brk",
+    "Test": "@x:min \u003C= 1048576",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:brk",
+    "Test": "@x:id \u003E= 1 and @x:id \u003C= 1048576",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:brk",
+    "Test": "@x:max \u003E= 1 and @x:max \u003C= 1048576",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:color",
+    "Test": "@x:tint \u003E= -1 and @x:tint \u003C= 1",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:color",
+    "Test": "@x:indexed \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:color",
+    "Test": "@x:theme \u003E= 0 and @x:theme \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:control",
+    "Test": "count(distinct-values(//x:control/@x:name)) = count(//x:control/@x:name)",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:control",
+    "Test": "string-length(@x:name) \u003C= 32",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:dataBar",
+    "Test": "@x:maxLength \u003C= 100",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:dataBar",
+    "Test": "@x:minLength \u003C= 100",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:dataValidations",
+    "Test": "@x:xWindow \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:dataValidations",
+    "Test": "@x:yWindow \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:dataValidations",
+    "Test": "@x:count \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:inputCells",
+    "Test": "string-length(@x:val) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pageSetup",
+    "Test": "@x:fitToWidth \u003C= 32767",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pageSetup",
+    "Test": "@x:fitToHeight \u003C= 32767",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pageSetup",
+    "Test": "@x:copies \u003E= 1 and @x:copies \u003C= 32767",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pageSetup",
+    "Test": "@x:horizontalDpi \u003E= 1",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pageSetup",
+    "Test": "@x:verticalDpi \u003E= 1",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pivotSelection",
+    "Test": "@x:previousCol \u003C= 16383",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pivotSelection",
+    "Test": "@x:previousRow \u003C= 1048575",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:scenario",
+    "Test": "@x:count \u003E= 1 and @x:count \u003C= 32",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:scenario",
+    "Test": "string-length(@x:name) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:scenario",
+    "Test": "string-length(@x:user) \u003E= 1 and string-length(@x:user) \u003C= 54",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:scenario",
+    "Test": "string-length(@x:comment) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:selection",
+    "Test": "@x:activeCell \u003C= 8191",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:table",
+    "Test": "@x:id \u003E= 1 and @x:id \u003C= 4294967294",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:table",
+    "Test": "string-length(@x:name) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:table",
+    "Test": "string-length(@x:comment) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:table",
+    "Test": "string-length(@x:dataCellStyle) \u003E= 1 and string-length(@x:dataCellStyle) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:table",
+    "Test": "string-length(@x:headerRowCellStyle) \u003E= 1 and string-length(@x:headerRowCellStyle) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:table",
+    "Test": "string-length(@x:totalsRowCellStyle) \u003E= 1 and string-length(@x:totalsRowCellStyle) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:table",
+    "Test": "@x:connectionId \u003C= 2147483647",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:tableColumn",
+    "Test": "string-length(@x:uniqueName) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:tableStyleInfo",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:xmlColumnPr",
+    "Test": "@x:mapId \u003E= 1 and @x:mapId \u003C= 21474836477",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:xmlCellPr",
+    "Test": "string-length(@x:uniqueName) \u003E= 1 and string-length(@x:uniqueName) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:c",
+    "Test": "@x:i \u003E= 1 and @x:i \u003C= 65534",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:alignment",
+    "Test": "@x:indent \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:alignment",
+    "Test": "@x:readingOrder = 0 or @x:readingOrder = 1 or @x:readingOrder = 2",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:family",
+    "Test": "@x:val \u003E= 0 and @x:val \u003C= 5",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:name",
+    "Test": "string-length(@x:val) \u003E= 1 and string-length(@x:val) \u003C= 31",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:tableStyle",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:col",
+    "Test": "@x:min \u003C= @x:max",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:b",
+    "Test": "string-length(@x:c) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:cacheHierarchy",
+    "Test": "string-length(@x:displayFolder) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:cacheHierarchy",
+    "Test": "string-length(@x:measureGroup) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:cacheHierarchy",
+    "Test": "@x:iconSet \u003E= 0 and @x:iconSet \u003C= 11",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:calculatedMember",
+    "Test": "string-length(@x:memberName) \u003E= 1 and string-length(@x:memberName) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:calculatedMember",
+    "Test": "string-length(@x:hierarchy) \u003E= 1 and string-length(@x:hierarchy) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:calculatedMember",
+    "Test": "string-length(@x:parent) \u003E= 1 and string-length(@x:parent) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:d",
+    "Test": "string-length(@x:c) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:dimension",
+    "Test": "string-length(@x:caption) \u003E= 1 and string-length(@x:caption) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:dimension",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:dimension",
+    "Test": "string-length(@x:uniqueName) \u003E= 1 and string-length(@x:uniqueName) \u003C= 32767",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:e",
+    "Test": "string-length(@x:c) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:groupMember",
+    "Test": "string-length(@x:uniqueName) \u003E= 1 and string-length(@x:uniqueName) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:item",
+    "Test": "(@x:x and @x:t = data) or @x:t != data",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:kpi",
+    "Test": "string-length(@x:caption) \u003E= 1 and string-length(@x:caption) \u003C= 32767",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:kpi",
+    "Test": "string-length(@x:displayFolder) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:kpi",
+    "Test": "string-length(@x:measureGroup) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:kpi",
+    "Test": "string-length(@x:parent) \u003C= 32767",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:m",
+    "Test": "string-length(@x:c) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:measureGroup",
+    "Test": "string-length(@x:caption) \u003E= 1 and string-length(@x:caption) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:measureGroup",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:n",
+    "Test": "string-length(@x:c) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:n",
+    "Test": "@x:v != INF and @x:v != -INF and @x:v != NaN",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pivotTableDefinition",
+    "Test": "string-length(@x:dataCaption) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pivotTableDefinition",
+    "Test": "string-length(@grandTotalCaption) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pivotTableDefinition",
+    "Test": "string-length(@x:errorCaption) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pivotTableDefinition",
+    "Test": "string-length(@x:missingCaption) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pivotTableDefinition",
+    "Test": "string-length(@x:pageStyle) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pivotTableDefinition",
+    "Test": "string-length(@x:pivotTableStyle) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pivotTableDefinition",
+    "Test": "string-length(@x:vacatedStyle) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pivotTableDefinition",
+    "Test": "string-length(@x:name) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pivotTableDefinition",
+    "Test": "string-length(@x:tag) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:pivotTableStyleInfo",
+    "Test": "string-length(@x:name) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:s",
+    "Test": "string-length(@x:c) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:set",
+    "Test": "string-length(@x:setDefinition) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:set",
+    "Test": "@x:maxRank \u003E= 0 and @x:maxRank \u003C= 1048576",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:tpl",
+    "Test": "@x:fld and @x:hier",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:header",
+    "Test": "@x:maxSheetId \u003C= 32767",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:header",
+    "Test": "string-length(@x:userName) \u003E= 1 and string-length(@x:userName) \u003C= 54",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:header",
+    "Test": "@x:minRId \u003C= 2147483647",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:nc",
+    "Test": "@x:cm = 0",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:nc",
+    "Test": "@x:vm = 0",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:nc",
+    "Test": "@x:s = 0",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:raf",
+    "Test": "@x:sheetId \u003C= 32767",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:rcc",
+    "Test": "@x:sId \u003C= 32767",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "string-length(@x:comment) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "string-length(@x:oldComment) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:rdn",
+    "Test": "@x:rId \u003C= 2147483647",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:ris",
+    "Test": "@x:sheetId \u003C= 32767",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:ris",
+    "Test": "@x:sheetPosition \u003C= 65533",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:users",
+    "Test": "@x:count \u003C= 256",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:deletedField",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:connection",
+    "Test": "@x:interval \u003C= 32767",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:connection",
+    "Test": "string-length(@x:name) \u003E= 1 and string-length(@x:name) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:connection",
+    "Test": "string-length(@x:description) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:connection",
+    "Test": "string-length(@x:singleSignOnId) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:connection",
+    "Test": "string-length(@x:odcFile) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:connection",
+    "Test": "string-length(@x:sourceFile) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:dbPr",
+    "Test": "string-length(@x:connection) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:textPr",
+    "Test": "@x:firstRow \u003C= 2147483647",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:textPr",
+    "Test": "string-length(@x:sourceFile) \u003E= 1 and string-length(@x:sourceFile) \u003C= 218",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:textPr",
+    "Test": "(@x:sourceFile and @x:prompt = false) or @x:prompt != false",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:values",
+    "Test": "@x:cols \u003E= 1 and @x:cols \u003C= 16384",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:values",
+    "Test": "@x:rows \u003E= 1 and @x:rows \u003C= 1048576",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:main",
+    "Test": "string-length(@x:first) \u003E= 1 and string-length(@x:first) \u003C= 255",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:tr",
+    "Test": "@x:s \u003E= 1 and @x:s \u003C= 65534",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:DataBinding",
+    "Test": "string-length(@x:DataBindingName) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:DataBinding",
+    "Test": "string-length(@x:FileBindingName) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:DataBinding",
+    "Test": "@x:ConnectionID \u003C= 2147483647",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:DataBinding",
+    "Test": "@x:FileBindingName and @x:FileBinding = false",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:Schema",
+    "Test": "string-length(@x:ID) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:Schema",
+    "Test": "string-length(@x:SchemaRef) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "x:Schema",
+    "Test": "string-length(@x:Namespace) \u003C= 65535",
+    "App": "Excel"
+  },
+  {
+    "Context": "c:pageSetup",
+    "Test": "@c:paperSize \u003C= 2147483647",
+    "App": "Excel"
+  },
+  {
+    "Context": "xvml:ClientData",
+    "Test": "@xvml:ObjectType != Movie",
+    "App": "Excel"
+  },
+  {
+    "Context": "xvml:ClientData",
+    "Test": "@x:ObjectType != LineA and @x:ObjectType != RectA",
+    "App": "Excel"
+  },
+  {
+    "Context": "p:custShow",
+    "Test": "count(distinct-values(lower-case(//p:htmlPubPr/p:custShow/@p:id))) = count(lower-case(//p:htmlPubPr/p:custShow/@p:id))",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:custShow",
+    "Test": "count(distinct-values(lower-case(//p:showPr/p:custShow/@p:id))) = count(lower-case(//p:showPr/p:custShow/@p:id))",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:modifyVerifier",
+    "Test": "@p:cryptAlgorithmSid = 1 or @p:cryptAlgorithmSid = 2 or @p:cryptAlgorithmSid = 3 or @p:cryptAlgorithmSid = 4 or @p:cryptAlgorithmSid = 12 or @p:cryptAlgorithmSid = 13 or @p:cryptAlgorithmSid = 14",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:modifyVerifier",
+    "Test": "@p:cryptProviderTypeExtSource = wincrypt or @p:cryptProviderTypeExtSource = \u0027\u0027",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:modifyVerifier",
+    "Test": "@p:algIdExtSource = wincrypt or @p:algIdExtSource = \u0027\u0027",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:presentation",
+    "Test": "@p:firstSlideNum \u003E= 0 and @p:firstSlideNum \u003C= 9999",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:transition",
+    "Test": "@p:advTm \u003E= 0 and @p:advTm \u003C= 2147483647",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:tag",
+    "Test": "count(distinct-values(lower-case(ancestor::p:tagLst//p:tag/@p:name))) = count(lower-case(ancestor::p:tagLst//p:tag/@p:name))",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:animMotion",
+    "Test": "@p:rAng \u003E= -2147483554 and @p:rAng \u003C= 2147483554",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:animRot",
+    "Test": "@p:by \u003E= -2147483554 and @p:by \u003C= 2147483554",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:animRot",
+    "Test": "@p:from \u003E= -2147483554 and @p:from \u003C= 2147483554",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:animRot",
+    "Test": "@p:to \u003E= -2147483554 and @p:to \u003C= 2147483554",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:bldDgm",
+    "Test": "Index-of(document(\u0027Part:.\u0027)//p:cTn/@p:grpId, @p:grpId)",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:bldDgm",
+    "Test": "Index-of(document(\u0027Part:.\u0027)//p:cNvPr/@p:id, @p:spid)",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:bldGraphic",
+    "Test": "Index-of(document(\u0027Part:.\u0027)//p:cNvPr/@p:id, @p:spid)",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:bldGraphic",
+    "Test": "Index-of(document(\u0027Part:.\u0027)//p:cTn/@p:grpId, @p:grpId)",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:bldOleChart",
+    "Test": "Index-of(document(\u0027Part:.\u0027)//p:cNvPr/@p:id, @p:spid)",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:bldOleChart",
+    "Test": "Index-of(document(\u0027Part:.\u0027)//p:cTn/@p:grpId, @p:grpId)",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:bldP",
+    "Test": "Index-of(document(\u0027Part:.\u0027)//p:cNvPr/@p:id, @p:spid)",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:cTn",
+    "Test": "@p:spd != 0",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:tmPct",
+    "Test": "@p:val \u003C= 2147483625",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:tmpl",
+    "Test": "@p:lvl \u003C= 9",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p:tmpl",
+    "Test": "count(distinct-values(ancestor::p:tmplLst//p:tmpl/@p:lvl)) = count(ancestor::p:tmplLst//p:tmpl/@p:lvl)",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "w14:docId",
+    "Test": "@w14:val \u003E 0 and @w14:val \u003C 0x80000000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "w:p",
+    "Test": "@w14:paraId \u003E 0 and @w14:paraId \u003C 0x80000000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "w:tr",
+    "Test": "@w14:paraId \u003E 0 and @w14:paraId \u003C 0x80000000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "w:p",
+    "Test": "@w14:textId \u003E 0 and @w14:textId \u003C 0x80000000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "w:tr",
+    "Test": "@w14:textId \u003E 0 and @w14:textId \u003C 0x80000000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "w14:styleSet",
+    "Test": "@w14:id \u003E= 1 and @w14:id \u003C= 20",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "w:compatSetting",
+    "Test": "((@w:val = 11 or @w:val = 12 or @w:val = 14 or @w:val = 15) and @w:name = compatibilityMode) or @w:name != compatibilityMode",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "p14:bmk",
+    "Test": "count(distinct-values(ancestor::p14:bmkLst//p14:bmk/@p14:name)) = count(ancestor::p14:bmkLst//p14:bmk/@p14:name)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "p14:bmk",
+    "Test": "count(distinct-values(ancestor::p14:bmkLst//p14:bmk/@p14:time)) = count(ancestor::p14:bmkLst//p14:bmk/@p14:time)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "inkml:channel",
+    "Test": "@inkml:units = dev or @inkml:units = in or @inkml:units = cm or @inkml:units = deg or @inkml:units = rad or @inkml:units = s or @inkml:units = lb or @inkml:units = g",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "emma:interpretation",
+    "Test": "matches(@emma:id, \u0022[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\u0022)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "emma:interpretation",
+    "Test": "@emma:mode = ink",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "emma:one-of",
+    "Test": "@emma:disjunction-type = recognition",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "a14:cameraTool",
+    "Test": "matches(@a14:spid, \u0022_x0000_s(102[5-9]|10[3-9][0-9]|1[1-9][0-9]{2}|[1-9][0-9]{3,7}|1[0-9]{8}|2[0-5][0-9]{7}|26[0-7][0-9]{6}|268[0-3][0-9]{5}|2684[0-2][0-9]{4}|26843[0-4][0-9]{3}|268435[0-3][0-9]{2}|2684354[0-4][0-9]|26843545[0-6])\u0022)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "a14:compatExt",
+    "Test": "matches(@a14:spid, \u0022_x0000_s(102[5-9]|10[3-9][0-9]|1[1-9][0-9]{2}|[1-9][0-9]{3,7}|1[0-9]{8}|2[0-5][0-9]{7}|26[0-7][0-9]{6}|268[0-3][0-9]{5}|2684[0-2][0-9]{4}|26843[0-4][0-9]{3}|268435[0-3][0-9]{2}|2684354[0-4][0-9]|26843545[0-6])\u0022)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:dataValidations",
+    "Test": "@x14:xWindow \u003C= 65535",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:dataValidation",
+    "Test": "string-length(@x14:error) \u003C= 225",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:dataValidation",
+    "Test": "string-length(@x14:promptTitle) \u003C= 32",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:dataValidation",
+    "Test": "string-length(@x14:prompt) \u003C= 225",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:colorSeries",
+    "Test": "@x14:auto = false",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:colorNegative",
+    "Test": "@x14:auto = false",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:colorAxis",
+    "Test": "@x14:auto = false",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:colorMarkers",
+    "Test": "@x14:auto = false",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:colorFirst",
+    "Test": "@x14:auto = false",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:colorLast",
+    "Test": "@x14:auto = false",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:colorHigh",
+    "Test": "@x14:auto = false",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:sparklineGroup",
+    "Test": "(@x14:manualMin = 0 and (@x14:minAxisType = individual or @x14:minAxisType = group)) or (@x14:minAxisType != individual and @x14:minAxisType != group)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:sparklineGroup",
+    "Test": "@x14:lineWeight \u003E= 0 and @x14:lineWeight \u003C= 1584",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:workbookPr",
+    "Test": "@x14:defaultImageDpi = 96 or @x14:defaultImageDpi = 150 or @x14:defaultImageDpi = 220",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:calculatedMember",
+    "Test": "string-length(@x14:displayFolder) \u003C= 65535",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:calculatedMember",
+    "Test": "string-length(@x14:mdxLong) \u003E= 32766 and string-length(@x14:mdxLong) \u003C= 1073741822",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:header",
+    "Test": "string-length(@x14:uniqueName) \u003C= 65535",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:header",
+    "Test": "string-length(@x14:hierarchyName) \u003C= 65535",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:rowItem",
+    "Test": "string-length(@x14:u) \u003C= 65535",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:rowItem",
+    "Test": "string-length(@x14:d) \u003C= 65535",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:setLevel",
+    "Test": "@x14:hierarchy \u003E= -2",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:dataField",
+    "Test": "count(distinct-values(//x14:dataField/@x14:uniqueName)) = count(//x14:dataField/@x14:uniqueName)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:dataField",
+    "Test": "string-length(@x14:uniqueName) \u003C= 65535",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:cfRule",
+    "Test": "@x14:priority \u003E 0",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:cfRule",
+    "Test": "count(distinct-values(//x14:cfRule/@x14:priority)) = count(//x14:cfRule/@x14:priority)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:cfRule",
+    "Test": "@x14:aboveAverage and @x14:type != aboveAverage",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:cfRule",
+    "Test": "@x14:percent and @x14:type != top10",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:cfRule",
+    "Test": "@x14:bottom and @x14:type != top10",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:cfRule",
+    "Test": "@x14:text and @x14:type != beginsWith and @x14:type != containsText and @x14:type != endsWith and @x14:type != notContainsText",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:cfRule",
+    "Test": "@x14:timePeriod and @x14:type != timePeriod",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:cfRule",
+    "Test": "@x14:stdDev and @x14:type != aboveAverage",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:cfRule",
+    "Test": "@x14:equalAverage and @x14:type != aboveAverage",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:dataBar",
+    "Test": "@x14:minLength \u003C= @x14:maxLength",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:dataBar",
+    "Test": "@x14:maxLength \u003C= 100",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:pivotTableDefinition",
+    "Test": "string-length(@x14:altText) \u003C= 2000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:pivotTableDefinition",
+    "Test": "string-length(@x14:altTextSummary) \u003C= 2000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:pivotTableDefinition",
+    "Test": "string-length(@x14:weightExpression) \u003C= 65535",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:connection",
+    "Test": "string-length(@x14:culture) \u003C= 84",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:connection",
+    "Test": "string-length(@x14:embeddedDataId) \u003C= 65535",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:table",
+    "Test": "string-length(@x14:altText) \u003C= 25000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:table",
+    "Test": "string-length(@x14:altTextSummary) \u003C= 50000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:pivotChange",
+    "Test": "string-length(@x14:weightExpression) \u003E= 1 and string-length(@x14:weightExpression) \u003C= 65535",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:editValue",
+    "Test": "string-length(@x14:valueType) \u003E= 1 and string-length(@x14:valueType) \u003C= 32767",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:slicerStyle",
+    "Test": "string-length(@x14:name) \u003E= 1 and string-length(@x14:name) \u003C= 255",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:slicerStyle",
+    "Test": "Index-of(document(\u0027Part:.\u0027)//x:tableStyle/@x:name, @x14:name)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:slicerStyle",
+    "Test": "count(distinct-values(ancestor::x14:slicerStyles//x14:slicerStyle/@x14:name)) = count(ancestor::x14:slicerStyles//x14:slicerStyle/@x14:name)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:slicerStyleElement",
+    "Test": "count(distinct-values(ancestor::x14:slicerStyleElements//x14:slicerStyleElement/@x14:type)) = count(ancestor::x14:slicerStyleElements//x14:slicerStyleElement/@x14:type)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:slicerStyleElement",
+    "Test": "@x14:dxfId \u003C count(document(\u0027Part:.\u0027)//x:dxf) \u002B 0",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:conditionalFormat",
+    "Test": "@x14:type = none",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:conditionalFormat",
+    "Test": "@x14:priority \u003E= 1",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:conditionalFormat",
+    "Test": "Index-of(document(\u0027Part:..\u0027)//x14:cfRule/@x14:priority, @x14:priority)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:slicerStyles",
+    "Test": "string-length(@x14:defaultSlicerStyle) \u003E= 1 and string-length(@x14:defaultSlicerStyle) \u003C= 255",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:protectedRange",
+    "Test": "@x14:password and @x14:algorithmName",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:protectedRange",
+    "Test": "@x14:spinCount \u003C= 10000000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:protectedRange",
+    "Test": "string-length(@x14:name) \u003E= 1 and string-length(@x14:name) \u003C= 255",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:sortCondition",
+    "Test": "@x14:dxfId and (@x14:sortBy = icon or @x14:sortBy = value)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:sortCondition",
+    "Test": "@x14:iconSet and @x14:sortBy != icon",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:sortCondition",
+    "Test": "@x14:iconId and @x14:sortBy != icon",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:formControlPr",
+    "Test": "@x14:dropLines \u003E= 0 and @x14:dropLines \u003C= 30000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:formControlPr",
+    "Test": "@x14:inc \u003E= 0 and @x14:inc \u003C= 30000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:formControlPr",
+    "Test": "@x14:max \u003E= 0 and @x14:max \u003C= 30000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:formControlPr",
+    "Test": "@x14:min \u003E= 0 and @x14:min \u003C= 30000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:formControlPr",
+    "Test": "@x14:page \u003E= 0 and @x14:page \u003C= 30000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:datastoreItem",
+    "Test": "string-length(@x14:id) \u003C= 65535",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:slicer",
+    "Test": "count(distinct-values(lower-case(//x14:slicer/@x14:name))) = count(lower-case(//x14:slicer/@x14:name))",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:slicer",
+    "Test": "string-length(@x14:name) \u003E= 1 and string-length(@x14:name) \u003C= 32767",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:slicer",
+    "Test": "string-length(@x14:caption) \u003E= 1",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:slicer",
+    "Test": "@x14:columnCount \u003E= 1 and @x14:columnCount \u003C= 20000",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:pivotTable",
+    "Test": "Index-of(document(\u0027Part:/WorkbookPart\u0027)//x:sheet/@x:sheetId, @x14:tabId)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:range",
+    "Test": "matches(@x14:startItem, \u0022(0|[1-9][0-9]*000)\u0022)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:level",
+    "Test": "string-length(@x14:uniqueName) \u003E= 1 and string-length(@x14:uniqueName) \u003C= 32767",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:i",
+    "Test": "count(distinct-values(ancestor::x14:items//x14:i/@x14:x)) = count(ancestor::x14:items//x14:i/@x14:x)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "wne:mcd",
+    "Test": "string-length(@wne:name) \u003C= 255",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "wne:mcd",
+    "Test": "@wne:bEncrypt = 0",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "wne:mcd",
+    "Test": "@wne:cmg = 56",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:definedName",
+    "Test": "count(distinct-values(ancestor::x14:definedNames//x14:definedName/@x14:name)) = count(ancestor::x14:definedNames//x14:definedName/@x14:name)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:argumentDescription",
+    "Test": "count(distinct-values(ancestor::x14:argumentDescriptions//x14:argumentDescription/@x14:index)) = count(ancestor::x14:argumentDescriptions//x14:argumentDescription/@x14:index)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "mso14:control",
+    "Test": "@mso14:size and @mso14:getSize",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "mso14:button",
+    "Test": "(@mso14:insertAfterMso and @mso14:insertAfterQ) or (@mso14:insertAfterMso and @mso14:insertBeforeMso) or (@mso14:insertAfterMso and @mso14:insertBeforeQ) or (@mso14:insertAfterQ and @mso14:insertBeforeMso) or (@mso14:insertAfterQ and @mso14:insertBeforeQ) or (@mso14:insertBeforeMso and @mso14:insertBeforeQ)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "mso14:button",
+    "Test": "@mso14:size and @mso14:getSize",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "w:sig",
+    "Test": "matches(@w:csb0, \u0022[0-9a-fA-F]{8}\u0022)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "w:sig",
+    "Test": "matches(@w:csb1, \u0022[0-9a-fA-F]{8}\u0022)",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "inkml:activeArea",
+    "Test": "@inkml:units = dev or @inkml:units = in or @inkml:units = cm or @inkml:units = deg or @inkml:units = rad or @inkml:units = s or @inkml:units = lb or @inkml:units = g",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "inkml:srcProperty",
+    "Test": "@inkml:units = dev or @inkml:units = in or @inkml:units = cm or @inkml:units = deg or @inkml:units = rad or @inkml:units = s or @inkml:units = lb or @inkml:units = g",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "inkml:channelProperty",
+    "Test": "@inkml:units = dev or @inkml:units = in or @inkml:units = cm or @inkml:units = deg or @inkml:units = rad or @inkml:units = s or @inkml:units = lb or @inkml:units = g",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "inkml:brushProperty",
+    "Test": "@inkml:units = dev or @inkml:units = in or @inkml:units = cm or @inkml:units = deg or @inkml:units = rad or @inkml:units = s or @inkml:units = lb or @inkml:units = g",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "p:contentPart",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:slicerCache",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:slicer",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "p14:media",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:link]",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "p14:media",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:embed]",
+    "Version": "Office2010",
+    "App": "All"
+  },
+  {
+    "Context": "x14:dataValidations",
+    "Test": "@x14:yWindow \u003C= 65535",
+    "Version": "Office2010",
+    "App": "Excel"
+  },
+  {
+    "Context": "x14:cacheHierarchy",
+    "Test": "(@x14:flattenHierarchies = false and @x14:ignore = true) or @x14:ignore != true",
+    "Version": "Office2010",
+    "App": "Excel"
+  },
+  {
+    "Context": "x14:cacheHierarchy",
+    "Test": "(@x14:measuresSet = false and @x14:ignore = true) or @x14:ignore != true",
+    "Version": "Office2010",
+    "App": "Excel"
+  },
+  {
+    "Context": "x14:cacheHierarchy",
+    "Test": "(@x14:hierarchizeDistinct = false and @x14:ignore = true) or @x14:ignore != true",
+    "Version": "Office2010",
+    "App": "Excel"
+  },
+  {
+    "Context": "w15:commentEx",
+    "Test": "matches(@w15:paraId, \u0022[0-9a-fA-F]{8}\u0022)",
+    "Version": "Office2013",
+    "App": "Word"
+  },
+  {
+    "Context": "w15:commentEx",
+    "Test": "string-length(@w15:done) \u003E= 1",
+    "Version": "Office2013",
+    "App": "Word"
+  },
+  {
+    "Context": "wetp:webextensionref",
+    "Test": "document(rels)//r:Relationship[@Id = current()/@r:id]",
+    "Version": "Office2013",
+    "App": "Word, Excel"
+  },
+  {
+    "Context": "we:webextension",
+    "Test": "string-length(@we:id) \u003E= 1 and string-length(@we:id) \u003C= 1000",
+    "Version": "Office2013",
+    "App": "Word, Excel"
+  },
+  {
+    "Context": "we:reference",
+    "Test": "string-length(@we:id) \u003E= 1 and string-length(@we:id) \u003C= 1000",
+    "Version": "Office2013",
+    "App": "Word, Excel"
+  },
+  {
+    "Context": "w15:presenceInfo",
+    "Test": "string-length(@w15:providerId) \u003E= 1 and string-length(@w15:providerId) \u003C= 100",
+    "Version": "Office2013",
+    "App": "Word"
+  },
+  {
+    "Context": "w15:presenceInfo",
+    "Test": "string-length(@w15:userId) \u003E= 1 and string-length(@w15:userId) \u003C= 300",
+    "Version": "Office2013",
+    "App": "Word"
+  },
+  {
+    "Context": "thm15:themeFamily",
+    "Test": "string-length(@thm15:id) \u003E= 1 and string-length(@thm15:id) \u003C= 100",
+    "Version": "Office2013",
+    "App": "Excel, PowerPoint"
+  },
+  {
+    "Context": "x15ac:absPath",
+    "Test": "string-length(@x15ac:url) \u003E= 1 and string-length(@x15ac:url) \u003C= 1000",
+    "Version": "Office2013",
+    "App": "Excel"
+  },
+  {
+    "Context": "x15:timeline",
+    "Test": "string-length(@x15:name) \u003E= 1 and string-length(@x15:name) \u003C= 1000",
+    "Version": "Office2013",
+    "App": "Excel"
+  },
+  {
+    "Context": "p15:presenceInfo",
+    "Test": "string-length(@p15:providerId) \u003E= 1 and string-length(@p15:providerId) \u003C= 100",
+    "Version": "Office2013",
+    "App": "PowerPoint"
+  },
+  {
+    "Context": "p15:presenceInfo",
+    "Test": "string-length(@p15:userId) \u003E= 1 and string-length(@p15:userId) \u003C= 300",
+    "Version": "Office2013",
+    "App": "PowerPoint"
+  }
+]

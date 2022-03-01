@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "msink:CT_CtxLink/",
+    "ClassName": "ContextLinkType"
+  },
+  {
+    "Name": "msink:CT_CtxNode/msink:context",
+    "ClassName": "ContextNode"
+  },
+  {
+    "Name": "msink:CT_CtxLink/msink:destinationLink",
+    "ClassName": "DestinationLink"
+  },
+  {
+    "Name": "msink:CT_Property/msink:property",
+    "ClassName": "ContextNodeProperty"
+  },
+  {
+    "Name": "msink:CT_CtxLink/msink:sourceLink",
+    "ClassName": "SourceLink"
+  }
+]

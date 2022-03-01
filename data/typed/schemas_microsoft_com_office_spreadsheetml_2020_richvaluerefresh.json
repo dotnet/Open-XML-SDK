@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "xlrvr:CT_RichValueRefreshInterval/xlrvr:refreshInterval",
+    "ClassName": "RichValueRefreshInterval"
+  },
+  {
+    "Name": "xlrvr:CT_RichValueRefreshIntervals/xlrvr:refreshIntervals",
+    "ClassName": "RichValueRefreshIntervals"
+  }
+]

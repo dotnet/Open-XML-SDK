@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "a16:CT_Identifier/",
+    "ClassName": "OpenXmlIdentifierElement"
+  },
+  {
+    "Name": "a16:CT_Identifier/a16:colId",
+    "ClassName": "ColIdIdentifier"
+  },
+  {
+    "Name": "a16:CT_CreationId/a16:creationId",
+    "ClassName": "CreationId"
+  },
+  {
+    "Name": "a16:CT_ConnectableReferences/a16:cxnDERefs",
+    "ClassName": "ConnectableReferences"
+  },
+  {
+    "Name": "a16:CT_PredecessorDrawingElementReference/a16:predDERef",
+    "ClassName": "PredecessorDrawingElementReference"
+  },
+  {
+    "Name": "a16:CT_Identifier/a16:rowId",
+    "ClassName": "RowIdIdentifier"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "Name": "ThumbnailPart",
+  "Base": "OpenXmlPart",
+  "RelationshipType": "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail",
+  "Target": "thumbnail",
+  "Extension": ".bin",
+  "Paths": {
+    "General": "docProps"
+  }
+}

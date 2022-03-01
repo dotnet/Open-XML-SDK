@@ -1,0 +1,1525 @@
+{
+  "TargetNamespace": "urn:schemas-microsoft-com:office:excel",
+  "Types": [
+    {
+      "Name": "xvml:CT_ClientData/xvml:ClientData",
+      "ClassName": "ClientData",
+      "Summary": "Attached Object Data.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":ObjectType",
+          "PropertyName": "ObjectType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues\u003E",
+          "PropertyComments": "Object type",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:MoveWithCells"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:SizeWithCells"
+        },
+        {
+          "Name": "xsd:string/xvml:Anchor"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:Locked"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:DefaultSize"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:PrintObject"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:Disabled"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:AutoFill"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:AutoLine"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:AutoPict"
+        },
+        {
+          "Name": "xvml:ST_Macro/xvml:FmlaMacro"
+        },
+        {
+          "Name": "xsd:string/xvml:TextHAlign"
+        },
+        {
+          "Name": "xsd:string/xvml:TextVAlign"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:LockText"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:JustLastX"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:SecretEdit"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:Default"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:Help"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:Cancel"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:Dismiss"
+        },
+        {
+          "Name": "xsd:unsignedByte/xvml:Accel"
+        },
+        {
+          "Name": "xsd:unsignedByte/xvml:Accel2"
+        },
+        {
+          "Name": "xsd:integer/xvml:Row"
+        },
+        {
+          "Name": "xsd:integer/xvml:Column"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:Visible"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:RowHidden"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:ColHidden"
+        },
+        {
+          "Name": "xsd:integer/xvml:VTEdit"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:MultiLine"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:VScroll"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:ValidIds"
+        },
+        {
+          "Name": "xsd:string/xvml:FmlaRange"
+        },
+        {
+          "Name": "xsd:integer/xvml:WidthMin"
+        },
+        {
+          "Name": "xsd:integer/xvml:Sel"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:NoThreeD2"
+        },
+        {
+          "Name": "xsd:string/xvml:SelType"
+        },
+        {
+          "Name": "xsd:string/xvml:MultiSel"
+        },
+        {
+          "Name": "xsd:string/xvml:LCT"
+        },
+        {
+          "Name": "xsd:string/xvml:ListItem"
+        },
+        {
+          "Name": "xsd:string/xvml:DropStyle"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:Colored"
+        },
+        {
+          "Name": "xsd:integer/xvml:DropLines"
+        },
+        {
+          "Name": "xsd:integer/xvml:Checked"
+        },
+        {
+          "Name": "xsd:string/xvml:FmlaLink"
+        },
+        {
+          "Name": "xsd:string/xvml:FmlaPict"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:NoThreeD"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:FirstButton"
+        },
+        {
+          "Name": "xsd:string/xvml:FmlaGroup"
+        },
+        {
+          "Name": "xsd:integer/xvml:Val"
+        },
+        {
+          "Name": "xsd:integer/xvml:Min"
+        },
+        {
+          "Name": "xsd:integer/xvml:Max"
+        },
+        {
+          "Name": "xsd:integer/xvml:Inc"
+        },
+        {
+          "Name": "xsd:integer/xvml:Page"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:Horiz"
+        },
+        {
+          "Name": "xsd:integer/xvml:Dx"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:MapOCX"
+        },
+        {
+          "Name": "xvml:ST_CF/xvml:CF"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:Camera"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:RecalcAlways"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:AutoScale"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:DDE"
+        },
+        {
+          "Name": "xvml:ST_TrueFalseBlank/xvml:UIObj"
+        },
+        {
+          "Name": "xsd:string/xvml:ScriptText"
+        },
+        {
+          "Name": "xsd:string/xvml:ScriptExtended"
+        },
+        {
+          "Name": "xsd:nonNegativeInteger/xvml:ScriptLanguage"
+        },
+        {
+          "Name": "xsd:nonNegativeInteger/xvml:ScriptLocation"
+        },
+        {
+          "Name": "xsd:string/xvml:FmlaTxbx"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:MoveWithCells"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:SizeWithCells"
+          },
+          {
+            "Name": "xsd:string/xvml:Anchor"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:Locked"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:DefaultSize"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:PrintObject"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:Disabled"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:AutoFill"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:AutoLine"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:AutoPict"
+          },
+          {
+            "Name": "xvml:ST_Macro/xvml:FmlaMacro"
+          },
+          {
+            "Name": "xsd:string/xvml:TextHAlign"
+          },
+          {
+            "Name": "xsd:string/xvml:TextVAlign"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:LockText"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:JustLastX"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:SecretEdit"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:Default"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:Help"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:Cancel"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:Dismiss"
+          },
+          {
+            "Name": "xsd:unsignedByte/xvml:Accel"
+          },
+          {
+            "Name": "xsd:unsignedByte/xvml:Accel2"
+          },
+          {
+            "Name": "xsd:integer/xvml:Row"
+          },
+          {
+            "Name": "xsd:integer/xvml:Column"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:Visible"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:RowHidden"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:ColHidden"
+          },
+          {
+            "Name": "xsd:integer/xvml:VTEdit"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:MultiLine"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:VScroll"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:ValidIds"
+          },
+          {
+            "Name": "xsd:string/xvml:FmlaRange"
+          },
+          {
+            "Name": "xsd:integer/xvml:WidthMin"
+          },
+          {
+            "Name": "xsd:integer/xvml:Sel"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:NoThreeD2"
+          },
+          {
+            "Name": "xsd:string/xvml:SelType"
+          },
+          {
+            "Name": "xsd:string/xvml:MultiSel"
+          },
+          {
+            "Name": "xsd:string/xvml:LCT"
+          },
+          {
+            "Name": "xsd:string/xvml:ListItem"
+          },
+          {
+            "Name": "xsd:string/xvml:DropStyle"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:Colored"
+          },
+          {
+            "Name": "xsd:integer/xvml:DropLines"
+          },
+          {
+            "Name": "xsd:integer/xvml:Checked"
+          },
+          {
+            "Name": "xsd:string/xvml:FmlaLink"
+          },
+          {
+            "Name": "xsd:string/xvml:FmlaPict"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:NoThreeD"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:FirstButton"
+          },
+          {
+            "Name": "xsd:string/xvml:FmlaGroup"
+          },
+          {
+            "Name": "xsd:integer/xvml:Val"
+          },
+          {
+            "Name": "xsd:integer/xvml:Min"
+          },
+          {
+            "Name": "xsd:integer/xvml:Max"
+          },
+          {
+            "Name": "xsd:integer/xvml:Inc"
+          },
+          {
+            "Name": "xsd:integer/xvml:Page"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:Horiz"
+          },
+          {
+            "Name": "xsd:integer/xvml:Dx"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:MapOCX"
+          },
+          {
+            "Name": "xvml:ST_CF/xvml:CF"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:Camera"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:RecalcAlways"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:AutoScale"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:DDE"
+          },
+          {
+            "Name": "xvml:ST_TrueFalseBlank/xvml:UIObj"
+          },
+          {
+            "Name": "xsd:string/xvml:ScriptText"
+          },
+          {
+            "Name": "xsd:string/xvml:ScriptExtended"
+          },
+          {
+            "Name": "xsd:nonNegativeInteger/xvml:ScriptLanguage"
+          },
+          {
+            "Name": "xsd:nonNegativeInteger/xvml:ScriptLocation"
+          },
+          {
+            "Name": "xsd:string/xvml:FmlaTxbx"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:MoveWithCells",
+      "ClassName": "MoveWithCells",
+      "Summary": "Move with Cells.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:SizeWithCells",
+      "ClassName": "ResizeWithCells",
+      "Summary": "Resize with Cells.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:Locked",
+      "ClassName": "Locked",
+      "Summary": "Lock Toggle.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:DefaultSize",
+      "ClassName": "DefaultSize",
+      "Summary": "Default Size Toggle.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:PrintObject",
+      "ClassName": "PrintObject",
+      "Summary": "Print Toggle.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:Disabled",
+      "ClassName": "Disabled",
+      "Summary": "Macro Disable Toggle.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:AutoFill",
+      "ClassName": "AutoFill",
+      "Summary": "AutoFill.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:AutoLine",
+      "ClassName": "AutoLine",
+      "Summary": "AutoLine.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:AutoPict",
+      "ClassName": "AutoSizePicture",
+      "Summary": "Automatically Size.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:LockText",
+      "ClassName": "LockText",
+      "Summary": "Text Lock.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:JustLastX",
+      "ClassName": "JustifyLastLine",
+      "Summary": "East Asia Alignment Toggle.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:SecretEdit",
+      "ClassName": "SecretEdit",
+      "Summary": "Password Edit.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:Default",
+      "ClassName": "DefaultButton",
+      "Summary": "Default Button.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:Help",
+      "ClassName": "HelpButton",
+      "Summary": "Help Button.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:Cancel",
+      "ClassName": "CancelButton",
+      "Summary": "Cancel Button.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:Dismiss",
+      "ClassName": "DismissButton",
+      "Summary": "Dismiss Button.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:Visible",
+      "ClassName": "Visible",
+      "Summary": "Comment Visibility Toggle.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:RowHidden",
+      "ClassName": "RowHidden",
+      "Summary": "Comment\u0027s Row is Hidden.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:ColHidden",
+      "ClassName": "ColumnHidden",
+      "Summary": "Comment\u0027s Column is Hidden.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:MultiLine",
+      "ClassName": "MultiLine",
+      "Summary": "Multi-line.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:VScroll",
+      "ClassName": "VerticalScrollBar",
+      "Summary": "Vertical Scroll.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:ValidIds",
+      "ClassName": "ValidIds",
+      "Summary": "Valid ID.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:NoThreeD2",
+      "ClassName": "Disable3DForListBoxAndDropDown",
+      "Summary": "Disable 3D.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:Colored",
+      "ClassName": "Colored",
+      "Summary": "Dropdown Color Toggle.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:NoThreeD",
+      "ClassName": "Disable3D",
+      "Summary": "Disable 3D.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:FirstButton",
+      "ClassName": "FirstButton",
+      "Summary": "First Radio Button.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:Horiz",
+      "ClassName": "HorizontalScrollBar",
+      "Summary": "Scroll Bar Orientation.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:MapOCX",
+      "ClassName": "MapOcxControl",
+      "Summary": "ActiveX Control.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:Camera",
+      "ClassName": "CameraObject",
+      "Summary": "Camera Tool.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:RecalcAlways",
+      "ClassName": "RecalculateAlways",
+      "Summary": "Recalculation Toggle.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:AutoScale",
+      "ClassName": "AutoScaleFont",
+      "Summary": "Font AutoScale.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:DDE",
+      "ClassName": "DdeObject",
+      "Summary": "Dynamic Data Exchange.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_TrueFalseBlank/xvml:UIObj",
+      "ClassName": "UIObject",
+      "Summary": "UI Object Toggle.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:string/xvml:Anchor",
+      "ClassName": "Anchor",
+      "Summary": "Anchor.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:TextHAlign",
+      "ClassName": "HorizontalTextAlignment",
+      "Summary": "Horizontal Text Alignment.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:TextVAlign",
+      "ClassName": "VerticalTextAlignment",
+      "Summary": "Vertical Text Alignment.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:FmlaRange",
+      "ClassName": "FormulaRange",
+      "Summary": "List Items Source Range.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:SelType",
+      "ClassName": "SelectionType",
+      "Summary": "Selection Type.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:MultiSel",
+      "ClassName": "MultiSelections",
+      "Summary": "Multiple Selections.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:LCT",
+      "ClassName": "ListBoxCallbackType",
+      "Summary": "Callback Type.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:ListItem",
+      "ClassName": "ListItem",
+      "Summary": "Non-linked List Item.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:DropStyle",
+      "ClassName": "DropStyle",
+      "Summary": "Dropdown Style.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:FmlaLink",
+      "ClassName": "FormulaLink",
+      "Summary": "Linked Formula.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:FmlaPict",
+      "ClassName": "FormulaPicture",
+      "Summary": "Camera Source Range.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:FmlaGroup",
+      "ClassName": "FormulaGroup",
+      "Summary": "Linked Formula - Group Box.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:ScriptText",
+      "ClassName": "ScriptText",
+      "Summary": "HTML Script Text.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:ScriptExtended",
+      "ClassName": "ScriptExtended",
+      "Summary": "HTML Script Attributes.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/xvml:FmlaTxbx",
+      "ClassName": "FormulaTextBox",
+      "Summary": "Text Formula.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xvml:ST_Macro/xvml:FmlaMacro",
+      "ClassName": "FormulaMacro",
+      "Summary": "Reference to Custom Function.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinLength",
+              "Value": "0"
+            },
+            {
+              "Type": "Long",
+              "Name": "MaxLength",
+              "Value": "256"
+            }
+          ],
+          "Name": "StringValidator",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:unsignedByte/xvml:Accel",
+      "ClassName": "AcceleratorPrimary",
+      "Summary": "Primary Keyboard Accelerator.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:unsignedByte",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:unsignedByte/xvml:Accel2",
+      "ClassName": "AcceleratorSecondary",
+      "Summary": "Secondary Keyboard Accelerator.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:unsignedByte",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xvml:Row",
+      "ClassName": "CommentRowTarget",
+      "Summary": "Comment Row Target.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xvml:Column",
+      "ClassName": "CommentColumnTarget",
+      "Summary": "Comment Column Target.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xvml:VTEdit",
+      "ClassName": "InputValidationType",
+      "Summary": "Validation Type.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xvml:WidthMin",
+      "ClassName": "MinDropDownWidth",
+      "Summary": "Minimum Width.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xvml:Sel",
+      "ClassName": "SelectionEntry",
+      "Summary": "Selected Entry.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xvml:DropLines",
+      "ClassName": "DropLines",
+      "Summary": "Dropdown Maximum Lines.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xvml:Checked",
+      "ClassName": "Checked",
+      "Summary": "Checked.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xvml:Val",
+      "ClassName": "ScrollBarPosition",
+      "Summary": "Scroll bar position.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xvml:Min",
+      "ClassName": "ScrollBarMin",
+      "Summary": "Scroll Bar Minimum.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xvml:Max",
+      "ClassName": "ScrollBarMax",
+      "Summary": "Scroll Bar Maximum.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xvml:Inc",
+      "ClassName": "ScrollBarIncrement",
+      "Summary": "Scroll Bar Increment.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xvml:Page",
+      "ClassName": "ScrollBarPageIncrement",
+      "Summary": "Scroll Bar Page Increment.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xvml:Dx",
+      "ClassName": "ScrollBarWidth",
+      "Summary": "Scroll Bar Width.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xvml:ST_CF/xvml:CF",
+      "ClassName": "ClipboardFormat",
+      "Summary": "Clipboard Format.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "xvml:ST_CF",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:nonNegativeInteger/xvml:ScriptLanguage",
+      "ClassName": "ScriptLanguage",
+      "Summary": "HTML Script Language.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Boolean",
+              "Name": "IsNonNegative",
+              "Value": "True"
+            }
+          ],
+          "Name": "NumberValidator",
+          "Type": "xsd:nonNegativeInteger",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:nonNegativeInteger/xvml:ScriptLocation",
+      "ClassName": "ScriptLocation",
+      "Summary": "HTML Script Location.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Boolean",
+              "Name": "IsNonNegative",
+              "Value": "True"
+            }
+          ],
+          "Name": "NumberValidator",
+          "Type": "xsd:nonNegativeInteger",
+          "IsInitialVersion": true
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "xvml:ST_CF",
+      "Name": "ClipboardFormatValues",
+      "Summary": "Clipboard Format Type",
+      "Facets": [
+        {
+          "Comments": "WMF",
+          "Value": "PictOld",
+          "Name": "PictureOld"
+        },
+        {
+          "Comments": "EMF",
+          "Value": "Pict",
+          "Name": "Picture"
+        },
+        {
+          "Comments": "Bitmap",
+          "Value": "Bitmap",
+          "Name": "Bitmap"
+        },
+        {
+          "Comments": "Printer Picture",
+          "Value": "PictPrint",
+          "Name": "PicturePrint"
+        },
+        {
+          "Comments": "Screen Picture EMF",
+          "Value": "PictScreen",
+          "Name": "PictureScreen"
+        }
+      ]
+    },
+    {
+      "Type": "xvml:ST_ObjectType",
+      "Name": "ObjectValues",
+      "Summary": "Object Type",
+      "Facets": [
+        {
+          "Comments": "Pushbutton",
+          "Value": "Button",
+          "Name": "Button"
+        },
+        {
+          "Comments": "Checkbox",
+          "Value": "Checkbox",
+          "Name": "Checkbox"
+        },
+        {
+          "Comments": "Dialog",
+          "Value": "Dialog",
+          "Name": "Dialog"
+        },
+        {
+          "Comments": "Dropdown Box",
+          "Value": "Drop",
+          "Name": "Drop"
+        },
+        {
+          "Comments": "Editable Text Field",
+          "Value": "Edit",
+          "Name": "Edit"
+        },
+        {
+          "Comments": "Group Box",
+          "Value": "GBox",
+          "Name": "GroupBox"
+        },
+        {
+          "Comments": "Label",
+          "Value": "Label",
+          "Name": "Label"
+        },
+        {
+          "Comments": "Auditing Line",
+          "Value": "LineA",
+          "Name": "AuditingLine"
+        },
+        {
+          "Comments": "List Box",
+          "Value": "List",
+          "Name": "List"
+        },
+        {
+          "Comments": "Movie",
+          "Value": "Movie",
+          "Name": "Movie"
+        },
+        {
+          "Comments": "Comment",
+          "Value": "Note",
+          "Name": "Note"
+        },
+        {
+          "Comments": "Image",
+          "Value": "Pict",
+          "Name": "Picture"
+        },
+        {
+          "Comments": "Radio Button",
+          "Value": "Radio",
+          "Name": "Radio"
+        },
+        {
+          "Comments": "Auditing Rectangle",
+          "Value": "RectA",
+          "Name": "AuditingRectangle"
+        },
+        {
+          "Comments": "Scroll Bar",
+          "Value": "Scroll",
+          "Name": "Scroll"
+        },
+        {
+          "Comments": "Spin Button",
+          "Value": "Spin",
+          "Name": "Spin"
+        },
+        {
+          "Comments": "Plain Shape",
+          "Value": "Shape",
+          "Name": "Shape"
+        },
+        {
+          "Comments": "Group",
+          "Value": "Group",
+          "Name": "Group"
+        },
+        {
+          "Comments": "Plain Rectangle",
+          "Value": "Rect",
+          "Name": "Rectangle"
+        }
+      ]
+    },
+    {
+      "Type": "xvml:ST_TrueFalseBlank",
+      "Name": "BooleanEntryWithBlankValues",
+      "Summary": "Boolean Value with Blank State",
+      "Facets": [
+        {
+          "Comments": "Logical True",
+          "Value": "True"
+        },
+        {
+          "Comments": "Logical True",
+          "Value": "t",
+          "Name": "T"
+        },
+        {
+          "Comments": "Logical False",
+          "Value": "False"
+        },
+        {
+          "Comments": "Logical False",
+          "Value": "f",
+          "Name": "F"
+        },
+        {
+          "Comments": "Blank - Default Value",
+          "Value": "",
+          "Name": "Empty"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "Root": "xlrdwi:CT_WebImagesSupportingRichData",
+  "Name": "RdRichValueWebImagePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.rdrichvaluewebimage\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage",
+  "Target": "rdrichvaluewebimage",
+  "RootElement": "webImagesSrd",
+  "Paths": {
+    "General": "richdata"
+  },
+  "Version": "Office2021"
+}

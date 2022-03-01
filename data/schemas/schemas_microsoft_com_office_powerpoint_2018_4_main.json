@@ -1,0 +1,59 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2018/4/main",
+  "Types": [
+    {
+      "Name": "p184:CT_ClassificationOutcome/p184:classification",
+      "ClassName": "ClassificationOutcome",
+      "Summary": "Defines the ClassificationOutcome Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2019.Presentation.ClassificationOutcomeType\u003E",
+          "Version": "Office2019",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "p184:ST_ClassificationOutcomeType",
+      "Name": "ClassificationOutcomeType",
+      "Facets": [
+        {
+          "Version": "Office2019",
+          "Value": "none"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "hdr"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "ftr"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "watermark"
+        }
+      ],
+      "Version": "Office2019"
+    }
+  ]
+}

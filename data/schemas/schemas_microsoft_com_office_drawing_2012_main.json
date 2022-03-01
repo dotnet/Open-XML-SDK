@@ -1,0 +1,337 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2012/main",
+  "Types": [
+    {
+      "Name": "a15:CT_BackgroundPr/a15:backgroundPr",
+      "ClassName": "BackgroundProperties",
+      "Summary": "Defines the BackgroundProperties Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":bwMode",
+          "PropertyName": "Mode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "bwMode",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":bwPure",
+          "PropertyName": "Pure",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "bwPure",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":bwNormal",
+          "PropertyName": "Normal",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "bwNormal",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":targetScreenSize",
+          "PropertyName": "TargetScreenSize",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "targetScreenSize",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a15:CT_NonVisualGroupProps/a15:nonVisualGroupProps",
+      "ClassName": "NonVisualGroupProperties",
+      "Summary": "Defines the NonVisualGroupProperties Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":isLegacyGroup",
+          "PropertyName": "IsLegacyGroup",
+          "Type": "BooleanValue",
+          "Version": "Office2013",
+          "PropertyComments": "isLegacyGroup"
+        }
+      ]
+    },
+    {
+      "Name": "a15:CT_ObjectPr/a15:objectPr",
+      "ClassName": "ObjectProperties",
+      "Summary": "Defines the ObjectProperties Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":objectId",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "objectId"
+        },
+        {
+          "QName": ":isActiveX",
+          "PropertyName": "IsActiveX",
+          "Type": "BooleanValue",
+          "Version": "Office2013",
+          "PropertyComments": "isActiveX"
+        },
+        {
+          "QName": ":linkType",
+          "PropertyName": "LinkType",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "linkType"
+        }
+      ]
+    },
+    {
+      "Name": "a15:CT_SignatureLine/a15:signatureLine",
+      "ClassName": "SignatureLine",
+      "Summary": "Defines the SignatureLine Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":isSignatureLine",
+          "PropertyName": "IsSignatureLine",
+          "Type": "BooleanValue",
+          "Version": "Office2013",
+          "PropertyComments": "isSignatureLine"
+        },
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":provId",
+          "PropertyName": "ProviderId",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "provId",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":signingInstructionsSet",
+          "PropertyName": "SigningInstructionsSet",
+          "Type": "BooleanValue",
+          "Version": "Office2013",
+          "PropertyComments": "signingInstructionsSet"
+        },
+        {
+          "QName": ":allowComments",
+          "PropertyName": "AllowComments",
+          "Type": "BooleanValue",
+          "Version": "Office2013",
+          "PropertyComments": "allowComments"
+        },
+        {
+          "QName": ":showSignDate",
+          "PropertyName": "ShowSignDate",
+          "Type": "BooleanValue",
+          "Version": "Office2013",
+          "PropertyComments": "showSignDate"
+        },
+        {
+          "QName": ":suggestedSigner",
+          "PropertyName": "SuggestedSigner",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "suggestedSigner"
+        },
+        {
+          "QName": ":suggestedSigner2",
+          "PropertyName": "SuggestedSigner2",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "suggestedSigner2"
+        },
+        {
+          "QName": ":suggestedSignerEmail",
+          "PropertyName": "SuggestedSignerEmail",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "suggestedSignerEmail"
+        },
+        {
+          "QName": ":signingInstructions",
+          "PropertyName": "SigningInstructions",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "signingInstructions"
+        },
+        {
+          "QName": ":addlXml",
+          "PropertyName": "AdditionalXml",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "addlXml"
+        },
+        {
+          "QName": ":sigProvUrl",
+          "PropertyName": "SignatureProviderUrl",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "sigProvUrl"
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "a15:ST_TargetScreenSz",
+      "Name": "TargetScreenSize",
+      "Facets": [
+        {
+          "Version": "Office2013",
+          "Value": "544x376",
+          "Name": "Sz544x376"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "640x480",
+          "Name": "Sz640x480"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "720x512",
+          "Name": "Sz720x512"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "800x600",
+          "Name": "Sz800x600"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "1024x768",
+          "Name": "Sz1024x768"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "1152x882",
+          "Name": "Sz1152x882"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "1152x900",
+          "Name": "Sz1152x900"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "1280x1024",
+          "Name": "Sz1280x1024"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "1600x1200",
+          "Name": "Sz1600x1200"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "1800x1440",
+          "Name": "Sz1800x1440"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "1920x1200",
+          "Name": "Sz1920x1200"
+        }
+      ],
+      "Version": "Office2013"
+    }
+  ]
+}

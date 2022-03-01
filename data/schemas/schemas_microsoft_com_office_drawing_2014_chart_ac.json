@@ -1,0 +1,52 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2014/chart/ac",
+  "Types": [
+    {
+      "Name": "c:CT_MultiLvlStrData/c16ac:multiLvlStrLit",
+      "ClassName": "MultiLvlStrData",
+      "Summary": "Defines the MultiLvlStrData Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c:CT_UnsignedInt/c:ptCount",
+          "PropertyName": "PointCount"
+        },
+        {
+          "Name": "c:CT_Lvl/c:lvl"
+        },
+        {
+          "Name": "c:CT_ExtensionList/c:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_UnsignedInt/c:ptCount",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Lvl/c:lvl",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "c:CT_ExtensionList/c:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

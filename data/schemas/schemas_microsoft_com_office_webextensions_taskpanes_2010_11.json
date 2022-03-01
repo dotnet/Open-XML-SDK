@@ -1,0 +1,176 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11",
+  "Types": [
+    {
+      "Name": "wetp:CT_OsfTaskpanes/wetp:taskpanes",
+      "ClassName": "Taskpanes",
+      "Summary": "Defines the Taskpanes Class.",
+      "Part": "WebExTaskpanesPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "wetp:CT_OsfTaskpane/wetp:taskpane"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "wetp:CT_OsfTaskpane/wetp:taskpane",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "we:CT_WebExtensionPartRef/wetp:webextensionref",
+      "ClassName": "WebExtensionPartReference",
+      "Summary": "Defines the WebExtensionPartReference Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/wetp:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wetp:CT_OsfTaskpane/wetp:taskpane",
+      "ClassName": "WebExtensionTaskpane",
+      "Summary": "Defines the WebExtensionTaskpane Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":dockstate",
+          "PropertyName": "DockState",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "dockstate",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":visibility",
+          "PropertyName": "Visibility",
+          "Type": "BooleanValue",
+          "Version": "Office2013",
+          "PropertyComments": "visibility",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":width",
+          "PropertyName": "Width",
+          "Type": "DoubleValue",
+          "Version": "Office2013",
+          "PropertyComments": "width",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":row",
+          "Type": "UInt32Value",
+          "Version": "Office2013",
+          "PropertyComments": "row",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":locked",
+          "PropertyName": "Locked",
+          "Type": "BooleanValue",
+          "Version": "Office2013",
+          "PropertyComments": "locked"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "we:CT_WebExtensionPartRef/wetp:webextensionref",
+          "PropertyName": "WebExtensionPartReference"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/wetp:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "we:CT_WebExtensionPartRef/wetp:webextensionref",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/wetp:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    }
+  ]
+}

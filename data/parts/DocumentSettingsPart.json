@@ -1,0 +1,23 @@
+{
+  "Root": "w:CT_Settings",
+  "Name": "DocumentSettingsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.settings\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings",
+  "Target": "settings",
+  "RootElement": "settings",
+  "Paths": {
+    "General": "."
+  },
+  "Children": [
+    {
+      "ApiName": "MailMergeRecipientDataPart",
+      "Name": "MailMergeRecipientDataPart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    }
+  ]
+}

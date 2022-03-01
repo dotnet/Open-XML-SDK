@@ -1,0 +1,42 @@
+[
+  {
+    "Name": "wpg:CT_WordprocessingGroup/",
+    "ClassName": "WordprocessingGroupType"
+  },
+  {
+    "Name": "a:CT_NonVisualGraphicFrameProperties/wpg:cNvFrPr",
+    "ClassName": "NonVisualGraphicFrameProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualGroupDrawingShapeProps/wpg:cNvGrpSpPr",
+    "ClassName": "NonVisualGroupDrawingShapeProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/wpg:cNvPr",
+    "ClassName": "NonVisualDrawingProperties"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/wpg:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "wpg:CT_GraphicFrame/wpg:graphicFrame",
+    "ClassName": "GraphicFrame"
+  },
+  {
+    "Name": "wpg:CT_WordprocessingGroup/wpg:grpSp",
+    "ClassName": "GroupShape"
+  },
+  {
+    "Name": "a:CT_GroupShapeProperties/wpg:grpSpPr",
+    "ClassName": "GroupShapeProperties"
+  },
+  {
+    "Name": "wpg:CT_WordprocessingGroup/wpg:wgp",
+    "ClassName": "WordprocessingGroup"
+  },
+  {
+    "Name": "a:CT_Transform2D/wpg:xfrm",
+    "ClassName": "Transform2D"
+  }
+]

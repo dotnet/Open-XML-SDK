@@ -1,0 +1,97 @@
+{
+  "TargetNamespace": "http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas",
+  "Types": [
+    {
+      "Name": "a:CT_GvmlGroupShape/lc:lockedCanvas",
+      "ClassName": "LockedCanvas",
+      "Summary": "Locked Canvas Container.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_GvmlGroupShapeNonVisual/a:nvGrpSpPr",
+          "PropertyName": "NonVisualGroupShapeProperties",
+          "PropertyComments": "Non-Visual Properties for a Group Shape"
+        },
+        {
+          "Name": "a:CT_GroupShapeProperties/a:grpSpPr",
+          "PropertyName": "VisualGroupShapeProperties",
+          "PropertyComments": "Visual Group Shape Properties"
+        },
+        {
+          "Name": "a:CT_GvmlTextShape/a:txSp"
+        },
+        {
+          "Name": "a:CT_GvmlShape/a:sp"
+        },
+        {
+          "Name": "a:CT_GvmlConnector/a:cxnSp"
+        },
+        {
+          "Name": "a:CT_GvmlPicture/a:pic"
+        },
+        {
+          "Name": "a14:CT_GvmlContentPart/a14:contentPart"
+        },
+        {
+          "Name": "a:CT_GvmlGraphicalObjectFrame/a:graphicFrame"
+        },
+        {
+          "Name": "a:CT_GvmlGroupShape/a:grpSp"
+        },
+        {
+          "Name": "a:CT_GvmlGroupShapeExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_GvmlGroupShapeNonVisual/a:nvGrpSpPr"
+          },
+          {
+            "Name": "a:CT_GroupShapeProperties/a:grpSpPr"
+          },
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Name": "a:CT_GvmlTextShape/a:txSp"
+              },
+              {
+                "Name": "a:CT_GvmlShape/a:sp"
+              },
+              {
+                "Name": "a:CT_GvmlConnector/a:cxnSp"
+              },
+              {
+                "Name": "a:CT_GvmlPicture/a:pic"
+              },
+              {
+                "Name": "a14:CT_GvmlContentPart/a14:contentPart",
+                "InitialVersion": "Office2010"
+              },
+              {
+                "Name": "a:CT_GvmlGraphicalObjectFrame/a:graphicFrame"
+              },
+              {
+                "Name": "a:CT_GvmlGroupShape/a:grpSp"
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_GvmlGroupShapeExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

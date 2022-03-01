@@ -1,0 +1,104 @@
+{
+  "TargetNamespace": "http://schemas.openxmlformats.org/officeDocument/2006/customXml",
+  "Types": [
+    {
+      "Name": "ds:CT_DatastoreItem/ds:datastoreItem",
+      "ClassName": "DataStoreItem",
+      "Summary": "Custom XML Data Properties.",
+      "Part": "CustomXmlPropertiesPart",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "ds:itemID",
+          "PropertyName": "ItemId",
+          "Type": "StringValue",
+          "PropertyComments": "Custom XML Data ID",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "ds:CT_DatastoreSchemaRefs/ds:schemaRefs",
+          "PropertyName": "SchemaReferences",
+          "PropertyComments": "Set of Associated XML Schemas"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "ds:CT_DatastoreSchemaRefs/ds:schemaRefs",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "ds:CT_DatastoreSchemaRef/ds:schemaRef",
+      "ClassName": "SchemaReference",
+      "Summary": "Associated XML Schema.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "ds:uri",
+          "PropertyName": "Uri",
+          "Type": "StringValue",
+          "PropertyComments": "Target Namespace of Associated XML Schema",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "ds:CT_DatastoreSchemaRefs/ds:schemaRefs",
+      "ClassName": "SchemaReferences",
+      "Summary": "Set of Associated XML Schemas.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "ds:CT_DatastoreSchemaRef/ds:schemaRef"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "ds:CT_DatastoreSchemaRef/ds:schemaRef",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

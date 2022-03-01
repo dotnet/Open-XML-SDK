@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "xxpim:CT_DataFieldFutureData/xxpim:dataFieldFutureData",
+    "ClassName": "DataFieldFutureData"
+  },
+  {
+    "Name": "xxpim:CT_Ignorable/xxpim:ignorableAfterVersion",
+    "ClassName": "Ignorable"
+  },
+  {
+    "Name": "xsd:boolean/xxpim:implicitMeasureSupport",
+    "ClassName": "Xsdboolean"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "Root": "x15:CT_TimelineCacheDefinition",
+  "Name": "TimeLineCachePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.timelineCache\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/timelineCache",
+  "Target": "timelineCache",
+  "RootElement": "timelineCacheDefinition",
+  "Paths": {
+    "General": "timelineCaches"
+  },
+  "Version": "Office2013"
+}

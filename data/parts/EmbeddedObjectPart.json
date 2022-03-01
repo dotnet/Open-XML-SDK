@@ -1,0 +1,10 @@
+{
+  "Name": "EmbeddedObjectPart",
+  "Base": "OpenXmlPart",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
+  "Target": "embeddedObject",
+  "Extension": ".bin",
+  "Paths": {
+    "General": "embeddings"
+  }
+}

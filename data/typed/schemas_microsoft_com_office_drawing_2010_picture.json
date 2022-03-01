@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "a:CT_OfficeArtExtensionList/pic14:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "a:CT_ShapeStyle/pic14:style",
+    "ClassName": "ShapeStyle"
+  }
+]

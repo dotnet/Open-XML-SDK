@@ -1,0 +1,19 @@
+{
+  "Root": "dgm:CT_DiagramDefinition",
+  "Name": "DiagramLayoutDefinitionPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
+  "Target": "layout",
+  "RootElement": "layoutDef",
+  "Paths": {
+    "General": "../graphics"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    }
+  ]
+}

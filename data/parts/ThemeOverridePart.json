@@ -1,0 +1,19 @@
+{
+  "Root": "a:CT_BaseStylesOverride",
+  "Name": "ThemeOverridePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.themeOverride\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride",
+  "Target": "themeoverride",
+  "RootElement": "themeOverride",
+  "Paths": {
+    "General": "theme"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    }
+  ]
+}

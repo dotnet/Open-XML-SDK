@@ -1,0 +1,775 @@
+{
+  "TargetNamespace": "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties",
+  "Types": [
+    {
+      "Name": "ap:CT_Properties/ap:Properties",
+      "ClassName": "Properties",
+      "Summary": "Application Specific File Properties.",
+      "Part": "ExtendedFilePropertiesPart",
+      "CompositeType": "OneAll",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "xsd:string/ap:Template",
+          "PropertyName": "Template",
+          "PropertyComments": "Name of Document Template"
+        },
+        {
+          "Name": "xsd:string/ap:Manager",
+          "PropertyName": "Manager",
+          "PropertyComments": "Name of Manager"
+        },
+        {
+          "Name": "xsd:string/ap:Company",
+          "PropertyName": "Company",
+          "PropertyComments": "Name of Company"
+        },
+        {
+          "Name": "xsd:int/ap:Pages",
+          "PropertyName": "Pages",
+          "PropertyComments": "Total Number of Pages"
+        },
+        {
+          "Name": "xsd:int/ap:Words",
+          "PropertyName": "Words",
+          "PropertyComments": "Word Count"
+        },
+        {
+          "Name": "xsd:int/ap:Characters",
+          "PropertyName": "Characters",
+          "PropertyComments": "Total Number of Characters"
+        },
+        {
+          "Name": "xsd:string/ap:PresentationFormat",
+          "PropertyName": "PresentationFormat",
+          "PropertyComments": "Intended Format of Presentation"
+        },
+        {
+          "Name": "xsd:int/ap:Lines",
+          "PropertyName": "Lines",
+          "PropertyComments": "Number of Lines"
+        },
+        {
+          "Name": "xsd:int/ap:Paragraphs",
+          "PropertyName": "Paragraphs",
+          "PropertyComments": "Total Number of Paragraphs"
+        },
+        {
+          "Name": "xsd:int/ap:Slides",
+          "PropertyName": "Slides",
+          "PropertyComments": "Slides Metadata Element"
+        },
+        {
+          "Name": "xsd:int/ap:Notes",
+          "PropertyName": "Notes",
+          "PropertyComments": "Number of Slides Containing Notes"
+        },
+        {
+          "Name": "xsd:int/ap:TotalTime",
+          "PropertyName": "TotalTime",
+          "PropertyComments": "Total Edit Time Metadata Element"
+        },
+        {
+          "Name": "xsd:int/ap:HiddenSlides",
+          "PropertyName": "HiddenSlides",
+          "PropertyComments": "Number of Hidden Slides"
+        },
+        {
+          "Name": "xsd:int/ap:MMClips",
+          "PropertyName": "MultimediaClips",
+          "PropertyComments": "Total Number of Multimedia Clips"
+        },
+        {
+          "Name": "xsd:boolean/ap:ScaleCrop",
+          "PropertyName": "ScaleCrop",
+          "PropertyComments": "Thumbnail Display Mode"
+        },
+        {
+          "Name": "ap:CT_VectorVariant/ap:HeadingPairs",
+          "PropertyName": "HeadingPairs",
+          "PropertyComments": "Heading Pairs"
+        },
+        {
+          "Name": "ap:CT_VectorLpstr/ap:TitlesOfParts",
+          "PropertyName": "TitlesOfParts",
+          "PropertyComments": "Part Titles"
+        },
+        {
+          "Name": "xsd:boolean/ap:LinksUpToDate",
+          "PropertyName": "LinksUpToDate",
+          "PropertyComments": "Links Up-to-Date"
+        },
+        {
+          "Name": "xsd:int/ap:CharactersWithSpaces",
+          "PropertyName": "CharactersWithSpaces",
+          "PropertyComments": "Number of Characters (With Spaces)"
+        },
+        {
+          "Name": "xsd:boolean/ap:SharedDoc",
+          "PropertyName": "SharedDocument",
+          "PropertyComments": "Shared Document"
+        },
+        {
+          "Name": "xsd:string/ap:HyperlinkBase",
+          "PropertyName": "HyperlinkBase",
+          "PropertyComments": "Relative Hyperlink Base"
+        },
+        {
+          "Name": "ap:CT_VectorVariant/ap:HLinks",
+          "PropertyName": "HyperlinkList",
+          "PropertyComments": "Hyperlink List"
+        },
+        {
+          "Name": "xsd:boolean/ap:HyperlinksChanged",
+          "PropertyName": "HyperlinksChanged",
+          "PropertyComments": "Hyperlinks Changed"
+        },
+        {
+          "Name": "ap:CT_DigSigBlob/ap:DigSig",
+          "PropertyName": "DigitalSignature",
+          "PropertyComments": "Digital Signature"
+        },
+        {
+          "Name": "xsd:string/ap:Application",
+          "PropertyName": "Application",
+          "PropertyComments": "Application Name"
+        },
+        {
+          "Name": "xsd:string/ap:AppVersion",
+          "PropertyName": "ApplicationVersion",
+          "PropertyComments": "Application Version"
+        },
+        {
+          "Name": "xsd:int/ap:DocSecurity",
+          "PropertyName": "DocumentSecurity",
+          "PropertyComments": "Document Security"
+        }
+      ],
+      "Particle": {
+        "Kind": "All",
+        "Items": [
+          {
+            "Name": "xsd:string/ap:Template",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/ap:Manager",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/ap:Company",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:int/ap:Pages",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:int/ap:Words",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:int/ap:Characters",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/ap:PresentationFormat",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:int/ap:Lines",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:int/ap:Paragraphs",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:int/ap:Slides",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:int/ap:Notes",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:int/ap:TotalTime",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:int/ap:HiddenSlides",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:int/ap:MMClips",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:boolean/ap:ScaleCrop",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "ap:CT_VectorVariant/ap:HeadingPairs",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "ap:CT_VectorLpstr/ap:TitlesOfParts",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:boolean/ap:LinksUpToDate",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:int/ap:CharactersWithSpaces",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:boolean/ap:SharedDoc",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/ap:HyperlinkBase",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "ap:CT_VectorVariant/ap:HLinks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:boolean/ap:HyperlinksChanged",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "ap:CT_DigSigBlob/ap:DigSig",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/ap:Application",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/ap:AppVersion",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:int/ap:DocSecurity",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xsd:string/ap:Template",
+      "ClassName": "Template",
+      "Summary": "Name of Document Template.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/ap:Manager",
+      "ClassName": "Manager",
+      "Summary": "Name of Manager.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/ap:Company",
+      "ClassName": "Company",
+      "Summary": "Name of Company.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/ap:PresentationFormat",
+      "ClassName": "PresentationFormat",
+      "Summary": "Intended Format of Presentation.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/ap:HyperlinkBase",
+      "ClassName": "HyperlinkBase",
+      "Summary": "Relative Hyperlink Base.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/ap:Application",
+      "ClassName": "Application",
+      "Summary": "Application Name.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/ap:AppVersion",
+      "ClassName": "ApplicationVersion",
+      "Summary": "Application Version.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:int/ap:Pages",
+      "ClassName": "Pages",
+      "Summary": "Total Number of Pages.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:int/ap:Words",
+      "ClassName": "Words",
+      "Summary": "Word Count.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:int/ap:Characters",
+      "ClassName": "Characters",
+      "Summary": "Total Number of Characters.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:int/ap:Lines",
+      "ClassName": "Lines",
+      "Summary": "Number of Lines.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:int/ap:Paragraphs",
+      "ClassName": "Paragraphs",
+      "Summary": "Total Number of Paragraphs.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:int/ap:Slides",
+      "ClassName": "Slides",
+      "Summary": "Slides Metadata Element.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:int/ap:Notes",
+      "ClassName": "Notes",
+      "Summary": "Number of Slides Containing Notes.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:int/ap:TotalTime",
+      "ClassName": "TotalTime",
+      "Summary": "Total Edit Time Metadata Element.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:int/ap:HiddenSlides",
+      "ClassName": "HiddenSlides",
+      "Summary": "Number of Hidden Slides.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:int/ap:MMClips",
+      "ClassName": "MultimediaClips",
+      "Summary": "Total Number of Multimedia Clips.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:int/ap:CharactersWithSpaces",
+      "ClassName": "CharactersWithSpaces",
+      "Summary": "Number of Characters (With Spaces).",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:int/ap:DocSecurity",
+      "ClassName": "DocumentSecurity",
+      "Summary": "Document Security.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:int",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:boolean/ap:ScaleCrop",
+      "ClassName": "ScaleCrop",
+      "Summary": "Thumbnail Display Mode.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:boolean",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:boolean/ap:LinksUpToDate",
+      "ClassName": "LinksUpToDate",
+      "Summary": "Links Up-to-Date.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:boolean",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:boolean/ap:SharedDoc",
+      "ClassName": "SharedDocument",
+      "Summary": "Shared Document.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:boolean",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:boolean/ap:HyperlinksChanged",
+      "ClassName": "HyperlinksChanged",
+      "Summary": "Hyperlinks Changed.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:boolean",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "ap:CT_VectorVariant/ap:HeadingPairs",
+      "ClassName": "HeadingPairs",
+      "Summary": "Heading Pairs.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "VectorVariantType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "vt:CT_Vector/vt:vector",
+          "PropertyName": "VTVector",
+          "PropertyComments": "Vector"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "vt:CT_Vector/vt:vector"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "ap:CT_VectorVariant/ap:HLinks",
+      "ClassName": "HyperlinkList",
+      "Summary": "Hyperlink List.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "VectorVariantType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "vt:CT_Vector/vt:vector",
+          "PropertyName": "VTVector",
+          "PropertyComments": "Vector"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "vt:CT_Vector/vt:vector"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "ap:CT_VectorVariant/",
+      "ClassName": "VectorVariantType",
+      "Summary": "Defines the VectorVariantType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "AdditionalElements": [
+        "vt:CT_Vector/vt:vector"
+      ],
+      "Children": [
+        {
+          "Name": "vt:CT_Vector/vt:vector",
+          "PropertyName": "VTVector",
+          "PropertyComments": "Vector"
+        }
+      ]
+    },
+    {
+      "Name": "ap:CT_VectorLpstr/ap:TitlesOfParts",
+      "ClassName": "TitlesOfParts",
+      "Summary": "Part Titles.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "vt:CT_Vector/vt:vector",
+          "PropertyName": "VTVector",
+          "PropertyComments": "Vector"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "vt:CT_Vector/vt:vector"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "ap:CT_DigSigBlob/ap:DigSig",
+      "ClassName": "DigitalSignature",
+      "Summary": "Digital Signature.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "xsd:base64Binary/vt:blob",
+          "PropertyName": "VTBlob",
+          "PropertyComments": "Binary Blob"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xsd:base64Binary/vt:blob"
+          }
+        ]
+      }
+    }
+  ]
+}

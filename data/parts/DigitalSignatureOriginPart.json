@@ -1,0 +1,19 @@
+{
+  "Name": "DigitalSignatureOriginPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-package.digital-signature-origin",
+  "RelationshipType": "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin",
+  "Target": "origin",
+  "Extension": ".sigs",
+  "Paths": {
+    "General": "_xmlsignatures"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "XmlSignatureParts",
+      "Name": "XmlSignaturePart",
+      "HasFixedContent": true
+    }
+  ]
+}

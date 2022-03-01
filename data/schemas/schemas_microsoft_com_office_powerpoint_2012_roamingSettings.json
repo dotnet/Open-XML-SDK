@@ -1,0 +1,54 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings",
+  "Types": [
+    {
+      "Name": "xsd:string/pRoam:key",
+      "ClassName": "Key",
+      "Summary": "Defines the Key Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2013"
+    },
+    {
+      "Name": "xsd:string/pRoam:value",
+      "ClassName": "Value",
+      "Summary": "Defines the Value Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2013"
+    },
+    {
+      "Name": "pRoam:CT_RoamingProperty/pRoam:props",
+      "ClassName": "RoamingProperty",
+      "Summary": "Defines the RoamingProperty Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "xsd:string/pRoam:key",
+          "PropertyName": "Key"
+        },
+        {
+          "Name": "xsd:string/pRoam:value",
+          "PropertyName": "Value"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xsd:string/pRoam:key",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:string/pRoam:value",
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    }
+  ]
+}

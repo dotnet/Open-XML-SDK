@@ -1,0 +1,29 @@
+{
+  "Root": "cdr:CT_Drawing",
+  "Name": "ChartDrawingPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chartshapes\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes",
+  "Target": "drawing",
+  "RootElement": "userShapes",
+  "Paths": {
+    "General": "../drawings"
+  },
+  "Children": [
+    {
+      "ApiName": "ChartPart",
+      "Name": "ChartPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "ExtendedChartPart",
+      "Name": "ExtendedChartPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    }
+  ]
+}

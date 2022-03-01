@@ -1,0 +1,12 @@
+{
+  "Root": "x:CT_ExternalLink",
+  "Name": "ExternalWorkbookPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.externalLink\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLink",
+  "Target": "externalReference",
+  "RootElement": "externalLink",
+  "Paths": {
+    "General": "externalReferences"
+  }
+}

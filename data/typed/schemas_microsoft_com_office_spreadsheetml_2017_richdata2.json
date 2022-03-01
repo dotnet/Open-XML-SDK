@@ -1,0 +1,155 @@
+[
+  {
+    "Name": "xlrd2:CT_Array/xlrd2:a",
+    "ClassName": "Array"
+  },
+  {
+    "Name": "xlrd2:CT_SupportingPropertyBagArray/xlrd2:a",
+    "ClassName": "SupportingPropertyBagArray"
+  },
+  {
+    "Name": "xlrd2:CT_ArrayData/xlrd2:arrayData",
+    "ClassName": "ArrayData",
+    "PartClassName": "RdArrayPart"
+  },
+  {
+    "Name": "xlrd2:CT_CustomRichFilter/xlrd2:customFilter",
+    "ClassName": "CustomRichFilter"
+  },
+  {
+    "Name": "xlrd2:CT_CustomRichFilters/xlrd2:customFilters",
+    "ClassName": "CustomRichFilters"
+  },
+  {
+    "Name": "xlrd2:CT_RichDateGroupItem/xlrd2:dateGroupItem",
+    "ClassName": "RichDateGroupItem"
+  },
+  {
+    "Name": "x:CT_Dxfs/xlrd2:dxfs",
+    "ClassName": "Dxfs"
+  },
+  {
+    "Name": "xlrd2:CT_DynamicRichFilter/xlrd2:dynamicFilter",
+    "ClassName": "DynamicRichFilter"
+  },
+  {
+    "Name": "x:CT_ExtensionList/xlrd2:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "xlrd2:CT_RichFilter/xlrd2:filter",
+    "ClassName": "RichFilter"
+  },
+  {
+    "Name": "xlrd2:CT_RichFilterColumn/xlrd2:filterColumn",
+    "ClassName": "RichFilterColumn"
+  },
+  {
+    "Name": "xlrd2:CT_RichFilters/xlrd2:filters",
+    "ClassName": "RichFilters"
+  },
+  {
+    "Name": "xlrd2:CT_RichValueTypeReservedKeyFlag/xlrd2:flag",
+    "ClassName": "RichValueTypeReservedKeyFlag"
+  },
+  {
+    "Name": "xlrd2:CT_RichValueGlobalType/xlrd2:global",
+    "ClassName": "RichValueGlobalType"
+  },
+  {
+    "Name": "xlrd2:CT_SupportingPropertyBagKey/xlrd2:k",
+    "ClassName": "SupportingPropertyBagKey"
+  },
+  {
+    "Name": "xlrd2:CT_RichValueTypeReservedKey/xlrd2:key",
+    "ClassName": "RichValueTypeReservedKey"
+  },
+  {
+    "Name": "xlrd2:CT_RichValueTypeKeyFlags/xlrd2:keyFlags",
+    "ClassName": "RichValueTypeKeyFlags"
+  },
+  {
+    "Name": "xlrd2:CT_RichFormatProperties/xlrd2:richProperties",
+    "ClassName": "RichFormatProperties"
+  },
+  {
+    "Name": "xlrd2:CT_RichSortCondition/xlrd2:richSortCondition",
+    "ClassName": "RichSortCondition"
+  },
+  {
+    "Name": "xlrd2:CT_RichStyles/xlrd2:richStyles",
+    "ClassName": "RichStyles"
+  },
+  {
+    "Name": "xlrd2:CT_RichStylesheet/xlrd2:richStyleSheet",
+    "ClassName": "RichStylesheet",
+    "PartClassName": "RichStylesPart"
+  },
+  {
+    "Name": "xlrd2:CT_RichFormatProperty/xlrd2:rPr",
+    "ClassName": "RichFormatProperty"
+  },
+  {
+    "Name": "xlrd2:CT_RichStylePropertyValue/xlrd2:rpv",
+    "ClassName": "RichStylePropertyValue"
+  },
+  {
+    "Name": "xlrd2:CT_RichStyle/xlrd2:rSty",
+    "ClassName": "RichStyle"
+  },
+  {
+    "Name": "xlrd2:CT_RichValueTypesInfo/xlrd2:rvTypesInfo",
+    "ClassName": "RichValueTypesInfo",
+    "PartClassName": "RdRichValueTypesPart"
+  },
+  {
+    "Name": "xlrd2:CT_SupportingPropertyBagStructure/xlrd2:s",
+    "ClassName": "SupportingPropertyBagStructure"
+  },
+  {
+    "Name": "xlrd2:CT_SupportingPropertyBag/xlrd2:spb",
+    "ClassName": "SupportingPropertyBag"
+  },
+  {
+    "Name": "xlrd2:CT_SupportingPropertyBagArrayData/xlrd2:spbArrays",
+    "ClassName": "SupportingPropertyBagArrayData"
+  },
+  {
+    "Name": "xlrd2:CT_SupportingPropertyBagData/xlrd2:spbData",
+    "ClassName": "SupportingPropertyBagData"
+  },
+  {
+    "Name": "xlrd2:CT_SupportingPropertyBagStructures/xlrd2:spbStructures",
+    "ClassName": "SupportingPropertyBagStructures",
+    "PartClassName": "RdSupportingPropertyBagStructurePart"
+  },
+  {
+    "Name": "xlrd2:CT_SupportingPropertyBags/xlrd2:supportingPropertyBags",
+    "ClassName": "SupportingPropertyBags",
+    "PartClassName": "RdSupportingPropertyBagPart"
+  },
+  {
+    "Name": "xlrd2:CT_RichTop10/xlrd2:top10",
+    "ClassName": "RichTop10"
+  },
+  {
+    "Name": "xlrd2:CT_RichValueType/xlrd2:type",
+    "ClassName": "RichValueType"
+  },
+  {
+    "Name": "xlrd2:CT_RichValueTypes/xlrd2:types",
+    "ClassName": "RichValueTypes"
+  },
+  {
+    "Name": "xlrd2:CT_ArrayValue/xlrd2:v",
+    "ClassName": "ArrayValue"
+  },
+  {
+    "Name": "xlrd2:CT_SupportingPropertyBagArrayValue/xlrd2:v",
+    "ClassName": "SupportingPropertyBagArrayValue"
+  },
+  {
+    "Name": "xlrd2:CT_SupportingPropertyBagValue/xlrd2:v",
+    "ClassName": "SupportingPropertyBagValue"
+  }
+]

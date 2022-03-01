@@ -1,0 +1,2065 @@
+{
+  "TargetNamespace": "http://www.w3.org/2003/04/emma",
+  "Types": [
+    {
+      "Name": "emma:CT_DerivedFrom/emma:derived-from",
+      "ClassName": "DerivedFrom",
+      "Summary": "Defines the DerivedFrom Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":resource",
+          "PropertyName": "Resource",
+          "Type": "StringValue",
+          "PropertyComments": "resource",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":composite",
+          "PropertyName": "Composite",
+          "Type": "BooleanValue",
+          "PropertyComments": "composite"
+        }
+      ]
+    },
+    {
+      "Name": "emma:CT_Info/emma:info",
+      "ClassName": "Info",
+      "Summary": "Defines the Info Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsId",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsNcName",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Namespace": "##other",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "emma:CT_Lattice/emma:lattice",
+      "ClassName": "Lattice",
+      "Summary": "Defines the Lattice Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":initial",
+          "PropertyName": "Initial",
+          "Type": "IntegerValue",
+          "PropertyComments": "initial",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsNonNegative",
+                  "Value": "True"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":final",
+          "PropertyName": "Final",
+          "Type": "ListValue\u003CDecimalValue\u003E",
+          "PropertyComments": "final",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": "emma:time-ref-uri",
+          "PropertyName": "TimeReference",
+          "Type": "StringValue",
+          "PropertyComments": "time-ref-uri"
+        },
+        {
+          "QName": "emma:time-ref-anchor-point",
+          "PropertyName": "TimeReferenceAnchorPoint",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.AnchorPointValues\u003E",
+          "PropertyComments": "time-ref-anchor-point"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "emma:CT_Arc/emma:arc"
+        },
+        {
+          "Name": "emma:CT_Node/emma:node"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Name": "emma:CT_Arc/emma:arc"
+          },
+          {
+            "Name": "emma:CT_Node/emma:node"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "emma:CT_Literal/emma:literal",
+      "ClassName": "Literal",
+      "Summary": "Defines the Literal Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true
+    },
+    {
+      "Name": "emma:CT_Interpretation/emma:interpretation",
+      "ClassName": "Interpretation",
+      "Summary": "Defines the Interpretation Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsId",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsNcName",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:tokens",
+          "PropertyName": "Tokens",
+          "Type": "StringValue",
+          "PropertyComments": "tokens"
+        },
+        {
+          "QName": "emma:process",
+          "PropertyName": "Process",
+          "Type": "StringValue",
+          "PropertyComments": "process"
+        },
+        {
+          "QName": "emma:lang",
+          "PropertyName": "Language",
+          "Type": "StringValue",
+          "PropertyComments": "lang"
+        },
+        {
+          "QName": "emma:signal",
+          "PropertyName": "Signal",
+          "Type": "StringValue",
+          "PropertyComments": "signal"
+        },
+        {
+          "QName": "emma:signal-size",
+          "PropertyName": "SignalSize",
+          "Type": "IntegerValue",
+          "PropertyComments": "signal-size"
+        },
+        {
+          "QName": "emma:media-type",
+          "PropertyName": "MediaType",
+          "Type": "StringValue",
+          "PropertyComments": "media-type"
+        },
+        {
+          "QName": "emma:confidence",
+          "PropertyName": "Confidence",
+          "Type": "DecimalValue",
+          "PropertyComments": "confidence",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "1"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:source",
+          "PropertyName": "Source",
+          "Type": "StringValue",
+          "PropertyComments": "source"
+        },
+        {
+          "QName": "emma:start",
+          "PropertyName": "Start",
+          "Type": "UInt64Value",
+          "PropertyComments": "start"
+        },
+        {
+          "QName": "emma:end",
+          "PropertyName": "End",
+          "Type": "UInt64Value",
+          "PropertyComments": "end"
+        },
+        {
+          "QName": "emma:time-ref-uri",
+          "PropertyName": "TimeReference",
+          "Type": "StringValue",
+          "PropertyComments": "time-ref-uri"
+        },
+        {
+          "QName": "emma:time-ref-anchor-point",
+          "PropertyName": "TimeReferenceAnchorPoint",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.AnchorPointValues\u003E",
+          "PropertyComments": "time-ref-anchor-point"
+        },
+        {
+          "QName": "emma:offset-to-start",
+          "PropertyName": "OffsetToStart",
+          "Type": "IntegerValue",
+          "PropertyComments": "offset-to-start"
+        },
+        {
+          "QName": "emma:duration",
+          "PropertyName": "Duration",
+          "Type": "IntegerValue",
+          "PropertyComments": "duration"
+        },
+        {
+          "QName": "emma:medium",
+          "PropertyName": "Medium",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.EMMA.MediumValues\u003E\u003E",
+          "PropertyComments": "medium"
+        },
+        {
+          "QName": "emma:mode",
+          "PropertyName": "Mode",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "PropertyComments": "mode"
+        },
+        {
+          "QName": "emma:function",
+          "PropertyName": "Function",
+          "Type": "StringValue",
+          "PropertyComments": "function"
+        },
+        {
+          "QName": "emma:verbal",
+          "PropertyName": "Verbal",
+          "Type": "BooleanValue",
+          "PropertyComments": "verbal"
+        },
+        {
+          "QName": "emma:cost",
+          "PropertyName": "Cost",
+          "Type": "DecimalValue",
+          "PropertyComments": "cost",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10000000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:grammar-ref",
+          "PropertyName": "GrammarRef",
+          "Type": "StringValue",
+          "PropertyComments": "grammar-ref"
+        },
+        {
+          "QName": "emma:endpoint-info-ref",
+          "PropertyName": "EndpointInfoRef",
+          "Type": "StringValue",
+          "PropertyComments": "endpoint-info-ref"
+        },
+        {
+          "QName": "emma:model-ref",
+          "PropertyName": "ModelRef",
+          "Type": "StringValue",
+          "PropertyComments": "model-ref"
+        },
+        {
+          "QName": "emma:dialog-turn",
+          "PropertyName": "DialogTurn",
+          "Type": "StringValue",
+          "PropertyComments": "dialog-turn"
+        },
+        {
+          "QName": "emma:no-input",
+          "PropertyName": "NoInput",
+          "Type": "BooleanValue",
+          "PropertyComments": "no-input"
+        },
+        {
+          "QName": "emma:uninterpreted",
+          "PropertyName": "Uninterpreted",
+          "Type": "BooleanValue",
+          "PropertyComments": "uninterpreted"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "emma:CT_DerivedFrom/emma:derived-from"
+        },
+        {
+          "Name": "emma:CT_Info/emma:info"
+        },
+        {
+          "Name": "emma:CT_Lattice/emma:lattice"
+        },
+        {
+          "Name": "emma:CT_Literal/emma:literal"
+        },
+        {
+          "Name": "msink:CT_CtxNode/msink:context"
+        }
+      ],
+      "Particle": {
+        "Kind": "Group",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "emma:CT_DerivedFrom/emma:derived-from"
+              },
+              {
+                "Name": "emma:CT_Info/emma:info"
+              },
+              {
+                "Name": "emma:CT_Lattice/emma:lattice"
+              },
+              {
+                "Name": "emma:CT_Literal/emma:literal"
+              },
+              {
+                "Name": "msink:CT_CtxNode/msink:context",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "emma:CT_OneOf/emma:one-of",
+      "ClassName": "OneOf",
+      "Summary": "Defines the OneOf Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":disjunction-type",
+          "PropertyName": "DisjunctionType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.DisjunctionTypeValues\u003E",
+          "PropertyComments": "disjunction-type"
+        },
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsId",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsNcName",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:tokens",
+          "PropertyName": "Tokens",
+          "Type": "StringValue",
+          "PropertyComments": "tokens"
+        },
+        {
+          "QName": "emma:process",
+          "PropertyName": "Process",
+          "Type": "StringValue",
+          "PropertyComments": "process"
+        },
+        {
+          "QName": "emma:lang",
+          "PropertyName": "Language",
+          "Type": "StringValue",
+          "PropertyComments": "lang"
+        },
+        {
+          "QName": "emma:signal",
+          "PropertyName": "Signal",
+          "Type": "StringValue",
+          "PropertyComments": "signal"
+        },
+        {
+          "QName": "emma:signal-size",
+          "PropertyName": "SignalSize",
+          "Type": "IntegerValue",
+          "PropertyComments": "signal-size"
+        },
+        {
+          "QName": "emma:media-type",
+          "PropertyName": "MediaType",
+          "Type": "StringValue",
+          "PropertyComments": "media-type"
+        },
+        {
+          "QName": "emma:confidence",
+          "PropertyName": "Confidence",
+          "Type": "DecimalValue",
+          "PropertyComments": "confidence",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "1"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:source",
+          "PropertyName": "Source",
+          "Type": "StringValue",
+          "PropertyComments": "source"
+        },
+        {
+          "QName": "emma:start",
+          "PropertyName": "Start",
+          "Type": "UInt64Value",
+          "PropertyComments": "start"
+        },
+        {
+          "QName": "emma:end",
+          "PropertyName": "End",
+          "Type": "UInt64Value",
+          "PropertyComments": "end"
+        },
+        {
+          "QName": "emma:time-ref-uri",
+          "PropertyName": "TimeReference",
+          "Type": "StringValue",
+          "PropertyComments": "time-ref-uri"
+        },
+        {
+          "QName": "emma:time-ref-anchor-point",
+          "PropertyName": "TimeReferenceAnchorPoint",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.AnchorPointValues\u003E",
+          "PropertyComments": "time-ref-anchor-point"
+        },
+        {
+          "QName": "emma:offset-to-start",
+          "PropertyName": "OffsetToStart",
+          "Type": "IntegerValue",
+          "PropertyComments": "offset-to-start"
+        },
+        {
+          "QName": "emma:duration",
+          "PropertyName": "Duration",
+          "Type": "IntegerValue",
+          "PropertyComments": "duration"
+        },
+        {
+          "QName": "emma:medium",
+          "PropertyName": "Medium",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.EMMA.MediumValues\u003E\u003E",
+          "PropertyComments": "medium"
+        },
+        {
+          "QName": "emma:mode",
+          "PropertyName": "Mode",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "PropertyComments": "mode"
+        },
+        {
+          "QName": "emma:function",
+          "PropertyName": "Function",
+          "Type": "StringValue",
+          "PropertyComments": "function"
+        },
+        {
+          "QName": "emma:verbal",
+          "PropertyName": "Verbal",
+          "Type": "BooleanValue",
+          "PropertyComments": "verbal"
+        },
+        {
+          "QName": "emma:cost",
+          "PropertyName": "Cost",
+          "Type": "DecimalValue",
+          "PropertyComments": "cost",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10000000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:grammar-ref",
+          "PropertyName": "GrammarRef",
+          "Type": "StringValue",
+          "PropertyComments": "grammar-ref"
+        },
+        {
+          "QName": "emma:endpoint-info-ref",
+          "PropertyName": "EndpointInfoRef",
+          "Type": "StringValue",
+          "PropertyComments": "endpoint-info-ref"
+        },
+        {
+          "QName": "emma:model-ref",
+          "PropertyName": "ModelRef",
+          "Type": "StringValue",
+          "PropertyComments": "model-ref"
+        },
+        {
+          "QName": "emma:dialog-turn",
+          "PropertyName": "DialogTurn",
+          "Type": "StringValue",
+          "PropertyComments": "dialog-turn"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "emma:CT_DerivedFrom/emma:derived-from"
+        },
+        {
+          "Name": "emma:CT_Info/emma:info"
+        },
+        {
+          "Name": "emma:CT_Interpretation/emma:interpretation"
+        },
+        {
+          "Name": "emma:CT_OneOf/emma:one-of"
+        },
+        {
+          "Name": "emma:CT_Group/emma:group"
+        },
+        {
+          "Name": "emma:CT_Sequence/emma:sequence"
+        }
+      ],
+      "Particle": {
+        "Kind": "Group",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "emma:CT_DerivedFrom/emma:derived-from"
+              },
+              {
+                "Name": "emma:CT_Info/emma:info"
+              },
+              {
+                "Name": "emma:CT_Interpretation/emma:interpretation"
+              },
+              {
+                "Name": "emma:CT_OneOf/emma:one-of"
+              },
+              {
+                "Name": "emma:CT_Group/emma:group"
+              },
+              {
+                "Name": "emma:CT_Sequence/emma:sequence"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "emma:CT_Group/emma:group",
+      "ClassName": "Group",
+      "Summary": "Defines the Group Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsId",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsNcName",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:tokens",
+          "PropertyName": "Tokens",
+          "Type": "StringValue",
+          "PropertyComments": "tokens"
+        },
+        {
+          "QName": "emma:process",
+          "PropertyName": "Process",
+          "Type": "StringValue",
+          "PropertyComments": "process"
+        },
+        {
+          "QName": "emma:lang",
+          "PropertyName": "Language",
+          "Type": "StringValue",
+          "PropertyComments": "lang"
+        },
+        {
+          "QName": "emma:signal",
+          "PropertyName": "Signal",
+          "Type": "StringValue",
+          "PropertyComments": "signal"
+        },
+        {
+          "QName": "emma:signal-size",
+          "PropertyName": "SignalSize",
+          "Type": "IntegerValue",
+          "PropertyComments": "signal-size"
+        },
+        {
+          "QName": "emma:media-type",
+          "PropertyName": "MediaType",
+          "Type": "StringValue",
+          "PropertyComments": "media-type"
+        },
+        {
+          "QName": "emma:confidence",
+          "PropertyName": "Confidence",
+          "Type": "DecimalValue",
+          "PropertyComments": "confidence",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "1"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:source",
+          "PropertyName": "Source",
+          "Type": "StringValue",
+          "PropertyComments": "source"
+        },
+        {
+          "QName": "emma:start",
+          "PropertyName": "Start",
+          "Type": "UInt64Value",
+          "PropertyComments": "start"
+        },
+        {
+          "QName": "emma:end",
+          "PropertyName": "End",
+          "Type": "UInt64Value",
+          "PropertyComments": "end"
+        },
+        {
+          "QName": "emma:time-ref-uri",
+          "PropertyName": "TimeReference",
+          "Type": "StringValue",
+          "PropertyComments": "time-ref-uri"
+        },
+        {
+          "QName": "emma:time-ref-anchor-point",
+          "PropertyName": "TimeReferenceAnchorPoint",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.AnchorPointValues\u003E",
+          "PropertyComments": "time-ref-anchor-point"
+        },
+        {
+          "QName": "emma:offset-to-start",
+          "PropertyName": "OffsetToStart",
+          "Type": "IntegerValue",
+          "PropertyComments": "offset-to-start"
+        },
+        {
+          "QName": "emma:duration",
+          "PropertyName": "Duration",
+          "Type": "IntegerValue",
+          "PropertyComments": "duration"
+        },
+        {
+          "QName": "emma:medium",
+          "PropertyName": "Medium",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.EMMA.MediumValues\u003E\u003E",
+          "PropertyComments": "medium"
+        },
+        {
+          "QName": "emma:mode",
+          "PropertyName": "Mode",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "PropertyComments": "mode"
+        },
+        {
+          "QName": "emma:function",
+          "PropertyName": "Function",
+          "Type": "StringValue",
+          "PropertyComments": "function"
+        },
+        {
+          "QName": "emma:verbal",
+          "PropertyName": "Verbal",
+          "Type": "BooleanValue",
+          "PropertyComments": "verbal"
+        },
+        {
+          "QName": "emma:cost",
+          "PropertyName": "Cost",
+          "Type": "DecimalValue",
+          "PropertyComments": "cost",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10000000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:grammar-ref",
+          "PropertyName": "GrammarRef",
+          "Type": "StringValue",
+          "PropertyComments": "grammar-ref"
+        },
+        {
+          "QName": "emma:endpoint-info-ref",
+          "PropertyName": "EndpointInfoRef",
+          "Type": "StringValue",
+          "PropertyComments": "endpoint-info-ref"
+        },
+        {
+          "QName": "emma:model-ref",
+          "PropertyName": "ModelRef",
+          "Type": "StringValue",
+          "PropertyComments": "model-ref"
+        },
+        {
+          "QName": "emma:dialog-turn",
+          "PropertyName": "DialogTurn",
+          "Type": "StringValue",
+          "PropertyComments": "dialog-turn"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "emma:CT_DerivedFrom/emma:derived-from"
+        },
+        {
+          "Name": "emma:CT_GroupInfo/emma:group-info"
+        },
+        {
+          "Name": "emma:CT_Info/emma:info"
+        },
+        {
+          "Name": "emma:CT_Interpretation/emma:interpretation"
+        },
+        {
+          "Name": "emma:CT_OneOf/emma:one-of"
+        },
+        {
+          "Name": "emma:CT_Group/emma:group"
+        },
+        {
+          "Name": "emma:CT_Sequence/emma:sequence"
+        }
+      ],
+      "Particle": {
+        "Kind": "Group",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "emma:CT_DerivedFrom/emma:derived-from"
+              },
+              {
+                "Name": "emma:CT_GroupInfo/emma:group-info"
+              },
+              {
+                "Name": "emma:CT_Info/emma:info"
+              },
+              {
+                "Name": "emma:CT_Interpretation/emma:interpretation"
+              },
+              {
+                "Name": "emma:CT_OneOf/emma:one-of"
+              },
+              {
+                "Name": "emma:CT_Group/emma:group"
+              },
+              {
+                "Name": "emma:CT_Sequence/emma:sequence"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "emma:CT_Sequence/emma:sequence",
+      "ClassName": "Sequence",
+      "Summary": "Defines the Sequence Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsId",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsNcName",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:tokens",
+          "PropertyName": "Tokens",
+          "Type": "StringValue",
+          "PropertyComments": "tokens"
+        },
+        {
+          "QName": "emma:process",
+          "PropertyName": "Process",
+          "Type": "StringValue",
+          "PropertyComments": "process"
+        },
+        {
+          "QName": "emma:lang",
+          "PropertyName": "Language",
+          "Type": "StringValue",
+          "PropertyComments": "lang"
+        },
+        {
+          "QName": "emma:signal",
+          "PropertyName": "Signal",
+          "Type": "StringValue",
+          "PropertyComments": "signal"
+        },
+        {
+          "QName": "emma:signal-size",
+          "PropertyName": "SignalSize",
+          "Type": "IntegerValue",
+          "PropertyComments": "signal-size"
+        },
+        {
+          "QName": "emma:media-type",
+          "PropertyName": "MediaType",
+          "Type": "StringValue",
+          "PropertyComments": "media-type"
+        },
+        {
+          "QName": "emma:confidence",
+          "PropertyName": "Confidence",
+          "Type": "DecimalValue",
+          "PropertyComments": "confidence",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "1"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:source",
+          "PropertyName": "Source",
+          "Type": "StringValue",
+          "PropertyComments": "source"
+        },
+        {
+          "QName": "emma:start",
+          "PropertyName": "Start",
+          "Type": "UInt64Value",
+          "PropertyComments": "start"
+        },
+        {
+          "QName": "emma:end",
+          "PropertyName": "End",
+          "Type": "UInt64Value",
+          "PropertyComments": "end"
+        },
+        {
+          "QName": "emma:time-ref-uri",
+          "PropertyName": "TimeReference",
+          "Type": "StringValue",
+          "PropertyComments": "time-ref-uri"
+        },
+        {
+          "QName": "emma:time-ref-anchor-point",
+          "PropertyName": "TimeReferenceAnchorPoint",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.AnchorPointValues\u003E",
+          "PropertyComments": "time-ref-anchor-point"
+        },
+        {
+          "QName": "emma:offset-to-start",
+          "PropertyName": "OffsetToStart",
+          "Type": "IntegerValue",
+          "PropertyComments": "offset-to-start"
+        },
+        {
+          "QName": "emma:duration",
+          "PropertyName": "Duration",
+          "Type": "IntegerValue",
+          "PropertyComments": "duration"
+        },
+        {
+          "QName": "emma:medium",
+          "PropertyName": "Medium",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.EMMA.MediumValues\u003E\u003E",
+          "PropertyComments": "medium"
+        },
+        {
+          "QName": "emma:mode",
+          "PropertyName": "Mode",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "PropertyComments": "mode"
+        },
+        {
+          "QName": "emma:function",
+          "PropertyName": "Function",
+          "Type": "StringValue",
+          "PropertyComments": "function"
+        },
+        {
+          "QName": "emma:verbal",
+          "PropertyName": "Verbal",
+          "Type": "BooleanValue",
+          "PropertyComments": "verbal"
+        },
+        {
+          "QName": "emma:cost",
+          "PropertyName": "Cost",
+          "Type": "DecimalValue",
+          "PropertyComments": "cost",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10000000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:grammar-ref",
+          "PropertyName": "GrammarRef",
+          "Type": "StringValue",
+          "PropertyComments": "grammar-ref"
+        },
+        {
+          "QName": "emma:endpoint-info-ref",
+          "PropertyName": "EndpointInfoRef",
+          "Type": "StringValue",
+          "PropertyComments": "endpoint-info-ref"
+        },
+        {
+          "QName": "emma:model-ref",
+          "PropertyName": "ModelRef",
+          "Type": "StringValue",
+          "PropertyComments": "model-ref"
+        },
+        {
+          "QName": "emma:dialog-turn",
+          "PropertyName": "DialogTurn",
+          "Type": "StringValue",
+          "PropertyComments": "dialog-turn"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "emma:CT_DerivedFrom/emma:derived-from"
+        },
+        {
+          "Name": "emma:CT_Info/emma:info"
+        },
+        {
+          "Name": "emma:CT_Interpretation/emma:interpretation"
+        },
+        {
+          "Name": "emma:CT_OneOf/emma:one-of"
+        },
+        {
+          "Name": "emma:CT_Group/emma:group"
+        },
+        {
+          "Name": "emma:CT_Sequence/emma:sequence"
+        }
+      ],
+      "Particle": {
+        "Kind": "Group",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "emma:CT_DerivedFrom/emma:derived-from"
+              },
+              {
+                "Name": "emma:CT_Info/emma:info"
+              },
+              {
+                "Name": "emma:CT_Interpretation/emma:interpretation"
+              },
+              {
+                "Name": "emma:CT_OneOf/emma:one-of"
+              },
+              {
+                "Name": "emma:CT_Group/emma:group"
+              },
+              {
+                "Name": "emma:CT_Sequence/emma:sequence"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "emma:CT_GroupInfo/emma:group-info",
+      "ClassName": "GroupInfo",
+      "Summary": "Defines the GroupInfo Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":ref",
+          "PropertyName": "Reference",
+          "Type": "StringValue",
+          "PropertyComments": "ref",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Namespace": "##other",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "emma:CT_Derivation/emma:derivation",
+      "ClassName": "Derivation",
+      "Summary": "Defines the Derivation Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "emma:CT_Interpretation/emma:interpretation"
+        },
+        {
+          "Name": "emma:CT_OneOf/emma:one-of"
+        },
+        {
+          "Name": "emma:CT_Sequence/emma:sequence"
+        },
+        {
+          "Name": "emma:CT_Group/emma:group"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {
+            "Min": 1
+          }
+        ],
+        "Items": [
+          {
+            "Name": "emma:CT_Interpretation/emma:interpretation"
+          },
+          {
+            "Name": "emma:CT_OneOf/emma:one-of"
+          },
+          {
+            "Name": "emma:CT_Sequence/emma:sequence"
+          },
+          {
+            "Name": "emma:CT_Group/emma:group"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "emma:CT_Grammar/emma:grammar",
+      "ClassName": "Grammar",
+      "Summary": "Defines the Grammar Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsId",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsNcName",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":ref",
+          "PropertyName": "Reference",
+          "Type": "StringValue",
+          "PropertyComments": "ref",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "emma:CT_Model/emma:model",
+      "ClassName": "Model",
+      "Summary": "Defines the Model Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsId",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsNcName",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":ref",
+          "PropertyName": "Reference",
+          "Type": "StringValue",
+          "PropertyComments": "ref",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Namespace": "##other",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "emma:CT_EndPointInfo/emma:endpoint-info",
+      "ClassName": "EndPointInfo",
+      "Summary": "Defines the EndPointInfo Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsId",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsNcName",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "emma:CT_EndPoint/emma:endpoint"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {
+            "Min": 1
+          }
+        ],
+        "Items": [
+          {
+            "Name": "emma:CT_EndPoint/emma:endpoint"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "emma:CT_EndPoint/emma:endpoint",
+      "ClassName": "EndPoint",
+      "Summary": "Defines the EndPoint Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsId",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "Boolean",
+                  "Name": "IsNcName",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:endpoint-role",
+          "PropertyName": "EndpointRole",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.EndPointRoleValues\u003E",
+          "PropertyComments": "endpoint-role"
+        },
+        {
+          "QName": "emma:endpoint-address",
+          "PropertyName": "EndPointAddress",
+          "Type": "StringValue",
+          "PropertyComments": "endpoint-address"
+        },
+        {
+          "QName": "emma:message-id",
+          "PropertyName": "MessageId",
+          "Type": "StringValue",
+          "PropertyComments": "message-id"
+        },
+        {
+          "QName": "emma:port-num",
+          "PropertyName": "PortNumber",
+          "Type": "IntegerValue",
+          "PropertyComments": "port-num"
+        },
+        {
+          "QName": "emma:port-type",
+          "PropertyName": "PortType",
+          "Type": "StringValue",
+          "PropertyComments": "port-type"
+        },
+        {
+          "QName": "emma:endpoint-pair-ref",
+          "PropertyName": "EndpointPairRef",
+          "Type": "StringValue",
+          "PropertyComments": "endpoint-pair-ref"
+        },
+        {
+          "QName": "emma:service-name",
+          "PropertyName": "ServiceName",
+          "Type": "StringValue",
+          "PropertyComments": "service-name"
+        },
+        {
+          "QName": "emma:media-type",
+          "PropertyName": "MediaType",
+          "Type": "StringValue",
+          "PropertyComments": "media-type"
+        },
+        {
+          "QName": "emma:medium",
+          "PropertyName": "Medium",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.EMMA.MediumValues\u003E\u003E",
+          "PropertyComments": "medium"
+        },
+        {
+          "QName": "emma:mode",
+          "PropertyName": "Mode",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "PropertyComments": "mode"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Namespace": "##other",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "emma:CT_Node/emma:node",
+      "ClassName": "Node",
+      "Summary": "Defines the Node Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":node-number",
+          "PropertyName": "NodeNumber",
+          "Type": "IntegerValue",
+          "PropertyComments": "node-number",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsNonNegative",
+                  "Value": "True"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:confidence",
+          "PropertyName": "Confidence",
+          "Type": "DecimalValue",
+          "PropertyComments": "confidence",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "1"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:cost",
+          "PropertyName": "Cost",
+          "Type": "DecimalValue",
+          "PropertyComments": "cost",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10000000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "emma:CT_Info/emma:info"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Name": "emma:CT_Info/emma:info"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "emma:CT_Arc/emma:arc",
+      "ClassName": "Arc",
+      "Summary": "Defines the Arc Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":from",
+          "PropertyName": "From",
+          "Type": "IntegerValue",
+          "PropertyComments": "from",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsNonNegative",
+                  "Value": "True"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":to",
+          "PropertyName": "To",
+          "Type": "IntegerValue",
+          "PropertyComments": "to",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsNonNegative",
+                  "Value": "True"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:start",
+          "PropertyName": "Start",
+          "Type": "UInt64Value",
+          "PropertyComments": "start"
+        },
+        {
+          "QName": "emma:end",
+          "PropertyName": "End",
+          "Type": "UInt64Value",
+          "PropertyComments": "end"
+        },
+        {
+          "QName": "emma:offset-to-start",
+          "PropertyName": "OffsetToStart",
+          "Type": "IntegerValue",
+          "PropertyComments": "offset-to-start"
+        },
+        {
+          "QName": "emma:duration",
+          "PropertyName": "Duration",
+          "Type": "IntegerValue",
+          "PropertyComments": "duration"
+        },
+        {
+          "QName": "emma:confidence",
+          "PropertyName": "Confidence",
+          "Type": "DecimalValue",
+          "PropertyComments": "confidence",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "1"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:cost",
+          "PropertyName": "Cost",
+          "Type": "DecimalValue",
+          "PropertyComments": "cost",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10000000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "emma:lang",
+          "PropertyName": "Language",
+          "Type": "StringValue",
+          "PropertyComments": "lang"
+        },
+        {
+          "QName": "emma:medium",
+          "PropertyName": "Medium",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.EMMA.MediumValues\u003E\u003E",
+          "PropertyComments": "medium"
+        },
+        {
+          "QName": "emma:mode",
+          "PropertyName": "Mode",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "PropertyComments": "mode"
+        },
+        {
+          "QName": "emma:source",
+          "PropertyName": "Source",
+          "Type": "StringValue",
+          "PropertyComments": "source"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "emma:CT_Info/emma:info"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Name": "emma:CT_Info/emma:info"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "emma:CT_Emma/emma:emma",
+      "ClassName": "Emma",
+      "Summary": "Defines the Emma Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":version",
+          "PropertyName": "Version",
+          "Type": "StringValue",
+          "PropertyComments": "version",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "emma:CT_Derivation/emma:derivation"
+        },
+        {
+          "Name": "emma:CT_Grammar/emma:grammar"
+        },
+        {
+          "Name": "emma:CT_Model/emma:model"
+        },
+        {
+          "Name": "emma:CT_EndPointInfo/emma:endpoint-info"
+        },
+        {
+          "Name": "emma:CT_Info/emma:info"
+        },
+        {
+          "Name": "emma:CT_Interpretation/emma:interpretation"
+        },
+        {
+          "Name": "emma:CT_OneOf/emma:one-of"
+        },
+        {
+          "Name": "emma:CT_Group/emma:group"
+        },
+        {
+          "Name": "emma:CT_Sequence/emma:sequence"
+        }
+      ],
+      "Particle": {
+        "Kind": "Group",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "emma:CT_Derivation/emma:derivation"
+              },
+              {
+                "Name": "emma:CT_Grammar/emma:grammar"
+              },
+              {
+                "Name": "emma:CT_Model/emma:model"
+              },
+              {
+                "Name": "emma:CT_EndPointInfo/emma:endpoint-info"
+              },
+              {
+                "Name": "emma:CT_Info/emma:info"
+              },
+              {
+                "Name": "emma:CT_Interpretation/emma:interpretation"
+              },
+              {
+                "Name": "emma:CT_OneOf/emma:one-of"
+              },
+              {
+                "Name": "emma:CT_Group/emma:group"
+              },
+              {
+                "Name": "emma:CT_Sequence/emma:sequence"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "emma:ST_EndPointRole",
+      "Name": "EndPointRoleValues",
+      "Facets": [
+        {
+          "Value": "source",
+          "Name": "Source"
+        },
+        {
+          "Value": "sink",
+          "Name": "Sink"
+        },
+        {
+          "Value": "reply-to",
+          "Name": "Replyto"
+        },
+        {
+          "Value": "router",
+          "Name": "Router"
+        }
+      ]
+    },
+    {
+      "Type": "emma:ST_Medium",
+      "Name": "MediumValues",
+      "Facets": [
+        {
+          "Value": "acoustic",
+          "Name": "Acoustic"
+        },
+        {
+          "Value": "tactile",
+          "Name": "Tactile"
+        },
+        {
+          "Value": "visual",
+          "Name": "Visual"
+        }
+      ]
+    },
+    {
+      "Type": "emma:ST_AnchorPoint",
+      "Name": "AnchorPointValues",
+      "Facets": [
+        {
+          "Value": "start",
+          "Name": "Start"
+        },
+        {
+          "Value": "end",
+          "Name": "End"
+        }
+      ]
+    },
+    {
+      "Type": "emma:ST_DisjunctionType",
+      "Name": "DisjunctionTypeValues",
+      "Facets": [
+        {
+          "Value": "recognition",
+          "Name": "Recognition"
+        },
+        {
+          "Value": "understanding",
+          "Name": "Understanding"
+        },
+        {
+          "Value": "multi-device",
+          "Name": "Multidevice"
+        },
+        {
+          "Value": "multi-process",
+          "Name": "Multiprocess"
+        }
+      ]
+    }
+  ]
+}

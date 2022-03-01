@@ -1,0 +1,79 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/2006/metadata/customXsn",
+  "Types": [
+    {
+      "Name": "ntns:CT_CustomXsn/ntns:customXsn",
+      "ClassName": "CustomXsn",
+      "Summary": "Defines the CustomXsn Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "xsd:string/ntns:xsnLocation",
+          "PropertyName": "XsnLocation"
+        },
+        {
+          "Name": "xsd:string/ntns:cached",
+          "PropertyName": "CachedView"
+        },
+        {
+          "Name": "xsd:string/ntns:openByDefault",
+          "PropertyName": "OpenByDefault"
+        },
+        {
+          "Name": "xsd:string/ntns:xsnScope",
+          "PropertyName": "Scope"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xsd:string/ntns:xsnLocation"
+          },
+          {
+            "Name": "xsd:string/ntns:cached"
+          },
+          {
+            "Name": "xsd:string/ntns:openByDefault"
+          },
+          {
+            "Name": "xsd:string/ntns:xsnScope"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xsd:string/ntns:xsnLocation",
+      "ClassName": "XsnLocation",
+      "Summary": "Defines the XsnLocation Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/ntns:cached",
+      "ClassName": "CachedView",
+      "Summary": "Defines the CachedView Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/ntns:openByDefault",
+      "ClassName": "OpenByDefault",
+      "Summary": "Defines the OpenByDefault Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    },
+    {
+      "Name": "xsd:string/ntns:xsnScope",
+      "ClassName": "Scope",
+      "Summary": "Defines the Scope Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true
+    }
+  ]
+}

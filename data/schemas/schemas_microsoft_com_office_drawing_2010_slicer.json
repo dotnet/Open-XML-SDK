@@ -1,0 +1,80 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2010/slicer",
+  "Types": [
+    {
+      "Name": "sle:CT_Slicer/sle:slicer",
+      "ClassName": "Slicer",
+      "Summary": "Defines the Slicer Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/sle:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/sle:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/sle:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

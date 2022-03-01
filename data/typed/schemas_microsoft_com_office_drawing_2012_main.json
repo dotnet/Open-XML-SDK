@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "a15:CT_BackgroundPr/a15:backgroundPr",
+    "ClassName": "BackgroundProperties"
+  },
+  {
+    "Name": "a15:CT_NonVisualGroupProps/a15:nonVisualGroupProps",
+    "ClassName": "NonVisualGroupProperties"
+  },
+  {
+    "Name": "a15:CT_ObjectPr/a15:objectPr",
+    "ClassName": "ObjectProperties"
+  },
+  {
+    "Name": "a15:CT_SignatureLine/a15:signatureLine",
+    "ClassName": "SignatureLine"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "Root": "mso14:CT_CustomUI",
+  "Name": "RibbonAndBackstageCustomizationsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/xml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility",
+  "Target": "customUI",
+  "RootElement": "customUI",
+  "Paths": {
+    "General": "customUI"
+  },
+  "Version": "Office2010",
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    }
+  ]
+}

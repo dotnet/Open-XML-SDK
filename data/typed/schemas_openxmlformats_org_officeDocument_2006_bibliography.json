@@ -1,0 +1,314 @@
+[
+  {
+    "Name": "b:CT_NameOrCorporateType/",
+    "ClassName": "NameOrCorporateType"
+  },
+  {
+    "Name": "b:CT_NameType/",
+    "ClassName": "NameType"
+  },
+  {
+    "Name": "b:ST_String255/b:AbbreviatedCaseNumber",
+    "ClassName": "AbbreviatedCaseNumber"
+  },
+  {
+    "Name": "b:ST_String255/b:AlbumTitle",
+    "ClassName": "AlbumTitle"
+  },
+  {
+    "Name": "b:CT_NameType/b:Artist",
+    "ClassName": "Artist"
+  },
+  {
+    "Name": "b:CT_AuthorType/b:Author",
+    "ClassName": "AuthorList"
+  },
+  {
+    "Name": "b:CT_NameOrCorporateType/b:Author",
+    "ClassName": "Author"
+  },
+  {
+    "Name": "b:CT_NameType/b:BookAuthor",
+    "ClassName": "BookAuthor"
+  },
+  {
+    "Name": "b:ST_String255/b:BookTitle",
+    "ClassName": "BookTitle"
+  },
+  {
+    "Name": "b:ST_String255/b:Broadcaster",
+    "ClassName": "Broadcaster"
+  },
+  {
+    "Name": "b:ST_String255/b:BroadcastTitle",
+    "ClassName": "BroadcastTitle"
+  },
+  {
+    "Name": "b:ST_String255/b:CaseNumber",
+    "ClassName": "CaseNumber"
+  },
+  {
+    "Name": "b:ST_String255/b:ChapterNumber",
+    "ClassName": "ChapterNumber"
+  },
+  {
+    "Name": "b:ST_String255/b:City",
+    "ClassName": "City"
+  },
+  {
+    "Name": "b:ST_String255/b:Comments",
+    "ClassName": "Comments"
+  },
+  {
+    "Name": "b:CT_NameType/b:Compiler",
+    "ClassName": "Compiler"
+  },
+  {
+    "Name": "b:CT_NameType/b:Composer",
+    "ClassName": "Composer"
+  },
+  {
+    "Name": "b:CT_NameType/b:Conductor",
+    "ClassName": "Conductor"
+  },
+  {
+    "Name": "b:ST_String255/b:ConferenceName",
+    "ClassName": "ConferenceName"
+  },
+  {
+    "Name": "b:ST_String255/b:Corporate",
+    "ClassName": "Corporate"
+  },
+  {
+    "Name": "b:CT_NameType/b:Counsel",
+    "ClassName": "Counsel"
+  },
+  {
+    "Name": "b:ST_String255/b:CountryRegion",
+    "ClassName": "CountryRegion"
+  },
+  {
+    "Name": "b:ST_String255/b:Court",
+    "ClassName": "Court"
+  },
+  {
+    "Name": "b:ST_String255/b:Day",
+    "ClassName": "Day"
+  },
+  {
+    "Name": "b:ST_String255/b:DayAccessed",
+    "ClassName": "DayAccessed"
+  },
+  {
+    "Name": "b:ST_String255/b:Department",
+    "ClassName": "Department"
+  },
+  {
+    "Name": "b:CT_NameType/b:Director",
+    "ClassName": "Director"
+  },
+  {
+    "Name": "b:ST_String255/b:Distributor",
+    "ClassName": "Distributor"
+  },
+  {
+    "Name": "b:ST_String255/b:Edition",
+    "ClassName": "Edition"
+  },
+  {
+    "Name": "b:CT_NameType/b:Editor",
+    "ClassName": "Editor"
+  },
+  {
+    "Name": "b:ST_String255/b:First",
+    "ClassName": "First"
+  },
+  {
+    "Name": "b:ST_String255/b:Guid",
+    "ClassName": "GuidString"
+  },
+  {
+    "Name": "b:ST_String255/b:Institution",
+    "ClassName": "Institution"
+  },
+  {
+    "Name": "b:ST_String255/b:InternetSiteTitle",
+    "ClassName": "InternetSiteTitle"
+  },
+  {
+    "Name": "b:CT_NameType/b:Interviewee",
+    "ClassName": "Interviewee"
+  },
+  {
+    "Name": "b:CT_NameType/b:Interviewer",
+    "ClassName": "Interviewer"
+  },
+  {
+    "Name": "b:CT_NameType/b:Inventor",
+    "ClassName": "Inventor"
+  },
+  {
+    "Name": "b:ST_String255/b:Issue",
+    "ClassName": "Issue"
+  },
+  {
+    "Name": "b:ST_String255/b:JournalName",
+    "ClassName": "JournalName"
+  },
+  {
+    "Name": "b:ST_String255/b:Last",
+    "ClassName": "Last"
+  },
+  {
+    "Name": "b:ST_String255/b:LCID",
+    "ClassName": "LcId"
+  },
+  {
+    "Name": "b:ST_String255/b:Medium",
+    "ClassName": "Medium"
+  },
+  {
+    "Name": "b:ST_String255/b:Middle",
+    "ClassName": "Middle"
+  },
+  {
+    "Name": "b:ST_String255/b:Month",
+    "ClassName": "Month"
+  },
+  {
+    "Name": "b:ST_String255/b:MonthAccessed",
+    "ClassName": "MonthAccessed"
+  },
+  {
+    "Name": "b:CT_NameListType/b:NameList",
+    "ClassName": "NameList"
+  },
+  {
+    "Name": "b:ST_String255/b:NumberVolumes",
+    "ClassName": "NumberVolumes"
+  },
+  {
+    "Name": "b:ST_String255/b:Pages",
+    "ClassName": "Pages"
+  },
+  {
+    "Name": "b:ST_String255/b:PatentNumber",
+    "ClassName": "PatentNumber"
+  },
+  {
+    "Name": "b:CT_NameOrCorporateType/b:Performer",
+    "ClassName": "Performer"
+  },
+  {
+    "Name": "b:ST_String255/b:PeriodicalTitle",
+    "ClassName": "PeriodicalTitle"
+  },
+  {
+    "Name": "b:CT_PersonType/b:Person",
+    "ClassName": "Person"
+  },
+  {
+    "Name": "b:CT_NameType/b:ProducerName",
+    "ClassName": "ProducerName"
+  },
+  {
+    "Name": "b:ST_String255/b:ProductionCompany",
+    "ClassName": "ProductionCompany"
+  },
+  {
+    "Name": "b:ST_String255/b:PublicationTitle",
+    "ClassName": "PublicationTitle"
+  },
+  {
+    "Name": "b:ST_String255/b:Publisher",
+    "ClassName": "Publisher"
+  },
+  {
+    "Name": "b:ST_String255/b:RecordingNumber",
+    "ClassName": "RecordingNumber"
+  },
+  {
+    "Name": "b:ST_String255/b:RefOrder",
+    "ClassName": "ReferenceOrder"
+  },
+  {
+    "Name": "b:ST_String255/b:Reporter",
+    "ClassName": "Reporter"
+  },
+  {
+    "Name": "b:ST_String255/b:ShortTitle",
+    "ClassName": "ShortTitle"
+  },
+  {
+    "Name": "b:CT_SourceType/b:Source",
+    "ClassName": "Source"
+  },
+  {
+    "Name": "b:CT_Sources/b:Sources",
+    "ClassName": "Sources"
+  },
+  {
+    "Name": "b:ST_SourceType/b:SourceType",
+    "ClassName": "SourceType"
+  },
+  {
+    "Name": "b:ST_String255/b:StandardNumber",
+    "ClassName": "StandardNumber"
+  },
+  {
+    "Name": "b:ST_String255/b:StateProvince",
+    "ClassName": "StateProvince"
+  },
+  {
+    "Name": "b:ST_String255/b:Station",
+    "ClassName": "Station"
+  },
+  {
+    "Name": "b:ST_String255/b:Tag",
+    "ClassName": "Tag"
+  },
+  {
+    "Name": "b:ST_String255/b:Theater",
+    "ClassName": "Theater"
+  },
+  {
+    "Name": "b:ST_String255/b:ThesisType",
+    "ClassName": "ThesisType"
+  },
+  {
+    "Name": "b:ST_String255/b:Title",
+    "ClassName": "Title"
+  },
+  {
+    "Name": "b:CT_NameType/b:Translator",
+    "ClassName": "Translator"
+  },
+  {
+    "Name": "b:ST_String255/b:Type",
+    "ClassName": "PatentType"
+  },
+  {
+    "Name": "b:ST_String255/b:URL",
+    "ClassName": "UrlString"
+  },
+  {
+    "Name": "b:ST_String255/b:Version",
+    "ClassName": "Version"
+  },
+  {
+    "Name": "b:ST_String255/b:Volume",
+    "ClassName": "Volume"
+  },
+  {
+    "Name": "b:CT_NameType/b:Writer",
+    "ClassName": "Writer"
+  },
+  {
+    "Name": "b:ST_String255/b:Year",
+    "ClassName": "Year"
+  },
+  {
+    "Name": "b:ST_String255/b:YearAccessed",
+    "ClassName": "YearAccessed"
+  }
+]

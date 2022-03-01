@@ -1,0 +1,36 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing",
+  "Types": [
+    {
+      "Name": "wp15:CT_WebVideoPr/wp15:webVideoPr",
+      "ClassName": "WebVideoProperty",
+      "Summary": "Defines the WebVideoProperty Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":embeddedHtml",
+          "PropertyName": "EmbeddedHtml",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "embeddedHtml"
+        },
+        {
+          "QName": ":h",
+          "PropertyName": "Height",
+          "Type": "UInt32Value",
+          "Version": "Office2013",
+          "PropertyComments": "h"
+        },
+        {
+          "QName": ":w",
+          "PropertyName": "Width",
+          "Type": "UInt32Value",
+          "Version": "Office2013",
+          "PropertyComments": "w"
+        }
+      ]
+    }
+  ]
+}

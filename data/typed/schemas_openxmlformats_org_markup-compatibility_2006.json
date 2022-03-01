@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "mc:CT_AlternateContent/mc:AlternateContent",
+    "ClassName": "AlternateContent"
+  },
+  {
+    "Name": "mc:CT_Choice/mc:Choice",
+    "ClassName": "Choice"
+  },
+  {
+    "Name": "mc:CT_Fallback/mc:Fallback",
+    "ClassName": "Fallback"
+  }
+]

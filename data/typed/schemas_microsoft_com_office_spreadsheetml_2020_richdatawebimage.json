@@ -1,0 +1,31 @@
+[
+  {
+    "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/",
+    "ClassName": "OpenXmlWebImageSupportingRichDataRelationshipElement"
+  },
+  {
+    "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/xlrdwi:address",
+    "ClassName": "AddressWebImageSupportingRichDataRelationship"
+  },
+  {
+    "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/xlrdwi:blip",
+    "ClassName": "BlipWebImageSupportingRichDataRelationship"
+  },
+  {
+    "Name": "x:CT_ExtensionList/xlrdwi:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "xlrdwi:CT_WebImageSupportingRichDataRelationship/xlrdwi:moreImagesAddress",
+    "ClassName": "MoreImagesAddressWebImageSupportingRichDataRelationship"
+  },
+  {
+    "Name": "xlrdwi:CT_WebImageSupportingRichData/xlrdwi:webImageSrd",
+    "ClassName": "WebImageSupportingRichData"
+  },
+  {
+    "Name": "xlrdwi:CT_WebImagesSupportingRichData/xlrdwi:webImagesSrd",
+    "ClassName": "WebImagesSupportingRichData",
+    "PartClassName": "RdRichValueWebImagePart"
+  }
+]

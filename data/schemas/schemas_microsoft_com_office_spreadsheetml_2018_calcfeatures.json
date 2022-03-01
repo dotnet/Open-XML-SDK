@@ -1,0 +1,52 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/calcfeatures",
+  "Types": [
+    {
+      "Name": "xcalcf:CT_CalcFeatures/xcalcf:calcFeatures",
+      "ClassName": "CalcFeatures",
+      "Summary": "Defines the CalcFeatures Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xcalcf:CT_CalcFeature/xcalcf:feature"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xcalcf:CT_CalcFeature/xcalcf:feature",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xcalcf:CT_CalcFeature/xcalcf:feature",
+      "ClassName": "CalcFeature",
+      "Summary": "Defines the CalcFeature Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

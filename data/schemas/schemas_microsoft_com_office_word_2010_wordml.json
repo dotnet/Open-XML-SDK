@@ -1,0 +1,6283 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/word/2010/wordml",
+  "Types": [
+    {
+      "Name": "w:CT_RunTrackChange/w14:conflictIns",
+      "ClassName": "RunConflictInsertion",
+      "Summary": "Defines the RunConflictInsertion Class.",
+      "BaseClass": "RunTrackChangeType",
+      "IsDerived": true,
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "w:CT_SdtRun/w:sdt"
+        },
+        {
+          "Name": "w:CT_ProofErr/w:proofErr"
+        },
+        {
+          "Name": "w:CT_PermStart/w:permStart"
+        },
+        {
+          "Name": "w:CT_Perm/w:permEnd"
+        },
+        {
+          "Name": "w:CT_Bookmark/w:bookmarkStart"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:bookmarkEnd"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:commentRangeStart"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:commentRangeEnd"
+        },
+        {
+          "Name": "w:CT_MoveBookmark/w:moveFromRangeStart"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:moveFromRangeEnd"
+        },
+        {
+          "Name": "w:CT_MoveBookmark/w:moveToRangeStart"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:moveToRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w:customXmlInsRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w:customXmlInsRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w:customXmlDelRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w:customXmlDelRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w:customXmlMoveFromRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w:customXmlMoveFromRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w:customXmlMoveToRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w:customXmlMoveToRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w14:customXmlConflictInsRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w14:customXmlConflictInsRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w14:customXmlConflictDelRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w14:customXmlConflictDelRangeEnd"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w:ins"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w:del"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w:moveFrom"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w:moveTo"
+        },
+        {
+          "Name": "w:CT_ContentPart/w:contentPart"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w14:conflictIns"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w14:conflictDel"
+        },
+        {
+          "Name": "m:CT_OMathPara/m:oMathPara"
+        },
+        {
+          "Name": "m:CT_OMath/m:oMath"
+        },
+        {
+          "Name": "m:CT_Acc/m:acc"
+        },
+        {
+          "Name": "m:CT_Bar/m:bar"
+        },
+        {
+          "Name": "m:CT_Box/m:box"
+        },
+        {
+          "Name": "m:CT_BorderBox/m:borderBox"
+        },
+        {
+          "Name": "m:CT_D/m:d"
+        },
+        {
+          "Name": "m:CT_EqArr/m:eqArr"
+        },
+        {
+          "Name": "m:CT_F/m:f"
+        },
+        {
+          "Name": "m:CT_Func/m:func"
+        },
+        {
+          "Name": "m:CT_GroupChr/m:groupChr"
+        },
+        {
+          "Name": "m:CT_LimLow/m:limLow"
+        },
+        {
+          "Name": "m:CT_LimUpp/m:limUpp"
+        },
+        {
+          "Name": "m:CT_M/m:m"
+        },
+        {
+          "Name": "m:CT_Nary/m:nary"
+        },
+        {
+          "Name": "m:CT_Phant/m:phant"
+        },
+        {
+          "Name": "m:CT_Rad/m:rad"
+        },
+        {
+          "Name": "m:CT_SPre/m:sPre"
+        },
+        {
+          "Name": "m:CT_SSub/m:sSub"
+        },
+        {
+          "Name": "m:CT_SSubSup/m:sSubSup"
+        },
+        {
+          "Name": "m:CT_SSup/m:sSup"
+        },
+        {
+          "Name": "m:CT_R/m:r"
+        },
+        {
+          "Name": "w:CT_R/w:r"
+        },
+        {
+          "Name": "w:CT_BdoContentRun/w:bdo"
+        },
+        {
+          "Name": "w:CT_DirContentRun/w:dir"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Kind": "Group",
+                "Items": [
+                  {
+                    "Kind": "Choice",
+                    "Items": [
+                      {
+                        "Kind": "Group",
+                        "Occurs": [
+                          {}
+                        ],
+                        "Items": [
+                          {
+                            "Kind": "Choice",
+                            "Items": [
+                              {
+                                "Name": "w:CT_SdtRun/w:sdt"
+                              },
+                              {
+                                "Kind": "Group",
+                                "Occurs": [
+                                  {}
+                                ],
+                                "Items": [
+                                  {
+                                    "Kind": "Choice",
+                                    "Items": [
+                                      {
+                                        "Kind": "Group",
+                                        "Occurs": [
+                                          {}
+                                        ],
+                                        "Items": [
+                                          {
+                                            "Kind": "Choice",
+                                            "Items": [
+                                              {
+                                                "Kind": "Group",
+                                                "Occurs": [
+                                                  {}
+                                                ],
+                                                "Items": [
+                                                  {
+                                                    "Kind": "Choice",
+                                                    "Items": [
+                                                      {
+                                                        "Name": "w:CT_ProofErr/w:proofErr",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_PermStart/w:permStart",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_Perm/w:permEnd",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "Kind": "Group",
+                                                "Occurs": [
+                                                  {}
+                                                ],
+                                                "Items": [
+                                                  {
+                                                    "Kind": "Choice",
+                                                    "Items": [
+                                                      {
+                                                        "Kind": "Group",
+                                                        "Occurs": [
+                                                          {}
+                                                        ],
+                                                        "Items": [
+                                                          {
+                                                            "Kind": "Choice",
+                                                            "Items": [
+                                                              {
+                                                                "Name": "w:CT_Bookmark/w:bookmarkStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_MarkupRange/w:bookmarkEnd"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_MarkupRange/w:commentRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_MarkupRange/w:commentRangeEnd"
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "Kind": "Group",
+                                                        "Occurs": [
+                                                          {}
+                                                        ],
+                                                        "Items": [
+                                                          {
+                                                            "Kind": "Choice",
+                                                            "Items": [
+                                                              {
+                                                                "Name": "w:CT_MoveBookmark/w:moveFromRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_MarkupRange/w:moveFromRangeEnd"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_MoveBookmark/w:moveToRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_MarkupRange/w:moveToRangeEnd"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_TrackChange/w:customXmlInsRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_Markup/w:customXmlInsRangeEnd"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_TrackChange/w:customXmlDelRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_Markup/w:customXmlDelRangeEnd"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_TrackChange/w:customXmlMoveFromRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_Markup/w:customXmlMoveFromRangeEnd"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_TrackChange/w:customXmlMoveToRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_Markup/w:customXmlMoveToRangeEnd"
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_TrackChange/w14:customXmlConflictInsRangeStart",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ],
+                                                        "InitialVersion": "Office2010"
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_Markup/w14:customXmlConflictInsRangeEnd",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ],
+                                                        "InitialVersion": "Office2010"
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_TrackChange/w14:customXmlConflictDelRangeStart",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ],
+                                                        "InitialVersion": "Office2010"
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_Markup/w14:customXmlConflictDelRangeEnd",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ],
+                                                        "InitialVersion": "Office2010"
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "Name": "w:CT_RunTrackChange/w:ins",
+                                                "Occurs": [
+                                                  {
+                                                    "Max": 1
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "Name": "w:CT_RunTrackChange/w:del",
+                                                "Occurs": [
+                                                  {
+                                                    "Max": 1
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "Name": "w:CT_RunTrackChange/w:moveFrom"
+                                              },
+                                              {
+                                                "Name": "w:CT_RunTrackChange/w:moveTo"
+                                              },
+                                              {
+                                                "Name": "w:CT_ContentPart/w:contentPart",
+                                                "Occurs": [
+                                                  {}
+                                                ],
+                                                "InitialVersion": "Office2010"
+                                              },
+                                              {
+                                                "Kind": "Group",
+                                                "Occurs": [
+                                                  {
+                                                    "Max": 1
+                                                  }
+                                                ],
+                                                "InitialVersion": "Office2010",
+                                                "Items": [
+                                                  {
+                                                    "Kind": "Sequence",
+                                                    "Items": [
+                                                      {
+                                                        "Name": "w:CT_RunTrackChange/w14:conflictIns",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ],
+                                                        "InitialVersion": "Office2010"
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_RunTrackChange/w14:conflictDel",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ],
+                                                        "InitialVersion": "Office2010"
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "Kind": "Group",
+                                        "Occurs": [
+                                          {}
+                                        ],
+                                        "Items": [
+                                          {
+                                            "Kind": "Choice",
+                                            "Items": [
+                                              {
+                                                "Name": "m:CT_OMathPara/m:oMathPara"
+                                              },
+                                              {
+                                                "Name": "m:CT_OMath/m:oMath"
+                                              },
+                                              {
+                                                "Kind": "Group",
+                                                "Items": [
+                                                  {
+                                                    "Kind": "Choice",
+                                                    "Items": [
+                                                      {
+                                                        "Name": "m:CT_Acc/m:acc"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_Bar/m:bar"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_Box/m:box"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_BorderBox/m:borderBox"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_D/m:d"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_EqArr/m:eqArr"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_F/m:f"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_Func/m:func"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_GroupChr/m:groupChr"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_LimLow/m:limLow"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_LimUpp/m:limUpp"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_M/m:m"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_Nary/m:nary"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_Phant/m:phant"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_Rad/m:rad"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_SPre/m:sPre"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_SSub/m:sSub"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_SSubSup/m:sSubSup"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_SSup/m:sSup"
+                                                      },
+                                                      {
+                                                        "Kind": "Group",
+                                                        "Items": [
+                                                          {
+                                                            "Kind": "Choice",
+                                                            "Items": [
+                                                              {
+                                                                "Name": "m:CT_R/m:r"
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "Kind": "Group",
+                        "Items": [
+                          {
+                            "Kind": "Choice",
+                            "Items": [
+                              {
+                                "Name": "w:CT_R/w:r"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "Name": "w:CT_BdoContentRun/w:bdo",
+                        "Occurs": [
+                          {
+                            "Max": 1
+                          }
+                        ],
+                        "InitialVersion": "Office2010"
+                      },
+                      {
+                        "Name": "w:CT_DirContentRun/w:dir",
+                        "Occurs": [
+                          {
+                            "Max": 1
+                          }
+                        ],
+                        "InitialVersion": "Office2010"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w:CT_RunTrackChange/w14:conflictDel",
+      "ClassName": "RunConflictDeletion",
+      "Summary": "Defines the RunConflictDeletion Class.",
+      "BaseClass": "RunTrackChangeType",
+      "IsDerived": true,
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "w:CT_SdtRun/w:sdt"
+        },
+        {
+          "Name": "w:CT_ProofErr/w:proofErr"
+        },
+        {
+          "Name": "w:CT_PermStart/w:permStart"
+        },
+        {
+          "Name": "w:CT_Perm/w:permEnd"
+        },
+        {
+          "Name": "w:CT_Bookmark/w:bookmarkStart"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:bookmarkEnd"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:commentRangeStart"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:commentRangeEnd"
+        },
+        {
+          "Name": "w:CT_MoveBookmark/w:moveFromRangeStart"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:moveFromRangeEnd"
+        },
+        {
+          "Name": "w:CT_MoveBookmark/w:moveToRangeStart"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:moveToRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w:customXmlInsRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w:customXmlInsRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w:customXmlDelRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w:customXmlDelRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w:customXmlMoveFromRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w:customXmlMoveFromRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w:customXmlMoveToRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w:customXmlMoveToRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w14:customXmlConflictInsRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w14:customXmlConflictInsRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w14:customXmlConflictDelRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w14:customXmlConflictDelRangeEnd"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w:ins"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w:del"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w:moveFrom"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w:moveTo"
+        },
+        {
+          "Name": "w:CT_ContentPart/w:contentPart"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w14:conflictIns"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w14:conflictDel"
+        },
+        {
+          "Name": "m:CT_OMathPara/m:oMathPara"
+        },
+        {
+          "Name": "m:CT_OMath/m:oMath"
+        },
+        {
+          "Name": "m:CT_Acc/m:acc"
+        },
+        {
+          "Name": "m:CT_Bar/m:bar"
+        },
+        {
+          "Name": "m:CT_Box/m:box"
+        },
+        {
+          "Name": "m:CT_BorderBox/m:borderBox"
+        },
+        {
+          "Name": "m:CT_D/m:d"
+        },
+        {
+          "Name": "m:CT_EqArr/m:eqArr"
+        },
+        {
+          "Name": "m:CT_F/m:f"
+        },
+        {
+          "Name": "m:CT_Func/m:func"
+        },
+        {
+          "Name": "m:CT_GroupChr/m:groupChr"
+        },
+        {
+          "Name": "m:CT_LimLow/m:limLow"
+        },
+        {
+          "Name": "m:CT_LimUpp/m:limUpp"
+        },
+        {
+          "Name": "m:CT_M/m:m"
+        },
+        {
+          "Name": "m:CT_Nary/m:nary"
+        },
+        {
+          "Name": "m:CT_Phant/m:phant"
+        },
+        {
+          "Name": "m:CT_Rad/m:rad"
+        },
+        {
+          "Name": "m:CT_SPre/m:sPre"
+        },
+        {
+          "Name": "m:CT_SSub/m:sSub"
+        },
+        {
+          "Name": "m:CT_SSubSup/m:sSubSup"
+        },
+        {
+          "Name": "m:CT_SSup/m:sSup"
+        },
+        {
+          "Name": "m:CT_R/m:r"
+        },
+        {
+          "Name": "w:CT_R/w:r"
+        },
+        {
+          "Name": "w:CT_BdoContentRun/w:bdo"
+        },
+        {
+          "Name": "w:CT_DirContentRun/w:dir"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {}
+            ],
+            "Items": [
+              {
+                "Kind": "Group",
+                "Items": [
+                  {
+                    "Kind": "Choice",
+                    "Items": [
+                      {
+                        "Kind": "Group",
+                        "Occurs": [
+                          {}
+                        ],
+                        "Items": [
+                          {
+                            "Kind": "Choice",
+                            "Items": [
+                              {
+                                "Name": "w:CT_SdtRun/w:sdt"
+                              },
+                              {
+                                "Kind": "Group",
+                                "Occurs": [
+                                  {}
+                                ],
+                                "Items": [
+                                  {
+                                    "Kind": "Choice",
+                                    "Items": [
+                                      {
+                                        "Kind": "Group",
+                                        "Occurs": [
+                                          {}
+                                        ],
+                                        "Items": [
+                                          {
+                                            "Kind": "Choice",
+                                            "Items": [
+                                              {
+                                                "Kind": "Group",
+                                                "Occurs": [
+                                                  {}
+                                                ],
+                                                "Items": [
+                                                  {
+                                                    "Kind": "Choice",
+                                                    "Items": [
+                                                      {
+                                                        "Name": "w:CT_ProofErr/w:proofErr",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_PermStart/w:permStart",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_Perm/w:permEnd",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "Kind": "Group",
+                                                "Occurs": [
+                                                  {}
+                                                ],
+                                                "Items": [
+                                                  {
+                                                    "Kind": "Choice",
+                                                    "Items": [
+                                                      {
+                                                        "Kind": "Group",
+                                                        "Occurs": [
+                                                          {}
+                                                        ],
+                                                        "Items": [
+                                                          {
+                                                            "Kind": "Choice",
+                                                            "Items": [
+                                                              {
+                                                                "Name": "w:CT_Bookmark/w:bookmarkStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_MarkupRange/w:bookmarkEnd"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_MarkupRange/w:commentRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_MarkupRange/w:commentRangeEnd"
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "Kind": "Group",
+                                                        "Occurs": [
+                                                          {}
+                                                        ],
+                                                        "Items": [
+                                                          {
+                                                            "Kind": "Choice",
+                                                            "Items": [
+                                                              {
+                                                                "Name": "w:CT_MoveBookmark/w:moveFromRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_MarkupRange/w:moveFromRangeEnd"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_MoveBookmark/w:moveToRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_MarkupRange/w:moveToRangeEnd"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_TrackChange/w:customXmlInsRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_Markup/w:customXmlInsRangeEnd"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_TrackChange/w:customXmlDelRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_Markup/w:customXmlDelRangeEnd"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_TrackChange/w:customXmlMoveFromRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_Markup/w:customXmlMoveFromRangeEnd"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_TrackChange/w:customXmlMoveToRangeStart"
+                                                              },
+                                                              {
+                                                                "Name": "w:CT_Markup/w:customXmlMoveToRangeEnd"
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_TrackChange/w14:customXmlConflictInsRangeStart",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ],
+                                                        "InitialVersion": "Office2010"
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_Markup/w14:customXmlConflictInsRangeEnd",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ],
+                                                        "InitialVersion": "Office2010"
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_TrackChange/w14:customXmlConflictDelRangeStart",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ],
+                                                        "InitialVersion": "Office2010"
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_Markup/w14:customXmlConflictDelRangeEnd",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ],
+                                                        "InitialVersion": "Office2010"
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "Name": "w:CT_RunTrackChange/w:ins",
+                                                "Occurs": [
+                                                  {
+                                                    "Max": 1
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "Name": "w:CT_RunTrackChange/w:del",
+                                                "Occurs": [
+                                                  {
+                                                    "Max": 1
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "Name": "w:CT_RunTrackChange/w:moveFrom"
+                                              },
+                                              {
+                                                "Name": "w:CT_RunTrackChange/w:moveTo"
+                                              },
+                                              {
+                                                "Name": "w:CT_ContentPart/w:contentPart",
+                                                "Occurs": [
+                                                  {}
+                                                ],
+                                                "InitialVersion": "Office2010"
+                                              },
+                                              {
+                                                "Kind": "Group",
+                                                "Occurs": [
+                                                  {
+                                                    "Max": 1
+                                                  }
+                                                ],
+                                                "InitialVersion": "Office2010",
+                                                "Items": [
+                                                  {
+                                                    "Kind": "Sequence",
+                                                    "Items": [
+                                                      {
+                                                        "Name": "w:CT_RunTrackChange/w14:conflictIns",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ],
+                                                        "InitialVersion": "Office2010"
+                                                      },
+                                                      {
+                                                        "Name": "w:CT_RunTrackChange/w14:conflictDel",
+                                                        "Occurs": [
+                                                          {
+                                                            "Max": 1
+                                                          }
+                                                        ],
+                                                        "InitialVersion": "Office2010"
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "Kind": "Group",
+                                        "Occurs": [
+                                          {}
+                                        ],
+                                        "Items": [
+                                          {
+                                            "Kind": "Choice",
+                                            "Items": [
+                                              {
+                                                "Name": "m:CT_OMathPara/m:oMathPara"
+                                              },
+                                              {
+                                                "Name": "m:CT_OMath/m:oMath"
+                                              },
+                                              {
+                                                "Kind": "Group",
+                                                "Items": [
+                                                  {
+                                                    "Kind": "Choice",
+                                                    "Items": [
+                                                      {
+                                                        "Name": "m:CT_Acc/m:acc"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_Bar/m:bar"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_Box/m:box"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_BorderBox/m:borderBox"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_D/m:d"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_EqArr/m:eqArr"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_F/m:f"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_Func/m:func"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_GroupChr/m:groupChr"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_LimLow/m:limLow"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_LimUpp/m:limUpp"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_M/m:m"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_Nary/m:nary"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_Phant/m:phant"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_Rad/m:rad"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_SPre/m:sPre"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_SSub/m:sSub"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_SSubSup/m:sSubSup"
+                                                      },
+                                                      {
+                                                        "Name": "m:CT_SSup/m:sSup"
+                                                      },
+                                                      {
+                                                        "Kind": "Group",
+                                                        "Items": [
+                                                          {
+                                                            "Kind": "Choice",
+                                                            "Items": [
+                                                              {
+                                                                "Name": "m:CT_R/m:r"
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "Kind": "Group",
+                        "Items": [
+                          {
+                            "Kind": "Choice",
+                            "Items": [
+                              {
+                                "Name": "w:CT_R/w:r"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "Name": "w:CT_BdoContentRun/w:bdo",
+                        "Occurs": [
+                          {
+                            "Max": 1
+                          }
+                        ],
+                        "InitialVersion": "Office2010"
+                      },
+                      {
+                        "Name": "w:CT_DirContentRun/w:dir",
+                        "Occurs": [
+                          {
+                            "Max": 1
+                          }
+                        ],
+                        "InitialVersion": "Office2010"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w:CT_RunTrackChange/",
+      "ClassName": "RunTrackChangeType",
+      "Summary": "Defines the RunTrackChangeType Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "Attributes": [
+        {
+          "QName": "w:author",
+          "PropertyName": "Author",
+          "Type": "StringValue",
+          "PropertyComments": "author",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w:date",
+          "PropertyName": "Date",
+          "Type": "DateTimeValue",
+          "PropertyComments": "date"
+        },
+        {
+          "QName": "w:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "Annotation Identifier",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "Type": "w:ST_NonNegativeDecimalNumber",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "-2"
+                }
+              ],
+              "Name": "NumberValidator",
+              "Type": "w:ST_SignedDecimalNumberMax-2",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "AdditionalElements": [
+        "m:CT_Acc/m:acc",
+        "m:CT_Bar/m:bar",
+        "m:CT_BorderBox/m:borderBox",
+        "m:CT_Box/m:box",
+        "m:CT_D/m:d",
+        "m:CT_EqArr/m:eqArr",
+        "m:CT_F/m:f",
+        "m:CT_Func/m:func",
+        "m:CT_GroupChr/m:groupChr",
+        "m:CT_LimLow/m:limLow",
+        "m:CT_LimUpp/m:limUpp",
+        "m:CT_M/m:m",
+        "m:CT_Nary/m:nary",
+        "m:CT_OMath/m:oMath",
+        "m:CT_OMathPara/m:oMathPara",
+        "m:CT_Phant/m:phant",
+        "m:CT_R/m:r",
+        "m:CT_Rad/m:rad",
+        "m:CT_SPre/m:sPre",
+        "m:CT_SSub/m:sSub",
+        "m:CT_SSubSup/m:sSubSup",
+        "m:CT_SSup/m:sSup",
+        "w:CT_BdoContentRun/w:bdo",
+        "w:CT_Bookmark/w:bookmarkStart",
+        "w:CT_ContentPart/w:contentPart",
+        "w:CT_DirContentRun/w:dir",
+        "w:CT_Markup/w:customXmlInsRangeEnd",
+        "w:CT_Markup/w:customXmlDelRangeEnd",
+        "w:CT_Markup/w:customXmlMoveFromRangeEnd",
+        "w:CT_Markup/w:customXmlMoveToRangeEnd",
+        "w:CT_Markup/w14:customXmlConflictInsRangeEnd",
+        "w:CT_Markup/w14:customXmlConflictDelRangeEnd",
+        "w:CT_MarkupRange/w:bookmarkEnd",
+        "w:CT_MarkupRange/w:commentRangeStart",
+        "w:CT_MarkupRange/w:commentRangeEnd",
+        "w:CT_MarkupRange/w:moveFromRangeEnd",
+        "w:CT_MarkupRange/w:moveToRangeEnd",
+        "w:CT_MoveBookmark/w:moveFromRangeStart",
+        "w:CT_MoveBookmark/w:moveToRangeStart",
+        "w:CT_Perm/w:permEnd",
+        "w:CT_PermStart/w:permStart",
+        "w:CT_ProofErr/w:proofErr",
+        "w:CT_R/w:r",
+        "w:CT_RunTrackChange/w:ins",
+        "w:CT_RunTrackChange/w:del",
+        "w:CT_RunTrackChange/w:moveFrom",
+        "w:CT_RunTrackChange/w:moveTo",
+        "w:CT_RunTrackChange/w14:conflictIns",
+        "w:CT_RunTrackChange/w14:conflictDel",
+        "w:CT_SdtRun/w:sdt",
+        "w:CT_TrackChange/w:customXmlInsRangeStart",
+        "w:CT_TrackChange/w:customXmlDelRangeStart",
+        "w:CT_TrackChange/w:customXmlMoveFromRangeStart",
+        "w:CT_TrackChange/w:customXmlMoveToRangeStart",
+        "w:CT_TrackChange/w14:customXmlConflictInsRangeStart",
+        "w:CT_TrackChange/w14:customXmlConflictDelRangeStart"
+      ],
+      "Children": [
+        {
+          "Name": "w:CT_SdtRun/w:sdt"
+        },
+        {
+          "Name": "w:CT_ProofErr/w:proofErr"
+        },
+        {
+          "Name": "w:CT_PermStart/w:permStart"
+        },
+        {
+          "Name": "w:CT_Perm/w:permEnd"
+        },
+        {
+          "Name": "w:CT_Bookmark/w:bookmarkStart"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:bookmarkEnd"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:commentRangeStart"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:commentRangeEnd"
+        },
+        {
+          "Name": "w:CT_MoveBookmark/w:moveFromRangeStart"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:moveFromRangeEnd"
+        },
+        {
+          "Name": "w:CT_MoveBookmark/w:moveToRangeStart"
+        },
+        {
+          "Name": "w:CT_MarkupRange/w:moveToRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w:customXmlInsRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w:customXmlInsRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w:customXmlDelRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w:customXmlDelRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w:customXmlMoveFromRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w:customXmlMoveFromRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w:customXmlMoveToRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w:customXmlMoveToRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w14:customXmlConflictInsRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w14:customXmlConflictInsRangeEnd"
+        },
+        {
+          "Name": "w:CT_TrackChange/w14:customXmlConflictDelRangeStart"
+        },
+        {
+          "Name": "w:CT_Markup/w14:customXmlConflictDelRangeEnd"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w:ins"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w:del"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w:moveFrom"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w:moveTo"
+        },
+        {
+          "Name": "w:CT_ContentPart/w:contentPart"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w14:conflictIns"
+        },
+        {
+          "Name": "w:CT_RunTrackChange/w14:conflictDel"
+        },
+        {
+          "Name": "m:CT_OMathPara/m:oMathPara"
+        },
+        {
+          "Name": "m:CT_OMath/m:oMath"
+        },
+        {
+          "Name": "m:CT_Acc/m:acc"
+        },
+        {
+          "Name": "m:CT_Bar/m:bar"
+        },
+        {
+          "Name": "m:CT_Box/m:box"
+        },
+        {
+          "Name": "m:CT_BorderBox/m:borderBox"
+        },
+        {
+          "Name": "m:CT_D/m:d"
+        },
+        {
+          "Name": "m:CT_EqArr/m:eqArr"
+        },
+        {
+          "Name": "m:CT_F/m:f"
+        },
+        {
+          "Name": "m:CT_Func/m:func"
+        },
+        {
+          "Name": "m:CT_GroupChr/m:groupChr"
+        },
+        {
+          "Name": "m:CT_LimLow/m:limLow"
+        },
+        {
+          "Name": "m:CT_LimUpp/m:limUpp"
+        },
+        {
+          "Name": "m:CT_M/m:m"
+        },
+        {
+          "Name": "m:CT_Nary/m:nary"
+        },
+        {
+          "Name": "m:CT_Phant/m:phant"
+        },
+        {
+          "Name": "m:CT_Rad/m:rad"
+        },
+        {
+          "Name": "m:CT_SPre/m:sPre"
+        },
+        {
+          "Name": "m:CT_SSub/m:sSub"
+        },
+        {
+          "Name": "m:CT_SSubSup/m:sSubSup"
+        },
+        {
+          "Name": "m:CT_SSup/m:sSup"
+        },
+        {
+          "Name": "m:CT_R/m:r"
+        },
+        {
+          "Name": "w:CT_R/w:r"
+        },
+        {
+          "Name": "w:CT_BdoContentRun/w:bdo"
+        },
+        {
+          "Name": "w:CT_DirContentRun/w:dir"
+        }
+      ]
+    },
+    {
+      "Name": "w:CT_TrackChange/w14:conflictIns",
+      "ClassName": "ConflictInsertion",
+      "Summary": "Defines the ConflictInsertion Class.",
+      "BaseClass": "TrackChangeType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w:CT_TrackChange/w14:conflictDel",
+      "ClassName": "ConflictDeletion",
+      "Summary": "Defines the ConflictDeletion Class.",
+      "BaseClass": "TrackChangeType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w:CT_TrackChange/w14:customXmlConflictInsRangeStart",
+      "ClassName": "CustomXmlConflictInsertionRangeStart",
+      "Summary": "Defines the CustomXmlConflictInsertionRangeStart Class.",
+      "BaseClass": "TrackChangeType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w:CT_TrackChange/w14:customXmlConflictDelRangeStart",
+      "ClassName": "CustomXmlConflictDeletionRangeStart",
+      "Summary": "Defines the CustomXmlConflictDeletionRangeStart Class.",
+      "BaseClass": "TrackChangeType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w:CT_TrackChange/",
+      "ClassName": "TrackChangeType",
+      "Summary": "Defines the TrackChangeType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "w:author",
+          "PropertyName": "Author",
+          "Type": "StringValue",
+          "PropertyComments": "author",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w:date",
+          "PropertyName": "Date",
+          "Type": "DateTimeValue",
+          "PropertyComments": "date"
+        },
+        {
+          "QName": "w:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "Annotation Identifier",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "Type": "w:ST_NonNegativeDecimalNumber",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "-2"
+                }
+              ],
+              "Name": "NumberValidator",
+              "Type": "w:ST_SignedDecimalNumberMax-2",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_PositiveFixedPercentage/w14:tint",
+      "ClassName": "Tint",
+      "Summary": "Defines the Tint Class.",
+      "BaseClass": "PositiveFixedPercentageType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_PositiveFixedPercentage/w14:shade",
+      "ClassName": "Shade",
+      "Summary": "Defines the Shade Class.",
+      "BaseClass": "PositiveFixedPercentageType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_PositiveFixedPercentage/w14:alpha",
+      "ClassName": "Alpha",
+      "Summary": "Defines the Alpha Class.",
+      "BaseClass": "PositiveFixedPercentageType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_PositiveFixedPercentage/",
+      "ClassName": "PositiveFixedPercentageType",
+      "Summary": "Defines the PositiveFixedPercentageType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_PositivePercentage/w14:hueMod",
+      "ClassName": "HueModulation",
+      "Summary": "Defines the HueModulation Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_Percentage/w14:sat",
+      "ClassName": "Saturation",
+      "Summary": "Defines the Saturation Class.",
+      "BaseClass": "PercentageType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_Percentage/w14:satOff",
+      "ClassName": "SaturationOffset",
+      "Summary": "Defines the SaturationOffset Class.",
+      "BaseClass": "PercentageType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_Percentage/w14:satMod",
+      "ClassName": "SaturationModulation",
+      "Summary": "Defines the SaturationModulation Class.",
+      "BaseClass": "PercentageType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_Percentage/w14:lum",
+      "ClassName": "Luminance",
+      "Summary": "Defines the Luminance Class.",
+      "BaseClass": "PercentageType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_Percentage/w14:lumOff",
+      "ClassName": "LuminanceOffset",
+      "Summary": "Defines the LuminanceOffset Class.",
+      "BaseClass": "PercentageType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_Percentage/w14:lumMod",
+      "ClassName": "LuminanceModulation",
+      "Summary": "Defines the LuminanceModulation Class.",
+      "BaseClass": "PercentageType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_Percentage/",
+      "ClassName": "PercentageType",
+      "Summary": "Defines the PercentageType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_SRgbColor/w14:srgbClr",
+      "ClassName": "RgbColorModelHex",
+      "Summary": "Defines the RgbColorModelHex Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "HexBinaryValue",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "3"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "w14:CT_PositiveFixedPercentage/w14:tint"
+        },
+        {
+          "Name": "w14:CT_PositiveFixedPercentage/w14:shade"
+        },
+        {
+          "Name": "w14:CT_PositiveFixedPercentage/w14:alpha"
+        },
+        {
+          "Name": "w14:CT_PositivePercentage/w14:hueMod"
+        },
+        {
+          "Name": "w14:CT_Percentage/w14:sat"
+        },
+        {
+          "Name": "w14:CT_Percentage/w14:satOff"
+        },
+        {
+          "Name": "w14:CT_Percentage/w14:satMod"
+        },
+        {
+          "Name": "w14:CT_Percentage/w14:lum"
+        },
+        {
+          "Name": "w14:CT_Percentage/w14:lumOff"
+        },
+        {
+          "Name": "w14:CT_Percentage/w14:lumMod"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "w14:CT_PositiveFixedPercentage/w14:tint",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_PositiveFixedPercentage/w14:shade",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_PositiveFixedPercentage/w14:alpha",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_PositivePercentage/w14:hueMod",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_Percentage/w14:sat",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_Percentage/w14:satOff",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_Percentage/w14:satMod",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_Percentage/w14:lum",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_Percentage/w14:lumOff",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_Percentage/w14:lumMod",
+                    "InitialVersion": "Office2010"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_SchemeColor/w14:schemeClr",
+      "ClassName": "SchemeColor",
+      "Summary": "Defines the SchemeColor Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.SchemeColorValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "w14:CT_PositiveFixedPercentage/w14:tint"
+        },
+        {
+          "Name": "w14:CT_PositiveFixedPercentage/w14:shade"
+        },
+        {
+          "Name": "w14:CT_PositiveFixedPercentage/w14:alpha"
+        },
+        {
+          "Name": "w14:CT_PositivePercentage/w14:hueMod"
+        },
+        {
+          "Name": "w14:CT_Percentage/w14:sat"
+        },
+        {
+          "Name": "w14:CT_Percentage/w14:satOff"
+        },
+        {
+          "Name": "w14:CT_Percentage/w14:satMod"
+        },
+        {
+          "Name": "w14:CT_Percentage/w14:lum"
+        },
+        {
+          "Name": "w14:CT_Percentage/w14:lumOff"
+        },
+        {
+          "Name": "w14:CT_Percentage/w14:lumMod"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "w14:CT_PositiveFixedPercentage/w14:tint",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_PositiveFixedPercentage/w14:shade",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_PositiveFixedPercentage/w14:alpha",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_PositivePercentage/w14:hueMod",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_Percentage/w14:sat",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_Percentage/w14:satOff",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_Percentage/w14:satMod",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_Percentage/w14:lum",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_Percentage/w14:lumOff",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_Percentage/w14:lumMod",
+                    "InitialVersion": "Office2010"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_LinearShadeProperties/w14:lin",
+      "ClassName": "LinearShadeProperties",
+      "Summary": "Defines the LinearShadeProperties Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:ang",
+          "PropertyName": "Angle",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "ang",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "21600000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:scaled",
+          "PropertyName": "Scaled",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.OnOffValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "scaled",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_PathShadeProperties/w14:path",
+      "ClassName": "PathShadeProperties",
+      "Summary": "Defines the PathShadeProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:path",
+          "PropertyName": "Path",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "path",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "w14:CT_RelativeRect/w14:fillToRect",
+          "PropertyName": "FillToRectangle"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w14:CT_RelativeRect/w14:fillToRect",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w:CT_Empty/w14:noFill",
+      "ClassName": "NoFillEmpty",
+      "Summary": "Defines the NoFillEmpty Class.",
+      "BaseClass": "EmptyType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w:CT_Empty/w14:round",
+      "ClassName": "RoundEmpty",
+      "Summary": "Defines the RoundEmpty Class.",
+      "BaseClass": "EmptyType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w:CT_Empty/w14:bevel",
+      "ClassName": "BevelEmpty",
+      "Summary": "Defines the BevelEmpty Class.",
+      "BaseClass": "EmptyType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w:CT_Empty/w14:entityPicker",
+      "ClassName": "EntityPickerEmpty",
+      "Summary": "Defines the EntityPickerEmpty Class.",
+      "BaseClass": "EmptyType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w:CT_Empty/",
+      "ClassName": "EmptyType",
+      "Summary": "Defines the EmptyType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "w14:CT_SolidColorFillProperties/w14:solidFill",
+      "ClassName": "SolidColorFillProperties",
+      "Summary": "Defines the SolidColorFillProperties Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "w14:CT_SRgbColor/w14:srgbClr",
+          "PropertyName": "RgbColorModelHex"
+        },
+        {
+          "Name": "w14:CT_SchemeColor/w14:schemeClr",
+          "PropertyName": "SchemeColor"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "w14:CT_SRgbColor/w14:srgbClr",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_SchemeColor/w14:schemeClr",
+                    "InitialVersion": "Office2010"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_GradientFillProperties/w14:gradFill",
+      "ClassName": "GradientFillProperties",
+      "Summary": "Defines the GradientFillProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "w14:CT_GradientStopList/w14:gsLst",
+          "PropertyName": "GradientStopList"
+        },
+        {
+          "Name": "w14:CT_LinearShadeProperties/w14:lin"
+        },
+        {
+          "Name": "w14:CT_PathShadeProperties/w14:path"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w14:CT_GradientStopList/w14:gsLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "w14:CT_LinearShadeProperties/w14:lin",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_PathShadeProperties/w14:path",
+                    "InitialVersion": "Office2010"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_PresetLineDashProperties/w14:prstDash",
+      "ClassName": "PresetLineDashProperties",
+      "Summary": "Defines the PresetLineDashProperties Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_LineJoinMiterProperties/w14:miter",
+      "ClassName": "LineJoinMiterProperties",
+      "Summary": "Defines the LineJoinMiterProperties Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:lim",
+          "PropertyName": "Limit",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "lim",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_Glow/w14:glow",
+      "ClassName": "Glow",
+      "Summary": "Defines the Glow Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:rad",
+          "PropertyName": "GlowRadius",
+          "Type": "Int64Value",
+          "Version": "Office2010",
+          "PropertyComments": "rad",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "w14:CT_SRgbColor/w14:srgbClr",
+          "PropertyName": "RgbColorModelHex"
+        },
+        {
+          "Name": "w14:CT_SchemeColor/w14:schemeClr",
+          "PropertyName": "SchemeColor"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "InitialVersion": "Office2010",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "w14:CT_SRgbColor/w14:srgbClr",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_SchemeColor/w14:schemeClr",
+                    "InitialVersion": "Office2010"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_Shadow/w14:shadow",
+      "ClassName": "Shadow",
+      "Summary": "Defines the Shadow Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:blurRad",
+          "PropertyName": "BlurRadius",
+          "Type": "Int64Value",
+          "Version": "Office2010",
+          "PropertyComments": "blurRad",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:dist",
+          "PropertyName": "DistanceFromText",
+          "Type": "Int64Value",
+          "Version": "Office2010",
+          "PropertyComments": "dist",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:dir",
+          "PropertyName": "DirectionAngle",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "dir",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "21600000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:sx",
+          "PropertyName": "HorizontalScalingFactor",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "sx",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w14:sy",
+          "PropertyName": "VerticalScalingFactor",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "sy",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w14:kx",
+          "PropertyName": "HorizontalSkewAngle",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "kx",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinExclusive",
+                  "Value": "-5400000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "5400000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:ky",
+          "PropertyName": "VerticalSkewAngle",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "ky",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinExclusive",
+                  "Value": "-5400000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "5400000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:algn",
+          "PropertyName": "Alignment",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "algn",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "w14:CT_SRgbColor/w14:srgbClr",
+          "PropertyName": "RgbColorModelHex"
+        },
+        {
+          "Name": "w14:CT_SchemeColor/w14:schemeClr",
+          "PropertyName": "SchemeColor"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "InitialVersion": "Office2010",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "w14:CT_SRgbColor/w14:srgbClr",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_SchemeColor/w14:schemeClr",
+                    "InitialVersion": "Office2010"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_Reflection/w14:reflection",
+      "ClassName": "Reflection",
+      "Summary": "Defines the Reflection Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:blurRad",
+          "PropertyName": "BlurRadius",
+          "Type": "Int64Value",
+          "Version": "Office2010",
+          "PropertyComments": "blurRad",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:stA",
+          "PropertyName": "StartingOpacity",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "stA",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:stPos",
+          "PropertyName": "StartPosition",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "stPos",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:endA",
+          "PropertyName": "EndingOpacity",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "endA",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:endPos",
+          "PropertyName": "EndPosition",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "endPos",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:dist",
+          "PropertyName": "DistanceFromText",
+          "Type": "Int64Value",
+          "Version": "Office2010",
+          "PropertyComments": "dist",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:dir",
+          "PropertyName": "DirectionAngle",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "dir",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "21600000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:fadeDir",
+          "PropertyName": "FadeDirection",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "fadeDir",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "21600000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:sx",
+          "PropertyName": "HorizontalScalingFactor",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "sx",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w14:sy",
+          "PropertyName": "VerticalScalingFactor",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "sy",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w14:kx",
+          "PropertyName": "HorizontalSkewAngle",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "kx",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinExclusive",
+                  "Value": "-5400000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "5400000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:ky",
+          "PropertyName": "VerticalSkewAngle",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "ky",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinExclusive",
+                  "Value": "-5400000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "5400000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:algn",
+          "PropertyName": "Alignment",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "algn",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_TextOutlineEffect/w14:textOutline",
+      "ClassName": "TextOutlineEffect",
+      "Summary": "Defines the TextOutlineEffect Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:w",
+          "PropertyName": "LineWidth",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "w",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "20116800"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:cap",
+          "PropertyName": "CapType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.LineCapValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "cap",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w14:cmpd",
+          "PropertyName": "Compound",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.CompoundLineValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "cmpd",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w14:algn",
+          "PropertyName": "Alignment",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "algn",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "w:CT_Empty/w14:noFill"
+        },
+        {
+          "Name": "w14:CT_SolidColorFillProperties/w14:solidFill"
+        },
+        {
+          "Name": "w14:CT_GradientFillProperties/w14:gradFill"
+        },
+        {
+          "Name": "w14:CT_PresetLineDashProperties/w14:prstDash"
+        },
+        {
+          "Name": "w:CT_Empty/w14:round"
+        },
+        {
+          "Name": "w:CT_Empty/w14:bevel"
+        },
+        {
+          "Name": "w14:CT_LineJoinMiterProperties/w14:miter"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "w:CT_Empty/w14:noFill",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_SolidColorFillProperties/w14:solidFill",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_GradientFillProperties/w14:gradFill",
+                    "InitialVersion": "Office2010"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "w14:CT_PresetLineDashProperties/w14:prstDash",
+                    "InitialVersion": "Office2010"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "w:CT_Empty/w14:round",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w:CT_Empty/w14:bevel",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_LineJoinMiterProperties/w14:miter",
+                    "InitialVersion": "Office2010"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_FillTextEffect/w14:textFill",
+      "ClassName": "FillTextEffect",
+      "Summary": "Defines the FillTextEffect Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "w:CT_Empty/w14:noFill",
+          "PropertyName": "NoFillEmpty"
+        },
+        {
+          "Name": "w14:CT_SolidColorFillProperties/w14:solidFill",
+          "PropertyName": "SolidColorFillProperties"
+        },
+        {
+          "Name": "w14:CT_GradientFillProperties/w14:gradFill",
+          "PropertyName": "GradientFillProperties"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "w:CT_Empty/w14:noFill",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_SolidColorFillProperties/w14:solidFill",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_GradientFillProperties/w14:gradFill",
+                    "InitialVersion": "Office2010"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_Scene3D/w14:scene3d",
+      "ClassName": "Scene3D",
+      "Summary": "Defines the Scene3D Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "w14:CT_Camera/w14:camera",
+          "PropertyName": "Camera"
+        },
+        {
+          "Name": "w14:CT_LightRig/w14:lightRig",
+          "PropertyName": "LightRig"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w14:CT_Camera/w14:camera",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "w14:CT_LightRig/w14:lightRig",
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_Props3D/w14:props3d",
+      "ClassName": "Properties3D",
+      "Summary": "Defines the Properties3D Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:extrusionH",
+          "PropertyName": "ExtrusionHeight",
+          "Type": "Int64Value",
+          "Version": "Office2010",
+          "PropertyComments": "extrusionH",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:contourW",
+          "PropertyName": "ContourWidth",
+          "Type": "Int64Value",
+          "Version": "Office2010",
+          "PropertyComments": "contourW",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:prstMaterial",
+          "PropertyName": "PresetMaterialType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "prstMaterial",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "w14:CT_Bevel/w14:bevelT",
+          "PropertyName": "BevelTop"
+        },
+        {
+          "Name": "w14:CT_Bevel/w14:bevelB",
+          "PropertyName": "BevelBottom"
+        },
+        {
+          "Name": "w14:CT_Color/w14:extrusionClr",
+          "PropertyName": "ExtrusionColor"
+        },
+        {
+          "Name": "w14:CT_Color/w14:contourClr",
+          "PropertyName": "ContourColor"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w14:CT_Bevel/w14:bevelT",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "w14:CT_Bevel/w14:bevelB",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "w14:CT_Color/w14:extrusionClr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "w14:CT_Color/w14:contourClr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_Ligatures/w14:ligatures",
+      "ClassName": "Ligatures",
+      "Summary": "Defines the Ligatures Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.LigaturesValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_NumForm/w14:numForm",
+      "ClassName": "NumberingFormat",
+      "Summary": "Defines the NumberingFormat Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.NumberFormValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_NumSpacing/w14:numSpacing",
+      "ClassName": "NumberSpacing",
+      "Summary": "Defines the NumberSpacing Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_StylisticSets/w14:stylisticSets",
+      "ClassName": "StylisticSets",
+      "Summary": "Defines the StylisticSets Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "w14:CT_StyleSet/w14:styleSet"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Occurs": [
+          {
+            "Max": 1
+          }
+        ],
+        "Items": [
+          {
+            "Name": "w14:CT_StyleSet/w14:styleSet",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_OnOff/w14:cntxtAlts",
+      "ClassName": "ContextualAlternatives",
+      "Summary": "Defines the ContextualAlternatives Class.",
+      "BaseClass": "OnOffType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_OnOff/w14:conflictMode",
+      "ClassName": "ConflictMode",
+      "Summary": "Defines the ConflictMode Class.",
+      "BaseClass": "OnOffType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_OnOff/w14:discardImageEditingData",
+      "ClassName": "DiscardImageEditingData",
+      "Summary": "Defines the DiscardImageEditingData Class.",
+      "BaseClass": "OnOffType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_OnOff/w14:checked",
+      "ClassName": "Checked",
+      "Summary": "Defines the Checked Class.",
+      "BaseClass": "OnOffType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_OnOff/",
+      "ClassName": "OnOffType",
+      "Summary": "Defines the OnOffType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.OnOffValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_WordContentPart/w14:contentPart",
+      "ClassName": "ContentPart",
+      "Summary": "Defines the ContentPart Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:bwMode",
+          "PropertyName": "BlackWhiteMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "bwMode",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "r:id",
+          "PropertyName": "RelationshipId",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "w14:CT_WordContentPartNonVisual/w14:nvContentPartPr",
+          "PropertyName": "WordNonVisualContentPartShapeProperties"
+        },
+        {
+          "Name": "a:CT_Transform2D/w14:xfrm",
+          "PropertyName": "Transform2D"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/w14:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w14:CT_WordContentPartNonVisual/w14:nvContentPartPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a:CT_Transform2D/w14:xfrm",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/w14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_LongHexNumber/w14:docId",
+      "ClassName": "DocumentId",
+      "Summary": "Defines the DocumentId Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "HexBinaryValue",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "4"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w:CT_Markup/w14:customXmlConflictInsRangeEnd",
+      "ClassName": "CustomXmlConflictInsertionRangeEnd",
+      "Summary": "Defines the CustomXmlConflictInsertionRangeEnd Class.",
+      "BaseClass": "MarkupType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w:CT_Markup/w14:customXmlConflictDelRangeEnd",
+      "ClassName": "CustomXmlConflictDeletionRangeEnd",
+      "Summary": "Defines the CustomXmlConflictDeletionRangeEnd Class.",
+      "BaseClass": "MarkupType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w:CT_Markup/",
+      "ClassName": "MarkupType",
+      "Summary": "Defines the MarkupType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "w:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "Annotation Identifier",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "Type": "w:ST_NonNegativeDecimalNumber",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "-2"
+                }
+              ],
+              "Name": "NumberValidator",
+              "Type": "w:ST_SignedDecimalNumberMax-2",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_DefaultImageDpi/w14:defaultImageDpi",
+      "ClassName": "DefaultImageDpi",
+      "Summary": "Defines the DefaultImageDpi Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_SdtCheckbox/w14:checkbox",
+      "ClassName": "SdtContentCheckBox",
+      "Summary": "Defines the SdtContentCheckBox Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "w14:CT_OnOff/w14:checked",
+          "PropertyName": "Checked"
+        },
+        {
+          "Name": "w14:CT_SdtCheckboxSymbol/w14:checkedState",
+          "PropertyName": "CheckedState"
+        },
+        {
+          "Name": "w14:CT_SdtCheckboxSymbol/w14:uncheckedState",
+          "PropertyName": "UncheckedState"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w14:CT_OnOff/w14:checked",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "w14:CT_SdtCheckboxSymbol/w14:checkedState",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "w14:CT_SdtCheckboxSymbol/w14:uncheckedState",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_GradientStop/w14:gs",
+      "ClassName": "GradientStop",
+      "Summary": "Defines the GradientStop Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:pos",
+          "PropertyName": "StopPosition",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "pos",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "w14:CT_SRgbColor/w14:srgbClr",
+          "PropertyName": "RgbColorModelHex"
+        },
+        {
+          "Name": "w14:CT_SchemeColor/w14:schemeClr",
+          "PropertyName": "SchemeColor"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "InitialVersion": "Office2010",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "w14:CT_SRgbColor/w14:srgbClr",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_SchemeColor/w14:schemeClr",
+                    "InitialVersion": "Office2010"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_RelativeRect/w14:fillToRect",
+      "ClassName": "FillToRectangle",
+      "Summary": "Defines the FillToRectangle Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:l",
+          "PropertyName": "Left",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "l",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w14:t",
+          "PropertyName": "Top",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "t",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w14:r",
+          "PropertyName": "Right",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "r",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w14:b",
+          "PropertyName": "Bottom",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "b",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_GradientStopList/w14:gsLst",
+      "ClassName": "GradientStopList",
+      "Summary": "Defines the GradientStopList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "w14:CT_GradientStop/w14:gs"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w14:CT_GradientStop/w14:gs",
+            "Occurs": [
+              {
+                "Min": 2,
+                "Max": 10
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_SphereCoords/w14:rot",
+      "ClassName": "SphereCoordinates",
+      "Summary": "Defines the SphereCoordinates Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:lat",
+          "PropertyName": "Lattitude",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "lat",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "21600000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:lon",
+          "PropertyName": "Longitude",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "lon",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "21600000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:rev",
+          "PropertyName": "Revolution",
+          "Type": "Int32Value",
+          "Version": "Office2010",
+          "PropertyComments": "rev",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "21600000"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_Camera/w14:camera",
+      "ClassName": "Camera",
+      "Summary": "Defines the Camera Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:prst",
+          "PropertyName": "PresetCameraType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "prst",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_LightRig/w14:lightRig",
+      "ClassName": "LightRig",
+      "Summary": "Defines the LightRig Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:rig",
+          "PropertyName": "LightRigType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "rig",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:dir",
+          "PropertyName": "LightDirectionType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "dir",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "w14:CT_SphereCoords/w14:rot",
+          "PropertyName": "SphereCoordinates"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w14:CT_SphereCoords/w14:rot",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_Bevel/w14:bevelT",
+      "ClassName": "BevelTop",
+      "Summary": "Defines the BevelTop Class.",
+      "BaseClass": "BevelType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_Bevel/w14:bevelB",
+      "ClassName": "BevelBottom",
+      "Summary": "Defines the BevelBottom Class.",
+      "BaseClass": "BevelType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_Bevel/",
+      "ClassName": "BevelType",
+      "Summary": "Defines the BevelType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:w",
+          "PropertyName": "Width",
+          "Type": "Int64Value",
+          "Version": "Office2010",
+          "PropertyComments": "w",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:h",
+          "PropertyName": "Height",
+          "Type": "Int64Value",
+          "Version": "Office2010",
+          "PropertyComments": "h",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "2147483647"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w14:prst",
+          "PropertyName": "PresetProfileType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "prst",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_Color/w14:extrusionClr",
+      "ClassName": "ExtrusionColor",
+      "Summary": "Defines the ExtrusionColor Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "w14:CT_SRgbColor/w14:srgbClr",
+          "PropertyName": "RgbColorModelHex"
+        },
+        {
+          "Name": "w14:CT_SchemeColor/w14:schemeClr",
+          "PropertyName": "SchemeColor"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "InitialVersion": "Office2010",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "w14:CT_SRgbColor/w14:srgbClr",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_SchemeColor/w14:schemeClr",
+                    "InitialVersion": "Office2010"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_Color/w14:contourClr",
+      "ClassName": "ContourColor",
+      "Summary": "Defines the ContourColor Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "ColorType",
+      "IsDerived": true,
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "w14:CT_SRgbColor/w14:srgbClr",
+          "PropertyName": "RgbColorModelHex"
+        },
+        {
+          "Name": "w14:CT_SchemeColor/w14:schemeClr",
+          "PropertyName": "SchemeColor"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "InitialVersion": "Office2010",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "w14:CT_SRgbColor/w14:srgbClr",
+                    "InitialVersion": "Office2010"
+                  },
+                  {
+                    "Name": "w14:CT_SchemeColor/w14:schemeClr",
+                    "InitialVersion": "Office2010"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_Color/",
+      "ClassName": "ColorType",
+      "Summary": "Defines the ColorType Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "Version": "Office2010",
+      "AdditionalElements": [
+        "w14:CT_SchemeColor/w14:schemeClr",
+        "w14:CT_SRgbColor/w14:srgbClr"
+      ],
+      "Children": [
+        {
+          "Name": "w14:CT_SRgbColor/w14:srgbClr",
+          "PropertyName": "RgbColorModelHex"
+        },
+        {
+          "Name": "w14:CT_SchemeColor/w14:schemeClr",
+          "PropertyName": "SchemeColor"
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_StyleSet/w14:styleSet",
+      "ClassName": "StyleSet",
+      "Summary": "Defines the StyleSet Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:id",
+          "PropertyName": "Id",
+          "Type": "UInt32Value",
+          "Version": "Office2010",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.OnOffValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w14:CT_SdtCheckboxSymbol/w14:checkedState",
+      "ClassName": "CheckedState",
+      "Summary": "Defines the CheckedState Class.",
+      "BaseClass": "CheckBoxSymbolType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_SdtCheckboxSymbol/w14:uncheckedState",
+      "ClassName": "UncheckedState",
+      "Summary": "Defines the UncheckedState Class.",
+      "BaseClass": "CheckBoxSymbolType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "w14:CT_SdtCheckboxSymbol/",
+      "ClassName": "CheckBoxSymbolType",
+      "Summary": "Defines the CheckBoxSymbolType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": "w14:font",
+          "PropertyName": "Font",
+          "Type": "StringValue",
+          "Version": "Office2010",
+          "PropertyComments": "font",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w14:val",
+          "PropertyName": "Val",
+          "Type": "HexBinaryValue",
+          "Version": "Office2010",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2010"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "2"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_NonVisualDrawingProps/w14:cNvPr",
+      "ClassName": "NonVisualDrawingProperties",
+      "Summary": "Defines the NonVisualDrawingProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "UInt32Value",
+          "PropertyComments": "Application defined unique identifier.",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "Name compatible with Object Model (non-unique).",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":descr",
+          "PropertyName": "Description",
+          "Type": "StringValue",
+          "PropertyComments": "Description of the drawing element."
+        },
+        {
+          "QName": ":hidden",
+          "PropertyName": "Hidden",
+          "Type": "BooleanValue",
+          "PropertyComments": "Flag determining to show or hide this element."
+        },
+        {
+          "QName": ":title",
+          "PropertyName": "Title",
+          "Type": "StringValue",
+          "PropertyComments": "Title"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Hyperlink/a:hlinkClick",
+          "PropertyName": "HyperlinkOnClick",
+          "PropertyComments": "Hyperlink associated with clicking or selecting the element."
+        },
+        {
+          "Name": "a:CT_Hyperlink/a:hlinkHover",
+          "PropertyName": "HyperlinkOnHover",
+          "PropertyComments": "Hyperlink associated with hovering over the element."
+        },
+        {
+          "Name": "a:CT_NonVisualDrawingPropsExtensionList/a:extLst",
+          "PropertyName": "NonVisualDrawingPropertiesExtensionList",
+          "PropertyComments": "Future extension"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Hyperlink/a:hlinkClick",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Hyperlink/a:hlinkHover",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_NonVisualDrawingPropsExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a14:CT_NonVisualInkContentPartProperties/w14:cNvContentPartPr",
+      "ClassName": "NonVisualInkContentPartProperties",
+      "Summary": "Defines the NonVisualInkContentPartProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":isComment",
+          "PropertyName": "IsComment",
+          "Type": "BooleanValue",
+          "Version": "Office2010",
+          "PropertyComments": "isComment"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a14:CT_ContentPartLocking/a14:cpLocks",
+          "PropertyName": "ContentPartLocks"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a14:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a14:CT_ContentPartLocking/a14:cpLocks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a14:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w14:CT_WordContentPartNonVisual/w14:nvContentPartPr",
+      "ClassName": "WordNonVisualContentPartShapeProperties",
+      "Summary": "Defines the WordNonVisualContentPartShapeProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_NonVisualDrawingProps/w14:cNvPr",
+          "PropertyName": "NonVisualDrawingProperties"
+        },
+        {
+          "Name": "a14:CT_NonVisualInkContentPartProperties/w14:cNvContentPartPr",
+          "PropertyName": "NonVisualInkContentPartProperties"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_NonVisualDrawingProps/w14:cNvPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "a14:CT_NonVisualInkContentPartProperties/w14:cNvContentPartPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_Transform2D/w14:xfrm",
+      "ClassName": "Transform2D",
+      "Summary": "Defines the Transform2D Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":rot",
+          "PropertyName": "Rotation",
+          "Type": "Int32Value",
+          "PropertyComments": "Rotation"
+        },
+        {
+          "QName": ":flipH",
+          "PropertyName": "HorizontalFlip",
+          "Type": "BooleanValue",
+          "PropertyComments": "Horizontal Flip"
+        },
+        {
+          "QName": ":flipV",
+          "PropertyName": "VerticalFlip",
+          "Type": "BooleanValue",
+          "PropertyComments": "Vertical Flip"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Point2D/a:off",
+          "PropertyName": "Offset",
+          "PropertyComments": "Offset"
+        },
+        {
+          "Name": "a:CT_PositiveSize2D/a:ext",
+          "PropertyName": "Extents",
+          "PropertyComments": "Extents"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Point2D/a:off",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_PositiveSize2D/a:ext",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/w14:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "w14:ST_OnOff",
+      "Name": "OnOffValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "true",
+          "Name": "True"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "false",
+          "Name": "False"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "0",
+          "Name": "Zero"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "1",
+          "Name": "One"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_SchemeColorVal",
+      "Name": "SchemeColorValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "bg1",
+          "Name": "BackgroundColor"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "tx1",
+          "Name": "TextColor"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "bg2",
+          "Name": "AdditionalBackgroundColor"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "tx2",
+          "Name": "AdditionalTextColor"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "accent1",
+          "Name": "ExtraSchemeColor1"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "accent2",
+          "Name": "ExtraSchemeColor2"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "accent3",
+          "Name": "ExtraSchemeColor3"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "accent4",
+          "Name": "ExtraSchemeColor4"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "accent5",
+          "Name": "ExtraSchemeColor5"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "accent6",
+          "Name": "ExtraSchemeColor6"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "hlink",
+          "Name": "HyperlinkColor"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "folHlink",
+          "Name": "FollowedHyperlinkColor"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "dk1",
+          "Name": "MainDarkColor1"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "lt1",
+          "Name": "MainLightColor1"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "dk2",
+          "Name": "MainDarkColor2"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "lt2",
+          "Name": "MainLightColor2"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "phClr",
+          "Name": "AutoColor"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_RectAlignment",
+      "Name": "RectangleAlignmentValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "none",
+          "Name": "None"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "tl",
+          "Name": "TopLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "t",
+          "Name": "Top"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "tr",
+          "Name": "TopRight"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "l",
+          "Name": "Left"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "ctr",
+          "Name": "Center"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "r",
+          "Name": "Right"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "bl",
+          "Name": "BottomLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "b",
+          "Name": "Bottom"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "br",
+          "Name": "BottomRight"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_PathShadeType",
+      "Name": "PathShadeTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "shape",
+          "Name": "Shape"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "circle",
+          "Name": "Circle"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "rect",
+          "Name": "Rect"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_LineCap",
+      "Name": "LineCapValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "rnd",
+          "Name": "Round"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "sq",
+          "Name": "Square"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "flat",
+          "Name": "Flat"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_PresetLineDashVal",
+      "Name": "PresetLineDashValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "solid",
+          "Name": "Solid"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "dot",
+          "Name": "Dot"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "sysDot",
+          "Name": "SysDot"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "dash",
+          "Name": "Dash"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "sysDash",
+          "Name": "SysDash"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "lgDash",
+          "Name": "LongDash"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "dashDot",
+          "Name": "DashDot"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "sysDashDot",
+          "Name": "SystemDashDot"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "lgDashDot",
+          "Name": "LongDashDot"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "lgDashDotDot",
+          "Name": "LongDashDotDot"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "sysDashDotDot",
+          "Name": "SystemDashDotDot"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_PenAlignment",
+      "Name": "PenAlignmentValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "ctr",
+          "Name": "Center"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "in",
+          "Name": "Inset"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_CompoundLine",
+      "Name": "CompoundLineValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "sng",
+          "Name": "Simple"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "dbl",
+          "Name": "Double"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "thickThin",
+          "Name": "ThickThin"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "thinThick",
+          "Name": "ThinThick"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "tri",
+          "Name": "Triple"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_PresetCameraType",
+      "Name": "PresetCameraTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "legacyObliqueTopLeft",
+          "Name": "LegacyObliqueTopLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyObliqueTop",
+          "Name": "LegacyObliqueTop"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyObliqueTopRight",
+          "Name": "LegacyObliqueTopRight"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyObliqueLeft",
+          "Name": "LegacyObliqueLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyObliqueFront",
+          "Name": "LegacyObliqueFront"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyObliqueRight",
+          "Name": "LegacyObliqueRight"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyObliqueBottomLeft",
+          "Name": "LegacyObliqueBottomLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyObliqueBottom",
+          "Name": "LegacyObliqueBottom"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyObliqueBottomRight",
+          "Name": "LegacyObliqueBottomRight"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyPerspectiveTopLeft",
+          "Name": "LegacyPerspectiveTopLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyPerspectiveTop",
+          "Name": "LegacyPerspectiveTop"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyPerspectiveTopRight",
+          "Name": "LegacyPerspectiveTopRight"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyPerspectiveLeft",
+          "Name": "LegacyPerspectiveLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyPerspectiveFront",
+          "Name": "LegacyPerspectiveFront"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyPerspectiveRight",
+          "Name": "LegacyPerspectiveRight"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyPerspectiveBottomLeft",
+          "Name": "LegacyPerspectiveBottomLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyPerspectiveBottom",
+          "Name": "LegacyPerspectiveBottom"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyPerspectiveBottomRight",
+          "Name": "LegacyPerspectiveBottomRight"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "orthographicFront",
+          "Name": "OrthographicFront"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricTopUp",
+          "Name": "IsometricTopUp"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricTopDown",
+          "Name": "IsometricTopDown"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricBottomUp",
+          "Name": "IsometricBottomUp"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricBottomDown",
+          "Name": "IsometricBottomDown"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricLeftUp",
+          "Name": "IsometricLeftUp"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricLeftDown",
+          "Name": "IsometricLeftDown"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricRightUp",
+          "Name": "IsometricRightUp"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricRightDown",
+          "Name": "IsometricRightDown"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricOffAxis1Left",
+          "Name": "IsometricOffAxis1Left"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricOffAxis1Right",
+          "Name": "IsometricOffAxis1Right"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricOffAxis1Top",
+          "Name": "IsometricOffAxis1Top"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricOffAxis2Left",
+          "Name": "IsometricOffAxis2Left"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricOffAxis2Right",
+          "Name": "IsometricOffAxis2Right"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricOffAxis2Top",
+          "Name": "IsometricOffAxis2Top"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricOffAxis3Left",
+          "Name": "IsometricOffAxis3Left"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricOffAxis3Right",
+          "Name": "IsometricOffAxis3Right"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricOffAxis3Bottom",
+          "Name": "IsometricOffAxis3Bottom"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricOffAxis4Left",
+          "Name": "IsometricOffAxis4Left"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricOffAxis4Right",
+          "Name": "IsometricOffAxis4Right"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "isometricOffAxis4Bottom",
+          "Name": "IsometricOffAxis4Bottom"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "obliqueTopLeft",
+          "Name": "ObliqueTopLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "obliqueTop",
+          "Name": "ObliqueTop"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "obliqueTopRight",
+          "Name": "ObliqueTopRight"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "obliqueLeft",
+          "Name": "ObliqueLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "obliqueRight",
+          "Name": "ObliqueRight"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "obliqueBottomLeft",
+          "Name": "ObliqueBottomLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "obliqueBottom",
+          "Name": "ObliqueBottom"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "obliqueBottomRight",
+          "Name": "ObliqueBottomRight"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveFront",
+          "Name": "PerspectiveFront"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveLeft",
+          "Name": "PerspectiveLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveRight",
+          "Name": "PerspectiveRight"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveAbove",
+          "Name": "PerspectiveAbove"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveBelow",
+          "Name": "PerspectiveBelow"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveAboveLeftFacing",
+          "Name": "PerspectiveAboveLeftFacing"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveAboveRightFacing",
+          "Name": "PerspectiveAboveRightFacing"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveContrastingLeftFacing",
+          "Name": "PerspectiveContrastingLeftFacing"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveContrastingRightFacing",
+          "Name": "PerspectiveContrastingRightFacing"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveHeroicLeftFacing",
+          "Name": "PerspectiveHeroicLeftFacing"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveHeroicRightFacing",
+          "Name": "PerspectiveHeroicRightFacing"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveHeroicExtremeLeftFacing",
+          "Name": "PerspectiveHeroicExtremeLeftFacing"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveHeroicExtremeRightFacing",
+          "Name": "PerspectiveHeroicExtremeRightFacing"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveRelaxed",
+          "Name": "PerspectiveRelaxed"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "perspectiveRelaxedModerately",
+          "Name": "PerspectiveRelaxedModerately"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_LightRigType",
+      "Name": "LightRigTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "legacyFlat1",
+          "Name": "LegacyFlat1"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyFlat2",
+          "Name": "LegacyFlat2"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyFlat3",
+          "Name": "LegacyFlat3"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyFlat4",
+          "Name": "LegacyFlat4"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyNormal1",
+          "Name": "LegacyNormal1"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyNormal2",
+          "Name": "LegacyNormal2"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyNormal3",
+          "Name": "LegacyNormal3"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyNormal4",
+          "Name": "LegacyNormal4"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyHarsh1",
+          "Name": "LegacyHarsh1"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyHarsh2",
+          "Name": "LegacyHarsh2"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyHarsh3",
+          "Name": "LegacyHarsh3"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyHarsh4",
+          "Name": "LegacyHarsh4"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "threePt",
+          "Name": "ThreePoint"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "balanced",
+          "Name": "Balanced"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "soft",
+          "Name": "Soft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "harsh",
+          "Name": "Harsh"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "flood",
+          "Name": "Flood"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "contrasting",
+          "Name": "Contrasting"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "morning",
+          "Name": "Morning"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "sunrise",
+          "Name": "Sunrise"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "sunset",
+          "Name": "Sunset"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "chilly",
+          "Name": "Chilly"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "freezing",
+          "Name": "Freezing"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "flat",
+          "Name": "Flat"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "twoPt",
+          "Name": "TwoPoint"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "glow",
+          "Name": "Glow"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "brightRoom",
+          "Name": "BrightRoom"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_LightRigDirection",
+      "Name": "LightRigDirectionValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "tl",
+          "Name": "TopLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "t",
+          "Name": "Top"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "tr",
+          "Name": "TopRight"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "l",
+          "Name": "Left"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "r",
+          "Name": "Right"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "bl",
+          "Name": "BottomLeft"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "b",
+          "Name": "Bottom"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "br",
+          "Name": "BottomRight"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_BevelPresetType",
+      "Name": "BevelPresetTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "relaxedInset",
+          "Name": "RelaxedInset"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "circle",
+          "Name": "Circle"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "slope",
+          "Name": "Slope"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "cross",
+          "Name": "Cross"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "angle",
+          "Name": "Angle"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "softRound",
+          "Name": "SoftRound"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "convex",
+          "Name": "Convex"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "coolSlant",
+          "Name": "CoolSlant"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "divot",
+          "Name": "Divot"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "riblet",
+          "Name": "Riblet"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "hardEdge",
+          "Name": "HardEdge"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "artDeco",
+          "Name": "ArtDeco"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_PresetMaterialType",
+      "Name": "PresetMaterialTypeValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "legacyMatte",
+          "Name": "LegacyMatte"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyPlastic",
+          "Name": "LegacyPlastic"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyMetal",
+          "Name": "LegacyMetal"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "legacyWireframe",
+          "Name": "LegacyWireframe"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "matte",
+          "Name": "Matte"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "plastic",
+          "Name": "Plastic"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "metal",
+          "Name": "Metal"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "warmMatte",
+          "Name": "WarmMatte"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "translucentPowder",
+          "Name": "TranslucentPowder"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "powder",
+          "Name": "Powder"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "dkEdge",
+          "Name": "DarkEdge"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "softEdge",
+          "Name": "SoftEdge"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "clear",
+          "Name": "Clear"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "flat",
+          "Name": "Flat"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "softmetal",
+          "Name": "SoftMetal"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "none",
+          "Name": "None"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_Ligatures",
+      "Name": "LigaturesValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "none",
+          "Name": "None"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "standard",
+          "Name": "Standard"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "contextual",
+          "Name": "Contextual"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "historical",
+          "Name": "Historical"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "discretional",
+          "Name": "Discretional"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "standardContextual",
+          "Name": "StandardContextual"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "standardHistorical",
+          "Name": "StandardHistorical"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "contextualHistorical",
+          "Name": "ContextualHistorical"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "standardDiscretional",
+          "Name": "StandardDiscretional"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "contextualDiscretional",
+          "Name": "ContextualDiscretional"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "historicalDiscretional",
+          "Name": "HistoricalDiscretional"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "standardContextualHistorical",
+          "Name": "StandardContextualHistorical"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "standardContextualDiscretional",
+          "Name": "StandardContextualDiscretional"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "standardHistoricalDiscretional",
+          "Name": "StandardHistoricalDiscretional"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "contextualHistoricalDiscretional",
+          "Name": "ContextualHistoricalDiscretional"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "all",
+          "Name": "All"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_NumForm",
+      "Name": "NumberFormValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "default",
+          "Name": "Default"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "lining",
+          "Name": "Lining"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "oldStyle",
+          "Name": "OldStyle"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "w14:ST_NumSpacing",
+      "Name": "NumberSpacingValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "default",
+          "Name": "Default"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "proportional",
+          "Name": "Proportional"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "tabular",
+          "Name": "Tabular"
+        }
+      ],
+      "Version": "Office2010"
+    }
+  ]
+}

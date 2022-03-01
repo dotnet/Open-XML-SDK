@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "p202:CT_DesignerDrawingProps/p202:designPr",
+    "ClassName": "DesignerDrawingProps"
+  },
+  {
+    "Name": "p202:CT_DesignerTag/p202:designTag",
+    "ClassName": "DesignerTag"
+  },
+  {
+    "Name": "p202:CT_DesignerTagList/p202:designTagLst",
+    "ClassName": "DesignerTagList"
+  },
+  {
+    "Name": "p:CT_ExtensionList/p202:extLst",
+    "ClassName": "ExtensionList"
+  }
+]

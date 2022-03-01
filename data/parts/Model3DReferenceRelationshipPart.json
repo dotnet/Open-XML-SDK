@@ -1,0 +1,12 @@
+{
+  "Name": "Model3DReferenceRelationshipPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "model/gltf-binary",
+  "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
+  "Target": "model3d",
+  "Extension": ".glb",
+  "Paths": {
+    "General": "../media"
+  },
+  "Version": "Office2019"
+}

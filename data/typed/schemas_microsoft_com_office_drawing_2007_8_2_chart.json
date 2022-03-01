@@ -1,0 +1,54 @@
+[
+  {
+    "Name": "c14:CT_BooleanFalse/",
+    "ClassName": "BooleanFalseType"
+  },
+  {
+    "Name": "c14:CT_BooleanFalse/c14:dropZoneCategories",
+    "ClassName": "DropZoneCategories"
+  },
+  {
+    "Name": "c14:CT_BooleanFalse/c14:dropZoneData",
+    "ClassName": "DropZoneData"
+  },
+  {
+    "Name": "c14:CT_BooleanFalse/c14:dropZoneFilter",
+    "ClassName": "DropZoneFilter"
+  },
+  {
+    "Name": "c14:CT_BooleanFalse/c14:dropZoneSeries",
+    "ClassName": "DropZoneSeries"
+  },
+  {
+    "Name": "c14:CT_BooleanFalse/c14:dropZonesVisible",
+    "ClassName": "DropZonesVisible"
+  },
+  {
+    "Name": "c14:CT_BooleanFalse/c14:inSketchMode",
+    "ClassName": "InSketchMode"
+  },
+  {
+    "Name": "c14:CT_InvertSolidFillFmt/c14:invertSolidFillFmt",
+    "ClassName": "InvertSolidFillFormat"
+  },
+  {
+    "Name": "c14:CT_PivotOptions/c14:pivotOptions",
+    "ClassName": "PivotOptions"
+  },
+  {
+    "Name": "c14:CT_BooleanTrue/c14:showSketchBtn",
+    "ClassName": "ShowSketchButton"
+  },
+  {
+    "Name": "c14:CT_SketchOptions/c14:sketchOptions",
+    "ClassName": "SketchOptions"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/c14:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "c14:CT_Style/c14:style",
+    "ClassName": "Style"
+  }
+]

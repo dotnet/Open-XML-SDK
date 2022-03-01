@@ -1,0 +1,339 @@
+[
+  {
+    "Name": "mso14:CT_BackstageItem/",
+    "ClassName": "BackstageItemType"
+  },
+  {
+    "Name": "mso14:CT_GroupControls/",
+    "ClassName": "GroupControlsType"
+  },
+  {
+    "Name": "mso14:CT_QatItems/",
+    "ClassName": "QatItemsType"
+  },
+  {
+    "Name": "mso14:CT_Backstage/mso14:backstage",
+    "ClassName": "Backstage"
+  },
+  {
+    "Name": "mso14:CT_GroupControls/mso14:bottomItems",
+    "ClassName": "BottomItemsGroupControls"
+  },
+  {
+    "Name": "mso14:CT_Box/mso14:box",
+    "ClassName": "Box"
+  },
+  {
+    "Name": "mso14:CT_BackstageFastCommandButton/mso14:button",
+    "ClassName": "BackstageFastCommandButton"
+  },
+  {
+    "Name": "mso14:CT_BackstageGroupButton/mso14:button",
+    "ClassName": "BackstageGroupButton"
+  },
+  {
+    "Name": "mso14:CT_BackstageMenuButton/mso14:button",
+    "ClassName": "BackstageMenuButton"
+  },
+  {
+    "Name": "mso14:CT_BackstageRegularButton/mso14:button",
+    "ClassName": "BackstageRegularButton"
+  },
+  {
+    "Name": "mso14:CT_Button/mso14:button",
+    "ClassName": "Button"
+  },
+  {
+    "Name": "mso14:CT_ButtonRegular/mso14:button",
+    "ClassName": "ButtonRegular"
+  },
+  {
+    "Name": "mso14:CT_VisibleButton/mso14:button",
+    "ClassName": "VisibleButton"
+  },
+  {
+    "Name": "mso14:CT_ButtonGroup/mso14:buttonGroup",
+    "ClassName": "ButtonGroup"
+  },
+  {
+    "Name": "mso14:CT_TaskFormGroupCategory/mso14:category",
+    "ClassName": "TaskFormGroupCategory"
+  },
+  {
+    "Name": "mso14:CT_TaskGroupCategory/mso14:category",
+    "ClassName": "TaskGroupCategory"
+  },
+  {
+    "Name": "mso14:CT_BackstageCheckBox/mso14:checkBox",
+    "ClassName": "BackstageCheckBox"
+  },
+  {
+    "Name": "mso14:CT_BackstageMenuCheckBox/mso14:checkBox",
+    "ClassName": "BackstageMenuCheckBox"
+  },
+  {
+    "Name": "mso14:CT_CheckBox/mso14:checkBox",
+    "ClassName": "CheckBox"
+  },
+  {
+    "Name": "mso14:CT_BackstageComboBox/mso14:comboBox",
+    "ClassName": "BackstageComboBox"
+  },
+  {
+    "Name": "mso14:CT_ComboBox/mso14:comboBox",
+    "ClassName": "ComboBox"
+  },
+  {
+    "Name": "mso14:CT_Command/mso14:command",
+    "ClassName": "Command"
+  },
+  {
+    "Name": "mso14:CT_Commands/mso14:commands",
+    "ClassName": "Commands"
+  },
+  {
+    "Name": "mso14:CT_ContextMenu/mso14:contextMenu",
+    "ClassName": "ContextMenu"
+  },
+  {
+    "Name": "mso14:CT_ContextMenus/mso14:contextMenus",
+    "ClassName": "ContextMenus"
+  },
+  {
+    "Name": "mso14:CT_ContextualTabs/mso14:contextualTabs",
+    "ClassName": "ContextualTabs"
+  },
+  {
+    "Name": "mso14:CT_ControlClone/mso14:control",
+    "ClassName": "ControlClone"
+  },
+  {
+    "Name": "mso14:CT_ControlCloneQat/mso14:control",
+    "ClassName": "ControlCloneQat"
+  },
+  {
+    "Name": "mso14:CT_ControlCloneRegular/mso14:control",
+    "ClassName": "ControlCloneRegular"
+  },
+  {
+    "Name": "mso14:CT_CustomUI/mso14:customUI",
+    "ClassName": "CustomUI",
+    "PartClassName": "RibbonAndBackstageCustomizationsPart"
+  },
+  {
+    "Name": "mso14:CT_DialogLauncher/mso14:dialogBoxLauncher",
+    "ClassName": "DialogBoxLauncher"
+  },
+  {
+    "Name": "mso14:CT_QatItems/mso14:documentControls",
+    "ClassName": "DocumentControlsQatItems"
+  },
+  {
+    "Name": "mso14:CT_BackstageDropDown/mso14:dropDown",
+    "ClassName": "BackstageDropDown"
+  },
+  {
+    "Name": "mso14:CT_DropDownRegular/mso14:dropDown",
+    "ClassName": "DropDownRegular"
+  },
+  {
+    "Name": "mso14:CT_DynamicMenu/mso14:dynamicMenu",
+    "ClassName": "DynamicMenu"
+  },
+  {
+    "Name": "mso14:CT_DynamicMenuRegular/mso14:dynamicMenu",
+    "ClassName": "DynamicMenuRegular"
+  },
+  {
+    "Name": "mso14:CT_BackstageEditBox/mso14:editBox",
+    "ClassName": "BackstageEditBox"
+  },
+  {
+    "Name": "mso14:CT_EditBox/mso14:editBox",
+    "ClassName": "EditBox"
+  },
+  {
+    "Name": "mso14:CT_BackstageGroups/mso14:firstColumn",
+    "ClassName": "BackstageGroups"
+  },
+  {
+    "Name": "mso14:CT_Gallery/mso14:gallery",
+    "ClassName": "Gallery"
+  },
+  {
+    "Name": "mso14:CT_GalleryRegular/mso14:gallery",
+    "ClassName": "GalleryRegular"
+  },
+  {
+    "Name": "mso14:CT_BackstageGroup/mso14:group",
+    "ClassName": "BackstageGroup"
+  },
+  {
+    "Name": "mso14:CT_Group/mso14:group",
+    "ClassName": "Group"
+  },
+  {
+    "Name": "mso14:CT_GroupBox/mso14:groupBox",
+    "ClassName": "GroupBox"
+  },
+  {
+    "Name": "mso14:CT_Hyperlink/mso14:hyperlink",
+    "ClassName": "Hyperlink"
+  },
+  {
+    "Name": "mso14:CT_ImageControl/mso14:imageControl",
+    "ClassName": "ImageControl"
+  },
+  {
+    "Name": "mso14:CT_BackstageItem/mso14:item",
+    "ClassName": "ItemBackstageItem"
+  },
+  {
+    "Name": "mso14:CT_Item/mso14:item",
+    "ClassName": "Item"
+  },
+  {
+    "Name": "mso14:CT_BackstageLabelControl/mso14:labelControl",
+    "ClassName": "BackstageLabelControl"
+  },
+  {
+    "Name": "mso14:CT_LabelControl/mso14:labelControl",
+    "ClassName": "LabelControl"
+  },
+  {
+    "Name": "mso14:CT_LayoutContainer/mso14:layoutContainer",
+    "ClassName": "LayoutContainer"
+  },
+  {
+    "Name": "mso14:CT_BackstagePrimaryMenu/mso14:menu",
+    "ClassName": "BackstagePrimaryMenu"
+  },
+  {
+    "Name": "mso14:CT_BackstageSubMenu/mso14:menu",
+    "ClassName": "BackstageSubMenu"
+  },
+  {
+    "Name": "mso14:CT_Menu/mso14:menu",
+    "ClassName": "Menu"
+  },
+  {
+    "Name": "mso14:CT_MenuRegular/mso14:menu",
+    "ClassName": "MenuRegular"
+  },
+  {
+    "Name": "mso14:CT_MenuRoot/mso14:menu",
+    "ClassName": "MenuRoot"
+  },
+  {
+    "Name": "mso14:CT_MenuWithTitle/mso14:menu",
+    "ClassName": "MenuWithTitle"
+  },
+  {
+    "Name": "mso14:CT_BackstageMenuGroup/mso14:menuGroup",
+    "ClassName": "BackstageMenuGroup"
+  },
+  {
+    "Name": "mso14:CT_MenuSeparator/mso14:menuSeparator",
+    "ClassName": "MenuSeparator"
+  },
+  {
+    "Name": "mso14:CT_MenuSeparatorNoTitle/mso14:menuSeparator",
+    "ClassName": "MenuSeparatorNoTitle"
+  },
+  {
+    "Name": "mso14:CT_PrimaryItem/mso14:primaryItem",
+    "ClassName": "PrimaryItem"
+  },
+  {
+    "Name": "mso14:CT_Qat/mso14:qat",
+    "ClassName": "QuickAccessToolbar"
+  },
+  {
+    "Name": "mso14:CT_BackstageItem/mso14:radioButton",
+    "ClassName": "RadioButtonBackstageItem"
+  },
+  {
+    "Name": "mso14:CT_RadioGroup/mso14:radioGroup",
+    "ClassName": "RadioGroup"
+  },
+  {
+    "Name": "mso14:CT_Ribbon/mso14:ribbon",
+    "ClassName": "Ribbon"
+  },
+  {
+    "Name": "mso14:CT_SimpleGroups/mso14:secondColumn",
+    "ClassName": "SimpleGroups"
+  },
+  {
+    "Name": "mso14:CT_Separator/mso14:separator",
+    "ClassName": "Separator"
+  },
+  {
+    "Name": "mso14:CT_QatItems/mso14:sharedControls",
+    "ClassName": "SharedControlsQatItems"
+  },
+  {
+    "Name": "mso14:CT_SplitButton/mso14:splitButton",
+    "ClassName": "SplitButton"
+  },
+  {
+    "Name": "mso14:CT_SplitButtonRegular/mso14:splitButton",
+    "ClassName": "SplitButtonRegular"
+  },
+  {
+    "Name": "mso14:CT_SplitButtonWithTitle/mso14:splitButton",
+    "ClassName": "SplitButtonWithTitle"
+  },
+  {
+    "Name": "mso14:CT_BackstageTab/mso14:tab",
+    "ClassName": "BackstageTab"
+  },
+  {
+    "Name": "mso14:CT_Tab/mso14:tab",
+    "ClassName": "Tab"
+  },
+  {
+    "Name": "mso14:CT_Tabs/mso14:tabs",
+    "ClassName": "Tabs"
+  },
+  {
+    "Name": "mso14:CT_TabSet/mso14:tabSet",
+    "ClassName": "TabSet"
+  },
+  {
+    "Name": "mso14:CT_TaskFormGroupTask/mso14:task",
+    "ClassName": "TaskFormGroupTask"
+  },
+  {
+    "Name": "mso14:CT_TaskGroupTask/mso14:task",
+    "ClassName": "TaskGroupTask"
+  },
+  {
+    "Name": "mso14:CT_TaskFormGroup/mso14:taskFormGroup",
+    "ClassName": "TaskFormGroup"
+  },
+  {
+    "Name": "mso14:CT_TaskGroup/mso14:taskGroup",
+    "ClassName": "TaskGroup"
+  },
+  {
+    "Name": "mso14:CT_BackstageMenuToggleButton/mso14:toggleButton",
+    "ClassName": "BackstageMenuToggleButton"
+  },
+  {
+    "Name": "mso14:CT_ToggleButton/mso14:toggleButton",
+    "ClassName": "ToggleButton"
+  },
+  {
+    "Name": "mso14:CT_ToggleButtonRegular/mso14:toggleButton",
+    "ClassName": "ToggleButtonRegular"
+  },
+  {
+    "Name": "mso14:CT_VisibleToggleButton/mso14:toggleButton",
+    "ClassName": "VisibleToggleButton"
+  },
+  {
+    "Name": "mso14:CT_GroupControls/mso14:topItems",
+    "ClassName": "TopItemsGroupControls"
+  }
+]

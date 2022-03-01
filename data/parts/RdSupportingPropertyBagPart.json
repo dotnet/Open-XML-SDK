@@ -1,0 +1,13 @@
+{
+  "Root": "xlrd2:CT_SupportingPropertyBags",
+  "Name": "RdSupportingPropertyBagPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.rdsupportingpropertybag\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBag",
+  "Target": "rdsupportingpropertybag",
+  "RootElement": "supportingPropertyBags",
+  "Paths": {
+    "General": "richData"
+  },
+  "Version": "Office2019"
+}

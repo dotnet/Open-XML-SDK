@@ -1,0 +1,161 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/word/2018/wordml/cex",
+  "Types": [
+    {
+      "Name": "w16cex:CT_CommentsExtensible/w16cex:commentsExtensible",
+      "ClassName": "CommentsExtensible",
+      "Summary": "Defines the CommentsExtensible Class.",
+      "Part": "WordCommentsExtensiblePart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "w16cex:CT_CommentExtensible/w16cex:commentExtensible"
+        },
+        {
+          "Name": "w16cur:CT_ExtensionList/w16cex:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w16cex:CT_CommentExtensible/w16cex:commentExtensible",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "w16cur:CT_ExtensionList/w16cex:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w16cex:CT_CommentExtensible/w16cex:commentExtensible",
+      "ClassName": "CommentExtensible",
+      "Summary": "Defines the CommentExtensible Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": "w16cex:durableId",
+          "Type": "HexBinaryValue",
+          "Version": "Office2021",
+          "PropertyComments": "durableId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2021"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "4"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w16cex:dateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Office2021",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2021"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w16cex:intelligentPlaceholder",
+          "Type": "OnOffValue",
+          "Version": "Office2021",
+          "PropertyComments": "intelligentPlaceholder",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2021"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "w16cur:CT_ExtensionList/w16cex:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w16cur:CT_ExtensionList/w16cex:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w16cur:CT_ExtensionList/w16cex:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "w16cur:CT_Extension/w16cur:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w16cur:CT_Extension/w16cur:ext",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    }
+  ]
+}

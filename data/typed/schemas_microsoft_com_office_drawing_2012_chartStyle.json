@@ -1,0 +1,232 @@
+[
+  {
+    "Name": "cs:CT_AxisProps/",
+    "ClassName": "AxisProperties"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/",
+    "ClassName": "StyleEntry"
+  },
+  {
+    "Name": "cs:CT_StyleReference/",
+    "ClassName": "StyleReference"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:axisTitle",
+    "ClassName": "AxisTitle"
+  },
+  {
+    "Name": "a:CT_TextBodyProperties/cs:bodyPr",
+    "ClassName": "TextBodyProperties"
+  },
+  {
+    "Name": "cs:CT_AxisProps/cs:categoryAxis",
+    "ClassName": "CategoryAxisProperties"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:categoryAxis",
+    "ClassName": "CategoryAxis"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:chartArea",
+    "ClassName": "ChartArea"
+  },
+  {
+    "Name": "cs:CT_ChartStyle/cs:chartStyle",
+    "ClassName": "ChartStyle",
+    "PartClassName": "ChartStylePart"
+  },
+  {
+    "Name": "cs:CT_ColorStyle/cs:colorStyle",
+    "ClassName": "ColorStyle",
+    "PartClassName": "ChartColorStylePart"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:dataLabel",
+    "ClassName": "DataLabel"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:dataLabelCallout",
+    "ClassName": "DataLabelCallout"
+  },
+  {
+    "Name": "cs:CT_DataLabelsProps/cs:dataLabels",
+    "ClassName": "DataLabels"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:dataPoint",
+    "ClassName": "DataPoint"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:dataPoint3D",
+    "ClassName": "DataPoint3D"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:dataPointLine",
+    "ClassName": "DataPointLine"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:dataPointMarker",
+    "ClassName": "DataPointMarker"
+  },
+  {
+    "Name": "cs:CT_MarkerLayout/cs:dataPointMarkerLayout",
+    "ClassName": "MarkerLayoutProperties"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:dataPointWireframe",
+    "ClassName": "DataPointWireframe"
+  },
+  {
+    "Name": "cs:CT_DataSeriesProps/cs:dataSeries",
+    "ClassName": "DataSeries"
+  },
+  {
+    "Name": "cs:CT_DataTableProps/cs:dataTable",
+    "ClassName": "DataTable"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:dataTable",
+    "ClassName": "DataTableStyle"
+  },
+  {
+    "Name": "a:CT_TextCharacterProperties/cs:defRPr",
+    "ClassName": "TextCharacterPropertiesType"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:downBar",
+    "ClassName": "DownBar"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:dropLine",
+    "ClassName": "DropLine"
+  },
+  {
+    "Name": "cs:CT_StyleReference/cs:effectRef",
+    "ClassName": "EffectReference"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:errorBar",
+    "ClassName": "ErrorBar"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/cs:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "cs:CT_StyleReference/cs:fillRef",
+    "ClassName": "FillReference"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:floor",
+    "ClassName": "Floor"
+  },
+  {
+    "Name": "cs:CT_FontReference/cs:fontRef",
+    "ClassName": "FontReference"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:gridlineMajor",
+    "ClassName": "GridlineMajor"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:gridlineMinor",
+    "ClassName": "GridlineMinor"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:hiLoLine",
+    "ClassName": "HiLoLine"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:leaderLine",
+    "ClassName": "LeaderLine"
+  },
+  {
+    "Name": "cs:CT_LegendProps/cs:legend",
+    "ClassName": "Legend"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:legend",
+    "ClassName": "LegendStyle"
+  },
+  {
+    "Name": "xsd:double/cs:lineWidthScale",
+    "ClassName": "LineWidthScale"
+  },
+  {
+    "Name": "cs:CT_StyleReference/cs:lnRef",
+    "ClassName": "LineReference"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:plotArea",
+    "ClassName": "PlotArea"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:plotArea3D",
+    "ClassName": "PlotArea3D"
+  },
+  {
+    "Name": "cs:CT_AxisProps/cs:seriesAxis",
+    "ClassName": "SeriesAxisProperties"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:seriesAxis",
+    "ClassName": "SeriesAxis"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:seriesLine",
+    "ClassName": "SeriesLine"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/cs:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "cs:CT_StyleColor/cs:styleClr",
+    "ClassName": "StyleColor"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:title",
+    "ClassName": "TitleStyle"
+  },
+  {
+    "Name": "cs:CT_TitleProps/cs:title",
+    "ClassName": "Title"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:trendline",
+    "ClassName": "TrendlineStyle"
+  },
+  {
+    "Name": "cs:CT_TrendlineProps/cs:trendline",
+    "ClassName": "Trendline"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:trendlineLabel",
+    "ClassName": "TrendlineLabel"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:upBar",
+    "ClassName": "UpBar"
+  },
+  {
+    "Name": "cs:CT_AxisProps/cs:valueAxis",
+    "ClassName": "ValueAxisProperties"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:valueAxis",
+    "ClassName": "ValueAxis"
+  },
+  {
+    "Name": "cs:CT_ColorStyleVariation/cs:variation",
+    "ClassName": "ColorStyleVariation"
+  },
+  {
+    "Name": "cs:CT_View3DProps/cs:view3D",
+    "ClassName": "View3DProperties"
+  },
+  {
+    "Name": "cs:CT_StyleEntry/cs:wall",
+    "ClassName": "Wall"
+  }
+]

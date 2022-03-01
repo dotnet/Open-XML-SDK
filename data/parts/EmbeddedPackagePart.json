@@ -1,0 +1,10 @@
+{
+  "Name": "EmbeddedPackagePart",
+  "Base": "OpenXmlPart",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
+  "Target": "package",
+  "Extension": ".bin",
+  "Paths": {
+    "General": "embeddings"
+  }
+}

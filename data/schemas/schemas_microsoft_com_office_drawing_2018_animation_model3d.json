@@ -1,0 +1,223 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2018/animation/model3d",
+  "Types": [
+    {
+      "Name": "a3danim:CT_EmbeddedAnimation/a3danim:embedAnim",
+      "ClassName": "EmbeddedAnimation",
+      "Summary": "Defines the EmbeddedAnimation Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":animId",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "animId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "aanim:CT_AnimationProperties/a3danim:animPr",
+          "PropertyName": "AnimationProperties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a3danim:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "aanim:CT_AnimationProperties/a3danim:animPr",
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a3danim:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a3danim:CT_PosterFrame/a3danim:posterFrame",
+      "ClassName": "PosterFrame",
+      "Summary": "Defines the PosterFrame Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":animId",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "animId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":frame",
+          "Type": "Int32Value",
+          "Version": "Office2019",
+          "PropertyComments": "frame",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "aanim:CT_AnimationProperties/a3danim:animPr",
+      "ClassName": "AnimationProperties",
+      "Summary": "Defines the AnimationProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "name"
+        },
+        {
+          "QName": ":length",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "length",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":count",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "count",
+          "Validators": [
+            {
+              "Name": "NumberValidator",
+              "Type": "xsd:unsignedInt",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "aanim:ST_Indefinite",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":auto",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "auto"
+        },
+        {
+          "QName": ":offset",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "offset"
+        },
+        {
+          "QName": ":st",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "st"
+        },
+        {
+          "QName": ":end",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "end"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/aanim:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/aanim:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/a3danim:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

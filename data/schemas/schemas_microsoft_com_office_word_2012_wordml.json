@@ -1,0 +1,634 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/word/2012/wordml",
+  "Types": [
+    {
+      "Name": "w:CT_Color/w15:color",
+      "ClassName": "Color",
+      "Summary": "Defines the Color Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": "w:val",
+          "PropertyName": "Val",
+          "Type": "StringValue",
+          "PropertyComments": "Run Content Color",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "w:ST_HexColorAuto",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "3"
+                }
+              ],
+              "Name": "StringValidator",
+              "Type": "w:ST_HexColorRGB",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w:themeColor",
+          "PropertyName": "ThemeColor",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ThemeColorValues\u003E",
+          "PropertyComments": "Run Content Theme Color"
+        },
+        {
+          "QName": "w:themeTint",
+          "PropertyName": "ThemeTint",
+          "Type": "StringValue",
+          "PropertyComments": "Run Content Theme Color Tint",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "[0-9a-fA-F]*"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MinLength",
+                  "Value": "1"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "2"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w:themeShade",
+          "PropertyName": "ThemeShade",
+          "Type": "StringValue",
+          "PropertyComments": "Run Content Theme Color Shade",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "[0-9a-fA-F]*"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MinLength",
+                  "Value": "1"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "2"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w:CT_DataBinding/w15:dataBinding",
+      "ClassName": "DataBinding",
+      "Summary": "Defines the DataBinding Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": "w:prefixMappings",
+          "PropertyName": "PrefixMappings",
+          "Type": "StringValue",
+          "PropertyComments": "XML Namespace Prefix Mappings"
+        },
+        {
+          "QName": "w:xpath",
+          "PropertyName": "XPath",
+          "Type": "StringValue",
+          "PropertyComments": "XPath",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w:storeItemID",
+          "PropertyName": "StoreItemId",
+          "Type": "StringValue",
+          "PropertyComments": "Custom XML Data Storage ID",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w15:CT_SdtAppearance/w15:appearance",
+      "ClassName": "Appearance",
+      "Summary": "Defines the Appearance Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": "w15:val",
+          "PropertyName": "Val",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Word.SdtAppearance\u003E",
+          "Version": "Office2013",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2013"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w15:CT_CommentsEx/w15:commentsEx",
+      "ClassName": "CommentsEx",
+      "Summary": "Defines the CommentsEx Class.",
+      "Part": "WordprocessingCommentsExPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "w15:CT_CommentEx/w15:commentEx"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w15:CT_CommentEx/w15:commentEx",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w15:CT_People/w15:people",
+      "ClassName": "People",
+      "Summary": "Defines the People Class.",
+      "Part": "WordprocessingPeoplePart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "w15:CT_Person/w15:person"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w15:CT_Person/w15:person",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w15:CT_SdtRepeatedSection/w15:repeatingSection",
+      "ClassName": "SdtRepeatedSection",
+      "Summary": "Defines the SdtRepeatedSection Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "w:CT_String/w15:sectionTitle",
+          "PropertyName": "SectionTitle"
+        },
+        {
+          "Name": "w:CT_OnOff/w15:doNotAllowInsertDeleteSection",
+          "PropertyName": "DoNotAllowInsertDeleteSection"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w:CT_String/w15:sectionTitle",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "w:CT_OnOff/w15:doNotAllowInsertDeleteSection",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w:CT_Empty/w15:repeatingSectionItem",
+      "ClassName": "SdtRepeatedSectionItem",
+      "Summary": "Defines the SdtRepeatedSectionItem Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013"
+    },
+    {
+      "Name": "w:CT_OnOff/w15:chartTrackingRefBased",
+      "ClassName": "ChartTrackingRefBased",
+      "Summary": "Defines the ChartTrackingRefBased Class.",
+      "BaseClass": "OnOffType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2013"
+    },
+    {
+      "Name": "w:CT_OnOff/w15:collapsed",
+      "ClassName": "DefaultCollapsed",
+      "Summary": "Defines the DefaultCollapsed Class.",
+      "BaseClass": "OnOffType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2013"
+    },
+    {
+      "Name": "w:CT_OnOff/w15:webExtensionLinked",
+      "ClassName": "WebExtensionLinked",
+      "Summary": "Defines the WebExtensionLinked Class.",
+      "BaseClass": "OnOffType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2013"
+    },
+    {
+      "Name": "w:CT_OnOff/w15:webExtensionCreated",
+      "ClassName": "WebExtensionCreated",
+      "Summary": "Defines the WebExtensionCreated Class.",
+      "BaseClass": "OnOffType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2013"
+    },
+    {
+      "Name": "w:CT_OnOff/w15:doNotAllowInsertDeleteSection",
+      "ClassName": "DoNotAllowInsertDeleteSection",
+      "Summary": "Defines the DoNotAllowInsertDeleteSection Class.",
+      "BaseClass": "OnOffType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2013"
+    },
+    {
+      "Name": "w:CT_OnOff/",
+      "ClassName": "OnOffType",
+      "Summary": "Defines the OnOffType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "w:val",
+          "PropertyName": "Val",
+          "Type": "OnOffValue",
+          "PropertyComments": "On/Off Value"
+        }
+      ]
+    },
+    {
+      "Name": "w15:CT_Guid/w15:docId",
+      "ClassName": "PersistentDocumentId",
+      "Summary": "Defines the PersistentDocumentId Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": "w15:val",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2013"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w:CT_DecimalNumber/w15:footnoteColumns",
+      "ClassName": "FootnoteColumns",
+      "Summary": "Defines the FootnoteColumns Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": "w:val",
+          "PropertyName": "Val",
+          "Type": "Int32Value",
+          "PropertyComments": "Decimal Number Value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w15:CT_CommentEx/w15:commentEx",
+      "ClassName": "CommentEx",
+      "Summary": "Defines the CommentEx Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": "w15:paraId",
+          "PropertyName": "ParaId",
+          "Type": "HexBinaryValue",
+          "Version": "Office2013",
+          "PropertyComments": "paraId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2013"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "4"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w15:paraIdParent",
+          "PropertyName": "ParaIdParent",
+          "Type": "HexBinaryValue",
+          "Version": "Office2013",
+          "PropertyComments": "paraIdParent",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2013"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "4"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w15:done",
+          "PropertyName": "Done",
+          "Type": "OnOffValue",
+          "Version": "Office2013",
+          "PropertyComments": "done",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2013"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w15:CT_Person/w15:person",
+      "ClassName": "Person",
+      "Summary": "Defines the Person Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": "w15:author",
+          "PropertyName": "Author",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "author",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2013"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "w15:CT_PresenceInfo/w15:presenceInfo",
+          "PropertyName": "PresenceInfo"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w15:CT_PresenceInfo/w15:presenceInfo",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w15:CT_PresenceInfo/w15:presenceInfo",
+      "ClassName": "PresenceInfo",
+      "Summary": "Defines the PresenceInfo Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": "w15:providerId",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "providerId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2013"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
+          "QName": "w15:userId",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "userId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2013"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "w:CT_String/w15:sectionTitle",
+      "ClassName": "SectionTitle",
+      "Summary": "Defines the SectionTitle Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": "w:val",
+          "PropertyName": "Val",
+          "Type": "StringValue",
+          "PropertyComments": "String Value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "w15:ST_SdtAppearance",
+      "Name": "SdtAppearance",
+      "Facets": [
+        {
+          "Version": "Office2013",
+          "Value": "boundingBox",
+          "Name": "BoundingBox"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "tags",
+          "Name": "Tags"
+        },
+        {
+          "Version": "Office2013",
+          "Value": "hidden",
+          "Name": "Hidden"
+        }
+      ],
+      "Version": "Office2013"
+    }
+  ]
+}

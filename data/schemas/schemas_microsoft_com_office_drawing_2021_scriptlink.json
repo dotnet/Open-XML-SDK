@@ -1,0 +1,74 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2021/scriptlink",
+  "Types": [
+    {
+      "Name": "asl:CT_ScriptLink/asl:scriptLink",
+      "ClassName": "ScriptLink",
+      "Summary": "Defines the ScriptLink Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "val"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/asl:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/asl:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/asl:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

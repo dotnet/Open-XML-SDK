@@ -1,0 +1,142 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2018/animation",
+  "Types": [
+    {
+      "Name": "aanim:CT_AnimationProperties/aanim:animPr",
+      "ClassName": "AnimationProperties",
+      "Summary": "Defines the AnimationProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "name"
+        },
+        {
+          "QName": ":length",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "length",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":count",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "count",
+          "Validators": [
+            {
+              "Name": "NumberValidator",
+              "Type": "xsd:unsignedInt",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "aanim:ST_Indefinite",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":auto",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "auto"
+        },
+        {
+          "QName": ":offset",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "offset"
+        },
+        {
+          "QName": ":st",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "st"
+        },
+        {
+          "QName": ":end",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "end"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/aanim:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/aanim:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/aanim:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "aanim:ST_Indefinite",
+      "Name": "Indefinite",
+      "Facets": [
+        {
+          "Version": "Office2019",
+          "Value": "indefinite"
+        }
+      ],
+      "Version": "Office2019"
+    }
+  ]
+}

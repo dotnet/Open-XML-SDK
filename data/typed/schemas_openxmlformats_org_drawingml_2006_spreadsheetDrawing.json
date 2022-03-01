@@ -1,0 +1,151 @@
+[
+  {
+    "Name": "xdr:CT_Marker/",
+    "ClassName": "MarkerType"
+  },
+  {
+    "Name": "xdr:CT_AbsoluteAnchor/xdr:absoluteAnchor",
+    "ClassName": "AbsoluteAnchor"
+  },
+  {
+    "Name": "a:CT_BlipFillProperties2/xdr:blipFill",
+    "ClassName": "BlipFill"
+  },
+  {
+    "Name": "xdr:CT_AnchorClientData/xdr:clientData",
+    "ClassName": "ClientData"
+  },
+  {
+    "Name": "a:CT_NonVisualConnectorProperties/xdr:cNvCxnSpPr",
+    "ClassName": "NonVisualConnectorShapeDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualGraphicFrameProperties/xdr:cNvGraphicFramePr",
+    "ClassName": "NonVisualGraphicFrameDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualGroupDrawingShapeProps/xdr:cNvGrpSpPr",
+    "ClassName": "NonVisualGroupShapeDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualPictureProperties/xdr:cNvPicPr",
+    "ClassName": "NonVisualPictureDrawingProperties"
+  },
+  {
+    "Name": "a:CT_SpreadSheetNonVisualDrawingProps/xdr:cNvPr",
+    "ClassName": "NonVisualDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingShapeProps/xdr:cNvSpPr",
+    "ClassName": "NonVisualShapeDrawingProperties"
+  },
+  {
+    "Name": "xdr:ST_ColID/xdr:col",
+    "ClassName": "ColumnId"
+  },
+  {
+    "Name": "a:ST_Coordinate/xdr:colOff",
+    "ClassName": "ColumnOffset"
+  },
+  {
+    "Name": "xdr14:CT_ContentPart/xdr:contentPart",
+    "ClassName": "ContentPart"
+  },
+  {
+    "Name": "xdr:CT_Connector/xdr:cxnSp",
+    "ClassName": "ConnectionShape"
+  },
+  {
+    "Name": "a:CT_PositiveSize2D/xdr:ext",
+    "ClassName": "Extent"
+  },
+  {
+    "Name": "xdr:CT_Marker/xdr:from",
+    "ClassName": "FromMarker"
+  },
+  {
+    "Name": "xdr:CT_GraphicalObjectFrame/xdr:graphicFrame",
+    "ClassName": "GraphicFrame"
+  },
+  {
+    "Name": "xdr:CT_GroupShape/xdr:grpSp",
+    "ClassName": "GroupShape"
+  },
+  {
+    "Name": "a:CT_GroupShapeProperties/xdr:grpSpPr",
+    "ClassName": "GroupShapeProperties"
+  },
+  {
+    "Name": "xdr:CT_ConnectorNonVisual/xdr:nvCxnSpPr",
+    "ClassName": "NonVisualConnectionShapeProperties"
+  },
+  {
+    "Name": "xdr:CT_GraphicalObjectFrameNonVisual/xdr:nvGraphicFramePr",
+    "ClassName": "NonVisualGraphicFrameProperties"
+  },
+  {
+    "Name": "xdr:CT_GroupShapeNonVisual/xdr:nvGrpSpPr",
+    "ClassName": "NonVisualGroupShapeProperties"
+  },
+  {
+    "Name": "xdr:CT_PictureNonVisual/xdr:nvPicPr",
+    "ClassName": "NonVisualPictureProperties"
+  },
+  {
+    "Name": "xdr:CT_ShapeNonVisual/xdr:nvSpPr",
+    "ClassName": "NonVisualShapeProperties"
+  },
+  {
+    "Name": "xdr:CT_OneCellAnchor/xdr:oneCellAnchor",
+    "ClassName": "OneCellAnchor"
+  },
+  {
+    "Name": "xdr:CT_Picture/xdr:pic",
+    "ClassName": "Picture"
+  },
+  {
+    "Name": "a:CT_Point2D/xdr:pos",
+    "ClassName": "Position"
+  },
+  {
+    "Name": "xdr:ST_RowID/xdr:row",
+    "ClassName": "RowId"
+  },
+  {
+    "Name": "a:ST_Coordinate/xdr:rowOff",
+    "ClassName": "RowOffset"
+  },
+  {
+    "Name": "xdr:CT_Shape/xdr:sp",
+    "ClassName": "Shape"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/xdr:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "a:CT_ShapeStyle/xdr:style",
+    "ClassName": "ShapeStyle"
+  },
+  {
+    "Name": "xdr:CT_Marker/xdr:to",
+    "ClassName": "ToMarker"
+  },
+  {
+    "Name": "xdr:CT_TwoCellAnchor/xdr:twoCellAnchor",
+    "ClassName": "TwoCellAnchor"
+  },
+  {
+    "Name": "a:CT_TextBody/xdr:txBody",
+    "ClassName": "TextBody"
+  },
+  {
+    "Name": "xdr:CT_Drawing/xdr:wsDr",
+    "ClassName": "WorksheetDrawing",
+    "PartClassName": "DrawingsPart"
+  },
+  {
+    "Name": "a:CT_Transform2D/xdr:xfrm",
+    "ClassName": "Transform"
+  }
+]

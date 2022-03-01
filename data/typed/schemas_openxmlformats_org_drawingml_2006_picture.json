@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "a:CT_BlipFillProperties/pic:blipFill",
+    "ClassName": "BlipFill"
+  },
+  {
+    "Name": "a:CT_NonVisualPictureProperties/pic:cNvPicPr",
+    "ClassName": "NonVisualPictureDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/pic:cNvPr",
+    "ClassName": "NonVisualDrawingProperties"
+  },
+  {
+    "Name": "pic:CT_PictureNonVisual/pic:nvPicPr",
+    "ClassName": "NonVisualPictureProperties"
+  },
+  {
+    "Name": "pic:CT_Picture/pic:pic",
+    "ClassName": "Picture"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/pic:spPr",
+    "ClassName": "ShapeProperties"
+  }
+]

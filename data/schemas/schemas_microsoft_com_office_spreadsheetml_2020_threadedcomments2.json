@@ -1,0 +1,121 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2",
+  "Types": [
+    {
+      "Name": "xsd:unsignedInt/xltc2:checksum",
+      "ClassName": "XsdunsignedInt",
+      "Summary": "Defines the XsdunsignedInt Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2021",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:unsignedInt",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xltc2:CT_CommentHyperlink/xltc2:hyperlink",
+      "ClassName": "CommentHyperlink",
+      "Summary": "Defines the CommentHyperlink Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":startIndex",
+          "Type": "UInt32Value",
+          "Version": "Office2021",
+          "PropertyComments": "startIndex",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":length",
+          "Type": "UInt32Value",
+          "Version": "Office2021",
+          "PropertyComments": "length",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":url",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "url",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_ExtensionList/xltc2:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_ExtensionList/xltc2:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ExtensionList/xltc2:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "x:CT_Extension/x:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "x:CT_Extension/x:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

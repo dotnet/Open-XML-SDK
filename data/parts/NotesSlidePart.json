@@ -1,0 +1,128 @@
+{
+  "Root": "p:CT_NotesSlide",
+  "Name": "NotesSlidePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.notesSlide\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide",
+  "Target": "notesSlide",
+  "RootElement": "notes",
+  "Paths": {
+    "General": "../notesSlides"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "CustomXmlParts",
+      "Name": "CustomXmlPart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "IsDataPartReference": true,
+      "ApiName": "AudioReferenceRelationships",
+      "Name": "AudioReferenceRelationship"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ChartParts",
+      "Name": "ChartPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ExtendedChartParts",
+      "Name": "ExtendedChartPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramColorsParts",
+      "Name": "DiagramColorsPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramDataParts",
+      "Name": "DiagramDataPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramPersistLayoutParts",
+      "Name": "DiagramPersistLayoutPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramLayoutDefinitionParts",
+      "Name": "DiagramLayoutDefinitionPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramStyleParts",
+      "Name": "DiagramStylePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedObjectParts",
+      "Name": "EmbeddedObjectPart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedPackageParts",
+      "Name": "EmbeddedPackagePart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "IsDataPartReference": true,
+      "ApiName": "VideoReferenceRelationships",
+      "Name": "VideoReferenceRelationship"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "VmlDrawingParts",
+      "Name": "VmlDrawingPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedControlPersistenceBinaryDataParts",
+      "Name": "EmbeddedControlPersistenceBinaryDataPart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "Model3DReferenceRelationshipParts",
+      "Name": "Model3DReferenceRelationshipPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "NotesMasterPart",
+      "Name": "NotesMasterPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "ThemeOverridePart",
+      "Name": "ThemeOverridePart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "SlidePart",
+      "Name": "SlidePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "UserDefinedTagsParts",
+      "Name": "UserDefinedTagsPart",
+      "HasFixedContent": true
+    }
+  ]
+}

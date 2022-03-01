@@ -1,0 +1,36 @@
+{
+  "Root": "x:CT_Chartsheet",
+  "Name": "ChartsheetPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet",
+  "Target": "sheet",
+  "RootElement": "chartsheet",
+  "Paths": {
+    "General": "chartsheets"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "SpreadsheetPrinterSettingsParts",
+      "Name": "SpreadsheetPrinterSettingsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "DrawingsPart",
+      "Name": "DrawingsPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "VmlDrawingParts",
+      "Name": "VmlDrawingPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    }
+  ]
+}

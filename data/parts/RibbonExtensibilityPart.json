@@ -1,0 +1,18 @@
+{
+  "Name": "RibbonExtensibilityPart",
+  "Base": "CustomUIPart",
+  "ContentType": "application/xml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility",
+  "Target": "customUI",
+  "RootElement": "customUI",
+  "Paths": {
+    "General": "customUI"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    }
+  ]
+}

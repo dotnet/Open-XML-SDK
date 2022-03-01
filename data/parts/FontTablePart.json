@@ -1,0 +1,19 @@
+{
+  "Root": "w:CT_FontsList",
+  "Name": "FontTablePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable",
+  "Target": "fontTable",
+  "RootElement": "fonts",
+  "Paths": {
+    "General": "."
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "FontParts",
+      "Name": "FontPart"
+    }
+  ]
+}

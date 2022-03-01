@@ -1,0 +1,85 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray",
+  "Types": [
+    {
+      "Name": "xda:CT_DynamicArrayProperties/xda:dynamicArrayProperties",
+      "ClassName": "DynamicArrayProperties",
+      "Summary": "Defines the DynamicArrayProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":fDynamic",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "fDynamic"
+        },
+        {
+          "QName": ":fCollapsed",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "fCollapsed"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_ExtensionList/xda:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_ExtensionList/xda:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ExtensionList/xda:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "x:CT_Extension/x:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "x:CT_Extension/x:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

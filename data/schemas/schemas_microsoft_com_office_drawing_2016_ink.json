@@ -1,0 +1,75 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2016/ink",
+  "Enums": [
+    {
+      "Type": "aink:ST_ExtendedBrushPropertyName",
+      "Name": "ExtendedBrushPropertyName",
+      "Facets": [
+        {
+          "Version": "Office2019",
+          "Value": "inkEffects"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "anchorX"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "anchorY"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "scaleFactor"
+        }
+      ],
+      "Version": "Office2019"
+    },
+    {
+      "Type": "aink:ST_InkEffectsType",
+      "Name": "InkEffectsType",
+      "Facets": [
+        {
+          "Version": "Office2019",
+          "Value": "none"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "pencil"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "rainbow"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "galaxy"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "gold"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "silver"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "lava"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "ocean"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "rosegold"
+        },
+        {
+          "Version": "Office2019",
+          "Value": "bronze"
+        }
+      ],
+      "Version": "Office2019"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "pvml:CT_Empty/pvml:iscomment",
+    "ClassName": "InkAnnotationFlag"
+  },
+  {
+    "Name": "pvml:CT_Rel/pvml:textdata",
+    "ClassName": "TextData"
+  }
+]

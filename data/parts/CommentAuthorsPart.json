@@ -1,0 +1,12 @@
+{
+  "Root": "p:CT_CommentAuthorList",
+  "Name": "CommentAuthorsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.commentAuthors\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors",
+  "Target": "commentAuthors",
+  "RootElement": "cmAuthorLst",
+  "Paths": {
+    "General": "."
+  }
+}

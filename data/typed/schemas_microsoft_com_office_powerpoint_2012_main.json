@@ -1,0 +1,46 @@
+[
+  {
+    "Name": "p15:CT_ExtendedGuideList/",
+    "ClassName": "ExtendedGuideList"
+  },
+  {
+    "Name": "p15:CT_ChartTrackingRefBased/p15:chartTrackingRefBased",
+    "ClassName": "ChartTrackingReferenceBased"
+  },
+  {
+    "Name": "a:CT_Color/p15:clr",
+    "ClassName": "ColorType"
+  },
+  {
+    "Name": "p:CT_ExtensionList/p15:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "p15:CT_ExtendedGuide/p15:guide",
+    "ClassName": "ExtendedGuide"
+  },
+  {
+    "Name": "p15:CT_ExtendedGuideList/p15:notesGuideLst",
+    "ClassName": "NotesGuideList"
+  },
+  {
+    "Name": "p15:CT_ParentCommentIdentifier/p15:parentCm",
+    "ClassName": "ParentCommentIdentifier"
+  },
+  {
+    "Name": "p15:CT_PresenceInfo/p15:presenceInfo",
+    "ClassName": "PresenceInfo"
+  },
+  {
+    "Name": "p15:CT_PresetTransition/p15:prstTrans",
+    "ClassName": "PresetTransition"
+  },
+  {
+    "Name": "p15:CT_ExtendedGuideList/p15:sldGuideLst",
+    "ClassName": "SlideGuideList"
+  },
+  {
+    "Name": "p15:CT_CommentThreading/p15:threadingInfo",
+    "ClassName": "ThreadingInfo"
+  }
+]

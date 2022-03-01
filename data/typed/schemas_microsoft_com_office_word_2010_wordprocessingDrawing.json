@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "a:ST_PositivePercentage/wp14:pctHeight",
+    "ClassName": "PercentageHeight"
+  },
+  {
+    "Name": "a:ST_Percentage/wp14:pctPosHOffset",
+    "ClassName": "PercentagePositionHeightOffset"
+  },
+  {
+    "Name": "a:ST_Percentage/wp14:pctPosVOffset",
+    "ClassName": "PercentagePositionVerticalOffset"
+  },
+  {
+    "Name": "a:ST_PositivePercentage/wp14:pctWidth",
+    "ClassName": "PercentageWidth"
+  },
+  {
+    "Name": "wp14:CT_SizeRelH/wp14:sizeRelH",
+    "ClassName": "RelativeWidth"
+  },
+  {
+    "Name": "wp14:CT_SizeRelV/wp14:sizeRelV",
+    "ClassName": "RelativeHeight"
+  }
+]

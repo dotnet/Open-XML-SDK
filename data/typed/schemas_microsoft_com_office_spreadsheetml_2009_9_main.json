@@ -1,0 +1,466 @@
+[
+  {
+    "Name": "x14:CT_DataValidationFormula/",
+    "ClassName": "DataValidationFormulaType"
+  },
+  {
+    "Name": "x14:CT_DefinedNameArgumentDescription/x14:argumentDescription",
+    "ClassName": "ArgumentDescription"
+  },
+  {
+    "Name": "x14:CT_DefinedNameArgumentDescriptions/x14:argumentDescriptions",
+    "ClassName": "ArgumentDescriptions"
+  },
+  {
+    "Name": "x:CT_Color/x14:axisColor",
+    "ClassName": "BarAxisColor"
+  },
+  {
+    "Name": "x:CT_Color/x14:borderColor",
+    "ClassName": "BorderColor"
+  },
+  {
+    "Name": "x14:CT_CacheField/x14:cacheField",
+    "ClassName": "CacheField"
+  },
+  {
+    "Name": "x14:CT_CacheHierarchy/x14:cacheHierarchy",
+    "ClassName": "CacheHierarchy"
+  },
+  {
+    "Name": "x14:CT_CalculatedMember/x14:calculatedMember",
+    "ClassName": "CalculatedMember"
+  },
+  {
+    "Name": "x:CT_CalculatedMembers/x14:calculatedMembers",
+    "ClassName": "CalculatedMembers"
+  },
+  {
+    "Name": "x14:CT_CfIcon/x14:cfIcon",
+    "ClassName": "ConditionalFormattingIcon"
+  },
+  {
+    "Name": "x14:CT_CfRule/x14:cfRule",
+    "ClassName": "ConditionalFormattingRule"
+  },
+  {
+    "Name": "x14:CT_Cfvo/x14:cfvo",
+    "ClassName": "ConditionalFormattingValueObject"
+  },
+  {
+    "Name": "x:CT_Color/x14:color",
+    "ClassName": "Color"
+  },
+  {
+    "Name": "x:CT_Color/x14:colorAxis",
+    "ClassName": "AxisColor"
+  },
+  {
+    "Name": "x:CT_Color/x14:colorFirst",
+    "ClassName": "FirstMarkerColor"
+  },
+  {
+    "Name": "x:CT_Color/x14:colorHigh",
+    "ClassName": "HighMarkerColor"
+  },
+  {
+    "Name": "x:CT_Color/x14:colorLast",
+    "ClassName": "LastMarkerColor"
+  },
+  {
+    "Name": "x:CT_Color/x14:colorLow",
+    "ClassName": "LowMarkerColor"
+  },
+  {
+    "Name": "x:CT_Color/x14:colorMarkers",
+    "ClassName": "MarkersColor"
+  },
+  {
+    "Name": "x:CT_Color/x14:colorNegative",
+    "ClassName": "NegativeColor"
+  },
+  {
+    "Name": "x14:CT_ColorScale/x14:colorScale",
+    "ClassName": "ColorScale"
+  },
+  {
+    "Name": "x:CT_Color/x14:colorSeries",
+    "ClassName": "SeriesColor"
+  },
+  {
+    "Name": "x14:CT_ConditionalFormat/x14:conditionalFormat",
+    "ClassName": "ConditionalFormat"
+  },
+  {
+    "Name": "x14:CT_ConditionalFormats/x14:conditionalFormats",
+    "ClassName": "ConditionalFormats"
+  },
+  {
+    "Name": "x14:CT_ConditionalFormatting/x14:conditionalFormatting",
+    "ClassName": "ConditionalFormatting"
+  },
+  {
+    "Name": "x14:CT_ConditionalFormattings/x14:conditionalFormattings",
+    "ClassName": "ConditionalFormattings"
+  },
+  {
+    "Name": "x14:CT_Connection/x14:connection",
+    "ClassName": "Connection"
+  },
+  {
+    "Name": "x14:CT_CustomFilter/x14:customFilter",
+    "ClassName": "CustomFilter"
+  },
+  {
+    "Name": "x14:CT_CustomFilters/x14:customFilters",
+    "ClassName": "CustomFilters"
+  },
+  {
+    "Name": "x14:CT_SlicerCacheData/x14:data",
+    "ClassName": "SlicerCacheData"
+  },
+  {
+    "Name": "x14:CT_DataBar/x14:dataBar",
+    "ClassName": "DataBar"
+  },
+  {
+    "Name": "x14:CT_DataField/x14:dataField",
+    "ClassName": "DataField"
+  },
+  {
+    "Name": "x14:CT_DatastoreItem/x14:datastoreItem",
+    "ClassName": "DatastoreItem",
+    "PartClassName": "CustomDataPropertiesPart"
+  },
+  {
+    "Name": "x14:CT_DataValidation/x14:dataValidation",
+    "ClassName": "DataValidation"
+  },
+  {
+    "Name": "x14:CT_DataValidations/x14:dataValidations",
+    "ClassName": "DataValidations"
+  },
+  {
+    "Name": "x14:CT_DefinedName/x14:definedName",
+    "ClassName": "DefinedName"
+  },
+  {
+    "Name": "x14:CT_DefinedNames/x14:definedNames",
+    "ClassName": "DefinedNames"
+  },
+  {
+    "Name": "x:CT_Dxf/x14:dxf",
+    "ClassName": "DifferentialType"
+  },
+  {
+    "Name": "x:CT_Dxfs/x14:dxfs",
+    "ClassName": "DifferentialFormats"
+  },
+  {
+    "Name": "x14:CT_PivotEditValue/x14:editValue",
+    "ClassName": "PivotEditValue"
+  },
+  {
+    "Name": "x:CT_ExtensionList/x14:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "x:CT_SlicerCacheDefinitionExtensionList/x14:extLst",
+    "ClassName": "SlicerCacheDefinitionExtensionList"
+  },
+  {
+    "Name": "x:CT_Color/x14:fillColor",
+    "ClassName": "FillColor"
+  },
+  {
+    "Name": "x14:CT_Filter/x14:filter",
+    "ClassName": "Filter"
+  },
+  {
+    "Name": "x14:CT_FormControlPr/x14:formControlPr",
+    "ClassName": "FormControlProperties",
+    "PartClassName": "ControlPropertiesPart"
+  },
+  {
+    "Name": "x14:CT_DataValidationFormula/x14:formula1",
+    "ClassName": "DataValidationForumla1"
+  },
+  {
+    "Name": "x14:CT_DataValidationFormula/x14:formula2",
+    "ClassName": "DataValidationForumla2"
+  },
+  {
+    "Name": "x14:CT_TupleSetHeader/x14:header",
+    "ClassName": "TupleSetHeader"
+  },
+  {
+    "Name": "x14:CT_TupleSetHeaders/x14:headers",
+    "ClassName": "TupleSetHeaders"
+  },
+  {
+    "Name": "x14:CT_OlapSlicerCacheItem/x14:i",
+    "ClassName": "OlapSlicerCacheItem"
+  },
+  {
+    "Name": "x14:CT_TabularSlicerCacheItem/x14:i",
+    "ClassName": "TabularSlicerCacheItem"
+  },
+  {
+    "Name": "x14:CT_IconFilter/x14:iconFilter",
+    "ClassName": "IconFilter"
+  },
+  {
+    "Name": "x14:CT_IconSet/x14:iconSet",
+    "ClassName": "IconSet"
+  },
+  {
+    "Name": "x:ST_Guid/x14:id",
+    "ClassName": "Id"
+  },
+  {
+    "Name": "x14:CT_IgnoredError/x14:ignoredError",
+    "ClassName": "IgnoredError"
+  },
+  {
+    "Name": "x14:CT_IgnoredErrors/x14:ignoredErrors",
+    "ClassName": "IgnoredErrors"
+  },
+  {
+    "Name": "x14:CT_ListItem/x14:item",
+    "ClassName": "ListItem"
+  },
+  {
+    "Name": "x14:CT_ListItems/x14:itemLst",
+    "ClassName": "ListItems"
+  },
+  {
+    "Name": "x14:CT_TabularSlicerCacheItems/x14:items",
+    "ClassName": "TabularSlicerCacheItems"
+  },
+  {
+    "Name": "x14:CT_OlapSlicerCacheLevelData/x14:level",
+    "ClassName": "OlapSlicerCacheLevelData"
+  },
+  {
+    "Name": "x14:CT_OlapSlicerCacheLevelsData/x14:levels",
+    "ClassName": "OlapSlicerCacheLevelsData"
+  },
+  {
+    "Name": "x:CT_Color/x14:negativeBorderColor",
+    "ClassName": "NegativeBorderColor"
+  },
+  {
+    "Name": "x:CT_Color/x14:negativeFillColor",
+    "ClassName": "NegativeFillColor"
+  },
+  {
+    "Name": "x14:CT_OlapSlicerCache/x14:olap",
+    "ClassName": "OlapSlicerCache"
+  },
+  {
+    "Name": "x14:CT_OleItem/x14:oleItem",
+    "ClassName": "OleItem"
+  },
+  {
+    "Name": "x14:CT_OlapSlicerCacheItemParent/x14:p",
+    "ClassName": "OlapSlicerCacheItemParent"
+  },
+  {
+    "Name": "x:CT_PivotArea/x14:pivotArea",
+    "ClassName": "PivotArea"
+  },
+  {
+    "Name": "x:CT_PivotAreas/x14:pivotAreas",
+    "ClassName": "PivotAreas"
+  },
+  {
+    "Name": "x14:CT_PivotCacheDefinition/x14:pivotCacheDefinition",
+    "ClassName": "PivotCacheDefinition"
+  },
+  {
+    "Name": "x:CT_PivotCaches/x14:pivotCaches",
+    "ClassName": "PivotCaches"
+  },
+  {
+    "Name": "x14:CT_PivotChange/x14:pivotChange",
+    "ClassName": "PivotChange"
+  },
+  {
+    "Name": "x14:CT_PivotChanges/x14:pivotChanges",
+    "ClassName": "PivotChanges"
+  },
+  {
+    "Name": "x14:CT_PivotEdit/x14:pivotEdit",
+    "ClassName": "PivotEdit"
+  },
+  {
+    "Name": "x14:CT_PivotEdits/x14:pivotEdits",
+    "ClassName": "PivotEdits"
+  },
+  {
+    "Name": "x14:CT_PivotField/x14:pivotField",
+    "ClassName": "PivotField"
+  },
+  {
+    "Name": "x14:CT_PivotHierarchy/x14:pivotHierarchy",
+    "ClassName": "PivotHierarchy"
+  },
+  {
+    "Name": "x14:CT_SlicerCachePivotTable/x14:pivotTable",
+    "ClassName": "SlicerCachePivotTable"
+  },
+  {
+    "Name": "x14:CT_PivotTableDefinition/x14:pivotTableDefinition",
+    "ClassName": "PivotTableDefinition"
+  },
+  {
+    "Name": "x14:CT_SlicerCachePivotTables/x14:pivotTables",
+    "ClassName": "SlicerCachePivotTables"
+  },
+  {
+    "Name": "x14:CT_ProtectedRange/x14:protectedRange",
+    "ClassName": "ProtectedRange"
+  },
+  {
+    "Name": "x14:CT_ProtectedRanges/x14:protectedRanges",
+    "ClassName": "ProtectedRanges"
+  },
+  {
+    "Name": "x14:CT_OlapSlicerCacheRange/x14:range",
+    "ClassName": "OlapSlicerCacheRange"
+  },
+  {
+    "Name": "x14:CT_OlapSlicerCacheRanges/x14:ranges",
+    "ClassName": "OlapSlicerCacheRanges"
+  },
+  {
+    "Name": "x14:CT_TupleSetRow/x14:row",
+    "ClassName": "TupleSetRow"
+  },
+  {
+    "Name": "x14:CT_TupleSetRowItem/x14:rowItem",
+    "ClassName": "TupleSetRowItem"
+  },
+  {
+    "Name": "x14:CT_TupleSetRows/x14:rows",
+    "ClassName": "TupleSetRows"
+  },
+  {
+    "Name": "x14:CT_OlapSlicerCacheSelection/x14:selection",
+    "ClassName": "OlapSlicerCacheSelection"
+  },
+  {
+    "Name": "x14:CT_OlapSlicerCacheSelections/x14:selections",
+    "ClassName": "OlapSlicerCacheSelections"
+  },
+  {
+    "Name": "x14:CT_SetLevel/x14:setLevel",
+    "ClassName": "SetLevel"
+  },
+  {
+    "Name": "x14:CT_SetLevels/x14:setLevels",
+    "ClassName": "SetLevels"
+  },
+  {
+    "Name": "x14:CT_Slicer/x14:slicer",
+    "ClassName": "Slicer"
+  },
+  {
+    "Name": "x14:CT_SlicerRef/x14:slicer",
+    "ClassName": "SlicerRef"
+  },
+  {
+    "Name": "x14:CT_SlicerCache/x14:slicerCache",
+    "ClassName": "SlicerCache"
+  },
+  {
+    "Name": "x14:CT_SlicerCacheDefinition/x14:slicerCacheDefinition",
+    "ClassName": "SlicerCacheDefinition",
+    "PartClassName": "SlicerCachePart"
+  },
+  {
+    "Name": "x14:CT_SlicerCaches/x14:slicerCaches",
+    "ClassName": "SlicerCaches"
+  },
+  {
+    "Name": "x14:CT_SlicerRefs/x14:slicerList",
+    "ClassName": "SlicerList"
+  },
+  {
+    "Name": "x14:CT_Slicers/x14:slicers",
+    "ClassName": "Slicers",
+    "PartClassName": "SlicersPart"
+  },
+  {
+    "Name": "x14:CT_SlicerStyle/x14:slicerStyle",
+    "ClassName": "SlicerStyle"
+  },
+  {
+    "Name": "x14:CT_SlicerStyleElement/x14:slicerStyleElement",
+    "ClassName": "SlicerStyleElement"
+  },
+  {
+    "Name": "x14:CT_SlicerStyleElements/x14:slicerStyleElements",
+    "ClassName": "SlicerStyleElements"
+  },
+  {
+    "Name": "x14:CT_SlicerStyles/x14:slicerStyles",
+    "ClassName": "SlicerStyles"
+  },
+  {
+    "Name": "x14:CT_SortCondition/x14:sortCondition",
+    "ClassName": "SortCondition"
+  },
+  {
+    "Name": "x14:CT_SourceConnection/x14:sourceConnection",
+    "ClassName": "SourceConnection"
+  },
+  {
+    "Name": "x14:CT_Sparkline/x14:sparkline",
+    "ClassName": "Sparkline"
+  },
+  {
+    "Name": "x14:CT_SparklineGroup/x14:sparklineGroup",
+    "ClassName": "SparklineGroup"
+  },
+  {
+    "Name": "x14:CT_SparklineGroups/x14:sparklineGroups",
+    "ClassName": "SparklineGroups"
+  },
+  {
+    "Name": "x14:CT_Sparklines/x14:sparklines",
+    "ClassName": "Sparklines"
+  },
+  {
+    "Name": "x14:CT_Table/x14:table",
+    "ClassName": "Table"
+  },
+  {
+    "Name": "x14:CT_TabularSlicerCache/x14:tabular",
+    "ClassName": "TabularSlicerCache"
+  },
+  {
+    "Name": "x:ST_Xstring/x14:tupleItem",
+    "ClassName": "Xstring"
+  },
+  {
+    "Name": "x14:CT_TupleItems/x14:tupleItems",
+    "ClassName": "TupleItems"
+  },
+  {
+    "Name": "x14:CT_TupleSet/x14:tupleSet",
+    "ClassName": "TupleSet"
+  },
+  {
+    "Name": "x14:CT_PivotUserEdit/x14:userEdit",
+    "ClassName": "PivotUserEdit"
+  },
+  {
+    "Name": "x:CT_DdeValues/x14:values",
+    "ClassName": "DdeValues"
+  },
+  {
+    "Name": "x14:CT_WorkbookPr/x14:workbookPr",
+    "ClassName": "WorkbookProperties"
+  }
+]

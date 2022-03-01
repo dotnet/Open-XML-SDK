@@ -1,0 +1,202 @@
+[
+  {
+    "Name": "a14:CT_PictureEffectBlur/a14:artisticBlur",
+    "ClassName": "ArtisticBlur"
+  },
+  {
+    "Name": "a14:CT_PictureEffectCement/a14:artisticCement",
+    "ClassName": "ArtisticCement"
+  },
+  {
+    "Name": "a14:CT_PictureEffectChalkSketch/a14:artisticChalkSketch",
+    "ClassName": "ArtisticChalkSketch"
+  },
+  {
+    "Name": "a14:CT_PictureEffectCrisscrossEtching/a14:artisticCrisscrossEtching",
+    "ClassName": "ArtisticCrisscrossEtching"
+  },
+  {
+    "Name": "a14:CT_PictureEffectCutout/a14:artisticCutout",
+    "ClassName": "ArtisticCutout"
+  },
+  {
+    "Name": "a14:CT_PictureEffectFilmGrain/a14:artisticFilmGrain",
+    "ClassName": "ArtisticFilmGrain"
+  },
+  {
+    "Name": "a14:CT_PictureEffectGlass/a14:artisticGlass",
+    "ClassName": "ArtisticGlass"
+  },
+  {
+    "Name": "a14:CT_PictureEffectGlowDiffused/a14:artisticGlowDiffused",
+    "ClassName": "ArtisticGlowDiffused"
+  },
+  {
+    "Name": "a14:CT_PictureEffectGlowEdges/a14:artisticGlowEdges",
+    "ClassName": "ArtisticGlowEdges"
+  },
+  {
+    "Name": "a14:CT_PictureEffectLightScreen/a14:artisticLightScreen",
+    "ClassName": "ArtisticLightScreen"
+  },
+  {
+    "Name": "a14:CT_PictureEffectLineDrawing/a14:artisticLineDrawing",
+    "ClassName": "ArtisticLineDrawing"
+  },
+  {
+    "Name": "a14:CT_PictureEffectMarker/a14:artisticMarker",
+    "ClassName": "ArtisticMarker"
+  },
+  {
+    "Name": "a14:CT_PictureEffectMosiaicBubbles/a14:artisticMosiaicBubbles",
+    "ClassName": "ArtisticMosaicBubbles"
+  },
+  {
+    "Name": "a14:CT_PictureEffectPaintBrush/a14:artisticPaintBrush",
+    "ClassName": "ArtisticPaintBrush"
+  },
+  {
+    "Name": "a14:CT_PictureEffectPaintStrokes/a14:artisticPaintStrokes",
+    "ClassName": "ArtisticPaintStrokes"
+  },
+  {
+    "Name": "a14:CT_PictureEffectPastelsSmooth/a14:artisticPastelsSmooth",
+    "ClassName": "ArtisticPastelsSmooth"
+  },
+  {
+    "Name": "a14:CT_PictureEffectPencilGrayscale/a14:artisticPencilGrayscale",
+    "ClassName": "ArtisticPencilGrayscale"
+  },
+  {
+    "Name": "a14:CT_PictureEffectPencilSketch/a14:artisticPencilSketch",
+    "ClassName": "ArtisticPencilSketch"
+  },
+  {
+    "Name": "a14:CT_PictureEffectPhotocopy/a14:artisticPhotocopy",
+    "ClassName": "ArtisticPhotocopy"
+  },
+  {
+    "Name": "a14:CT_PictureEffectPlasticWrap/a14:artisticPlasticWrap",
+    "ClassName": "ArtisticPlasticWrap"
+  },
+  {
+    "Name": "a14:CT_PictureEffectTexturizer/a14:artisticTexturizer",
+    "ClassName": "ArtisticTexturizer"
+  },
+  {
+    "Name": "a14:CT_PictureEffectWatercolorSponge/a14:artisticWatercolorSponge",
+    "ClassName": "ArtisticWatercolorSponge"
+  },
+  {
+    "Name": "a14:CT_PictureEffectBackgroundRemovalBackgroundMark/a14:backgroundMark",
+    "ClassName": "BackgroundMark"
+  },
+  {
+    "Name": "a14:CT_PictureEffectBackgroundRemoval/a14:backgroundRemoval",
+    "ClassName": "BackgroundRemoval"
+  },
+  {
+    "Name": "a14:CT_PictureEffectBrightnessContrast/a14:brightnessContrast",
+    "ClassName": "BrightnessContrast"
+  },
+  {
+    "Name": "a14:CT_CameraTool/a14:cameraTool",
+    "ClassName": "CameraTool"
+  },
+  {
+    "Name": "a14:CT_NonVisualInkContentPartProperties/a14:cNvContentPartPr",
+    "ClassName": "NonVisualInkContentPartProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/a14:cNvPr",
+    "ClassName": "NonVisualDrawingProperties"
+  },
+  {
+    "Name": "a14:CT_PictureEffectColorTemperature/a14:colorTemperature",
+    "ClassName": "ColorTemperature"
+  },
+  {
+    "Name": "a14:CT_CompatExt/a14:compatExt",
+    "ClassName": "CompatExtension"
+  },
+  {
+    "Name": "a14:CT_GvmlContentPart/a14:contentPart",
+    "ClassName": "GvmlContentPart"
+  },
+  {
+    "Name": "a14:CT_ContentPartLocking/a14:cpLocks",
+    "ClassName": "ContentPartLocks"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/a14:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "a14:CT_PictureEffectBackgroundRemovalForegroundMark/a14:foregroundMark",
+    "ClassName": "ForegroundMark"
+  },
+  {
+    "Name": "a:CT_EffectProperties/a14:hiddenEffects",
+    "ClassName": "HiddenEffectsProperties"
+  },
+  {
+    "Name": "a:CT_FillProperties/a14:hiddenFill",
+    "ClassName": "HiddenFillProperties"
+  },
+  {
+    "Name": "a:CT_LineProperties/a14:hiddenLine",
+    "ClassName": "HiddenLineProperties"
+  },
+  {
+    "Name": "a:CT_Scene3D/a14:hiddenScene3d",
+    "ClassName": "HiddenScene3D"
+  },
+  {
+    "Name": "a:CT_Shape3D/a14:hiddenSp3d",
+    "ClassName": "HiddenShape3D"
+  },
+  {
+    "Name": "a14:CT_PictureEffect/a14:imgEffect",
+    "ClassName": "ImageEffect"
+  },
+  {
+    "Name": "a14:CT_PictureLayer/a14:imgLayer",
+    "ClassName": "ImageLayer"
+  },
+  {
+    "Name": "a14:CT_Photo/a14:imgProps",
+    "ClassName": "ImageProperties"
+  },
+  {
+    "Name": "a14:CT_IsGvmlCanvas/a14:isCanvas",
+    "ClassName": "IsCanvas"
+  },
+  {
+    "Name": "a14:CT_TextMath/a14:m",
+    "ClassName": "TextMath"
+  },
+  {
+    "Name": "a14:CT_GvmlContentPartNonVisual/a14:nvContentPartPr",
+    "ClassName": "NonVisualContentPartProperties"
+  },
+  {
+    "Name": "a14:CT_PictureEffectSaturation/a14:saturation",
+    "ClassName": "Saturation"
+  },
+  {
+    "Name": "a14:CT_ShadowObscured/a14:shadowObscured",
+    "ClassName": "ShadowObscured"
+  },
+  {
+    "Name": "a14:CT_PictureEffectSharpenSoften/a14:sharpenSoften",
+    "ClassName": "SharpenSoften"
+  },
+  {
+    "Name": "a14:CT_UseLocalDpi/a14:useLocalDpi",
+    "ClassName": "UseLocalDpi"
+  },
+  {
+    "Name": "a:CT_Transform2D/a14:xfrm",
+    "ClassName": "Transform2D"
+  }
+]

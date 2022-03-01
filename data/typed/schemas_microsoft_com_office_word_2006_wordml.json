@@ -1,0 +1,160 @@
+[
+  {
+    "Name": "wne:CT_AcdKeymap/",
+    "ClassName": "AcceleratorKeymapType"
+  },
+  {
+    "Name": "wne:CT_Keymaps/",
+    "ClassName": "KeymapsType"
+  },
+  {
+    "Name": "wne:CT_MacroWll/",
+    "ClassName": "MacroWllType"
+  },
+  {
+    "Name": "wne:CT_Acd/wne:acd",
+    "ClassName": "AllocatedCommand"
+  },
+  {
+    "Name": "wne:CT_AcdKeymap/wne:acd",
+    "ClassName": "AllocatedCommandKeyboardCustomization"
+  },
+  {
+    "Name": "wne:CT_AcdKeymap/wne:acdEntry",
+    "ClassName": "AllocatedCommandManifestEntry"
+  },
+  {
+    "Name": "wne:CT_AcdManifest/wne:acdManifest",
+    "ClassName": "AllocatedCommandManifest"
+  },
+  {
+    "Name": "wne:CT_Acds/wne:acds",
+    "ClassName": "AllocatedCommands"
+  },
+  {
+    "Name": "wne:CT_OnOff/wne:active",
+    "ClassName": "RecordIncluded"
+  },
+  {
+    "Name": "wne:CT_DocEvents/wne:docEvents",
+    "ClassName": "DocEvents"
+  },
+  {
+    "Name": "xsd:string/wne:eventDocBuildingBlockAfterInsert",
+    "ClassName": "EventDocBuildingBlockAfterInsertXsdString"
+  },
+  {
+    "Name": "xsd:string/wne:eventDocClose",
+    "ClassName": "EventDocCloseXsdString"
+  },
+  {
+    "Name": "xsd:string/wne:eventDocContentControlAfterInsert",
+    "ClassName": "EventDocContentControlAfterInsertXsdString"
+  },
+  {
+    "Name": "xsd:string/wne:eventDocContentControlBeforeDelete",
+    "ClassName": "EventDocContentControlBeforeDeleteXsdString"
+  },
+  {
+    "Name": "xsd:string/wne:eventDocContentControlContentUpdate",
+    "ClassName": "EventDocContentControlUpdateXsdString"
+  },
+  {
+    "Name": "xsd:string/wne:eventDocContentControlOnEnter",
+    "ClassName": "EventDocContentControlOnEnterXsdString"
+  },
+  {
+    "Name": "xsd:string/wne:eventDocContentControlOnExit",
+    "ClassName": "EventDocContentControlOnExistXsdString"
+  },
+  {
+    "Name": "xsd:string/wne:eventDocNew",
+    "ClassName": "EventDocNewXsdString"
+  },
+  {
+    "Name": "xsd:string/wne:eventDocOpen",
+    "ClassName": "EventDocOpenXsdString"
+  },
+  {
+    "Name": "xsd:string/wne:eventDocStoreUpdate",
+    "ClassName": "EventDocStoreUpdateXsdString"
+  },
+  {
+    "Name": "xsd:string/wne:eventDocSync",
+    "ClassName": "EventDocSyncXsdString"
+  },
+  {
+    "Name": "xsd:string/wne:eventDocXmlAfterInsert",
+    "ClassName": "EventDocXmlAfterInsertXsdString"
+  },
+  {
+    "Name": "xsd:string/wne:eventDocXmlBeforeDelete",
+    "ClassName": "EventDocXmlBeforeDeleteXsdString"
+  },
+  {
+    "Name": "wne:CT_Fci/wne:fci",
+    "ClassName": "FixedCommandKeyboardCustomization"
+  },
+  {
+    "Name": "wne:CT_DecimalNumber/wne:hash",
+    "ClassName": "RecordHashCode"
+  },
+  {
+    "Name": "wne:CT_Keymap/wne:keymap",
+    "ClassName": "KeyMapEntry"
+  },
+  {
+    "Name": "wne:CT_Keymaps/wne:keymaps",
+    "ClassName": "KeyMapCustomizations"
+  },
+  {
+    "Name": "wne:CT_Keymaps/wne:keymapsBad",
+    "ClassName": "MismatchedKeyMapCustomization"
+  },
+  {
+    "Name": "wne:CT_MacroWll/wne:macro",
+    "ClassName": "MacroKeyboardCustomization"
+  },
+  {
+    "Name": "wne:CT_Mcd/wne:mcd",
+    "ClassName": "Mcd"
+  },
+  {
+    "Name": "wne:CT_Mcds/wne:mcds",
+    "ClassName": "Mcds"
+  },
+  {
+    "Name": "wne:CT_HashedRecipientData/wne:recipientData",
+    "ClassName": "SingleDataSourceRecord"
+  },
+  {
+    "Name": "wne:CT_HashedRecipients/wne:recipients",
+    "ClassName": "MailMergeRecipients"
+  },
+  {
+    "Name": "wne:CT_Tcg/wne:tcg",
+    "ClassName": "TemplateCommandGroup",
+    "PartClassName": "CustomizationPart"
+  },
+  {
+    "Name": "wne:CT_Rel/wne:toolbarData",
+    "ClassName": "ToolbarData"
+  },
+  {
+    "Name": "wne:CT_Toolbars/wne:toolbars",
+    "ClassName": "Toolbars"
+  },
+  {
+    "Name": "wne:CT_VbaSuppData/wne:vbaSuppData",
+    "ClassName": "VbaSuppData",
+    "PartClassName": "VbaDataPart"
+  },
+  {
+    "Name": "wne:CT_LongHexNumber/wne:wch",
+    "ClassName": "CharacterInsertion"
+  },
+  {
+    "Name": "wne:CT_MacroWll/wne:wll",
+    "ClassName": "WllMacroKeyboardCustomization"
+  }
+]

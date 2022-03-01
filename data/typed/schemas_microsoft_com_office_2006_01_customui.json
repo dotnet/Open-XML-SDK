@@ -1,0 +1,182 @@
+[
+  {
+    "Name": "mso:CT_QatItems/",
+    "ClassName": "QatItemsType"
+  },
+  {
+    "Name": "mso:CT_Box/mso:box",
+    "ClassName": "Box"
+  },
+  {
+    "Name": "mso:CT_Button/mso:button",
+    "ClassName": "Button"
+  },
+  {
+    "Name": "mso:CT_ButtonRegular/mso:button",
+    "ClassName": "UnsizedButton"
+  },
+  {
+    "Name": "mso:CT_VisibleButton/mso:button",
+    "ClassName": "VisibleButton"
+  },
+  {
+    "Name": "mso:CT_ButtonGroup/mso:buttonGroup",
+    "ClassName": "ButtonGroup"
+  },
+  {
+    "Name": "mso:CT_CheckBox/mso:checkBox",
+    "ClassName": "CheckBox"
+  },
+  {
+    "Name": "mso:CT_ComboBox/mso:comboBox",
+    "ClassName": "ComboBox"
+  },
+  {
+    "Name": "mso:CT_Command/mso:command",
+    "ClassName": "RepurposedCommand"
+  },
+  {
+    "Name": "mso:CT_Commands/mso:commands",
+    "ClassName": "RepurposedCommands"
+  },
+  {
+    "Name": "mso:CT_ContextualTabs/mso:contextualTabs",
+    "ClassName": "ContextualTabSets"
+  },
+  {
+    "Name": "mso:CT_ControlClone/mso:control",
+    "ClassName": "ControlClone"
+  },
+  {
+    "Name": "mso:CT_ControlCloneQat/mso:control",
+    "ClassName": "QuickAccessToolbarControlClone"
+  },
+  {
+    "Name": "mso:CT_ControlCloneRegular/mso:control",
+    "ClassName": "UnsizedControlClone"
+  },
+  {
+    "Name": "mso:CT_CustomUI/mso:customUI",
+    "ClassName": "CustomUI"
+  },
+  {
+    "Name": "mso:CT_DialogLauncher/mso:dialogBoxLauncher",
+    "ClassName": "DialogBoxLauncher"
+  },
+  {
+    "Name": "mso:CT_QatItems/mso:documentControls",
+    "ClassName": "DocumentSpecificQuickAccessToolbarControls"
+  },
+  {
+    "Name": "mso:CT_DropDownRegular/mso:dropDown",
+    "ClassName": "DropDown"
+  },
+  {
+    "Name": "mso:CT_DynamicMenu/mso:dynamicMenu",
+    "ClassName": "DynamicMenu"
+  },
+  {
+    "Name": "mso:CT_DynamicMenuRegular/mso:dynamicMenu",
+    "ClassName": "UnsizedDynamicMenu"
+  },
+  {
+    "Name": "mso:CT_EditBox/mso:editBox",
+    "ClassName": "EditBox"
+  },
+  {
+    "Name": "mso:CT_Gallery/mso:gallery",
+    "ClassName": "Gallery"
+  },
+  {
+    "Name": "mso:CT_GalleryRegular/mso:gallery",
+    "ClassName": "UnsizedGallery"
+  },
+  {
+    "Name": "mso:CT_Group/mso:group",
+    "ClassName": "Group"
+  },
+  {
+    "Name": "mso:CT_Item/mso:item",
+    "ClassName": "Item"
+  },
+  {
+    "Name": "mso:CT_LabelControl/mso:labelControl",
+    "ClassName": "TextLabel"
+  },
+  {
+    "Name": "mso:CT_Menu/mso:menu",
+    "ClassName": "Menu"
+  },
+  {
+    "Name": "mso:CT_MenuRegular/mso:menu",
+    "ClassName": "UnsizedMenu"
+  },
+  {
+    "Name": "mso:CT_MenuRoot/mso:menu",
+    "ClassName": "MenuRoot"
+  },
+  {
+    "Name": "mso:CT_MenuWithTitle/mso:menu",
+    "ClassName": "MenuWithTitle"
+  },
+  {
+    "Name": "mso:CT_MenuSeparator/mso:menuSeparator",
+    "ClassName": "MenuSeparator"
+  },
+  {
+    "Name": "mso:CT_OfficeMenu/mso:officeMenu",
+    "ClassName": "OfficeMenu"
+  },
+  {
+    "Name": "mso:CT_Qat/mso:qat",
+    "ClassName": "QuickAccessToolbar"
+  },
+  {
+    "Name": "mso:CT_Ribbon/mso:ribbon",
+    "ClassName": "Ribbon"
+  },
+  {
+    "Name": "mso:CT_Separator/mso:separator",
+    "ClassName": "VerticalSeparator"
+  },
+  {
+    "Name": "mso:CT_QatItems/mso:sharedControls",
+    "ClassName": "SharedQatControls"
+  },
+  {
+    "Name": "mso:CT_SplitButton/mso:splitButton",
+    "ClassName": "SplitButton"
+  },
+  {
+    "Name": "mso:CT_SplitButtonRegular/mso:splitButton",
+    "ClassName": "UnsizedSplitButton"
+  },
+  {
+    "Name": "mso:CT_SplitButtonWithTitle/mso:splitButton",
+    "ClassName": "SplitButtonWithTitle"
+  },
+  {
+    "Name": "mso:CT_Tab/mso:tab",
+    "ClassName": "Tab"
+  },
+  {
+    "Name": "mso:CT_Tabs/mso:tabs",
+    "ClassName": "Tabs"
+  },
+  {
+    "Name": "mso:CT_TabSet/mso:tabSet",
+    "ClassName": "ContextualTabSet"
+  },
+  {
+    "Name": "mso:CT_ToggleButton/mso:toggleButton",
+    "ClassName": "ToggleButton"
+  },
+  {
+    "Name": "mso:CT_ToggleButtonRegular/mso:toggleButton",
+    "ClassName": "UnsizedToggleButton"
+  },
+  {
+    "Name": "mso:CT_VisibleToggleButton/mso:toggleButton",
+    "ClassName": "VisibleToggleButton"
+  }
+]

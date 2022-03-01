@@ -1,0 +1,467 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments",
+  "Types": [
+    {
+      "Name": "xltc:CT_PersonList/xltc:personList",
+      "ClassName": "PersonList",
+      "Summary": "Defines the PersonList Class.",
+      "Part": "WorkbookPersonPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xltc:CT_Person/xltc:person"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xltc:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xltc:CT_Person/xltc:person",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xltc:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xltc:CT_ThreadedComments/xltc:ThreadedComments",
+      "ClassName": "ThreadedComments",
+      "Summary": "Defines the ThreadedComments Class.",
+      "Part": "WorksheetThreadedCommentsPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xltc:CT_ThreadedComment/xltc:threadedComment"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xltc:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xltc:CT_ThreadedComment/xltc:threadedComment",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xltc:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xltc:CT_Person/xltc:person",
+      "ClassName": "Person",
+      "Summary": "Defines the Person Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":displayName",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "displayName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":userId",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "userId"
+        },
+        {
+          "QName": ":providerId",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "providerId"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_ExtensionList/xltc:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_ExtensionList/xltc:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ExtensionList/xltc:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "x:CT_Extension/x:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "x:CT_Extension/x:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xltc:CT_ThreadedComment/xltc:threadedComment",
+      "ClassName": "ThreadedComment",
+      "Summary": "Defines the ThreadedComment Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":ref",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "ref"
+        },
+        {
+          "QName": ":dT",
+          "Type": "DateTimeValue",
+          "Version": "Office2019",
+          "PropertyComments": "dT"
+        },
+        {
+          "QName": ":personId",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "personId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":parentId",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "parentId",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":done",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "done"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:ST_Xstring/xltc:text",
+          "PropertyName": "ThreadedCommentText"
+        },
+        {
+          "Name": "xltc:CT_ThreadedCommentMentions/xltc:mentions",
+          "PropertyName": "ThreadedCommentMentions"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xltc:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:ST_Xstring/xltc:text",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "xltc:CT_ThreadedCommentMentions/xltc:mentions",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xltc:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:ST_Xstring/xltc:text",
+      "ClassName": "ThreadedCommentText",
+      "Summary": "Defines the ThreadedCommentText Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2019"
+    },
+    {
+      "Name": "xltc:CT_ThreadedCommentMentions/xltc:mentions",
+      "ClassName": "ThreadedCommentMentions",
+      "Summary": "Defines the ThreadedCommentMentions Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "xltc:CT_Mention/xltc:mention"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xltc:CT_Mention/xltc:mention",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xltc:CT_Mention/xltc:mention",
+      "ClassName": "Mention",
+      "Summary": "Defines the Mention Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":mentionpersonId",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "mentionpersonId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":mentionId",
+          "Type": "StringValue",
+          "Version": "Office2019",
+          "PropertyComments": "mentionId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":startIndex",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "startIndex",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":length",
+          "Type": "UInt32Value",
+          "Version": "Office2019",
+          "PropertyComments": "length",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

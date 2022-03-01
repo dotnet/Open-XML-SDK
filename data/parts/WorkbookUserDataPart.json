@@ -1,0 +1,12 @@
+{
+  "Root": "x:CT_Users",
+  "Name": "WorkbookUserDataPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.userNames\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/usernames",
+  "Target": "userNames",
+  "RootElement": "users",
+  "Paths": {
+    "General": "revisions"
+  }
+}

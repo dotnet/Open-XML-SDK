@@ -1,0 +1,12 @@
+{
+  "Root": "x:CT_Connections",
+  "Name": "ConnectionsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.connections\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/connections",
+  "Target": "connections",
+  "RootElement": "connections",
+  "Paths": {
+    "General": "."
+  }
+}

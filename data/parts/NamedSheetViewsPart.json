@@ -1,0 +1,13 @@
+{
+  "Root": "xnsv:CT_NamedSheetViews",
+  "Name": "NamedSheetViewsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.namedsheetviews\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView",
+  "Target": "namedSheetView",
+  "RootElement": "namedSheetViews",
+  "Paths": {
+    "General": "../namedSheetViews"
+  },
+  "Version": "Office2021"
+}

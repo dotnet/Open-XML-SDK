@@ -1,0 +1,13 @@
+{
+  "Root": "w15:CT_People",
+  "Name": "WordprocessingPeoplePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.people\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/people",
+  "Target": "people",
+  "RootElement": "people",
+  "Paths": {
+    "General": "."
+  },
+  "Version": "Office2013"
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "FontPart",
+  "Base": "OpenXmlPart",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font",
+  "Target": "font",
+  "Extension": ".dat",
+  "Paths": {
+    "General": "fonts"
+  }
+}

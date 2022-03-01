@@ -1,0 +1,42 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/2006/metadata/longProperties",
+  "Types": [
+    {
+      "Name": "lp:CT_LongProperties/lp:LongProperties",
+      "ClassName": "LongProperties",
+      "Summary": "Defines the LongProperties Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "lp:CT_LongProp/lp:LongProp"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "lp:CT_LongProp/lp:LongProp",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "lp:CT_LongProp/lp:LongProp",
+      "ClassName": "LongProperty",
+      "Summary": "Defines the LongProperty Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "name"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "Name": "cdr:CT_Marker/",
+    "ClassName": "MarkerType"
+  },
+  {
+    "Name": "cdr:CT_AbsSizeAnchor/cdr:absSizeAnchor",
+    "ClassName": "AbsoluteAnchorSize"
+  },
+  {
+    "Name": "a:CT_BlipFillProperties/cdr:blipFill",
+    "ClassName": "BlipFill"
+  },
+  {
+    "Name": "a:CT_NonVisualConnectorProperties/cdr:cNvCxnSpPr",
+    "ClassName": "NonVisualConnectionShapeProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualGraphicFrameProperties/cdr:cNvGraphicFramePr",
+    "ClassName": "NonVisualGraphicFrameDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualGroupDrawingShapeProps/cdr:cNvGrpSpPr",
+    "ClassName": "NonVisualGroupShapeDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualPictureProperties/cdr:cNvPicPr",
+    "ClassName": "NonVisualPictureDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/cdr:cNvPr",
+    "ClassName": "NonVisualDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingShapeProps/cdr:cNvSpPr",
+    "ClassName": "NonVisualShapeDrawingProperties"
+  },
+  {
+    "Name": "cdr:CT_Connector/cdr:cxnSp",
+    "ClassName": "ConnectionShape"
+  },
+  {
+    "Name": "a:CT_PositiveSize2D/cdr:ext",
+    "ClassName": "Extent"
+  },
+  {
+    "Name": "cdr:CT_Marker/cdr:from",
+    "ClassName": "FromAnchor"
+  },
+  {
+    "Name": "cdr:CT_GraphicFrame/cdr:graphicFrame",
+    "ClassName": "GraphicFrame"
+  },
+  {
+    "Name": "cdr:CT_GroupShape/cdr:grpSp",
+    "ClassName": "GroupShape"
+  },
+  {
+    "Name": "a:CT_GroupShapeProperties/cdr:grpSpPr",
+    "ClassName": "GroupShapeProperties"
+  },
+  {
+    "Name": "cdr:CT_ConnectorNonVisual/cdr:nvCxnSpPr",
+    "ClassName": "NonVisualConnectorShapeDrawingProperties"
+  },
+  {
+    "Name": "cdr:CT_GraphicFrameNonVisual/cdr:nvGraphicFramePr",
+    "ClassName": "NonVisualGraphicFrameProperties"
+  },
+  {
+    "Name": "cdr:CT_GroupShapeNonVisual/cdr:nvGrpSpPr",
+    "ClassName": "NonVisualGroupShapeProperties"
+  },
+  {
+    "Name": "cdr:CT_PictureNonVisual/cdr:nvPicPr",
+    "ClassName": "NonVisualPictureProperties"
+  },
+  {
+    "Name": "cdr:CT_ShapeNonVisual/cdr:nvSpPr",
+    "ClassName": "NonVisualShapeProperties"
+  },
+  {
+    "Name": "cdr:CT_Picture/cdr:pic",
+    "ClassName": "Picture"
+  },
+  {
+    "Name": "cdr:CT_RelSizeAnchor/cdr:relSizeAnchor",
+    "ClassName": "RelativeAnchorSize"
+  },
+  {
+    "Name": "cdr:CT_Shape/cdr:sp",
+    "ClassName": "Shape"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/cdr:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "a:CT_ShapeStyle/cdr:style",
+    "ClassName": "Style"
+  },
+  {
+    "Name": "cdr:CT_Marker/cdr:to",
+    "ClassName": "ToAnchor"
+  },
+  {
+    "Name": "a:CT_TextBody/cdr:txBody",
+    "ClassName": "TextBody"
+  },
+  {
+    "Name": "cdr:ST_MarkerCoordinate/cdr:x",
+    "ClassName": "XPosition"
+  },
+  {
+    "Name": "a:CT_Transform2D/cdr:xfrm",
+    "ClassName": "Transform"
+  },
+  {
+    "Name": "cdr:ST_MarkerCoordinate/cdr:y",
+    "ClassName": "YPosition"
+  }
+]

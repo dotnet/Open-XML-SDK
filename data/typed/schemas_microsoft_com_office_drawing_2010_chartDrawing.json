@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "a14:CT_NonVisualInkContentPartProperties/cdr14:cNvContentPartPr",
+    "ClassName": "NonVisualInkContentPartProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/cdr14:cNvPr",
+    "ClassName": "NonVisualDrawingProperties"
+  },
+  {
+    "Name": "cdr14:CT_ContentPart/cdr14:contentPart",
+    "ClassName": "ContentPart"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/cdr14:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "cdr14:CT_ContentPartNonVisual/cdr14:nvContentPartPr",
+    "ClassName": "NonVisualContentPartProperties"
+  },
+  {
+    "Name": "cdr14:CT_ApplicationNonVisualDrawingProps/cdr14:nvPr",
+    "ClassName": "ApplicationNonVisualDrawingProperties"
+  },
+  {
+    "Name": "a:CT_Transform2D/cdr14:xfrm",
+    "ClassName": "Transform2D"
+  }
+]

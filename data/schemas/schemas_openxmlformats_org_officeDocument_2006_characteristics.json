@@ -1,0 +1,122 @@
+{
+  "TargetNamespace": "http://schemas.openxmlformats.org/officeDocument/2006/characteristics",
+  "Types": [
+    {
+      "Name": "ac:CT_AdditionalCharacteristics/ac:additionalCharacteristics",
+      "ClassName": "AdditionalCharacteristicsInfo",
+      "Summary": "Set of Additional Characteristics.",
+      "BaseClass": "OpenXmlPartRootElement",
+      "Children": [
+        {
+          "Name": "ac:CT_Characteristic/ac:characteristic"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "ac:CT_Characteristic/ac:characteristic",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "ac:CT_Characteristic/ac:characteristic",
+      "ClassName": "Characteristic",
+      "Summary": "Single Characteristic.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "Name of Characteristic",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":relation",
+          "PropertyName": "Relation",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues\u003E",
+          "PropertyComments": "Relationship of Value to Name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "StringValue",
+          "PropertyComments": "Characteristic Value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":vocabulary",
+          "PropertyName": "Vocabulary",
+          "Type": "StringValue",
+          "PropertyComments": "Characteristic Grammar",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "ac:ST_Relation",
+      "Name": "RelationValues",
+      "Summary": "Characteristic Relationship Types",
+      "Facets": [
+        {
+          "Comments": "Greater Than or Equal to",
+          "Value": "ge",
+          "Name": "GreaterThanOrEqualTo"
+        },
+        {
+          "Comments": "Less Than or Equal To",
+          "Value": "le",
+          "Name": "LessThanOrEqualTo"
+        },
+        {
+          "Comments": "Greater Than",
+          "Value": "gt",
+          "Name": "GreaterThan"
+        },
+        {
+          "Comments": "Less Than",
+          "Value": "lt",
+          "Name": "LessThan"
+        },
+        {
+          "Comments": "Equal To",
+          "Value": "eq",
+          "Name": "EqualTo"
+        }
+      ]
+    }
+  ]
+}

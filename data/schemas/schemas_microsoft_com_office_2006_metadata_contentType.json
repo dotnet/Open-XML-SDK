@@ -1,0 +1,111 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/2006/metadata/contentType",
+  "Types": [
+    {
+      "Name": "ct:CT_ContentTypeSchema/ct:contentTypeSchema",
+      "ClassName": "ContentTypeSchema",
+      "Summary": "Defines the ContentTypeSchema Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "ct:_",
+          "PropertyName": "UnderScore",
+          "Type": "StringValue",
+          "PropertyComments": "_"
+        },
+        {
+          "QName": "ma:_",
+          "PropertyName": "ReservedAttributeString",
+          "Type": "StringValue",
+          "PropertyComments": "_"
+        },
+        {
+          "QName": "ma:contentTypeName",
+          "PropertyName": "ContentTypeName",
+          "Type": "StringValue",
+          "PropertyComments": "contentTypeName"
+        },
+        {
+          "QName": "ma:contentTypeID",
+          "PropertyName": "ContentTypeID",
+          "Type": "StringValue",
+          "PropertyComments": "contentTypeID",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "0x([0-9A-Fa-f][1-9A-Fa-f]|[1-9A-Fa-f][0-9A-Fa-f]|00[0-9A-Fa-f]{32})*"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MinLength",
+                  "Value": "2"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "1026"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "ma:contentTypeVersion",
+          "PropertyName": "ContentTypeVersion",
+          "Type": "Int32Value",
+          "PropertyComments": "contentTypeVersion",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "ma:contentTypeDescription",
+          "PropertyName": "ContentTypeDescription",
+          "Type": "StringValue",
+          "PropertyComments": "contentTypeDescription"
+        },
+        {
+          "QName": "ma:contentTypeScope",
+          "PropertyName": "ContentTypeScope",
+          "Type": "StringValue",
+          "PropertyComments": "contentTypeScope"
+        },
+        {
+          "QName": "ma:versionID",
+          "PropertyName": "VersionID",
+          "Type": "StringValue",
+          "PropertyComments": "versionID"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any",
+            "Namespace": "##any",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

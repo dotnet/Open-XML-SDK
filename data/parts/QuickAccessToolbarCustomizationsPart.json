@@ -1,0 +1,11 @@
+{
+  "Name": "QuickAccessToolbarCustomizationsPart",
+  "Base": "CustomUIPart",
+  "ContentType": "application/xml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization",
+  "Target": "customUI",
+  "RootElement": "customUI",
+  "Paths": {
+    "General": "userCustomization"
+  }
+}

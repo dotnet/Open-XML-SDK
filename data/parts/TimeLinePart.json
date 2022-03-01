@@ -1,0 +1,13 @@
+{
+  "Root": "x15:CT_Timelines",
+  "Name": "TimeLinePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.timeline\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/timeline",
+  "Target": "timeline",
+  "RootElement": "timelines",
+  "Paths": {
+    "General": "../timelines"
+  },
+  "Version": "Office2013"
+}

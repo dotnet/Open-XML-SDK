@@ -1,0 +1,13 @@
+{
+  "Root": "xltc:CT_PersonList",
+  "Name": "WorkbookPersonPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.person\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2017/10/relationships/person",
+  "Target": "person",
+  "RootElement": "personList",
+  "Paths": {
+    "General": "persons"
+  },
+  "Version": "Office2019"
+}

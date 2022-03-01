@@ -1,0 +1,2234 @@
+{
+  "TargetNamespace": "urn:schemas-microsoft-com:office:office",
+  "Types": [
+    {
+      "Name": "o:CT_ShapeDefaults/o:shapedefaults",
+      "ClassName": "ShapeDefaults",
+      "Summary": "New Shape Defaults.",
+      "CompositeType": "OneAll",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        },
+        {
+          "QName": ":spidmax",
+          "PropertyName": "MaxShapeId",
+          "Type": "IntegerValue",
+          "PropertyComments": "Shape ID Optional Storage"
+        },
+        {
+          "QName": ":style",
+          "PropertyName": "Style",
+          "Type": "StringValue",
+          "PropertyComments": "style"
+        },
+        {
+          "QName": ":fill",
+          "PropertyName": "BeFilled",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Shape Fill Toggle"
+        },
+        {
+          "QName": ":fillcolor",
+          "PropertyName": "FillColor",
+          "Type": "StringValue",
+          "PropertyComments": "Default Fill Color"
+        },
+        {
+          "QName": ":stroke",
+          "PropertyName": "IsStroke",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Shape Stroke Toggle"
+        },
+        {
+          "QName": ":strokecolor",
+          "PropertyName": "StrokeColor",
+          "Type": "StringValue",
+          "PropertyComments": "Shape Stroke Color"
+        },
+        {
+          "QName": "o:allowincell",
+          "PropertyName": "AllowInCell",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Allow in Table Cell"
+        },
+        {
+          "QName": "o:allowoverlap",
+          "PropertyName": "AllowOverlap",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "allowoverlap"
+        },
+        {
+          "QName": "o:insetmode",
+          "PropertyName": "InsetMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.InsetMarginValues\u003E",
+          "PropertyComments": "insetmode"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "v:CT_Fill/v:fill",
+          "PropertyName": "Fill"
+        },
+        {
+          "Name": "v:CT_ImageData/v:imagedata",
+          "PropertyName": "ImageData"
+        },
+        {
+          "Name": "v:CT_Stroke/v:stroke",
+          "PropertyName": "Stroke"
+        },
+        {
+          "Name": "v:CT_Textbox/v:textbox",
+          "PropertyName": "TextBox"
+        },
+        {
+          "Name": "v:CT_Shadow/v:shadow",
+          "PropertyName": "Shadow"
+        },
+        {
+          "Name": "o:CT_Skew/o:skew",
+          "PropertyName": "Skew"
+        },
+        {
+          "Name": "o:CT_Extrusion/o:extrusion",
+          "PropertyName": "Extrusion"
+        },
+        {
+          "Name": "o:CT_Callout/o:callout",
+          "PropertyName": "Callout",
+          "PropertyComments": "Callout"
+        },
+        {
+          "Name": "o:CT_Lock/o:lock",
+          "PropertyName": "Lock",
+          "PropertyComments": "Shape Protections"
+        },
+        {
+          "Name": "o:CT_ColorMru/o:colormru",
+          "PropertyName": "ColorMostRecentlyUsed",
+          "PropertyComments": "Most Recently Used Colors"
+        },
+        {
+          "Name": "o:CT_ColorMenu/o:colormenu",
+          "PropertyName": "ColorMenu",
+          "PropertyComments": "UI Default Colors"
+        }
+      ],
+      "Particle": {
+        "Kind": "All",
+        "Occurs": [
+          {
+            "Max": 1
+          }
+        ],
+        "Items": [
+          {
+            "Name": "v:CT_Fill/v:fill",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "v:CT_ImageData/v:imagedata",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "v:CT_Stroke/v:stroke",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "v:CT_Textbox/v:textbox",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "v:CT_Shadow/v:shadow",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "o:CT_Skew/o:skew",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "o:CT_Extrusion/o:extrusion",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "o:CT_Callout/o:callout",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "o:CT_Lock/o:lock",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "o:CT_ColorMru/o:colormru",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "o:CT_ColorMenu/o:colormenu",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "o:CT_ShapeLayout/o:shapelayout",
+      "ClassName": "ShapeLayout",
+      "Summary": "Shape Layout Properties.",
+      "CompositeType": "OneAll",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "o:CT_IdMap/o:idmap",
+          "PropertyName": "ShapeIdMap",
+          "PropertyComments": "Shape ID Map"
+        },
+        {
+          "Name": "o:CT_RegroupTable/o:regrouptable",
+          "PropertyName": "RegroupTable",
+          "PropertyComments": "Shape Grouping History"
+        },
+        {
+          "Name": "o:CT_Rules/o:rules",
+          "PropertyName": "Rules",
+          "PropertyComments": "Rule Set"
+        }
+      ],
+      "Particle": {
+        "Kind": "All",
+        "Items": [
+          {
+            "Name": "o:CT_IdMap/o:idmap",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "o:CT_RegroupTable/o:regrouptable",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "o:CT_Rules/o:rules",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "o:CT_SignatureLine/o:signatureline",
+      "ClassName": "SignatureLine",
+      "Summary": "Digital Signature Line.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        },
+        {
+          "QName": ":issignatureline",
+          "PropertyName": "IsSignatureLine",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Signature Line Flag"
+        },
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "Unique ID",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":provid",
+          "PropertyName": "ProviderId",
+          "Type": "StringValue",
+          "PropertyComments": "Signature Provider ID",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":signinginstructionsset",
+          "PropertyName": "SigningInstructionsSet",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Use Signing Instructions Flag"
+        },
+        {
+          "QName": ":allowcomments",
+          "PropertyName": "AllowComments",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "User-specified Comments Flag"
+        },
+        {
+          "QName": ":showsigndate",
+          "PropertyName": "ShowSignDate",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Show Signed Date Flag"
+        },
+        {
+          "QName": "o:suggestedsigner",
+          "PropertyName": "SuggestedSigner",
+          "Type": "StringValue",
+          "PropertyComments": "Suggested Signer Line 1"
+        },
+        {
+          "QName": "o:suggestedsigner2",
+          "PropertyName": "SuggestedSigner2",
+          "Type": "StringValue",
+          "PropertyComments": "Suggested Signer Line 2"
+        },
+        {
+          "QName": "o:suggestedsigneremail",
+          "PropertyName": "SuggestedSignerEmail",
+          "Type": "StringValue",
+          "PropertyComments": "Suggested Signer E-mail Address"
+        },
+        {
+          "QName": ":signinginstructions",
+          "PropertyName": "SigningInstructions",
+          "Type": "StringValue",
+          "PropertyComments": "Instructions for Signing"
+        },
+        {
+          "QName": ":addlxml",
+          "PropertyName": "AdditionalXml",
+          "Type": "StringValue",
+          "PropertyComments": "Additional Signature Information"
+        },
+        {
+          "QName": ":sigprovurl",
+          "PropertyName": "SignatureProviderUrl",
+          "Type": "StringValue",
+          "PropertyComments": "Signature Provider Download URL"
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_Ink/o:ink",
+      "ClassName": "Ink",
+      "Summary": "Ink.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":i",
+          "PropertyName": "InkData",
+          "Type": "Base64BinaryValue",
+          "PropertyComments": "Ink Data"
+        },
+        {
+          "QName": ":annotation",
+          "PropertyName": "AnnotationFlag",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Annotation Flag"
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_Diagram/o:diagram",
+      "ClassName": "Diagram",
+      "Summary": "VML Diagram.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        },
+        {
+          "QName": ":dgmstyle",
+          "PropertyName": "Style",
+          "Type": "IntegerValue",
+          "PropertyComments": "Diagram Style Options"
+        },
+        {
+          "QName": ":autoformat",
+          "PropertyName": "AutoFormat",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Diagram Automatic Format"
+        },
+        {
+          "QName": ":reverse",
+          "PropertyName": "Reverse",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Diagram Reverse Direction"
+        },
+        {
+          "QName": ":autolayout",
+          "PropertyName": "AutoLayout",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Diagram Automatic Layout"
+        },
+        {
+          "QName": ":dgmscalex",
+          "PropertyName": "ScaleX",
+          "Type": "IntegerValue",
+          "PropertyComments": "Diagram Layout X Scale"
+        },
+        {
+          "QName": ":dgmscaley",
+          "PropertyName": "ScaleY",
+          "Type": "IntegerValue",
+          "PropertyComments": "Diagram Layout Y Scale"
+        },
+        {
+          "QName": ":dgmfontsize",
+          "PropertyName": "FontSize",
+          "Type": "IntegerValue",
+          "PropertyComments": "Diagram Font Size"
+        },
+        {
+          "QName": ":constrainbounds",
+          "PropertyName": "ConstrainBounds",
+          "Type": "StringValue",
+          "PropertyComments": "Diagram Layout Extents"
+        },
+        {
+          "QName": ":dgmbasetextscale",
+          "PropertyName": "BaseTextScale",
+          "Type": "IntegerValue",
+          "PropertyComments": "Diagram Base Font Size"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "o:CT_RelationTable/o:relationtable",
+          "PropertyName": "RelationTable",
+          "PropertyComments": "Diagram Relationship Table"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "o:CT_RelationTable/o:relationtable",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "o:CT_Skew/o:skew",
+      "ClassName": "Skew",
+      "Summary": "Skew Transform.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        },
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "Skew ID"
+        },
+        {
+          "QName": ":on",
+          "PropertyName": "On",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Skew Toggle"
+        },
+        {
+          "QName": ":offset",
+          "PropertyName": "Offset",
+          "Type": "StringValue",
+          "PropertyComments": "Skew Offset"
+        },
+        {
+          "QName": ":origin",
+          "PropertyName": "Origin",
+          "Type": "StringValue",
+          "PropertyComments": "Skew Origin"
+        },
+        {
+          "QName": ":matrix",
+          "PropertyName": "Matrix",
+          "Type": "StringValue",
+          "PropertyComments": "Skew Perspective Matrix"
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_Extrusion/o:extrusion",
+      "ClassName": "Extrusion",
+      "Summary": "3D Extrusion.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        },
+        {
+          "QName": ":on",
+          "PropertyName": "On",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Extrusion Toggle"
+        },
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ExtrusionValues\u003E",
+          "PropertyComments": "Extrusion Type"
+        },
+        {
+          "QName": ":render",
+          "PropertyName": "Render",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues\u003E",
+          "PropertyComments": "Extrusion Render Mode"
+        },
+        {
+          "QName": ":viewpointorigin",
+          "PropertyName": "ViewpointOrigin",
+          "Type": "StringValue",
+          "PropertyComments": "Extrusion Viewpoint Origin"
+        },
+        {
+          "QName": ":viewpoint",
+          "PropertyName": "Viewpoint",
+          "Type": "StringValue",
+          "PropertyComments": "Extrusion Viewpoint"
+        },
+        {
+          "QName": ":skewangle",
+          "PropertyName": "SkewAngle",
+          "Type": "SingleValue",
+          "PropertyComments": "Extrusion Skew Angle"
+        },
+        {
+          "QName": ":skewamt",
+          "PropertyName": "SkewAmount",
+          "Type": "StringValue",
+          "PropertyComments": "Extrusion Skew"
+        },
+        {
+          "QName": ":foredepth",
+          "PropertyName": "ForceDepth",
+          "Type": "StringValue",
+          "PropertyComments": "Forward Extrusion"
+        },
+        {
+          "QName": ":backdepth",
+          "PropertyName": "BackDepth",
+          "Type": "StringValue",
+          "PropertyComments": "Backward Extrusion Depth"
+        },
+        {
+          "QName": ":orientation",
+          "PropertyName": "Orientation",
+          "Type": "StringValue",
+          "PropertyComments": "Rotation Axis"
+        },
+        {
+          "QName": ":orientationangle",
+          "PropertyName": "OrientationAngle",
+          "Type": "SingleValue",
+          "PropertyComments": "Rotation Around Axis"
+        },
+        {
+          "QName": ":lockrotationcenter",
+          "PropertyName": "LockRotationCenter",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Rotation Toggle"
+        },
+        {
+          "QName": ":autorotationcenter",
+          "PropertyName": "AutoRotationCenter",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Center of Rotation Toggle"
+        },
+        {
+          "QName": ":rotationcenter",
+          "PropertyName": "RotationCenter",
+          "Type": "StringValue",
+          "PropertyComments": "Rotation Center"
+        },
+        {
+          "QName": ":rotationangle",
+          "PropertyName": "RotationAngle",
+          "Type": "StringValue",
+          "PropertyComments": "X-Y Rotation Angle"
+        },
+        {
+          "QName": ":color",
+          "PropertyName": "Color",
+          "Type": "StringValue",
+          "PropertyComments": "Extrusion Color"
+        },
+        {
+          "QName": ":shininess",
+          "PropertyName": "Shininess",
+          "Type": "SingleValue",
+          "PropertyComments": "Shininess"
+        },
+        {
+          "QName": ":specularity",
+          "PropertyName": "Specularity",
+          "Type": "StringValue",
+          "PropertyComments": "Specularity"
+        },
+        {
+          "QName": ":diffusity",
+          "PropertyName": "Diffusity",
+          "Type": "StringValue",
+          "PropertyComments": "Diffuse Reflection"
+        },
+        {
+          "QName": ":metal",
+          "PropertyName": "Metal",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Metallic Surface Toggle"
+        },
+        {
+          "QName": ":edge",
+          "PropertyName": "Edge",
+          "Type": "StringValue",
+          "PropertyComments": "Simulated Bevel"
+        },
+        {
+          "QName": ":facet",
+          "PropertyName": "Facet",
+          "Type": "StringValue",
+          "PropertyComments": "Faceting Quality"
+        },
+        {
+          "QName": ":lightface",
+          "PropertyName": "LightFace",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Shape Face Lighting Toggle"
+        },
+        {
+          "QName": ":brightness",
+          "PropertyName": "Brightness",
+          "Type": "StringValue",
+          "PropertyComments": "Brightness"
+        },
+        {
+          "QName": ":lightposition",
+          "PropertyName": "LightPosition",
+          "Type": "StringValue",
+          "PropertyComments": "Primary Light Position"
+        },
+        {
+          "QName": ":lightlevel",
+          "PropertyName": "LightLevel",
+          "Type": "StringValue",
+          "PropertyComments": "Primary Light Intensity"
+        },
+        {
+          "QName": ":lightharsh",
+          "PropertyName": "LightHarsh",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Primary Light Harshness Toggle"
+        },
+        {
+          "QName": ":lightposition2",
+          "PropertyName": "LightPosition2",
+          "Type": "StringValue",
+          "PropertyComments": "Secondary Light Position"
+        },
+        {
+          "QName": ":lightlevel2",
+          "PropertyName": "LightLevel2",
+          "Type": "StringValue",
+          "PropertyComments": "Secondary Light Intensity"
+        },
+        {
+          "QName": ":lightharsh2",
+          "PropertyName": "LightHarsh2",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Secondary Light Harshness Toggle"
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_Callout/o:callout",
+      "ClassName": "Callout",
+      "Summary": "Defines the Callout Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        },
+        {
+          "QName": ":on",
+          "PropertyName": "On",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Callout toggle"
+        },
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "StringValue",
+          "PropertyComments": "Callout type"
+        },
+        {
+          "QName": ":gap",
+          "PropertyName": "Gap",
+          "Type": "StringValue",
+          "PropertyComments": "Callout gap"
+        },
+        {
+          "QName": ":angle",
+          "PropertyName": "Angle",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.AngleValues\u003E",
+          "PropertyComments": "Callout angle"
+        },
+        {
+          "QName": ":dropauto",
+          "PropertyName": "DropAuto",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Callout automatic drop toggle"
+        },
+        {
+          "QName": ":drop",
+          "PropertyName": "Drop",
+          "Type": "StringValue",
+          "PropertyComments": "Callout drop position"
+        },
+        {
+          "QName": ":distance",
+          "PropertyName": "Distance",
+          "Type": "StringValue",
+          "PropertyComments": "Callout drop distance"
+        },
+        {
+          "QName": ":lengthspecified",
+          "PropertyName": "LengthSpecified",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Callout length toggle"
+        },
+        {
+          "QName": ":length",
+          "PropertyName": "Length",
+          "Type": "StringValue",
+          "PropertyComments": "Callout length"
+        },
+        {
+          "QName": ":accentbar",
+          "PropertyName": "AccentBar",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Callout accent bar toggle"
+        },
+        {
+          "QName": ":textborder",
+          "PropertyName": "TextBorder",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Callout text border toggle"
+        },
+        {
+          "QName": ":minusx",
+          "PropertyName": "MinusX",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Callout flip x"
+        },
+        {
+          "QName": ":minusy",
+          "PropertyName": "MinusY",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Callout flip y"
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_Lock/o:lock",
+      "ClassName": "Lock",
+      "Summary": "Defines the Lock Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        },
+        {
+          "QName": ":position",
+          "PropertyName": "Position",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Position Lock"
+        },
+        {
+          "QName": ":selection",
+          "PropertyName": "Selection",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Selection Lock"
+        },
+        {
+          "QName": ":grouping",
+          "PropertyName": "Grouping",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Grouping Lock"
+        },
+        {
+          "QName": ":ungrouping",
+          "PropertyName": "Ungrouping",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Ungrouping Lock"
+        },
+        {
+          "QName": ":rotation",
+          "PropertyName": "Rotation",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Rotation Lock"
+        },
+        {
+          "QName": ":cropping",
+          "PropertyName": "Cropping",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Cropping Lock"
+        },
+        {
+          "QName": ":verticies",
+          "PropertyName": "Verticies",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Vertices Lock"
+        },
+        {
+          "QName": ":adjusthandles",
+          "PropertyName": "AdjustHandles",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Handles Lock"
+        },
+        {
+          "QName": ":text",
+          "PropertyName": "TextLock",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Text Lock"
+        },
+        {
+          "QName": ":aspectratio",
+          "PropertyName": "AspectRatio",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Aspect Ratio Lock"
+        },
+        {
+          "QName": ":shapetype",
+          "PropertyName": "ShapeType",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "AutoShape Type Lock"
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_OLEObject/o:OLEObject",
+      "ClassName": "OleObject",
+      "Summary": "Embedded OLE Object.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":Type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.OleValues\u003E",
+          "PropertyComments": "OLE Object Type"
+        },
+        {
+          "QName": ":ProgID",
+          "PropertyName": "ProgId",
+          "Type": "StringValue",
+          "PropertyComments": "OLE Object Application"
+        },
+        {
+          "QName": ":ShapeID",
+          "PropertyName": "ShapeId",
+          "Type": "StringValue",
+          "PropertyComments": "OLE Object Shape"
+        },
+        {
+          "QName": ":DrawAspect",
+          "PropertyName": "DrawAspect",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues\u003E",
+          "PropertyComments": "OLE Object Representation"
+        },
+        {
+          "QName": ":ObjectID",
+          "PropertyName": "ObjectId",
+          "Type": "StringValue",
+          "PropertyComments": "OLE Object Unique ID"
+        },
+        {
+          "QName": "r:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "Relationship"
+        },
+        {
+          "QName": ":UpdateMode",
+          "PropertyName": "UpdateMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues\u003E",
+          "PropertyComments": "OLE Update Mode"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "o:ST_OLELinkType/o:LinkType",
+          "PropertyName": "LinkType",
+          "PropertyComments": "Embedded Object Alternate Image Request"
+        },
+        {
+          "Name": "o:ST_TrueFalseBlank/o:LockedField",
+          "PropertyName": "LockedField",
+          "PropertyComments": "Embedded Object Cannot Be Refreshed"
+        },
+        {
+          "Name": "xsd:string/o:FieldCodes",
+          "PropertyName": "FieldCodes",
+          "PropertyComments": "WordprocessingML Field Switches"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "o:ST_OLELinkType/o:LinkType",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "o:ST_TrueFalseBlank/o:LockedField",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xsd:string/o:FieldCodes",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "o:CT_Complex/o:complex",
+      "ClassName": "Complex",
+      "Summary": "Complex.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_StrokeChild/o:left",
+      "ClassName": "LeftStroke",
+      "Summary": "Text Box Left Stroke.",
+      "BaseClass": "StrokeChildType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "o:CT_StrokeChild/o:top",
+      "ClassName": "TopStroke",
+      "Summary": "Text Box Top Stroke.",
+      "BaseClass": "StrokeChildType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "o:CT_StrokeChild/o:right",
+      "ClassName": "RightStroke",
+      "Summary": "Text Box Right Stroke.",
+      "BaseClass": "StrokeChildType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "o:CT_StrokeChild/o:bottom",
+      "ClassName": "BottomStroke",
+      "Summary": "Text Box Bottom Stroke.",
+      "BaseClass": "StrokeChildType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "o:CT_StrokeChild/o:column",
+      "ClassName": "ColumnStroke",
+      "Summary": "Text Box Interior Stroke.",
+      "BaseClass": "StrokeChildType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "o:CT_StrokeChild/",
+      "ClassName": "StrokeChildType",
+      "Summary": "Defines the StrokeChildType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        },
+        {
+          "QName": ":on",
+          "PropertyName": "On",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Stroke Toggle"
+        },
+        {
+          "QName": ":weight",
+          "PropertyName": "Weight",
+          "Type": "StringValue",
+          "PropertyComments": "Stroke Weight"
+        },
+        {
+          "QName": ":color",
+          "PropertyName": "Color",
+          "Type": "StringValue",
+          "PropertyComments": "Stroke Color"
+        },
+        {
+          "QName": ":color2",
+          "PropertyName": "Color2",
+          "Type": "StringValue",
+          "PropertyComments": "Stroke Alternate Pattern Color"
+        },
+        {
+          "QName": ":opacity",
+          "PropertyName": "Opacity",
+          "Type": "StringValue",
+          "PropertyComments": "Stroke Opacity"
+        },
+        {
+          "QName": ":linestyle",
+          "PropertyName": "LineStyle",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.StrokeLineStyleValues\u003E",
+          "PropertyComments": "Stroke Line Style"
+        },
+        {
+          "QName": ":miterlimit",
+          "PropertyName": "MiterLimit",
+          "Type": "DecimalValue",
+          "PropertyComments": "Miter Joint Limit"
+        },
+        {
+          "QName": ":joinstyle",
+          "PropertyName": "JoinStyle",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.StrokeJoinStyleValues\u003E",
+          "PropertyComments": "Line End Join Style)"
+        },
+        {
+          "QName": ":endcap",
+          "PropertyName": "EndCap",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.StrokeEndCapValues\u003E",
+          "PropertyComments": "Line End Cap"
+        },
+        {
+          "QName": ":dashstyle",
+          "PropertyName": "DashStyle",
+          "Type": "StringValue",
+          "PropertyComments": "Stroke Dash Pattern"
+        },
+        {
+          "QName": ":insetpen",
+          "PropertyName": "InsetPen",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Inset Border From Path"
+        },
+        {
+          "QName": ":filltype",
+          "PropertyName": "FillType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.FillTypeValues\u003E",
+          "PropertyComments": "Stroke Image Style"
+        },
+        {
+          "QName": ":src",
+          "PropertyName": "Source",
+          "Type": "StringValue",
+          "PropertyComments": "Stroke Image Location"
+        },
+        {
+          "QName": ":imageaspect",
+          "PropertyName": "ImageAspect",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ImageAspectValues\u003E",
+          "PropertyComments": "Stroke Image Aspect Ratio"
+        },
+        {
+          "QName": ":imagesize",
+          "PropertyName": "ImageSize",
+          "Type": "StringValue",
+          "PropertyComments": "Stroke Image Size"
+        },
+        {
+          "QName": ":imagealignshape",
+          "PropertyName": "ImageAlignShape",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Stoke Image Alignment"
+        },
+        {
+          "QName": ":startarrow",
+          "PropertyName": "StartArrow",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.StrokeArrowValues\u003E",
+          "PropertyComments": "Line Start Arrowhead"
+        },
+        {
+          "QName": ":startarrowwidth",
+          "PropertyName": "StartArrowWidth",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.StrokeArrowWidthValues\u003E",
+          "PropertyComments": "Line Start Arrowhead Width"
+        },
+        {
+          "QName": ":startarrowlength",
+          "PropertyName": "StartArrowLength",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.StrokeArrowLengthValues\u003E",
+          "PropertyComments": "Line Start Arrowhead Length"
+        },
+        {
+          "QName": ":endarrow",
+          "PropertyName": "EndArrow",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.StrokeArrowValues\u003E",
+          "PropertyComments": "Line End Arrowhead"
+        },
+        {
+          "QName": ":endarrowwidth",
+          "PropertyName": "EndArrowWidth",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.StrokeArrowWidthValues\u003E",
+          "PropertyComments": "Line End Arrowhead Width"
+        },
+        {
+          "QName": ":endarrowlength",
+          "PropertyName": "EndArrowLength",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.StrokeArrowLengthValues\u003E",
+          "PropertyComments": "Line End Arrowhead Length"
+        },
+        {
+          "QName": "o:href",
+          "PropertyName": "Href",
+          "Type": "StringValue",
+          "PropertyComments": "Original Image Reference"
+        },
+        {
+          "QName": "o:althref",
+          "PropertyName": "AlternateImageReference",
+          "Type": "StringValue",
+          "PropertyComments": "Alternate Image Reference"
+        },
+        {
+          "QName": "o:title",
+          "PropertyName": "Title",
+          "Type": "StringValue",
+          "PropertyComments": "Stroke Title"
+        },
+        {
+          "QName": "o:forcedash",
+          "PropertyName": "ForceDash",
+          "Type": "TrueFalseValue",
+          "PropertyComments": "Force Dashed Outline"
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_ClipPath/o:clippath",
+      "ClassName": "ClipPath",
+      "Summary": "Shape Clipping Path.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "o:v",
+          "PropertyName": "Value",
+          "Type": "StringValue",
+          "PropertyComments": "Path Definition",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_Fill/o:fill",
+      "ClassName": "FillExtendedProperties",
+      "Summary": "Shape Fill Extended Properties.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        },
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.FillValues\u003E",
+          "PropertyComments": "Fill Type"
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_IdMap/o:idmap",
+      "ClassName": "ShapeIdMap",
+      "Summary": "Shape ID Map.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        },
+        {
+          "QName": ":data",
+          "PropertyName": "Data",
+          "Type": "StringValue",
+          "PropertyComments": "Shape IDs"
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_RegroupTable/o:regrouptable",
+      "ClassName": "RegroupTable",
+      "Summary": "Shape Grouping History.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "o:CT_Entry/o:entry"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "o:CT_Entry/o:entry",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "o:CT_Rules/o:rules",
+      "ClassName": "Rules",
+      "Summary": "Rule Set.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "o:CT_R/o:r"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "o:CT_R/o:r",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "o:CT_Entry/o:entry",
+      "ClassName": "Entry",
+      "Summary": "Regroup Entry.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":new",
+          "PropertyName": "New",
+          "Type": "Int32Value",
+          "PropertyComments": "New Group ID"
+        },
+        {
+          "QName": ":old",
+          "PropertyName": "Old",
+          "Type": "Int32Value",
+          "PropertyComments": "Old Group ID"
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_R/o:r",
+      "ClassName": "Rule",
+      "Summary": "Rule.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "Rule ID",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.RuleValues\u003E",
+          "PropertyComments": "Rule Type"
+        },
+        {
+          "QName": ":how",
+          "PropertyName": "How",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.AlignmentValues\u003E",
+          "PropertyComments": "Alignment Rule Type"
+        },
+        {
+          "QName": ":idref",
+          "PropertyName": "ShapeReference",
+          "Type": "StringValue",
+          "PropertyComments": "Rule Shape Reference",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "o:CT_Proxy/o:proxy"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "o:CT_Proxy/o:proxy",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "o:CT_RelationTable/o:relationtable",
+      "ClassName": "RelationTable",
+      "Summary": "Diagram Relationship Table.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "o:CT_Relation/o:rel"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "o:CT_Relation/o:rel",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "o:CT_Relation/o:rel",
+      "ClassName": "Relation",
+      "Summary": "Diagram Relationship.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        },
+        {
+          "QName": ":idsrc",
+          "PropertyName": "SourceId",
+          "Type": "StringValue",
+          "PropertyComments": "Diagram Relationship Source Shape",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":iddest",
+          "PropertyName": "DestinationId",
+          "Type": "StringValue",
+          "PropertyComments": "Diagram Relationship Destination Shape",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":idcntr",
+          "PropertyName": "CenterShapeId",
+          "Type": "StringValue",
+          "PropertyComments": "Diagram Relationship Center Shape",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "o:ST_OLELinkType/o:LinkType",
+      "ClassName": "LinkType",
+      "Summary": "Embedded Object Alternate Image Request.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "o:ST_OLELinkType",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "o:ST_TrueFalseBlank/o:LockedField",
+      "ClassName": "LockedField",
+      "Summary": "Embedded Object Cannot Be Refreshed.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "o:ST_TrueFalseBlank",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:string/o:FieldCodes",
+      "ClassName": "FieldCodes",
+      "Summary": "WordprocessingML Field Switches.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true
+    },
+    {
+      "Name": "o:CT_Proxy/o:proxy",
+      "ClassName": "Proxy",
+      "Summary": "Shape Reference.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":start",
+          "PropertyName": "Start",
+          "Type": "TrueFalseBlankValue",
+          "PropertyComments": "Start Point Connection Flag"
+        },
+        {
+          "QName": ":end",
+          "PropertyName": "End",
+          "Type": "TrueFalseBlankValue",
+          "PropertyComments": "End Point Connection Flag"
+        },
+        {
+          "QName": ":idref",
+          "PropertyName": "ShapeReference",
+          "Type": "StringValue",
+          "PropertyComments": "Proxy Shape Reference",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":connectloc",
+          "PropertyName": "ConnectionLocation",
+          "Type": "Int32Value",
+          "PropertyComments": "Connection Location",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_ColorMru/o:colormru",
+      "ClassName": "ColorMostRecentlyUsed",
+      "Summary": "Most Recently Used Colors.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        },
+        {
+          "QName": ":colors",
+          "PropertyName": "Colors",
+          "Type": "StringValue",
+          "PropertyComments": "Recent colors"
+        }
+      ]
+    },
+    {
+      "Name": "o:CT_ColorMenu/o:colormenu",
+      "ClassName": "ColorMenu",
+      "Summary": "UI Default Colors.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "v:ext",
+          "PropertyName": "Extension",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues\u003E",
+          "PropertyComments": "VML Extension Handling Behavior"
+        },
+        {
+          "QName": ":strokecolor",
+          "PropertyName": "StrokeColor",
+          "Type": "StringValue",
+          "PropertyComments": "Default stroke color"
+        },
+        {
+          "QName": ":fillcolor",
+          "PropertyName": "FillColor",
+          "Type": "StringValue",
+          "PropertyComments": "Default fill color"
+        },
+        {
+          "QName": ":shadowcolor",
+          "PropertyName": "ShadowColor",
+          "Type": "StringValue",
+          "PropertyComments": "Default shadow color"
+        },
+        {
+          "QName": ":extrusioncolor",
+          "PropertyName": "ExtrusionColor",
+          "Type": "StringValue",
+          "PropertyComments": "Default extrusion color"
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "o:ST_How",
+      "Name": "AlignmentValues",
+      "Summary": "Alignment Type",
+      "Facets": [
+        {
+          "Comments": "Top Alignment",
+          "Value": "top",
+          "Name": "Top"
+        },
+        {
+          "Comments": "Middle Alignment",
+          "Value": "middle",
+          "Name": "Middle"
+        },
+        {
+          "Comments": "Bottom Alignment",
+          "Value": "bottom",
+          "Name": "Bottom"
+        },
+        {
+          "Comments": "Left Alignment",
+          "Value": "left",
+          "Name": "Left"
+        },
+        {
+          "Comments": "Center Alignment",
+          "Value": "center",
+          "Name": "Center"
+        },
+        {
+          "Comments": "Right Alignment",
+          "Value": "right",
+          "Name": "Right"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_ScreenSize",
+      "Name": "ScreenSizeValues",
+      "Summary": "Screen Sizes Type",
+      "Facets": [
+        {
+          "Comments": "544x376 pixels",
+          "Value": "544,376",
+          "Name": "Sz544x376"
+        },
+        {
+          "Comments": "640x480 pixels",
+          "Value": "640,480",
+          "Name": "Sz640x480"
+        },
+        {
+          "Comments": "720x512 pixels",
+          "Value": "720,512",
+          "Name": "Sz720x512"
+        },
+        {
+          "Comments": "800x600 pixels",
+          "Value": "800,600",
+          "Name": "Sz800x600"
+        },
+        {
+          "Comments": "1024x768 pixels",
+          "Value": "1024,768",
+          "Name": "Sz1024x768"
+        },
+        {
+          "Comments": "1152x862 pixels",
+          "Value": "1152,862",
+          "Name": "Sz1152x862"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_InsetMode",
+      "Name": "InsetMarginValues",
+      "Summary": "Inset Margin Type",
+      "Facets": [
+        {
+          "Comments": "Automatic Margins",
+          "Value": "auto",
+          "Name": "Auto"
+        },
+        {
+          "Comments": "Custom Margins",
+          "Value": "custom",
+          "Name": "Custom"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_ColorMode",
+      "Name": "ColorModeValues",
+      "Summary": "Extrusion Color Types",
+      "Facets": [
+        {
+          "Comments": "Use Shape Fill Color",
+          "Value": "auto",
+          "Name": "Auto"
+        },
+        {
+          "Comments": "Use Custom Color",
+          "Value": "custom",
+          "Name": "Custom"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_ExtrusionType",
+      "Name": "ExtrusionValues",
+      "Summary": "Extrusion Type",
+      "Facets": [
+        {
+          "Comments": "Perspective Projection",
+          "Value": "perspective",
+          "Name": "Perspective"
+        },
+        {
+          "Comments": "Parallel Projection",
+          "Value": "parallel",
+          "Name": "Parallel"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_ExtrusionRender",
+      "Name": "ExtrusionRenderValues",
+      "Summary": "Extrusion Rendering Types",
+      "Facets": [
+        {
+          "Comments": "Solid",
+          "Value": "solid",
+          "Name": "Solid"
+        },
+        {
+          "Comments": "Wireframe",
+          "Value": "wireFrame",
+          "Name": "WireFrame"
+        },
+        {
+          "Comments": "Bounding Cube",
+          "Value": "boundingCube",
+          "Name": "BoundingCube"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_ExtrusionPlane",
+      "Name": "ExtrusionPlaneValues",
+      "Summary": "Extrusion Planes",
+      "Facets": [
+        {
+          "Comments": "XY Plane",
+          "Value": "XY",
+          "Name": "XY"
+        },
+        {
+          "Comments": "ZX Plane",
+          "Value": "ZX",
+          "Name": "ZX"
+        },
+        {
+          "Comments": "YZ Plane",
+          "Value": "YZ",
+          "Name": "YZ"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_Angle",
+      "Name": "AngleValues",
+      "Summary": "Callout Angles",
+      "Facets": [
+        {
+          "Comments": "Any Angle",
+          "Value": "any",
+          "Name": "Any"
+        },
+        {
+          "Comments": "30 degrees",
+          "Value": "30",
+          "Name": "Degree30"
+        },
+        {
+          "Comments": "45 degrees",
+          "Value": "45",
+          "Name": "Degree45"
+        },
+        {
+          "Comments": "60 degrees",
+          "Value": "60",
+          "Name": "Degree60"
+        },
+        {
+          "Comments": "90 degrees",
+          "Value": "90",
+          "Name": "Degree90"
+        },
+        {
+          "Comments": "Automatic Angle",
+          "Value": "auto",
+          "Name": "Auto"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_CalloutPlacement",
+      "Name": "CalloutPlacementValues",
+      "Summary": "Callout Placement",
+      "Facets": [
+        {
+          "Comments": "Top placement",
+          "Value": "top",
+          "Name": "Top"
+        },
+        {
+          "Comments": "Center placement",
+          "Value": "center",
+          "Name": "Center"
+        },
+        {
+          "Comments": "Bottom placement",
+          "Value": "bottom",
+          "Name": "Bottom"
+        },
+        {
+          "Comments": "User-defined placement",
+          "Value": "user",
+          "Name": "User"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_ConnectorType",
+      "Name": "ConnectorValues",
+      "Summary": "Connector Type",
+      "Facets": [
+        {
+          "Comments": "No Connector",
+          "Value": "none",
+          "Name": "None"
+        },
+        {
+          "Comments": "Straight Connector",
+          "Value": "straight",
+          "Name": "Straight"
+        },
+        {
+          "Comments": "Elbow Connector",
+          "Value": "elbow",
+          "Name": "Elbow"
+        },
+        {
+          "Comments": "Curved Connector",
+          "Value": "curved",
+          "Name": "Curved"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_HrAlign",
+      "Name": "HorizontalRuleAlignmentValues",
+      "Summary": "Alignment Type",
+      "Facets": [
+        {
+          "Comments": "Left Alignment",
+          "Value": "left",
+          "Name": "Left"
+        },
+        {
+          "Comments": "Right Alignment",
+          "Value": "right",
+          "Name": "Right"
+        },
+        {
+          "Comments": "Center Alignment",
+          "Value": "center",
+          "Name": "Center"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_ConnectType",
+      "Name": "ConnectValues",
+      "Summary": "Connection Locations Type",
+      "Facets": [
+        {
+          "Comments": "No",
+          "Value": "none",
+          "Name": "None"
+        },
+        {
+          "Comments": "Four Connections",
+          "Value": "rect",
+          "Name": "Rectangle"
+        },
+        {
+          "Comments": "Edit Point Connections",
+          "Value": "segments",
+          "Name": "Segments"
+        },
+        {
+          "Comments": "Custom Connections",
+          "Value": "custom",
+          "Name": "Custom"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_OLELinkType",
+      "Name": "OleLinkValues",
+      "Summary": "Embedded Object Alternate Image Request Types",
+      "Facets": [
+        {
+          "Comments": "Other Image",
+          "Value": "Picture",
+          "Name": "Picture"
+        },
+        {
+          "Comments": "Bitmap Image",
+          "Value": "Bitmap",
+          "Name": "Bitmap"
+        },
+        {
+          "Comments": "Enhanced Metafile Image",
+          "Value": "EnhancedMetaFile",
+          "Name": "EnhancedMetaFile"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_OLEType",
+      "Name": "OleValues",
+      "Summary": "OLE Connection Type",
+      "Facets": [
+        {
+          "Comments": "Embedded Object",
+          "Value": "Embed",
+          "Name": "Embed"
+        },
+        {
+          "Comments": "Linked Object",
+          "Value": "Link",
+          "Name": "Link"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_OLEDrawAspect",
+      "Name": "OleDrawAspectValues",
+      "Summary": "OLE Object Representations",
+      "Facets": [
+        {
+          "Comments": "Snapshot",
+          "Value": "Content",
+          "Name": "Content"
+        },
+        {
+          "Comments": "Icon",
+          "Value": "Icon",
+          "Name": "Icon"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_OLEUpdateMode",
+      "Name": "OleUpdateModeValues",
+      "Summary": "OLE Update Method Type",
+      "Facets": [
+        {
+          "Comments": "Server Application Update",
+          "Value": "Always",
+          "Name": "Always"
+        },
+        {
+          "Comments": "User Update",
+          "Value": "OnCall",
+          "Name": "OnCall"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_FillType",
+      "Name": "FillValues",
+      "Summary": "Shape Fill Type",
+      "Facets": [
+        {
+          "Comments": "Centered Radial Gradient",
+          "Value": "gradientCenter",
+          "Name": "GradientCenter"
+        },
+        {
+          "Comments": "Solid Fill",
+          "Value": "solid",
+          "Name": "Solid"
+        },
+        {
+          "Comments": "Image Pattern",
+          "Value": "pattern",
+          "Name": "Pattern"
+        },
+        {
+          "Comments": "Tiled Image",
+          "Value": "tile",
+          "Name": "Tile"
+        },
+        {
+          "Comments": "Stretch Image to Fit",
+          "Value": "frame",
+          "Name": "Frame"
+        },
+        {
+          "Comments": "Unscaled Gradient",
+          "Value": "gradientUnscaled",
+          "Name": "GradientUnscaled"
+        },
+        {
+          "Comments": "Radial Gradient",
+          "Value": "gradientRadial",
+          "Name": "GradientRadial"
+        },
+        {
+          "Comments": "Linear Gradient",
+          "Value": "gradient",
+          "Name": "Gradient"
+        },
+        {
+          "Comments": "Use Background Fill",
+          "Value": "background",
+          "Name": "Background"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_RType",
+      "Name": "RuleValues",
+      "Summary": "Rule Type",
+      "Facets": [
+        {
+          "Comments": "Arc Rule",
+          "Value": "arc",
+          "Name": "Arc"
+        },
+        {
+          "Comments": "Callout Rule",
+          "Value": "callout",
+          "Name": "Callout"
+        },
+        {
+          "Comments": "Connector Rule",
+          "Value": "connector",
+          "Name": "Connector"
+        }
+      ]
+    },
+    {
+      "Type": "o:ST_BWMode",
+      "Name": "BlackAndWhiteModeValues",
+      "Summary": "Black And White Modes",
+      "Facets": [
+        {
+          "Comments": "Color",
+          "Value": "color",
+          "Name": "Color"
+        },
+        {
+          "Comments": "Automatic",
+          "Value": "auto",
+          "Name": "Auto"
+        },
+        {
+          "Comments": "Grayscale",
+          "Value": "grayScale",
+          "Name": "GrayScale"
+        },
+        {
+          "Comments": "Light grayscale",
+          "Value": "lightGrayScale",
+          "Name": "LightGrayScale"
+        },
+        {
+          "Comments": "Inverse Grayscale",
+          "Value": "inverseGray",
+          "Name": "InverseGray"
+        },
+        {
+          "Comments": "Gray Outlines",
+          "Value": "grayOutline",
+          "Name": "GrayOutline"
+        },
+        {
+          "Comments": "Black And White",
+          "Value": "highContrast",
+          "Name": "HighContrast"
+        },
+        {
+          "Comments": "Black",
+          "Value": "black",
+          "Name": "Black"
+        },
+        {
+          "Comments": "White",
+          "Value": "white",
+          "Name": "White"
+        },
+        {
+          "Comments": "Do Not Show",
+          "Value": "undrawn",
+          "Name": "Undrawn"
+        },
+        {
+          "Comments": "Black Text And Lines",
+          "Value": "blackTextAndLines",
+          "Name": "BlackTextAndLines"
+        }
+      ]
+    }
+  ]
+}

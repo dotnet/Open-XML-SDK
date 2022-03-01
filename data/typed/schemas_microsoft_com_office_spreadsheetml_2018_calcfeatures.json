@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "xcalcf:CT_CalcFeatures/xcalcf:calcFeatures",
+    "ClassName": "CalcFeatures"
+  },
+  {
+    "Name": "xcalcf:CT_CalcFeature/xcalcf:feature",
+    "ClassName": "CalcFeature"
+  }
+]

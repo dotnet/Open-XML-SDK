@@ -1,0 +1,13 @@
+{
+  "Root": "xltc:CT_ThreadedComments",
+  "Name": "WorksheetThreadedCommentsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.threadedcomments\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment",
+  "Target": "threadedcomment",
+  "RootElement": "ThreadedComments",
+  "Paths": {
+    "General": "../threadedcomments"
+  },
+  "Version": "Office2019"
+}

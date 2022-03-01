@@ -1,0 +1,72 @@
+{
+  "Root": "xdr:CT_Drawing",
+  "Name": "DrawingsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.drawing\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing",
+  "Target": "drawing",
+  "RootElement": "wsDr",
+  "Paths": {
+    "General": "../drawings"
+  },
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ChartParts",
+      "Name": "ChartPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ExtendedChartParts",
+      "Name": "ExtendedChartPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramColorsParts",
+      "Name": "DiagramColorsPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramDataParts",
+      "Name": "DiagramDataPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramPersistLayoutParts",
+      "Name": "DiagramPersistLayoutPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramLayoutDefinitionParts",
+      "Name": "DiagramLayoutDefinitionPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramStyleParts",
+      "Name": "DiagramStylePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "CustomXmlParts",
+      "Name": "CustomXmlPart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "WebExtensionParts",
+      "Name": "WebExtensionPart",
+      "HasFixedContent": true
+    }
+  ]
+}

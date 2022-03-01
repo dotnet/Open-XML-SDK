@@ -1,0 +1,196 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/2006/activeX",
+  "Types": [
+    {
+      "Name": "ax:CT_Ocx/ax:ocx",
+      "ClassName": "ActiveXControlData",
+      "Summary": "Defines the ActiveXControlData Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "ax:classid",
+          "PropertyName": "ActiveXControlClassId",
+          "Type": "StringValue",
+          "PropertyComments": "classid",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": "ax:license",
+          "PropertyName": "License",
+          "Type": "StringValue",
+          "PropertyComments": "license"
+        },
+        {
+          "QName": "r:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        },
+        {
+          "QName": "ax:persistence",
+          "PropertyName": "Persistence",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.ActiveX.PersistenceValues\u003E",
+          "PropertyComments": "persistence",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "ax:CT_OcxPr/ax:ocxPr"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "ax:CT_OcxPr/ax:ocxPr",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "ax:CT_OcxPr/ax:ocxPr",
+      "ClassName": "ActiveXObjectProperty",
+      "Summary": "Defines the ActiveXObjectProperty Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "ax:name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": "ax:value",
+          "PropertyName": "Value",
+          "Type": "StringValue",
+          "PropertyComments": "value"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "ax:CT_Font/ax:font",
+          "PropertyName": "SharedComFont"
+        },
+        {
+          "Name": "ax:CT_Picture/ax:picture",
+          "PropertyName": "SharedComPicture"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "ax:CT_Font/ax:font",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ]
+              },
+              {
+                "Name": "ax:CT_Picture/ax:picture",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "ax:CT_Font/ax:font",
+      "ClassName": "SharedComFont",
+      "Summary": "Defines the SharedComFont Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "ax:persistence",
+          "PropertyName": "Persistence",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.ActiveX.PersistenceValues\u003E",
+          "PropertyComments": "persistence"
+        },
+        {
+          "QName": "r:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "ax:CT_OcxPr/ax:ocxPr"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "ax:CT_OcxPr/ax:ocxPr",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "ax:CT_Picture/ax:picture",
+      "ClassName": "SharedComPicture",
+      "Summary": "Defines the SharedComPicture Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "ax:ST_Persistence",
+      "Name": "PersistenceValues",
+      "Facets": [
+        {
+          "Value": "persistPropertyBag"
+        },
+        {
+          "Value": "persistStream"
+        },
+        {
+          "Value": "persistStreamInit"
+        },
+        {
+          "Value": "persistStorage"
+        }
+      ]
+    }
+  ]
+}

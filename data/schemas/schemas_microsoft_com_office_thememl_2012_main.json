@@ -1,0 +1,295 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/thememl/2012/main",
+  "Types": [
+    {
+      "Name": "thm15:CT_ThemeFamily/thm15:themeFamily",
+      "ClassName": "ThemeFamily",
+      "Summary": "Defines the ThemeFamily Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":vid",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "vid",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/thm15:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/thm15:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/thm15:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "thm15:CT_ThemeVariant/thm15:themeVariant",
+      "ClassName": "ThemeVariant",
+      "Summary": "Defines the ThemeVariant Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":vid",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "vid",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":cx",
+          "PropertyName": "X",
+          "Type": "Int64Value",
+          "Version": "Office2013",
+          "PropertyComments": "cx",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":cy",
+          "PropertyName": "Y",
+          "Type": "Int64Value",
+          "Version": "Office2013",
+          "PropertyComments": "cy",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "r:id",
+          "Type": "StringValue",
+          "Version": "Office2013",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/thm15:extLst",
+          "PropertyName": "OfficeArtExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/thm15:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "thm15:CT_ThemeVariantList/thm15:themeVariantLst",
+      "ClassName": "ThemeVariantList",
+      "Summary": "Defines the ThemeVariantList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2013",
+      "Children": [
+        {
+          "Name": "thm15:CT_ThemeVariant/thm15:themeVariant"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "thm15:CT_ThemeVariant/thm15:themeVariant",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2013"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "a:CT_BackgroundFormatting/wpc:bg",
+    "ClassName": "BackgroundFormatting"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/wpc:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "wpg:CT_GraphicFrame/wpc:graphicFrame",
+    "ClassName": "GraphicFrameType"
+  },
+  {
+    "Name": "a:CT_WholeE2oFormatting/wpc:whole",
+    "ClassName": "WholeFormatting"
+  },
+  {
+    "Name": "wpc:CT_WordprocessingCanvas/wpc:wpc",
+    "ClassName": "WordprocessingCanvas"
+  }
+]

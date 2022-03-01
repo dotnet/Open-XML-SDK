@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "cdip:CT_CustomPropertyEditor/cdip:customPropertyEditor",
+    "ClassName": "CustomPropertyEditor"
+  },
+  {
+    "Name": "cdip:CT_CustomPropertyEditors/cdip:customPropertyEditors",
+    "ClassName": "CustomPropertyEditors"
+  },
+  {
+    "Name": "xsd:anyURI/cdip:defaultPropertyEditorNamespace",
+    "ClassName": "DefaultPropertyEditorNamespace"
+  },
+  {
+    "Name": "xsd:boolean/cdip:showOnOpen",
+    "ClassName": "ShowOnOpen"
+  },
+  {
+    "Name": "xsd:anyURI/cdip:XMLNamespace",
+    "ClassName": "PropertyEditorNamespace"
+  },
+  {
+    "Name": "xsd:string/cdip:XSNLocation",
+    "ClassName": "XsnFileLocation"
+  }
+]

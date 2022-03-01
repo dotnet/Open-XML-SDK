@@ -1,0 +1,33 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2016/pivotdefaultlayout",
+  "Types": [
+    {
+      "Name": "xpdl:CT_PivotTableDefinition16/xpdl:pivotTableDefinition16",
+      "ClassName": "PivotTableDefinition16",
+      "Summary": "Defines the PivotTableDefinition16 Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":EnabledSubtotalsDefault",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "EnabledSubtotalsDefault"
+        },
+        {
+          "QName": ":SubtotalsOnTopDefault",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "SubtotalsOnTopDefault"
+        },
+        {
+          "QName": ":InsertBlankRowDefault",
+          "Type": "BooleanValue",
+          "Version": "Office2019",
+          "PropertyComments": "InsertBlankRowDefault"
+        }
+      ]
+    }
+  ]
+}

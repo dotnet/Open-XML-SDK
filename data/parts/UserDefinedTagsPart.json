@@ -1,0 +1,12 @@
+{
+  "Root": "p:CT_TagList",
+  "Name": "UserDefinedTagsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
+  "Target": "tag",
+  "RootElement": "tagLst",
+  "Paths": {
+    "General": "tags"
+  }
+}

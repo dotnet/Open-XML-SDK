@@ -1,0 +1,96 @@
+{
+  "Root": "w16cid:CT_CommentsIds",
+  "Name": "WordprocessingCommentsIdsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsIds\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2016/09/relationships/commentsIds",
+  "Target": "commentsIds",
+  "RootElement": "commentsIds",
+  "Paths": {
+    "General": "."
+  },
+  "Version": "Office2019",
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "AlternativeFormatImportParts",
+      "Name": "AlternativeFormatImportPart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ChartParts",
+      "Name": "ChartPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ExtendedChartParts",
+      "Name": "ExtendedChartPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramColorsParts",
+      "Name": "DiagramColorsPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramDataParts",
+      "Name": "DiagramDataPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramPersistLayoutParts",
+      "Name": "DiagramPersistLayoutPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramLayoutDefinitionParts",
+      "Name": "DiagramLayoutDefinitionPart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "DiagramStyleParts",
+      "Name": "DiagramStylePart",
+      "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedControlPersistenceParts",
+      "Name": "EmbeddedControlPersistencePart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedObjectParts",
+      "Name": "EmbeddedObjectPart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "EmbeddedPackageParts",
+      "Name": "EmbeddedPackagePart",
+      "IsSpecialEmbeddedPart": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "ImageParts",
+      "Name": "ImagePart"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "IsDataPartReference": true,
+      "ApiName": "VideoReferenceRelationships",
+      "Name": "VideoReferenceRelationship"
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "Model3DReferenceRelationshipParts",
+      "Name": "Model3DReferenceRelationshipPart",
+      "HasFixedContent": true
+    }
+  ]
+}

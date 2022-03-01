@@ -1,0 +1,10 @@
+{
+  "Name": "CustomPropertyPart",
+  "Base": "OpenXmlPart",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty",
+  "Target": "CustomProperty",
+  "Extension": ".bin",
+  "Paths": {
+    "General": "."
+  }
+}

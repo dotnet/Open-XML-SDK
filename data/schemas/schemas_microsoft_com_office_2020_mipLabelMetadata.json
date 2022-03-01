@@ -1,0 +1,210 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/2020/mipLabelMetadata",
+  "Types": [
+    {
+      "Name": "clbl:CT_ClassificationLabelList/clbl:labelList",
+      "ClassName": "ClassificationLabelList",
+      "Summary": "Defines the ClassificationLabelList Class.",
+      "Part": "LabelInfoPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "clbl:CT_ClassificationLabel/clbl:label"
+        },
+        {
+          "Name": "clbl:CT_ClassificationExtensionList/clbl:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "clbl:CT_ClassificationLabel/clbl:label",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "clbl:CT_ClassificationExtensionList/clbl:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "clbl:CT_ClassificationExtension/clbl:ext",
+      "ClassName": "ClassificationExtension",
+      "Summary": "Defines the ClassificationExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "uri",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "clbl:CT_ClassificationLabel/clbl:label",
+      "ClassName": "ClassificationLabel",
+      "Summary": "Defines the ClassificationLabel Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":enabled",
+          "Type": "BooleanValue",
+          "Version": "Office2021",
+          "PropertyComments": "enabled",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":setDate",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "setDate"
+        },
+        {
+          "QName": ":method",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "method",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "name"
+        },
+        {
+          "QName": ":siteId",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "siteId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":actionId",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "actionId"
+        },
+        {
+          "QName": ":contentBits",
+          "Type": "UInt32Value",
+          "Version": "Office2021",
+          "PropertyComments": "contentBits"
+        },
+        {
+          "QName": ":removed",
+          "Type": "BooleanValue",
+          "Version": "Office2021",
+          "PropertyComments": "removed",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "clbl:CT_ClassificationExtensionList/clbl:extLst",
+      "ClassName": "ClassificationExtensionList",
+      "Summary": "Defines the ClassificationExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "clbl:CT_ClassificationExtension/clbl:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "clbl:CT_ClassificationExtension/clbl:ext",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    }
+  ]
+}

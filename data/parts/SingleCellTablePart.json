@@ -1,0 +1,12 @@
+{
+  "Root": "x:CT_SingleXmlCells",
+  "Name": "SingleCellTablePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.tableSingleCells\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells",
+  "Target": "tableSingleCells",
+  "RootElement": "singleXmlCells",
+  "Paths": {
+    "General": "../tables"
+  }
+}

@@ -1,0 +1,2894 @@
+{
+  "TargetNamespace": "http://www.w3.org/2003/InkML",
+  "Types": [
+    {
+      "Name": "inkml:CT_Ink/inkml:ink",
+      "ClassName": "Ink",
+      "Summary": "Defines the Ink Class.",
+      "BaseClass": "OpenXmlPartRootElement",
+      "Attributes": [
+        {
+          "QName": ":documentID",
+          "PropertyName": "DocumentId",
+          "Type": "StringValue",
+          "PropertyComments": "documentID",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "inkml:CT_Annotation/inkml:annotation"
+        },
+        {
+          "Name": "inkml:CT_AnnotationXML/inkml:annotationXML"
+        },
+        {
+          "Name": "inkml:CT_Definitions/inkml:definitions"
+        },
+        {
+          "Name": "inkml:CT_Context/inkml:context"
+        },
+        {
+          "Name": "inkml:CT_Trace/inkml:trace"
+        },
+        {
+          "Name": "inkml:CT_TraceGroup/inkml:traceGroup"
+        },
+        {
+          "Name": "inkml:CT_TraceView/inkml:traceView"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Name": "inkml:CT_Annotation/inkml:annotation",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_AnnotationXML/inkml:annotationXML",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_Definitions/inkml:definitions",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_Context/inkml:context",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_Trace/inkml:trace",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_TraceGroup/inkml:traceGroup",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_TraceView/inkml:traceView",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_Bind/inkml:bind",
+      "ClassName": "Bind",
+      "Summary": "Defines the Bind Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":source",
+          "PropertyName": "Source",
+          "Type": "StringValue",
+          "PropertyComments": "source"
+        },
+        {
+          "QName": ":target",
+          "PropertyName": "Target",
+          "Type": "StringValue",
+          "PropertyComments": "target"
+        },
+        {
+          "QName": ":column",
+          "PropertyName": "Column",
+          "Type": "StringValue",
+          "PropertyComments": "column"
+        },
+        {
+          "QName": ":variable",
+          "PropertyName": "Variable",
+          "Type": "StringValue",
+          "PropertyComments": "variable"
+        }
+      ]
+    },
+    {
+      "Name": "inkml:CT_Table/inkml:table",
+      "ClassName": "Table",
+      "Summary": "Defines the Table Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        },
+        {
+          "QName": ":apply",
+          "PropertyName": "Apply",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.TableApplyValues\u003E",
+          "PropertyComments": "apply"
+        },
+        {
+          "QName": ":interpolation",
+          "PropertyName": "Interpolation",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.TableInterpolationValues\u003E",
+          "PropertyComments": "interpolation"
+        }
+      ]
+    },
+    {
+      "Name": "inkml:CT_Matrix/inkml:matrix",
+      "ClassName": "Matrix",
+      "Summary": "Defines the Matrix Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        }
+      ]
+    },
+    {
+      "Name": "inkml:CT_Mapping/inkml:mapping",
+      "ClassName": "Mapping",
+      "Summary": "Defines the Mapping Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        },
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.MappingTypeValues\u003E",
+          "PropertyComments": "type"
+        },
+        {
+          "QName": ":mappingRef",
+          "PropertyName": "MappingRef",
+          "Type": "StringValue",
+          "PropertyComments": "mappingRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "inkml:CT_Bind/inkml:bind"
+        },
+        {
+          "Name": "inkml:CT_Table/inkml:table"
+        },
+        {
+          "Name": "inkml:CT_Matrix/inkml:matrix"
+        },
+        {
+          "Name": "inkml:CT_Mapping/inkml:mapping"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Sequence",
+            "Items": [
+              {
+                "Name": "inkml:CT_Bind/inkml:bind",
+                "Occurs": [
+                  {}
+                ]
+              },
+              {
+                "Kind": "Choice",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ],
+                "Items": [
+                  {
+                    "Name": "inkml:CT_Table/inkml:table"
+                  },
+                  {
+                    "Name": "inkml:CT_Matrix/inkml:matrix"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Sequence",
+            "Items": [
+              {
+                "Name": "inkml:CT_Mapping/inkml:mapping",
+                "Occurs": [
+                  {}
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_Channel/inkml:channel",
+      "ClassName": "Channel",
+      "Summary": "Defines the Channel Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        },
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardChannelName",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.ChannelDataTypeValues\u003E",
+          "PropertyComments": "type"
+        },
+        {
+          "QName": ":default",
+          "PropertyName": "Default",
+          "Type": "StringValue",
+          "PropertyComments": "default",
+          "Validators": [
+            {
+              "Name": "NumberValidator",
+              "Type": "xsd:decimal",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "NumberValidator",
+              "Type": "xsd:boolean",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":min",
+          "PropertyName": "Min",
+          "Type": "DecimalValue",
+          "PropertyComments": "min"
+        },
+        {
+          "QName": ":max",
+          "PropertyName": "Max",
+          "Type": "DecimalValue",
+          "PropertyComments": "max"
+        },
+        {
+          "QName": ":orientation",
+          "PropertyName": "Orientation",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.ChannelValueOrientationValues\u003E",
+          "PropertyComments": "orientation"
+        },
+        {
+          "QName": ":respectTo",
+          "PropertyName": "RespectTo",
+          "Type": "StringValue",
+          "PropertyComments": "respectTo",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":units",
+          "PropertyName": "Units",
+          "Type": "StringValue",
+          "PropertyComments": "units",
+          "Validators": [
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardLengthUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerLengthUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardTimeUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerTimeUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardMassForceUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerMassForceUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardAngleUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerAngleUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardOtherUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerOtherUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "inkml:CT_Mapping/inkml:mapping"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "inkml:CT_Mapping/inkml:mapping",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_IntermittentChannels/inkml:intermittentChannels",
+      "ClassName": "IntermittentChannels",
+      "Summary": "Defines the IntermittentChannels Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "inkml:CT_Channel/inkml:channel"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "inkml:CT_Channel/inkml:channel",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_ChannelProperty/inkml:channelProperty",
+      "ClassName": "ChannelProperty",
+      "Summary": "Defines the ChannelProperty Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":channel",
+          "PropertyName": "Channel",
+          "Type": "StringValue",
+          "PropertyComments": "channel",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardChannelName",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardChannelPropertyName",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":value",
+          "PropertyName": "Value",
+          "Type": "DecimalValue",
+          "PropertyComments": "value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":units",
+          "PropertyName": "Units",
+          "Type": "StringValue",
+          "PropertyComments": "units",
+          "Validators": [
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardLengthUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerLengthUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardTimeUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerTimeUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardMassForceUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerMassForceUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardAngleUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerAngleUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardOtherUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerOtherUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "inkml:CT_TraceFormat/inkml:traceFormat",
+      "ClassName": "TraceFormat",
+      "Summary": "Defines the TraceFormat Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "inkml:CT_Channel/inkml:channel"
+        },
+        {
+          "Name": "inkml:CT_IntermittentChannels/inkml:intermittentChannels"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "inkml:CT_Channel/inkml:channel",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "inkml:CT_IntermittentChannels/inkml:intermittentChannels",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_SampleRate/inkml:sampleRate",
+      "ClassName": "SampleRate",
+      "Summary": "Defines the SampleRate Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":uniform",
+          "PropertyName": "Uniform",
+          "Type": "BooleanValue",
+          "PropertyComments": "uniform"
+        },
+        {
+          "QName": ":value",
+          "PropertyName": "Value",
+          "Type": "DecimalValue",
+          "PropertyComments": "value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "inkml:CT_Latency/inkml:latency",
+      "ClassName": "Latency",
+      "Summary": "Defines the Latency Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":value",
+          "PropertyName": "Value",
+          "Type": "DecimalValue",
+          "PropertyComments": "value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "inkml:CT_ActiveArea/inkml:activeArea",
+      "ClassName": "ActiveArea",
+      "Summary": "Defines the ActiveArea Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":size",
+          "PropertyName": "Size",
+          "Type": "StringValue",
+          "PropertyComments": "size"
+        },
+        {
+          "QName": ":height",
+          "PropertyName": "Height",
+          "Type": "DecimalValue",
+          "PropertyComments": "height"
+        },
+        {
+          "QName": ":width",
+          "PropertyName": "Width",
+          "Type": "DecimalValue",
+          "PropertyComments": "width"
+        },
+        {
+          "QName": ":units",
+          "PropertyName": "Units",
+          "Type": "StringValue",
+          "PropertyComments": "units",
+          "Validators": [
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardLengthUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerLengthUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardTimeUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerTimeUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardMassForceUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerMassForceUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardAngleUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerAngleUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardOtherUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerOtherUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "inkml:CT_SrcProperty/inkml:srcProperty",
+      "ClassName": "SourceProperty",
+      "Summary": "Defines the SourceProperty Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":value",
+          "PropertyName": "Value",
+          "Type": "DecimalValue",
+          "PropertyComments": "value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":units",
+          "PropertyName": "Units",
+          "Type": "StringValue",
+          "PropertyComments": "units",
+          "Validators": [
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardLengthUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerLengthUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardTimeUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerTimeUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardMassForceUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerMassForceUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardAngleUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerAngleUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardOtherUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerOtherUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "inkml:CT_ChannelProperties/inkml:channelProperties",
+      "ClassName": "ChannelProperties",
+      "Summary": "Defines the ChannelProperties Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "inkml:CT_ChannelProperty/inkml:channelProperty"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "inkml:CT_ChannelProperty/inkml:channelProperty",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_Annotation/inkml:annotation",
+      "ClassName": "Annotation",
+      "Summary": "Defines the Annotation Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Attributes": [
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "StringValue",
+          "PropertyComments": "type"
+        },
+        {
+          "QName": ":encoding",
+          "PropertyName": "Encoding",
+          "Type": "StringValue",
+          "PropertyComments": "encoding"
+        }
+      ]
+    },
+    {
+      "Name": "inkml:CT_AnnotationXML/inkml:annotationXML",
+      "ClassName": "AnnotationXml",
+      "Summary": "Defines the AnnotationXml Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "StringValue",
+          "PropertyComments": "type"
+        },
+        {
+          "QName": ":encoding",
+          "PropertyName": "Encoding",
+          "Type": "StringValue",
+          "PropertyComments": "encoding"
+        },
+        {
+          "QName": ":href",
+          "PropertyName": "Href",
+          "Type": "StringValue",
+          "PropertyComments": "href",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "emma:CT_Emma/emma:emma",
+          "PropertyName": "Emma"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "emma:CT_Emma/emma:emma",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_BrushProperty/inkml:brushProperty",
+      "ClassName": "BrushProperty",
+      "Summary": "Defines the BrushProperty Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardBrushPropertyName",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":value",
+          "PropertyName": "Value",
+          "Type": "StringValue",
+          "PropertyComments": "value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Name": "NumberValidator",
+              "Type": "xsd:decimal",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "NumberValidator",
+              "Type": "xsd:boolean",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_PenTip",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_RasterOp",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":units",
+          "PropertyName": "Units",
+          "Type": "StringValue",
+          "PropertyComments": "units",
+          "Validators": [
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardLengthUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerLengthUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardTimeUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerTimeUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardMassForceUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerMassForceUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardAngleUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerAngleUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardOtherUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "EnumValidator",
+              "Type": "inkml:ST_StandardPerOtherUnits",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "inkml:CT_Annotation/inkml:annotation"
+        },
+        {
+          "Name": "inkml:CT_AnnotationXML/inkml:annotationXML"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "inkml:CT_Annotation/inkml:annotation",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "inkml:CT_AnnotationXML/inkml:annotationXML",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_Canvas/inkml:canvas",
+      "ClassName": "Canvas",
+      "Summary": "Defines the Canvas Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        },
+        {
+          "QName": ":traceFormatRef",
+          "PropertyName": "TraceFormatRef",
+          "Type": "StringValue",
+          "PropertyComments": "traceFormatRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "inkml:CT_TraceFormat/inkml:traceFormat",
+          "PropertyName": "TraceFormat"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "inkml:CT_TraceFormat/inkml:traceFormat",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_CanvasTransform/inkml:canvasTransform",
+      "ClassName": "CanvasTransform",
+      "Summary": "Defines the CanvasTransform Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        },
+        {
+          "QName": ":invertible",
+          "PropertyName": "Invertible",
+          "Type": "BooleanValue",
+          "PropertyComments": "invertible"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "inkml:CT_Mapping/inkml:mapping"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "inkml:CT_Mapping/inkml:mapping",
+            "Occurs": [
+              {
+                "Min": 1,
+                "Max": 2
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_InkSource/inkml:inkSource",
+      "ClassName": "InkSource",
+      "Summary": "Defines the InkSource Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":manufacturer",
+          "PropertyName": "Manufacturer",
+          "Type": "StringValue",
+          "PropertyComments": "manufacturer"
+        },
+        {
+          "QName": ":model",
+          "PropertyName": "Model",
+          "Type": "StringValue",
+          "PropertyComments": "model"
+        },
+        {
+          "QName": ":serialNo",
+          "PropertyName": "SerialNo",
+          "Type": "StringValue",
+          "PropertyComments": "serialNo"
+        },
+        {
+          "QName": ":specificationRef",
+          "PropertyName": "SpecificationRef",
+          "Type": "StringValue",
+          "PropertyComments": "specificationRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":description",
+          "PropertyName": "Description",
+          "Type": "StringValue",
+          "PropertyComments": "description"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "inkml:CT_TraceFormat/inkml:traceFormat",
+          "PropertyName": "TraceFormat"
+        },
+        {
+          "Name": "inkml:CT_SampleRate/inkml:sampleRate",
+          "PropertyName": "SampleRate"
+        },
+        {
+          "Name": "inkml:CT_Latency/inkml:latency",
+          "PropertyName": "Latency"
+        },
+        {
+          "Name": "inkml:CT_ActiveArea/inkml:activeArea",
+          "PropertyName": "ActiveArea"
+        },
+        {
+          "Name": "inkml:CT_SrcProperty/inkml:srcProperty"
+        },
+        {
+          "Name": "inkml:CT_ChannelProperties/inkml:channelProperties"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "inkml:CT_TraceFormat/inkml:traceFormat"
+          },
+          {
+            "Name": "inkml:CT_SampleRate/inkml:sampleRate",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_Latency/inkml:latency",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_ActiveArea/inkml:activeArea",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_SrcProperty/inkml:srcProperty",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "inkml:CT_ChannelProperties/inkml:channelProperties",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_Brush/inkml:brush",
+      "ClassName": "Brush",
+      "Summary": "Defines the Brush Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        },
+        {
+          "QName": ":brushRef",
+          "PropertyName": "BrushRef",
+          "Type": "StringValue",
+          "PropertyComments": "brushRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "inkml:CT_Annotation/inkml:annotation"
+        },
+        {
+          "Name": "inkml:CT_AnnotationXML/inkml:annotationXML"
+        },
+        {
+          "Name": "inkml:CT_BrushProperty/inkml:brushProperty"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "inkml:CT_Annotation/inkml:annotation",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "inkml:CT_AnnotationXML/inkml:annotationXML",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "inkml:CT_BrushProperty/inkml:brushProperty",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_Timestamp/inkml:timestamp",
+      "ClassName": "Timestamp",
+      "Summary": "Defines the Timestamp Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":time",
+          "PropertyName": "Time",
+          "Type": "DecimalValue",
+          "PropertyComments": "time"
+        },
+        {
+          "QName": ":timestampRef",
+          "PropertyName": "TimestampRef",
+          "Type": "StringValue",
+          "PropertyComments": "timestampRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":timeString",
+          "PropertyName": "TimeString",
+          "Type": "DateTimeValue",
+          "PropertyComments": "timeString"
+        },
+        {
+          "QName": ":timeOffset",
+          "PropertyName": "TimeOffset",
+          "Type": "DecimalValue",
+          "PropertyComments": "timeOffset"
+        }
+      ]
+    },
+    {
+      "Name": "inkml:CT_Trace/inkml:trace",
+      "ClassName": "Trace",
+      "Summary": "Defines the Trace Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        },
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.TraceTypeValues\u003E",
+          "PropertyComments": "type"
+        },
+        {
+          "QName": ":continuation",
+          "PropertyName": "Continuation",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.TraceContinuationValues\u003E",
+          "PropertyComments": "continuation"
+        },
+        {
+          "QName": ":priorRef",
+          "PropertyName": "PriorRef",
+          "Type": "StringValue",
+          "PropertyComments": "priorRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":contextRef",
+          "PropertyName": "ContextRef",
+          "Type": "StringValue",
+          "PropertyComments": "contextRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":brushRef",
+          "PropertyName": "BrushRef",
+          "Type": "StringValue",
+          "PropertyComments": "brushRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":duration",
+          "PropertyName": "Duration",
+          "Type": "DecimalValue",
+          "PropertyComments": "duration"
+        },
+        {
+          "QName": ":timeOffset",
+          "PropertyName": "TimeOffset",
+          "Type": "DecimalValue",
+          "PropertyComments": "timeOffset"
+        }
+      ]
+    },
+    {
+      "Name": "inkml:CT_TraceGroup/inkml:traceGroup",
+      "ClassName": "TraceGroup",
+      "Summary": "Defines the TraceGroup Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        },
+        {
+          "QName": ":contextRef",
+          "PropertyName": "ContextRef",
+          "Type": "StringValue",
+          "PropertyComments": "contextRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":brushRef",
+          "PropertyName": "BrushRef",
+          "Type": "StringValue",
+          "PropertyComments": "brushRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "inkml:CT_Annotation/inkml:annotation"
+        },
+        {
+          "Name": "inkml:CT_AnnotationXML/inkml:annotationXML"
+        },
+        {
+          "Name": "inkml:CT_Trace/inkml:trace"
+        },
+        {
+          "Name": "inkml:CT_TraceGroup/inkml:traceGroup"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Name": "inkml:CT_Annotation/inkml:annotation",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_AnnotationXML/inkml:annotationXML",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_Trace/inkml:trace",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_TraceGroup/inkml:traceGroup",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_TraceView/inkml:traceView",
+      "ClassName": "TraceView",
+      "Summary": "Defines the TraceView Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        },
+        {
+          "QName": ":contextRef",
+          "PropertyName": "ContextRef",
+          "Type": "StringValue",
+          "PropertyComments": "contextRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":traceDataRef",
+          "PropertyName": "TraceDataRef",
+          "Type": "StringValue",
+          "PropertyComments": "traceDataRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":from",
+          "PropertyName": "From",
+          "Type": "StringValue",
+          "PropertyComments": "from"
+        },
+        {
+          "QName": ":to",
+          "PropertyName": "To",
+          "Type": "StringValue",
+          "PropertyComments": "to"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "inkml:CT_Annotation/inkml:annotation"
+        },
+        {
+          "Name": "inkml:CT_AnnotationXML/inkml:annotationXML"
+        },
+        {
+          "Name": "inkml:CT_TraceView/inkml:traceView"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Name": "inkml:CT_Annotation/inkml:annotation",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_AnnotationXML/inkml:annotationXML",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_TraceView/inkml:traceView",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_Context/inkml:context",
+      "ClassName": "Context",
+      "Summary": "Defines the Context Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "xml:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "id"
+        },
+        {
+          "QName": ":contextRef",
+          "PropertyName": "ContextRef",
+          "Type": "StringValue",
+          "PropertyComments": "contextRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":canvasRef",
+          "PropertyName": "CanvasRef",
+          "Type": "StringValue",
+          "PropertyComments": "canvasRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":canvasTransformRef",
+          "PropertyName": "CanvasTransformRef",
+          "Type": "StringValue",
+          "PropertyComments": "canvasTransformRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":traceFormatRef",
+          "PropertyName": "TraceFromatRef",
+          "Type": "StringValue",
+          "PropertyComments": "traceFormatRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":inkSourceRef",
+          "PropertyName": "InkSourceRef",
+          "Type": "StringValue",
+          "PropertyComments": "inkSourceRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":brushRef",
+          "PropertyName": "BrushRef",
+          "Type": "StringValue",
+          "PropertyComments": "brushRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":timestampRef",
+          "PropertyName": "TimestampRef",
+          "Type": "StringValue",
+          "PropertyComments": "timestampRef",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsUri",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "inkml:CT_Canvas/inkml:canvas",
+          "PropertyName": "Canvas"
+        },
+        {
+          "Name": "inkml:CT_CanvasTransform/inkml:canvasTransform",
+          "PropertyName": "CanvasTransform"
+        },
+        {
+          "Name": "inkml:CT_TraceFormat/inkml:traceFormat",
+          "PropertyName": "TraceFormat"
+        },
+        {
+          "Name": "inkml:CT_InkSource/inkml:inkSource",
+          "PropertyName": "InkSource"
+        },
+        {
+          "Name": "inkml:CT_Brush/inkml:brush",
+          "PropertyName": "Brush"
+        },
+        {
+          "Name": "inkml:CT_Timestamp/inkml:timestamp",
+          "PropertyName": "Timestamp"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "inkml:CT_Canvas/inkml:canvas",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_CanvasTransform/inkml:canvasTransform",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_TraceFormat/inkml:traceFormat",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_InkSource/inkml:inkSource",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_Brush/inkml:brush",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_Timestamp/inkml:timestamp",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "inkml:CT_Definitions/inkml:definitions",
+      "ClassName": "Definitions",
+      "Summary": "Defines the Definitions Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "inkml:CT_Brush/inkml:brush"
+        },
+        {
+          "Name": "inkml:CT_Canvas/inkml:canvas"
+        },
+        {
+          "Name": "inkml:CT_CanvasTransform/inkml:canvasTransform"
+        },
+        {
+          "Name": "inkml:CT_Context/inkml:context"
+        },
+        {
+          "Name": "inkml:CT_InkSource/inkml:inkSource"
+        },
+        {
+          "Name": "inkml:CT_Mapping/inkml:mapping"
+        },
+        {
+          "Name": "inkml:CT_Timestamp/inkml:timestamp"
+        },
+        {
+          "Name": "inkml:CT_Trace/inkml:trace"
+        },
+        {
+          "Name": "inkml:CT_TraceFormat/inkml:traceFormat"
+        },
+        {
+          "Name": "inkml:CT_TraceGroup/inkml:traceGroup"
+        },
+        {
+          "Name": "inkml:CT_TraceView/inkml:traceView"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Name": "inkml:CT_Brush/inkml:brush",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_Canvas/inkml:canvas",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_CanvasTransform/inkml:canvasTransform",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_Context/inkml:context",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_InkSource/inkml:inkSource",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_Mapping/inkml:mapping",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_Timestamp/inkml:timestamp",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_Trace/inkml:trace",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_TraceFormat/inkml:traceFormat",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_TraceGroup/inkml:traceGroup",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "inkml:CT_TraceView/inkml:traceView",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "inkml:ST_ChannelDataType",
+      "Name": "ChannelDataTypeValues",
+      "Facets": [
+        {
+          "Value": "integer",
+          "Name": "Integer"
+        },
+        {
+          "Value": "decimal",
+          "Name": "Decimal"
+        },
+        {
+          "Value": "boolean",
+          "Name": "Boolean"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_ChannelValueOrientation",
+      "Name": "ChannelValueOrientationValues",
+      "Facets": [
+        {
+          "Value": "\u002Bve",
+          "Name": "PlusVe"
+        },
+        {
+          "Value": "-ve",
+          "Name": "MinusVe"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_StandardChannelPropertyName",
+      "Name": "StandardChannelPropertyNameValues",
+      "Facets": [
+        {
+          "Value": "threshold",
+          "Name": "Threshold"
+        },
+        {
+          "Value": "resolution",
+          "Name": "Resolution"
+        },
+        {
+          "Value": "quantization",
+          "Name": "Quantization"
+        },
+        {
+          "Value": "noise",
+          "Name": "Noise"
+        },
+        {
+          "Value": "accuracy",
+          "Name": "Accuracy"
+        },
+        {
+          "Value": "crossCoupling",
+          "Name": "CrossCoupling"
+        },
+        {
+          "Value": "skew",
+          "Name": "Skew"
+        },
+        {
+          "Value": "minBandwidth",
+          "Name": "MinBandwidth"
+        },
+        {
+          "Value": "peakRate",
+          "Name": "PeakRate"
+        },
+        {
+          "Value": "distortion",
+          "Name": "Distortion"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_StandardBrushPropertyName",
+      "Name": "StandardBrushPropertyNameValues",
+      "Facets": [
+        {
+          "Value": "width",
+          "Name": "Width"
+        },
+        {
+          "Value": "height",
+          "Name": "Height"
+        },
+        {
+          "Value": "color",
+          "Name": "Color"
+        },
+        {
+          "Value": "transparency",
+          "Name": "Transparency"
+        },
+        {
+          "Value": "tip",
+          "Name": "Tip"
+        },
+        {
+          "Value": "rasterOp",
+          "Name": "RasterOp"
+        },
+        {
+          "Value": "antiAliased",
+          "Name": "AntiAliased"
+        },
+        {
+          "Value": "fitToCurve",
+          "Name": "FitToCurve"
+        },
+        {
+          "Value": "ignorePressure",
+          "Name": "IgnorePressure"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_StandardChannelName",
+      "Name": "StandardChannelNameValues",
+      "Facets": [
+        {
+          "Value": "X",
+          "Name": "XCoordinate"
+        },
+        {
+          "Value": "Y",
+          "Name": "YCoordinate"
+        },
+        {
+          "Value": "Z",
+          "Name": "ZCoordinate"
+        },
+        {
+          "Value": "F",
+          "Name": "PenTipForce"
+        },
+        {
+          "Value": "TP",
+          "Name": "TangentPressure"
+        },
+        {
+          "Value": "BP",
+          "Name": "ButtonPressure"
+        },
+        {
+          "Value": "S",
+          "Name": "TipSwitchState"
+        },
+        {
+          "Value": "B1",
+          "Name": "SideButton1State"
+        },
+        {
+          "Value": "B2",
+          "Name": "SideButton2State"
+        },
+        {
+          "Value": "B3",
+          "Name": "SideButton3State"
+        },
+        {
+          "Value": "B4",
+          "Name": "SideButton4State"
+        },
+        {
+          "Value": "E",
+          "Name": "PenInverted"
+        },
+        {
+          "Value": "OTx",
+          "Name": "TiltAlongXAxis"
+        },
+        {
+          "Value": "OTy",
+          "Name": "TiltAlongYAxis"
+        },
+        {
+          "Value": "OA",
+          "Name": "PenAzimuthAngle"
+        },
+        {
+          "Value": "OE",
+          "Name": "PenElevationAngle"
+        },
+        {
+          "Value": "OR",
+          "Name": "PexAxisRotation"
+        },
+        {
+          "Value": "RP",
+          "Name": "PitchRotation"
+        },
+        {
+          "Value": "RR",
+          "Name": "RollRotation"
+        },
+        {
+          "Value": "RY",
+          "Name": "YawRotation"
+        },
+        {
+          "Value": "C",
+          "Name": "ColorValue"
+        },
+        {
+          "Value": "CR",
+          "Name": "RedColorValue"
+        },
+        {
+          "Value": "CG",
+          "Name": "GreenColorValue"
+        },
+        {
+          "Value": "CB",
+          "Name": "BlueColorValue"
+        },
+        {
+          "Value": "CC",
+          "Name": "CyanColorValue"
+        },
+        {
+          "Value": "CM",
+          "Name": "MegentaColorValue"
+        },
+        {
+          "Value": "CY",
+          "Name": "YellowColorValue"
+        },
+        {
+          "Value": "CK",
+          "Name": "BlackColorValue"
+        },
+        {
+          "Value": "W",
+          "Name": "StrokesWidth"
+        },
+        {
+          "Value": "T",
+          "Name": "Time"
+        },
+        {
+          "Value": "SN",
+          "Name": "SerialNumber"
+        },
+        {
+          "Value": "TW",
+          "Name": "TouchWidth"
+        },
+        {
+          "Value": "TH",
+          "Name": "TouchHeight"
+        },
+        {
+          "Value": "TC",
+          "Name": "FingerTouch"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_StandardLengthUnits",
+      "Name": "StandardLengthUnitsValues",
+      "Facets": [
+        {
+          "Value": "m",
+          "Name": "Meter"
+        },
+        {
+          "Value": "cm",
+          "Name": "Centimeter"
+        },
+        {
+          "Value": "mm",
+          "Name": "Millimeter"
+        },
+        {
+          "Value": "in",
+          "Name": "Inche"
+        },
+        {
+          "Value": "pt",
+          "Name": "Point"
+        },
+        {
+          "Value": "pc",
+          "Name": "Pica"
+        },
+        {
+          "Value": "em",
+          "Name": "Em"
+        },
+        {
+          "Value": "ex",
+          "Name": "Ex"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_StandardPerLengthUnits",
+      "Name": "StandardPerLengthUnitsValues",
+      "Facets": [
+        {
+          "Value": "1/m",
+          "Name": "PerMeter"
+        },
+        {
+          "Value": "1/cm",
+          "Name": "PerCentimeter"
+        },
+        {
+          "Value": "1/mm",
+          "Name": "PerMillimeter"
+        },
+        {
+          "Value": "1/in",
+          "Name": "PerInche"
+        },
+        {
+          "Value": "1/pt",
+          "Name": "PerPoint"
+        },
+        {
+          "Value": "1/pc",
+          "Name": "PerPica"
+        },
+        {
+          "Value": "1/em",
+          "Name": "PerEm"
+        },
+        {
+          "Value": "1/ex",
+          "Name": "PerEx"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_StandardTimeUnits",
+      "Name": "StandardTimeUnitsValues",
+      "Facets": [
+        {
+          "Value": "s",
+          "Name": "Second"
+        },
+        {
+          "Value": "ms",
+          "Name": "Millisecond"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_StandardPerTimeUnits",
+      "Name": "StandardPerTimeUnitsValues",
+      "Facets": [
+        {
+          "Value": "1/s",
+          "Name": "PerSecond"
+        },
+        {
+          "Value": "1/ms",
+          "Name": "PerMillisecond"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_StandardMassForceUnits",
+      "Name": "StandardMassForceUnitsValues",
+      "Facets": [
+        {
+          "Value": "Kg",
+          "Name": "Kilogram"
+        },
+        {
+          "Value": "g",
+          "Name": "Gram"
+        },
+        {
+          "Value": "mg",
+          "Name": "Milligram"
+        },
+        {
+          "Value": "N",
+          "Name": "Newton"
+        },
+        {
+          "Value": "lb",
+          "Name": "Pond"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_StandardPerMassForceUnits",
+      "Name": "StandardPerMassForceUnitsValues",
+      "Facets": [
+        {
+          "Value": "1/Kg",
+          "Name": "PerKilogram"
+        },
+        {
+          "Value": "1/g",
+          "Name": "PerGram"
+        },
+        {
+          "Value": "1/mg",
+          "Name": "PerMilligram"
+        },
+        {
+          "Value": "1/N",
+          "Name": "PerNewton"
+        },
+        {
+          "Value": "1/lb",
+          "Name": "PerPond"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_StandardAngleUnits",
+      "Name": "StandardAngleUnitsValues",
+      "Facets": [
+        {
+          "Value": "deg",
+          "Name": "Degree"
+        },
+        {
+          "Value": "rad",
+          "Name": "Radian"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_StandardPerAngleUnits",
+      "Name": "StandardPerAngleUnitsValues",
+      "Facets": [
+        {
+          "Value": "1/deg",
+          "Name": "PerDegree"
+        },
+        {
+          "Value": "1/rad",
+          "Name": "PerRadian"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_StandardOtherUnits",
+      "Name": "StandardOtherUnitsValues",
+      "Facets": [
+        {
+          "Value": "%",
+          "Name": "Percentage"
+        },
+        {
+          "Value": "dev",
+          "Name": "DeviceResolution"
+        },
+        {
+          "Value": "none",
+          "Name": "None"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_StandardPerOtherUnits",
+      "Name": "StandardPerOtherUnitsValues",
+      "Facets": [
+        {
+          "Value": "1/%",
+          "Name": "PerPercentage"
+        },
+        {
+          "Value": "1/dev",
+          "Name": "PerDeviceResolution"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_TraceType",
+      "Name": "TraceTypeValues",
+      "Facets": [
+        {
+          "Value": "penDown",
+          "Name": "PenDown"
+        },
+        {
+          "Value": "penUp",
+          "Name": "PenUp"
+        },
+        {
+          "Value": "indeterminate",
+          "Name": "Indeterminate"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_TraceContinuation",
+      "Name": "TraceContinuationValues",
+      "Facets": [
+        {
+          "Value": "begin",
+          "Name": "Begin"
+        },
+        {
+          "Value": "end",
+          "Name": "End"
+        },
+        {
+          "Value": "middle",
+          "Name": "Middle"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_RasterOp",
+      "Name": "RasterOperationValues",
+      "Facets": [
+        {
+          "Value": "black",
+          "Name": "Black"
+        },
+        {
+          "Value": "notMergePen",
+          "Name": "NotMergePen"
+        },
+        {
+          "Value": "maskNotPen",
+          "Name": "MaskNotPen"
+        },
+        {
+          "Value": "notCopyPen",
+          "Name": "NotCopyPen"
+        },
+        {
+          "Value": "maskPenNot",
+          "Name": "MaskPenNot"
+        },
+        {
+          "Value": "not",
+          "Name": "Not"
+        },
+        {
+          "Value": "xOrPen",
+          "Name": "XOrPen"
+        },
+        {
+          "Value": "notMaskPen",
+          "Name": "NotMaskPen"
+        },
+        {
+          "Value": "maskPen",
+          "Name": "MaskPen"
+        },
+        {
+          "Value": "notXOrPen",
+          "Name": "NotXOrPen"
+        },
+        {
+          "Value": "noOperation",
+          "Name": "NoOperation"
+        },
+        {
+          "Value": "mergeNotPen",
+          "Name": "MergeNotPen"
+        },
+        {
+          "Value": "copyPen",
+          "Name": "CopyPen"
+        },
+        {
+          "Value": "mergePenNot",
+          "Name": "MergePenNot"
+        },
+        {
+          "Value": "mergePen",
+          "Name": "MergePen"
+        },
+        {
+          "Value": "white",
+          "Name": "White"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_PenTip",
+      "Name": "PenTipShapeValues",
+      "Facets": [
+        {
+          "Value": "ellipse",
+          "Name": "Ellipse"
+        },
+        {
+          "Value": "rectangle",
+          "Name": "Rectangle"
+        },
+        {
+          "Value": "drop",
+          "Name": "Drop"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_MappingType",
+      "Name": "MappingTypeValues",
+      "Facets": [
+        {
+          "Value": "identity",
+          "Name": "Identity"
+        },
+        {
+          "Value": "lookup",
+          "Name": "Lookup"
+        },
+        {
+          "Value": "affine",
+          "Name": "Affine"
+        },
+        {
+          "Value": "mathml",
+          "Name": "MathML"
+        },
+        {
+          "Value": "product",
+          "Name": "Product"
+        },
+        {
+          "Value": "unknown",
+          "Name": "Unknown"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_TableApply",
+      "Name": "TableApplyValues",
+      "Facets": [
+        {
+          "Value": "absolute",
+          "Name": "Absolute"
+        },
+        {
+          "Value": "relative",
+          "Name": "Relative"
+        }
+      ]
+    },
+    {
+      "Type": "inkml:ST_TableInterpolation",
+      "Name": "TableInterpolationValues",
+      "Facets": [
+        {
+          "Value": "floor",
+          "Name": "Floor"
+        },
+        {
+          "Value": "middle",
+          "Name": "Middle"
+        },
+        {
+          "Value": "ceiling",
+          "Name": "Ceiling"
+        },
+        {
+          "Value": "linear",
+          "Name": "Linear"
+        },
+        {
+          "Value": "cubic",
+          "Name": "Cubic"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3934 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2014/chartex",
+  "Types": [
+    {
+      "Name": "cx:CT_ChartSpace/cx:chartSpace",
+      "ClassName": "ChartSpace",
+      "Summary": "Defines the ChartSpace Class.",
+      "Part": "ExtendedChartPart",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_ChartData/cx:chartData",
+          "PropertyName": "ChartData"
+        },
+        {
+          "Name": "cx:CT_Chart/cx:chart",
+          "PropertyName": "Chart"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextBody/cx:txPr",
+          "PropertyName": "TxPrTextBody"
+        },
+        {
+          "Name": "a:CT_ColorMapping/cx:clrMapOvr",
+          "PropertyName": "ColorMappingType"
+        },
+        {
+          "Name": "cx:CT_PrintSettings/cx:printSettings",
+          "PropertyName": "PrintSettings"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_ChartData/cx:chartData",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_Chart/cx:chart",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_TextBody/cx:txPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_ColorMapping/cx:clrMapOvr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_PrintSettings/cx:printSettings",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xsd:unsignedInt/cx:openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3",
+      "ClassName": "Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt",
+      "Summary": "Defines the Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:unsignedInt",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:unsignedInt/cx:binCount",
+      "ClassName": "BinCountXsdunsignedInt",
+      "Summary": "Defines the BinCountXsdunsignedInt Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:unsignedInt",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_Extension/cx:ext",
+      "ClassName": "Extension2",
+      "Summary": "Defines the Extension2 Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "PropertyName": "Uri",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "uri",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Any"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_StringValue/cx:pt",
+      "ClassName": "ChartStringValue",
+      "Summary": "Defines the ChartStringValue Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":idx",
+          "PropertyName": "Index",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "idx",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_NumericValue/cx:pt",
+      "ClassName": "NumericValue",
+      "Summary": "Defines the NumericValue Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":idx",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "idx",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_NumericDimension/cx:numDim",
+      "ClassName": "NumericDimension",
+      "Summary": "Defines the NumericDimension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimensionType\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "Dimension data type",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_Formula/cx:f"
+        },
+        {
+          "Name": "cx:CT_NumericLevel/cx:lvl"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Kind": "Sequence",
+            "Items": [
+              {
+                "Name": "cx:CT_Formula/cx:f",
+                "InitialVersion": "Office2016"
+              },
+              {
+                "Name": "cx:CT_NumericLevel/cx:lvl",
+                "Occurs": [
+                  {}
+                ],
+                "InitialVersion": "Office2016"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_StringDimension/cx:strDim",
+      "ClassName": "StringDimension",
+      "Summary": "Defines the StringDimension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimensionType\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "Dimension data type",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_Formula/cx:f"
+        },
+        {
+          "Name": "cx:CT_StringLevel/cx:lvl"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Kind": "Sequence",
+            "Items": [
+              {
+                "Name": "cx:CT_Formula/cx:f",
+                "InitialVersion": "Office2016"
+              },
+              {
+                "Name": "cx:CT_StringLevel/cx:lvl",
+                "Occurs": [
+                  {}
+                ],
+                "InitialVersion": "Office2016"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_ExtensionList/cx:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_Extension/cx:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_Extension/cx:ext",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_ExternalData/cx:externalData",
+      "ClassName": "ExternalData",
+      "Summary": "Defines the ExternalData Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "RelId of the relationship for the external data",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": "cx:autoUpdate",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "True if the external link should automatically update",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2016"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_Data/cx:data",
+      "ClassName": "Data",
+      "Summary": "Defines the Data Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_NumericDimension/cx:numDim"
+        },
+        {
+          "Name": "cx:CT_StringDimension/cx:strDim"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "Items": [
+              {
+                "Name": "cx:CT_NumericDimension/cx:numDim",
+                "InitialVersion": "Office2016"
+              },
+              {
+                "Name": "cx:CT_StringDimension/cx:strDim",
+                "InitialVersion": "Office2016"
+              }
+            ]
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_TextData/cx:txData",
+      "ClassName": "TextData",
+      "Summary": "Defines the TextData Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_Formula/cx:f"
+        },
+        {
+          "Name": "xsd:string/cx:v"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Kind": "Sequence",
+            "Items": [
+              {
+                "Name": "cx:CT_Formula/cx:f",
+                "InitialVersion": "Office2016"
+              },
+              {
+                "Name": "xsd:string/cx:v",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ],
+                "InitialVersion": "Office2016"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_TextBody/cx:rich",
+      "ClassName": "RichTextBody",
+      "Summary": "Defines the RichTextBody Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "TextBodyType",
+      "IsDerived": true,
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "a:CT_TextBodyProperties/a:bodyPr",
+          "PropertyName": "BodyProperties",
+          "PropertyComments": "Body Properties"
+        },
+        {
+          "Name": "a:CT_TextListStyle/a:lstStyle",
+          "PropertyName": "ListStyle",
+          "PropertyComments": "Text List Styles"
+        },
+        {
+          "Name": "a:CT_TextParagraph/a:p"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_TextBodyProperties/a:bodyPr"
+          },
+          {
+            "Name": "a:CT_TextListStyle/a:lstStyle",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextParagraph/a:p",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_TextBody/cx:txPr",
+      "ClassName": "TxPrTextBody",
+      "Summary": "Defines the TxPrTextBody Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "TextBodyType",
+      "IsDerived": true,
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "a:CT_TextBodyProperties/a:bodyPr",
+          "PropertyName": "BodyProperties",
+          "PropertyComments": "Body Properties"
+        },
+        {
+          "Name": "a:CT_TextListStyle/a:lstStyle",
+          "PropertyName": "ListStyle",
+          "PropertyComments": "Text List Styles"
+        },
+        {
+          "Name": "a:CT_TextParagraph/a:p"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_TextBodyProperties/a:bodyPr"
+          },
+          {
+            "Name": "a:CT_TextListStyle/a:lstStyle",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextParagraph/a:p",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_TextBody/",
+      "ClassName": "TextBodyType",
+      "Summary": "Defines the TextBodyType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "AdditionalElements": [
+        "a:CT_TextBodyProperties/a:bodyPr",
+        "a:CT_TextListStyle/a:lstStyle",
+        "a:CT_TextParagraph/a:p"
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_TextBodyProperties/a:bodyPr",
+          "PropertyName": "BodyProperties",
+          "PropertyComments": "Body Properties"
+        },
+        {
+          "Name": "a:CT_TextListStyle/a:lstStyle",
+          "PropertyName": "ListStyle",
+          "PropertyComments": "Text List Styles"
+        },
+        {
+          "Name": "a:CT_TextParagraph/a:p"
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_Text/cx:tx",
+      "ClassName": "Text",
+      "Summary": "Defines the Text Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_TextData/cx:txData",
+          "PropertyName": "TextData"
+        },
+        {
+          "Name": "a:CT_TextBody/cx:rich",
+          "PropertyName": "RichTextBody"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "cx:CT_TextData/cx:txData",
+                "InitialVersion": "Office2016"
+              },
+              {
+                "Name": "a:CT_TextBody/cx:rich",
+                "InitialVersion": "Office2016"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_ShapeProperties/cx:spPr",
+      "ClassName": "ShapeProperties",
+      "Summary": "Defines the ShapeProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":bwMode",
+          "PropertyName": "BlackWhiteMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "PropertyComments": "Black and White Mode",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Transform2D/a:xfrm",
+          "PropertyName": "Transform2D",
+          "PropertyComments": "2D Transform for Individual Objects"
+        },
+        {
+          "Name": "a:CT_CustomGeometry2D/a:custGeom"
+        },
+        {
+          "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+        },
+        {
+          "Name": "a:CT_NoFillProperties/a:noFill"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+        },
+        {
+          "Name": "a:CT_GradientFillProperties/a:gradFill"
+        },
+        {
+          "Name": "a:CT_BlipFillProperties/a:blipFill"
+        },
+        {
+          "Name": "a:CT_PatternFillProperties/a:pattFill"
+        },
+        {
+          "Name": "a:CT_GroupFillProperties/a:grpFill"
+        },
+        {
+          "Name": "a:CT_LineProperties/a:ln"
+        },
+        {
+          "Name": "a:CT_EffectList/a:effectLst"
+        },
+        {
+          "Name": "a:CT_EffectContainer/a:effectDag"
+        },
+        {
+          "Name": "a:CT_Scene3D/a:scene3d"
+        },
+        {
+          "Name": "a:CT_Shape3D/a:sp3d"
+        },
+        {
+          "Name": "a:CT_ShapePropertiesExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Transform2D/a:xfrm",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_CustomGeometry2D/a:custGeom"
+                  },
+                  {
+                    "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_NoFillProperties/a:noFill"
+                  },
+                  {
+                    "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+                  },
+                  {
+                    "Name": "a:CT_GradientFillProperties/a:gradFill"
+                  },
+                  {
+                    "Name": "a:CT_BlipFillProperties/a:blipFill"
+                  },
+                  {
+                    "Name": "a:CT_PatternFillProperties/a:pattFill"
+                  },
+                  {
+                    "Name": "a:CT_GroupFillProperties/a:grpFill"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_LineProperties/a:ln",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_EffectList/a:effectLst"
+                  },
+                  {
+                    "Name": "a:CT_EffectContainer/a:effectDag"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Scene3D/a:scene3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Shape3D/a:sp3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_ShapePropertiesExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_AxisUnitsLabel/cx:unitsLabel",
+      "ClassName": "AxisUnitsLabel",
+      "Summary": "Defines the AxisUnitsLabel Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_Text/cx:tx",
+          "PropertyName": "Text"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextBody/cx:txPr",
+          "PropertyName": "TxPrTextBody"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_Text/cx:tx",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_TextBody/cx:txPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_CategoryAxisScaling/cx:catScaling",
+      "ClassName": "CategoryAxisScaling",
+      "Summary": "Defines the CategoryAxisScaling Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":gapWidth",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "gapWidth",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "Type": "xsd:double",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_ValueAxisScaling/cx:valScaling",
+      "ClassName": "ValueAxisScaling",
+      "Summary": "Defines the ValueAxisScaling Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":max",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "max",
+          "Validators": [
+            {
+              "Name": "NumberValidator",
+              "Type": "xsd:double",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":min",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "min",
+          "Validators": [
+            {
+              "Name": "NumberValidator",
+              "Type": "xsd:double",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":majorUnit",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "majorUnit",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinExclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "Type": "xsd:double",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":minorUnit",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "minorUnit",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinExclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "Type": "xsd:double",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_AxisTitle/cx:title",
+      "ClassName": "AxisTitle",
+      "Summary": "Defines the AxisTitle Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_Text/cx:tx",
+          "PropertyName": "Text"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextBody/cx:txPr",
+          "PropertyName": "TxPrTextBody"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_Text/cx:tx",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_TextBody/cx:txPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_AxisUnits/cx:units",
+      "ClassName": "AxisUnits",
+      "Summary": "Defines the AxisUnits Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":unit",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnit\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "unit"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_AxisUnitsLabel/cx:unitsLabel",
+          "PropertyName": "AxisUnitsLabel"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_AxisUnitsLabel/cx:unitsLabel",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_Gridlines/cx:majorGridlines",
+      "ClassName": "MajorGridlinesGridlines",
+      "Summary": "Defines the MajorGridlinesGridlines Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlGridlinesElement",
+      "IsDerived": true,
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_Gridlines/cx:minorGridlines",
+      "ClassName": "MinorGridlinesGridlines",
+      "Summary": "Defines the MinorGridlinesGridlines Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlGridlinesElement",
+      "IsDerived": true,
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_Gridlines/",
+      "ClassName": "OpenXmlGridlinesElement",
+      "Summary": "Defines the OpenXmlGridlinesElement Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "Version": "Office2016",
+      "AdditionalElements": [
+        "a:CT_ShapeProperties/cx:spPr",
+        "cx:CT_ExtensionList/cx:extLst"
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_TickMarks/cx:majorTickMarks",
+      "ClassName": "MajorTickMarksTickMarks",
+      "Summary": "Defines the MajorTickMarksTickMarks Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlTickMarksElement",
+      "IsDerived": true,
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_TickMarks/cx:minorTickMarks",
+      "ClassName": "MinorTickMarksTickMarks",
+      "Summary": "Defines the MinorTickMarksTickMarks Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlTickMarksElement",
+      "IsDerived": true,
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_TickMarks/",
+      "ClassName": "OpenXmlTickMarksElement",
+      "Summary": "Defines the OpenXmlTickMarksElement Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickMarksType\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "type"
+        }
+      ],
+      "AdditionalElements": [
+        "cx:CT_ExtensionList/cx:extLst"
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_TickLabels/cx:tickLabels",
+      "ClassName": "TickLabels",
+      "Summary": "Defines the TickLabels Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_NumberFormat/cx:numFmt",
+      "ClassName": "NumberFormat",
+      "Summary": "Defines the NumberFormat Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":formatCode",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "formatCode",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":sourceLinked",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "sourceLinked"
+        }
+      ]
+    },
+    {
+      "Name": "xsd:double/cx:binSize",
+      "ClassName": "Xsddouble",
+      "Summary": "Defines the Xsddouble Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2016",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:double",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_ParentLabelLayout/cx:parentLabelLayout",
+      "ClassName": "ParentLabelLayout",
+      "Summary": "Defines the ParentLabelLayout Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "ParentLabelLayoutVal",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayoutVal\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_SeriesElementVisibilities/cx:visibility",
+      "ClassName": "SeriesElementVisibilities",
+      "Summary": "Defines the SeriesElementVisibilities Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":connectorLines",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "connectorLines"
+        },
+        {
+          "QName": ":meanLine",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "meanLine"
+        },
+        {
+          "QName": ":meanMarker",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "meanMarker"
+        },
+        {
+          "QName": ":nonoutliers",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "nonoutliers"
+        },
+        {
+          "QName": ":outliers",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "outliers"
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_Aggregation/cx:aggregation",
+      "ClassName": "Aggregation",
+      "Summary": "Defines the Aggregation Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "cx:CT_Binning/cx:binning",
+      "ClassName": "Binning",
+      "Summary": "Defines the Binning Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":intervalClosed",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IntervalClosedSide\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "intervalClosed"
+        },
+        {
+          "QName": ":underflow",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "underflow",
+          "Validators": [
+            {
+              "Name": "NumberValidator",
+              "Type": "xsd:double",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":overflow",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "overflow",
+          "Validators": [
+            {
+              "Name": "NumberValidator",
+              "Type": "xsd:double",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            },
+            {
+              "Name": "StringValidator",
+              "UnionId": 0,
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xsd:double/cx:binSize",
+          "PropertyName": "Xsddouble"
+        },
+        {
+          "Name": "xsd:unsignedInt/cx:binCount",
+          "PropertyName": "BinCountXsdunsignedInt"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {
+            "Max": 1
+          }
+        ],
+        "Items": [
+          {
+            "Name": "xsd:double/cx:binSize",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "xsd:unsignedInt/cx:binCount",
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_Statistics/cx:statistics",
+      "ClassName": "Statistics",
+      "Summary": "Defines the Statistics Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":quartileMethod",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.QuartileMethod\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "quartileMethod"
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_Subtotals/cx:subtotals",
+      "ClassName": "Subtotals",
+      "Summary": "Defines the Subtotals Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "c:CT_UnsignedInt/cx:idx"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_UnsignedInt/cx:idx",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_DataLabelVisibilities/cx:visibility",
+      "ClassName": "DataLabelVisibilities",
+      "Summary": "Defines the DataLabelVisibilities Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":seriesName",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "seriesName"
+        },
+        {
+          "QName": ":categoryName",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "categoryName"
+        },
+        {
+          "QName": ":value",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "value"
+        }
+      ]
+    },
+    {
+      "Name": "xsd:string/cx:separator",
+      "ClassName": "SeparatorXsdstring",
+      "Summary": "Defines the SeparatorXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:oddHeader",
+      "ClassName": "OddHeaderXsdstring",
+      "Summary": "Defines the OddHeaderXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:oddFooter",
+      "ClassName": "OddFooterXsdstring",
+      "Summary": "Defines the OddFooterXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:evenHeader",
+      "ClassName": "EvenHeaderXsdstring",
+      "Summary": "Defines the EvenHeaderXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:evenFooter",
+      "ClassName": "EvenFooterXsdstring",
+      "Summary": "Defines the EvenFooterXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:firstHeader",
+      "ClassName": "FirstHeaderXsdstring",
+      "Summary": "Defines the FirstHeaderXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:firstFooter",
+      "ClassName": "FirstFooterXsdstring",
+      "Summary": "Defines the FirstFooterXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:v",
+      "ClassName": "VXsdstring",
+      "Summary": "Cached text.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "cx:CT_DataLabel/cx:dataLabel",
+      "ClassName": "DataLabel",
+      "Summary": "Defines the DataLabel Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":idx",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "idx",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":pos",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "pos"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_NumberFormat/cx:numFmt",
+          "PropertyName": "NumberFormat"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextBody/cx:txPr",
+          "PropertyName": "TxPrTextBody"
+        },
+        {
+          "Name": "cx:CT_DataLabelVisibilities/cx:visibility",
+          "PropertyName": "DataLabelVisibilities"
+        },
+        {
+          "Name": "xsd:string/cx:separator",
+          "PropertyName": "SeparatorXsdstring"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_NumberFormat/cx:numFmt",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_TextBody/cx:txPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_DataLabelVisibilities/cx:visibility",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "xsd:string/cx:separator",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_DataLabelHidden/cx:dataLabelHidden",
+      "ClassName": "DataLabelHidden",
+      "Summary": "Defines the DataLabelHidden Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":idx",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "idx",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_DataPoint/cx:dataPt",
+      "ClassName": "DataPoint",
+      "Summary": "Defines the DataPoint Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":idx",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "idx",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_DataLabels/cx:dataLabels",
+      "ClassName": "DataLabels",
+      "Summary": "Defines the DataLabels Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":pos",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "pos"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_NumberFormat/cx:numFmt",
+          "PropertyName": "NumberFormat"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextBody/cx:txPr",
+          "PropertyName": "TxPrTextBody"
+        },
+        {
+          "Name": "cx:CT_DataLabelVisibilities/cx:visibility",
+          "PropertyName": "DataLabelVisibilities"
+        },
+        {
+          "Name": "xsd:string/cx:separator",
+          "PropertyName": "SeparatorXsdstring"
+        },
+        {
+          "Name": "cx:CT_DataLabel/cx:dataLabel"
+        },
+        {
+          "Name": "cx:CT_DataLabelHidden/cx:dataLabelHidden"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_NumberFormat/cx:numFmt",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_TextBody/cx:txPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_DataLabelVisibilities/cx:visibility",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "xsd:string/cx:separator",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_DataLabel/cx:dataLabel",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_DataLabelHidden/cx:dataLabelHidden",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_DataId/cx:dataId",
+      "ClassName": "DataId",
+      "Summary": "Defines the DataId Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_SeriesLayoutProperties/cx:layoutPr",
+      "ClassName": "SeriesLayoutProperties",
+      "Summary": "Defines the SeriesLayoutProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_ParentLabelLayout/cx:parentLabelLayout",
+          "PropertyName": "ParentLabelLayout"
+        },
+        {
+          "Name": "cx:CT_SeriesElementVisibilities/cx:visibility",
+          "PropertyName": "SeriesElementVisibilities"
+        },
+        {
+          "Name": "cx:CT_Aggregation/cx:aggregation"
+        },
+        {
+          "Name": "cx:CT_Binning/cx:binning"
+        },
+        {
+          "Name": "cx:CT_Statistics/cx:statistics"
+        },
+        {
+          "Name": "cx:CT_Subtotals/cx:subtotals"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_ParentLabelLayout/cx:parentLabelLayout",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_SeriesElementVisibilities/cx:visibility",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Name": "cx:CT_Aggregation/cx:aggregation",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ],
+                "InitialVersion": "Office2016"
+              },
+              {
+                "Name": "cx:CT_Binning/cx:binning",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ],
+                "InitialVersion": "Office2016"
+              }
+            ]
+          },
+          {
+            "Name": "cx:CT_Statistics/cx:statistics",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_Subtotals/cx:subtotals",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:ST_AxisId/cx:axisId",
+      "ClassName": "AxisId",
+      "Summary": "Defines the AxisId Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2016",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "cx:ST_AxisId",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_PlotSurface/cx:plotSurface",
+      "ClassName": "PlotSurface",
+      "Summary": "Defines the PlotSurface Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_Series/cx:series",
+      "ClassName": "Series",
+      "Summary": "Defines the Series Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":layoutId",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayout\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "layoutId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":hidden",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "hidden"
+        },
+        {
+          "QName": ":ownerIdx",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "ownerIdx"
+        },
+        {
+          "QName": ":uniqueId",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "uniqueId"
+        },
+        {
+          "QName": ":formatIdx",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "formatIdx"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_Text/cx:tx",
+          "PropertyName": "Text"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "cx:CT_DataPoint/cx:dataPt"
+        },
+        {
+          "Name": "cx:CT_DataLabels/cx:dataLabels"
+        },
+        {
+          "Name": "cx:CT_DataId/cx:dataId"
+        },
+        {
+          "Name": "cx:CT_SeriesLayoutProperties/cx:layoutPr"
+        },
+        {
+          "Name": "cx:ST_AxisId/cx:axisId"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_Text/cx:tx",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_DataPoint/cx:dataPt",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_DataLabels/cx:dataLabels",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_DataId/cx:dataId",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_SeriesLayoutProperties/cx:layoutPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:ST_AxisId/cx:axisId",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_PlotAreaRegion/cx:plotAreaRegion",
+      "ClassName": "PlotAreaRegion",
+      "Summary": "Defines the PlotAreaRegion Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_PlotSurface/cx:plotSurface",
+          "PropertyName": "PlotSurface"
+        },
+        {
+          "Name": "cx:CT_Series/cx:series"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_PlotSurface/cx:plotSurface",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_Series/cx:series",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_Axis/cx:axis",
+      "ClassName": "Axis",
+      "Summary": "Defines the Axis Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":hidden",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "hidden"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_CategoryAxisScaling/cx:catScaling"
+        },
+        {
+          "Name": "cx:CT_ValueAxisScaling/cx:valScaling"
+        },
+        {
+          "Name": "cx:CT_AxisTitle/cx:title"
+        },
+        {
+          "Name": "cx:CT_AxisUnits/cx:units"
+        },
+        {
+          "Name": "cx:CT_Gridlines/cx:majorGridlines"
+        },
+        {
+          "Name": "cx:CT_Gridlines/cx:minorGridlines"
+        },
+        {
+          "Name": "cx:CT_TickMarks/cx:majorTickMarks"
+        },
+        {
+          "Name": "cx:CT_TickMarks/cx:minorTickMarks"
+        },
+        {
+          "Name": "cx:CT_TickLabels/cx:tickLabels"
+        },
+        {
+          "Name": "cx:CT_NumberFormat/cx:numFmt"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr"
+        },
+        {
+          "Name": "a:CT_TextBody/cx:txPr"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "cx:CT_CategoryAxisScaling/cx:catScaling",
+                "InitialVersion": "Office2016"
+              },
+              {
+                "Name": "cx:CT_ValueAxisScaling/cx:valScaling",
+                "InitialVersion": "Office2016"
+              }
+            ]
+          },
+          {
+            "Name": "cx:CT_AxisTitle/cx:title",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_AxisUnits/cx:units",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_Gridlines/cx:majorGridlines",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_Gridlines/cx:minorGridlines",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_TickMarks/cx:majorTickMarks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_TickMarks/cx:minorTickMarks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_TickLabels/cx:tickLabels",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_NumberFormat/cx:numFmt",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_TextBody/cx:txPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_ChartTitle/cx:title",
+      "ClassName": "ChartTitle",
+      "Summary": "Defines the ChartTitle Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":pos",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "pos"
+        },
+        {
+          "QName": ":align",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "align"
+        },
+        {
+          "QName": ":overlay",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "overlay"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_Text/cx:tx",
+          "PropertyName": "Text"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextBody/cx:txPr",
+          "PropertyName": "TxPrTextBody"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_Text/cx:tx",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_TextBody/cx:txPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_PlotArea/cx:plotArea",
+      "ClassName": "PlotArea",
+      "Summary": "Defines the PlotArea Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_PlotAreaRegion/cx:plotAreaRegion",
+          "PropertyName": "PlotAreaRegion"
+        },
+        {
+          "Name": "cx:CT_Axis/cx:axis"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_PlotAreaRegion/cx:plotAreaRegion",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_Axis/cx:axis",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_Legend/cx:legend",
+      "ClassName": "Legend",
+      "Summary": "Defines the Legend Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":pos",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "pos"
+        },
+        {
+          "QName": ":align",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "align"
+        },
+        {
+          "QName": ":overlay",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "overlay"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "a:CT_TextBody/cx:txPr",
+          "PropertyName": "TxPrTextBody"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_TextBody/cx:txPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_HeaderFooter/cx:headerFooter",
+      "ClassName": "HeaderFooter",
+      "Summary": "Defines the HeaderFooter Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":alignWithMargins",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "alignWithMargins"
+        },
+        {
+          "QName": ":differentOddEven",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "differentOddEven"
+        },
+        {
+          "QName": ":differentFirst",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "differentFirst"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xsd:string/cx:oddHeader",
+          "PropertyName": "OddHeaderXsdstring"
+        },
+        {
+          "Name": "xsd:string/cx:oddFooter",
+          "PropertyName": "OddFooterXsdstring"
+        },
+        {
+          "Name": "xsd:string/cx:evenHeader",
+          "PropertyName": "EvenHeaderXsdstring"
+        },
+        {
+          "Name": "xsd:string/cx:evenFooter",
+          "PropertyName": "EvenFooterXsdstring"
+        },
+        {
+          "Name": "xsd:string/cx:firstHeader",
+          "PropertyName": "FirstHeaderXsdstring"
+        },
+        {
+          "Name": "xsd:string/cx:firstFooter",
+          "PropertyName": "FirstFooterXsdstring"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xsd:string/cx:oddHeader",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "xsd:string/cx:oddFooter",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "xsd:string/cx:evenHeader",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "xsd:string/cx:evenFooter",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "xsd:string/cx:firstHeader",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "xsd:string/cx:firstFooter",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_PageMargins/cx:pageMargins",
+      "ClassName": "PageMargins",
+      "Summary": "Defines the PageMargins Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":l",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "l",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":r",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "r",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":t",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "t",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":b",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "b",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":header",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "header",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":footer",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "footer",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_PageSetup/cx:pageSetup",
+      "ClassName": "PageSetup",
+      "Summary": "Defines the PageSetup Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":paperSize",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "paperSize"
+        },
+        {
+          "QName": ":firstPageNumber",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "firstPageNumber"
+        },
+        {
+          "QName": ":orientation",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageOrientation\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "orientation"
+        },
+        {
+          "QName": ":blackAndWhite",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "blackAndWhite"
+        },
+        {
+          "QName": ":draft",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "draft"
+        },
+        {
+          "QName": ":useFirstPageNumber",
+          "Type": "BooleanValue",
+          "Version": "Office2016",
+          "PropertyComments": "useFirstPageNumber"
+        },
+        {
+          "QName": ":horizontalDpi",
+          "Type": "Int32Value",
+          "Version": "Office2016",
+          "PropertyComments": "horizontalDpi"
+        },
+        {
+          "QName": ":verticalDpi",
+          "Type": "Int32Value",
+          "Version": "Office2016",
+          "PropertyComments": "verticalDpi"
+        },
+        {
+          "QName": ":copies",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "copies"
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_ChartData/cx:chartData",
+      "ClassName": "ChartData",
+      "Summary": "Defines the ChartData Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_ExternalData/cx:externalData",
+          "PropertyName": "ExternalData"
+        },
+        {
+          "Name": "cx:CT_Data/cx:data"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_ExternalData/cx:externalData",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_Data/cx:data",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_Chart/cx:chart",
+      "ClassName": "Chart",
+      "Summary": "Defines the Chart Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_ChartTitle/cx:title",
+          "PropertyName": "ChartTitle"
+        },
+        {
+          "Name": "cx:CT_PlotArea/cx:plotArea",
+          "PropertyName": "PlotArea"
+        },
+        {
+          "Name": "cx:CT_Legend/cx:legend",
+          "PropertyName": "Legend"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_ChartTitle/cx:title",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_PlotArea/cx:plotArea",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_Legend/cx:legend",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_ColorMapping/cx:clrMapOvr",
+      "ClassName": "ColorMappingType",
+      "Summary": "Defines the ColorMappingType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":bg1",
+          "PropertyName": "Background1",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Background 1",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":tx1",
+          "PropertyName": "Text1",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Text 1",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":bg2",
+          "PropertyName": "Background2",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Background 2",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":tx2",
+          "PropertyName": "Text2",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Text 2",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":accent1",
+          "PropertyName": "Accent1",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Accent 1",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":accent2",
+          "PropertyName": "Accent2",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Accent 2",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":accent3",
+          "PropertyName": "Accent3",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Accent 3",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":accent4",
+          "PropertyName": "Accent4",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Accent 4",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":accent5",
+          "PropertyName": "Accent5",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Accent 5",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":accent6",
+          "PropertyName": "Accent6",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Accent 6",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":hlink",
+          "PropertyName": "Hyperlink",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Hyperlink",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":folHlink",
+          "PropertyName": "FollowedHyperlink",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Followed Hyperlink",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_PrintSettings/cx:printSettings",
+      "ClassName": "PrintSettings",
+      "Summary": "Defines the PrintSettings Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_HeaderFooter/cx:headerFooter",
+          "PropertyName": "HeaderFooter"
+        },
+        {
+          "Name": "cx:CT_PageMargins/cx:pageMargins",
+          "PropertyName": "PageMargins"
+        },
+        {
+          "Name": "cx:CT_PageSetup/cx:pageSetup",
+          "PropertyName": "PageSetup"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_HeaderFooter/cx:headerFooter",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_PageMargins/cx:pageMargins",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_PageSetup/cx:pageSetup",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_Formula/cx:f",
+      "ClassName": "Formula",
+      "Summary": "Data reference.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":dir",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormulaDirection\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "dir"
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_StringLevel/cx:lvl",
+      "ClassName": "StringLevel",
+      "Summary": "Optional cached data.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":ptCount",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "ptCount",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_StringValue/cx:pt"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_StringValue/cx:pt",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_NumericLevel/cx:lvl",
+      "ClassName": "NumericLevel",
+      "Summary": "Optional cached data.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":ptCount",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "ptCount",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":formatCode",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "formatCode"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_NumericValue/cx:pt"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_NumericValue/cx:pt",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_UnsignedInt/cx:idx",
+      "ClassName": "UnsignedIntegerType",
+      "Summary": "Index of subtotal data point.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "UInt32Value",
+          "PropertyComments": "Integer Value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "cx:ST_FormulaDirection",
+      "Name": "FormulaDirection",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "col"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "row"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_StringDimensionType",
+      "Name": "StringDimensionType",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "cat"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_NumericDimensionType",
+      "Name": "NumericDimensionType",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "val"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "x"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "y"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "size"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_SidePos",
+      "Name": "SidePos",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "l"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "t"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "r"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "b"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_PosAlign",
+      "Name": "PosAlign",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "min"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "ctr"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "max"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_AxisUnit",
+      "Name": "AxisUnit",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "hundreds"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "thousands"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "tenThousands"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "hundredThousands"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "millions"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "tenMillions"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "hundredMillions"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "billions"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "trillions"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "percentage"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_TickMarksType",
+      "Name": "TickMarksType",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "in"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "out"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "cross"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "none"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_SeriesLayout",
+      "Name": "SeriesLayout",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "boxWhisker"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "clusteredColumn"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "paretoLine"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "sunburst"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "treemap"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "waterfall"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_ParentLabelLayout",
+      "Name": "ParentLabelLayoutVal",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "none"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "banner"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "overlapping"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_IntervalClosedSide",
+      "Name": "IntervalClosedSide",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "l"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "r"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_QuartileMethod",
+      "Name": "QuartileMethod",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "inclusive"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "exclusive"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_DataLabelPos",
+      "Name": "DataLabelPos",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "bestFit"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "b"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "ctr"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "inBase"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "inEnd"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "l"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "outEnd"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "r"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "t"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_PageOrientation",
+      "Name": "PageOrientation",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "default"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "portrait"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "landscape"
+        }
+      ],
+      "Version": "Office2016"
+    }
+  ]
+}

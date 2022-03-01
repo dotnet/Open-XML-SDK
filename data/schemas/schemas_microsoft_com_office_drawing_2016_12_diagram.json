@@ -1,0 +1,360 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2016/12/diagram",
+  "Types": [
+    {
+      "Name": "a:CT_ShapeProperties/dgm1612:spPr",
+      "ClassName": "ShapeProperties",
+      "Summary": "Defines the ShapeProperties Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": ":bwMode",
+          "PropertyName": "BlackWhiteMode",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "PropertyComments": "Black and White Mode",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_Transform2D/a:xfrm",
+          "PropertyName": "Transform2D",
+          "PropertyComments": "2D Transform for Individual Objects"
+        },
+        {
+          "Name": "a:CT_CustomGeometry2D/a:custGeom"
+        },
+        {
+          "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+        },
+        {
+          "Name": "a:CT_NoFillProperties/a:noFill"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+        },
+        {
+          "Name": "a:CT_GradientFillProperties/a:gradFill"
+        },
+        {
+          "Name": "a:CT_BlipFillProperties/a:blipFill"
+        },
+        {
+          "Name": "a:CT_PatternFillProperties/a:pattFill"
+        },
+        {
+          "Name": "a:CT_GroupFillProperties/a:grpFill"
+        },
+        {
+          "Name": "a:CT_LineProperties/a:ln"
+        },
+        {
+          "Name": "a:CT_EffectList/a:effectLst"
+        },
+        {
+          "Name": "a:CT_EffectContainer/a:effectDag"
+        },
+        {
+          "Name": "a:CT_Scene3D/a:scene3d"
+        },
+        {
+          "Name": "a:CT_Shape3D/a:sp3d"
+        },
+        {
+          "Name": "a:CT_ShapePropertiesExtensionList/a:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_Transform2D/a:xfrm",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_CustomGeometry2D/a:custGeom"
+                  },
+                  {
+                    "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_NoFillProperties/a:noFill"
+                  },
+                  {
+                    "Name": "a:CT_SolidColorFillProperties/a:solidFill"
+                  },
+                  {
+                    "Name": "a:CT_GradientFillProperties/a:gradFill"
+                  },
+                  {
+                    "Name": "a:CT_BlipFillProperties/a:blipFill"
+                  },
+                  {
+                    "Name": "a:CT_PatternFillProperties/a:pattFill"
+                  },
+                  {
+                    "Name": "a:CT_GroupFillProperties/a:grpFill"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_LineProperties/a:ln",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_EffectList/a:effectLst"
+                  },
+                  {
+                    "Name": "a:CT_EffectContainer/a:effectDag"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Scene3D/a:scene3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Shape3D/a:sp3d",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_ShapePropertiesExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_TextListStyle/dgm1612:lstStyle",
+      "ClassName": "TextListStyleType",
+      "Summary": "Defines the TextListStyleType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "a:CT_TextParagraphProperties/a:defPPr",
+          "PropertyName": "DefaultParagraphProperties",
+          "PropertyComments": "Default Paragraph Style"
+        },
+        {
+          "Name": "a:CT_TextParagraphProperties/a:lvl1pPr",
+          "PropertyName": "Level1ParagraphProperties",
+          "PropertyComments": "List Level 1 Text Style"
+        },
+        {
+          "Name": "a:CT_TextParagraphProperties/a:lvl2pPr",
+          "PropertyName": "Level2ParagraphProperties",
+          "PropertyComments": "List Level 2 Text Style"
+        },
+        {
+          "Name": "a:CT_TextParagraphProperties/a:lvl3pPr",
+          "PropertyName": "Level3ParagraphProperties",
+          "PropertyComments": "List Level 3 Text Style"
+        },
+        {
+          "Name": "a:CT_TextParagraphProperties/a:lvl4pPr",
+          "PropertyName": "Level4ParagraphProperties",
+          "PropertyComments": "List Level 4 Text Style"
+        },
+        {
+          "Name": "a:CT_TextParagraphProperties/a:lvl5pPr",
+          "PropertyName": "Level5ParagraphProperties",
+          "PropertyComments": "List Level 5 Text Style"
+        },
+        {
+          "Name": "a:CT_TextParagraphProperties/a:lvl6pPr",
+          "PropertyName": "Level6ParagraphProperties",
+          "PropertyComments": "List Level 6 Text Style"
+        },
+        {
+          "Name": "a:CT_TextParagraphProperties/a:lvl7pPr",
+          "PropertyName": "Level7ParagraphProperties",
+          "PropertyComments": "List Level 7 Text Style"
+        },
+        {
+          "Name": "a:CT_TextParagraphProperties/a:lvl8pPr",
+          "PropertyName": "Level8ParagraphProperties",
+          "PropertyComments": "List Level 8 Text Style"
+        },
+        {
+          "Name": "a:CT_TextParagraphProperties/a:lvl9pPr",
+          "PropertyName": "Level9ParagraphProperties",
+          "PropertyComments": "List Level 9 Text Style"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_TextParagraphProperties/a:defPPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextParagraphProperties/a:lvl1pPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextParagraphProperties/a:lvl2pPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextParagraphProperties/a:lvl3pPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextParagraphProperties/a:lvl4pPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextParagraphProperties/a:lvl5pPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextParagraphProperties/a:lvl6pPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextParagraphProperties/a:lvl7pPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextParagraphProperties/a:lvl8pPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextParagraphProperties/a:lvl9pPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

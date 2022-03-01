@@ -1,5 +1,11 @@
 <Project>
   <ItemGroup>
     <OpenXmlDataNamespace Include="$(MSBuildThisFileDirectory)namespaces.json" />
+    <OpenXmlDataSchematron Include="$(MSBuildThisFileDirectory)schematrons.json" />
+    <OpenXmlDataPart Include="$(MSBuildThisFileDirectory)parts/**/*.json" />
+    <OpenXmlDataSchema Include="$(MSBuildThisFileDirectory)schemas/**/*.json" />
+    <OpenXmlDataTypedNamespace Include="$(MSBuildThisFileDirectory)typed/namespaces.json" />
+    <OpenXmlDataTypedSchema Include="$(MSBuildThisFileDirectory)typed/**/*.json" />
+    <OpenXmlDataTypedSchema Remove="@(OpenXmlDataTypedNamespace)" />
   </ItemGroup>
 </Project>

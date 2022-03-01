@@ -1,0 +1,544 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/excel/2006/main",
+  "Types": [
+    {
+      "Name": "x:CT_Macrosheet/xne:macrosheet",
+      "ClassName": "Macrosheet",
+      "Summary": "Defines the Macrosheet Class.",
+      "Part": "MacroSheetPart",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "x:CT_SheetPr/x:sheetPr",
+          "PropertyName": "SheetProperties",
+          "PropertyComments": "Sheet Properties"
+        },
+        {
+          "Name": "x:CT_SheetDimension/x:dimension",
+          "PropertyName": "SheetDimension",
+          "PropertyComments": "Macro Sheet Dimensions"
+        },
+        {
+          "Name": "x:CT_SheetViews/x:sheetViews",
+          "PropertyName": "SheetViews",
+          "PropertyComments": "Macro Sheet Views"
+        },
+        {
+          "Name": "x:CT_SheetFormatPr/x:sheetFormatPr",
+          "PropertyName": "SheetFormatProperties",
+          "PropertyComments": "Sheet Format Properties"
+        },
+        {
+          "Name": "x:CT_Cols/x:cols"
+        },
+        {
+          "Name": "x:CT_SheetData/x:sheetData"
+        },
+        {
+          "Name": "x:CT_SheetProtection/x:sheetProtection"
+        },
+        {
+          "Name": "x:CT_AutoFilter/x:autoFilter"
+        },
+        {
+          "Name": "x:CT_SortState/x:sortState"
+        },
+        {
+          "Name": "x:CT_DataConsolidate/x:dataConsolidate"
+        },
+        {
+          "Name": "x:CT_CustomSheetViews/x:customSheetViews"
+        },
+        {
+          "Name": "x:CT_PhoneticPr/x:phoneticPr"
+        },
+        {
+          "Name": "x:CT_ConditionalFormatting/x:conditionalFormatting"
+        },
+        {
+          "Name": "x:CT_PrintOptions/x:printOptions"
+        },
+        {
+          "Name": "x:CT_PageMargins/x:pageMargins"
+        },
+        {
+          "Name": "x:CT_PageSetup/x:pageSetup"
+        },
+        {
+          "Name": "x:CT_HeaderFooter/x:headerFooter"
+        },
+        {
+          "Name": "x:CT_PageBreak/x:rowBreaks"
+        },
+        {
+          "Name": "x:CT_PageBreak/x:colBreaks"
+        },
+        {
+          "Name": "x:CT_CustomProperties/x:customProperties"
+        },
+        {
+          "Name": "x:CT_Drawing/x:drawing"
+        },
+        {
+          "Name": "x:CT_LegacyDrawing/x:legacyDrawing"
+        },
+        {
+          "Name": "x:CT_LegacyDrawing/x:legacyDrawingHF"
+        },
+        {
+          "Name": "x:CT_SheetBackgroundPicture/x:picture"
+        },
+        {
+          "Name": "x:CT_OleObjects/x:oleObjects"
+        },
+        {
+          "Name": "x:CT_DrawingHF/x:drawingHF"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_SheetPr/x:sheetPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_SheetDimension/x:dimension",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_SheetViews/x:sheetViews",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_SheetFormatPr/x:sheetFormatPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_Cols/x:cols",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "x:CT_SheetData/x:sheetData"
+          },
+          {
+            "Name": "x:CT_SheetProtection/x:sheetProtection",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_AutoFilter/x:autoFilter",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_SortState/x:sortState",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_DataConsolidate/x:dataConsolidate",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_CustomSheetViews/x:customSheetViews",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_PhoneticPr/x:phoneticPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_ConditionalFormatting/x:conditionalFormatting",
+            "Occurs": [
+              {}
+            ]
+          },
+          {
+            "Name": "x:CT_PrintOptions/x:printOptions",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_PageMargins/x:pageMargins",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_PageSetup/x:pageSetup",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_HeaderFooter/x:headerFooter",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_PageBreak/x:rowBreaks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_PageBreak/x:colBreaks",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_CustomProperties/x:customProperties",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_Drawing/x:drawing",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_LegacyDrawing/x:legacyDrawing",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_LegacyDrawing/x:legacyDrawingHF",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_SheetBackgroundPicture/x:picture",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_OleObjects/x:oleObjects",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_DrawingHF/x:drawingHF",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x:CT_ExtensionList/x:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xne:CT_WorksheetSortMap/xne:worksheetSortMap",
+      "ClassName": "WorksheetSortMap",
+      "Summary": "Worksheet Sort Map.",
+      "Part": "WorksheetSortMapPart",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "xne:CT_RowSortMap/xne:rowSortMap",
+          "PropertyName": "RowSortMap",
+          "PropertyComments": "Row Sort Map"
+        },
+        {
+          "Name": "xne:CT_ColSortMap/xne:colSortMap",
+          "PropertyName": "ColumnSortMap",
+          "PropertyComments": "Column Sort Map"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xne:CT_RowSortMap/xne:rowSortMap",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "xne:CT_ColSortMap/xne:colSortMap",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xne:ST_Sqref/xne:sqref",
+      "ClassName": "ReferenceSequence",
+      "Summary": "Defines the ReferenceSequence Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2010",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "IsList": true,
+          "Type": "xne:ST_Ref",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "x:ST_Formula/xne:f",
+      "ClassName": "Formula",
+      "Summary": "Defines the Formula Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2010"
+    },
+    {
+      "Name": "xne:CT_RowSortMap/xne:rowSortMap",
+      "ClassName": "RowSortMap",
+      "Summary": "Row Sort Map.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":ref",
+          "PropertyName": "Ref",
+          "Type": "StringValue",
+          "PropertyComments": "Reference",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Count",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "536870910"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xne:CT_SortMapItem/xne:row"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xne:CT_SortMapItem/xne:row",
+            "Occurs": [
+              {
+                "Min": 1,
+                "Max": 536870910
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xne:CT_ColSortMap/xne:colSortMap",
+      "ClassName": "ColumnSortMap",
+      "Summary": "Column Sort Map.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":ref",
+          "PropertyName": "Ref",
+          "Type": "StringValue",
+          "PropertyComments": "Reference",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Count",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "536870910"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xne:CT_SortMapItem/xne:col"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xne:CT_SortMapItem/xne:col",
+            "Occurs": [
+              {
+                "Min": 1,
+                "Max": 536870910
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xne:CT_SortMapItem/xne:row",
+      "ClassName": "RowSortMapItem",
+      "Summary": "Row.",
+      "BaseClass": "SortMapItemType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "xne:CT_SortMapItem/xne:col",
+      "ClassName": "ColumnSortMapItem",
+      "Summary": "Column.",
+      "BaseClass": "SortMapItemType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "xne:CT_SortMapItem/",
+      "ClassName": "SortMapItemType",
+      "Summary": "Defines the SortMapItemType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":newVal",
+          "PropertyName": "NewVal",
+          "Type": "UInt32Value",
+          "PropertyComments": "New Value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":oldVal",
+          "PropertyName": "OldVal",
+          "Type": "UInt32Value",
+          "PropertyComments": "Old Value",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

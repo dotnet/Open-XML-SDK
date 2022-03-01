@@ -1,0 +1,19 @@
+{
+  "Root": "x:CT_PivotCacheDefinition",
+  "Name": "PivotTableCacheDefinitionPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition",
+  "Target": "pivotCacheDefinition",
+  "RootElement": "pivotCacheDefinition",
+  "Paths": {
+    "General": "../pivotCache"
+  },
+  "Children": [
+    {
+      "ApiName": "PivotTableCacheRecordsPart",
+      "Name": "PivotTableCacheRecordsPart",
+      "HasFixedContent": true
+    }
+  ]
+}

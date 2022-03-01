@@ -1,0 +1,13 @@
+{
+  "Root": "cs:CT_ColorStyle",
+  "Name": "ChartColorStylePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-office.chartcolorstyle\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle",
+  "Target": "colors",
+  "RootElement": "colorStyle",
+  "Paths": {
+    "General": "."
+  },
+  "Version": "Office2013"
+}

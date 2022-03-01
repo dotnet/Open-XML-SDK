@@ -1,0 +1,246 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2018/sketchyshapes",
+  "Types": [
+    {
+      "Name": "ask:CT_Empty/ask:lineSketchNone",
+      "ClassName": "LineSketchNoneEmpty",
+      "Summary": "Defines the LineSketchNoneEmpty Class.",
+      "BaseClass": "OpenXmlEmptyElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "ask:CT_Empty/ask:lineSketchCurved",
+      "ClassName": "LineSketchCurvedEmpty",
+      "Summary": "Defines the LineSketchCurvedEmpty Class.",
+      "BaseClass": "OpenXmlEmptyElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "ask:CT_Empty/ask:lineSketchFreehand",
+      "ClassName": "LineSketchFreehandEmpty",
+      "Summary": "Defines the LineSketchFreehandEmpty Class.",
+      "BaseClass": "OpenXmlEmptyElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "ask:CT_Empty/ask:lineSketchScribble",
+      "ClassName": "LineSketchScribbleEmpty",
+      "Summary": "Defines the LineSketchScribbleEmpty Class.",
+      "BaseClass": "OpenXmlEmptyElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "ask:CT_Empty/",
+      "ClassName": "OpenXmlEmptyElement",
+      "Summary": "Defines the OpenXmlEmptyElement Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "ask:CT_LineSketchStyleProperties/ask:lineSketchStyleProps",
+      "ClassName": "LineSketchStyleProperties",
+      "Summary": "Defines the LineSketchStyleProperties Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":sd",
+          "Type": "UInt32Value",
+          "Version": "Office2021",
+          "PropertyComments": "sd"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_CustomGeometry2D/a:custGeom"
+        },
+        {
+          "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+        },
+        {
+          "Name": "ask:CT_LineSketchTypeProperties/ask:type"
+        },
+        {
+          "Name": "ask:ST_LineSketchSeed/ask:seed"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/ask:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_CustomGeometry2D/a:custGeom"
+                  },
+                  {
+                    "Name": "a:CT_PresetGeometry2D/a:prstGeom"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "ask:CT_LineSketchTypeProperties/ask:type",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "ask:ST_LineSketchSeed/ask:seed",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/ask:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "ask:CT_LineSketchTypeProperties/ask:type",
+      "ClassName": "LineSketchTypeProperties",
+      "Summary": "Defines the LineSketchTypeProperties Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "ask:CT_Empty/ask:lineSketchNone",
+          "PropertyName": "LineSketchNoneEmpty"
+        },
+        {
+          "Name": "ask:CT_Empty/ask:lineSketchCurved",
+          "PropertyName": "LineSketchCurvedEmpty"
+        },
+        {
+          "Name": "ask:CT_Empty/ask:lineSketchFreehand",
+          "PropertyName": "LineSketchFreehandEmpty"
+        },
+        {
+          "Name": "ask:CT_Empty/ask:lineSketchScribble",
+          "PropertyName": "LineSketchScribbleEmpty"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "ask:CT_Empty/ask:lineSketchNone",
+                    "InitialVersion": "Office2021"
+                  },
+                  {
+                    "Name": "ask:CT_Empty/ask:lineSketchCurved",
+                    "InitialVersion": "Office2021"
+                  },
+                  {
+                    "Name": "ask:CT_Empty/ask:lineSketchFreehand",
+                    "InitialVersion": "Office2021"
+                  },
+                  {
+                    "Name": "ask:CT_Empty/ask:lineSketchScribble",
+                    "InitialVersion": "Office2021"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "ask:ST_LineSketchSeed/ask:seed",
+      "ClassName": "LineSketchSeed",
+      "Summary": "Defines the LineSketchSeed Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2021",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "ask:ST_LineSketchSeed",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_OfficeArtExtensionList/ask:extLst",
+      "ClassName": "OfficeArtExtensionList",
+      "Summary": "Defines the OfficeArtExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_OfficeArtExtension/a:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

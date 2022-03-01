@@ -1,0 +1,42 @@
+[
+  {
+    "Name": "a:CT_TextBodyProperties/wps:bodyPr",
+    "ClassName": "TextBodyProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualConnectorProperties/wps:cNvCnPr",
+    "ClassName": "NonVisualConnectorProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/wps:cNvPr",
+    "ClassName": "NonVisualDrawingProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingShapeProps/wps:cNvSpPr",
+    "ClassName": "NonVisualDrawingShapeProperties"
+  },
+  {
+    "Name": "a:CT_OfficeArtExtensionList/wps:extLst",
+    "ClassName": "OfficeArtExtensionList"
+  },
+  {
+    "Name": "wps:CT_LinkedTextboxInformation/wps:linkedTxbx",
+    "ClassName": "LinkedTextBox"
+  },
+  {
+    "Name": "a:CT_ShapeProperties/wps:spPr",
+    "ClassName": "ShapeProperties"
+  },
+  {
+    "Name": "a:CT_ShapeStyle/wps:style",
+    "ClassName": "ShapeStyle"
+  },
+  {
+    "Name": "wps:CT_TextboxInfo/wps:txbx",
+    "ClassName": "TextBoxInfo2"
+  },
+  {
+    "Name": "wps:CT_WordprocessingShape/wps:wsp",
+    "ClassName": "WordprocessingShape"
+  }
+]

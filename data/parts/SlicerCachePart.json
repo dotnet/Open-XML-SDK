@@ -1,0 +1,13 @@
+{
+  "Root": "x14:CT_SlicerCacheDefinition",
+  "Name": "SlicerCachePart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.slicerCache\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/slicerCache",
+  "Target": "slicerCache",
+  "RootElement": "slicerCacheDefinition",
+  "Paths": {
+    "General": "slicerCaches"
+  },
+  "Version": "Office2010"
+}

@@ -1,0 +1,12 @@
+{
+  "Root": "x:CT_VolTypes",
+  "Name": "VolatileDependenciesPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.volatileDependencies\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/volatileDependencies",
+  "Target": "volatileDependencies",
+  "RootElement": "volTypes",
+  "Paths": {
+    "General": "."
+  }
+}

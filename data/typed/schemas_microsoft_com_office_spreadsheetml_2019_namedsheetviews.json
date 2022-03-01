@@ -1,0 +1,47 @@
+[
+  {
+    "Name": "xnsv:CT_ColumnFilter/xnsv:columnFilter",
+    "ClassName": "ColumnFilter"
+  },
+  {
+    "Name": "x:CT_Dxf/xnsv:dxf",
+    "ClassName": "DifferentialFormatType"
+  },
+  {
+    "Name": "x:CT_ExtensionList/xnsv:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "x:CT_FilterColumn/xnsv:filter",
+    "ClassName": "FilterColumn"
+  },
+  {
+    "Name": "xnsv:CT_NamedSheetView/xnsv:namedSheetView",
+    "ClassName": "NamedSheetView"
+  },
+  {
+    "Name": "xnsv:CT_NamedSheetViews/xnsv:namedSheetViews",
+    "ClassName": "NamedSheetViews",
+    "PartClassName": "NamedSheetViewsPart"
+  },
+  {
+    "Name": "xnsv:CT_NsvFilter/xnsv:nsvFilter",
+    "ClassName": "NsvFilter"
+  },
+  {
+    "Name": "xlrd2:CT_RichSortCondition/xnsv:richSortCondition",
+    "ClassName": "RichSortCondition"
+  },
+  {
+    "Name": "x14:CT_SortCondition/xnsv:sortCondition",
+    "ClassName": "SortCondition"
+  },
+  {
+    "Name": "xnsv:CT_SortRule/xnsv:sortRule",
+    "ClassName": "SortRule"
+  },
+  {
+    "Name": "xnsv:CT_SortRules/xnsv:sortRules",
+    "ClassName": "SortRules"
+  }
+]

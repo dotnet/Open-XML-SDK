@@ -1,0 +1,102 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/word/2016/wordml/cid",
+  "Types": [
+    {
+      "Name": "w16cid:CT_CommentsIds/w16cid:commentsIds",
+      "ClassName": "CommentsIds",
+      "Summary": "Defines the CommentsIds Class.",
+      "Part": "WordprocessingCommentsIdsPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2019",
+      "Children": [
+        {
+          "Name": "w16cid:CT_CommentId/w16cid:commentId"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w16cid:CT_CommentId/w16cid:commentId",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w16cid:CT_CommentId/w16cid:commentId",
+      "ClassName": "CommentId",
+      "Summary": "Defines the CommentId Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2019",
+      "Attributes": [
+        {
+          "QName": "w16cid:paraId",
+          "Type": "HexBinaryValue",
+          "Version": "Office2019",
+          "PropertyComments": "paraId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2019"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "4"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": "w16cid:durableId",
+          "Type": "HexBinaryValue",
+          "Version": "Office2019",
+          "PropertyComments": "durableId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2019"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "Length",
+                  "Value": "4"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "Root": "wetp:CT_OsfTaskpanes",
+  "Name": "WebExTaskpanesPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-office.webextensiontaskpanes\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes",
+  "Target": "taskpanes",
+  "RootElement": "taskpanes",
+  "Paths": {
+    "General": "../webextensions",
+    "Word": "word/webextensions",
+    "Excel": "xl/webextensions",
+    "PowerPoint": "ppt/webextensions"
+  },
+  "Version": "Office2013",
+  "Children": [
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "WebExtensionParts",
+      "Name": "WebExtensionPart",
+      "HasFixedContent": true
+    }
+  ]
+}

@@ -1,0 +1,841 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2018/8/main",
+  "Types": [
+    {
+      "Name": "a:CT_TextBody/p188:txBody",
+      "ClassName": "TextBodyType",
+      "Summary": "Defines the TextBodyType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "a:CT_TextBodyProperties/a:bodyPr",
+          "PropertyName": "BodyProperties",
+          "PropertyComments": "Body Properties"
+        },
+        {
+          "Name": "a:CT_TextListStyle/a:lstStyle",
+          "PropertyName": "ListStyle",
+          "PropertyComments": "Text List Styles"
+        },
+        {
+          "Name": "a:CT_TextParagraph/a:p"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_TextBodyProperties/a:bodyPr"
+          },
+          {
+            "Name": "a:CT_TextListStyle/a:lstStyle",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TextParagraph/a:p",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p:CT_ExtensionList/p188:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "p:CT_Extension/p:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "p:CT_Extension/p:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p188:CT_CommentUnknownAnchor/p188:unknownAnchor",
+      "ClassName": "CommentUnknownAnchor",
+      "Summary": "Defines the CommentUnknownAnchor Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021"
+    },
+    {
+      "Name": "p188:CT_AuthorList/p188:authorLst",
+      "ClassName": "AuthorList",
+      "Summary": "Defines the AuthorList Class.",
+      "Part": "PowerPointAuthorsPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "p188:CT_Author/p188:author"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p188:CT_Author/p188:author",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p188:CT_CommentList/p188:cmLst",
+      "ClassName": "CommentList",
+      "Summary": "Defines the CommentList Class.",
+      "Part": "PowerPointCommentPart",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "p188:CT_Comment/p188:cm"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p188:CT_Comment/p188:cm",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p188:CT_CommentRelationship/p188:commentRel",
+      "ClassName": "CommentRelationship",
+      "Summary": "Defines the CommentRelationship Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p188:CT_Author/p188:author",
+      "ClassName": "Author",
+      "Summary": "Defines the Author Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "name",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":initials",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "initials"
+        },
+        {
+          "QName": ":userId",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "userId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":providerId",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "providerId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "p:CT_ExtensionList/p188:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p:CT_ExtensionList/p188:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p188:CT_CommentReply/p188:reply",
+      "ClassName": "CommentReply",
+      "Summary": "Defines the CommentReply Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":authorId",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "authorId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":status",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentStatus\u003E",
+          "Version": "Office2021",
+          "PropertyComments": "status",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":created",
+          "Type": "DateTimeValue",
+          "Version": "Office2021",
+          "PropertyComments": "created",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":tags",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "Version": "Office2021",
+          "PropertyComments": "tags"
+        },
+        {
+          "QName": ":likes",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "Version": "Office2021",
+          "PropertyComments": "likes"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_TextBody/p188:txBody",
+          "PropertyName": "TextBodyType"
+        },
+        {
+          "Name": "p:CT_ExtensionList/p188:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "InitialVersion": "Office2021",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_TextBody/p188:txBody",
+                    "Occurs": [
+                      {
+                        "Max": 1
+                      }
+                    ],
+                    "InitialVersion": "Office2021"
+                  },
+                  {
+                    "Name": "p:CT_ExtensionList/p188:extLst",
+                    "Occurs": [
+                      {
+                        "Max": 1
+                      }
+                    ],
+                    "InitialVersion": "Office2021"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_Point2D/p188:pos",
+      "ClassName": "Point2DType",
+      "Summary": "Defines the Point2DType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":x",
+          "PropertyName": "X",
+          "Type": "Int64Value",
+          "PropertyComments": "X-Axis Coordinate",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":y",
+          "PropertyName": "Y",
+          "Type": "Int64Value",
+          "PropertyComments": "Y-Axis Coordinate",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "-27273042329600"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "27273042316900"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p188:CT_CommentReplyList/p188:replyLst",
+      "ClassName": "CommentReplyList",
+      "Summary": "Defines the CommentReplyList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "p188:CT_CommentReply/p188:reply"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p188:CT_CommentReply/p188:reply",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p188:CT_Comment/p188:cm",
+      "ClassName": "Comment",
+      "Summary": "Defines the Comment Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":authorId",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "authorId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":status",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentStatus\u003E",
+          "Version": "Office2021",
+          "PropertyComments": "status",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":created",
+          "Type": "DateTimeValue",
+          "Version": "Office2021",
+          "PropertyComments": "created",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":tags",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "Version": "Office2021",
+          "PropertyComments": "tags"
+        },
+        {
+          "QName": ":likes",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "Version": "Office2021",
+          "PropertyComments": "likes"
+        },
+        {
+          "QName": ":startDate",
+          "Type": "DateTimeValue",
+          "Version": "Office2021",
+          "PropertyComments": "startDate"
+        },
+        {
+          "QName": ":dueDate",
+          "Type": "DateTimeValue",
+          "Version": "Office2021",
+          "PropertyComments": "dueDate"
+        },
+        {
+          "QName": ":assignedTo",
+          "Type": "ListValue\u003CStringValue\u003E",
+          "Version": "Office2021",
+          "PropertyComments": "assignedTo"
+        },
+        {
+          "QName": ":complete",
+          "Type": "Int32Value",
+          "Version": "Office2021",
+          "PropertyComments": "complete",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "100000"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":priority",
+          "Type": "UInt32Value",
+          "Version": "Office2021",
+          "PropertyComments": "priority",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":title",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "title"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "pc:CT_SlideMonikerList/pc:sldMkLst"
+        },
+        {
+          "Name": "pc:CT_SlideLayoutMonikerList/pc:sldLayoutMkLst"
+        },
+        {
+          "Name": "pc:CT_MainMasterMonikerList/pc:sldMasterMkLst"
+        },
+        {
+          "Name": "oac:CT_DrawingElementMonikerList/oac:deMkLst"
+        },
+        {
+          "Name": "oac:CT_TextBodyMonikerList/oac:txBodyMkLst"
+        },
+        {
+          "Name": "oac:CT_TextCharRangeMonikerList/oac:txMkLst"
+        },
+        {
+          "Name": "oac:CT_TableCellMonikerList/oac:tcMkLst"
+        },
+        {
+          "Name": "oac:CT_TableRowMonikerList/oac:trMkLst"
+        },
+        {
+          "Name": "oac:CT_TableColumnMonikerList/oac:gridColMkLst"
+        },
+        {
+          "Name": "p188:CT_CommentUnknownAnchor/p188:unknownAnchor"
+        },
+        {
+          "Name": "a:CT_Point2D/p188:pos"
+        },
+        {
+          "Name": "p188:CT_CommentReplyList/p188:replyLst"
+        },
+        {
+          "Name": "a:CT_TextBody/p188:txBody"
+        },
+        {
+          "Name": "p:CT_ExtensionList/p188:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "InitialVersion": "Office2021",
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "pc:CT_SlideMonikerList/pc:sldMkLst",
+                    "InitialVersion": "Office2016"
+                  },
+                  {
+                    "Name": "pc:CT_SlideLayoutMonikerList/pc:sldLayoutMkLst",
+                    "InitialVersion": "Office2016"
+                  },
+                  {
+                    "Name": "pc:CT_MainMasterMonikerList/pc:sldMasterMkLst",
+                    "InitialVersion": "Office2016"
+                  },
+                  {
+                    "Name": "oac:CT_DrawingElementMonikerList/oac:deMkLst",
+                    "Occurs": [
+                      {}
+                    ],
+                    "InitialVersion": "Office2016"
+                  },
+                  {
+                    "Name": "oac:CT_TextBodyMonikerList/oac:txBodyMkLst",
+                    "Occurs": [
+                      {}
+                    ],
+                    "InitialVersion": "Office2016"
+                  },
+                  {
+                    "Name": "oac:CT_TextCharRangeMonikerList/oac:txMkLst",
+                    "Occurs": [
+                      {}
+                    ],
+                    "InitialVersion": "Office2016"
+                  },
+                  {
+                    "Name": "oac:CT_TableCellMonikerList/oac:tcMkLst",
+                    "Occurs": [
+                      {}
+                    ],
+                    "InitialVersion": "Office2016"
+                  },
+                  {
+                    "Name": "oac:CT_TableRowMonikerList/oac:trMkLst",
+                    "Occurs": [
+                      {}
+                    ],
+                    "InitialVersion": "Office2016"
+                  },
+                  {
+                    "Name": "oac:CT_TableColumnMonikerList/oac:gridColMkLst",
+                    "Occurs": [
+                      {}
+                    ],
+                    "InitialVersion": "Office2016"
+                  },
+                  {
+                    "Name": "p188:CT_CommentUnknownAnchor/p188:unknownAnchor",
+                    "InitialVersion": "Office2021"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_Point2D/p188:pos",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "p188:CT_CommentReplyList/p188:replyLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Kind": "Group",
+            "InitialVersion": "Office2021",
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "a:CT_TextBody/p188:txBody",
+                    "Occurs": [
+                      {
+                        "Max": 1
+                      }
+                    ],
+                    "InitialVersion": "Office2021"
+                  },
+                  {
+                    "Name": "p:CT_ExtensionList/p188:extLst",
+                    "Occurs": [
+                      {
+                        "Max": 1
+                      }
+                    ],
+                    "InitialVersion": "Office2021"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "p188:ST_CommentStatus",
+      "Name": "CommentStatus",
+      "Facets": [
+        {
+          "Version": "Office2021",
+          "Value": "active"
+        },
+        {
+          "Version": "Office2021",
+          "Value": "resolved"
+        },
+        {
+          "Version": "Office2021",
+          "Value": "closed"
+        }
+      ],
+      "Version": "Office2021"
+    }
+  ]
+}

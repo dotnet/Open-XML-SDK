@@ -1,0 +1,255 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing",
+  "Types": [
+    {
+      "Name": "a:ST_Percentage/wp14:pctPosHOffset",
+      "ClassName": "PercentagePositionHeightOffset",
+      "Summary": "Defines the PercentagePositionHeightOffset Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2010",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "a:ST_Percentage",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "a:ST_Percentage/wp14:pctPosVOffset",
+      "ClassName": "PercentagePositionVerticalOffset",
+      "Summary": "Defines the PercentagePositionVerticalOffset Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2010",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "a:ST_Percentage",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "wp14:CT_SizeRelH/wp14:sizeRelH",
+      "ClassName": "RelativeWidth",
+      "Summary": "Defines the RelativeWidth Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":relativeFrom",
+          "PropertyName": "ObjectId",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "relativeFrom",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:ST_PositivePercentage/wp14:pctWidth",
+          "PropertyName": "PercentageWidth"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:ST_PositivePercentage/wp14:pctWidth",
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "wp14:CT_SizeRelV/wp14:sizeRelV",
+      "ClassName": "RelativeHeight",
+      "Summary": "Defines the RelativeHeight Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Attributes": [
+        {
+          "QName": ":relativeFrom",
+          "PropertyName": "RelativeFrom",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues\u003E",
+          "Version": "Office2010",
+          "PropertyComments": "relativeFrom",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:ST_PositivePercentage/wp14:pctHeight",
+          "PropertyName": "PercentageHeight"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:ST_PositivePercentage/wp14:pctHeight",
+            "InitialVersion": "Office2010"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:ST_PositivePercentage/wp14:pctWidth",
+      "ClassName": "PercentageWidth",
+      "Summary": "Defines the PercentageWidth Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2010",
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinInclusive",
+              "Value": "0"
+            }
+          ],
+          "Name": "NumberValidator",
+          "Type": "a:ST_PositivePercentage",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "a:ST_PositivePercentage/wp14:pctHeight",
+      "ClassName": "PercentageHeight",
+      "Summary": "Defines the PercentageHeight Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2010",
+      "Validators": [
+        {
+          "Arguments": [
+            {
+              "Type": "Long",
+              "Name": "MinInclusive",
+              "Value": "0"
+            }
+          ],
+          "Name": "NumberValidator",
+          "Type": "a:ST_PositivePercentage",
+          "IsInitialVersion": true
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "wp14:ST_SizeRelFromH",
+      "Name": "SizeRelativeHorizontallyValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "margin",
+          "Name": "Margin"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "page",
+          "Name": "Page"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "leftMargin",
+          "Name": "LeftMargin"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "rightMargin",
+          "Name": "RightMargin"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "insideMargin",
+          "Name": "InsideMargin"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "outsideMargin",
+          "Name": "OutsideMargin"
+        }
+      ],
+      "Version": "Office2010"
+    },
+    {
+      "Type": "wp14:ST_SizeRelFromV",
+      "Name": "SizeRelativeVerticallyValues",
+      "Facets": [
+        {
+          "Version": "Office2010",
+          "Value": "margin",
+          "Name": "Margin"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "page",
+          "Name": "Page"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "topMargin",
+          "Name": "TopMargin"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "bottomMargin",
+          "Name": "BottomMargin"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "insideMargin",
+          "Name": "InsideMargin"
+        },
+        {
+          "Version": "Office2010",
+          "Value": "outsideMargin",
+          "Name": "OutsideMargin"
+        }
+      ],
+      "Version": "Office2010"
+    }
+  ]
+}

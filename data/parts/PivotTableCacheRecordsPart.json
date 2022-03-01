@@ -1,0 +1,12 @@
+{
+  "Root": "x:CT_PivotCacheRecords",
+  "Name": "PivotTableCacheRecordsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheRecords\u002Bxml",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords",
+  "Target": "pivotCacheRecords",
+  "RootElement": "pivotCacheRecords",
+  "Paths": {
+    "General": "."
+  }
+}

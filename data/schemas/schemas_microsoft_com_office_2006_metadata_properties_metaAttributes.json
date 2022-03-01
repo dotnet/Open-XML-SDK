@@ -1,0 +1,153 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes",
+  "Types": [
+    {
+      "Name": "ma:CT_Dummy/ma:DummyContentTypeElement",
+      "ClassName": "Dummy",
+      "Summary": "Defines the Dummy Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":decimals",
+          "PropertyName": "Decimals",
+          "Type": "StringValue",
+          "PropertyComments": "decimals"
+        },
+        {
+          "QName": ":default",
+          "PropertyName": "Default",
+          "Type": "StringValue",
+          "PropertyComments": "default"
+        },
+        {
+          "QName": ":description",
+          "PropertyName": "Description",
+          "Type": "StringValue",
+          "PropertyComments": "description"
+        },
+        {
+          "QName": ":displayName",
+          "PropertyName": "DisplayName",
+          "Type": "StringValue",
+          "PropertyComments": "displayName"
+        },
+        {
+          "QName": ":fieldsID",
+          "PropertyName": "FieldsID",
+          "Type": "StringValue",
+          "PropertyComments": "fieldsID"
+        },
+        {
+          "QName": ":format",
+          "PropertyName": "Format",
+          "Type": "StringValue",
+          "PropertyComments": "format"
+        },
+        {
+          "QName": ":hidden",
+          "PropertyName": "Hidden",
+          "Type": "StringValue",
+          "PropertyComments": "hidden"
+        },
+        {
+          "QName": ":index",
+          "PropertyName": "Index",
+          "Type": "Int32Value",
+          "PropertyComments": "index",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":internalName",
+          "PropertyName": "InternalName",
+          "Type": "StringValue",
+          "PropertyComments": "internalName"
+        },
+        {
+          "QName": ":LCID",
+          "PropertyName": "LCID",
+          "Type": "Int32Value",
+          "PropertyComments": "LCID"
+        },
+        {
+          "QName": ":list",
+          "PropertyName": "List",
+          "Type": "StringValue",
+          "PropertyComments": "list"
+        },
+        {
+          "QName": ":percentage",
+          "PropertyName": "Percentage",
+          "Type": "StringValue",
+          "PropertyComments": "percentage"
+        },
+        {
+          "QName": ":readOnly",
+          "PropertyName": "ReadOnly",
+          "Type": "StringValue",
+          "PropertyComments": "readOnly"
+        },
+        {
+          "QName": ":requiredMultiChoice",
+          "PropertyName": "RequiredMultiChoice",
+          "Type": "StringValue",
+          "PropertyComments": "requiredMultiChoice"
+        },
+        {
+          "QName": ":root",
+          "PropertyName": "Root",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues\u003E",
+          "PropertyComments": "root"
+        },
+        {
+          "QName": ":showField",
+          "PropertyName": "ShowField",
+          "Type": "StringValue",
+          "PropertyComments": "showField"
+        },
+        {
+          "QName": ":web",
+          "PropertyName": "Web",
+          "Type": "StringValue",
+          "PropertyComments": "web",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "ma:ST_TrueOnly",
+      "Name": "TrueOnlyValues",
+      "Facets": [
+        {
+          "Value": "true"
+        }
+      ]
+    }
+  ]
+}

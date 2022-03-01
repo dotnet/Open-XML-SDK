@@ -1,0 +1,238 @@
+[
+  {
+    "Name": "p14:CT_LeftRightDirectionTransition/",
+    "ClassName": "LeftRightDirectionTransitionType"
+  },
+  {
+    "Name": "p14:CT_MediaPlaybackEventRecord/",
+    "ClassName": "MediaPlaybackEventRecordType"
+  },
+  {
+    "Name": "p14:CT_RandomId/",
+    "ClassName": "RandomIdType"
+  },
+  {
+    "Name": "p14:CT_MediaBookmark/p14:bmk",
+    "ClassName": "MediaBookmark"
+  },
+  {
+    "Name": "p14:CT_MediaBookmarkList/p14:bmkLst",
+    "ClassName": "MediaBookmarkList"
+  },
+  {
+    "Name": "p14:CT_MediaBookmarkTarget/p14:bmkTgt",
+    "ClassName": "BookmarkTarget"
+  },
+  {
+    "Name": "p14:CT_BrowseMode/p14:browseMode",
+    "ClassName": "BrowseMode"
+  },
+  {
+    "Name": "a14:CT_NonVisualInkContentPartProperties/p14:cNvContentPartPr",
+    "ClassName": "NonVisualInkContentPartProperties"
+  },
+  {
+    "Name": "a:CT_NonVisualDrawingProps/p14:cNvPr",
+    "ClassName": "NonVisualDrawingProperties"
+  },
+  {
+    "Name": "p14:CT_LeftRightDirectionTransition/p14:conveyor",
+    "ClassName": "ConveyorTransition"
+  },
+  {
+    "Name": "p14:CT_RandomId/p14:creationId",
+    "ClassName": "CreationId"
+  },
+  {
+    "Name": "p14:CT_DefaultImageDpi/p14:defaultImageDpi",
+    "ClassName": "DefaultImageDpi"
+  },
+  {
+    "Name": "p14:CT_DiscardImageEditData/p14:discardImageEditData",
+    "ClassName": "DiscardImageEditData"
+  },
+  {
+    "Name": "p:CT_OrientationTransition/p14:doors",
+    "ClassName": "DoorsTransition"
+  },
+  {
+    "Name": "p:CT_ExtensionList/p14:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "p:CT_ExtensionListModify/p14:extLst",
+    "ClassName": "ExtensionListModify"
+  },
+  {
+    "Name": "p14:CT_MediaFade/p14:fade",
+    "ClassName": "MediaFade"
+  },
+  {
+    "Name": "p14:CT_LeftRightDirectionTransition/p14:ferris",
+    "ClassName": "FerrisTransition"
+  },
+  {
+    "Name": "p:CT_Empty/p14:flash",
+    "ClassName": "FlashTransition"
+  },
+  {
+    "Name": "p14:CT_LeftRightDirectionTransition/p14:flip",
+    "ClassName": "FlipTransition"
+  },
+  {
+    "Name": "p14:CT_FlyThroughTransition/p14:flythrough",
+    "ClassName": "FlythroughTransition"
+  },
+  {
+    "Name": "p14:CT_LeftRightDirectionTransition/p14:gallery",
+    "ClassName": "GalleryTransition"
+  },
+  {
+    "Name": "p14:CT_GlitterTransition/p14:glitter",
+    "ClassName": "GlitterTransition"
+  },
+  {
+    "Name": "p:CT_Empty/p14:honeycomb",
+    "ClassName": "HoneycombTransition"
+  },
+  {
+    "Name": "a:CT_Color/p14:laserClr",
+    "ClassName": "LaserColor"
+  },
+  {
+    "Name": "p14:CT_LaserTraceList/p14:laserTraceLst",
+    "ClassName": "LaserTraceList"
+  },
+  {
+    "Name": "p14:CT_Media/p14:media",
+    "ClassName": "Media"
+  },
+  {
+    "Name": "p14:CT_RandomId/p14:modId",
+    "ClassName": "ModificationId"
+  },
+  {
+    "Name": "p14:CT_NullEventRecord/p14:nullEvt",
+    "ClassName": "NullEventRecord"
+  },
+  {
+    "Name": "p14:CT_ContentPartNonVisual/p14:nvContentPartPr",
+    "ClassName": "NonVisualContentPartProperties"
+  },
+  {
+    "Name": "p:CT_ApplicationNonVisualDrawingProps/p14:nvPr",
+    "ClassName": "ApplicationNonVisualDrawingProperties"
+  },
+  {
+    "Name": "p:CT_SideDirectionTransition/p14:pan",
+    "ClassName": "PanTransition"
+  },
+  {
+    "Name": "p14:CT_MediaPlaybackEventRecord/p14:pauseEvt",
+    "ClassName": "PauseEventRecord"
+  },
+  {
+    "Name": "p14:CT_MediaPlaybackEventRecord/p14:playEvt",
+    "ClassName": "PlayEventRecord"
+  },
+  {
+    "Name": "p14:CT_PrismTransition/p14:prism",
+    "ClassName": "PrismTransition"
+  },
+  {
+    "Name": "p14:CT_MediaPlaybackEventRecord/p14:resumeEvt",
+    "ClassName": "ResumeEventRecord"
+  },
+  {
+    "Name": "p14:CT_RevealTransition/p14:reveal",
+    "ClassName": "RevealTransition"
+  },
+  {
+    "Name": "p14:CT_RippleTransition/p14:ripple",
+    "ClassName": "RippleTransition"
+  },
+  {
+    "Name": "p14:CT_Section/p14:section",
+    "ClassName": "Section"
+  },
+  {
+    "Name": "p14:CT_SectionOld/p14:section",
+    "ClassName": "SectionOld"
+  },
+  {
+    "Name": "p14:CT_SectionList/p14:sectionLst",
+    "ClassName": "SectionList"
+  },
+  {
+    "Name": "p14:CT_SectionProperties/p14:sectionPr",
+    "ClassName": "SectionProperties"
+  },
+  {
+    "Name": "p14:CT_MediaSeekEventRecord/p14:seekEvt",
+    "ClassName": "SeekEventRecord"
+  },
+  {
+    "Name": "p14:CT_ShowEventRecordList/p14:showEvtLst",
+    "ClassName": "ShowEventRecordList"
+  },
+  {
+    "Name": "p14:CT_ShowMediaControls/p14:showMediaCtrls",
+    "ClassName": "ShowMediaControls"
+  },
+  {
+    "Name": "p14:CT_ShredTransition/p14:shred",
+    "ClassName": "ShredTransition"
+  },
+  {
+    "Name": "p14:CT_SectionSlideIdListEntry/p14:sldId",
+    "ClassName": "SectionSlideIdListEntry"
+  },
+  {
+    "Name": "p14:CT_SectionSlideIdList/p14:sldIdLst",
+    "ClassName": "SectionSlideIdList"
+  },
+  {
+    "Name": "p14:CT_MediaPlaybackEventRecord/p14:stopEvt",
+    "ClassName": "StopEventRecord"
+  },
+  {
+    "Name": "p14:CT_LeftRightDirectionTransition/p14:switch",
+    "ClassName": "SwitchTransition"
+  },
+  {
+    "Name": "p14:CT_LaserTracePoint/p14:tracePt",
+    "ClassName": "TracePoint"
+  },
+  {
+    "Name": "p14:CT_LaserTrace/p14:tracePtLst",
+    "ClassName": "TracePointList"
+  },
+  {
+    "Name": "p14:CT_TriggerEventRecord/p14:triggerEvt",
+    "ClassName": "TriggerEventRecord"
+  },
+  {
+    "Name": "p14:CT_MediaTrim/p14:trim",
+    "ClassName": "MediaTrim"
+  },
+  {
+    "Name": "p:CT_SideDirectionTransition/p14:vortex",
+    "ClassName": "VortexTransition"
+  },
+  {
+    "Name": "p:CT_InOutTransition/p14:warp",
+    "ClassName": "WarpTransition"
+  },
+  {
+    "Name": "p:CT_WheelTransition/p14:wheelReverse",
+    "ClassName": "WheelReverseTransition"
+  },
+  {
+    "Name": "p:CT_OrientationTransition/p14:window",
+    "ClassName": "WindowTransition"
+  },
+  {
+    "Name": "a:CT_Transform2D/p14:xfrm",
+    "ClassName": "Transform2D"
+  }
+]

@@ -1,0 +1,274 @@
+[
+  {
+    "Name": "xsd:unsignedByte/xvml:Accel",
+    "ClassName": "AcceleratorPrimary"
+  },
+  {
+    "Name": "xsd:unsignedByte/xvml:Accel2",
+    "ClassName": "AcceleratorSecondary"
+  },
+  {
+    "Name": "xsd:string/xvml:Anchor",
+    "ClassName": "Anchor"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:AutoFill",
+    "ClassName": "AutoFill"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:AutoLine",
+    "ClassName": "AutoLine"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:AutoPict",
+    "ClassName": "AutoSizePicture"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:AutoScale",
+    "ClassName": "AutoScaleFont"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:Camera",
+    "ClassName": "CameraObject"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:Cancel",
+    "ClassName": "CancelButton"
+  },
+  {
+    "Name": "xvml:ST_CF/xvml:CF",
+    "ClassName": "ClipboardFormat"
+  },
+  {
+    "Name": "xsd:integer/xvml:Checked",
+    "ClassName": "Checked"
+  },
+  {
+    "Name": "xvml:CT_ClientData/xvml:ClientData",
+    "ClassName": "ClientData"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:ColHidden",
+    "ClassName": "ColumnHidden"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:Colored",
+    "ClassName": "Colored"
+  },
+  {
+    "Name": "xsd:integer/xvml:Column",
+    "ClassName": "CommentColumnTarget"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:DDE",
+    "ClassName": "DdeObject"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:Default",
+    "ClassName": "DefaultButton"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:DefaultSize",
+    "ClassName": "DefaultSize"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:Disabled",
+    "ClassName": "Disabled"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:Dismiss",
+    "ClassName": "DismissButton"
+  },
+  {
+    "Name": "xsd:integer/xvml:DropLines",
+    "ClassName": "DropLines"
+  },
+  {
+    "Name": "xsd:string/xvml:DropStyle",
+    "ClassName": "DropStyle"
+  },
+  {
+    "Name": "xsd:integer/xvml:Dx",
+    "ClassName": "ScrollBarWidth"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:FirstButton",
+    "ClassName": "FirstButton"
+  },
+  {
+    "Name": "xsd:string/xvml:FmlaGroup",
+    "ClassName": "FormulaGroup"
+  },
+  {
+    "Name": "xsd:string/xvml:FmlaLink",
+    "ClassName": "FormulaLink"
+  },
+  {
+    "Name": "xvml:ST_Macro/xvml:FmlaMacro",
+    "ClassName": "FormulaMacro"
+  },
+  {
+    "Name": "xsd:string/xvml:FmlaPict",
+    "ClassName": "FormulaPicture"
+  },
+  {
+    "Name": "xsd:string/xvml:FmlaRange",
+    "ClassName": "FormulaRange"
+  },
+  {
+    "Name": "xsd:string/xvml:FmlaTxbx",
+    "ClassName": "FormulaTextBox"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:Help",
+    "ClassName": "HelpButton"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:Horiz",
+    "ClassName": "HorizontalScrollBar"
+  },
+  {
+    "Name": "xsd:integer/xvml:Inc",
+    "ClassName": "ScrollBarIncrement"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:JustLastX",
+    "ClassName": "JustifyLastLine"
+  },
+  {
+    "Name": "xsd:string/xvml:LCT",
+    "ClassName": "ListBoxCallbackType"
+  },
+  {
+    "Name": "xsd:string/xvml:ListItem",
+    "ClassName": "ListItem"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:Locked",
+    "ClassName": "Locked"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:LockText",
+    "ClassName": "LockText"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:MapOCX",
+    "ClassName": "MapOcxControl"
+  },
+  {
+    "Name": "xsd:integer/xvml:Max",
+    "ClassName": "ScrollBarMax"
+  },
+  {
+    "Name": "xsd:integer/xvml:Min",
+    "ClassName": "ScrollBarMin"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:MoveWithCells",
+    "ClassName": "MoveWithCells"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:MultiLine",
+    "ClassName": "MultiLine"
+  },
+  {
+    "Name": "xsd:string/xvml:MultiSel",
+    "ClassName": "MultiSelections"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:NoThreeD",
+    "ClassName": "Disable3D"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:NoThreeD2",
+    "ClassName": "Disable3DForListBoxAndDropDown"
+  },
+  {
+    "Name": "xsd:integer/xvml:Page",
+    "ClassName": "ScrollBarPageIncrement"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:PrintObject",
+    "ClassName": "PrintObject"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:RecalcAlways",
+    "ClassName": "RecalculateAlways"
+  },
+  {
+    "Name": "xsd:integer/xvml:Row",
+    "ClassName": "CommentRowTarget"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:RowHidden",
+    "ClassName": "RowHidden"
+  },
+  {
+    "Name": "xsd:string/xvml:ScriptExtended",
+    "ClassName": "ScriptExtended"
+  },
+  {
+    "Name": "xsd:nonNegativeInteger/xvml:ScriptLanguage",
+    "ClassName": "ScriptLanguage"
+  },
+  {
+    "Name": "xsd:nonNegativeInteger/xvml:ScriptLocation",
+    "ClassName": "ScriptLocation"
+  },
+  {
+    "Name": "xsd:string/xvml:ScriptText",
+    "ClassName": "ScriptText"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:SecretEdit",
+    "ClassName": "SecretEdit"
+  },
+  {
+    "Name": "xsd:integer/xvml:Sel",
+    "ClassName": "SelectionEntry"
+  },
+  {
+    "Name": "xsd:string/xvml:SelType",
+    "ClassName": "SelectionType"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:SizeWithCells",
+    "ClassName": "ResizeWithCells"
+  },
+  {
+    "Name": "xsd:string/xvml:TextHAlign",
+    "ClassName": "HorizontalTextAlignment"
+  },
+  {
+    "Name": "xsd:string/xvml:TextVAlign",
+    "ClassName": "VerticalTextAlignment"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:UIObj",
+    "ClassName": "UIObject"
+  },
+  {
+    "Name": "xsd:integer/xvml:Val",
+    "ClassName": "ScrollBarPosition"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:ValidIds",
+    "ClassName": "ValidIds"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:Visible",
+    "ClassName": "Visible"
+  },
+  {
+    "Name": "xvml:ST_TrueFalseBlank/xvml:VScroll",
+    "ClassName": "VerticalScrollBar"
+  },
+  {
+    "Name": "xsd:integer/xvml:VTEdit",
+    "ClassName": "InputValidationType"
+  },
+  {
+    "Name": "xsd:integer/xvml:WidthMin",
+    "ClassName": "MinDropDownWidth"
+  }
+]
