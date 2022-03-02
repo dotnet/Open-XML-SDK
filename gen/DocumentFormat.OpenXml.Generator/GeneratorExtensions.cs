@@ -24,6 +24,7 @@ public static class GeneratorExtensions
     private const string OptionsPrefix = "build_property.DocumentFormat_OpenXml_Generator_";
     private const string OptionsGenerateNamespace = $"{OptionsPrefix}NamespaceLookup";
     private const string OptionsGeneratePart = $"{OptionsPrefix}Parts";
+    private const string OptionsGenerateSchemas = $"{OptionsPrefix}Schemas";
 
     public static IncrementalValueProvider<OpenXmlGeneratorOptions> GetOpenXmlOptions(this IncrementalGeneratorInitializationContext context)
         => context.AnalyzerConfigOptionsProvider.Select((options, token) =>
@@ -32,6 +33,7 @@ public static class GeneratorExtensions
             {
                 GenerateNamespaces = IsEnabled(options, OptionsGenerateNamespace),
                 GenerateParts = IsEnabled(options, OptionsGeneratePart),
+                GenerateSchema = IsEnabled(options, OptionsGenerateSchemas),
             };
 
             static bool IsEnabled(AnalyzerConfigOptionsProvider options, string name)

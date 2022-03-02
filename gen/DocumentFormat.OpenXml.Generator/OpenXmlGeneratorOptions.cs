@@ -8,4 +8,6 @@ public record OpenXmlGeneratorOptions
     public bool GenerateNamespaces { get; init; }
 
     public bool GenerateParts { get; init; }
+
+    public bool GenerateSchema { get; init; }
 }
