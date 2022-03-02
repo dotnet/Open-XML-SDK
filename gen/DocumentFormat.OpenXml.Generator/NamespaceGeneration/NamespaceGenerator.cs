@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Generator.Models;
 using Microsoft.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Generator.NamespaceGeneration;
@@ -14,12 +13,13 @@ public class NamespaceGenerator : IIncrementalGenerator
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
         var namespaces = context.GetOpenXmlDataFiles().GetKnownNamespaces();
+        var shouldGenerate = context.GetOpenXmlOptions().Select(static (o, _) => o.GenerateNamespaces);
 
-        context.RegisterSourceOutput(namespaces.Combine(context.AnalyzerConfigOptionsProvider), static (context, data) =>
+        context.RegisterSourceOutput(namespaces.Combine(shouldGenerate), static (context, data) =>
         {
             try
             {
-                if (data.Right.GlobalOptions.TryGetValue("build_property.DocumentFormat_OpenXml_GeneratorNamespaceLookup", out var generatorSwitch) && bool.TryParse(generatorSwitch, out var result) && result)
+                if (data.Right)
                 {
                     context.AddSource("Namespaces", data.Left.Generate());
                 }

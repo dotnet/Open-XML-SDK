@@ -15,9 +15,16 @@ public class PartGenerator : IIncrementalGenerator
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
         var openXml = context.GetOpenXmlGeneratorContext().GetOpenXmlServices();
+        var options = context.GetOpenXmlOptions().Select(static (o, _) => o.GenerateParts);
 
-        context.RegisterSourceOutput(openXml, (context, openXml) =>
+        context.RegisterSourceOutput(openXml.Combine(options), (context, data) =>
         {
+            if (!data.Right)
+            {
+                return;
+            }
+
+            var openXml = data.Left;
             var sb = new StringBuilder();
             var sw = new StringWriter(sb);
             var writer = new IndentedTextWriter(sw);
@@ -27,7 +34,6 @@ public class PartGenerator : IIncrementalGenerator
                 sb.Clear();
 
                 writer.WriteFileHeader();
-                writer.WriteLine();
                 writer.WritePart(openXml, part);
 
                 context.AddSource(part.Name, sb.ToString());

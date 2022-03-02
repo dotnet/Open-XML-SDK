@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml.Generator.Models;
 using DocumentFormat.OpenXml.Generator.Schematron;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.Diagnostics;
 using System.Collections.Immutable;
 
 using IncrementalOpenXmlTextValuesProvider = Microsoft.CodeAnalysis.IncrementalValuesProvider<(Microsoft.CodeAnalysis.AdditionalText Text, string Type)>;
@@ -19,6 +20,23 @@ public static class GeneratorExtensions
     private const string AdditionalFileSchematron = "Schematron";
     private const string AdditionalFileTypedSchema = "TypedSchema";
     private const string AdditionalFileTypedNamespace = "TypedNamespace";
+
+    private const string OptionsPrefix = "build_property.DocumentFormat_OpenXml_Generator_";
+    private const string OptionsGenerateNamespace = $"{OptionsPrefix}NamespaceLookup";
+    private const string OptionsGeneratePart = $"{OptionsPrefix}Parts";
+
+    public static IncrementalValueProvider<OpenXmlGeneratorOptions> GetOpenXmlOptions(this IncrementalGeneratorInitializationContext context)
+        => context.AnalyzerConfigOptionsProvider.Select((options, token) =>
+        {
+            return new OpenXmlGeneratorOptions
+            {
+                GenerateNamespaces = IsEnabled(options, OptionsGenerateNamespace),
+                GenerateParts = IsEnabled(options, OptionsGeneratePart),
+            };
+
+            static bool IsEnabled(AnalyzerConfigOptionsProvider options, string name)
+                => options.GlobalOptions.TryGetValue(name, out var generatorSwitch) && bool.TryParse(generatorSwitch, out var result) && result;
+        });
 
     public static IncrementalValueProvider<ImmutableArray<NamespaceInfo>> GetKnownNamespaces(this IncrementalOpenXmlTextValuesProvider types)
         => types
