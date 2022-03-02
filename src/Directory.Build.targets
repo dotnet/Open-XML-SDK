@@ -1,3 +1,9 @@
 <Project>
+
+  <PropertyGroup>
+    <EnablePackageValidation>true</EnablePackageValidation>
+    <PackageValidationBaselineVersion>2.15.0</PackageValidationBaselineVersion>
+  </PropertyGroup>
+
   <Import Project="..\Directory.Build.targets" />
 </Project>
