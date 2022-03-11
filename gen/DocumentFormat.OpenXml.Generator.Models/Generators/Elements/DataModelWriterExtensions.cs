@@ -9,7 +9,7 @@ using System.Text;
 
 namespace DocumentFormat.OpenXml.Generator.Generators.Elements;
 
-internal static class DataModelWriterExtensions
+public static class DataModelWriterExtensions
 {
     public static bool GetDataModelSyntax(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaNamespace model)
     {

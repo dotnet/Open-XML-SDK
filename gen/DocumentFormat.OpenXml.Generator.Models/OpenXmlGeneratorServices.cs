@@ -6,7 +6,7 @@ using DocumentFormat.OpenXml.Generator.Schematron;
 
 namespace DocumentFormat.OpenXml.Generator;
 
-internal class OpenXmlGeneratorServices
+public class OpenXmlGeneratorServices
 {
     private readonly Dictionary<string, NamespaceInfo> _namespacesByPrefix;
     private readonly Dictionary<string, NamespaceInfo> _namespacesByUri;

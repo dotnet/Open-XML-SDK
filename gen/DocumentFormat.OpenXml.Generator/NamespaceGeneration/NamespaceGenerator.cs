@@ -12,17 +12,16 @@ public class NamespaceGenerator : IIncrementalGenerator
 
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
-        var namespaces = context.GetOpenXmlDataFiles("Namespace");
+        var namespaces = context.GetOpenXmlDataFiles().GetKnownNamespaces();
+        var shouldGenerate = context.GetOpenXmlOptions().Select(static (o, _) => o.GenerateNamespaces);
 
-        context.RegisterSourceOutput(namespaces.Combine(context.AnalyzerConfigOptionsProvider), static (context, data) =>
+        context.RegisterSourceOutput(namespaces.Combine(shouldGenerate), static (context, data) =>
         {
             try
             {
-                if (data.Right.GlobalOptions.TryGetValue("build_property.DocumentFormat_OpenXml_GeneratorNamespaceLookup", out var generatorSwitch) && bool.TryParse(generatorSwitch, out var result) && result)
+                if (data.Right)
                 {
-                    var ooxmlContext = new OpenXmlGeneratorContext().LoadNamespaces(data.Left, context.CancellationToken);
-
-                    context.AddSource("Namespaces", ooxmlContext.KnownNamespaces.Generate());
+                    context.AddSource("Namespaces", data.Left.Generate());
                 }
             }
             catch (Exception)

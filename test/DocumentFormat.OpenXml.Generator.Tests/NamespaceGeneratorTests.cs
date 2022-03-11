@@ -54,7 +54,7 @@ public enum FileFormatVersions
             const string Options = @"
 is_global = true
 
-build_property.DocumentFormat_OpenXml_GeneratorNamespaceLookup = true
+build_property.DocumentFormat_OpenXml_Generator_NamespaceLookup = true
 
 [/namespaces.json]
 build_metadata.AdditionalFiles.OpenXml = Namespace";

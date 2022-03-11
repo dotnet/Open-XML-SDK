@@ -30,7 +30,9 @@
 
   <ItemGroup>
     <CompilerVisibleItemMetadata Include="AdditionalFiles" MetadataName="OpenXml" />
-    <CompilerVisibleProperty Include="DocumentFormat_OpenXml_GeneratorNamespaceLookup" />
+    <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_NamespaceLookup" />
+    <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_Parts" />
+    <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_Schemas" />
   </ItemGroup>
 
 </Project>

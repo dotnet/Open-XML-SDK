@@ -7,7 +7,7 @@ using System.CodeDom.Compiler;
 
 namespace DocumentFormat.OpenXml.Generator.Generators.Parts;
 
-internal static class PartWriter
+public static class PartWriter
 {
     private static readonly HashSet<string> ParameterlessTypes = new()
     {
