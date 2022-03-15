@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added method `OpenXmlPart.UnloadRootElement` that will unload the root element if it is loaded (#1126)
 
+### Updated
+- Schema code generation was moved to the SDK project using C# code generators
+
 Thanks to the following for their contribution:
 
 @f1nzer
