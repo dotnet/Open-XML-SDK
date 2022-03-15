@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.16.0] - 2022-03-14
+
+### Added
+- Added method `OpenXmlPart.UnloadRootElement` that will unload the root element if it is loaded (#1126)
+
+Thanks to the following for their contribution:
+
+@f1nzer
+
 ## [2.15.0] - 2021-12-16
 
 ### Added
