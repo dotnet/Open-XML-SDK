@@ -83,12 +83,6 @@
       "HasFixedContent": true
     },
     {
-      "MaxOccursGreatThanOne": true,
-      "ApiName": "commentParts",
-      "Name": "PowerPointCommentPart",
-      "HasFixedContent": true
-    },
-    {
       "ApiName": "authorsPart",
       "Name": "PowerPointAuthorsPart",
       "HasFixedContent": true

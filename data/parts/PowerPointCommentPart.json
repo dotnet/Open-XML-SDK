@@ -4,7 +4,7 @@
   "Base": "OpenXmlPart",
   "ContentType": "application/vnd.ms-powerpoint.comments\u002Bxml",
   "RelationshipType": "http://schemas.microsoft.com/office/2018/10/relationships/comments",
-  "Target": "moderncomment",
+  "Target": "modernComment",
   "RootElement": "cmLst",
   "Paths": {
     "General": "comments"
