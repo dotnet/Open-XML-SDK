@@ -24,7 +24,6 @@ The Open XML SDK provides tools for working with Office Word, Excel, and PowerPo
 - [Known Issues](#known-issues)
 - [Documentation](#documentation)
 - [Related tools](#related-tools)
-- [Code of Conduct](#code-of-conduct)
 
 # Packages
 
@@ -68,12 +67,6 @@ The package currently supports the following frameworks:
 
 For details on platform support, please see the docs at https://docs.microsoft.com/en-us/dotnet/standard/net-standard.
 
-# If You Have Problems
-
-If you want to report a problem (bug, behavior, build, distribution, feature request, etc...) with the SDK built by this repository, please feel free to post a new issue and someone will try to help.
-
-If you have "how-to" questions please post to one of the following resources:
-
 - [Microsoft Q&A Forums](https://docs.microsoft.com/en-us/answers/topics/office-addins-dev.html) (tag: **office-addins-dev**)
 - [Stack Overflow](http://stackoverflow.com) (tags: **openxml** or **openxml-sdk**)
 
@@ -100,7 +93,3 @@ In addition to open sourcing of the SDK, Microsoft has opened up the conceptual 
 - **[OOXML Viewer](https://github.com/yuenm18/ooxml-viewer-vscode)**: This is an extension for Visual Studio Code to View and Edit the xml parts of an Office Open XML file and to view a diff with the previous version of an OOXML part when saved from an outside program. Search "OOXML" in the VS Code extensions tab or download it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=yuenm18.ooxml-viewer)
 - **[ShapeCrawler](https://github.com/ShapeCrawler/ShapeCrawler)**: This library provides a simplified object model on top of the OpenXml SDK to manipulate PowerPoint documents.
 - **[OOXML Validator](https://github.com/mikeebowen/ooxml-validator-vscode)**: VS Code extension to validate Office Open XML files.  Search "OOXML" in the VS Code extensions tab or download it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=mikeebowen.ooxml-validator-vscode)
-
-# Code of Conduct
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
