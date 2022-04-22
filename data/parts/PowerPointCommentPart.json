@@ -7,7 +7,7 @@
   "Target": "modernComment",
   "RootElement": "cmLst",
   "Paths": {
-    "General": "comments"
+    "General": "../comments"
   },
   "Version": "Office2021"
 }
