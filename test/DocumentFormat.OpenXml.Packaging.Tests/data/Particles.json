@@ -50203,6 +50203,12 @@
     "Value": {
      "ChildrenParticles": [
       {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker"
+      },
+      {
        "MaxOccurs": 0,
        "MinOccurs": 0,
        "ParticleType": "Any"
@@ -57289,7 +57295,28 @@
   "Key": "DocumentFormat.OpenXml.Presentation.SlideExtension",
   "Value": [
    {
-    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentRelationship"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2010, Office2013, Office2016, Office2019",
     "Value": {
      "ChildrenParticles": [
       {
