@@ -9,6 +9,14 @@
     "PartClassName": "WordCommentsExtensiblePart"
   },
   {
+    "Name": "w16cex:CT_CommentExtensibleExtension/w16cex:ext",
+    "ClassName": "CommentExtensibleExtension"
+  },
+  {
+    "Name": "w16cex:CT_CommentExtensibleExtensionList/w16cex:extLst",
+    "ClassName": "CommentExtensibleExtensionList"
+  },
+  {
     "Name": "w16cur:CT_ExtensionList/w16cex:extLst",
     "ClassName": "ExtensionList"
   }

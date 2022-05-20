@@ -80,6 +80,10 @@
     "Namespace": "DocumentFormat.OpenXml.Office.ActiveX"
   },
   {
+    "Prefix": "cr",
+    "Namespace": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions"
+  },
+  {
     "Prefix": "ct",
     "Namespace": "DocumentFormat.OpenXml.Office.ContentType"
   },
@@ -126,6 +130,10 @@
   {
     "Prefix": "p216",
     "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main"
+  },
+  {
+    "Prefix": "xxpvi",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotMar2022"
   },
   {
     "Prefix": "wne",

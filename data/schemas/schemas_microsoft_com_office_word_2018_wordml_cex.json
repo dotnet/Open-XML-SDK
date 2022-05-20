@@ -114,15 +114,16 @@
       ],
       "Children": [
         {
-          "Name": "w16cur:CT_ExtensionList/w16cex:extLst",
-          "PropertyName": "ExtensionList"
+          "Name": "w16cex:CT_CommentExtensibleExtensionList/w16cex:extLst",
+          "PropertyName": "CommentExtensibleExtensionList",
+          "PropertyComments": "Future extensions."
         }
       ],
       "Particle": {
         "Kind": "Sequence",
         "Items": [
           {
-            "Name": "w16cur:CT_ExtensionList/w16cex:extLst",
+            "Name": "w16cex:CT_CommentExtensibleExtensionList/w16cex:extLst",
             "Occurs": [
               {
                 "Max": 1
@@ -149,6 +150,93 @@
         "Items": [
           {
             "Name": "w16cur:CT_Extension/w16cur:ext",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w16cex:CT_CommentExtensibleExtension/w16cex:ext",
+      "ClassName": "CommentExtensibleExtension",
+      "Summary": "Defines the CommentExtensibleExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Attributes": [
+        {
+          "QName": "w16cex:uri",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Office2021"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cr:CT_CommentReactions/cr:reactions",
+          "PropertyName": "CommentReactions"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "cr:CT_CommentReactions/cr:reactions",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "w16cex:CT_CommentExtensibleExtensionList/w16cex:extLst",
+      "ClassName": "CommentExtensibleExtensionList",
+      "Summary": "Future extensions..",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "w16cex:CT_CommentExtensibleExtension/w16cex:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w16cex:CT_CommentExtensibleExtension/w16cex:ext",
             "Occurs": [
               {}
             ],

@@ -1,0 +1,236 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/comments/2020/reactions",
+  "Types": [
+    {
+      "Name": "cr:CT_CommentReactions/cr:reactions",
+      "ClassName": "CommentReactions",
+      "Summary": "Defines the CommentReactions Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "cr:CT_CommentReaction/cr:reaction"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cr:CT_CommentReaction/cr:reaction",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "oel:CT_ExtensionList/cr:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "oel:CT_Extension/oel:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "oel:CT_Extension/oel:ext",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2021"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cr:CT_User/cr:user",
+      "ClassName": "User",
+      "Summary": "Defines the User Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":userId",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "userId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":userName",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "userName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":userProvider",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "userProvider",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "oel:CT_ExtensionList/cr:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "oel:CT_ExtensionList/cr:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cr:CT_CommentReactionInfo/cr:reactionInfo",
+      "ClassName": "CommentReactionInfo",
+      "Summary": "Defines the CommentReactionInfo Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":dateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cr:CT_User/cr:user",
+          "PropertyName": "User"
+        },
+        {
+          "Name": "oel:CT_ExtensionList/cr:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cr:CT_User/cr:user",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "oel:CT_ExtensionList/cr:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cr:CT_CommentReaction/cr:reaction",
+      "ClassName": "CommentReaction",
+      "Summary": "Defines the CommentReaction Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":reactionType",
+          "Type": "Int32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "reactionType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cr:CT_CommentReactionInfo/cr:reactionInfo"
+        },
+        {
+          "Name": "cr:CT_User/cr:user"
+        },
+        {
+          "Name": "oel:CT_ExtensionList/cr:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Name": "cr:CT_CommentReactionInfo/cr:reactionInfo",
+                "Occurs": [
+                  {}
+                ],
+                "InitialVersion": "Microsoft365"
+              },
+              {
+                "Name": "cr:CT_User/cr:user",
+                "Occurs": [
+                  {}
+                ],
+                "InitialVersion": "Microsoft365"
+              }
+            ]
+          },
+          {
+            "Name": "oel:CT_ExtensionList/cr:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    }
+  ]
+}

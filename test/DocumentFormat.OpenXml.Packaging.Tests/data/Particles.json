@@ -31344,6 +31344,112 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReaction",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReactionInfo",
+         "MaxOccurs": 0,
+         "MinOccurs": 0
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.User",
+         "MaxOccurs": 0,
+         "MinOccurs": 0
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Choice"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReactionInfo",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.User",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReactions",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReaction",
+       "MaxOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.ExtensionList",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.User",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Office.ContentType.ContentTypeSchema",
   "Value": [
    {
@@ -33498,6 +33604,52 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotMar2022.CacheVersionInfo",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotMar2022.RequiredFeatureXsdstring",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotMar2022.LastRefreshFeatureXsdstring",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotMar2022.PivotVersionInfo",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotMar2022.RequiredFeatureXsdstring",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotMar2022.LastUpdateFeatureXsdstring",
+       "MaxOccurs": 0,
        "MinOccurs": 0
       }
      ],
@@ -53501,7 +53653,57 @@
     "Value": {
      "ChildrenParticles": [
       {
-       "ElementType": "DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensibleExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensibleExtension",
+  "Value": [
+   {
+    "Key": "Office2021",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReactions"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensibleExtensionList",
+  "Value": [
+   {
+    "Key": "Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensibleExtension",
+       "MaxOccurs": 0,
        "MinOccurs": 0
       }
      ],
@@ -63121,7 +63323,7 @@
   "Key": "DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2013, Office2016, Office2019",
     "Value": {
      "ChildrenParticles": [
       {
@@ -63162,6 +63364,63 @@
      "ChildrenParticles": [
       {
        "ElementType": "DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2021",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotMar2022.CacheVersionInfo"
       },
       {
        "MinOccurs": 0,
@@ -63641,7 +63900,7 @@
   "Key": "DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -63679,6 +63938,30 @@
      "ChildrenParticles": [
       {
        "ElementType": "DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.PivotTableData"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotMar2022.PivotVersionInfo"
       },
       {
        "MinOccurs": 0,
