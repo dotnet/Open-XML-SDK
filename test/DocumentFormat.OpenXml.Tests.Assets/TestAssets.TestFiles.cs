@@ -1,5 +1,5 @@
-﻿// Copyright (c) Microsoft.
-// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
 
 #pragma warning disable SA1310 // Field names should not contain underscore
 
