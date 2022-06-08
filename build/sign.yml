@@ -15,7 +15,7 @@ steps:
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
     displayName: 'OpenXML SDK Assembly ESRP CodeSigning'
     inputs:
-      ConnectedServiceName: 'Open-XML-SDK-ESRP-2021b'
+      ConnectedServiceName: 'Open-XML-SDK-ESRP-2023'
       FolderPath: '$(Pipeline.Workspace)\unsigned\raw'
       Pattern: '**\DocumentFormat.OpenXml*.dll'
       UseMinimatch: true
@@ -60,7 +60,7 @@ steps:
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
     displayName: 'OpenXML SDK Nuget Pkg ESRP CodeSigning'
     inputs:
-      ConnectedServiceName: 'Open-XML-SDK-ESRP-2021b'
+      ConnectedServiceName: 'Open-XML-SDK-ESRP-2023'
       FolderPath: '$(Pipeline.Workspace)/unsigned/raw'
       Pattern: '*.nupkg'
       signConfigType: inlineSignParams
