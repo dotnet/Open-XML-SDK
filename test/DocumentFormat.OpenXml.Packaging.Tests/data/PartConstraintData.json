@@ -2556,7 +2556,7 @@
     "RelationshipType": "http://schemas.microsoft.com/office/2018/10/relationships/comments",
     "TargetFileExtension": ".xml",
     "TargetName": "modernComment",
-    "TargetPath": "comments",
+    "TargetPath": "../comments",
     "DataParts": {},
     "Parts": {}
   },
