@@ -122,11 +122,6 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <AdditionalFiles Include="PublicAPI\$(TargetFramework)\PublicAPI.Shipped.txt" />
-    <AdditionalFiles Include="PublicAPI\PublicAPI.Unshipped.txt" />
-  </ItemGroup>
-
   <Import Project="$(MSBuildThisFileDirectory)\PEVerify.targets" />
 
 </Project>
