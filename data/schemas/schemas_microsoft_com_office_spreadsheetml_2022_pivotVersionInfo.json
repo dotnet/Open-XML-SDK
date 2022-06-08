@@ -1,5 +1,5 @@
 {
-  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotMar2022",
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo",
   "Types": [
     {
       "Name": "xxpvi:CT_CacheVersionInfo/xxpvi:cacheVersionInfo",

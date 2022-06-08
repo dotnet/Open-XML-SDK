@@ -133,7 +133,7 @@
   },
   {
     "Prefix": "xxpvi",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotMar2022"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo"
   },
   {
     "Prefix": "wne",
