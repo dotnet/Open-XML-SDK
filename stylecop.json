@@ -4,8 +4,8 @@
     "documentationRules": {
       "documentExposedElements": false,
       "documentInternalElements": false,
-      "companyName": "Microsoft Corporation",
-      "copyrightText": "Copyright (c) {companyName}.\nLicensed under the {licenseName} license.",
+      "companyName": "Microsoft",
+      "copyrightText": "Copyright (c) {companyName}.\nLicensed under the {licenseName} license. See {licenseFile} file in the project root for full license information.",
       "xmlHeader": false,
       "variables": {
         "licenseName": "MIT",
