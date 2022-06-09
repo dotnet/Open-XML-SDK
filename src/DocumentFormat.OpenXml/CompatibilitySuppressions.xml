@@ -22,70 +22,70 @@
 	</Suppression>
 	<Suppression>
 		<DiagnosticId>CP0002</DiagnosticId>
-		<Target>DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.get</Target>
+		<Target>M:DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.get</Target>
 		<Left>lib/net35/DocumentFormat.OpenXml.dll</Left>
 		<Right>lib/net35/DocumentFormat.OpenXml.dll</Right>
 		<isBaseline>true</isBaseline>
 	</Suppression>
 	<Suppression>
 		<DiagnosticId>CP0002</DiagnosticId>
-		<Target>DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.set</Target>
+		<Target>M:DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.set</Target>
 		<Left>lib/net35/DocumentFormat.OpenXml.dll</Left>
 		<Right>lib/net35/DocumentFormat.OpenXml.dll</Right>
 		<isBaseline>true</isBaseline>
 	</Suppression>
 	<Suppression>
 		<DiagnosticId>CP0002</DiagnosticId>
-		<Target>DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.get</Target>
+		<Target>M:DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.get</Target>
 		<Left>lib/net40/DocumentFormat.OpenXml.dll</Left>
 		<Right>lib/net40/DocumentFormat.OpenXml.dll</Right>
 		<isBaseline>true</isBaseline>
 	</Suppression>
 	<Suppression>
 		<DiagnosticId>CP0002</DiagnosticId>
-		<Target>DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.set</Target>
+		<Target>M:DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.set</Target>
 		<Left>lib/net40/DocumentFormat.OpenXml.dll</Left>
 		<Right>lib/net40/DocumentFormat.OpenXml.dll</Right>
 		<isBaseline>true</isBaseline>
 	</Suppression>
 	<Suppression>
 		<DiagnosticId>CP0002</DiagnosticId>
-		<Target>DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.get</Target>
+		<Target>M:DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.get</Target>
 		<Left>lib/net46/DocumentFormat.OpenXml.dll</Left>
 		<Right>lib/net46/DocumentFormat.OpenXml.dll</Right>
 		<isBaseline>true</isBaseline>
 	</Suppression>
 	<Suppression>
 		<DiagnosticId>CP0002</DiagnosticId>
-		<Target>DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.set</Target>
+		<Target>M:DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.set</Target>
 		<Left>lib/net46/DocumentFormat.OpenXml.dll</Left>
 		<Right>lib/net46/DocumentFormat.OpenXml.dll</Right>
 		<isBaseline>true</isBaseline>
 	</Suppression>
 	<Suppression>
 		<DiagnosticId>CP0002</DiagnosticId>
-		<Target>DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.get</Target>
+		<Target>M:DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.get</Target>
 		<Left>lib/netstandard1.3/DocumentFormat.OpenXml.dll</Left>
 		<Right>lib/netstandard1.3/DocumentFormat.OpenXml.dll</Right>
 		<isBaseline>true</isBaseline>
 	</Suppression>
 	<Suppression>
 		<DiagnosticId>CP0002</DiagnosticId>
-		<Target>DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.set</Target>
+		<Target>M:DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.set</Target>
 		<Left>lib/netstandard1.3/DocumentFormat.OpenXml.dll</Left>
 		<Right>lib/netstandard1.3/DocumentFormat.OpenXml.dll</Right>
 		<isBaseline>true</isBaseline>
 	</Suppression>
 	<Suppression>
 		<DiagnosticId>CP0002</DiagnosticId>
-		<Target>DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.get</Target>
+		<Target>M:DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.get</Target>
 		<Left>lib/netstandard2.0/DocumentFormat.OpenXml.dll</Left>
 		<Right>lib/netstandard2.0/DocumentFormat.OpenXml.dll</Right>
 		<isBaseline>true</isBaseline>
 	</Suppression>
 	<Suppression>
 		<DiagnosticId>CP0002</DiagnosticId>
-		<Target>DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.set</Target>
+		<Target>M:DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ExtensionList.set</Target>
 		<Left>lib/netstandard2.0/DocumentFormat.OpenXml.dll</Left>
 		<Right>lib/netstandard2.0/DocumentFormat.OpenXml.dll</Right>
 		<isBaseline>true</isBaseline>
