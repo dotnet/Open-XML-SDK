@@ -114,8 +114,8 @@ namespace DocumentFormat.OpenXml.Generator.Linq
 
         private static void GenerateClassFilePreamble(TextWriter output)
         {
-            output.WriteLine("// Copyright (c) Microsoft Corporation.");
-            output.WriteLine("// Licensed under the MIT license.");
+            output.WriteLine("// Copyright (c) Microsoft. All rights reserved.");
+            output.WriteLine("// Licensed under the MIT license. See LICENSE file in the project root for full license information.");
             output.WriteLine();
             output.WriteLine("using System.Xml.Linq;");
             output.WriteLine();
