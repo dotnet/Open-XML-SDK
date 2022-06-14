@@ -792,7 +792,17 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (_features is null)
                 {
-                    _features = new FeatureCollection(new PartContainerFeatureCollection(_openXmlPackage?.Features));
+                    if (_openXmlPackage is { } package)
+                    {
+                        _features = _openXmlPackage.CreatePartFeatures(_openXmlPackage.Features);
+                    }
+                    else
+                    {
+                        _features = CreatePartFeatures();
+                    }
+
+                    // Make writeable
+                    _features = new FeatureCollection(_features);
                 }
 
                 return _features;

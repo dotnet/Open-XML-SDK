@@ -1,13 +1,14 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
-    internal class ElementMetadataProviderFeature
+    internal class ElementMetadataProviderFeature : IElementMetadataFeature
     {
         private readonly ConcurrentDictionary<Type, ElementMetadata> _lookup = new(new[]
         {
