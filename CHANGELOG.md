@@ -7,8 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [2.17.0] - 2022-06-15
 
 ### Added
-- Added DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions namespace
-- Added DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo namespace
+- Added DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions namespace (#1151)
+- Added DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo namespace (#1151)
+
+### Fixed
+- Moved PowerPointCommentPart relationship to SlidePart (#1137)
+
+### Updated
+- Removed public API analyzers in favor of EnablePackageValidation (#1154)
 
 ## [2.16.0] - 2022-03-14
 
