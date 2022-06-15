@@ -168,6 +168,11 @@
     "Uri": "http://schemas.microsoft.com/office/2006/coverPageProps"
   },
   {
+    "Prefix": "cr",
+    "Uri": "http://schemas.microsoft.com/office/comments/2020/reactions",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "cs",
     "Uri": "http://schemas.microsoft.com/office/drawing/2012/chartStyle",
     "Version": "Office2013"
@@ -668,6 +673,11 @@
     "Uri": "urn:schemas-microsoft-com:office:excel"
   },
   {
+    "Prefix": "xxl21",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "xxlnp",
     "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2019/extlinksprops",
     "Version": "Office2021"
@@ -676,5 +686,10 @@
     "Prefix": "xxpim",
     "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020",
     "Version": "Office2021"
+  },
+  {
+    "Prefix": "xxpvi",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo",
+    "Version": "Microsoft365"
   }
 ]

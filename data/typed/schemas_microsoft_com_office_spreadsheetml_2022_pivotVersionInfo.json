@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "xxpvi:CT_CacheVersionInfo/xxpvi:cacheVersionInfo",
+    "ClassName": "CacheVersionInfo"
+  },
+  {
+    "Name": "xsd:string/xxpvi:lastRefreshFeature",
+    "ClassName": "LastRefreshFeatureXsdstring"
+  },
+  {
+    "Name": "xsd:string/xxpvi:lastUpdateFeature",
+    "ClassName": "LastUpdateFeatureXsdstring"
+  },
+  {
+    "Name": "xxpvi:CT_PivotVersionInfo/xxpvi:pivotVersionInfo",
+    "ClassName": "PivotVersionInfo"
+  },
+  {
+    "Name": "xsd:string/xxpvi:requiredFeature",
+    "ClassName": "RequiredFeatureXsdstring"
+  }
+]

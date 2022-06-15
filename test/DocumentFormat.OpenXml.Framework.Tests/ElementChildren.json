@@ -20821,6 +20821,63 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReaction",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      },
+      {
+        "Name": "reactionInfo",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      },
+      {
+        "Name": "user",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReactionInfo",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      },
+      {
+        "Name": "user",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReactions",
+    "Children": [
+      {
+        "Name": "reaction",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.ExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.microsoft.com/office/2019/extlst"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.User",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.ContentType.ContentTypeSchema",
     "Children": []
   },
@@ -22329,6 +22386,44 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.UnasgnAllEmpty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo",
+    "Children": [
+      {
+        "Name": "lastRefreshFeature",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
+      },
+      {
+        "Name": "requiredFeature",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.PivotVersionInfo",
+    "Children": [
+      {
+        "Name": "lastUpdateFeature",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
+      },
+      {
+        "Name": "requiredFeature",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring",
     "Children": []
   },
   {
@@ -37329,6 +37424,24 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensibleExtension",
+    "Children": [
+      {
+        "Name": "reactions",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensibleExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.microsoft.com/office/word/2018/wordml/cex"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentsExtensible",
     "Children": [
       {
@@ -44068,6 +44181,14 @@
       {
         "Name": "timelinePivotCacheDefinition",
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main"
+      },
+      {
+        "Name": "implicitMeasureSupport",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020"
+      },
+      {
+        "Name": "cacheVersionInfo",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
       }
     ]
   },
@@ -44363,6 +44484,10 @@
       {
         "Name": "pivotTableUISettings",
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main"
+      },
+      {
+        "Name": "pivotVersionInfo",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
       }
     ]
   },

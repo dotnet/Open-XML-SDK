@@ -1,0 +1,100 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo",
+  "Types": [
+    {
+      "Name": "xxpvi:CT_CacheVersionInfo/xxpvi:cacheVersionInfo",
+      "ClassName": "CacheVersionInfo",
+      "Summary": "Defines the CacheVersionInfo Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xsd:string/xxpvi:requiredFeature"
+        },
+        {
+          "Name": "xsd:string/xxpvi:lastRefreshFeature"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xsd:string/xxpvi:requiredFeature",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xsd:string/xxpvi:lastRefreshFeature",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xxpvi:CT_PivotVersionInfo/xxpvi:pivotVersionInfo",
+      "ClassName": "PivotVersionInfo",
+      "Summary": "Defines the PivotVersionInfo Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xsd:string/xxpvi:requiredFeature"
+        },
+        {
+          "Name": "xsd:string/xxpvi:lastUpdateFeature"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xsd:string/xxpvi:requiredFeature",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xsd:string/xxpvi:lastUpdateFeature",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xsd:string/xxpvi:requiredFeature",
+      "ClassName": "RequiredFeatureXsdstring",
+      "Summary": "Defines the RequiredFeatureXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "xsd:string/xxpvi:lastRefreshFeature",
+      "ClassName": "LastRefreshFeatureXsdstring",
+      "Summary": "Defines the LastRefreshFeatureXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "xsd:string/xxpvi:lastUpdateFeature",
+      "ClassName": "LastUpdateFeatureXsdstring",
+      "Summary": "Defines the LastUpdateFeatureXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Microsoft365"
+    }
+  ]
+}
