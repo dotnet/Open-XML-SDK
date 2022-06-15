@@ -156,6 +156,12 @@
       "ApiName": "WebExtensionParts",
       "Name": "WebExtensionPart",
       "HasFixedContent": true
+    },
+    {
+      "MaxOccursGreatThanOne": true,
+      "ApiName": "commentParts",
+      "Name": "PowerPointCommentPart",
+      "HasFixedContent": true
     }
   ]
 }

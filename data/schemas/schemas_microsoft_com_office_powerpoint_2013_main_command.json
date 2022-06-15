@@ -167,11 +167,30 @@
       "Name": "pc:CT_SlideMonikerList/pc:sldMkLst",
       "ClassName": "SlideMonikerList",
       "Summary": "Defines the SlideMonikerList Class.",
+      "CompositeType": "OneSequence",
       "BaseClass": "OpenXmlCompositeElement",
       "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "pc:CT_DocumentMoniker/pc:docMk",
+          "PropertyName": "DocumentMoniker"
+        },
+        {
+          "Name": "pc:CT_SlideMoniker/pc:sldMk",
+          "PropertyName": "SlideMoniker"
+        }
+      ],
       "Particle": {
         "Kind": "Sequence",
         "Items": [
+          {
+            "Name": "pc:CT_DocumentMoniker/pc:docMk",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "pc:CT_SlideMoniker/pc:sldMk",
+            "InitialVersion": "Office2016"
+          },
           {
             "Kind": "Any",
             "Occurs": [
@@ -406,6 +425,57 @@
           }
         ]
       }
+    },
+    {
+      "Name": "pc:CT_DocumentMoniker/pc:docMk",
+      "ClassName": "DocumentMoniker",
+      "Summary": "Defines the DocumentMoniker Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "pc:CT_SlideMoniker/pc:sldMk",
+      "ClassName": "SlideMoniker",
+      "Summary": "Defines the SlideMoniker Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":cId",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "cId"
+        },
+        {
+          "QName": ":sldId",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "sldId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxExclusive",
+                  "Value": "2147483648"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "256"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }

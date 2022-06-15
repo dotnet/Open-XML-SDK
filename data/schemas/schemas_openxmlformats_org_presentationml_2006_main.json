@@ -9398,6 +9398,10 @@
         {
           "Name": "p14:CT_ShowEventRecordList/p14:showEvtLst",
           "PropertyName": "ShowEventRecordList"
+        },
+        {
+          "Name": "p188:CT_CommentRelationship/p188:commentRel",
+          "PropertyName": "CommentRelationship"
         }
       ],
       "Particle": {
@@ -9410,6 +9414,10 @@
           {
             "Name": "p14:CT_ShowEventRecordList/p14:showEvtLst",
             "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "p188:CT_CommentRelationship/p188:commentRel",
+            "InitialVersion": "Office2021"
           },
           {
             "Kind": "Any",
