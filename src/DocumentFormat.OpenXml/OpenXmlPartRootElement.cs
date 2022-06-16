@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public abstract class OpenXmlPartRootElement : OpenXmlCompositeElement
     {
+        private OpenXmlElementContext? _context;
         private bool? _standaloneDeclaration;
 
         /// <summary>
@@ -24,7 +25,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         protected OpenXmlPartRootElement()
         {
-            RootElementContext = new OpenXmlElementContext();
         }
 
         /// <summary>
@@ -38,7 +38,6 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            RootElementContext = new OpenXmlElementContext();
             LoadFromPart(openXmlPart);
         }
 
@@ -49,7 +48,6 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlPartRootElement(string outerXml)
             : base(outerXml)
         {
-            RootElementContext = new OpenXmlElementContext();
         }
 
         /// <summary>
@@ -59,7 +57,6 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlPartRootElement(IEnumerable<OpenXmlElement> childElements)
             : base(childElements)
         {
-            RootElementContext = new OpenXmlElementContext();
         }
 
         /// <summary>
@@ -69,13 +66,12 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlPartRootElement(params OpenXmlElement[] childElements)
             : base(childElements)
         {
-            RootElementContext = new OpenXmlElementContext();
         }
 
         /// <summary>
         /// Gets the OpenXmlElementContext.
         /// </summary>
-        internal override OpenXmlElementContext RootElementContext { get; }
+        internal override OpenXmlElementContext RootElementContext => _context ??= new(Features.GetNamespaceResolver());
 
         /// <summary>
         /// Load the DOM tree from the Open XML part.

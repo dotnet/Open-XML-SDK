@@ -29,10 +29,6 @@ namespace DocumentFormat.OpenXml.Framework
 
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
 
-        public FileFormatVersions Version => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().GetVersion(this);
-
-        public bool HasVersion(FileFormatVersions version) => Version == version;
-
         /// <summary>
         /// Attempts to get the Transitional equivalent namespace.
         /// </summary>

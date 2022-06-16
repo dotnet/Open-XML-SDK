@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace DocumentFormat.OpenXml.Validation
         {
         }
 
+        [Obsolete]
         public ValidationContext(ValidationSettings settings, ValidationCache cache, CancellationToken token)
         {
             _token = token;
@@ -29,7 +31,7 @@ namespace DocumentFormat.OpenXml.Validation
             Cache = cache ?? throw new ArgumentNullException(nameof(cache));
             Settings = settings ?? throw new ArgumentNullException(nameof(settings));
             Errors = new List<ValidationErrorInfo>();
-            McContext = new MCContext(false);
+            McContext = new MCContext(FeatureCollection.StaticOrDefault.GetNamespaceResolver(), false);
 
             Stack = new ValidationStack();
             State = new StateManager(this);

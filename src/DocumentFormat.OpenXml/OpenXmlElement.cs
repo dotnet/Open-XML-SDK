@@ -1625,13 +1625,15 @@ namespace DocumentFormat.OpenXml
         /// <param name="reader">The XmlReader.</param>
         /// <param name="mcAttributes">The MarkupCompatibilityAttributes.</param>
         /// <param name="mcSettings">The MarkupCompatibilityProcessSettings.</param>
-        private protected static void CheckMustUnderstandAttr(XmlReader reader, MarkupCompatibilityAttributes mcAttributes, MarkupCompatibilityProcessSettings mcSettings)
+        private protected void CheckMustUnderstandAttr(XmlReader reader, MarkupCompatibilityAttributes mcAttributes, MarkupCompatibilityProcessSettings mcSettings)
         {
             Debug.Assert(mcSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess);
 
             if (mcAttributes.MustUnderstand is not null && !string.IsNullOrEmpty(mcAttributes.MustUnderstand.Value))
             {
+                var resolver = Features.GetNamespaceResolver();
                 var prefixes = mcAttributes.MustUnderstand.Value!.Trim().Split(new char[] { ' ' });
+
                 foreach (var prefix in prefixes)
                 {
                     var ns = new OpenXmlNamespace(reader.LookupNamespace(prefix));
@@ -1641,7 +1643,7 @@ namespace DocumentFormat.OpenXml
                         throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, mcAttributes.MustUnderstand.Value));
                     }
 
-                    if (ns.HasVersion(mcSettings.TargetFileFormatVersions))
+                    if (resolver.HasVersion(ns, mcSettings.TargetFileFormatVersions))
                     {
                         continue;
                     }
@@ -1663,7 +1665,9 @@ namespace DocumentFormat.OpenXml
 
             if (MCAttributes.MustUnderstand is not null && !string.IsNullOrEmpty(MCAttributes.MustUnderstand.Value))
             {
+                var resolver = Features.GetNamespaceResolver();
                 var prefixes = MCAttributes.MustUnderstand.Value!.Trim().Split(new char[] { ' ' });
+
                 foreach (var prefix in prefixes)
                 {
                     var ns = new OpenXmlNamespace(LookupNamespace(prefix));
@@ -1673,7 +1677,7 @@ namespace DocumentFormat.OpenXml
                         throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, MCAttributes.MustUnderstand.Value));
                     }
 
-                    if (ns.HasVersion(OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
+                    if (resolver.HasVersion(ns, OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
                     {
                         continue;
                     }

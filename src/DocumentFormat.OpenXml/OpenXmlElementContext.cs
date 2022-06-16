@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Diagnostics.CodeAnalysis;
@@ -62,9 +63,15 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Initializes a new instance of the OpenXmlElementContext class.
         /// </summary>
+        [Obsolete("This object is created internally and the public constructor will be removed at some point in the future.")]
         public OpenXmlElementContext()
+            : this(FeatureCollection.StaticOrDefault.GetNamespaceResolver())
         {
-            MCContext = new MCContext();
+        }
+
+        internal OpenXmlElementContext(IOpenXmlNamespaceResolver resolver)
+        {
+            MCContext = new MCContext(resolver);
             XmlReaderSettings = CreateDefaultXmlReaderSettings();
         }
 
