@@ -18,14 +18,19 @@ namespace DocumentFormat.OpenXml.Framework
 
         private int _code;
 
-        public void Add<T>(T item)
+        public void Add<T>(T? item)
             => Add(item?.GetHashCode() ?? 0);
 
-        public void Add<T>(T item, IEqualityComparer<T> comparer)
+        public void Add<T>(T? item, IEqualityComparer<T> comparer)
         {
             if (comparer is null)
             {
                 throw new ArgumentNullException(nameof(comparer));
+            }
+
+            if (item is null)
+            {
+                return;
             }
 
             Add(comparer.GetHashCode(item));
