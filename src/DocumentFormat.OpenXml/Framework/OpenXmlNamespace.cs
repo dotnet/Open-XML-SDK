@@ -11,12 +11,6 @@ namespace DocumentFormat.OpenXml.Framework
         private readonly string? _prefix;
         private readonly string? _uri;
 
-        internal OpenXmlNamespace(byte nsId)
-        {
-            _prefix = FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceIdResolver>().GetPrefix(nsId);
-            _uri = FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().LookupNamespace(_prefix);
-        }
-
         public OpenXmlNamespace(string? nsUri, string? prefix = null)
         {
             _uri = nsUri;
