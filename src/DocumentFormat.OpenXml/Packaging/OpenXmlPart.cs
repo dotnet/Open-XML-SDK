@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Packaging
             openXmlPackage.ReserveUri(ContentType, Uri);
 
             // load recursively
-            var relationshipCollection = new PackagePartRelationshipPropertyCollection(PackagePart);
+            var relationshipCollection = new PackagePartRelationshipPropertyCollection(PackagePart, Features.GetNamespaceResolver());
             LoadReferencedPartsAndRelationships(openXmlPackage, this, relationshipCollection, loadedParts);
         }
 

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -18,17 +19,17 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal bool StrictRelationshipFound { get; set; }
 
-        public RelationshipCollection(PackageRelationshipCollection collection)
+        public RelationshipCollection(PackageRelationshipCollection collection, IOpenXmlNamespaceResolver resolver)
         {
             BasePackageRelationshipCollection = collection;
 
-            Build();
+            Build(resolver);
         }
 
         /// <summary>
         /// This method fills the collection with PackageRels from the PackageRelationshipCollection that is given in the sub class.
         /// </summary>
-        private void Build()
+        private void Build(IOpenXmlNamespaceResolver resolver)
         {
             foreach (PackageRelationship relationship in BasePackageRelationshipCollection)
             {
@@ -39,8 +40,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 relationshipProperty.Id = relationship.Id;
                 relationshipProperty.RelationshipType = relationship.RelationshipType;
 
+                var ns = new OpenXmlNamespace(relationshipProperty.RelationshipType);
+
                 // If packageRel.RelationshipType is something for Strict, it tries to get the equivalent in Transitional.
-                if (new OpenXmlNamespace(relationshipProperty.RelationshipType).TryGetTransitionalRelationship(out var transitionalNamespace))
+                if (resolver.TryGetTransitionalRelationship(ns, out var transitionalNamespace))
                 {
                     relationshipProperty.RelationshipType = transitionalNamespace.Uri;
                     StrictRelationshipFound = true;

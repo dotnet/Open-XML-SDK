@@ -30,13 +30,6 @@ namespace DocumentFormat.OpenXml.Framework
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
 
         /// <summary>
-        /// Attempts to get the Transitional equivalent relationship.
-        /// </summary>
-        /// <param name="transitionalRelationship">An equivalent relationship in Transitional.</param>
-        /// <returns>Returns true when a Transitional equivalent relationship is found, returns false when it is not.</returns>
-        public bool TryGetTransitionalRelationship(out OpenXmlNamespace transitionalRelationship) => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().TryGetTransitionalRelationship(this, out transitionalRelationship);
-
-        /// <summary>
         /// Try to get the expected namespace if the passed namespace is an obsolete.
         /// </summary>
         /// <param name="extNamespaceUri">The expected namespace when the passed namespace is an obsolete.</param>
