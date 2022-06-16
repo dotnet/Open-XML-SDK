@@ -11517,9 +11517,28 @@
         "dgm1611:CT_NumberDiagramInfoList/dgm1611:autoBuNodeInfoLst",
         "dsp:CT_DataModelExtBlock/dsp:dataModelExt",
         "dsp:CT_Drawing/dsp:drawing",
+        "emma:CT_Arc/emma:arc",
+        "emma:CT_Derivation/emma:derivation",
+        "emma:CT_DerivedFrom/emma:derived-from",
+        "emma:CT_Emma/emma:emma",
+        "emma:CT_EndPoint/emma:endpoint",
+        "emma:CT_EndPointInfo/emma:endpoint-info",
+        "emma:CT_Grammar/emma:grammar",
+        "emma:CT_Group/emma:group",
+        "emma:CT_GroupInfo/emma:group-info",
+        "emma:CT_Info/emma:info",
+        "emma:CT_Interpretation/emma:interpretation",
+        "emma:CT_Lattice/emma:lattice",
+        "emma:CT_Literal/emma:literal",
+        "emma:CT_Model/emma:model",
+        "emma:CT_Node/emma:node",
+        "emma:CT_OneOf/emma:one-of",
+        "emma:CT_Sequence/emma:sequence",
+        "inkml:CT_Ink/inkml:ink",
         "m:CT_MathPr/m:mathPr",
         "m:CT_OMath/m:oMath",
         "m:CT_OMathPara/m:oMathPara",
+        "msink:CT_CtxNode/msink:context",
         "o:CT_Callout/o:callout",
         "o:CT_ClipPath/o:clippath",
         "o:CT_Complex/o:complex",
@@ -11538,6 +11557,33 @@
         "o:CT_StrokeChild/o:right",
         "o:CT_StrokeChild/o:bottom",
         "o:CT_StrokeChild/o:column",
+        "oac:CT_ConnectorMonikerList/oac:cxnSpMkLst",
+        "oac:CT_DocumentContextMonikerList/oac:dcMkLst",
+        "oac:CT_DrawingElementMonikerList/oac:deMkLst",
+        "oac:CT_DrawingElementMonikerList/oac:deMasterMkLst",
+        "oac:CT_DrawingMonikerList/oac:dgMkLst",
+        "oac:CT_DrawingSelectionStgList/oac:drSelLst",
+        "oac:CT_EditorSelectionStgList/oac:editorSelLst",
+        "oac:CT_GraphicFrameMonikerList/oac:graphicFrameMkLst",
+        "oac:CT_GraphicParentMonikerList/oac:graphicParentMkLst",
+        "oac:CT_GroupCommand/oac:grpCmd",
+        "oac:CT_GroupShapeMonikerList/oac:grpSpMkLst",
+        "oac:CT_HyperlinkMonikerList/oac:hlinkMkLst",
+        "oac:CT_ImgData/oac:imgData",
+        "oac:CT_ImgData/oac:origImgData",
+        "oac:CT_ImgLink/oac:imgLink",
+        "oac:CT_InkMonikerList/oac:inkMkLst",
+        "oac:CT_Model3DMonikerList/oac:model3DMkLst",
+        "oac:CT_PictureMonikerList/oac:picMkLst",
+        "oac:CT_ShapeMonikerList/oac:spMkLst",
+        "oac:CT_TableCellMonikerList/oac:tcMkLst",
+        "oac:CT_TableColumnMonikerList/oac:gridColMkLst",
+        "oac:CT_TableMonikerList/oac:tblMkLst",
+        "oac:CT_TableRowMonikerList/oac:trMkLst",
+        "oac:CT_TextBodyMonikerList/oac:txBodyMkLst",
+        "oac:CT_TextBodyPackage/oac:txBodyPkg",
+        "oac:CT_TextCharRangeMonikerList/oac:txMkLst",
+        "oac:CT_ViewSelectionStgList/oac:viewSelLst",
         "p:CT_CommentAuthorList/p:cmAuthorLst",
         "p:CT_CommentList/p:cmLst",
         "p:CT_ContentPart/p:contentPart",
@@ -11592,6 +11638,32 @@
         "p15:CT_ExtendedGuideList/p15:notesGuideLst",
         "p15:CT_PresenceInfo/p15:presenceInfo",
         "p15:CT_PresetTransition/p15:prstTrans",
+        "p188:CT_AuthorList/p188:authorLst",
+        "p188:CT_CommentList/p188:cmLst",
+        "p188:CT_CommentRelationship/p188:commentRel",
+        "p1912:CT_TaskHistoryDetails/p1912:taskHistoryDetails",
+        "pc:CT_AnimationEffectMonikerList/pc:animEffectMkLst",
+        "pc:CT_AnimationEffectMonikerList/pc:animEffectParentMkLst",
+        "pc:CT_CommentAuthorMonikerList/pc:cmAuthorMkLst",
+        "pc:CT_CommentMonikerList/pc:cmMkLst",
+        "pc:CT_CustomShowMonikerList/pc:custShowMkLst",
+        "pc:CT_CustomXmlPartMonikerList/pc:cXmlMkLst",
+        "pc:CT_DesignerTagMonikerList/pc:designTagMkLst",
+        "pc:CT_DocumentMonikerList/pc:docMkLst",
+        "pc:CT_HandoutMonikerList/pc:handoutMkLst",
+        "pc:CT_MainMasterMonikerList/pc:sldMasterMkLst",
+        "pc:CT_NotesMasterMonikerList/pc:notesMasterMkLst",
+        "pc:CT_NotesMonikerList/pc:notesMkLst",
+        "pc:CT_NotesTextMonikerList/pc:notesTxtMkLst",
+        "pc:CT_OsfTaskPaneAppMonikerList/pc:tkAppMkLst",
+        "pc:CT_SectionLinkObjMonikerList/pc:sectionLnkObjMkLst",
+        "pc:CT_SectionMonikerList/pc:sectionMkLst",
+        "pc:CT_SlideBaseMonikerList/pc:sldBaseMkLst",
+        "pc:CT_SlideLayoutMonikerList/pc:sldLayoutMkLst",
+        "pc:CT_SlideMonikerList/pc:sldMkLst",
+        "pc:CT_SlidePosMonikerList/pc:sldPosMkLst",
+        "pc:CT_StringTagMonikerList/pc:tagMkLst",
+        "pc:CT_SummaryZoomMonikerList/pc:tocMkLst",
         "pic:CT_Picture/pic:pic",
         "pvml:CT_Empty/pvml:iscomment",
         "pvml:CT_Rel/pvml:textdata",
@@ -12049,6 +12121,222 @@
         },
         {
           "Name": "p:CT_ContentPart/p:contentPart"
+        },
+        {
+          "Name": "p188:CT_AuthorList/p188:authorLst"
+        },
+        {
+          "Name": "p188:CT_CommentList/p188:cmLst"
+        },
+        {
+          "Name": "p188:CT_CommentRelationship/p188:commentRel"
+        },
+        {
+          "Name": "pc:CT_CommentAuthorMonikerList/pc:cmAuthorMkLst"
+        },
+        {
+          "Name": "pc:CT_CommentMonikerList/pc:cmMkLst"
+        },
+        {
+          "Name": "pc:CT_StringTagMonikerList/pc:tagMkLst"
+        },
+        {
+          "Name": "pc:CT_CustomShowMonikerList/pc:custShowMkLst"
+        },
+        {
+          "Name": "pc:CT_DocumentMonikerList/pc:docMkLst"
+        },
+        {
+          "Name": "pc:CT_SectionMonikerList/pc:sectionMkLst"
+        },
+        {
+          "Name": "pc:CT_SlideBaseMonikerList/pc:sldBaseMkLst"
+        },
+        {
+          "Name": "pc:CT_SlideLayoutMonikerList/pc:sldLayoutMkLst"
+        },
+        {
+          "Name": "pc:CT_MainMasterMonikerList/pc:sldMasterMkLst"
+        },
+        {
+          "Name": "pc:CT_SlideMonikerList/pc:sldMkLst"
+        },
+        {
+          "Name": "pc:CT_SlidePosMonikerList/pc:sldPosMkLst"
+        },
+        {
+          "Name": "pc:CT_NotesMonikerList/pc:notesMkLst"
+        },
+        {
+          "Name": "pc:CT_NotesTextMonikerList/pc:notesTxtMkLst"
+        },
+        {
+          "Name": "pc:CT_NotesMasterMonikerList/pc:notesMasterMkLst"
+        },
+        {
+          "Name": "pc:CT_HandoutMonikerList/pc:handoutMkLst"
+        },
+        {
+          "Name": "pc:CT_AnimationEffectMonikerList/pc:animEffectMkLst"
+        },
+        {
+          "Name": "pc:CT_AnimationEffectMonikerList/pc:animEffectParentMkLst"
+        },
+        {
+          "Name": "pc:CT_OsfTaskPaneAppMonikerList/pc:tkAppMkLst"
+        },
+        {
+          "Name": "pc:CT_SummaryZoomMonikerList/pc:tocMkLst"
+        },
+        {
+          "Name": "pc:CT_SectionLinkObjMonikerList/pc:sectionLnkObjMkLst"
+        },
+        {
+          "Name": "pc:CT_DesignerTagMonikerList/pc:designTagMkLst"
+        },
+        {
+          "Name": "pc:CT_CustomXmlPartMonikerList/pc:cXmlMkLst"
+        },
+        {
+          "Name": "p1912:CT_TaskHistoryDetails/p1912:taskHistoryDetails"
+        },
+        {
+          "Name": "oac:CT_TextBodyPackage/oac:txBodyPkg"
+        },
+        {
+          "Name": "oac:CT_GroupCommand/oac:grpCmd"
+        },
+        {
+          "Name": "oac:CT_ImgData/oac:imgData"
+        },
+        {
+          "Name": "oac:CT_ImgData/oac:origImgData"
+        },
+        {
+          "Name": "oac:CT_ImgLink/oac:imgLink"
+        },
+        {
+          "Name": "oac:CT_DrawingMonikerList/oac:dgMkLst"
+        },
+        {
+          "Name": "oac:CT_DocumentContextMonikerList/oac:dcMkLst"
+        },
+        {
+          "Name": "oac:CT_GraphicParentMonikerList/oac:graphicParentMkLst"
+        },
+        {
+          "Name": "oac:CT_DrawingElementMonikerList/oac:deMkLst"
+        },
+        {
+          "Name": "oac:CT_DrawingElementMonikerList/oac:deMasterMkLst"
+        },
+        {
+          "Name": "oac:CT_ShapeMonikerList/oac:spMkLst"
+        },
+        {
+          "Name": "oac:CT_GroupShapeMonikerList/oac:grpSpMkLst"
+        },
+        {
+          "Name": "oac:CT_GraphicFrameMonikerList/oac:graphicFrameMkLst"
+        },
+        {
+          "Name": "oac:CT_ConnectorMonikerList/oac:cxnSpMkLst"
+        },
+        {
+          "Name": "oac:CT_PictureMonikerList/oac:picMkLst"
+        },
+        {
+          "Name": "oac:CT_InkMonikerList/oac:inkMkLst"
+        },
+        {
+          "Name": "oac:CT_TextBodyMonikerList/oac:txBodyMkLst"
+        },
+        {
+          "Name": "oac:CT_TextCharRangeMonikerList/oac:txMkLst"
+        },
+        {
+          "Name": "oac:CT_HyperlinkMonikerList/oac:hlinkMkLst"
+        },
+        {
+          "Name": "oac:CT_Model3DMonikerList/oac:model3DMkLst"
+        },
+        {
+          "Name": "oac:CT_ViewSelectionStgList/oac:viewSelLst"
+        },
+        {
+          "Name": "oac:CT_EditorSelectionStgList/oac:editorSelLst"
+        },
+        {
+          "Name": "oac:CT_DrawingSelectionStgList/oac:drSelLst"
+        },
+        {
+          "Name": "oac:CT_TableMonikerList/oac:tblMkLst"
+        },
+        {
+          "Name": "oac:CT_TableCellMonikerList/oac:tcMkLst"
+        },
+        {
+          "Name": "oac:CT_TableRowMonikerList/oac:trMkLst"
+        },
+        {
+          "Name": "oac:CT_TableColumnMonikerList/oac:gridColMkLst"
+        },
+        {
+          "Name": "inkml:CT_Ink/inkml:ink"
+        },
+        {
+          "Name": "emma:CT_OneOf/emma:one-of"
+        },
+        {
+          "Name": "emma:CT_Group/emma:group"
+        },
+        {
+          "Name": "emma:CT_Sequence/emma:sequence"
+        },
+        {
+          "Name": "emma:CT_EndPoint/emma:endpoint"
+        },
+        {
+          "Name": "emma:CT_EndPointInfo/emma:endpoint-info"
+        },
+        {
+          "Name": "emma:CT_Info/emma:info"
+        },
+        {
+          "Name": "emma:CT_Grammar/emma:grammar"
+        },
+        {
+          "Name": "emma:CT_DerivedFrom/emma:derived-from"
+        },
+        {
+          "Name": "emma:CT_Node/emma:node"
+        },
+        {
+          "Name": "emma:CT_Arc/emma:arc"
+        },
+        {
+          "Name": "emma:CT_Lattice/emma:lattice"
+        },
+        {
+          "Name": "emma:CT_Literal/emma:literal"
+        },
+        {
+          "Name": "emma:CT_Interpretation/emma:interpretation"
+        },
+        {
+          "Name": "emma:CT_GroupInfo/emma:group-info"
+        },
+        {
+          "Name": "emma:CT_Derivation/emma:derivation"
+        },
+        {
+          "Name": "emma:CT_Model/emma:model"
+        },
+        {
+          "Name": "emma:CT_Emma/emma:emma"
+        },
+        {
+          "Name": "msink:CT_CtxNode/msink:context"
         },
         {
           "Name": "p15:CT_PresetTransition/p15:prstTrans"

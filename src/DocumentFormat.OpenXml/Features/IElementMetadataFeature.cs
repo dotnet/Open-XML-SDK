@@ -3,10 +3,9 @@
 
 using DocumentFormat.OpenXml.Framework.Metadata;
 
-namespace DocumentFormat.OpenXml.Features
+namespace DocumentFormat.OpenXml.Features;
+
+internal interface IElementMetadataFeature
 {
-    internal interface IElementMetadataFeature
-    {
-        public ElementMetadata GetMetadata(OpenXmlElement element);
-    }
+    public ElementMetadata GetMetadata(OpenXmlElement element);
 }

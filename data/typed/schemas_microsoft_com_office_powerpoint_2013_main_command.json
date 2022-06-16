@@ -32,6 +32,10 @@
     "ClassName": "DesignerTagMonikerList"
   },
   {
+    "Name": "pc:CT_DocumentMoniker/pc:docMk",
+    "ClassName": "DocumentMoniker"
+  },
+  {
     "Name": "pc:CT_DocumentMonikerList/pc:docMkLst",
     "ClassName": "DocumentMonikerList"
   },
@@ -70,6 +74,10 @@
   {
     "Name": "pc:CT_MainMasterMonikerList/pc:sldMasterMkLst",
     "ClassName": "MainMasterMonikerList"
+  },
+  {
+    "Name": "pc:CT_SlideMoniker/pc:sldMk",
+    "ClassName": "SlideMoniker"
   },
   {
     "Name": "pc:CT_SlideMonikerList/pc:sldMkLst",

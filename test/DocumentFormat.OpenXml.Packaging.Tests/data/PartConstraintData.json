@@ -2529,13 +2529,6 @@
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
-      "http://schemas.microsoft.com/office/2018/10/relationships/comments": {
-        "PartClassName": "PowerPointCommentPart",
-        "PartContentType": "application/vnd.ms-powerpoint.comments+xml",
-        "MinOccursIsNonZero": false,
-        "MaxOccursGreatThanOne": true,
-        "FileFormat": "Office2021"
-      },
       "http://schemas.microsoft.com/office/2018/10/relationships/authors": {
         "PartClassName": "PowerPointAuthorsPart",
         "PartContentType": "application/vnd.ms-powerpoint.authors+xml",
@@ -2562,8 +2555,8 @@
     "IsContentTypeFixed": true,
     "RelationshipType": "http://schemas.microsoft.com/office/2018/10/relationships/comments",
     "TargetFileExtension": ".xml",
-    "TargetName": "moderncomment",
-    "TargetPath": "comments",
+    "TargetName": "modernComment",
+    "TargetPath": "../comments",
     "DataParts": {},
     "Parts": {}
   },
@@ -3219,6 +3212,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
+      },
+      "http://schemas.microsoft.com/office/2018/10/relationships/comments": {
+        "PartClassName": "PowerPointCommentPart",
+        "PartContentType": "application/vnd.ms-powerpoint.comments+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2021"
       }
     }
   },

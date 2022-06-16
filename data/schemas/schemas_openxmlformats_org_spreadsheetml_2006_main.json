@@ -21751,493 +21751,6 @@
       }
     },
     {
-      "Name": "x:CT_CacheSource/x:cacheSource",
-      "ClassName": "CacheSource",
-      "Summary": "Defines the CacheSource Class.",
-      "CompositeType": "OneChoice",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":type",
-          "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SourceValues\u003E",
-          "PropertyComments": "type",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            }
-          ]
-        },
-        {
-          "QName": ":connectionId",
-          "PropertyName": "ConnectionId",
-          "Type": "UInt32Value",
-          "PropertyComments": "connectionId"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_WorksheetSource/x:worksheetSource",
-          "PropertyName": "WorksheetSource"
-        },
-        {
-          "Name": "x:CT_Consolidation/x:consolidation",
-          "PropertyName": "Consolidation"
-        },
-        {
-          "Name": "x:CT_CacheSourceExtensionList/x:extLst",
-          "PropertyName": "CacheSourceExtensionList"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Occurs": [
-          {
-            "Max": 1
-          }
-        ],
-        "Items": [
-          {
-            "Name": "x:CT_WorksheetSource/x:worksheetSource"
-          },
-          {
-            "Name": "x:CT_Consolidation/x:consolidation"
-          },
-          {
-            "Name": "x:CT_CacheSourceExtensionList/x:extLst",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_CacheFields/x:cacheFields",
-      "ClassName": "CacheFields",
-      "Summary": "Defines the CacheFields Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Field Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_CacheField/x:cacheField"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_CacheField/x:cacheField",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_CacheHierarchies/x:cacheHierarchies",
-      "ClassName": "CacheHierarchies",
-      "Summary": "Defines the CacheHierarchies Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Hierarchy Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_CacheHierarchy/x:cacheHierarchy"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_CacheHierarchy/x:cacheHierarchy",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_PCDKPIs/x:kpis",
-      "ClassName": "Kpis",
-      "Summary": "Defines the Kpis Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "KPI Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_PCDKPI/x:kpi"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_PCDKPI/x:kpi",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_TupleCache/x:tupleCache",
-      "ClassName": "TupleCache",
-      "Summary": "Defines the TupleCache Class.",
-      "CompositeType": "OneSequence",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "x:CT_PCDSDTCEntries/x:entries",
-          "PropertyName": "Entries",
-          "PropertyComments": "Entries"
-        },
-        {
-          "Name": "x:CT_Sets/x:sets",
-          "PropertyName": "Sets",
-          "PropertyComments": "Sets"
-        },
-        {
-          "Name": "x:CT_QueryCache/x:queryCache",
-          "PropertyName": "QueryCache",
-          "PropertyComments": "OLAP Query Cache"
-        },
-        {
-          "Name": "x:CT_ServerFormats/x:serverFormats",
-          "PropertyName": "ServerFormats",
-          "PropertyComments": "Server Formats"
-        },
-        {
-          "Name": "x:CT_ExtensionList/x:extLst",
-          "PropertyName": "ExtensionList",
-          "PropertyComments": "Future Feature Data Storage Area"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_PCDSDTCEntries/x:entries",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "x:CT_Sets/x:sets",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "x:CT_QueryCache/x:queryCache",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "x:CT_ServerFormats/x:serverFormats",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "x:CT_ExtensionList/x:extLst",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_CalculatedItems/x:calculatedItems",
-      "ClassName": "CalculatedItems",
-      "Summary": "Defines the CalculatedItems Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Calculated Item Formula Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_CalculatedItem/x:calculatedItem"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_CalculatedItem/x:calculatedItem",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_CalculatedMembers/x:calculatedMembers",
-      "ClassName": "CalculatedMembers",
-      "Summary": "Defines the CalculatedMembers Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Calculated Members Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_CalculatedMember/x:calculatedMember"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_CalculatedMember/x:calculatedMember",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_Dimensions/x:dimensions",
-      "ClassName": "Dimensions",
-      "Summary": "Defines the Dimensions Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "OLAP Dimensions Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_PivotDimension/x:dimension"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_PivotDimension/x:dimension",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_MeasureGroups/x:measureGroups",
-      "ClassName": "MeasureGroups",
-      "Summary": "Defines the MeasureGroups Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Measure Group Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_MeasureGroup/x:measureGroup"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_MeasureGroup/x:measureGroup",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_MeasureDimensionMaps/x:maps",
-      "ClassName": "Maps",
-      "Summary": "Defines the Maps Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Measure Group Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_MeasureDimensionMap/x:map"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_MeasureDimensionMap/x:map",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_PivotCacheDefinitionExtensionList/x:extLst",
-      "ClassName": "PivotCacheDefinitionExtensionList",
-      "Summary": "Defines the PivotCacheDefinitionExtensionList Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "x:CT_PivotCacheDefinitionExtension/x:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_PivotCacheDefinitionExtension/x:ext",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_PivotCacheDefinitionExtension/x:ext",
-      "ClassName": "PivotCacheDefinitionExtension",
-      "Summary": "Defines the PivotCacheDefinitionExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x14:CT_PivotCacheDefinition/x14:pivotCacheDefinition",
-          "PropertyName": "PivotCacheDefinition"
-        },
-        {
-          "Name": "x15:CT_PivotCacheDecoupled/x15:pivotCacheDecoupled",
-          "PropertyName": "PivotCacheDecoupled"
-        },
-        {
-          "Name": "x15:CT_TimelinePivotCacheDefinition/x15:timelinePivotCacheDefinition",
-          "PropertyName": "TimelinePivotCacheDefinition"
-        },
-        {
-          "Name": "x15:CT_PivotCacheIdVersion/x15:pivotCacheIdVersion",
-          "PropertyName": "PivotCacheIdVersion"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "x14:CT_PivotCacheDefinition/x14:pivotCacheDefinition",
-            "InitialVersion": "Office2010"
-          },
-          {
-            "Name": "x15:CT_PivotCacheDecoupled/x15:pivotCacheDecoupled",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "x15:CT_TimelinePivotCacheDefinition/x15:timelinePivotCacheDefinition",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "x15:CT_PivotCacheIdVersion/x15:pivotCacheIdVersion",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "Name": "x:CT_SharedItems/x:sharedItems",
       "ClassName": "SharedItems",
       "Summary": "Defines the SharedItems Class.",
@@ -22735,655 +22248,6 @@
           },
           {
             "Name": "x15:CT_CalculatedMember/x15:calculatedMember",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_Location/x:location",
-      "ClassName": "Location",
-      "Summary": "Defines the Location Class.",
-      "BaseClass": "OpenXmlLeafElement",
-      "IsLeafElement": true,
-      "Attributes": [
-        {
-          "QName": ":ref",
-          "PropertyName": "Reference",
-          "Type": "StringValue",
-          "PropertyComments": "Reference",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            }
-          ]
-        },
-        {
-          "QName": ":firstHeaderRow",
-          "PropertyName": "FirstHeaderRow",
-          "Type": "UInt32Value",
-          "PropertyComments": "First Header Row",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            }
-          ]
-        },
-        {
-          "QName": ":firstDataRow",
-          "PropertyName": "FirstDataRow",
-          "Type": "UInt32Value",
-          "PropertyComments": "PivotTable Data First Row",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            }
-          ]
-        },
-        {
-          "QName": ":firstDataCol",
-          "PropertyName": "FirstDataColumn",
-          "Type": "UInt32Value",
-          "PropertyComments": "First Data Column",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            }
-          ]
-        },
-        {
-          "QName": ":rowPageCount",
-          "PropertyName": "RowPageCount",
-          "Type": "UInt32Value",
-          "PropertyComments": "Rows Per Page Count"
-        },
-        {
-          "QName": ":colPageCount",
-          "PropertyName": "ColumnsPerPage",
-          "Type": "UInt32Value",
-          "PropertyComments": "Columns Per Page"
-        }
-      ]
-    },
-    {
-      "Name": "x:CT_PivotFields/x:pivotFields",
-      "ClassName": "PivotFields",
-      "Summary": "Defines the PivotFields Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Field Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_PivotField/x:pivotField"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_PivotField/x:pivotField",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_RowFields/x:rowFields",
-      "ClassName": "RowFields",
-      "Summary": "Defines the RowFields Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Repeated Items Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_Field/x:field"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_Field/x:field",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_rowItems/x:rowItems",
-      "ClassName": "RowItems",
-      "Summary": "Defines the RowItems Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Items in a Row Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_I/x:i"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_I/x:i",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_ColFields/x:colFields",
-      "ClassName": "ColumnFields",
-      "Summary": "Defines the ColumnFields Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Repeated Items Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_Field/x:field"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_Field/x:field",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_colItems/x:colItems",
-      "ClassName": "ColumnItems",
-      "Summary": "Defines the ColumnItems Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Column Item Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_I/x:i"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_I/x:i",
-            "Occurs": [
-              {
-                "Min": 1,
-                "Max": 1048576
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_PageFields/x:pageFields",
-      "ClassName": "PageFields",
-      "Summary": "Defines the PageFields Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Page Item Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_PageField/x:pageField"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_PageField/x:pageField",
-            "Occurs": [
-              {
-                "Min": 1,
-                "Max": 256
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_DataFields/x:dataFields",
-      "ClassName": "DataFields",
-      "Summary": "Defines the DataFields Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Data Items Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_DataField/x:dataField"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_DataField/x:dataField",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_Formats/x:formats",
-      "ClassName": "Formats",
-      "Summary": "Defines the Formats Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Formats Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_Format/x:format"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_Format/x:format",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_ConditionalFormats/x:conditionalFormats",
-      "ClassName": "ConditionalFormats",
-      "Summary": "Defines the ConditionalFormats Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Conditional Format Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_ConditionalFormat/x:conditionalFormat"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_ConditionalFormat/x:conditionalFormat",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_ChartFormats/x:chartFormats",
-      "ClassName": "ChartFormats",
-      "Summary": "Defines the ChartFormats Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Format Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_ChartFormat/x:chartFormat"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_ChartFormat/x:chartFormat",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_PivotHierarchies/x:pivotHierarchies",
-      "ClassName": "PivotHierarchies",
-      "Summary": "Defines the PivotHierarchies Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "OLAP Hierarchy Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_PivotHierarchy/x:pivotHierarchy"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_PivotHierarchy/x:pivotHierarchy",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_PivotTableStyle/x:pivotTableStyleInfo",
-      "ClassName": "PivotTableStyle",
-      "Summary": "Defines the PivotTableStyle Class.",
-      "BaseClass": "OpenXmlLeafElement",
-      "IsLeafElement": true,
-      "Attributes": [
-        {
-          "QName": ":name",
-          "PropertyName": "Name",
-          "Type": "StringValue",
-          "PropertyComments": "Table Style Name"
-        },
-        {
-          "QName": ":showRowHeaders",
-          "PropertyName": "ShowRowHeaders",
-          "Type": "BooleanValue",
-          "PropertyComments": "Show Row Header Formatting"
-        },
-        {
-          "QName": ":showColHeaders",
-          "PropertyName": "ShowColumnHeaders",
-          "Type": "BooleanValue",
-          "PropertyComments": "Show Table Style Column Header Formatting"
-        },
-        {
-          "QName": ":showRowStripes",
-          "PropertyName": "ShowRowStripes",
-          "Type": "BooleanValue",
-          "PropertyComments": "Show Row Stripes"
-        },
-        {
-          "QName": ":showColStripes",
-          "PropertyName": "ShowColumnStripes",
-          "Type": "BooleanValue",
-          "PropertyComments": "Show Column Stripes"
-        },
-        {
-          "QName": ":showLastColumn",
-          "PropertyName": "ShowLastColumn",
-          "Type": "BooleanValue",
-          "PropertyComments": "Show Last Column"
-        }
-      ]
-    },
-    {
-      "Name": "x:CT_PivotFilters/x:filters",
-      "ClassName": "PivotFilters",
-      "Summary": "Defines the PivotFilters Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Pivot Filter Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_PivotFilter/x:filter"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_PivotFilter/x:filter",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_RowHierarchiesUsage/x:rowHierarchiesUsage",
-      "ClassName": "RowHierarchiesUsage",
-      "Summary": "Defines the RowHierarchiesUsage Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Item Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_HierarchyUsage/x:rowHierarchyUsage"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_HierarchyUsage/x:rowHierarchyUsage",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_ColHierarchiesUsage/x:colHierarchiesUsage",
-      "ClassName": "ColumnHierarchiesUsage",
-      "Summary": "Defines the ColumnHierarchiesUsage Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":count",
-          "PropertyName": "Count",
-          "Type": "UInt32Value",
-          "PropertyComments": "Items Count"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x:CT_HierarchyUsage/x:colHierarchyUsage"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_HierarchyUsage/x:colHierarchyUsage",
-            "Occurs": [
-              {
-                "Min": 1,
-                "Max": 16384
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_pivotTableDefinitionExtensionList/x:extLst",
-      "ClassName": "PivotTableDefinitionExtensionList",
-      "Summary": "Defines the PivotTableDefinitionExtensionList Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "x:CT_pivotTableDefinitionExtension/x:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_pivotTableDefinitionExtension/x:ext",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_pivotTableDefinitionExtension/x:ext",
-      "ClassName": "PivotTableDefinitionExtension",
-      "Summary": "Defines the PivotTableDefinitionExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "x14:CT_PivotTableDefinition/x14:pivotTableDefinition",
-          "PropertyName": "PivotTableDefinition"
-        },
-        {
-          "Name": "x15:CT_PivotTableData/x15:pivotTableData",
-          "PropertyName": "PivotTableData"
-        },
-        {
-          "Name": "x15:CT_PivotTableUISettings/x15:pivotTableUISettings",
-          "PropertyName": "PivotTableUISettings"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "x14:CT_PivotTableDefinition/x14:pivotTableDefinition",
-            "InitialVersion": "Office2010"
-          },
-          {
-            "Name": "x15:CT_PivotTableData/x15:pivotTableData",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "x15:CT_PivotTableUISettings/x15:pivotTableUISettings",
             "InitialVersion": "Office2013"
           },
           {
@@ -25419,6 +24283,1166 @@
           {
             "Name": "x15:CT_DataModel/x15:dataModel",
             "InitialVersion": "Office2013"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_Location/x:location",
+      "ClassName": "Location",
+      "Summary": "Defines the Location Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":ref",
+          "PropertyName": "Reference",
+          "Type": "StringValue",
+          "PropertyComments": "Reference",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":firstHeaderRow",
+          "PropertyName": "FirstHeaderRow",
+          "Type": "UInt32Value",
+          "PropertyComments": "First Header Row",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":firstDataRow",
+          "PropertyName": "FirstDataRow",
+          "Type": "UInt32Value",
+          "PropertyComments": "PivotTable Data First Row",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":firstDataCol",
+          "PropertyName": "FirstDataColumn",
+          "Type": "UInt32Value",
+          "PropertyComments": "First Data Column",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":rowPageCount",
+          "PropertyName": "RowPageCount",
+          "Type": "UInt32Value",
+          "PropertyComments": "Rows Per Page Count"
+        },
+        {
+          "QName": ":colPageCount",
+          "PropertyName": "ColumnsPerPage",
+          "Type": "UInt32Value",
+          "PropertyComments": "Columns Per Page"
+        }
+      ]
+    },
+    {
+      "Name": "x:CT_PivotFields/x:pivotFields",
+      "ClassName": "PivotFields",
+      "Summary": "Defines the PivotFields Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Field Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_PivotField/x:pivotField"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_PivotField/x:pivotField",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_RowFields/x:rowFields",
+      "ClassName": "RowFields",
+      "Summary": "Defines the RowFields Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Repeated Items Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_Field/x:field"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_Field/x:field",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_rowItems/x:rowItems",
+      "ClassName": "RowItems",
+      "Summary": "Defines the RowItems Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Items in a Row Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_I/x:i"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_I/x:i",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ColFields/x:colFields",
+      "ClassName": "ColumnFields",
+      "Summary": "Defines the ColumnFields Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Repeated Items Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_Field/x:field"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_Field/x:field",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_colItems/x:colItems",
+      "ClassName": "ColumnItems",
+      "Summary": "Defines the ColumnItems Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Column Item Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_I/x:i"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_I/x:i",
+            "Occurs": [
+              {
+                "Min": 1,
+                "Max": 1048576
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_PageFields/x:pageFields",
+      "ClassName": "PageFields",
+      "Summary": "Defines the PageFields Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Page Item Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_PageField/x:pageField"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_PageField/x:pageField",
+            "Occurs": [
+              {
+                "Min": 1,
+                "Max": 256
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_DataFields/x:dataFields",
+      "ClassName": "DataFields",
+      "Summary": "Defines the DataFields Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Data Items Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_DataField/x:dataField"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_DataField/x:dataField",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_Formats/x:formats",
+      "ClassName": "Formats",
+      "Summary": "Defines the Formats Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Formats Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_Format/x:format"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_Format/x:format",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ConditionalFormats/x:conditionalFormats",
+      "ClassName": "ConditionalFormats",
+      "Summary": "Defines the ConditionalFormats Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Conditional Format Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_ConditionalFormat/x:conditionalFormat"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_ConditionalFormat/x:conditionalFormat",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ChartFormats/x:chartFormats",
+      "ClassName": "ChartFormats",
+      "Summary": "Defines the ChartFormats Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Format Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_ChartFormat/x:chartFormat"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_ChartFormat/x:chartFormat",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_PivotHierarchies/x:pivotHierarchies",
+      "ClassName": "PivotHierarchies",
+      "Summary": "Defines the PivotHierarchies Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "OLAP Hierarchy Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_PivotHierarchy/x:pivotHierarchy"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_PivotHierarchy/x:pivotHierarchy",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_PivotTableStyle/x:pivotTableStyleInfo",
+      "ClassName": "PivotTableStyle",
+      "Summary": "Defines the PivotTableStyle Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":name",
+          "PropertyName": "Name",
+          "Type": "StringValue",
+          "PropertyComments": "Table Style Name"
+        },
+        {
+          "QName": ":showRowHeaders",
+          "PropertyName": "ShowRowHeaders",
+          "Type": "BooleanValue",
+          "PropertyComments": "Show Row Header Formatting"
+        },
+        {
+          "QName": ":showColHeaders",
+          "PropertyName": "ShowColumnHeaders",
+          "Type": "BooleanValue",
+          "PropertyComments": "Show Table Style Column Header Formatting"
+        },
+        {
+          "QName": ":showRowStripes",
+          "PropertyName": "ShowRowStripes",
+          "Type": "BooleanValue",
+          "PropertyComments": "Show Row Stripes"
+        },
+        {
+          "QName": ":showColStripes",
+          "PropertyName": "ShowColumnStripes",
+          "Type": "BooleanValue",
+          "PropertyComments": "Show Column Stripes"
+        },
+        {
+          "QName": ":showLastColumn",
+          "PropertyName": "ShowLastColumn",
+          "Type": "BooleanValue",
+          "PropertyComments": "Show Last Column"
+        }
+      ]
+    },
+    {
+      "Name": "x:CT_PivotFilters/x:filters",
+      "ClassName": "PivotFilters",
+      "Summary": "Defines the PivotFilters Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Pivot Filter Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_PivotFilter/x:filter"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_PivotFilter/x:filter",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_RowHierarchiesUsage/x:rowHierarchiesUsage",
+      "ClassName": "RowHierarchiesUsage",
+      "Summary": "Defines the RowHierarchiesUsage Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Item Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_HierarchyUsage/x:rowHierarchyUsage"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_HierarchyUsage/x:rowHierarchyUsage",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ColHierarchiesUsage/x:colHierarchiesUsage",
+      "ClassName": "ColumnHierarchiesUsage",
+      "Summary": "Defines the ColumnHierarchiesUsage Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Items Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_HierarchyUsage/x:colHierarchyUsage"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_HierarchyUsage/x:colHierarchyUsage",
+            "Occurs": [
+              {
+                "Min": 1,
+                "Max": 16384
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_pivotTableDefinitionExtensionList/x:extLst",
+      "ClassName": "PivotTableDefinitionExtensionList",
+      "Summary": "Defines the PivotTableDefinitionExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "x:CT_pivotTableDefinitionExtension/x:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_pivotTableDefinitionExtension/x:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_pivotTableDefinitionExtension/x:ext",
+      "ClassName": "PivotTableDefinitionExtension",
+      "Summary": "Defines the PivotTableDefinitionExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_PivotTableDefinition/x14:pivotTableDefinition",
+          "PropertyName": "PivotTableDefinition"
+        },
+        {
+          "Name": "x15:CT_PivotTableData/x15:pivotTableData",
+          "PropertyName": "PivotTableData"
+        },
+        {
+          "Name": "x15:CT_PivotTableUISettings/x15:pivotTableUISettings",
+          "PropertyName": "PivotTableUISettings"
+        },
+        {
+          "Name": "xxpvi:CT_PivotVersionInfo/xxpvi:pivotVersionInfo",
+          "PropertyName": "PivotVersionInfo"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "x14:CT_PivotTableDefinition/x14:pivotTableDefinition",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x15:CT_PivotTableData/x15:pivotTableData",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "x15:CT_PivotTableUISettings/x15:pivotTableUISettings",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xxpvi:CT_PivotVersionInfo/xxpvi:pivotVersionInfo",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_CacheSource/x:cacheSource",
+      "ClassName": "CacheSource",
+      "Summary": "Defines the CacheSource Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":type",
+          "PropertyName": "Type",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SourceValues\u003E",
+          "PropertyComments": "type",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":connectionId",
+          "PropertyName": "ConnectionId",
+          "Type": "UInt32Value",
+          "PropertyComments": "connectionId"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_WorksheetSource/x:worksheetSource",
+          "PropertyName": "WorksheetSource"
+        },
+        {
+          "Name": "x:CT_Consolidation/x:consolidation",
+          "PropertyName": "Consolidation"
+        },
+        {
+          "Name": "x:CT_CacheSourceExtensionList/x:extLst",
+          "PropertyName": "CacheSourceExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {
+            "Max": 1
+          }
+        ],
+        "Items": [
+          {
+            "Name": "x:CT_WorksheetSource/x:worksheetSource"
+          },
+          {
+            "Name": "x:CT_Consolidation/x:consolidation"
+          },
+          {
+            "Name": "x:CT_CacheSourceExtensionList/x:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_CacheFields/x:cacheFields",
+      "ClassName": "CacheFields",
+      "Summary": "Defines the CacheFields Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Field Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_CacheField/x:cacheField"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_CacheField/x:cacheField",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_CacheHierarchies/x:cacheHierarchies",
+      "ClassName": "CacheHierarchies",
+      "Summary": "Defines the CacheHierarchies Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Hierarchy Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_CacheHierarchy/x:cacheHierarchy"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_CacheHierarchy/x:cacheHierarchy",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_PCDKPIs/x:kpis",
+      "ClassName": "Kpis",
+      "Summary": "Defines the Kpis Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "KPI Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_PCDKPI/x:kpi"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_PCDKPI/x:kpi",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_TupleCache/x:tupleCache",
+      "ClassName": "TupleCache",
+      "Summary": "Defines the TupleCache Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "x:CT_PCDSDTCEntries/x:entries",
+          "PropertyName": "Entries",
+          "PropertyComments": "Entries"
+        },
+        {
+          "Name": "x:CT_Sets/x:sets",
+          "PropertyName": "Sets",
+          "PropertyComments": "Sets"
+        },
+        {
+          "Name": "x:CT_QueryCache/x:queryCache",
+          "PropertyName": "QueryCache",
+          "PropertyComments": "OLAP Query Cache"
+        },
+        {
+          "Name": "x:CT_ServerFormats/x:serverFormats",
+          "PropertyName": "ServerFormats",
+          "PropertyComments": "Server Formats"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x:extLst",
+          "PropertyName": "ExtensionList",
+          "PropertyComments": "Future Feature Data Storage Area"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_PCDSDTCEntries/x:entries",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_Sets/x:sets",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_QueryCache/x:queryCache",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_ServerFormats/x:serverFormats",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_ExtensionList/x:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_CalculatedItems/x:calculatedItems",
+      "ClassName": "CalculatedItems",
+      "Summary": "Defines the CalculatedItems Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Calculated Item Formula Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_CalculatedItem/x:calculatedItem"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_CalculatedItem/x:calculatedItem",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_CalculatedMembers/x:calculatedMembers",
+      "ClassName": "CalculatedMembers",
+      "Summary": "Defines the CalculatedMembers Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Calculated Members Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_CalculatedMember/x:calculatedMember"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_CalculatedMember/x:calculatedMember",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_Dimensions/x:dimensions",
+      "ClassName": "Dimensions",
+      "Summary": "Defines the Dimensions Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "OLAP Dimensions Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_PivotDimension/x:dimension"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_PivotDimension/x:dimension",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_MeasureGroups/x:measureGroups",
+      "ClassName": "MeasureGroups",
+      "Summary": "Defines the MeasureGroups Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Measure Group Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_MeasureGroup/x:measureGroup"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_MeasureGroup/x:measureGroup",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_MeasureDimensionMaps/x:maps",
+      "ClassName": "Maps",
+      "Summary": "Defines the Maps Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "PropertyName": "Count",
+          "Type": "UInt32Value",
+          "PropertyComments": "Measure Group Count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_MeasureDimensionMap/x:map"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_MeasureDimensionMap/x:map",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_PivotCacheDefinitionExtensionList/x:extLst",
+      "ClassName": "PivotCacheDefinitionExtensionList",
+      "Summary": "Defines the PivotCacheDefinitionExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "x:CT_PivotCacheDefinitionExtension/x:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_PivotCacheDefinitionExtension/x:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_PivotCacheDefinitionExtension/x:ext",
+      "ClassName": "PivotCacheDefinitionExtension",
+      "Summary": "Defines the PivotCacheDefinitionExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x14:CT_PivotCacheDefinition/x14:pivotCacheDefinition",
+          "PropertyName": "PivotCacheDefinition"
+        },
+        {
+          "Name": "x15:CT_PivotCacheDecoupled/x15:pivotCacheDecoupled",
+          "PropertyName": "PivotCacheDecoupled"
+        },
+        {
+          "Name": "x15:CT_TimelinePivotCacheDefinition/x15:timelinePivotCacheDefinition",
+          "PropertyName": "TimelinePivotCacheDefinition"
+        },
+        {
+          "Name": "x15:CT_PivotCacheIdVersion/x15:pivotCacheIdVersion",
+          "PropertyName": "PivotCacheIdVersion"
+        },
+        {
+          "Name": "xsd:boolean/xxpim:implicitMeasureSupport",
+          "PropertyName": "Xsdboolean"
+        },
+        {
+          "Name": "xxpvi:CT_CacheVersionInfo/xxpvi:cacheVersionInfo",
+          "PropertyName": "CacheVersionInfo"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "x14:CT_PivotCacheDefinition/x14:pivotCacheDefinition",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "x15:CT_PivotCacheDecoupled/x15:pivotCacheDecoupled",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "x15:CT_TimelinePivotCacheDefinition/x15:timelinePivotCacheDefinition",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "x15:CT_PivotCacheIdVersion/x15:pivotCacheIdVersion",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "xsd:boolean/xxpim:implicitMeasureSupport",
+            "InitialVersion": "Office2021"
+          },
+          {
+            "Name": "xxpvi:CT_CacheVersionInfo/xxpvi:cacheVersionInfo",
+            "InitialVersion": "Microsoft365"
           },
           {
             "Kind": "Any",

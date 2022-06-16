@@ -42,6 +42,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Framework.Tests", "test\DocumentFormat.OpenXml.Framework.Tests\DocumentFormat.OpenXml.Framework.Tests.csproj", "{65D509D0-46DC-4883-AEB3-FF7E521B1E9F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{7DAF7304-40CC-4180-88A5-9A89DD13C565}"
+	ProjectSection(SolutionItems) = preProject
+		samples\Directory.Build.props = samples\Directory.Build.props
+		samples\Directory.Build.targets = samples\Directory.Build.targets
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IsolatedStorageExceptionWorkaround", "samples\IsolatedStorageExceptionWorkaround\IsolatedStorageExceptionWorkaround.csproj", "{F38D119D-A5B7-4027-83B1-804432922E55}"
 EndProject
@@ -63,7 +67,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Gene
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Linq", "Linq", "{C5AE39F0-A152-471A-B90E-B8F4E94AA6C2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvgExample", "samples\Linq\SvgExample\SvgExample.csproj", "{DE06FC2B-EABB-4535-BC73-C51A32B5AC01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvgExampleLinq", "samples\Linq\SvgExample\SvgExampleLinq.csproj", "{DE06FC2B-EABB-4535-BC73-C51A32B5AC01}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Generator.Linq", "gen\DocumentFormat.OpenXml.Generator.Linq\DocumentFormat.OpenXml.Generator.Linq.csproj", "{A682CF61-B4D5-473B-AFB7-4DC87EC27C5B}"
 EndProject

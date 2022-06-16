@@ -9606,6 +9606,10 @@
     "Element": "DocumentFormat.OpenXml.Drawing.GraphicData",
     "Children": [
       {
+        "Name": "context",
+        "Namespace": "http://schemas.microsoft.com/ink/2010/main"
+      },
+      {
         "Name": "invertSolidFillFmt",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2007/8/2/chart"
       },
@@ -9836,6 +9840,114 @@
       {
         "Name": "timeslicer",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/timeslicer"
+      },
+      {
+        "Name": "cxnSpMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "dcMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "deMasterMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "deMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "dgMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "drSelLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "editorSelLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "graphicFrameMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "graphicParentMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "gridColMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "grpCmd",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "grpSpMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "hlinkMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "imgData",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "imgLink",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "inkMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "model3DMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "origImgData",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "picMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "spMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "tblMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "tcMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "trMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "txBodyMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "txBodyPkg",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "txMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "viewSelLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
       },
       {
         "Name": "colId",
@@ -10076,6 +10188,110 @@
       {
         "Name": "threadingInfo",
         "Namespace": "http://schemas.microsoft.com/office/powerpoint/2012/main"
+      },
+      {
+        "Name": "animEffectMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "animEffectParentMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "cXmlMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "cmAuthorMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "cmMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "custShowMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "designTagMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "docMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "handoutMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "notesMasterMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "notesMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "notesTxtMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "sectionLnkObjMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "sectionMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "sldBaseMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "sldLayoutMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "sldMasterMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "sldMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "sldPosMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "tagMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "tkAppMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "tocMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "authorLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2018/8/main"
+      },
+      {
+        "Name": "cmLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2018/8/main"
+      },
+      {
+        "Name": "commentRel",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2018/8/main"
+      },
+      {
+        "Name": "taskHistoryDetails",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
       },
       {
         "Name": "themeFamily",
@@ -10464,6 +10680,78 @@
       {
         "Name": "webSettings",
         "Namespace": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+      },
+      {
+        "Name": "arc",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "derivation",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "derived-from",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "emma",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "endpoint",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "endpoint-info",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "grammar",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "group",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "group-info",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "info",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "interpretation",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "lattice",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "literal",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "model",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "node",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "one-of",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "sequence",
+        "Namespace": "http://www.w3.org/2003/04/emma"
+      },
+      {
+        "Name": "ink",
+        "Namespace": "http://www.w3.org/2003/InkML"
       },
       {
         "Name": "ClientData",
@@ -20533,6 +20821,63 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReaction",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      },
+      {
+        "Name": "reactionInfo",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      },
+      {
+        "Name": "user",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReactionInfo",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      },
+      {
+        "Name": "user",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReactions",
+    "Children": [
+      {
+        "Name": "reaction",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.ExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.microsoft.com/office/2019/extlst"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.User",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.ContentType.ContentTypeSchema",
     "Children": []
   },
@@ -22041,6 +22386,44 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.UnasgnAllEmpty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo",
+    "Children": [
+      {
+        "Name": "lastRefreshFeature",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
+      },
+      {
+        "Name": "requiredFeature",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.PivotVersionInfo",
+    "Children": [
+      {
+        "Name": "lastUpdateFeature",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
+      },
+      {
+        "Name": "requiredFeature",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring",
     "Children": []
   },
   {
@@ -34623,6 +35006,10 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMonikerList",
     "Children": []
   },
@@ -34667,8 +35054,21 @@
     "Children": []
   },
   {
-    "Element": "DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList",
+    "Element": "DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker",
     "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList",
+    "Children": [
+      {
+        "Name": "docMk",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "sldMk",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      }
+    ]
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2016.Presentation.Command.SlidePosMonikerList",
@@ -37019,6 +37419,24 @@
     "Children": [
       {
         "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/word/2018/wordml/cex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensibleExtension",
+    "Children": [
+      {
+        "Name": "reactions",
+        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensibleExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
         "Namespace": "http://schemas.microsoft.com/office/word/2018/wordml/cex"
       }
     ]
@@ -39999,6 +40417,10 @@
       {
         "Name": "showEvtLst",
         "Namespace": "http://schemas.microsoft.com/office/powerpoint/2010/main"
+      },
+      {
+        "Name": "commentRel",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2018/8/main"
       }
     ]
   },
@@ -43759,6 +44181,14 @@
       {
         "Name": "timelinePivotCacheDefinition",
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main"
+      },
+      {
+        "Name": "implicitMeasureSupport",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020"
+      },
+      {
+        "Name": "cacheVersionInfo",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
       }
     ]
   },
@@ -44054,6 +44484,10 @@
       {
         "Name": "pivotTableUISettings",
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main"
+      },
+      {
+        "Name": "pivotVersionInfo",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
       }
     ]
   },
