@@ -9,16 +9,6 @@ namespace DocumentFormat.OpenXml.Features
 {
     internal partial class OpenXmlNamespaceResolver : IOpenXmlNamespaceResolver
     {
-        private static string NormalizeNamespace(in OpenXmlNamespace ns)
-        {
-            if (ns.TryGetExtendedNamespace(out var result))
-            {
-                return result.Uri;
-            }
-
-            return ns.Uri;
-        }
-
         public IDictionary<string, string> GetNamespacesInScope(XmlNamespaceScope scope) => _urlToPrefix;
 
         public string? LookupNamespace(string prefix) => _prefixToUrl.TryGetValue(prefix, out var result) ? result : null;
@@ -40,7 +30,8 @@ namespace DocumentFormat.OpenXml.Features
         /// <inheritdoc />
         public FileFormatVersions GetVersion(OpenXmlNamespace ns)
         {
-            var normalized = NormalizeNamespace(ns.Uri);
+            var normalized = TryGetExtendedNamespace(ns, out var result) ? result.Uri : ns.Uri;
+
             if (_urlToPrefix.TryGetValue(normalized, out var prefix) && _prefixToVersion.TryGetValue(prefix, out var version))
             {
                 return version;

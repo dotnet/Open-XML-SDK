@@ -29,13 +29,6 @@ namespace DocumentFormat.OpenXml.Framework
 
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
 
-        /// <summary>
-        /// Try to get the expected namespace if the passed namespace is an obsolete.
-        /// </summary>
-        /// <param name="extNamespaceUri">The expected namespace when the passed namespace is an obsolete.</param>
-        /// <returns>True when the passed namespace is an obsolete and the expected namespace found</returns>
-        public bool TryGetExtendedNamespace(out OpenXmlNamespace extNamespaceUri) => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().TryGetExtendedNamespace(this, out extNamespaceUri);
-
         public override bool Equals(object? obj) => obj is OpenXmlNamespace ns && Equals(ns);
 
         public bool Equals(OpenXmlNamespace other)

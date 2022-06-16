@@ -183,7 +183,7 @@ namespace DocumentFormat.OpenXml
                     return transitionalNamespace.Uri;
                 }
             }
-            else if (ns.TryGetExtendedNamespace(out var extendedNamespace))
+            else if (_resolver.TryGetExtendedNamespace(ns, out var extendedNamespace))
             {
                 return extendedNamespace.Uri;
             }
