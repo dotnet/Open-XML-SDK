@@ -155,8 +155,10 @@ namespace DocumentFormat.OpenXml
                     return false;
                 }
 
+                var resolver = Features.GetNamespaceResolver();
                 var qname = new OpenXmlQualifiedName(xmlReader.NamespaceURI, xmlReader.LocalName);
-                if (!qname.Namespace.IsKnown || !QName.Equals(qname))
+
+                if (!resolver.IsKnown(qname.Namespace) || !QName.Equals(qname))
                 {
                     var elementQName = new XmlQualifiedName(xmlReader.LocalName, xmlReader.NamespaceURI).ToString();
                     var msg = SR.Format(ExceptionMessages.Fmt_PartRootIsInvalid, elementQName, XmlQualifiedName.ToString());

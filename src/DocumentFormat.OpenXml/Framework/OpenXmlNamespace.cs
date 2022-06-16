@@ -27,8 +27,6 @@ namespace DocumentFormat.OpenXml.Framework
 
         public string Prefix => _prefix ?? GetNamespacePrefix(Uri) ?? string.Empty;
 
-        public bool IsKnown => Version != FileFormatVersions.None;
-
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
 
         public FileFormatVersions Version => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().GetVersion(this);
