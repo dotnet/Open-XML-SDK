@@ -20,8 +20,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlPartReader : OpenXmlReader
     {
-        private static readonly IRootElementFactory _factory = FeatureCollection.Default.GetRequired<IRootElementFactory>();
-
+        private readonly IRootElementFactory _factory;
         private readonly XmlReader _xmlReader;
         private readonly List<OpenXmlAttribute> _attributeList = new List<OpenXmlAttribute>();
         private readonly List<KeyValuePair<string, string>> _nsDecls = new List<KeyValuePair<string, string>>();
@@ -48,6 +47,7 @@ namespace DocumentFormat.OpenXml
             }
 
             _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: true, out _standalone, out _encoding);
+            _factory = openXmlPart.Features.GetRequired<IRootElementFactory>();
         }
 
         /// <summary>
@@ -64,6 +64,7 @@ namespace DocumentFormat.OpenXml
             }
 
             _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: true, out _standalone, out _encoding);
+            _factory = openXmlPart.Features.GetRequired<IRootElementFactory>();
         }
 
         /// <summary>
@@ -81,6 +82,7 @@ namespace DocumentFormat.OpenXml
             }
 
             _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace, out _standalone, out _encoding);
+            _factory = openXmlPart.Features.GetRequired<IRootElementFactory>();
         }
 
         /// <summary>
@@ -96,6 +98,7 @@ namespace DocumentFormat.OpenXml
             }
 
             _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace: true, out _standalone, out _encoding);
+            _factory = GetDefaultFactory();
         }
 
         /// <summary>
@@ -112,6 +115,7 @@ namespace DocumentFormat.OpenXml
             }
 
             _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace: true, out _standalone, out _encoding);
+            _factory = GetDefaultFactory();
         }
 
         /// <summary>
@@ -129,7 +133,10 @@ namespace DocumentFormat.OpenXml
             }
 
             _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace, out _standalone, out _encoding);
+            _factory = GetDefaultFactory();
         }
+
+        private static IRootElementFactory GetDefaultFactory() => StaticTypesFeatures.Shared.GetRequired<IRootElementFactory>();
 
         /// <summary>
         /// Gets the encoding of the XML file.
