@@ -17,7 +17,7 @@ internal static class NamespaceExtensions
     public static bool HasVersion(this IOpenXmlNamespaceResolver resolver, OpenXmlNamespace ns, FileFormatVersions version)
         => resolver.GetVersion(ns) == version;
 
-    public static OpenXmlNamespace CreateNamespace(this IOpenXmlNamespaceResolver resolver, string name, string? prefix)
+    public static OpenXmlNamespace CreateNamespace(this IOpenXmlNamespaceResolver resolver, string name, string? prefix = null)
         => prefix is not null ? new(name, prefix) : new(name, resolver.LookupPrefix(name));
 
     public static OpenXmlQualifiedName ParseQName(this IOpenXmlNamespaceResolver resolver, string name, string? nsUri = null)

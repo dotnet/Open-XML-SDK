@@ -425,9 +425,9 @@ namespace DocumentFormat.OpenXml
                     // bug when we try to GetContentFromACBlock, the reader has already moved to the next element of ACB
                     // so we should use the element's LookupNamespace function to find it
                     // string ns = LookupNamespaceDelegate(req);
-                    var ns = new OpenXmlNamespace(choice.LookupNamespace(req));
+                    var uri = choice.LookupNamespace(req);
 
-                    if (ns.IsEmpty)
+                    if (uri is null)
                     {
                         if (_noExceptionOnError)
                         {
@@ -439,6 +439,8 @@ namespace DocumentFormat.OpenXml
                             throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, req));
                         }
                     }
+
+                    var ns = _resolver.CreateNamespace(uri);
 
                     if (!_resolver.HasVersion(ns, format))
                     {

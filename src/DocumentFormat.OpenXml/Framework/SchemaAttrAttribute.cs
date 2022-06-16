@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml
             var prefix = features.GetRequired<IOpenXmlNamespaceIdResolver>().GetPrefix(nsId);
             var uri = features.GetRequired<IOpenXmlNamespaceResolver>().LookupNamespace(prefix);
 
-            _qname = new OpenXmlQualifiedName(new OpenXmlNamespace(uri, prefix), tag);
+            _qname = new OpenXmlQualifiedName(new OpenXmlNamespace(uri ?? string.Empty, prefix), tag);
         }
 
         /// <summary>

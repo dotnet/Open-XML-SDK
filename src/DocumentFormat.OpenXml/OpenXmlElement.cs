@@ -1636,12 +1636,14 @@ namespace DocumentFormat.OpenXml
 
                 foreach (var prefix in prefixes)
                 {
-                    var ns = new OpenXmlNamespace(reader.LookupNamespace(prefix));
+                    var uri = reader.LookupNamespace(prefix);
 
-                    if (ns.IsEmpty)
+                    if (uri is null)
                     {
                         throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, mcAttributes.MustUnderstand.Value));
                     }
+
+                    var ns = resolver.CreateNamespace(uri);
 
                     if (resolver.HasVersion(ns, mcSettings.TargetFileFormatVersions))
                     {
@@ -1670,12 +1672,14 @@ namespace DocumentFormat.OpenXml
 
                 foreach (var prefix in prefixes)
                 {
-                    var ns = new OpenXmlNamespace(LookupNamespace(prefix));
+                    var uri = LookupNamespace(prefix);
 
-                    if (ns.IsEmpty)
+                    if (uri is null)
                     {
                         throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, MCAttributes.MustUnderstand.Value));
                     }
+
+                    var ns = resolver.CreateNamespace(uri);
 
                     if (resolver.HasVersion(ns, OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
                     {

@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Framework
         private readonly string? _prefix;
         private readonly string? _uri;
 
-        public OpenXmlNamespace(string? nsUri, string? prefix = null)
+        public OpenXmlNamespace(string nsUri, string? prefix = null)
         {
             _uri = nsUri;
             _prefix = prefix;
