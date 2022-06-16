@@ -5,31 +5,30 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 
-namespace DocumentFormat.OpenXml.Features
+namespace DocumentFormat.OpenXml.Features;
+
+internal partial class StaticTypesFeatures : IFeatureCollection
 {
-    internal partial class StaticTypesFeatures : IFeatureCollection
+    public StaticTypesFeatures()
     {
-        public StaticTypesFeatures()
-        {
-        }
+    }
 
-        public static IFeatureCollection Shared { get; } = new StaticTypesFeatures();
+    public static IFeatureCollection Shared { get; } = new StaticTypesFeatures();
 
-        public bool IsReadOnly => true;
+    public bool IsReadOnly => true;
 
-        public int Revision => 0;
+    public int Revision => 0;
 
-        [KnownFeature(typeof(IRootElementFactory), typeof(ReflectionBasedRootElementFactory))]
-        [KnownFeature(typeof(IPartMetadataFeature), typeof(CachedPartMetadataProvider))]
-        [KnownFeature(typeof(IOpenXmlNamespaceResolver), typeof(OpenXmlNamespaceResolver))]
-        [KnownFeature(typeof(IElementMetadataFeature), typeof(ElementMetadataProviderFeature))]
-        [DelegatedFeature(nameof(FeatureCollection.Default), typeof(FeatureCollection))]
-        [ThreadSafe]
-        public partial TFeature? Get<TFeature>();
+    [KnownFeature(typeof(IRootElementFactory), typeof(ReflectionBasedRootElementFactory))]
+    [KnownFeature(typeof(IPartMetadataFeature), typeof(CachedPartMetadataProvider))]
+    [KnownFeature(typeof(IOpenXmlNamespaceResolver), typeof(OpenXmlNamespaceResolver))]
+    [KnownFeature(typeof(IElementMetadataFeature), typeof(ElementMetadataProviderFeature))]
+    [DelegatedFeature(nameof(FeatureCollection.Default), typeof(FeatureCollection))]
+    [ThreadSafe]
+    public partial TFeature? Get<TFeature>();
 
-        public void Set<TFeature>(TFeature? instance)
-        {
-            throw new NotSupportedException();
-        }
+    public void Set<TFeature>(TFeature? instance)
+    {
+        throw new NotSupportedException();
     }
 }
