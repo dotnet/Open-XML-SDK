@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml
         public string NamespaceUri
         {
             get => QName.Namespace.Uri;
-            [Obsolete(ObsoleteMessage, true)]
+            [Obsolete(ObsoleteMessage)]
             set => QName = new(new(value, Prefix), LocalName);
         }
 
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml
         public string LocalName
         {
             get => QName.Name;
-            [Obsolete(ObsoleteMessage, true)]
+            [Obsolete(ObsoleteMessage)]
             set => QName = new(QName.Namespace, value);
         }
 
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml
         public string Prefix
         {
             get => QName.Namespace.Prefix;
-            [Obsolete(ObsoleteMessage, true)]
+            [Obsolete(ObsoleteMessage)]
             set => QName = new(new(NamespaceUri, value), LocalName);
         }
 
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml
         public string? Value
         {
             get => _value;
-            [Obsolete(ObsoleteMessage, true)]
+            [Obsolete(ObsoleteMessage)]
             set => _value = value;
         }
 
