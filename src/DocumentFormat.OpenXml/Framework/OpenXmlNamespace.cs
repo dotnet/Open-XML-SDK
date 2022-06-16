@@ -45,17 +45,10 @@ namespace DocumentFormat.OpenXml.Framework
         public static implicit operator OpenXmlNamespace(string ns) => new(ns);
 
         /// <summary>
-        /// Gets the namespace URI for the specified namespace prefix.
-        /// </summary>
-        /// <param name="prefix">The namespace prefix.</param>
-        /// <returns></returns>
-        public static string? GetNamespaceUri(string prefix) => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().LookupNamespace(prefix);
-
-        /// <summary>
         /// Gets the default namespace prefix for the specified namespace URI.
         /// </summary>
         /// <param name="namespaceUri">The namespace URI.</param>
         /// <returns>The default namespace prefix.</returns>
-        public static string? GetNamespacePrefix(string namespaceUri) => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().LookupPrefix(namespaceUri);
+        private static string? GetNamespacePrefix(string namespaceUri) => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().LookupPrefix(namespaceUri);
     }
 }
