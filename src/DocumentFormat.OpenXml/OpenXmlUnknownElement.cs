@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Diagnostics;
@@ -122,7 +123,7 @@ namespace DocumentFormat.OpenXml
             }
 
             TextReader stringReader = new StringReader(outerXml);
-            using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings()))
+            using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, FeatureCollection.StaticOrDefault.GetNamespaceResolver(), OpenXmlElementContext.CreateDefaultXmlReaderSettings()))
             {
                 // Skip the leading whitespace as OpenXmUnknownlElement ignores the Whitespace NodeType.
                 do

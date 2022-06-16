@@ -30,13 +30,6 @@ namespace DocumentFormat.OpenXml.Framework
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
 
         /// <summary>
-        /// Attempts to get the Transitional equivalent namespace.
-        /// </summary>
-        /// <param name="transitionalNamespace">An equivalent namespace in Transitional.</param>
-        /// <returns>Returns true when a Transitional equivalent namespace is found, returns false when it is not found.</returns>
-        public bool TryGetTransitionalNamespace(out OpenXmlNamespace transitionalNamespace) => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().TryGetTransitionalNamespace(this, out transitionalNamespace);
-
-        /// <summary>
         /// Attempts to get the Transitional equivalent relationship.
         /// </summary>
         /// <param name="transitionalRelationship">An equivalent relationship in Transitional.</param>

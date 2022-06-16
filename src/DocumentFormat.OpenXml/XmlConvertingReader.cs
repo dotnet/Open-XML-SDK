@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Xml;
@@ -15,13 +16,14 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Creates an instance of <see cref="XmlConvertingReader"/>
         /// </summary>
-        /// <param name="baseReader">XmlReader</param>
-        /// <param name="strictRelationshipFound">bool</param>
-        public XmlConvertingReader(XmlReader baseReader, bool strictRelationshipFound)
+        public XmlConvertingReader(XmlReader baseReader, IOpenXmlNamespaceResolver resolver, bool strictRelationshipFound)
         {
+            _resolver = resolver;
             BaseReader = baseReader ?? throw new ArgumentNullException(nameof(baseReader));
             StrictRelationshipFound = strictRelationshipFound;
         }
+
+        private readonly IOpenXmlNamespaceResolver _resolver;
 
         /// <summary>
         /// Gets the inner <see cref="XmlReader"/>
@@ -176,7 +178,7 @@ namespace DocumentFormat.OpenXml
         {
             if (StrictRelationshipFound)
             {
-                if (ns.TryGetTransitionalNamespace(out var transitionalNamespace))
+                if (_resolver.TryGetTransitionalNamespace(ns, out var transitionalNamespace))
                 {
                     return transitionalNamespace.Uri;
                 }

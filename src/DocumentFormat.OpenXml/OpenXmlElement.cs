@@ -401,7 +401,7 @@ namespace DocumentFormat.OpenXml
                 else
                 {
                     using (TextReader stringReader = new StringReader(RawOuterXml))
-                    using (var xmlReader = XmlConvertingReaderFactory.Create(stringReader))
+                    using (var xmlReader = XmlConvertingReaderFactory.Create(stringReader, Features.GetNamespaceResolver()))
                     {
                         xmlReader.Read();
                         return xmlReader.ReadInnerXml();
@@ -1774,11 +1774,11 @@ namespace DocumentFormat.OpenXml
 #else
                 OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
 #endif
-                return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.XmlReaderSettings);
+                return XmlConvertingReaderFactory.Create(stringReader, Features.GetNamespaceResolver(), OpenXmlElementContext.XmlReaderSettings);
             }
             else
             {
-                return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings());
+                return XmlConvertingReaderFactory.Create(stringReader, Features.GetNamespaceResolver(), OpenXmlElementContext.CreateDefaultXmlReaderSettings());
             }
         }
 

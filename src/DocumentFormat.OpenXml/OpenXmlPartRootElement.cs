@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml
             context.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
 #endif
 
-            using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, context.XmlReaderSettings, openXmlPart.OpenXmlPackage.StrictRelationshipFound))
+            using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, Features.GetNamespaceResolver(), context.XmlReaderSettings, openXmlPart.OpenXmlPackage.StrictRelationshipFound))
             {
                 context.MCSettings = openXmlPart.MCSettings;
 
