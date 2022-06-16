@@ -15,11 +15,12 @@ namespace DocumentFormat.OpenXml
     {
         private const string ObsoleteMessage = "OpenXmlAttribute is a struct so setters may not behave as you might expect. Mutable setters will be removed in a future version.";
 
-        private string _namespaceUri;
+        private string? _value;
 
         internal OpenXmlAttribute(in OpenXmlQualifiedName qname, string? value)
-            : this(qname.Namespace.Prefix, qname.Name, qname.Namespace.Uri, value)
         {
+            QName = qname;
+            _value = value;
         }
 
         /// <summary>
@@ -35,15 +36,10 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(qualifiedName));
             }
 
-            _namespaceUri = namespaceUri;
+            var qname = OpenXmlQualifiedName.Parse(qualifiedName);
 
-            var schema = OpenXmlQualifiedName.Parse(qualifiedName);
-
-#pragma warning disable CS0618 // Type or member is obsolete
-            Prefix = schema.Namespace.Prefix;
-            LocalName = schema.Name;
-            Value = value;
-#pragma warning restore CS0618 // Type or member is obsolete
+            QName = new(new(namespaceUri, qname.Namespace.Prefix), qname.Name);
+            _value = value;
         }
 
         /// <summary>
@@ -60,12 +56,8 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(localName));
             }
 
-#pragma warning disable CS0618 // Type or member is obsolete
-            _namespaceUri = namespaceUri;
-            LocalName = localName;
-            Prefix = prefix;
-            Value = value;
-#pragma warning restore CS0618 // Type or member is obsolete
+            QName = new(new(namespaceUri, prefix), localName);
+            _value = value;
         }
 
         /// <summary>
@@ -73,9 +65,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public string NamespaceUri
         {
-            get => _namespaceUri ?? string.Empty;
-            [Obsolete(ObsoleteMessage)]
-            set => _namespaceUri = value;
+            get => QName.Namespace.Uri;
+            [Obsolete(ObsoleteMessage, true)]
+            set => QName = new(new(value, Prefix), LocalName);
         }
 
         /// <summary>
@@ -83,9 +75,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public string LocalName
         {
-            get;
-            [Obsolete(ObsoleteMessage)]
-            set;
+            get => QName.Name;
+            [Obsolete(ObsoleteMessage, true)]
+            set => QName = new(QName.Namespace, value);
         }
 
         /// <summary>
@@ -93,9 +85,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public string Prefix
         {
-            get;
-            [Obsolete(ObsoleteMessage)]
-            set;
+            get => QName.Namespace.Prefix;
+            [Obsolete(ObsoleteMessage, true)]
+            set => QName = new(new(NamespaceUri, value), LocalName);
         }
 
         /// <summary>
@@ -103,22 +95,22 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public string? Value
         {
-            get;
-            [Obsolete(ObsoleteMessage)]
-            set;
+            get => _value;
+            [Obsolete(ObsoleteMessage, true)]
+            set => _value = value;
         }
 
         /// <summary>
         /// Gets the qualified name of the attribute.
         /// </summary>
-        public XmlQualifiedName XmlQualifiedName => new XmlQualifiedName(LocalName, _namespaceUri);
+        public XmlQualifiedName XmlQualifiedName => new(LocalName, QName.Namespace.Uri);
 
         /// <summary>
         /// Gets the qualified name of the current attribute.
         /// </summary>
-        public XName XName => XName.Get(LocalName, _namespaceUri);
+        public XName XName => XName.Get(LocalName, QName.Namespace.Uri);
 
-        internal OpenXmlQualifiedName QName => new OpenXmlQualifiedName(_namespaceUri, LocalName);
+        internal OpenXmlQualifiedName QName { get; private set; }
 
         /// <summary>
         /// Determines if this instance of an OpenXmlAttribute structure is equal to the specified instance of an OpenXmlAttribute structure.
@@ -126,12 +118,10 @@ namespace DocumentFormat.OpenXml
         /// <param name="other">An instance of an OpenXmlAttribute structure.</param>
         /// <returns>Returns true if instances are equal; otherwise, returns false.</returns>
         public bool Equals(OpenXmlAttribute other)
-        {
-            return string.Equals(LocalName, other.LocalName, StringComparison.Ordinal)
-                && string.Equals(NamespaceUri, other.NamespaceUri, StringComparison.Ordinal)
-                && string.Equals(Prefix, other.Prefix, StringComparison.Ordinal)
-                && string.Equals(Value, other.Value, StringComparison.Ordinal);
-        }
+            => string.Equals(Value, other.Value, StringComparison.Ordinal)
+            && string.Equals(QName.Name, other.QName.Name, StringComparison.Ordinal)
+            && string.Equals(QName.Namespace.Uri, other.QName.Namespace.Uri, StringComparison.Ordinal)
+            && string.Equals(QName.Namespace.Prefix, other.QName.Namespace.Prefix, StringComparison.Ordinal);
 
         /// <summary>
         /// Determines if two instances of OpenXmlAttribute structures are equal.
@@ -140,9 +130,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="attribute2">The second instance of an OpenXmlAttribute structure.</param>
         /// <returns>Returns true if all corresponding members are equal; otherwise, returns false.</returns>
         public static bool operator ==(OpenXmlAttribute attribute1, OpenXmlAttribute attribute2)
-        {
-            return attribute1.Equals(attribute2);
-        }
+            => attribute1.Equals(attribute2);
 
         /// <summary>
         /// Determines if two instances of OpenXmlAttribute structures are not equal.
@@ -151,9 +139,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="attribute2">The second instance of an OpenXmlAttribute structure.</param>
         /// <returns>Returns true if some corresponding members are different; otherwise, returns false.</returns>
         public static bool operator !=(OpenXmlAttribute attribute1, OpenXmlAttribute attribute2)
-        {
-            return !(attribute1 == attribute2);
-        }
+            => !(attribute1 == attribute2);
 
         /// <summary>
         /// Determines whether the specified Object is a OpenXmlAttribute structure and if so, indicates whether it is equal to this instance of an OpenXmlAttribute structure.
@@ -161,20 +147,22 @@ namespace DocumentFormat.OpenXml
         /// <param name="obj">An Object.</param>
         /// <returns>Returns true if obj is an OpenXmlAttribute structure and it is equal to this instance of an OpenXmlAttribute structure; otherwise, returns false.</returns>
         public override bool Equals(object? obj)
-        {
-            if (obj is OpenXmlAttribute attribute)
-            {
-                return Equals(attribute);
-            }
-
-            return false;
-        }
+            => obj is OpenXmlAttribute attribute && Equals(attribute);
 
         /// <summary>
         /// Gets the hash code for this instance of an OpenXmlAttribute structure.
         /// </summary>
         /// <returns>The hash code for this instance of an OpenXmlAttribute structure.</returns>
         public override int GetHashCode()
-            => HashCode.Combine(LocalName, NamespaceUri, Prefix, Value);
+        {
+            var hashcode = default(HashCode);
+
+            hashcode.Add(Value, StringComparer.Ordinal);
+            hashcode.Add(QName.Name, StringComparer.Ordinal);
+            hashcode.Add(QName.Namespace.Uri, StringComparer.Ordinal);
+            hashcode.Add(QName.Namespace.Prefix, StringComparer.Ordinal);
+
+            return hashcode.ToHashCode();
+        }
     }
 }
