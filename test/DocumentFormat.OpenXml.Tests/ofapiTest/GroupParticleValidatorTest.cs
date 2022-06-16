@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -19,7 +20,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestSimpleGroup()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
 
             Header header = new Header();
@@ -142,7 +143,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestSimpleGroup2()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
 
             SectionProperties sectPr = new SectionProperties();

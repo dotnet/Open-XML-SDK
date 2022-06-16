@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Semantic;
 using Xunit;
@@ -16,7 +17,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void AttributeMinMaxConstraintTest()
         {
             var column = new Excel.Column();
-            var context = new ValidationContext();
+            var context = new ValidationContext(new OpenXmlNamespaceResolver());
             context.Stack.Push(element: column);
 
             var constraint = new AttributeMinMaxConstraint(string.Empty, "min", string.Empty, "max");
@@ -38,7 +39,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void AttributePairConstraintTest()
         {
             var moveFromRangeStart = new Word.MoveFromRangeStart();
-            var context = new ValidationContext();
+            var context = new ValidationContext(new OpenXmlNamespaceResolver());
             context.Stack.Push(element: moveFromRangeStart);
 
             var constraint = new AttributePairConstraint("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "colFirst", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "colLast");

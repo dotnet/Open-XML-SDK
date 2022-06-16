@@ -210,7 +210,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             FileFormat.ThrowIfNotInVersion(openXmlElement);
 
-            var validationContext = new ValidationContext(_settings, _cache, token);
+            var validationContext = new ValidationContext(openXmlElement.Features.GetNamespaceResolver(), _settings, _cache, token);
 
             using (validationContext.Stack.Push(element: openXmlElement))
             {

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Vml;
@@ -17,7 +18,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AnyParticleValidateTest()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
 
             TextBox textBox = new TextBox();
