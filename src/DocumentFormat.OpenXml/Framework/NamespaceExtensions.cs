@@ -25,7 +25,7 @@ internal static class NamespaceExtensions
 #if NET5_0
         var idx = name.IndexOf(':', StringComparison.Ordinal);
 #else
-            var idx = name.IndexOf(':');
+        var idx = name.IndexOf(':');
 #endif
 
         if (((idx == -1) || (idx == 0)) || ((name.Length - 1) == idx))
