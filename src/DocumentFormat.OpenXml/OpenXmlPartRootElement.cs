@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public abstract class OpenXmlPartRootElement : OpenXmlCompositeElement
     {
+        private OpenXmlElementContext? _context;
         private bool? _standaloneDeclaration;
 
         /// <summary>
@@ -24,7 +25,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         protected OpenXmlPartRootElement()
         {
-            RootElementContext = new OpenXmlElementContext();
         }
 
         /// <summary>
@@ -38,7 +38,6 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            RootElementContext = new OpenXmlElementContext();
             LoadFromPart(openXmlPart);
         }
 
@@ -49,7 +48,6 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlPartRootElement(string outerXml)
             : base(outerXml)
         {
-            RootElementContext = new OpenXmlElementContext();
         }
 
         /// <summary>
@@ -59,7 +57,6 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlPartRootElement(IEnumerable<OpenXmlElement> childElements)
             : base(childElements)
         {
-            RootElementContext = new OpenXmlElementContext();
         }
 
         /// <summary>
@@ -69,13 +66,12 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlPartRootElement(params OpenXmlElement[] childElements)
             : base(childElements)
         {
-            RootElementContext = new OpenXmlElementContext();
         }
 
         /// <summary>
         /// Gets the OpenXmlElementContext.
         /// </summary>
-        internal override OpenXmlElementContext RootElementContext { get; }
+        internal override OpenXmlElementContext RootElementContext => _context ??= new(Features.GetNamespaceResolver());
 
         /// <summary>
         /// Load the DOM tree from the Open XML part.
@@ -127,7 +123,7 @@ namespace DocumentFormat.OpenXml
             context.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
 #endif
 
-            using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, context.XmlReaderSettings, openXmlPart.OpenXmlPackage.StrictRelationshipFound))
+            using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, Features.GetNamespaceResolver(), context.XmlReaderSettings, openXmlPart.OpenXmlPackage.StrictRelationshipFound))
             {
                 context.MCSettings = openXmlPart.MCSettings;
 
@@ -155,8 +151,10 @@ namespace DocumentFormat.OpenXml
                     return false;
                 }
 
+                var resolver = Features.GetNamespaceResolver();
                 var qname = new OpenXmlQualifiedName(xmlReader.NamespaceURI, xmlReader.LocalName);
-                if (!qname.Namespace.IsKnown || !QName.Equals(qname))
+
+                if (!resolver.IsKnown(qname.Namespace) || !QName.Equals(qname))
                 {
                     var elementQName = new XmlQualifiedName(xmlReader.LocalName, xmlReader.NamespaceURI).ToString();
                     var msg = SR.Format(ExceptionMessages.Fmt_PartRootIsInvalid, elementQName, XmlQualifiedName.ToString());

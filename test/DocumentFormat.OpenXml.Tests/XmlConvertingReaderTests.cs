@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using NSubstitute;
 using System;
 using System.Xml;
@@ -19,8 +20,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ThrowsOnNullReader()
         {
-            Assert.Throws<ArgumentNullException>("baseReader", () => new XmlConvertingReader(null, true));
-            Assert.Throws<ArgumentNullException>("baseReader", () => new XmlConvertingReader(null, false));
+            Assert.Throws<ArgumentNullException>("baseReader", () => new XmlConvertingReader(null, null, true));
+            Assert.Throws<ArgumentNullException>("baseReader", () => new XmlConvertingReader(null, null, false));
         }
 
         [Theory]
@@ -43,7 +44,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void DelegatesCallClose(bool strictRelationshipFound)
         {
             using (var baseReader = Substitute.For<XmlReader>())
-            using (var reader = new XmlConvertingReader(baseReader, strictRelationshipFound))
+            using (var reader = new XmlConvertingReader(baseReader, new OpenXmlNamespaceResolver(), strictRelationshipFound))
             {
                 reader.Close();
                 baseReader.Received(1).Close();
@@ -57,7 +58,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void DelegatesCallDispose(bool strictRelationshipFound)
         {
             using (var baseReader = Substitute.For<XmlReader>())
-            using (var reader = new XmlConvertingReader(baseReader, strictRelationshipFound))
+            using (var reader = new XmlConvertingReader(baseReader, new OpenXmlNamespaceResolver(), strictRelationshipFound))
             {
                 ((IDisposable)reader).Dispose();
                 ((IDisposable)baseReader).Received(1).Dispose();
@@ -80,7 +81,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void NamespaceUriIsHandled(string baseNamespaceUri, string expectedNamespaceUri, bool strictRelationshipFound)
         {
             using (var baseReader = Substitute.For<XmlReader>())
-            using (var reader = new XmlConvertingReader(baseReader, strictRelationshipFound))
+            using (var reader = new XmlConvertingReader(baseReader, new OpenXmlNamespaceResolver(), strictRelationshipFound))
             {
                 baseReader.NamespaceURI.Returns(baseNamespaceUri);
 
@@ -104,7 +105,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void StrictTranslationAppliesToValue(string baseValue, string expectedValue, XmlNodeType nodeType, bool strictRelationshipFound)
         {
             using (var baseReader = Substitute.For<XmlReader>())
-            using (var reader = new XmlConvertingReader(baseReader, strictRelationshipFound))
+            using (var reader = new XmlConvertingReader(baseReader, new OpenXmlNamespaceResolver(), strictRelationshipFound))
             {
                 baseReader.Value.Returns(baseValue);
                 baseReader.NodeType.Returns(nodeType);
@@ -116,7 +117,7 @@ namespace DocumentFormat.OpenXml.Tests
         private class AccessBaseReader : XmlConvertingReader
         {
             public AccessBaseReader(XmlReader baseReader, bool strictRelationshipFound)
-                : base(baseReader, strictRelationshipFound)
+                : base(baseReader, new OpenXmlNamespaceResolver(), strictRelationshipFound)
             {
             }
 

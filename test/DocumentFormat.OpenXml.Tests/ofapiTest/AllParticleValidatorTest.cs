@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.ExtendedProperties;
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Vml.Office;
@@ -16,7 +17,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestSimpleAll()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
 
             Properties properties = new Properties();
@@ -132,7 +133,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestSimpleAll2()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
 
             ShapeLayout shapeLayout = new ShapeLayout();

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -219,7 +220,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void GetChildMcTest()
         {
-            MCContext mcContext = new MCContext();
+            MCContext mcContext = new MCContext(new OpenXmlNamespaceResolver());
             ParagraphProperties pPr;
             Run run1, run2;
             Paragraph p = new Paragraph(
@@ -241,7 +242,7 @@ namespace DocumentFormat.OpenXml.Tests
             ignorableElement.MCAttributes = new MarkupCompatibilityAttributes() { Ignorable = "w14test" };
             p.InsertAfter(ignorableElement, pPr);
 
-            mcContext = new MCContext();
+            mcContext = new MCContext(new OpenXmlNamespaceResolver());
             target = p.GetFirstChildMc(mcContext, FileFormatVersions.Office2007);
             Assert.Same(pPr, target);
             target = p.GetNextChildMc(target, mcContext, FileFormatVersions.Office2007);
@@ -255,7 +256,7 @@ namespace DocumentFormat.OpenXml.Tests
                 new AlternateContentFallback(runInAcb));
             p.InsertAfter(acb, pPr);
 
-            mcContext = new MCContext();
+            mcContext = new MCContext(new OpenXmlNamespaceResolver());
             target = p.GetFirstChildMc(mcContext, FileFormatVersions.Office2007);
             Assert.Same(pPr, target);
             target = p.GetNextChildMc(target, mcContext, FileFormatVersions.Office2007);
@@ -272,7 +273,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AcbValidationTest()
         {
-            MCContext mcContext = new MCContext();
+            MCContext mcContext = new MCContext(new OpenXmlNamespaceResolver());
             ParagraphProperties pPr;
             Run run1, run2;
             Paragraph p = new Paragraph(

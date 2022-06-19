@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Validation;
@@ -21,7 +22,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestSimpleChoice4()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
 
             RevisionRowColumn rRowColumn = new RevisionRowColumn();
@@ -111,7 +112,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestSimpleChoice3()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
 
             FormFieldData ffData = new FormFieldData();
@@ -233,7 +234,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestSimpleChoice2()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
 
             BuildSubElement bldSub = new BuildSubElement();
@@ -304,7 +305,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestSimpleChoice()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
 
             FieldChar fldChar = new FieldChar();

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using System;
 using System.IO.Packaging;
 
@@ -13,8 +14,8 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         public PackagePart PackagePart { get; }
 
-        public PackagePartRelationshipPropertyCollection(PackagePart packagePart)
-            : base(packagePart.GetRelationships())
+        public PackagePartRelationshipPropertyCollection(PackagePart packagePart, IOpenXmlNamespaceResolver resolver)
+            : base(packagePart.GetRelationships(), resolver)
         {
             PackagePart = packagePart;
         }

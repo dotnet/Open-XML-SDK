@@ -11,13 +11,7 @@ namespace DocumentFormat.OpenXml.Framework
         private readonly string? _prefix;
         private readonly string? _uri;
 
-        internal OpenXmlNamespace(byte nsId)
-        {
-            _prefix = FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceIdResolver>().GetPrefix(nsId);
-            _uri = FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().LookupNamespace(_prefix);
-        }
-
-        public OpenXmlNamespace(string? nsUri, string? prefix = null)
+        public OpenXmlNamespace(string nsUri, string? prefix = null)
         {
             _uri = nsUri;
             _prefix = prefix;
@@ -27,34 +21,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public string Prefix => _prefix ?? GetNamespacePrefix(Uri) ?? string.Empty;
 
-        public bool IsKnown => Version != FileFormatVersions.None;
-
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
-
-        public FileFormatVersions Version => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().GetVersion(this);
-
-        public bool HasVersion(FileFormatVersions version) => Version == version;
-
-        /// <summary>
-        /// Attempts to get the Transitional equivalent namespace.
-        /// </summary>
-        /// <param name="transitionalNamespace">An equivalent namespace in Transitional.</param>
-        /// <returns>Returns true when a Transitional equivalent namespace is found, returns false when it is not found.</returns>
-        public bool TryGetTransitionalNamespace(out OpenXmlNamespace transitionalNamespace) => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().TryGetTransitionalNamespace(this, out transitionalNamespace);
-
-        /// <summary>
-        /// Attempts to get the Transitional equivalent relationship.
-        /// </summary>
-        /// <param name="transitionalRelationship">An equivalent relationship in Transitional.</param>
-        /// <returns>Returns true when a Transitional equivalent relationship is found, returns false when it is not.</returns>
-        public bool TryGetTransitionalRelationship(out OpenXmlNamespace transitionalRelationship) => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().TryGetTransitionalRelationship(this, out transitionalRelationship);
-
-        /// <summary>
-        /// Try to get the expected namespace if the passed namespace is an obsolete.
-        /// </summary>
-        /// <param name="extNamespaceUri">The expected namespace when the passed namespace is an obsolete.</param>
-        /// <returns>True when the passed namespace is an obsolete and the expected namespace found</returns>
-        public bool TryGetExtendedNamespace(out OpenXmlNamespace extNamespaceUri) => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().TryGetExtendedNamespace(this, out extNamespaceUri);
 
         public override bool Equals(object? obj) => obj is OpenXmlNamespace ns && Equals(ns);
 
@@ -78,17 +45,10 @@ namespace DocumentFormat.OpenXml.Framework
         public static implicit operator OpenXmlNamespace(string ns) => new(ns);
 
         /// <summary>
-        /// Gets the namespace URI for the specified namespace prefix.
-        /// </summary>
-        /// <param name="prefix">The namespace prefix.</param>
-        /// <returns></returns>
-        public static string? GetNamespaceUri(string prefix) => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().LookupNamespace(prefix);
-
-        /// <summary>
         /// Gets the default namespace prefix for the specified namespace URI.
         /// </summary>
         /// <param name="namespaceUri">The namespace URI.</param>
         /// <returns>The default namespace prefix.</returns>
-        public static string? GetNamespacePrefix(string namespaceUri) => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().LookupPrefix(namespaceUri);
+        private static string? GetNamespacePrefix(string namespaceUri) => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().LookupPrefix(namespaceUri);
     }
 }

@@ -401,7 +401,7 @@ namespace DocumentFormat.OpenXml
                 else
                 {
                     using (TextReader stringReader = new StringReader(RawOuterXml))
-                    using (var xmlReader = XmlConvertingReaderFactory.Create(stringReader))
+                    using (var xmlReader = XmlConvertingReaderFactory.Create(stringReader, Features.GetNamespaceResolver()))
                     {
                         xmlReader.Read();
                         return xmlReader.ReadInnerXml();
@@ -1625,23 +1625,27 @@ namespace DocumentFormat.OpenXml
         /// <param name="reader">The XmlReader.</param>
         /// <param name="mcAttributes">The MarkupCompatibilityAttributes.</param>
         /// <param name="mcSettings">The MarkupCompatibilityProcessSettings.</param>
-        private protected static void CheckMustUnderstandAttr(XmlReader reader, MarkupCompatibilityAttributes mcAttributes, MarkupCompatibilityProcessSettings mcSettings)
+        private protected void CheckMustUnderstandAttr(XmlReader reader, MarkupCompatibilityAttributes mcAttributes, MarkupCompatibilityProcessSettings mcSettings)
         {
             Debug.Assert(mcSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess);
 
             if (mcAttributes.MustUnderstand is not null && !string.IsNullOrEmpty(mcAttributes.MustUnderstand.Value))
             {
+                var resolver = Features.GetNamespaceResolver();
                 var prefixes = mcAttributes.MustUnderstand.Value!.Trim().Split(new char[] { ' ' });
+
                 foreach (var prefix in prefixes)
                 {
-                    var ns = new OpenXmlNamespace(reader.LookupNamespace(prefix));
+                    var uri = reader.LookupNamespace(prefix);
 
-                    if (ns.IsEmpty)
+                    if (uri is null)
                     {
                         throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, mcAttributes.MustUnderstand.Value));
                     }
 
-                    if (ns.HasVersion(mcSettings.TargetFileFormatVersions))
+                    var ns = resolver.CreateNamespace(uri);
+
+                    if (resolver.HasVersion(ns, mcSettings.TargetFileFormatVersions))
                     {
                         continue;
                     }
@@ -1663,17 +1667,21 @@ namespace DocumentFormat.OpenXml
 
             if (MCAttributes.MustUnderstand is not null && !string.IsNullOrEmpty(MCAttributes.MustUnderstand.Value))
             {
+                var resolver = Features.GetNamespaceResolver();
                 var prefixes = MCAttributes.MustUnderstand.Value!.Trim().Split(new char[] { ' ' });
+
                 foreach (var prefix in prefixes)
                 {
-                    var ns = new OpenXmlNamespace(LookupNamespace(prefix));
+                    var uri = LookupNamespace(prefix);
 
-                    if (ns.IsEmpty)
+                    if (uri is null)
                     {
                         throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, MCAttributes.MustUnderstand.Value));
                     }
 
-                    if (ns.HasVersion(OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
+                    var ns = resolver.CreateNamespace(uri);
+
+                    if (resolver.HasVersion(ns, OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
                     {
                         continue;
                     }
@@ -1770,11 +1778,11 @@ namespace DocumentFormat.OpenXml
 #else
                 OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
 #endif
-                return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.XmlReaderSettings);
+                return XmlConvertingReaderFactory.Create(stringReader, Features.GetNamespaceResolver(), OpenXmlElementContext.XmlReaderSettings);
             }
             else
             {
-                return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings());
+                return XmlConvertingReaderFactory.Create(stringReader, Features.GetNamespaceResolver(), OpenXmlElementContext.CreateDefaultXmlReaderSettings());
             }
         }
 
@@ -1791,7 +1799,7 @@ namespace DocumentFormat.OpenXml
         {
             var newElement = default(OpenXmlElement);
 
-            if (qname.Namespace.IsKnown)
+            if (Features.GetNamespaceResolver().IsKnown(qname.Namespace))
             {
                 newElement = ElementFactory(qname);
 

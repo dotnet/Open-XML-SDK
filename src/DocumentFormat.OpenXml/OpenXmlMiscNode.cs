@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml
 #endif
                 };
 
-                using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, settings))
+                using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, Features.GetNamespaceResolver(), settings))
                 {
                     xmlReader.Read();
 
@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml
 #endif
                             };
 
-                            using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, settings))
+                            using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, Features.GetNamespaceResolver(), settings))
                             {
                                 xmlReader.Read();
                                 localName = xmlReader.LocalName;

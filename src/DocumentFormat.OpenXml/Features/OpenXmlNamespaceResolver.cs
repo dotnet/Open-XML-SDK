@@ -154,9 +154,9 @@ namespace DocumentFormat.OpenXml.Features
             };
         }
 
-        private static string NormalizeNamespace(in OpenXmlNamespace ns)
+        private string NormalizeNamespace(in OpenXmlNamespace ns)
         {
-            if (ns.TryGetExtendedNamespace(out var result))
+            if (TryGetExtendedNamespace(ns, out var result))
             {
                 return result.Uri;
             }

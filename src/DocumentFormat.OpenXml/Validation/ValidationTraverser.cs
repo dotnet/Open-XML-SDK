@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             if ((options & TraversalOptions.SelectAlternateContent) == TraversalOptions.SelectAlternateContent)
             {
-                return ValidatingTraverse(element, new MCContext(false), version);
+                return ValidatingTraverse(element, new MCContext(element.Features.GetNamespaceResolver(), false), version);
             }
             else
             {

@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Packaging
             openXmlPackage.ReserveUri(ContentType, Uri);
 
             // load recursively
-            var relationshipCollection = new PackagePartRelationshipPropertyCollection(PackagePart);
+            var relationshipCollection = new PackagePartRelationshipPropertyCollection(PackagePart, Features.GetNamespaceResolver());
             LoadReferencedPartsAndRelationships(openXmlPackage, this, relationshipCollection, loadedParts);
         }
 
@@ -423,7 +423,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 xmlReaderSettings.ValidationEventHandler += validationEventHandler;
 
-                using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, xmlReaderSettings))
+                using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, Features.GetNamespaceResolver(), xmlReaderSettings))
                 {
                     // Validate XML data
                     while (xmlReader.Read())

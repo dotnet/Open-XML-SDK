@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Drawing.Diagrams;
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -20,7 +21,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestSimpleSequence4()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
             ColorTransformCategories categories = new ColorTransformCategories();
             var expected = categories;
@@ -125,7 +126,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestSimpleSequence3()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             Divs divs = new Divs();
             OpenXmlElement errorChild;
 
@@ -237,7 +238,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestSimpleSequence2()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             Ruby ruby = new Ruby();
             OpenXmlElement errorChild;
 
@@ -356,7 +357,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestSimpleSequence()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
 
             // <xsd:complexType name="CT_FFDDList">
             //  <xsd:sequence>

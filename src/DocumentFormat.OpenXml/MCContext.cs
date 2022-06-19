@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,6 +13,7 @@ namespace DocumentFormat.OpenXml
     {
         internal delegate string? LookupNamespace(string prefix);
 
+        private readonly IOpenXmlNamespaceResolver _resolver;
         private readonly Stack<string> _currentIgnorable;
         private readonly Stack<XmlQualifiedName> _currentPreserveAttr;
         private readonly Stack<XmlQualifiedName> _currentPreserveEle;
@@ -23,8 +25,9 @@ namespace DocumentFormat.OpenXml
         private readonly Stack<int> _pushedPC;
         private readonly bool _noExceptionOnError;
 
-        internal MCContext()
+        internal MCContext(IOpenXmlNamespaceResolver resolver)
         {
+            _resolver = resolver;
             _currentIgnorable = new Stack<string>();
             _currentPreserveAttr = new Stack<XmlQualifiedName>();
             _currentPreserveEle = new Stack<XmlQualifiedName>();
@@ -36,8 +39,8 @@ namespace DocumentFormat.OpenXml
             _pushedPE = new Stack<int>();
         }
 
-        internal MCContext(bool exceptionOnError)
-            : this()
+        internal MCContext(IOpenXmlNamespaceResolver resolver, bool exceptionOnError)
+            : this(resolver)
         {
             _noExceptionOnError = !exceptionOnError;
         }
@@ -212,7 +215,7 @@ namespace DocumentFormat.OpenXml
                 return AttributeAction.Normal;
             }
 
-            if (qname.Namespace.HasVersion(format))
+            if (_resolver.HasVersion(qname.Namespace, format))
             {
                 return AttributeAction.Normal;
             }
@@ -422,9 +425,9 @@ namespace DocumentFormat.OpenXml
                     // bug when we try to GetContentFromACBlock, the reader has already moved to the next element of ACB
                     // so we should use the element's LookupNamespace function to find it
                     // string ns = LookupNamespaceDelegate(req);
-                    var ns = new OpenXmlNamespace(choice.LookupNamespace(req));
+                    var uri = choice.LookupNamespace(req);
 
-                    if (ns.IsEmpty)
+                    if (uri is null)
                     {
                         if (_noExceptionOnError)
                         {
@@ -437,7 +440,9 @@ namespace DocumentFormat.OpenXml
                         }
                     }
 
-                    if (!ns.HasVersion(format))
+                    var ns = _resolver.CreateNamespace(uri);
+
+                    if (!_resolver.HasVersion(ns, format))
                     {
                         chooce = false;
                         break;

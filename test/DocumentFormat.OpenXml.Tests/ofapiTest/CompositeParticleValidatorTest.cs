@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -19,7 +20,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         private void ValidatePpr()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
 
             ParagraphProperties pPr = new ParagraphProperties();
@@ -148,7 +149,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ValidateBody()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
 
             Body body = new Body();
@@ -357,7 +358,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         private void ValidateBlip()
         {
-            ValidationContext validationContext = new ValidationContext();
+            ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
 
             Drawing.Blip blip = new Drawing.Blip();

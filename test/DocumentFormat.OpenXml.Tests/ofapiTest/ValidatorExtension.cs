@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Validation;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -27,7 +28,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Can not just validate AlternateContent / Choice / Fallback
             Debug.Assert(!(openXmlElement is AlternateContentChoice || openXmlElement is AlternateContentFallback));
 
-            var validationContext = new ValidationContext();
+            var validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
 
             validationContext.Stack.Push(element: openXmlElement);
 

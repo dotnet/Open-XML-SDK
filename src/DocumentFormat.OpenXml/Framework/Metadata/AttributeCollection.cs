@@ -40,16 +40,13 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         private int GetIndex(in OpenXmlQualifiedName qname)
         {
-            if (qname.Namespace.IsKnown)
+            for (var i = 0; i < _attributes.Length; i++)
             {
-                for (var i = 0; i < _attributes.Length; i++)
-                {
-                    var tag = _attributes[i];
+                var tag = _attributes[i];
 
-                    if (qname.Equals(tag.QName))
-                    {
-                        return i;
-                    }
+                if (qname.Equals(tag.QName))
+                {
+                    return i;
                 }
             }
 

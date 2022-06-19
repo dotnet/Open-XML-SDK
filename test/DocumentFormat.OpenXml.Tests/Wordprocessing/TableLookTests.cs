@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using System;
 using System.IO;
 using System.Xml;
@@ -58,7 +59,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                 {
                     Assert.True(reader.Read());
 
-                    using (var converting = new XmlConvertingReader(reader, true))
+                    using (var converting = new XmlConvertingReader(reader, new OpenXmlNamespaceResolver(), true))
                     {
                         element.LoadAttributes(converting);
                     }
