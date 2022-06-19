@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Features
 
         private string NormalizeNamespace(in OpenXmlNamespace ns)
         {
-            if (TryGetExtendedNamespace(out var result))
+            if (TryGetExtendedNamespace(ns, out var result))
             {
                 return result.Uri;
             }
