@@ -20,6 +20,9 @@ internal static class NamespaceExtensions
     public static OpenXmlNamespace CreateNamespace(this IOpenXmlNamespaceResolver resolver, string name, string? prefix = null)
         => prefix is not null ? new(name, prefix) : new(name, resolver.LookupPrefix(name) ?? string.Empty);
 
+    public static OpenXmlQualifiedName CreateQName(this IOpenXmlNamespaceResolver resolver, string nsUri, string name)
+        => new(resolver.CreateNamespace(nsUri), name);
+
     public static OpenXmlQualifiedName ParseQName(this IOpenXmlNamespaceResolver resolver, string name, string? nsUri = null)
     {
 #if NET5_0
@@ -32,14 +35,7 @@ internal static class NamespaceExtensions
         {
             var start = idx + 1;
 
-            if (nsUri is null)
-            {
-                return new OpenXmlQualifiedName(string.Empty, name.Substring(start));
-            }
-            else
-            {
-                return new OpenXmlQualifiedName(nsUri, name.Substring(start));
-            }
+            return resolver.CreateQName(nsUri ?? string.Empty, name.Substring(start));
         }
         else
         {

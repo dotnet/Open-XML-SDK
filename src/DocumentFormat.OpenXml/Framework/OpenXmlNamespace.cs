@@ -42,6 +42,7 @@ namespace DocumentFormat.OpenXml.Framework
         public int CompareTo(OpenXmlNamespace other)
             => string.CompareOrdinal(Uri, other.Uri);
 
+        [Obsolete]
         public static implicit operator OpenXmlNamespace(string ns) => new(ns, GetNamespacePrefix(ns)!);
 
         /// <summary>
