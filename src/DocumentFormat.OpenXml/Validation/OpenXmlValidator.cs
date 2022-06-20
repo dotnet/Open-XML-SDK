@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <summary>
         /// Validates the specified document.
         /// </summary>
-        /// <param name="openXmlPackage">The target <see cref="WordprocessingDocument"/>, <see cref="SpreadsheetDocument"/> or <see cref="PresentationDocument"/>.</param>
+        /// <param name="openXmlPackage">The target <see cref="OpenXmlPackage"/>.</param>
         /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the <paramref name="openXmlPackage"/> parameter is null.</exception>
         public IEnumerable<ValidationErrorInfo> Validate(OpenXmlPackage openXmlPackage)
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <summary>
         /// Validates the specified document.
         /// </summary>
-        /// <param name="openXmlPackage">The target <see cref="WordprocessingDocument"/>, <see cref="SpreadsheetDocument"/> or <see cref="PresentationDocument"/>.</param>
+        /// <param name="openXmlPackage">The target <see cref="OpenXmlPackage"/>.</param>
         /// <param name="token">Cancellation token</param>
         /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the <paramref name="openXmlPackage"/> parameter is null.</exception>

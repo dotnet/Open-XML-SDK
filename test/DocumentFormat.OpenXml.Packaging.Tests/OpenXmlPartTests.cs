@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         public static IEnumerable<object[]> GetTypes()
         {
-            return typeof(OpenXmlPart).GetTypeInfo().Assembly.GetTypes()
+            return typeof(TypedFeatures).GetTypeInfo().Assembly.GetTypes()
                 .Where(t => !t.GetTypeInfo().IsAbstract)
                 .Where(t => t != typeof(ExtendedPart))
                 .Where(t => typeof(OpenXmlPart).IsAssignableFrom(t))

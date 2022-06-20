@@ -794,7 +794,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     if (_openXmlPackage is { } package)
                     {
-                        _features = _openXmlPackage.CreatePartFeatures(_openXmlPackage.Features);
+                        _features = package.CreatePartFeatures(package.Features);
                     }
                     else
                     {
