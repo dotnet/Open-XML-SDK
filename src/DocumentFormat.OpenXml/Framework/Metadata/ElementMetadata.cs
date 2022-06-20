@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 => _qname = qname;
 
             public void SetSchema(string ns, string localName)
-                => SetSchema(new OpenXmlQualifiedName(ns, localName));
+                => SetSchema(_resolver.CreateQName(ns, localName));
 
             public void AddChild<T>()
                 where T : OpenXmlElement, new()
