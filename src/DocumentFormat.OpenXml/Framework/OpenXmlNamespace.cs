@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Features;
 using System;
 
 namespace DocumentFormat.OpenXml.Framework
@@ -41,15 +40,5 @@ namespace DocumentFormat.OpenXml.Framework
 
         public int CompareTo(OpenXmlNamespace other)
             => string.CompareOrdinal(Uri, other.Uri);
-
-        [Obsolete]
-        public static implicit operator OpenXmlNamespace(string ns) => new(ns, GetNamespacePrefix(ns)!);
-
-        /// <summary>
-        /// Gets the default namespace prefix for the specified namespace URI.
-        /// </summary>
-        /// <param name="namespaceUri">The namespace URI.</param>
-        /// <returns>The default namespace prefix.</returns>
-        private static string? GetNamespacePrefix(string namespaceUri) => FeatureCollection.TypedOrDefault.GetRequired<IOpenXmlNamespaceResolver>().LookupPrefix(namespaceUri);
     }
 }

@@ -321,7 +321,18 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public virtual string LocalName => Metadata.QName.Name;
 
-        internal OpenXmlQualifiedName QName => new OpenXmlQualifiedName(NamespaceUri, LocalName);
+        internal OpenXmlQualifiedName QName
+        {
+            get
+            {
+                if (Metadata.QName is { Namespace.IsEmpty: false } qname)
+                {
+                    return qname;
+                }
+
+                return Features.GetNamespaceResolver().CreateQName(NamespaceUri, LocalName);
+            }
+        }
 
         /// <summary>
         /// Gets the namespace prefix of current element.
