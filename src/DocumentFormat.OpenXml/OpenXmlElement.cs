@@ -2621,7 +2621,7 @@ namespace DocumentFormat.OpenXml
 
             public IFeatureCollection? GetPartFeatures() => _owner.GetPart()?.Features;
 
-            private ElementMetadata CreateMetadata() => this.GetRequired<ElementMetadataProviderFeature>().GetMetadata(_owner);
+            private ElementMetadata CreateMetadata() => this.GetRequired<IElementMetadataFeature>().GetMetadata(_owner);
 
             public void Set<TFeature>(TFeature? instance)
             {
