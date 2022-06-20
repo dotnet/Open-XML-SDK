@@ -645,7 +645,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentOutOfRangeException(nameof(localName), ExceptionMessages.StringIsEmpty);
             }
 
-            RemoveAttribute(new OpenXmlQualifiedName(namespaceUri, localName));
+            RemoveAttribute(Features.GetNamespaceResolver().CreateQName(namespaceUri, localName));
         }
 
         private void RemoveAttribute(in OpenXmlQualifiedName qname)

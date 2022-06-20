@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
@@ -15,7 +16,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class AlternateContent : OpenXmlCompositeElement
     {
-        internal static readonly OpenXmlQualifiedName InternalQName = new OpenXmlQualifiedName(@"http://schemas.openxmlformats.org/markup-compatibility/2006", "AlternateContent");
+        internal static readonly OpenXmlQualifiedName InternalQName = FeatureCollection.TypedOrDefault.GetNamespaceResolver().CreateQName(@"http://schemas.openxmlformats.org/markup-compatibility/2006", "AlternateContent");
 
         /// <summary>
         /// Initializes a new instance of the AlternateContent
