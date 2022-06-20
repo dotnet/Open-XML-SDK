@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Validation.Schema;
 using Newtonsoft.Json;
@@ -164,7 +165,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 typeof(OpenXmlMiscNode),
             };
 
-            var elements = typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes()
+            var elements = typeof(TypedFeatures).GetTypeInfo().Assembly.GetTypes()
                 .Where(t => !t.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).IsAssignableFrom(t))
                 .Where(t => !exclude.Contains(t));
 

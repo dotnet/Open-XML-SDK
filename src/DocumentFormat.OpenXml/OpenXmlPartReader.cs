@@ -149,9 +149,9 @@ namespace DocumentFormat.OpenXml
             _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace, out _standalone, out _encoding);
         }
 
-        private static IRootElementFactory GetDefaultFactory() => TypedFeatures.Shared.GetRequired<IRootElementFactory>();
+        private static IRootElementFactory GetDefaultFactory() => FeatureCollection.TypedOrDefault.GetRequired<IRootElementFactory>();
 
-        private static IOpenXmlNamespaceResolver GetDefaultResolver() => TypedFeatures.Shared.GetRequired<IOpenXmlNamespaceResolver>();
+        private static IOpenXmlNamespaceResolver GetDefaultResolver() => FeatureCollection.TypedOrDefault.GetRequired<IOpenXmlNamespaceResolver>();
 
         /// <summary>
         /// Gets the encoding of the XML file.

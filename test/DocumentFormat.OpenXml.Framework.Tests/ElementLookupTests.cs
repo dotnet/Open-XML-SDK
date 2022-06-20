@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var elements = GetBuiltIn();
 #if DEBUG
-            _output.WriteObjectToTempFile(elements);
+            _output.WriteObjectToTempFile("built in elements", elements);
 #endif
             var expected = Deserialize<LookupData[]>("ElementChildren.json");
             var actual = GetBuiltIn().ToArray();
@@ -46,11 +46,22 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             Assert.NotNull(expected);
         }
 
+        private static readonly Type[] TypesFromFramework = new[]
+        {
+            typeof(OpenXmlPartRootElement),
+            typeof(AlternateContent),
+            typeof(AlternateContentChoice),
+            typeof(AlternateContentFallback),
+            typeof(OpenXmlMiscNode),
+            typeof(OpenXmlUnknownElement),
+        };
+
         private static IEnumerable<LookupData> GetBuiltIn()
         {
-            return typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes()
+            return typeof(TypedFeatures).GetTypeInfo().Assembly.GetTypes()
                 .Where(t => !t.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).GetTypeInfo().IsAssignableFrom(t))
-                .Concat(new[] { typeof(OpenXmlPartRootElement) })
+                .Concat(TypesFromFramework)
+                .Distinct()
                 .OrderBy(type => type.FullName, StringComparer.Ordinal)
                 .Select(type => new LookupData(type));
         }
