@@ -111,12 +111,14 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var idPrefix = idResolver.GetPrefix(id);
             var idUri = resolver.LookupNamespace(idPrefix);
 
-            var nsFromNs = new OpenXmlNamespace(ns);
+            var nsFromNs = new OpenXmlNamespace(ns, prefix);
             var nsFromId = new OpenXmlNamespace(idUri, idPrefix);
 
             Assert.Equal(nsFromNs, nsFromId);
             Assert.Equal(prefix, nsFromNs.Prefix);
             Assert.Equal(prefix, nsFromId.Prefix);
+            Assert.Equal(ns, resolver.LookupNamespace(prefix));
+            Assert.Equal(prefix, resolver.LookupPrefix(ns));
 
             foreach (var v in FileFormatVersionExtensions.AllVersions)
             {

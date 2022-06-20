@@ -195,7 +195,7 @@ namespace DocumentFormat.OpenXml.Features
             return FileFormatVersions.None;
         }
 
-        private OpenXmlNamespace CreateNamespace(string uri) => new(uri, LookupPrefix(uri));
+        private OpenXmlNamespace CreateNamespace(string uri) => new(uri, LookupPrefix(uri) ?? string.Empty);
 
         private sealed class NamespaceDictionary : Dictionary<OpenXmlNamespace, OpenXmlNamespace>
         {

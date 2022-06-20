@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Framework
         private readonly string? _prefix;
         private readonly string? _uri;
 
-        public OpenXmlNamespace(string nsUri, string? prefix = null)
+        public OpenXmlNamespace(string nsUri, string prefix)
         {
             _uri = nsUri;
             _prefix = prefix;
@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public string Uri => _uri ?? string.Empty;
 
-        public string Prefix => _prefix ?? GetNamespacePrefix(Uri) ?? string.Empty;
+        public string Prefix => _prefix ?? string.Empty;
 
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
 
@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Framework
         public int CompareTo(OpenXmlNamespace other)
             => string.CompareOrdinal(Uri, other.Uri);
 
-        public static implicit operator OpenXmlNamespace(string ns) => new(ns);
+        public static implicit operator OpenXmlNamespace(string ns) => new(ns, GetNamespacePrefix(ns)!);
 
         /// <summary>
         /// Gets the default namespace prefix for the specified namespace URI.
