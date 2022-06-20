@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml
             }
 
             TextReader stringReader = new StringReader(outerXml);
-            using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, FeatureCollection.StaticOrDefault.GetNamespaceResolver(), OpenXmlElementContext.CreateDefaultXmlReaderSettings()))
+            using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, FeatureCollection.TypedOrDefault.GetNamespaceResolver(), OpenXmlElementContext.CreateDefaultXmlReaderSettings()))
             {
                 // Skip the leading whitespace as OpenXmUnknownlElement ignores the Whitespace NodeType.
                 do

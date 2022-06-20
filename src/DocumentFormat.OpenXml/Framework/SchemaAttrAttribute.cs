@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(tag));
             }
 
-            var features = FeatureCollection.StaticOrDefault;
+            var features = FeatureCollection.TypedOrDefault;
             var prefix = features.GetRequired<IOpenXmlNamespaceIdResolver>().GetPrefix(nsId);
             var uri = features.GetRequired<IOpenXmlNamespaceResolver>().LookupNamespace(prefix);
 

@@ -4,16 +4,26 @@
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
+using System.Threading;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal partial class StaticTypesFeatures : IFeatureCollection
+internal partial class TypedFeatures : IFeatureCollection
 {
-    public StaticTypesFeatures()
-    {
-    }
+    private static TypedFeatures? _shared;
 
-    public static IFeatureCollection Shared { get; } = new StaticTypesFeatures();
+    public static IFeatureCollection Shared
+    {
+        get
+        {
+            if (_shared is null)
+            {
+                Interlocked.CompareExchange(ref _shared, new(), null);
+            }
+
+            return _shared;
+        }
+    }
 
     public bool IsReadOnly => true;
 

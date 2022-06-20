@@ -145,9 +145,9 @@ namespace DocumentFormat.OpenXml
             _factory = GetDefaultFactory();
         }
 
-        private static IRootElementFactory GetDefaultFactory() => StaticTypesFeatures.Shared.GetRequired<IRootElementFactory>();
+        private static IRootElementFactory GetDefaultFactory() => TypedFeatures.Shared.GetRequired<IRootElementFactory>();
 
-        private static IOpenXmlNamespaceResolver GetDefaultResolver() => StaticTypesFeatures.Shared.GetRequired<IOpenXmlNamespaceResolver>();
+        private static IOpenXmlNamespaceResolver GetDefaultResolver() => TypedFeatures.Shared.GetRequired<IOpenXmlNamespaceResolver>();
 
         /// <summary>
         /// Gets the encoding of the XML file.

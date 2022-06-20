@@ -2616,7 +2616,7 @@ namespace DocumentFormat.OpenXml
             [KnownFeature(typeof(AnnotationsFeature))]
             [KnownFeature(typeof(ElementMetadata), Factory = nameof(CreateMetadata))]
             [DelegatedFeature(nameof(GetPartFeatures))]
-            [DelegatedFeature(nameof(FeatureCollection.StaticOrDefault), typeof(FeatureCollection))]
+            [DelegatedFeature(nameof(FeatureCollection.TypedOrDefault), typeof(FeatureCollection))]
             public partial TFeature? Get<TFeature>();
 
             public IFeatureCollection? GetPartFeatures() => _owner.GetPart()?.Features;

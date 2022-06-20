@@ -49,6 +49,6 @@ namespace DocumentFormat.OpenXml.Framework
         /// </summary>
         /// <param name="namespaceUri">The namespace URI.</param>
         /// <returns>The default namespace prefix.</returns>
-        private static string? GetNamespacePrefix(string namespaceUri) => FeatureCollection.StaticOrDefault.GetRequired<IOpenXmlNamespaceResolver>().LookupPrefix(namespaceUri);
+        private static string? GetNamespacePrefix(string namespaceUri) => FeatureCollection.TypedOrDefault.GetRequired<IOpenXmlNamespaceResolver>().LookupPrefix(namespaceUri);
     }
 }
