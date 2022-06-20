@@ -1521,9 +1521,11 @@ namespace DocumentFormat.OpenXml
             // read attributes
             if (xmlReader.HasAttributes)
             {
+                var resolver = Features.GetNamespaceResolver();
+
                 while (xmlReader.MoveToNextAttribute())
                 {
-                    if (!TrySetFixedAttribute(new OpenXmlQualifiedName(xmlReader.NamespaceURI, xmlReader.LocalName), xmlReader.Value, ((XmlConvertingReader)xmlReader).StrictRelationshipFound))
+                    if (!TrySetFixedAttribute(resolver.CreateQName(xmlReader.NamespaceURI, xmlReader.LocalName), xmlReader.Value, ((XmlConvertingReader)xmlReader).StrictRelationshipFound))
                     {
                         if (xmlReader.NamespaceURI == AlternateContent.MarkupCompatibilityNamespace)
                         {
