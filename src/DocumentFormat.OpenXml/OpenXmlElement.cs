@@ -495,7 +495,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentOutOfRangeException(nameof(localName), ExceptionMessages.StringIsEmpty);
             }
 
-            return GetAttribute(new OpenXmlQualifiedName(namespaceUri, localName));
+            return GetAttribute(Features.GetNamespaceResolver().CreateQName(namespaceUri, localName));
         }
 
         private OpenXmlAttribute GetAttribute(in OpenXmlQualifiedName qname)
