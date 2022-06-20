@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.Xml;
@@ -15,7 +16,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void Sanity()
         {
-            var builder = new ElementMetadata.Builder(typeof(OpenXmlElement));
+            var builder = new ElementMetadata.Builder(typeof(OpenXmlElement), new OpenXmlNamespaceResolver());
             builder.AddElement<SomeElement>()
                 .AddAttribute("s", a => a.Str, a =>
                 {
@@ -42,7 +43,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void IsRequired()
         {
-            var builder = new ElementMetadata.Builder(typeof(OpenXmlElement));
+            var builder = new ElementMetadata.Builder(typeof(OpenXmlElement), new OpenXmlNamespaceResolver());
             builder.AddElement<SomeElement>()
                 .AddAttribute("s", a => a.Str, a =>
                 {

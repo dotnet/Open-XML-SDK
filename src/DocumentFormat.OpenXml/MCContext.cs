@@ -250,7 +250,7 @@ namespace DocumentFormat.OpenXml
                 return ElementAction.Normal;
             }
 
-            if (IsIgnorableNs(element.NamespaceUri))
+            if (IsIgnorableNs(element.QName.Namespace))
             {
                 if (IsPreservedElement(element.QName))
                 {

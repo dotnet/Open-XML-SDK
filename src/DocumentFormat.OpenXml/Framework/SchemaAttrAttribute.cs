@@ -64,7 +64,9 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(tag));
             }
 
-            _qname = new OpenXmlQualifiedName(ns, tag);
+            var resolver = FeatureCollection.TypedOrDefault.GetNamespaceResolver();
+
+            _qname = resolver.CreateQName(ns, tag);
         }
 
         /// <summary>

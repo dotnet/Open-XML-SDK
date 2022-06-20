@@ -172,20 +172,20 @@ namespace DocumentFormat.OpenXml.Features
 
         /// <inheritdoc />
         public bool TryGetTransitionalNamespace(OpenXmlNamespace ns, out OpenXmlNamespace transitionalNamespace)
-            => _strictTransitionalNamespaces.TryGetValue(ns.Uri, out transitionalNamespace);
+            => _strictTransitionalNamespaces.TryGetValue(ns, out transitionalNamespace);
 
         /// <inheritdoc />
         public bool TryGetTransitionalRelationship(OpenXmlNamespace ns, out OpenXmlNamespace transitionalRelationship)
-            => _strictTransitionalRelationshipPairs.TryGetValue(ns.Uri, out transitionalRelationship);
+            => _strictTransitionalRelationshipPairs.TryGetValue(ns, out transitionalRelationship);
 
         /// <inheritdoc />
         public bool TryGetExtendedNamespace(OpenXmlNamespace ns, out OpenXmlNamespace extNamespaceUri)
-            => _extendedNamespaces.TryGetValue(ns.Uri, out extNamespaceUri);
+            => _extendedNamespaces.TryGetValue(ns, out extNamespaceUri);
 
         /// <inheritdoc />
         public FileFormatVersions GetVersion(OpenXmlNamespace ns)
         {
-            var normalized = NormalizeNamespace(ns.Uri);
+            var normalized = NormalizeNamespace(ns);
 
             if (_urlToPrefix.TryGetValue(normalized, out var prefix) && _prefixToVersion.TryGetValue(prefix, out var version))
             {
@@ -195,7 +195,7 @@ namespace DocumentFormat.OpenXml.Features
             return FileFormatVersions.None;
         }
 
-        private OpenXmlNamespace CreateNamespace(string uri) => new(uri, LookupPrefix(uri));
+        private OpenXmlNamespace CreateNamespace(string uri) => new(uri, LookupPrefix(uri) ?? string.Empty);
 
         private sealed class NamespaceDictionary : Dictionary<OpenXmlNamespace, OpenXmlNamespace>
         {

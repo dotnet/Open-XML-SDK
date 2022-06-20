@@ -321,7 +321,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public virtual string LocalName => Metadata.QName.Name;
 
-        internal OpenXmlQualifiedName QName => new OpenXmlQualifiedName(NamespaceUri, LocalName);
+        internal OpenXmlQualifiedName QName => Features.GetNamespaceResolver().CreateQName(NamespaceUri, LocalName);
 
         /// <summary>
         /// Gets the namespace prefix of current element.
@@ -495,7 +495,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentOutOfRangeException(nameof(localName), ExceptionMessages.StringIsEmpty);
             }
 
-            return GetAttribute(new OpenXmlQualifiedName(namespaceUri, localName));
+            return GetAttribute(Features.GetNamespaceResolver().CreateQName(namespaceUri, localName));
         }
 
         private OpenXmlAttribute GetAttribute(in OpenXmlQualifiedName qname)
@@ -645,7 +645,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentOutOfRangeException(nameof(localName), ExceptionMessages.StringIsEmpty);
             }
 
-            RemoveAttribute(new OpenXmlQualifiedName(namespaceUri, localName));
+            RemoveAttribute(Features.GetNamespaceResolver().CreateQName(namespaceUri, localName));
         }
 
         private void RemoveAttribute(in OpenXmlQualifiedName qname)
@@ -1521,9 +1521,11 @@ namespace DocumentFormat.OpenXml
             // read attributes
             if (xmlReader.HasAttributes)
             {
+                var resolver = Features.GetNamespaceResolver();
+
                 while (xmlReader.MoveToNextAttribute())
                 {
-                    if (!TrySetFixedAttribute(new OpenXmlQualifiedName(xmlReader.NamespaceURI, xmlReader.LocalName), xmlReader.Value, ((XmlConvertingReader)xmlReader).StrictRelationshipFound))
+                    if (!TrySetFixedAttribute(resolver.CreateQName(xmlReader.NamespaceURI, xmlReader.LocalName), xmlReader.Value, ((XmlConvertingReader)xmlReader).StrictRelationshipFound))
                     {
                         if (xmlReader.NamespaceURI == AlternateContent.MarkupCompatibilityNamespace)
                         {

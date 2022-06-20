@@ -21,6 +21,7 @@ namespace DocumentFormat.OpenXml
     public class OpenXmlPartReader : OpenXmlReader
     {
         private readonly IRootElementFactory _factory;
+        private readonly IOpenXmlNamespaceResolver _resolver;
         private readonly XmlReader _xmlReader;
         private readonly List<OpenXmlAttribute> _attributeList = new List<OpenXmlAttribute>();
         private readonly List<KeyValuePair<string, string>> _nsDecls = new List<KeyValuePair<string, string>>();
@@ -47,10 +48,10 @@ namespace DocumentFormat.OpenXml
             }
 
             var features = openXmlPart.Features;
-            var resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
 
-            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), resolver, true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: true, out _standalone, out _encoding);
+            _resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
             _factory = features.GetRequired<IRootElementFactory>();
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: true, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -67,10 +68,10 @@ namespace DocumentFormat.OpenXml
             }
 
             var features = openXmlPart.Features;
-            var resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
 
-            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), resolver, true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: true, out _standalone, out _encoding);
+            _resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
             _factory = features.GetRequired<IRootElementFactory>();
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: true, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -88,10 +89,10 @@ namespace DocumentFormat.OpenXml
             }
 
             var features = openXmlPart.Features;
-            var resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
 
-            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), resolver, true, openXmlPart.MaxCharactersInPart, ignoreWhitespace, out _standalone, out _encoding);
+            _resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
             _factory = features.GetRequired<IRootElementFactory>();
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -106,8 +107,9 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(partStream));
             }
 
-            _xmlReader = CreateReader(partStream, GetDefaultResolver(), false, 0, ignoreWhitespace: true, out _standalone, out _encoding);
+            _resolver = GetDefaultResolver();
             _factory = GetDefaultFactory();
+            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace: true, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -123,8 +125,9 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(partStream));
             }
 
-            _xmlReader = CreateReader(partStream, GetDefaultResolver(), false, 0, ignoreWhitespace: true, out _standalone, out _encoding);
+            _resolver = GetDefaultResolver();
             _factory = GetDefaultFactory();
+            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace: true, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -141,8 +144,9 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(partStream));
             }
 
-            _xmlReader = CreateReader(partStream, GetDefaultResolver(), false, 0, ignoreWhitespace, out _standalone, out _encoding);
+            _resolver = GetDefaultResolver();
             _factory = GetDefaultFactory();
+            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace, out _standalone, out _encoding);
         }
 
         private static IRootElementFactory GetDefaultFactory() => TypedFeatures.Shared.GetRequired<IRootElementFactory>();
@@ -717,7 +721,7 @@ namespace DocumentFormat.OpenXml
 #endif
         }
 
-        private XmlReader CreateReader(Stream partStream, IOpenXmlNamespaceResolver resolver, bool closeInput, long maxCharactersInPart, bool ignoreWhitespace, out bool? standalone, out string? encoding)
+        private XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, bool ignoreWhitespace, out bool? standalone, out string? encoding)
         {
             var settings = new XmlReaderSettings
             {
@@ -731,7 +735,7 @@ namespace DocumentFormat.OpenXml
 #endif
             };
 
-            var xmlReader = XmlConvertingReaderFactory.Create(partStream, resolver, settings);
+            var xmlReader = XmlConvertingReaderFactory.Create(partStream, _resolver, settings);
 
             xmlReader.Read();
 
@@ -783,7 +787,7 @@ namespace DocumentFormat.OpenXml
             }
 
             // create the root element object
-            var rootElement = CreateElement(new OpenXmlQualifiedName(_xmlReader.NamespaceURI, _xmlReader.LocalName));
+            var rootElement = CreateElement(_resolver.CreateQName(_xmlReader.NamespaceURI, _xmlReader.LocalName));
 
             if (rootElement is null)
             {

@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     else
                     {
                         // Ignorable element, skip it
-                        if (mcContext.IsIgnorableNs(child.NamespaceUri))
+                        if (mcContext.IsIgnorableNs(child.QName.Namespace))
                         {
                             // Any element marked with ProcessContent should be an Ignorable Element
                             if (mcContext.IsProcessContent(child))

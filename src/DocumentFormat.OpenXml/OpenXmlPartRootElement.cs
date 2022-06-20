@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml
                 }
 
                 var resolver = Features.GetNamespaceResolver();
-                var qname = new OpenXmlQualifiedName(xmlReader.NamespaceURI, xmlReader.LocalName);
+                var qname = resolver.CreateQName(xmlReader.NamespaceURI, xmlReader.LocalName);
 
                 if (!resolver.IsKnown(qname.Namespace) || !QName.Equals(qname))
                 {
