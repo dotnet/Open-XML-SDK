@@ -107,7 +107,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // they should be errors
             foreach (var extendedAttribute in element.ExtendedAttributes)
             {
-                if (validationContext.McContext.IsIgnorableNs(extendedAttribute.NamespaceUri))
+                if (validationContext.McContext.IsIgnorableNs(extendedAttribute.QName.Namespace))
                 {
                     // Ignorable attribute, no error.
                 }
