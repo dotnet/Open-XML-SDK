@@ -37,10 +37,13 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AllExpectedParts()
         {
+            var fromFramework = new[] { typeof(ExtendedPart), typeof(OpenXmlPart) };
             var actual = typeof(OpenXmlPart)
                 .GetTypeInfo()
                 .Assembly
                 .DefinedTypes
+                .Concat(fromFramework)
+                .Distinct()
                 .Where(t => typeof(OpenXmlPart).GetTypeInfo().IsAssignableFrom(t))
                 .Select(t => t.FullName)
                 .OrderBy(v => v, StringComparer.Ordinal)
@@ -52,20 +55,17 @@ namespace DocumentFormat.OpenXml.Tests
                 .OrderBy(v => v, StringComparer.Ordinal)
                 .ToList();
 
-#if DEBUG
-            _output.WriteObjectToTempFile(expected);
-            _output.WriteObjectToTempFile(actual);
-#endif
+            var missing = expected.Except(actual);
+            var added = actual.Except(expected);
 
-            Assert.Equal(expected, actual, StringComparer.Ordinal);
+            Assert.Empty(missing);
+            Assert.Empty(added);
         }
 
         [MemberData(nameof(GetOpenXmlParts))]
         [Theory]
         public void ValidatePart(OpenXmlPart part)
         {
-            part.Features.Set(TypedFeatures.Shared.Get<IPartMetadataFeature>());
-
             var data = GetConstraintData(part);
 
             Assert.Same(part.GetPartMetadata().PartConstraints, part.GetPartMetadata().PartConstraints);
@@ -93,14 +93,14 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
 #if DEBUG
-            _output.WriteObjectToTempFile(part.GetPartMetadata().DataPartReferenceConstraints);
+            _output.WriteObjectToTempFile("data part reference constraints", part.GetPartMetadata().DataPartReferenceConstraints);
 #endif
 
             AssertDictionary(data.DataParts, part.GetPartMetadata().DataPartReferenceConstraints);
 
 #if DEBUG
-            _output.WriteObjectToTempFile(data.Parts);
-            _output.WriteObjectToTempFile(part.GetPartMetadata().PartConstraints);
+            _output.WriteObjectToTempFile("data parts", data.Parts);
+            _output.WriteObjectToTempFile("part constraints", part.GetPartMetadata().PartConstraints);
 #endif
 
             AssertDictionary(data.Parts, part.GetPartMetadata().PartConstraints);
@@ -124,7 +124,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ExportData()
         {
-            var metadata = new TypedFeatures().GetRequired<IPartMetadataFeature>();
             var result = GetParts()
                 .Select(t => new
                 {
@@ -135,26 +134,32 @@ namespace DocumentFormat.OpenXml.Tests
                     TargetFileExtension = t.TargetFileExtension,
                     TargetName = t.TargetName,
                     TargetPath = t.TargetPath,
-                    DataParts = metadata.Parse(t).DataPartReferenceConstraints,
-                    Parts = metadata.Parse(t).PartConstraints,
+                    DataParts = t.GetPartMetadata().DataPartReferenceConstraints,
+                    Parts = t.GetPartMetadata().PartConstraints,
                 })
                 .OrderBy(d => d.Name, StringComparer.Ordinal);
 
-            var data = JsonConvert.SerializeObject(result, Formatting.Indented, new StringEnumConverter());
-            _output.WriteLine(data);
+            _output.WriteObjectToTempFile("typed parts", result);
         }
 
         public static IEnumerable<object[]> GetOpenXmlParts() => GetParts().Select(p => new[] { p });
 
         private static IEnumerable<OpenXmlPart> GetParts()
         {
-            return typeof(OpenXmlPart)
+            var metadata = new TypedFeatures().GetRequired<IPartMetadataFeature>();
+            var parts = typeof(TypedFeatures)
                 .GetTypeInfo()
                 .Assembly
                 .GetTypes()
                 .Where(typeof(OpenXmlPart).IsAssignableFrom)
                 .Where(a => !_abstractOpenXmlParts.Contains(a))
                 .Select(a => (OpenXmlPart)Activator.CreateInstance(a, true));
+
+            foreach (var part in parts)
+            {
+                part.Features.Set(metadata);
+                yield return part;
+            }
         }
 
         private static ConstraintData GetConstraintData(OpenXmlPart part) => _cachedConstraintData.Value[part.GetType().FullName];
