@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         [Obsolete("This object is created internally and the public constructor will be removed at some point in the future.")]
         public OpenXmlElementContext()
-            : this(FeatureCollection.StaticOrDefault.GetNamespaceResolver())
+            : this(FeatureCollection.TypedOrDefault.GetNamespaceResolver())
         {
         }
 

@@ -64,6 +64,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         public void ValidatePart(OpenXmlPart part)
         {
+            part.Features.Set(TypedFeatures.Shared.Get<IPartMetadataFeature>());
+
             var data = GetConstraintData(part);
 
             Assert.Same(part.GetPartMetadata().PartConstraints, part.GetPartMetadata().PartConstraints);
@@ -122,6 +124,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ExportData()
         {
+            var metadata = new TypedFeatures().GetRequired<IPartMetadataFeature>();
             var result = GetParts()
                 .Select(t => new
                 {
@@ -132,8 +135,8 @@ namespace DocumentFormat.OpenXml.Tests
                     TargetFileExtension = t.TargetFileExtension,
                     TargetName = t.TargetName,
                     TargetPath = t.TargetPath,
-                    DataParts = t.GetPartMetadata().DataPartReferenceConstraints,
-                    Parts = t.GetPartMetadata().PartConstraints,
+                    DataParts = metadata.Parse(t).DataPartReferenceConstraints,
+                    Parts = metadata.Parse(t).PartConstraints,
                 })
                 .OrderBy(d => d.Name, StringComparer.Ordinal);
 

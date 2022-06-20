@@ -54,6 +54,6 @@ namespace DocumentFormat.OpenXml.Framework
             => new OpenXmlQualifiedName(new OpenXmlNamespace(nsUri, prefix), name);
 
         public static OpenXmlQualifiedName Parse(string name, string? nsUri = null)
-            => FeatureCollection.StaticOrDefault.GetNamespaceResolver().ParseQName(name, nsUri);
+            => FeatureCollection.TypedOrDefault.GetNamespaceResolver().ParseQName(name, nsUri);
     }
 }

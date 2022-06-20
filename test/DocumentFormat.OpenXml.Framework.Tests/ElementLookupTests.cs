@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 {
                     if (typeof(OpenXmlPartRootElement) == type)
                     {
-                        return FeatureCollection.Default.GetRequired<IRootElementFactory>().Collection;
+                        return TypedFeatures.Shared.GetRequired<IRootElementFactory>().Collection;
                     }
                     else if (type.GetConstructor(Cached.Array<Type>()) is not null)
                     {

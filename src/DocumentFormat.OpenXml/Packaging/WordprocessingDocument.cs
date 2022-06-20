@@ -824,6 +824,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #endregion cloning
 
-        internal override IFeatureCollection CreatePartFeatures(IFeatureCollection? other) => new PartContainerFeatureCollection(StaticTypesFeatures.Shared, other);
+        internal override IFeatureCollection CreatePartFeatures(IFeatureCollection? other) => new PartContainerFeatureCollection(TypedFeatures.Shared, other);
     }
 }
