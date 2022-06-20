@@ -33,6 +33,7 @@ internal partial class TypedFeatures : IFeatureCollection
     [KnownFeature(typeof(IPartMetadataFeature), typeof(CachedPartMetadataProvider))]
     [KnownFeature(typeof(IOpenXmlNamespaceResolver), typeof(OpenXmlNamespaceResolver))]
     [KnownFeature(typeof(IElementMetadataFeature), typeof(ElementMetadataProviderFeature))]
+    [KnownFeature(typeof(IPartFactory), typeof(ReflectionPartFactory))]
     [DelegatedFeature(nameof(FeatureCollection.Default), typeof(FeatureCollection))]
     [ThreadSafe]
     public partial TFeature? Get<TFeature>();

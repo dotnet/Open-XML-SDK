@@ -412,7 +412,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             try
             {
-                ChangeDocumentTypeInternal<WorkbookPart>();
+                ChangeDocumentTypeInternal(static () => new WorkbookPart());
             }
             catch (OpenXmlPackageException e)
             {
