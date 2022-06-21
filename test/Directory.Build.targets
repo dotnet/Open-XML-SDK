@@ -10,33 +10,16 @@
             framework library doesn't require System.Net.Http. This is brought in by the .NET Core app framework -->
         <PackageReference Include="System.Net.Http" Version="4.3.4" Condition="!$(IsShipped)" />
 
+        <!-- Need to bring this in manually as the test framework itself tries to bring in 9.0.0 -->
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
         <PackageReference Include="System.ValueTuple" Version="4.5.0" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
-        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
         <PackageReference Include="NSubstitute" Version="4.3.0" />
         <PackageReference Include="xunit" Version="2.4.1" />
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
         </PackageReference>
-      </ItemGroup>
-
-      <ItemGroup Condition="$(TargetFramework.StartsWith('netcoreapp1.'))">
-        <PackageReference Include="System.Xml.ReaderWriter" Version="4.3.1" />
-        <PackageReference Include="System.Xml.XmlDocument" Version="4.3.0" />
-        <PackageReference Include="System.Reflection.Extensions" Version="4.3.0" />
-        <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
-      </ItemGroup>
-
-      <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
-        <Reference Include="System" />
-        <Reference Include="Microsoft.CSharp" />
-      </ItemGroup>
-
-      <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
-        <Reference Include="System" />
-        <Reference Include="Microsoft.CSharp" />
-        <Reference Include="WindowsBase" />
       </ItemGroup>
     </When>
   </Choose>
@@ -54,4 +37,5 @@
 
   <Target Name="PublishAll" Condition="$(IsTestProject) OR $(IsBenchmarkProject)" DependsOnTargets="PublishProjectIfFrameworkSet;PublishProjectForAllFrameworksIfFrameworkUnset" />
 
+  <Import Project="..\Directory.Build.targets" />
 </Project>

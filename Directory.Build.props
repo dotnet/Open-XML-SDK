@@ -7,7 +7,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 
     <!-- Because of the size of the project, to facilitate  quick development, by default only single
-         frameworks will be build. This is customizable with the following possible values:
+         frameworks will be built. This is customizable with the following possible values:
          - net35:              .NET Framework 3.5
          - net40:              .NET Framework 4.0
          - net46:              .NET Framework 4.6
@@ -32,6 +32,11 @@
     <Version>$(GitVersion_NuGetVersionV2)</Version>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <!-- We need to test on frameworks that may be EOL due to the targets we build -->
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+  </PropertyGroup>
+
   <Choose>
     <When Condition=" '$(ProjectLoadStyle)' == 'net35' ">
       <PropertyGroup>
@@ -42,9 +47,6 @@
         <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
         <SamplesFrameworks>net46</SamplesFrameworks>
       </PropertyGroup>
-      <ItemGroup>
-        <Reference Include="WindowsBase" Version="3.0.0.0" />
-      </ItemGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'net40' ">
       <PropertyGroup>
@@ -55,9 +57,6 @@
         <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
         <SamplesFrameworks>net46</SamplesFrameworks>
       </PropertyGroup>
-      <ItemGroup>
-        <Reference Include="WindowsBase" Version="4.0.0.0" />
-      </ItemGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'net46' ">
       <PropertyGroup>
@@ -67,9 +66,6 @@
         <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
         <SamplesFrameworks>net46</SamplesFrameworks>
       </PropertyGroup>
-      <ItemGroup>
-        <Reference Include="WindowsBase" />
-      </ItemGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'netstandard1_3' ">
       <PropertyGroup>
@@ -122,10 +118,6 @@
         <BenchmarkTargetFramework>net5.0</BenchmarkTargetFramework>
         <SamplesFrameworks>net46;netcoreapp2.1;netcoreapp3.1;net5.0</SamplesFrameworks>
       </PropertyGroup>
-
-      <ItemGroup Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' OR '$(TargetFramework)'=='net452' OR '$(TargetFramework)' == 'net46'  ">
-        <Reference Include="WindowsBase" />
-      </ItemGroup>
     </When>
     <Otherwise>
       <PropertyGroup>
