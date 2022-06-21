@@ -452,7 +452,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             try
             {
-                ChangeDocumentTypeInternal<MainDocumentPart>();
+                ChangeDocumentTypeInternal(static () => new MainDocumentPart());
             }
             catch (OpenXmlPackageException e)
             {

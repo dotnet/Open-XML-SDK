@@ -412,7 +412,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             try
             {
-                ChangeDocumentTypeInternal<PresentationPart>();
+                ChangeDocumentTypeInternal(static () => new PresentationPart());
             }
             catch (OpenXmlPackageException e)
             {

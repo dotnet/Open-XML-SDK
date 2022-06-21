@@ -47,3 +47,6 @@ dotnet_diagnostic.SA1600.severity = none
 
 # SA1622: Generic type parameter documentation should have text
 dotnet_diagnostic.SA1622.severity = none
+
+# SA1127: Generic type constraints should be on their own line
+dotnet_diagnostic.SA1127.severity = none

@@ -1078,7 +1078,7 @@ namespace DocumentFormat.OpenXml.Packaging
             ThrowIfObjectDisposed();
 
             // use reflection to create the instance. As the default constructor of part is not "public"
-            var part = ClassActivator.CreateInstance<T>();
+            var part = Features.GetRequired<IPartFactory>().Create<T>();
 
             try
             {
@@ -1138,7 +1138,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // Use reflection to create the instance as the default constructor of part is not public
-            var part = ClassActivator.CreateInstance<T>();
+            var part = Features.GetRequired<IPartFactory>().Create<T>();
 
             if (part is ExtendedPart)
             {

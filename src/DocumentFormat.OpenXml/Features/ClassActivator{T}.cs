@@ -10,7 +10,7 @@ using System.Reflection;
 using System.Linq;
 #endif
 
-namespace DocumentFormat.OpenXml.Framework
+namespace DocumentFormat.OpenXml.Features
 {
     internal static class ClassActivator<T>
     {

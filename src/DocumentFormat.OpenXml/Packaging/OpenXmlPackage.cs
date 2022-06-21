@@ -744,7 +744,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <typeparam name="T">The type of the document's main part.</typeparam>
         /// <remarks>The MainDocumentPart will be changed.</remarks>
-        internal void ChangeDocumentTypeInternal<T>()
+        internal void ChangeDocumentTypeInternal<T>(Func<T> activator)
             where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();
@@ -780,7 +780,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     mainPart.Destroy();
 
                     // create new part
-                    T newMainPart = ClassActivator.CreateInstance<T>();
+                    T newMainPart = activator();
 
                     // do not call this.InitPart( ).  copy the code here
                     newMainPart.CreateInternal2(this, null, MainPartContentType, uri);
