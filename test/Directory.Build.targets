@@ -48,4 +48,5 @@
 
   <Target Name="PublishAll" Condition="$(IsTestProject) OR $(IsBenchmarkProject)" DependsOnTargets="PublishProjectIfFrameworkSet;PublishProjectForAllFrameworksIfFrameworkUnset" />
 
+  <Import Project="..\Directory.Build.targets" />
 </Project>

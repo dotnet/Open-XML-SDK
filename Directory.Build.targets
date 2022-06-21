@@ -64,8 +64,6 @@
     </PackageReference>
   </ItemGroup>
 
-  <Import Project="$(MSBuildThisFileDirectory)\Tests.targets" />
-
   <!-- The tool is used by default, but we don't want it to. It must be set in a target to ensure it is not overridden -->
   <Target Name="BeforeResGen" Condition=" '$(TargetFramework)' == 'net35' ">
     <PropertyGroup>
