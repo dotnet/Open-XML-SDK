@@ -32,6 +32,11 @@
     <Version>$(GitVersion_NuGetVersionV2)</Version>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <!-- We need to test on frameworks that may be EOL due to the targets we build -->
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+  </PropertyGroup>
+
   <Choose>
     <When Condition=" '$(ProjectLoadStyle)' == 'net35' ">
       <PropertyGroup>
@@ -56,7 +61,7 @@
         <SamplesFrameworks>net46</SamplesFrameworks>
       </PropertyGroup>
       <ItemGroup>
-        <Reference Include="WindowsBase" Version="4.0.0.0" />
+        <Reference Include="WindowsBase" />
       </ItemGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'net46' ">

@@ -19,16 +19,10 @@ jobs:
             ProjectLoadStyle: ${{ buildTarget.name }}
       steps:
       - task: UseDotNet@2
-        displayName: 'Install .NET Core SDK for building'
+        displayName: 'Install global.json .NET Core SDK'
         inputs:
           packageType: 'sdk'
           useGlobalJson: true
-
-      - task: UseDotNet@2
-        displayName: 'Install .NET 5 SDK'
-        inputs:
-          packageType: 'sdk'
-          version: 5.x 
 
       - ${{ each runtime in buildTarget.runtimes }}:
         - task: UseDotNet@2

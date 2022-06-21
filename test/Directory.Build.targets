@@ -21,17 +21,6 @@
           <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
         </PackageReference>
       </ItemGroup>
-
-      <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
-        <Reference Include="System" />
-        <Reference Include="Microsoft.CSharp" />
-      </ItemGroup>
-
-      <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
-        <Reference Include="System" />
-        <Reference Include="Microsoft.CSharp" />
-        <Reference Include="WindowsBase" />
-      </ItemGroup>
     </When>
   </Choose>
 
