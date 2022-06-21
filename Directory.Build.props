@@ -7,7 +7,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 
     <!-- Because of the size of the project, to facilitate  quick development, by default only single
-         frameworks will be build. This is customizable with the following possible values:
+         frameworks will be built. This is customizable with the following possible values:
          - net35:              .NET Framework 3.5
          - net40:              .NET Framework 4.0
          - net46:              .NET Framework 4.6
