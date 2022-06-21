@@ -308,8 +308,9 @@ namespace DocumentFormat.OpenXml.Generator.Linq
         {
             var visitedElementTypes = new HashSet<Type>();
             var elementMetadataCollection = new List<ElementMetadata>();
+            var elementFactory = new TypedFeatures().GetRequired<IRootElementFactory>();
 
-            foreach (var elementChild in FeatureCollection.TypedOrDefault.GetRequired<IRootElementFactory>().Collection.Elements)
+            foreach (var elementChild in elementFactory.Collection.Elements)
             {
                 AssembleElementMetatata(ElementMetadata.None, elementChild, visitedElementTypes, elementMetadataCollection, fieldInfos);
             }

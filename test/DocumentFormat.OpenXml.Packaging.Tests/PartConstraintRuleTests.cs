@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void AllExpectedParts()
         {
             var fromFramework = new[] { typeof(ExtendedPart), typeof(OpenXmlPart) };
-            var actual = typeof(OpenXmlPart)
+            var actual = typeof(TypedFeatures)
                 .GetTypeInfo()
                 .Assembly
                 .DefinedTypes
