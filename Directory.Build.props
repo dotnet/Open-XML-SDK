@@ -47,9 +47,6 @@
         <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
         <SamplesFrameworks>net46</SamplesFrameworks>
       </PropertyGroup>
-      <ItemGroup>
-        <Reference Include="WindowsBase" Version="3.0.0.0" />
-      </ItemGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'net40' ">
       <PropertyGroup>
@@ -60,9 +57,6 @@
         <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
         <SamplesFrameworks>net46</SamplesFrameworks>
       </PropertyGroup>
-      <ItemGroup>
-        <Reference Include="WindowsBase" />
-      </ItemGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'net46' ">
       <PropertyGroup>
@@ -72,9 +66,6 @@
         <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
         <SamplesFrameworks>net46</SamplesFrameworks>
       </PropertyGroup>
-      <ItemGroup>
-        <Reference Include="WindowsBase" />
-      </ItemGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'netstandard1_3' ">
       <PropertyGroup>
@@ -127,10 +118,6 @@
         <BenchmarkTargetFramework>net5.0</BenchmarkTargetFramework>
         <SamplesFrameworks>net46;netcoreapp2.1;netcoreapp3.1;net5.0</SamplesFrameworks>
       </PropertyGroup>
-
-      <ItemGroup Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' OR '$(TargetFramework)'=='net452' OR '$(TargetFramework)' == 'net46'  ">
-        <Reference Include="WindowsBase" />
-      </ItemGroup>
     </When>
     <Otherwise>
       <PropertyGroup>

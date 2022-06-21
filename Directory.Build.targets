@@ -82,4 +82,8 @@
     <PackageOutputPath>$(MSBuildThisFileDirectory)bin\$(Configuration)\packages\</PackageOutputPath>
     <PackageOutputPath Condition="$(IsShipped)">$(PackageOutputPath)shipping\</PackageOutputPath>
   </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net35' OR $(TargetFramework.StartsWith('net4'))">
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
 </Project>
