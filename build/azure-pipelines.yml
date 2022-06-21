@@ -55,7 +55,7 @@ stages:
                   name: 'windows'
                 - image: 'ubuntu-20.04'
                   name: 'linux'
-            - name: net6_0
+            - name: net5_0
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
