@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
+using System.Reflection;
 using System.Text;
 using System.Xml;
 
@@ -264,6 +265,88 @@ namespace DocumentFormat.OpenXml
             ElementInsertedEvent(newChild);
 
             return newChild;
+        }
+
+        internal void CopyToCompositeElement(OpenXmlCompositeElement fromCompositeElement, OpenXmlCompositeElement? toCompositeElement)
+        {
+            if (fromCompositeElement != null)
+            {
+                if (toCompositeElement == null)
+                {
+                    toCompositeElement = (OpenXmlCompositeElement)Activator.CreateInstance(toCompositeElement.GetType());
+                }
+
+                foreach (PropertyInfo prop in fromCompositeElement.GetType().GetProperties())
+                {
+                    PropertyInfo? toCompostiteElementProp = toCompositeElement?.GetType().GetProperty(prop.Name);
+
+                    if (toCompostiteElementProp != null && toCompostiteElementProp.PropertyType == prop.PropertyType)
+                    {
+                        if (toCompostiteElementProp.GetSetMethod() != null)
+                        {
+                            PropertyInfo? valProp = fromCompositeElement.GetType()?.GetProperty(prop.Name);
+
+                            if (valProp != null && valProp.CanRead)
+                            {
+                                toCompostiteElementProp.SetValue(toCompositeElement, valProp.GetValue(fromCompositeElement));
+                            }
+                            else if (valProp != null && !valProp.CanRead && valProp.Name == "InnerXml")
+                            {
+                                XmlDocument xmlDocument = new XmlDocument();
+                                xmlDocument.LoadXml(fromCompositeElement.OuterXml);
+                                XmlElement? root = xmlDocument.DocumentElement;
+
+                                if (root != null && root.InnerXml != null && toCompositeElement != null)
+                                {
+                                    toCompositeElement.InnerXml = root.InnerXml;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        internal OpenXmlCompositeElement? CopyFromCompositeElement(OpenXmlCompositeElement fromCompositeElement, Type toType)
+        {
+            OpenXmlCompositeElement toCompositeElement = null;
+
+            if (fromCompositeElement != null)
+            {
+                toCompositeElement = (OpenXmlCompositeElement)Activator.CreateInstance(toType);
+                toCompositeElement.OuterXml = fromCompositeElement.OuterXml;
+
+                foreach (PropertyInfo prop in fromCompositeElement.GetType().GetProperties())
+                {
+                    PropertyInfo? exProp = toCompositeElement.GetType().GetProperty(prop.Name);
+
+                    if (exProp != null && exProp.PropertyType == prop.PropertyType)
+                    {
+                        if (exProp.GetSetMethod() != null)
+                        {
+                            PropertyInfo? valProp = fromCompositeElement.GetType().GetProperty(prop.Name);
+
+                            if (valProp != null && valProp.CanRead)
+                            {
+                                exProp.SetValue(toCompositeElement, valProp.GetValue(fromCompositeElement));
+                            }
+                            else if (valProp != null && !valProp.CanRead && valProp.Name == "InnerXml")
+                            {
+                                XmlDocument xmlDocument = new XmlDocument();
+                                xmlDocument.LoadXml(toCompositeElement.OuterXml);
+                                XmlElement? root = xmlDocument.DocumentElement;
+
+                                if (root != null && root.InnerXml != null)
+                                {
+                                    toCompositeElement.InnerXml = root.InnerXml;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return toCompositeElement;
         }
 
         /// <inheritdoc/>
