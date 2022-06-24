@@ -25,17 +25,17 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
 
             set
             {
-                CopyExtensionListToNewMember(value, CommentExtensibleExtensionList, CommentExtensibleExtensionList.GetType());
+                CopyExtensionListToNewMember(value, CommentExtensibleExtensionList);
             }
         }
 
-        private void CopyExtensionListToNewMember(ExtensionList value, OpenXmlCompositeElement? newMember, Type newMemberType)
+        private void CopyExtensionListToNewMember(ExtensionList value, OpenXmlCompositeElement? newMember)
         {
-            if (value != null && newMemberType != null)
+            if (value != null)
             {
                 if (newMember == null)
                 {
-                    newMember = (OpenXmlCompositeElement)Activator.CreateInstance(newMemberType);
+                    newMember = (OpenXmlCompositeElement)Activator.CreateInstance(newMember.GetType());
                 }
 
                 foreach (PropertyInfo prop in value.GetType().GetProperties())
