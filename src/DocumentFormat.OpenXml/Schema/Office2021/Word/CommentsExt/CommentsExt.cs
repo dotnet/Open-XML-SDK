@@ -20,84 +20,94 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         {
             get
             {
-                ExtensionList? extLst = null;
-
-                if (CommentExtensibleExtensionList != null)
-                {
-                    extLst = new ExtensionList(CommentExtensibleExtensionList.OuterXml);
-
-                    foreach (PropertyInfo prop in CommentExtensibleExtensionList.GetType().GetProperties())
-                    {
-                        PropertyInfo? exProp = extLst.GetType().GetProperty(prop.Name);
-
-                        if (exProp != null && exProp.PropertyType == prop.PropertyType)
-                        {
-                            if (exProp.GetSetMethod() != null)
-                            {
-                                PropertyInfo? valProp = CommentExtensibleExtensionList.GetType().GetProperty(prop.Name);
-
-                                if (valProp != null && valProp.CanRead)
-                                {
-                                    exProp.SetValue(extLst, valProp.GetValue(CommentExtensibleExtensionList));
-                                }
-                                else if (valProp != null && !valProp.CanRead && valProp.Name == "InnerXml")
-                                {
-                                    XmlDocument xmlDocument = new XmlDocument();
-                                    xmlDocument.LoadXml(extLst.OuterXml);
-                                    XmlElement? root = xmlDocument.DocumentElement;
-
-                                    if (root != null && root.InnerXml != null)
-                                    {
-                                        extLst.InnerXml = root.InnerXml;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                return extLst;
+                return CopyExtensionListFromNewMember(CommentExtensibleExtensionList);
             }
 
             set
             {
-                if (value != null)
+                CopyExtensionListToNewMember(value, CommentExtensibleExtensionList, CommentExtensibleExtensionList.GetType());
+            }
+        }
+
+        private void CopyExtensionListToNewMember(ExtensionList value, OpenXmlCompositeElement? newMember, Type newMemberType)
+        {
+            if (value != null && newMemberType != null)
+            {
+                if (newMember == null)
                 {
-                    if (CommentExtensibleExtensionList == null)
-                    {
-                        CommentExtensibleExtensionList = new CommentExtensibleExtensionList();
-                    }
+                    newMember = (OpenXmlCompositeElement)Activator.CreateInstance(newMemberType);
+                }
 
-                    foreach (PropertyInfo prop in value.GetType().GetProperties())
-                    {
-                        PropertyInfo? cmtExtListProp = CommentExtensibleExtensionList?.GetType().GetProperty(prop.Name);
+                foreach (PropertyInfo prop in value.GetType().GetProperties())
+                {
+                    PropertyInfo? newMemberProp = newMember?.GetType().GetProperty(prop.Name);
 
-                        if (cmtExtListProp != null && cmtExtListProp.PropertyType == prop.PropertyType)
+                    if (newMemberProp != null && newMemberProp.PropertyType == prop.PropertyType)
+                    {
+                        if (newMemberProp.GetSetMethod() != null)
                         {
-                            if (cmtExtListProp.GetSetMethod() != null)
+                            PropertyInfo? valProp = value.GetType()?.GetProperty(prop.Name);
+
+                            if (valProp != null && valProp.CanRead)
                             {
-                                PropertyInfo? valProp = value.GetType()?.GetProperty(prop.Name);
+                                newMemberProp.SetValue(newMember, valProp.GetValue(value));
+                            }
+                            else if (valProp != null && !valProp.CanRead && valProp.Name == "InnerXml")
+                            {
+                                XmlDocument xmlDocument = new XmlDocument();
+                                xmlDocument.LoadXml(value.OuterXml);
+                                XmlElement? root = xmlDocument.DocumentElement;
 
-                                if (valProp != null && valProp.CanRead)
+                                if (root != null && root.InnerXml != null && newMember != null)
                                 {
-                                    cmtExtListProp.SetValue(CommentExtensibleExtensionList, valProp.GetValue(value));
-                                }
-                                else if (valProp != null && !valProp.CanRead && valProp.Name == "InnerXml")
-                                {
-                                    XmlDocument xmlDocument = new XmlDocument();
-                                    xmlDocument.LoadXml(value.OuterXml);
-                                    XmlElement? root = xmlDocument.DocumentElement;
-
-                                    if (root != null && root.InnerXml != null && CommentExtensibleExtensionList != null)
-                                    {
-                                        CommentExtensibleExtensionList.InnerXml = root.InnerXml;
-                                    }
+                                    newMember.InnerXml = root.InnerXml;
                                 }
                             }
                         }
                     }
                 }
             }
+        }
+
+        private ExtensionList? CopyExtensionListFromNewMember(OpenXmlCompositeElement newMember)
+        {
+            ExtensionList? extLst = null;
+
+            if (newMember != null)
+            {
+                extLst = new ExtensionList(newMember.OuterXml);
+
+                foreach (PropertyInfo prop in newMember.GetType().GetProperties())
+                {
+                    PropertyInfo? exProp = extLst.GetType().GetProperty(prop.Name);
+
+                    if (exProp != null && exProp.PropertyType == prop.PropertyType)
+                    {
+                        if (exProp.GetSetMethod() != null)
+                        {
+                            PropertyInfo? valProp = newMember.GetType().GetProperty(prop.Name);
+
+                            if (valProp != null && valProp.CanRead)
+                            {
+                                exProp.SetValue(extLst, valProp.GetValue(newMember));
+                            }
+                            else if (valProp != null && !valProp.CanRead && valProp.Name == "InnerXml")
+                            {
+                                XmlDocument xmlDocument = new XmlDocument();
+                                xmlDocument.LoadXml(extLst.OuterXml);
+                                XmlElement? root = xmlDocument.DocumentElement;
+
+                                if (root != null && root.InnerXml != null)
+                                {
+                                    extLst.InnerXml = root.InnerXml;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return extLst;
         }
     }
 }
