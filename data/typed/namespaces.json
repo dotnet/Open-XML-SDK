@@ -80,10 +80,6 @@
     "Namespace": "DocumentFormat.OpenXml.Office.ActiveX"
   },
   {
-    "Prefix": "cr",
-    "Namespace": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions"
-  },
-  {
     "Prefix": "ct",
     "Namespace": "DocumentFormat.OpenXml.Office.ContentType"
   },
