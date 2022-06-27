@@ -20,12 +20,17 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         {
             get
             {
-                return (ExtensionList)CopyFromCompositeElement((OpenXmlCompositeElement)CommentExtensibleExtensionList, typeof(ExtensionList));
+                return (ExtensionList?)CopyFromCompositeElement(CommentExtensibleExtensionList, typeof(ExtensionList));
             }
 
             set
             {
-                CopyToCompositeElement((OpenXmlCompositeElement)value, (OpenXmlCompositeElement)CommentExtensibleExtensionList);
+                if (CommentExtensibleExtensionList == null)
+                {
+                    CommentExtensibleExtensionList = new CommentExtensibleExtensionList();
+                }
+
+                CopyToCompositeElement(value, CommentExtensibleExtensionList, CommentExtensibleExtensionList.GetType());
             }
         }
     }

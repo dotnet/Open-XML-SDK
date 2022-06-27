@@ -267,13 +267,13 @@ namespace DocumentFormat.OpenXml
             return newChild;
         }
 
-        internal void CopyToCompositeElement(OpenXmlCompositeElement fromCompositeElement, OpenXmlCompositeElement? toCompositeElement)
+        internal void CopyToCompositeElement(OpenXmlCompositeElement? fromCompositeElement, OpenXmlCompositeElement? toCompositeElement, Type toType)
         {
             if (fromCompositeElement != null)
             {
                 if (toCompositeElement == null)
                 {
-                    toCompositeElement = (OpenXmlCompositeElement)Activator.CreateInstance(toCompositeElement.GetType());
+                    toCompositeElement = (OpenXmlCompositeElement?)Activator.CreateInstance(toType);
                 }
 
                 foreach (PropertyInfo prop in fromCompositeElement.GetType().GetProperties())
@@ -307,38 +307,42 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal OpenXmlCompositeElement? CopyFromCompositeElement(OpenXmlCompositeElement fromCompositeElement, Type toType)
+        internal OpenXmlCompositeElement? CopyFromCompositeElement(OpenXmlCompositeElement? fromCompositeElement, Type toType)
         {
-            OpenXmlCompositeElement toCompositeElement = null;
+            OpenXmlCompositeElement? toCompositeElement = null;
 
             if (fromCompositeElement != null)
             {
                 toCompositeElement = (OpenXmlCompositeElement)Activator.CreateInstance(toType);
-                toCompositeElement.OuterXml = fromCompositeElement.OuterXml;
 
-                foreach (PropertyInfo prop in fromCompositeElement.GetType().GetProperties())
+                if (toCompositeElement != null)
                 {
-                    PropertyInfo? exProp = toCompositeElement.GetType().GetProperty(prop.Name);
+                    toCompositeElement.OuterXml = fromCompositeElement.OuterXml;
 
-                    if (exProp != null && exProp.PropertyType == prop.PropertyType)
+                    foreach (PropertyInfo prop in fromCompositeElement.GetType().GetProperties())
                     {
-                        if (exProp.GetSetMethod() != null)
+                        PropertyInfo? exProp = toCompositeElement.GetType().GetProperty(prop.Name);
+
+                        if (exProp != null && exProp.PropertyType == prop.PropertyType)
                         {
-                            PropertyInfo? valProp = fromCompositeElement.GetType().GetProperty(prop.Name);
-
-                            if (valProp != null && valProp.CanRead)
+                            if (exProp.GetSetMethod() != null)
                             {
-                                exProp.SetValue(toCompositeElement, valProp.GetValue(fromCompositeElement));
-                            }
-                            else if (valProp != null && !valProp.CanRead && valProp.Name == "InnerXml")
-                            {
-                                XmlDocument xmlDocument = new XmlDocument();
-                                xmlDocument.LoadXml(toCompositeElement.OuterXml);
-                                XmlElement? root = xmlDocument.DocumentElement;
+                                PropertyInfo? valProp = fromCompositeElement.GetType().GetProperty(prop.Name);
 
-                                if (root != null && root.InnerXml != null)
+                                if (valProp != null && valProp.CanRead)
                                 {
-                                    toCompositeElement.InnerXml = root.InnerXml;
+                                    exProp.SetValue(toCompositeElement, valProp.GetValue(fromCompositeElement));
+                                }
+                                else if (valProp != null && !valProp.CanRead && valProp.Name == "InnerXml")
+                                {
+                                    XmlDocument xmlDocument = new XmlDocument();
+                                    xmlDocument.LoadXml(toCompositeElement.OuterXml);
+                                    XmlElement? root = xmlDocument.DocumentElement;
+
+                                    if (root != null && root.InnerXml != null)
+                                    {
+                                        toCompositeElement.InnerXml = root.InnerXml;
+                                    }
                                 }
                             }
                         }
