@@ -185,3 +185,5 @@ project.lock.json
 
 .store/
 *.exe
+
+msbuild.binlog
