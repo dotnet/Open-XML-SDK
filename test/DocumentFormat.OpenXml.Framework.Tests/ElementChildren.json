@@ -20821,63 +20821,6 @@
     "Children": []
   },
   {
-    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReaction",
-    "Children": [
-      {
-        "Name": "extLst",
-        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
-      },
-      {
-        "Name": "reactionInfo",
-        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
-      },
-      {
-        "Name": "user",
-        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
-      }
-    ]
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReactionInfo",
-    "Children": [
-      {
-        "Name": "extLst",
-        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
-      },
-      {
-        "Name": "user",
-        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
-      }
-    ]
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.CommentReactions",
-    "Children": [
-      {
-        "Name": "reaction",
-        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
-      }
-    ]
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.ExtensionList",
-    "Children": [
-      {
-        "Name": "ext",
-        "Namespace": "http://schemas.microsoft.com/office/2019/extlst"
-      }
-    ]
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions.User",
-    "Children": [
-      {
-        "Name": "extLst",
-        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
-      }
-    ]
-  },
-  {
     "Element": "DocumentFormat.OpenXml.Office.ContentType.ContentTypeSchema",
     "Children": []
   },
@@ -37419,24 +37362,6 @@
     "Children": [
       {
         "Name": "extLst",
-        "Namespace": "http://schemas.microsoft.com/office/word/2018/wordml/cex"
-      }
-    ]
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensibleExtension",
-    "Children": [
-      {
-        "Name": "reactions",
-        "Namespace": "http://schemas.microsoft.com/office/comments/2020/reactions"
-      }
-    ]
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensibleExtensionList",
-    "Children": [
-      {
-        "Name": "ext",
         "Namespace": "http://schemas.microsoft.com/office/word/2018/wordml/cex"
       }
     ]
