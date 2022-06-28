@@ -223,6 +223,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             var tmp = Path.GetTempFileName();
 
             _output.WriteLine($"Writing output to {tmp}");
+            _output.WriteLine(@"Expected output in data\Particles.json");
 
             using (var fs = File.OpenWrite(tmp))
             {
