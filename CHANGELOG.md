@@ -4,7 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.17.0] - 2022-06-15
+## [2.17.1] - 2022-06-28
+
+### Removed
+- Removed the preview namespace DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions because this namespace will currently create invalid documents.
+
+### Fixed
+- Restored the PowerPointCommentPart relationship to PresentationPart.
+
+### Deprecated
+- The relationship between the PowerPointCommentPart and the PresentationPart is deprecated and will be removed in a future version.
+
+## [2.17.0] - Unreleased
 
 ### Added
 - Added DocumentFormat.OpenXml.Office.Comments.Y2020.Reactions namespace (#1151)
