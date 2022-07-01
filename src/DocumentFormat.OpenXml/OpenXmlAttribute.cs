@@ -16,11 +16,13 @@ namespace DocumentFormat.OpenXml
         private const string ObsoleteMessage = "OpenXmlAttribute is a struct so setters may not behave as you might expect. Mutable setters will be removed in a future version.";
 
         private string? _value;
+        private string _prefix;
 
-        internal OpenXmlAttribute(in OpenXmlQualifiedName qname, string? value)
+        internal OpenXmlAttribute(in OpenXmlQualifiedName qname, string prefix, string? value)
         {
             QName = qname;
             _value = value;
+            _prefix = prefix;
         }
 
         /// <summary>
@@ -36,9 +38,10 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(qualifiedName));
             }
 
-            var qname = OpenXmlQualifiedName.Parse(qualifiedName);
+            var parsed = PrefixName.Parse(qualifiedName);
 
-            QName = new(new(namespaceUri, qname.Namespace.Prefix), qname.Name);
+            QName = new(namespaceUri, parsed.Name);
+            _prefix = parsed.Prefix;
             _value = value;
         }
 
@@ -56,7 +59,8 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(localName));
             }
 
-            QName = new(new(namespaceUri, prefix), localName);
+            QName = new(namespaceUri, localName);
+            _prefix = prefix;
             _value = value;
         }
 
@@ -67,7 +71,7 @@ namespace DocumentFormat.OpenXml
         {
             get => QName.Namespace.Uri;
             [Obsolete(ObsoleteMessage)]
-            set => QName = new(new(value, Prefix), LocalName);
+            set => QName = new(value, LocalName);
         }
 
         /// <summary>
@@ -85,9 +89,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public string Prefix
         {
-            get => QName.Namespace.Prefix;
+            get => _prefix;
             [Obsolete(ObsoleteMessage)]
-            set => QName = new(new(NamespaceUri, value), LocalName);
+            set => _prefix = value;
         }
 
         /// <summary>
@@ -119,9 +123,8 @@ namespace DocumentFormat.OpenXml
         /// <returns>Returns true if instances are equal; otherwise, returns false.</returns>
         public bool Equals(OpenXmlAttribute other)
             => string.Equals(Value, other.Value, StringComparison.Ordinal)
-            && string.Equals(QName.Name, other.QName.Name, StringComparison.Ordinal)
-            && string.Equals(QName.Namespace.Uri, other.QName.Namespace.Uri, StringComparison.Ordinal)
-            && string.Equals(QName.Namespace.Prefix, other.QName.Namespace.Prefix, StringComparison.Ordinal);
+            && QName.Equals(other.QName)
+            && string.Equals(_prefix, other._prefix, StringComparison.Ordinal);
 
         /// <summary>
         /// Determines if two instances of OpenXmlAttribute structures are equal.
@@ -158,9 +161,8 @@ namespace DocumentFormat.OpenXml
             var hashcode = default(HashCode);
 
             hashcode.Add(Value, StringComparer.Ordinal);
-            hashcode.Add(QName.Name, StringComparer.Ordinal);
-            hashcode.Add(QName.Namespace.Uri, StringComparer.Ordinal);
-            hashcode.Add(QName.Namespace.Prefix, StringComparer.Ordinal);
+            hashcode.Add(QName);
+            hashcode.Add(_prefix, StringComparer.Ordinal);
 
             return hashcode.ToHashCode();
         }

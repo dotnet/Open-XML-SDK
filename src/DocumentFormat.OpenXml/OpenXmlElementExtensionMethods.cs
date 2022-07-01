@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml
         {
             Debug.Assert(parent is OpenXmlCompositeElement);
 
-            var newElement = parent.CreateElement(OpenXmlQualifiedName.Create(namespaceUri, string.Empty, localName));
+            var newElement = parent.CreateElement(OpenXmlQualifiedName.Create(namespaceUri, string.Empty, localName), string.Empty);
             if (newElement is OpenXmlUnknownElement || !newElement.IsInVersion(fileFormat))
             {
                 return null;

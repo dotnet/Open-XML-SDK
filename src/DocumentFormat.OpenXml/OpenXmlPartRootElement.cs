@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml
                 }
 
                 var resolver = Features.GetNamespaceResolver();
-                var qname = resolver.CreateQName(xmlReader.NamespaceURI, xmlReader.LocalName);
+                var qname = new OpenXmlQualifiedName(xmlReader.NamespaceURI, xmlReader.LocalName);
 
                 if (!resolver.IsKnown(qname.Namespace) || !QName.Equals(qname))
                 {
@@ -303,7 +303,7 @@ namespace DocumentFormat.OpenXml
                 // in this case, we use the predefined prefix
                 if (prefix.IsNullOrEmpty())
                 {
-                    prefix = QName.Namespace.Prefix;
+                    prefix = Features.GetNamespaceResolver().LookupPrefix(QName.Namespace.Uri);
                 }
 
                 xmlWriter.WriteStartElement(prefix, LocalName, NamespaceUri);

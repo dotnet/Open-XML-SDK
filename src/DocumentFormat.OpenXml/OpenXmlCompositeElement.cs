@@ -709,7 +709,7 @@ namespace DocumentFormat.OpenXml
                                     // If node is an UnknowElement, we should try to see whether the parent element can load the node as strong typed element
                                     if (node is OpenXmlUnknownElement)
                                     {
-                                        newnode = CreateElement(OpenXmlQualifiedName.Create(node.NamespaceUri, node.Prefix, node.LocalName));
+                                        newnode = CreateElement(OpenXmlQualifiedName.Create(node.NamespaceUri, node.Prefix, node.LocalName), node.Prefix);
                                         if (!(newnode is OpenXmlUnknownElement))
                                         {
                                             // The following method will load teh element in MCMode.Full

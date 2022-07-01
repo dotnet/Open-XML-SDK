@@ -116,7 +116,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             foreach (var attribute in e.ParsedState.Attributes)
             {
-                yield return new OpenXmlAttribute(attribute.Property.QName, attribute.Value?.InnerText);
+                var qname = attribute.Property.QName;
+                var prefix = e.Features.GetNamespaceResolver().LookupPrefix(qname.Namespace.Uri) ?? string.Empty;
+
+                yield return new OpenXmlAttribute(qname, prefix, attribute.Value?.InnerText);
             }
         }
 

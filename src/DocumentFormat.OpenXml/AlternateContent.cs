@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class AlternateContent : OpenXmlCompositeElement
     {
-        internal static readonly OpenXmlQualifiedName InternalQName = FeatureCollection.TypedOrDefault.GetNamespaceResolver().CreateQName(@"http://schemas.openxmlformats.org/markup-compatibility/2006", "AlternateContent");
+        internal static readonly OpenXmlQualifiedName InternalQName = new(@"http://schemas.openxmlformats.org/markup-compatibility/2006", "AlternateContent");
 
         /// <summary>
         /// Initializes a new instance of the AlternateContent

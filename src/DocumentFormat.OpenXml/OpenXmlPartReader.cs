@@ -787,7 +787,7 @@ namespace DocumentFormat.OpenXml
             }
 
             // create the root element object
-            var rootElement = CreateElement(_resolver.CreateQName(_xmlReader.NamespaceURI, _xmlReader.LocalName));
+            var rootElement = CreateElement(new(_xmlReader.NamespaceURI, _xmlReader.LocalName));
 
             if (rootElement is null)
             {

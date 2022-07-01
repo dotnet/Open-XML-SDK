@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml
             var prefix = features.GetRequired<IOpenXmlNamespaceIdResolver>().GetPrefix(nsId);
             var uri = features.GetRequired<IOpenXmlNamespaceResolver>().LookupNamespace(prefix);
 
-            _qname = new OpenXmlQualifiedName(new OpenXmlNamespace(uri ?? string.Empty, prefix), tag);
+            _qname = new OpenXmlQualifiedName(uri ?? string.Empty, tag);
         }
 
         /// <summary>
@@ -64,9 +64,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(tag));
             }
 
-            var resolver = FeatureCollection.TypedOrDefault.GetNamespaceResolver();
-
-            _qname = resolver.CreateQName(ns, tag);
+            _qname = new(ns, tag);
         }
 
         /// <summary>

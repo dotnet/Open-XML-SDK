@@ -48,10 +48,10 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(name));
             }
 
-            var schema = OpenXmlQualifiedName.Parse(name);
+            var parsed = PrefixName.Parse(name);
 
-            _prefix = schema.Namespace.Prefix;
-            _tagName = schema.Name;
+            _prefix = parsed.Prefix;
+            _tagName = parsed.Name;
         }
 
         /// <summary>
@@ -68,15 +68,15 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(qualifiedName));
             }
 
-            var schema = OpenXmlQualifiedName.Parse(qualifiedName);
+            var parsed = PrefixName.Parse(qualifiedName);
 
-            _prefix = schema.Namespace.Prefix;
-            _tagName = schema.Name;
+            _prefix = parsed.Prefix;
+            _tagName = parsed.Name;
             _namespaceUri = namespaceUri;
         }
 
-        internal OpenXmlUnknownElement(in OpenXmlQualifiedName qname)
-            : this(qname.Namespace.Prefix, qname.Name, qname.Namespace.Uri)
+        internal OpenXmlUnknownElement(in OpenXmlQualifiedName qname, string prefix)
+            : this(prefix, qname.Name, qname.Namespace.Uri)
         {
         }
 

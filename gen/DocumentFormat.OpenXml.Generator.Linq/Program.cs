@@ -421,7 +421,7 @@ namespace DocumentFormat.OpenXml.Generator.Linq
             /// <summary>
             /// Gets the XML prefix, e.g., "w".
             /// </summary>
-            public string Prefix => QName.Namespace.Prefix;
+            public string Prefix => TypedFeatures.Shared.GetNamespaceResolver().LookupPrefix(QName.Namespace.Uri) ?? string.Empty;
 
             /// <summary>
             /// Gets the XML namespace name, e.g., "http://schemas.openxmlformats.org/wordprocessingml/2006/main".
@@ -483,7 +483,7 @@ namespace DocumentFormat.OpenXml.Generator.Linq
 
             private static string GetQualifiedName(OpenXmlQualifiedName qName)
             {
-                string prefix = qName.Namespace.Prefix;
+                string prefix = TypedFeatures.Shared.GetNamespaceResolver().LookupPrefix(qName.Namespace.Uri) ?? string.Empty;
                 return string.IsNullOrEmpty(prefix) ? qName.Name : prefix + ":" + qName.Name;
             }
 

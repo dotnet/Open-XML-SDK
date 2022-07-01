@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Framework
         public static implicit operator OpenXmlQualifiedName(string input) => Parse(input);
 
         public static OpenXmlQualifiedName Create(string nsUri, string prefix, string name)
-            => new OpenXmlQualifiedName(new OpenXmlNamespace(nsUri, prefix), name);
+            => new(nsUri, name);
 
         public static OpenXmlQualifiedName Parse(string name, string? nsUri = null)
             => FeatureCollection.TypedOrDefault.GetNamespaceResolver().ParseQName(name, nsUri);

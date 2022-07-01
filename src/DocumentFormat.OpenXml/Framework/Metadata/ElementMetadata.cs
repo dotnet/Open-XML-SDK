@@ -63,17 +63,15 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             private static readonly Lazy<ElementFactoryCollection> _lazy = new Lazy<ElementFactoryCollection>(() => ElementFactoryCollection.Empty, true);
 
             private readonly Type _type;
-            private readonly IOpenXmlNamespaceResolver _resolver;
 
             private List<IMetadataBuilder<AttributeMetadata>>? _attributes;
             private HashSet<IMetadataBuilder<ElementFactory>>? _children;
             private List<IValidator>? _constraints;
             private OpenXmlQualifiedName _qname;
 
-            public Builder(Type type, IOpenXmlNamespaceResolver resolver)
+            public Builder(Type type)
             {
                 _type = type;
-                _resolver = resolver;
             }
 
             public Builder<TElement> AddElement<TElement>()
@@ -98,7 +96,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 => _qname = qname;
 
             public void SetSchema(string ns, string localName)
-                => SetSchema(_resolver.CreateQName(ns, localName));
+                => SetSchema(new(ns, localName));
 
             public void AddChild<T>()
                 where T : OpenXmlElement, new()
