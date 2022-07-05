@@ -3,42 +3,39 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml.Framework
+namespace DocumentFormat.OpenXml.Framework;
+
+internal readonly partial struct OpenXmlNamespace : IComparable<OpenXmlNamespace>, IEquatable<OpenXmlNamespace>
 {
-    internal readonly partial struct OpenXmlNamespace : IComparable<OpenXmlNamespace>, IEquatable<OpenXmlNamespace>
+    private readonly string? _uri;
+
+    public OpenXmlNamespace(string nsUri)
     {
-        private readonly string? _prefix;
-        private readonly string? _uri;
-
-        public OpenXmlNamespace(string nsUri, string prefix)
-        {
-            _uri = nsUri;
-            _prefix = prefix;
-        }
-
-        public string Uri => _uri ?? string.Empty;
-
-        public string Prefix => _prefix ?? string.Empty;
-
-        public bool IsEmpty => string.IsNullOrEmpty(Uri);
-
-        public override bool Equals(object? obj) => obj is OpenXmlNamespace ns && Equals(ns);
-
-        public bool Equals(OpenXmlNamespace other)
-            => string.Equals(Uri, other.Uri, StringComparison.Ordinal);
-
-        public override int GetHashCode()
-        {
-            var hashcode = default(HashCode);
-
-            hashcode.Add(Uri, StringComparer.Ordinal);
-
-            return hashcode.ToHashCode();
-        }
-
-        public override string ToString() => Uri;
-
-        public int CompareTo(OpenXmlNamespace other)
-            => string.CompareOrdinal(Uri, other.Uri);
+        _uri = nsUri;
     }
+
+    public string Uri => _uri ?? string.Empty;
+
+    public bool IsEmpty => string.IsNullOrEmpty(Uri);
+
+    public override bool Equals(object? obj) => obj is OpenXmlNamespace ns && Equals(ns);
+
+    public bool Equals(OpenXmlNamespace other)
+        => string.Equals(Uri, other.Uri, StringComparison.Ordinal);
+
+    public override int GetHashCode()
+    {
+        var hashcode = default(HashCode);
+
+        hashcode.Add(Uri, StringComparer.Ordinal);
+
+        return hashcode.ToHashCode();
+    }
+
+    public override string ToString() => Uri;
+
+    public int CompareTo(OpenXmlNamespace other)
+        => string.CompareOrdinal(Uri, other.Uri);
+
+    public static implicit operator OpenXmlNamespace(string nsUri) => new(nsUri);
 }

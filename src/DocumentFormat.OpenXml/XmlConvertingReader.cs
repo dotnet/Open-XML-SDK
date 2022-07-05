@@ -174,10 +174,8 @@ namespace DocumentFormat.OpenXml
 
         bool IXmlLineInfo.HasLineInfo() => XmlLineInfo.Get(BaseReader).HasLineInfo();
 
-        private string ApplyStrictTranslation(string nsUri)
+        private string ApplyStrictTranslation(OpenXmlNamespace ns)
         {
-            var ns = _resolver.CreateNamespace(nsUri);
-
             if (StrictRelationshipFound)
             {
                 if (_resolver.TryGetTransitionalNamespace(ns, out var transitionalNamespace))

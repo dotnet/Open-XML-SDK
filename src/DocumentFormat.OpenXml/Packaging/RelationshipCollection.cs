@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 relationshipProperty.Id = relationship.Id;
                 relationshipProperty.RelationshipType = relationship.RelationshipType;
 
-                var ns = resolver.CreateNamespace(relationshipProperty.RelationshipType);
+                var ns = new OpenXmlNamespace(relationshipProperty.RelationshipType);
 
                 // If packageRel.RelationshipType is something for Strict, it tries to get the equivalent in Transitional.
                 if (resolver.TryGetTransitionalRelationship(ns, out var transitionalNamespace))

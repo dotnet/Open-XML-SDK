@@ -440,7 +440,7 @@ namespace DocumentFormat.OpenXml
                         }
                     }
 
-                    var ns = _resolver.CreateNamespace(uri);
+                    var ns = new OpenXmlNamespace(uri);
 
                     if (!_resolver.HasVersion(ns, format))
                     {
