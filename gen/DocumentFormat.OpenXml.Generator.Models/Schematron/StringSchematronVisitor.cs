@@ -250,9 +250,9 @@ namespace DocumentFormat.OpenXml.Generator.Schematron
             }
         }
 
-        private static string TypeOf(ElementReference name) => name is null ? "null" : $"\"{name.Name}\"";
+        private static string TypeOf(ElementReference name) => name is null ? "null" : $"builder.CreateQName(\"{name.Name}\")";
 
-        private static string Literal(AttributeReference a) => $"\"{a.Name}\"";
+        private static string Literal(AttributeReference a) => $"builder.CreateQName(\"{a.Name}\")";
 
         private static string Literal(bool b) => b ? "true" : "false";
 

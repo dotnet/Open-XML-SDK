@@ -63,15 +63,17 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             private static readonly Lazy<ElementFactoryCollection> _lazy = new Lazy<ElementFactoryCollection>(() => ElementFactoryCollection.Empty, true);
 
             private readonly Type _type;
+            private readonly IOpenXmlNamespaceResolver _resolver;
 
             private List<IMetadataBuilder<AttributeMetadata>>? _attributes;
             private HashSet<IMetadataBuilder<ElementFactory>>? _children;
             private List<IValidator>? _constraints;
             private OpenXmlQualifiedName _qname;
 
-            public Builder(Type type)
+            public Builder(Type type, IOpenXmlNamespaceResolver resolver)
             {
                 _type = type;
+                _resolver = resolver;
             }
 
             public Builder<TElement> AddElement<TElement>()
@@ -92,11 +94,17 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public CompositeParticle? Particle { get; set; }
 
-            public void SetSchema(in OpenXmlQualifiedName qname)
-                => _qname = qname;
+            public OpenXmlQualifiedName CreateQName(string qname)
+                => _resolver.ParseQName(qname);
+
+            public void SetSchema(string qname)
+                => _qname = _resolver.ParseQName(qname);
 
             public void SetSchema(string ns, string localName)
-                => SetSchema(new(ns, localName));
+                => _qname = new(ns, localName);
+
+            public void SetSchema(in OpenXmlQualifiedName qname)
+                => _qname = qname;
 
             public void AddChild<T>()
                 where T : OpenXmlElement, new()
@@ -162,11 +170,12 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 _builder = builder;
             }
 
-            public Builder<TElement> AddAttribute<TSimpleType>(string qname, Expression<Func<TElement, TSimpleType?>> expression, Action<AttributeMetadata.Builder<TSimpleType>>? action = null)
+            public Builder<TElement> AddAttribute<TSimpleType>(string name, Expression<Func<TElement, TSimpleType?>> expression, Action<AttributeMetadata.Builder<TSimpleType>>? action = null)
                 where TSimpleType : OpenXmlSimpleType, new()
             {
                 if (expression.Body is MemberExpression member)
                 {
+                    var qname = _builder.CreateQName(name);
                     var builder = new AttributeMetadata.Builder<TSimpleType>(qname, member.Member.Name);
 
                     action?.Invoke(builder);

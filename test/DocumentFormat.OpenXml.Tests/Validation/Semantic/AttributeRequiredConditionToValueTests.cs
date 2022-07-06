@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml.Tests.Validation.Semantic
                     .AddAttribute(":required", t => t.Required)
                     .AddAttribute(":condition", t => t.Condition);
 
-                builder.AddConstraint(new AttributeRequiredConditionToValue(":required", ":condition", ExpectedConditionValue));
+                builder.AddConstraint(new AttributeRequiredConditionToValue(builder.CreateQName(":required"), builder.CreateQName(":condition"), ExpectedConditionValue));
             }
         }
     }
