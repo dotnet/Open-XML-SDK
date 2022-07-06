@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(qname));
             }
 
-            _qname = qname;
+            _qname = FeatureCollection.TypedOrDefault.GetNamespaceResolver().ParseQName(qname);
         }
 
         /// <summary>
