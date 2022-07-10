@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Generator.Linq
                 GenerateClassFilePreamble(output, namespaceName);
                 GenerateClass(output, prefix, namespaceName, classFieldInfos, fieldInfos);
 
-                sb.AppendLine($"export {{ {className} }} from './{className}';");
+                sb.AppendLine($"export {{ {className} }} from './{className}.js';");
             }
 
             string indexPath = Path.GetFullPath(Path.Combine(directoryName, "index.ts"));
