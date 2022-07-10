@@ -298,8 +298,9 @@ namespace DocumentFormat.OpenXml.Generator.Linq
         {
             var visitedElementTypes = new HashSet<Type>();
             var elementMetadataCollection = new List<ElementMetadata>();
+            var elementFactory = new TypedFeatures().GetRequired<IRootElementFactory>();
 
-            foreach (var elementChild in FeatureCollection.Default.GetRequired<IRootElementFactory>().Collection.Elements)
+            foreach (var elementChild in elementFactory.Collection.Elements)
             {
                 AssembleElementMetatata(ElementMetadata.None, elementChild, visitedElementTypes, elementMetadataCollection, fieldInfos);
             }
@@ -408,7 +409,7 @@ namespace DocumentFormat.OpenXml.Generator.Linq
             /// <summary>
             /// Gets the XML prefix, e.g., "w".
             /// </summary>
-            public string Prefix => QName.Namespace.Prefix;
+            public string Prefix => TypedFeatures.Shared.GetNamespaceResolver().LookupPrefix(QName.Namespace.Uri) ?? string.Empty;
 
             /// <summary>
             /// Gets the XML namespace name, e.g., "http://schemas.openxmlformats.org/wordprocessingml/2006/main".
@@ -470,7 +471,7 @@ namespace DocumentFormat.OpenXml.Generator.Linq
 
             private static string GetQualifiedName(OpenXmlQualifiedName qName)
             {
-                string prefix = qName.Namespace.Prefix;
+                string prefix = TypedFeatures.Shared.GetNamespaceResolver().LookupPrefix(qName.Namespace.Uri) ?? string.Empty;
                 return string.IsNullOrEmpty(prefix) ? qName.Name : prefix + ":" + qName.Name;
             }
 
