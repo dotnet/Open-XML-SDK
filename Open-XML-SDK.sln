@@ -81,6 +81,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVGExample", "samples\SVGEx
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Generator.Models", "gen\DocumentFormat.OpenXml.Generator.Models\DocumentFormat.OpenXml.Generator.Models.csproj", "{C91489AB-FF14-4FAD-BA51-35371ADD7E1C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerPointCommentSample", "samples\PowerPointCommentSample\PowerPointCommentSample.csproj", "{4C230F88-9665-4572-8880-7596EE5FB68E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,10 @@ Global
 		{C91489AB-FF14-4FAD-BA51-35371ADD7E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C91489AB-FF14-4FAD-BA51-35371ADD7E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C91489AB-FF14-4FAD-BA51-35371ADD7E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C230F88-9665-4572-8880-7596EE5FB68E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C230F88-9665-4572-8880-7596EE5FB68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C230F88-9665-4572-8880-7596EE5FB68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C230F88-9665-4572-8880-7596EE5FB68E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -198,6 +204,7 @@ Global
 		{F48B7D50-16CB-4BEF-A614-2DED9960AF09} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 		{7CFCA307-F221-4FC9-A531-6CAC503E1FFB} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 		{C91489AB-FF14-4FAD-BA51-35371ADD7E1C} = {3653266D-2C88-4487-8977-839CB3E78A0A}
+		{4C230F88-9665-4572-8880-7596EE5FB68E} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F476383-E917-43D1-A1E5-9A61A47DA3F5}
