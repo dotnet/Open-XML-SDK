@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PowerPointCommentSample": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\source\\deleteThis\\foobar\\test.pptx"
+    }
+  }
+}
