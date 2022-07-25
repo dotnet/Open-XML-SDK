@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Generator.Linq
             Console.WriteLine($@"Generating code in '{directoryName}' ...");
 
             var fieldInfos = new Dictionary<OpenXmlQualifiedName, FieldInfo>();
-            IEnumerable<ElementMetadata> elementMetadataCollection = AssembleElementMetadata(fieldInfos);
+            var elementMetadataCollection = AssembleElementMetadata(fieldInfos);
             AssembleAttributeMetadata(elementMetadataCollection, fieldInfos);
 
             IEnumerable<IGrouping<string, FieldInfo>> fieldInfoGroupings = fieldInfos.Values
@@ -303,11 +303,11 @@ namespace DocumentFormat.OpenXml.Generator.Linq
             output.WriteLine(@"    }");
         }
 
-        private static IEnumerable<ElementMetadata> AssembleElementMetadata(
+        private static IEnumerable<IElementMetadata> AssembleElementMetadata(
             IDictionary<OpenXmlQualifiedName, FieldInfo> fieldInfos)
         {
             var visitedElementTypes = new HashSet<Type>();
-            var elementMetadataCollection = new List<ElementMetadata>();
+            var elementMetadataCollection = new List<IElementMetadata>();
             var elementFactory = new TypedFeatures().GetRequired<IRootElementFactory>();
 
             foreach (var elementChild in elementFactory.Collection.Elements)
@@ -318,11 +318,11 @@ namespace DocumentFormat.OpenXml.Generator.Linq
             return elementMetadataCollection;
         }
 
-        private static ElementMetadata AssembleElementMetatata(
-            ElementMetadata parentMetadata,
+        private static IElementMetadata AssembleElementMetatata(
+            IElementMetadata parentMetadata,
             ElementFactory elementChild,
             HashSet<Type> visitedTypes,
-            ICollection<ElementMetadata> elementMetadataCollection,
+            ICollection<IElementMetadata> elementMetadataCollection,
             IDictionary<OpenXmlQualifiedName, FieldInfo> fieldInfos)
         {
             OpenXmlElement element = elementChild.Create();
@@ -351,7 +351,7 @@ namespace DocumentFormat.OpenXml.Generator.Linq
         }
 
         private static void AssembleAttributeMetadata(
-            IEnumerable<ElementMetadata> elementMetadataCollection,
+            IEnumerable<IElementMetadata> elementMetadataCollection,
             IDictionary<OpenXmlQualifiedName, FieldInfo> fieldInfos)
         {
             foreach (ElementMetadata elementMetadata in elementMetadataCollection)
@@ -381,11 +381,11 @@ namespace DocumentFormat.OpenXml.Generator.Linq
         /// </summary>
         internal class FieldInfo : IComparable<FieldInfo>, IEquatable<FieldInfo>
         {
-            private readonly HashSet<ElementMetadata> _elementMetadata = new();
-            private readonly HashSet<ElementMetadata> _parentMetadata = new();
-            private readonly HashSet<ElementMetadata> _childMetadata = new();
+            private readonly HashSet<IElementMetadata> _elementMetadata = new();
+            private readonly HashSet<IElementMetadata> _parentMetadata = new();
+            private readonly HashSet<IElementMetadata> _childMetadata = new();
 
-            private readonly HashSet<ElementMetadata> _attributeContainerMetadata = new();
+            private readonly HashSet<IElementMetadata> _attributeContainerMetadata = new();
             private readonly HashSet<AttributeMetadata> _attributeMetadata = new();
 
             private readonly SortedSet<string> _attributePropertyNames = new();
@@ -471,7 +471,7 @@ namespace DocumentFormat.OpenXml.Generator.Linq
 
             public IEnumerable<string> AttributePropertyNames => _attributePropertyNames;
 
-            private static string GetQualifiedName(ElementMetadata metadata)
+            private static string GetQualifiedName(IElementMetadata metadata)
             {
                 return GetQualifiedName(metadata.QName);
             }
@@ -487,12 +487,12 @@ namespace DocumentFormat.OpenXml.Generator.Linq
                 return string.IsNullOrEmpty(prefix) ? qName.Name : prefix + ":" + qName.Name;
             }
 
-            public void AddElementMetadata(ElementMetadata element)
+            public void AddElementMetadata(IElementMetadata element)
             {
                 _elementMetadata.Add(element);
             }
 
-            public void AddParentElementMetadata(ElementMetadata parent)
+            public void AddParentElementMetadata(IElementMetadata parent)
             {
                 if (parent != ElementMetadata.None)
                 {
@@ -500,7 +500,7 @@ namespace DocumentFormat.OpenXml.Generator.Linq
                 }
             }
 
-            public void AddChildElementMetadata(ElementMetadata child)
+            public void AddChildElementMetadata(IElementMetadata child)
             {
                 _childMetadata.Add(child);
             }
