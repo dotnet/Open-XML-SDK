@@ -7,7 +7,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
     {
         public bool IsEmpty => Attributes.IsEmpty;
 
-        public ElementState(ElementMetadata metadata)
+        public ElementState(IElementMetadata metadata)
         {
             Attributes = new AttributeCollection(metadata.Attributes);
             Metadata = metadata;
@@ -15,6 +15,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public AttributeCollection Attributes { get; }
 
-        public ElementMetadata Metadata { get; }
+        public IElementMetadata Metadata { get; }
     }
 }

@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Framework.Metadata;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal interface IElementMetadataFeature
+internal interface IElementMetadataFactoryFeature
 {
-    public ElementMetadata GetMetadata(OpenXmlElement element);
+    public IElementMetadata GetMetadata(OpenXmlElement element);
 }
