@@ -17,8 +17,10 @@ Below are the near term plans for the SDK. These are not set in stone and may be
 - Identify issues for AOT (i.e. Blazor WebAssembly, Xamarin Mac, etc) (projects/8)
 - Isolate functional services behind [features infrastructure](Features.md)
 
-## September 2022 - 3.0.0
+## September 2022 - 2.18.0
 - Release support for latest Office schema updates
+
+## [Future] - v3.0.0
 - Separate out strongly typed classes into separate assembly ([Project Board](https://github.com/OfficeDev/Open-XML-SDK/projects/2))
 - Ship source generator for users to generate subset of classes that they need ([Project Board](https://github.com/OfficeDev/Open-XML-SDK/projects/6))
 - Incoporate updates for System.IO.Packaging shipping with .NET 7
