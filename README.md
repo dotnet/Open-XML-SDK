@@ -98,30 +98,18 @@ In addition to open sourcing of the SDK, Microsoft has opened up the conceptual 
 # How can I contribute?
 
 We welcome contributions! Many people all over the world have helped make this project better.
+
 - [Contributing](./CONTRIBUTING.md) explains what kinds of contributions we welcome
 
 # Reporting security issues and security bugs
 
 Security issues and bugs should be reported privately, via email, to the Microsoft Security Response Center (MSRC) secure@microsoft.com. You should receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message. Further information, including the MSRC PGP key, can be found in the [Security TechCenter](https://www.microsoft.com/en-us/msrc/faqs-report-an-issue?rtc=1).
 
-# Filing issues
-
-This repo should contain issues that are tied to the runtime, the class libraries and frameworks, the installation of the dotnet binary (sometimes known as the muxer) and installation of the .NET runtime and libraries.
-For other issues, please use the following repos:
-
-- For overall .NET SDK issues, file in the [dotnet/sdk](https://github.com/dotnet/sdk) repo
-- For ASP.NET issues, file in the [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore) repo.
-
 # .NET Foundation
+The Open XML SDK is a [.NET Foundation](https://dotnetfoundation.org/projects) project.
 
-.NET Runtime is a [.NET Foundation](https://dotnetfoundation.org/projects) project.
-There are many .NET related projects on GitHub.
-
-- [.NET home repo](https://github.com/Microsoft/dotnet) - links to 100s of .NET projects, from Microsoft and the community.
-- [ASP.NET Core home](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-6.0) - the best place to start learning about ASP.NET Core.
 This project has adopted the code of conduct defined by the [Contributor Covenant](https://www.contributor-covenant.org/) to clarify expected behavior in our community. For more information, see the [.NET Foundation Code of Conduct](https://dotnetfoundation.org/about/code-of-conduct).
-General .NET OSS discussions: .NET Foundation Discussions
 
 # License
 
-.NET (including the runtime repo) is licensed under the [MIT](./LICENSE) license.
+The Open XML SDK is licensed under the [MIT](./LICENSE) license.
