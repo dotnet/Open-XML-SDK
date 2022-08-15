@@ -46183,6 +46183,10 @@
        "MinOccurs": 0
       },
       {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverrides",
+       "MinOccurs": 0
+      },
+      {
        "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings",
        "MinOccurs": 0
       },
@@ -46226,6 +46230,39 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Clear",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResults",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResults",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResults",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResults",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResults",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType",
   "Value": [
    {
@@ -46234,6 +46271,24 @@
      "ChildrenParticles": [
       {
        "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Copyrights",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CopyrightXsdstring",
+       "MaxOccurs": 0,
        "MinOccurs": 0
       }
      ],
@@ -46411,6 +46466,408 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverride",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverrides",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverride",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoCache",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsdbase64Binary",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Clear",
+       "MinOccurs": 0
+      }
+     ],
+     "MaxOccurs": 0,
+     "ParticleType": "Choice"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntities",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoHierarchyEntity",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQuery",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildTypes",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResult",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQuery",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntities",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResults",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResult",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildTypes",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityType",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoData",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygons",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Copyrights",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResult",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQuery",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoData",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResults",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResult",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResult",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointQuery",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQuery",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResults",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResult",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocation",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Address",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResult",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQuery",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocations",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResults",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResult",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocations",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocation",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResult",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQuery"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoEntity",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntity",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResults",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResult",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygons",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygon",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Geography",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoCache",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter",
   "Value": [
    {
@@ -46511,6 +46968,176 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxColorSolidColorFillProperties",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.RgbColorModelHex"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.HslColor"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.SystemColor"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.SchemeColor"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.PresetColor"
+          }
+         ],
+         "ParticleType": "Choice"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Group"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxValueColorEndPosition",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtremeValueColorPosition"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MidColorSolidColorFillProperties",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.RgbColorModelHex"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.HslColor"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.SystemColor"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.SchemeColor"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.PresetColor"
+          }
+         ],
+         "ParticleType": "Choice"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Group"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinColorSolidColorFillProperties",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.RgbColorModelHex"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.HslColor"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.SystemColor"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.SchemeColor"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.PresetColor"
+          }
+         ],
+         "ParticleType": "Choice"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Group"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinValueColorEndPosition",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtremeValueColorPosition"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorGridlinesGridlines",
   "Value": [
    {
@@ -46561,12 +47188,20 @@
          "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula"
         },
         {
+         "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NfFormula",
+         "MinOccurs": 0
+        },
+        {
          "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericLevel",
          "MaxOccurs": 0,
          "MinOccurs": 0
         }
        ],
        "ParticleType": "Sequence"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericLevel",
+       "MaxOccurs": 0
       }
      ],
      "ParticleType": "Choice"
@@ -46733,6 +47368,14 @@
        "MinOccurs": 0
       },
       {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColors",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorPositions",
+       "MinOccurs": 0
+      },
+      {
        "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataPoint",
        "MaxOccurs": 0,
        "MinOccurs": 0
@@ -46776,6 +47419,10 @@
        "MinOccurs": 0
       },
       {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RegionLabelLayout",
+       "MinOccurs": 0
+      },
+      {
        "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesElementVisibilities",
        "MinOccurs": 0
       },
@@ -46792,6 +47439,10 @@
        ],
        "MinOccurs": 0,
        "ParticleType": "Choice"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Geography",
+       "MinOccurs": 0
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Statistics",
@@ -46920,12 +47571,20 @@
          "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula"
         },
         {
+         "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NfFormula",
+         "MinOccurs": 0
+        },
+        {
          "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringLevel",
          "MaxOccurs": 0,
          "MinOccurs": 0
         }
        ],
        "ParticleType": "Sequence"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringLevel",
+       "MaxOccurs": 0
       }
      ],
      "ParticleType": "Choice"
@@ -47011,6 +47670,9 @@
         }
        ],
        "ParticleType": "Sequence"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.VXsdstring"
       }
      ],
      "ParticleType": "Choice"
@@ -47052,6 +47714,75 @@
       {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Paragraph",
        "MaxOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorMiddlePosition",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorPositions",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinValueColorEndPosition",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorMiddlePosition",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxValueColorEndPosition",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColors",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinColorSolidColorFillProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MidColorSolidColorFillProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxColorSolidColorFillProperties",
+       "MinOccurs": 0
       }
      ],
      "ParticleType": "Sequence"
