@@ -77,11 +77,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentTaskSample", "sampl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddNamedSheetView", "samples\NamedSheetView\AddNamedSheetView.csproj", "{F48B7D50-16CB-4BEF-A614-2DED9960AF09}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVGExample", "samples\SVGExample\SVGExample.csproj", "{7CFCA307-F221-4FC9-A531-6CAC503E1FFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVGExample", "sasmples\SVGExample\SVGExample.csproj", "{7CFCA307-F221-4FC9-A531-6CAC503E1FFB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Generator.Models", "gen\DocumentFormat.OpenXml.Generator.Models\DocumentFormat.OpenXml.Generator.Models.csproj", "{C91489AB-FF14-4FAD-BA51-35371ADD7E1C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadedCommentExample", "samples\ThreadedCommentExample\ThreadedCommentExample.csproj", "{5241BCF2-331D-428E-A9C4-F8DF92C8F726}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerPointModernCommentSample", "samples\PowerPointModernCommentSample\PowerPointModernCommentSample.csproj", "{3ECC7570-3501-479D-9CD9-64799C2AD149}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -177,6 +178,10 @@ Global
 		{5241BCF2-331D-428E-A9C4-F8DF92C8F726}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5241BCF2-331D-428E-A9C4-F8DF92C8F726}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5241BCF2-331D-428E-A9C4-F8DF92C8F726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ECC7570-3501-479D-9CD9-64799C2AD149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECC7570-3501-479D-9CD9-64799C2AD149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ECC7570-3501-479D-9CD9-64799C2AD149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ECC7570-3501-479D-9CD9-64799C2AD149}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -205,6 +210,7 @@ Global
 		{7CFCA307-F221-4FC9-A531-6CAC503E1FFB} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 		{C91489AB-FF14-4FAD-BA51-35371ADD7E1C} = {3653266D-2C88-4487-8977-839CB3E78A0A}
 		{5241BCF2-331D-428E-A9C4-F8DF92C8F726} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
+		{3ECC7570-3501-479D-9CD9-64799C2AD149} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F476383-E917-43D1-A1E5-9A61A47DA3F5}
