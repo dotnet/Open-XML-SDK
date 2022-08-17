@@ -11,7 +11,7 @@ using System.Linq.Expressions;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
-    internal class ElementMetadata
+    internal class ElementMetadata : IElementMetadata
     {
         public static readonly ElementMetadata None = new(typeof(OpenXmlElement));
 

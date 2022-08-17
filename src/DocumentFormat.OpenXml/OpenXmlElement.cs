@@ -190,7 +190,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal ElementMetadata Metadata => Features.GetRequired<ElementMetadata>();
+        internal IElementMetadata Metadata => Features.GetRequired<IElementMetadata>();
 
         /// <summary>
         /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
@@ -2620,14 +2620,14 @@ namespace DocumentFormat.OpenXml
             public int Revision => GetPartFeatures()?.Revision ?? 0;
 
             [KnownFeature(typeof(AnnotationsFeature))]
-            [KnownFeature(typeof(ElementMetadata), Factory = nameof(CreateMetadata))]
+            [KnownFeature(typeof(IElementMetadata), Factory = nameof(CreateMetadata))]
             [DelegatedFeature(nameof(GetPartFeatures))]
             [DelegatedFeature(nameof(FeatureCollection.TypedOrDefault), typeof(FeatureCollection))]
             public partial TFeature? Get<TFeature>();
 
             public IFeatureCollection? GetPartFeatures() => _owner.GetPart()?.Features;
 
-            private ElementMetadata CreateMetadata() => this.GetRequired<IElementMetadataFeature>().GetMetadata(_owner);
+            private IElementMetadata CreateMetadata() => this.GetRequired<IElementMetadataFactoryFeature>().GetMetadata(_owner);
 
             public void Set<TFeature>(TFeature? instance)
             {
