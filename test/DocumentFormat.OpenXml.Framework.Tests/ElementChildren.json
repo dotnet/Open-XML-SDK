@@ -31929,6 +31929,10 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Address",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Aggregation",
     "Children": []
   },
@@ -32127,6 +32131,10 @@
         "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
       },
       {
+        "Name": "fmtOvrs",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
         "Name": "printSettings",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
       },
@@ -32166,11 +32174,49 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Clear",
+    "Children": [
+      {
+        "Name": "geoChildEntitiesQueryResults",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "geoDataEntityQueryResults",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "geoDataPointToEntityQueryResults",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "geoLocationQueryResults",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "geoParentEntitiesQueryResults",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType",
     "Children": [
       {
         "Name": "extLst",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CopyrightXsdstring",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Copyrights",
+    "Children": [
+      {
+        "Name": "copyright",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
       }
     ]
   },
@@ -32283,6 +32329,10 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityType",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenFooterXsdstring",
     "Children": []
   },
@@ -32308,6 +32358,10 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtremeValueColorPosition",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring",
     "Children": []
   },
@@ -32316,8 +32370,269 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverride",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "spPr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverrides",
+    "Children": [
+      {
+        "Name": "fmtOvr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula",
     "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoCache",
+    "Children": [
+      {
+        "Name": "binary",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "clear",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntities",
+    "Children": [
+      {
+        "Name": "geoHierarchyEntity",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQuery",
+    "Children": [
+      {
+        "Name": "geoChildTypes",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResult",
+    "Children": [
+      {
+        "Name": "geoChildEntities",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "geoChildEntitiesQuery",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResults",
+    "Children": [
+      {
+        "Name": "geoChildEntitiesQueryResult",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildTypes",
+    "Children": [
+      {
+        "Name": "entityType",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoData",
+    "Children": [
+      {
+        "Name": "copyrights",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "geoPolygons",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQuery",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResult",
+    "Children": [
+      {
+        "Name": "geoData",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "geoDataEntityQuery",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResults",
+    "Children": [
+      {
+        "Name": "geoDataEntityQueryResult",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointQuery",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQuery",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResult",
+    "Children": [
+      {
+        "Name": "geoDataPointQuery",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "geoDataPointToEntityQuery",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResults",
+    "Children": [
+      {
+        "Name": "geoDataPointToEntityQueryResult",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoEntity",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoHierarchyEntity",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocation",
+    "Children": [
+      {
+        "Name": "address",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQuery",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResult",
+    "Children": [
+      {
+        "Name": "geoLocationQuery",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "geoLocations",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResults",
+    "Children": [
+      {
+        "Name": "geoLocationQueryResult",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocations",
+    "Children": [
+      {
+        "Name": "geoLocation",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQuery",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResult",
+    "Children": [
+      {
+        "Name": "geoEntity",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "geoParentEntitiesQuery",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "geoParentEntity",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResults",
+    "Children": [
+      {
+        "Name": "geoParentEntitiesQueryResult",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntity",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygon",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygons",
+    "Children": [
+      {
+        "Name": "geoPolygon",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Geography",
+    "Children": [
+      {
+        "Name": "geoCache",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter",
@@ -32392,6 +32707,127 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxColorSolidColorFillProperties",
+    "Children": [
+      {
+        "Name": "hslClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "prstClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "schemeClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "scrgbClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "srgbClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "sysClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxValueColorEndPosition",
+    "Children": [
+      {
+        "Name": "extremeValue",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "number",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "percent",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MidColorSolidColorFillProperties",
+    "Children": [
+      {
+        "Name": "hslClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "prstClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "schemeClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "scrgbClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "srgbClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "sysClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinColorSolidColorFillProperties",
+    "Children": [
+      {
+        "Name": "hslClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "prstClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "schemeClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "scrgbClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "srgbClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "sysClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinValueColorEndPosition",
+    "Children": [
+      {
+        "Name": "extremeValue",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "number",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "percent",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorGridlinesGridlines",
     "Children": [
       {
@@ -32414,6 +32850,14 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NfFormula",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat",
     "Children": []
   },
@@ -32426,6 +32870,10 @@
       },
       {
         "Name": "lvl",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "nf",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
       }
     ]
@@ -32461,6 +32909,10 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayout",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition",
     "Children": []
   },
   {
@@ -32532,6 +32984,14 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RegionLabelLayout",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RelId",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody",
     "Children": [
       {
@@ -32586,6 +33046,14 @@
       {
         "Name": "tx",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "valueColorPositions",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "valueColors",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
       }
     ]
   },
@@ -32609,7 +33077,15 @@
         "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
       },
       {
+        "Name": "geography",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
         "Name": "parentLabelLayout",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "regionLabelLayout",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
       },
       {
@@ -32705,6 +33181,10 @@
       {
         "Name": "lvl",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "nf",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
       }
     ]
   },
@@ -32788,6 +33268,57 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueAxisScaling",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorMiddlePosition",
+    "Children": [
+      {
+        "Name": "number",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "percent",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorPositions",
+    "Children": [
+      {
+        "Name": "max",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "mid",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "min",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColors",
+    "Children": [
+      {
+        "Name": "maxColor",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "midColor",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      },
+      {
+        "Name": "minColor",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chartex"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsdbase64Binary",
     "Children": []
   },
   {

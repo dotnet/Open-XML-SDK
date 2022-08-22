@@ -31,6 +31,10 @@
           "PropertyName": "ColorMappingType"
         },
         {
+          "Name": "cx:CT_FormatOverrides/cx:fmtOvrs",
+          "PropertyName": "FormatOverrides"
+        },
+        {
           "Name": "cx:CT_PrintSettings/cx:printSettings",
           "PropertyName": "PrintSettings"
         },
@@ -78,6 +82,15 @@
             "InitialVersion": "Office2016"
           },
           {
+            "Name": "cx:CT_FormatOverrides/cx:fmtOvrs",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
             "Name": "cx:CT_PrintSettings/cx:printSettings",
             "Occurs": [
               {
@@ -97,6 +110,27 @@
           }
         ]
       }
+    },
+    {
+      "Name": "cx:CT_RelId/cx:chart",
+      "ClassName": "RelId",
+      "Summary": "Defines the RelId Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
     },
     {
       "Name": "xsd:unsignedInt/cx:openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3",
@@ -168,6 +202,291 @@
       }
     },
     {
+      "Name": "a:CT_SolidColorFillProperties/cx:minColor",
+      "ClassName": "MinColorSolidColorFillProperties",
+      "Summary": "Defines the MinColorSolidColorFillProperties Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlSolidColorFillPropertiesElement",
+      "IsDerived": true,
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "a:CT_ScRgbColor/a:scrgbClr",
+          "PropertyName": "RgbColorModelPercentage",
+          "PropertyComments": "RGB Color Model - Percentage Variant"
+        },
+        {
+          "Name": "a:CT_SRgbColor/a:srgbClr",
+          "PropertyName": "RgbColorModelHex",
+          "PropertyComments": "RGB Color Model - Hex Variant"
+        },
+        {
+          "Name": "a:CT_HslColor/a:hslClr",
+          "PropertyName": "HslColor",
+          "PropertyComments": "Hue, Saturation, Luminance Color Model"
+        },
+        {
+          "Name": "a:CT_SystemColor/a:sysClr",
+          "PropertyName": "SystemColor",
+          "PropertyComments": "System Color"
+        },
+        {
+          "Name": "a:CT_SchemeColor/a:schemeClr",
+          "PropertyName": "SchemeColor",
+          "PropertyComments": "Scheme Color"
+        },
+        {
+          "Name": "a:CT_PresetColor/a:prstClr",
+          "PropertyName": "PresetColor",
+          "PropertyComments": "Preset Color"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_ScRgbColor/a:scrgbClr"
+                  },
+                  {
+                    "Name": "a:CT_SRgbColor/a:srgbClr"
+                  },
+                  {
+                    "Name": "a:CT_HslColor/a:hslClr"
+                  },
+                  {
+                    "Name": "a:CT_SystemColor/a:sysClr"
+                  },
+                  {
+                    "Name": "a:CT_SchemeColor/a:schemeClr"
+                  },
+                  {
+                    "Name": "a:CT_PresetColor/a:prstClr"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_SolidColorFillProperties/cx:midColor",
+      "ClassName": "MidColorSolidColorFillProperties",
+      "Summary": "Defines the MidColorSolidColorFillProperties Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlSolidColorFillPropertiesElement",
+      "IsDerived": true,
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "a:CT_ScRgbColor/a:scrgbClr",
+          "PropertyName": "RgbColorModelPercentage",
+          "PropertyComments": "RGB Color Model - Percentage Variant"
+        },
+        {
+          "Name": "a:CT_SRgbColor/a:srgbClr",
+          "PropertyName": "RgbColorModelHex",
+          "PropertyComments": "RGB Color Model - Hex Variant"
+        },
+        {
+          "Name": "a:CT_HslColor/a:hslClr",
+          "PropertyName": "HslColor",
+          "PropertyComments": "Hue, Saturation, Luminance Color Model"
+        },
+        {
+          "Name": "a:CT_SystemColor/a:sysClr",
+          "PropertyName": "SystemColor",
+          "PropertyComments": "System Color"
+        },
+        {
+          "Name": "a:CT_SchemeColor/a:schemeClr",
+          "PropertyName": "SchemeColor",
+          "PropertyComments": "Scheme Color"
+        },
+        {
+          "Name": "a:CT_PresetColor/a:prstClr",
+          "PropertyName": "PresetColor",
+          "PropertyComments": "Preset Color"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_ScRgbColor/a:scrgbClr"
+                  },
+                  {
+                    "Name": "a:CT_SRgbColor/a:srgbClr"
+                  },
+                  {
+                    "Name": "a:CT_HslColor/a:hslClr"
+                  },
+                  {
+                    "Name": "a:CT_SystemColor/a:sysClr"
+                  },
+                  {
+                    "Name": "a:CT_SchemeColor/a:schemeClr"
+                  },
+                  {
+                    "Name": "a:CT_PresetColor/a:prstClr"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_SolidColorFillProperties/cx:maxColor",
+      "ClassName": "MaxColorSolidColorFillProperties",
+      "Summary": "Defines the MaxColorSolidColorFillProperties Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlSolidColorFillPropertiesElement",
+      "IsDerived": true,
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "a:CT_ScRgbColor/a:scrgbClr",
+          "PropertyName": "RgbColorModelPercentage",
+          "PropertyComments": "RGB Color Model - Percentage Variant"
+        },
+        {
+          "Name": "a:CT_SRgbColor/a:srgbClr",
+          "PropertyName": "RgbColorModelHex",
+          "PropertyComments": "RGB Color Model - Hex Variant"
+        },
+        {
+          "Name": "a:CT_HslColor/a:hslClr",
+          "PropertyName": "HslColor",
+          "PropertyComments": "Hue, Saturation, Luminance Color Model"
+        },
+        {
+          "Name": "a:CT_SystemColor/a:sysClr",
+          "PropertyName": "SystemColor",
+          "PropertyComments": "System Color"
+        },
+        {
+          "Name": "a:CT_SchemeColor/a:schemeClr",
+          "PropertyName": "SchemeColor",
+          "PropertyComments": "Scheme Color"
+        },
+        {
+          "Name": "a:CT_PresetColor/a:prstClr",
+          "PropertyName": "PresetColor",
+          "PropertyComments": "Preset Color"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Choice",
+                "Items": [
+                  {
+                    "Name": "a:CT_ScRgbColor/a:scrgbClr"
+                  },
+                  {
+                    "Name": "a:CT_SRgbColor/a:srgbClr"
+                  },
+                  {
+                    "Name": "a:CT_HslColor/a:hslClr"
+                  },
+                  {
+                    "Name": "a:CT_SystemColor/a:sysClr"
+                  },
+                  {
+                    "Name": "a:CT_SchemeColor/a:schemeClr"
+                  },
+                  {
+                    "Name": "a:CT_PresetColor/a:prstClr"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_SolidColorFillProperties/",
+      "ClassName": "OpenXmlSolidColorFillPropertiesElement",
+      "Summary": "Defines the OpenXmlSolidColorFillPropertiesElement Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "AdditionalElements": [
+        "a:CT_HslColor/a:hslClr",
+        "a:CT_PresetColor/a:prstClr",
+        "a:CT_SchemeColor/a:schemeClr",
+        "a:CT_ScRgbColor/a:scrgbClr",
+        "a:CT_SRgbColor/a:srgbClr",
+        "a:CT_SystemColor/a:sysClr"
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_ScRgbColor/a:scrgbClr",
+          "PropertyName": "RgbColorModelPercentage",
+          "PropertyComments": "RGB Color Model - Percentage Variant"
+        },
+        {
+          "Name": "a:CT_SRgbColor/a:srgbClr",
+          "PropertyName": "RgbColorModelHex",
+          "PropertyComments": "RGB Color Model - Hex Variant"
+        },
+        {
+          "Name": "a:CT_HslColor/a:hslClr",
+          "PropertyName": "HslColor",
+          "PropertyComments": "Hue, Saturation, Luminance Color Model"
+        },
+        {
+          "Name": "a:CT_SystemColor/a:sysClr",
+          "PropertyName": "SystemColor",
+          "PropertyComments": "System Color"
+        },
+        {
+          "Name": "a:CT_SchemeColor/a:schemeClr",
+          "PropertyName": "SchemeColor",
+          "PropertyComments": "Scheme Color"
+        },
+        {
+          "Name": "a:CT_PresetColor/a:prstClr",
+          "PropertyName": "PresetColor",
+          "PropertyComments": "Preset Color"
+        }
+      ]
+    },
+    {
       "Name": "cx:CT_StringValue/cx:pt",
       "ClassName": "ChartStringValue",
       "Summary": "Defines the ChartStringValue Class.",
@@ -188,6 +507,84 @@
           ]
         }
       ]
+    },
+    {
+      "Name": "cx:CT_Formula/cx:f",
+      "ClassName": "Formula",
+      "Summary": "Defines the Formula Class.",
+      "BaseClass": "OpenXmlFormulaElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "cx:CT_Formula/cx:nf",
+      "ClassName": "NfFormula",
+      "Summary": "Defines the NfFormula Class.",
+      "BaseClass": "OpenXmlFormulaElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "cx:CT_Formula/",
+      "ClassName": "OpenXmlFormulaElement",
+      "Summary": "Defines the OpenXmlFormulaElement Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsAbstract": true,
+      "IsLeafText": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":dir",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormulaDirection\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "dir"
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_StringLevel/cx:lvl",
+      "ClassName": "StringLevel",
+      "Summary": "Defines the StringLevel Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":ptCount",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "ptCount",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "name"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_StringValue/cx:pt"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_StringValue/cx:pt",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
     },
     {
       "Name": "cx:CT_NumericValue/cx:pt",
@@ -211,6 +608,55 @@
       ]
     },
     {
+      "Name": "cx:CT_NumericLevel/cx:lvl",
+      "ClassName": "NumericLevel",
+      "Summary": "Defines the NumericLevel Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":ptCount",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "ptCount",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":formatCode",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "formatCode"
+        },
+        {
+          "QName": ":name",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "name"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_NumericValue/cx:pt"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_NumericValue/cx:pt",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
       "Name": "cx:CT_NumericDimension/cx:numDim",
       "ClassName": "NumericDimension",
       "Summary": "Defines the NumericDimension Class.",
@@ -221,7 +667,7 @@
           "QName": ":type",
           "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimensionType\u003E",
           "Version": "Office2016",
-          "PropertyComments": "Dimension data type",
+          "PropertyComments": "type",
           "Validators": [
             {
               "Name": "RequiredValidator"
@@ -232,6 +678,9 @@
       "Children": [
         {
           "Name": "cx:CT_Formula/cx:f"
+        },
+        {
+          "Name": "cx:CT_Formula/cx:nf"
         },
         {
           "Name": "cx:CT_NumericLevel/cx:lvl"
@@ -248,6 +697,15 @@
                 "InitialVersion": "Office2016"
               },
               {
+                "Name": "cx:CT_Formula/cx:nf",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ],
+                "InitialVersion": "Office2016"
+              },
+              {
                 "Name": "cx:CT_NumericLevel/cx:lvl",
                 "Occurs": [
                   {}
@@ -255,6 +713,15 @@
                 "InitialVersion": "Office2016"
               }
             ]
+          },
+          {
+            "Name": "cx:CT_NumericLevel/cx:lvl",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
           }
         ]
       }
@@ -270,7 +737,7 @@
           "QName": ":type",
           "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimensionType\u003E",
           "Version": "Office2016",
-          "PropertyComments": "Dimension data type",
+          "PropertyComments": "type",
           "Validators": [
             {
               "Name": "RequiredValidator"
@@ -281,6 +748,9 @@
       "Children": [
         {
           "Name": "cx:CT_Formula/cx:f"
+        },
+        {
+          "Name": "cx:CT_Formula/cx:nf"
         },
         {
           "Name": "cx:CT_StringLevel/cx:lvl"
@@ -297,6 +767,15 @@
                 "InitialVersion": "Office2016"
               },
               {
+                "Name": "cx:CT_Formula/cx:nf",
+                "Occurs": [
+                  {
+                    "Max": 1
+                  }
+                ],
+                "InitialVersion": "Office2016"
+              },
+              {
                 "Name": "cx:CT_StringLevel/cx:lvl",
                 "Occurs": [
                   {}
@@ -304,6 +783,15 @@
                 "InitialVersion": "Office2016"
               }
             ]
+          },
+          {
+            "Name": "cx:CT_StringLevel/cx:lvl",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
           }
         ]
       }
@@ -434,6 +922,87 @@
       }
     },
     {
+      "Name": "xsd:string/cx:v",
+      "ClassName": "VXsdstring",
+      "Summary": "Defines the VXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:copyright",
+      "ClassName": "CopyrightXsdstring",
+      "Summary": "Defines the CopyrightXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:separator",
+      "ClassName": "SeparatorXsdstring",
+      "Summary": "Defines the SeparatorXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:oddHeader",
+      "ClassName": "OddHeaderXsdstring",
+      "Summary": "Defines the OddHeaderXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:oddFooter",
+      "ClassName": "OddFooterXsdstring",
+      "Summary": "Defines the OddFooterXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:evenHeader",
+      "ClassName": "EvenHeaderXsdstring",
+      "Summary": "Defines the EvenHeaderXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:evenFooter",
+      "ClassName": "EvenFooterXsdstring",
+      "Summary": "Defines the EvenFooterXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:firstHeader",
+      "ClassName": "FirstHeaderXsdstring",
+      "Summary": "Defines the FirstHeaderXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "xsd:string/cx:firstFooter",
+      "ClassName": "FirstFooterXsdstring",
+      "Summary": "Defines the FirstFooterXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Office2016"
+    },
+    {
       "Name": "cx:CT_TextData/cx:txData",
       "ClassName": "TextData",
       "Summary": "Defines the TextData Class.",
@@ -467,6 +1036,10 @@
                 "InitialVersion": "Office2016"
               }
             ]
+          },
+          {
+            "Name": "xsd:string/cx:v",
+            "InitialVersion": "Office2016"
           }
         ]
       }
@@ -1410,6 +1983,1207 @@
       ]
     },
     {
+      "Name": "cx:CT_Address/cx:address",
+      "ClassName": "Address",
+      "Summary": "Defines the Address Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":address1",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "address1"
+        },
+        {
+          "QName": ":countryRegion",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "countryRegion"
+        },
+        {
+          "QName": ":adminDistrict1",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "adminDistrict1"
+        },
+        {
+          "QName": ":adminDistrict2",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "adminDistrict2"
+        },
+        {
+          "QName": ":postalCode",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "postalCode"
+        },
+        {
+          "QName": ":locality",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "locality"
+        },
+        {
+          "QName": ":isoCountryCode",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "isoCountryCode"
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_GeoLocation/cx:geoLocation",
+      "ClassName": "GeoLocation",
+      "Summary": "Defines the GeoLocation Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":latitude",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "latitude"
+        },
+        {
+          "QName": ":longitude",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "longitude"
+        },
+        {
+          "QName": ":entityName",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "entityName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":entityType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "entityType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_Address/cx:address",
+          "PropertyName": "Address"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_Address/cx:address",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoLocationQuery/cx:geoLocationQuery",
+      "ClassName": "GeoLocationQuery",
+      "Summary": "Defines the GeoLocationQuery Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":countryRegion",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "countryRegion"
+        },
+        {
+          "QName": ":adminDistrict1",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "adminDistrict1"
+        },
+        {
+          "QName": ":adminDistrict2",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "adminDistrict2"
+        },
+        {
+          "QName": ":postalCode",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "postalCode"
+        },
+        {
+          "QName": ":entityType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "entityType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_GeoLocations/cx:geoLocations",
+      "ClassName": "GeoLocations",
+      "Summary": "Defines the GeoLocations Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoLocation/cx:geoLocation",
+          "PropertyName": "GeoLocation"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoLocation/cx:geoLocation",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoLocationQueryResult/cx:geoLocationQueryResult",
+      "ClassName": "GeoLocationQueryResult",
+      "Summary": "Defines the GeoLocationQueryResult Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoLocationQuery/cx:geoLocationQuery",
+          "PropertyName": "GeoLocationQuery"
+        },
+        {
+          "Name": "cx:CT_GeoLocations/cx:geoLocations",
+          "PropertyName": "GeoLocations"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoLocationQuery/cx:geoLocationQuery",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_GeoLocations/cx:geoLocations",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoPolygon/cx:geoPolygon",
+      "ClassName": "GeoPolygon",
+      "Summary": "Defines the GeoPolygon Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":polygonId",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "polygonId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":numPoints",
+          "Type": "IntegerValue",
+          "Version": "Office2016",
+          "PropertyComments": "numPoints",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":pcaRings",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "pcaRings",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_GeoPolygons/cx:geoPolygons",
+      "ClassName": "GeoPolygons",
+      "Summary": "Defines the GeoPolygons Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoPolygon/cx:geoPolygon"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoPolygon/cx:geoPolygon",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_Copyrights/cx:copyrights",
+      "ClassName": "Copyrights",
+      "Summary": "Defines the Copyrights Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "xsd:string/cx:copyright"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xsd:string/cx:copyright",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoDataEntityQuery/cx:geoDataEntityQuery",
+      "ClassName": "GeoDataEntityQuery",
+      "Summary": "Defines the GeoDataEntityQuery Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":entityType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "entityType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":entityId",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "entityId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_GeoData/cx:geoData",
+      "ClassName": "GeoData",
+      "Summary": "Defines the GeoData Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":entityName",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "entityName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":entityId",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "entityId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":east",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "east",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":west",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "west",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":north",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "north",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":south",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "south",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_GeoPolygons/cx:geoPolygons",
+          "PropertyName": "GeoPolygons"
+        },
+        {
+          "Name": "cx:CT_Copyrights/cx:copyrights",
+          "PropertyName": "Copyrights"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoPolygons/cx:geoPolygons",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_Copyrights/cx:copyrights",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoDataEntityQueryResult/cx:geoDataEntityQueryResult",
+      "ClassName": "GeoDataEntityQueryResult",
+      "Summary": "Defines the GeoDataEntityQueryResult Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoDataEntityQuery/cx:geoDataEntityQuery",
+          "PropertyName": "GeoDataEntityQuery"
+        },
+        {
+          "Name": "cx:CT_GeoData/cx:geoData",
+          "PropertyName": "GeoData"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoDataEntityQuery/cx:geoDataEntityQuery",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_GeoData/cx:geoData",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoDataPointQuery/cx:geoDataPointQuery",
+      "ClassName": "GeoDataPointQuery",
+      "Summary": "Defines the GeoDataPointQuery Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":entityType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "entityType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":latitude",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "latitude",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":longitude",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "longitude",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_GeoDataPointToEntityQuery/cx:geoDataPointToEntityQuery",
+      "ClassName": "GeoDataPointToEntityQuery",
+      "Summary": "Defines the GeoDataPointToEntityQuery Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":entityType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "entityType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":entityId",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "entityId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_GeoDataPointToEntityQueryResult/cx:geoDataPointToEntityQueryResult",
+      "ClassName": "GeoDataPointToEntityQueryResult",
+      "Summary": "Defines the GeoDataPointToEntityQueryResult Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoDataPointQuery/cx:geoDataPointQuery",
+          "PropertyName": "GeoDataPointQuery"
+        },
+        {
+          "Name": "cx:CT_GeoDataPointToEntityQuery/cx:geoDataPointToEntityQuery",
+          "PropertyName": "GeoDataPointToEntityQuery"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoDataPointQuery/cx:geoDataPointQuery",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_GeoDataPointToEntityQuery/cx:geoDataPointToEntityQuery",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:ST_EntityType/cx:entityType",
+      "ClassName": "EntityType",
+      "Summary": "Defines the EntityType Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2016",
+      "Validators": [
+        {
+          "Name": "EnumValidator",
+          "Type": "cx:ST_EntityType",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_GeoChildTypes/cx:geoChildTypes",
+      "ClassName": "GeoChildTypes",
+      "Summary": "Defines the GeoChildTypes Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:ST_EntityType/cx:entityType"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:ST_EntityType/cx:entityType",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoHierarchyEntity/cx:geoHierarchyEntity",
+      "ClassName": "GeoHierarchyEntity",
+      "Summary": "Defines the GeoHierarchyEntity Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":entityName",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "entityName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":entityId",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "entityId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":entityType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "entityType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_GeoChildEntitiesQuery/cx:geoChildEntitiesQuery",
+      "ClassName": "GeoChildEntitiesQuery",
+      "Summary": "Defines the GeoChildEntitiesQuery Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":entityId",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "entityId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_GeoChildTypes/cx:geoChildTypes",
+          "PropertyName": "GeoChildTypes"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoChildTypes/cx:geoChildTypes",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoChildEntities/cx:geoChildEntities",
+      "ClassName": "GeoChildEntities",
+      "Summary": "Defines the GeoChildEntities Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoHierarchyEntity/cx:geoHierarchyEntity"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoHierarchyEntity/cx:geoHierarchyEntity",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoChildEntitiesQueryResult/cx:geoChildEntitiesQueryResult",
+      "ClassName": "GeoChildEntitiesQueryResult",
+      "Summary": "Defines the GeoChildEntitiesQueryResult Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoChildEntitiesQuery/cx:geoChildEntitiesQuery",
+          "PropertyName": "GeoChildEntitiesQuery"
+        },
+        {
+          "Name": "cx:CT_GeoChildEntities/cx:geoChildEntities",
+          "PropertyName": "GeoChildEntities"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoChildEntitiesQuery/cx:geoChildEntitiesQuery",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_GeoChildEntities/cx:geoChildEntities",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoParentEntitiesQuery/cx:geoParentEntitiesQuery",
+      "ClassName": "GeoParentEntitiesQuery",
+      "Summary": "Defines the GeoParentEntitiesQuery Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":entityId",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "entityId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_GeoEntity/cx:geoEntity",
+      "ClassName": "GeoEntity",
+      "Summary": "Defines the GeoEntity Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":entityName",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "entityName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":entityType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "entityType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_GeoParentEntity/cx:geoParentEntity",
+      "ClassName": "GeoParentEntity",
+      "Summary": "Defines the GeoParentEntity Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":entityId",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "entityId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_GeoParentEntitiesQueryResult/cx:geoParentEntitiesQueryResult",
+      "ClassName": "GeoParentEntitiesQueryResult",
+      "Summary": "Defines the GeoParentEntitiesQueryResult Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoParentEntitiesQuery/cx:geoParentEntitiesQuery",
+          "PropertyName": "GeoParentEntitiesQuery"
+        },
+        {
+          "Name": "cx:CT_GeoEntity/cx:geoEntity",
+          "PropertyName": "GeoEntity"
+        },
+        {
+          "Name": "cx:CT_GeoParentEntity/cx:geoParentEntity",
+          "PropertyName": "GeoParentEntity"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoParentEntitiesQuery/cx:geoParentEntitiesQuery",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_GeoEntity/cx:geoEntity",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_GeoParentEntity/cx:geoParentEntity",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoLocationQueryResults/cx:geoLocationQueryResults",
+      "ClassName": "GeoLocationQueryResults",
+      "Summary": "Defines the GeoLocationQueryResults Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoLocationQueryResult/cx:geoLocationQueryResult"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoLocationQueryResult/cx:geoLocationQueryResult",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoDataEntityQueryResults/cx:geoDataEntityQueryResults",
+      "ClassName": "GeoDataEntityQueryResults",
+      "Summary": "Defines the GeoDataEntityQueryResults Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoDataEntityQueryResult/cx:geoDataEntityQueryResult"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoDataEntityQueryResult/cx:geoDataEntityQueryResult",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoDataPointToEntityQueryResults/cx:geoDataPointToEntityQueryResults",
+      "ClassName": "GeoDataPointToEntityQueryResults",
+      "Summary": "Defines the GeoDataPointToEntityQueryResults Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoDataPointToEntityQueryResult/cx:geoDataPointToEntityQueryResult"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoDataPointToEntityQueryResult/cx:geoDataPointToEntityQueryResult",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoChildEntitiesQueryResults/cx:geoChildEntitiesQueryResults",
+      "ClassName": "GeoChildEntitiesQueryResults",
+      "Summary": "Defines the GeoChildEntitiesQueryResults Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoChildEntitiesQueryResult/cx:geoChildEntitiesQueryResult"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoChildEntitiesQueryResult/cx:geoChildEntitiesQueryResult",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoParentEntitiesQueryResults/cx:geoParentEntitiesQueryResults",
+      "ClassName": "GeoParentEntitiesQueryResults",
+      "Summary": "Defines the GeoParentEntitiesQueryResults Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoParentEntitiesQueryResult/cx:geoParentEntitiesQueryResult"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoParentEntitiesQueryResult/cx:geoParentEntitiesQueryResult",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xsd:base64Binary/cx:binary",
+      "ClassName": "Xsdbase64Binary",
+      "Summary": "Defines the Xsdbase64Binary Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Office2016",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:base64Binary",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_Clear/cx:clear",
+      "ClassName": "Clear",
+      "Summary": "Defines the Clear Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_GeoLocationQueryResults/cx:geoLocationQueryResults",
+          "PropertyName": "GeoLocationQueryResults"
+        },
+        {
+          "Name": "cx:CT_GeoDataEntityQueryResults/cx:geoDataEntityQueryResults",
+          "PropertyName": "GeoDataEntityQueryResults"
+        },
+        {
+          "Name": "cx:CT_GeoDataPointToEntityQueryResults/cx:geoDataPointToEntityQueryResults",
+          "PropertyName": "GeoDataPointToEntityQueryResults"
+        },
+        {
+          "Name": "cx:CT_GeoChildEntitiesQueryResults/cx:geoChildEntitiesQueryResults",
+          "PropertyName": "GeoChildEntitiesQueryResults"
+        },
+        {
+          "Name": "cx:CT_GeoParentEntitiesQueryResults/cx:geoParentEntitiesQueryResults",
+          "PropertyName": "GeoParentEntitiesQueryResults"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoLocationQueryResults/cx:geoLocationQueryResults",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_GeoDataEntityQueryResults/cx:geoDataEntityQueryResults",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_GeoDataPointToEntityQueryResults/cx:geoDataPointToEntityQueryResults",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_GeoChildEntitiesQueryResults/cx:geoChildEntitiesQueryResults",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_GeoParentEntitiesQueryResults/cx:geoParentEntitiesQueryResults",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_GeoCache/cx:geoCache",
+      "ClassName": "GeoCache",
+      "Summary": "Defines the GeoCache Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":provider",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "provider",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xsd:base64Binary/cx:binary"
+        },
+        {
+          "Name": "cx:CT_Clear/cx:clear"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {
+            "Min": 1
+          }
+        ],
+        "Items": [
+          {
+            "Name": "xsd:base64Binary/cx:binary",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_Clear/cx:clear",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
       "Name": "cx:CT_ParentLabelLayout/cx:parentLabelLayout",
       "ClassName": "ParentLabelLayout",
       "Summary": "Defines the ParentLabelLayout Class.",
@@ -1421,6 +3195,27 @@
           "QName": ":val",
           "PropertyName": "ParentLabelLayoutVal",
           "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayoutVal\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_RegionLabelLayout/cx:regionLabelLayout",
+      "ClassName": "RegionLabelLayout",
+      "Summary": "Defines the RegionLabelLayout Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RegionLabelLayoutEnum\u003E",
           "Version": "Office2016",
           "PropertyComments": "val",
           "Validators": [
@@ -1562,6 +3357,92 @@
       }
     },
     {
+      "Name": "cx:CT_Geography/cx:geography",
+      "ClassName": "Geography",
+      "Summary": "Defines the Geography Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":projectionType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoProjectionType\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "projectionType"
+        },
+        {
+          "QName": ":viewedRegionType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoMappingLevel\u003E",
+          "Version": "Office2016",
+          "PropertyComments": "viewedRegionType"
+        },
+        {
+          "QName": ":cultureLanguage",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "cultureLanguage",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":cultureRegion",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "cultureRegion",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":attribution",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "attribution",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_GeoCache/cx:geoCache",
+          "PropertyName": "GeoCache"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_GeoCache/cx:geoCache",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
       "Name": "cx:CT_Statistics/cx:statistics",
       "ClassName": "Statistics",
       "Summary": "Defines the Statistics Class.",
@@ -1602,6 +3483,195 @@
       }
     },
     {
+      "Name": "cx:CT_ExtremeValueColorPosition/cx:extremeValue",
+      "ClassName": "ExtremeValueColorPosition",
+      "Summary": "Defines the ExtremeValueColorPosition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016"
+    },
+    {
+      "Name": "cx:CT_NumberColorPosition/cx:number",
+      "ClassName": "NumberColorPosition",
+      "Summary": "Defines the NumberColorPosition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_PercentageColorPosition/cx:percent",
+      "ClassName": "PercentageColorPosition",
+      "Summary": "Defines the PercentageColorPosition Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_ValueColorEndPosition/cx:min",
+      "ClassName": "MinValueColorEndPosition",
+      "Summary": "Defines the MinValueColorEndPosition Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlValueColorEndPositionElement",
+      "IsDerived": true,
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_ExtremeValueColorPosition/cx:extremeValue",
+          "PropertyName": "ExtremeValueColorPosition"
+        },
+        {
+          "Name": "cx:CT_NumberColorPosition/cx:number",
+          "PropertyName": "NumberColorPosition"
+        },
+        {
+          "Name": "cx:CT_PercentageColorPosition/cx:percent",
+          "PropertyName": "PercentageColorPosition"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "cx:CT_ExtremeValueColorPosition/cx:extremeValue",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_NumberColorPosition/cx:number",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_PercentageColorPosition/cx:percent",
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_ValueColorEndPosition/cx:max",
+      "ClassName": "MaxValueColorEndPosition",
+      "Summary": "Defines the MaxValueColorEndPosition Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlValueColorEndPositionElement",
+      "IsDerived": true,
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_ExtremeValueColorPosition/cx:extremeValue",
+          "PropertyName": "ExtremeValueColorPosition"
+        },
+        {
+          "Name": "cx:CT_NumberColorPosition/cx:number",
+          "PropertyName": "NumberColorPosition"
+        },
+        {
+          "Name": "cx:CT_PercentageColorPosition/cx:percent",
+          "PropertyName": "PercentageColorPosition"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "cx:CT_ExtremeValueColorPosition/cx:extremeValue",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_NumberColorPosition/cx:number",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_PercentageColorPosition/cx:percent",
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_ValueColorEndPosition/",
+      "ClassName": "OpenXmlValueColorEndPositionElement",
+      "Summary": "Defines the OpenXmlValueColorEndPositionElement Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "Version": "Office2016",
+      "AdditionalElements": [
+        "cx:CT_ExtremeValueColorPosition/cx:extremeValue",
+        "cx:CT_NumberColorPosition/cx:number",
+        "cx:CT_PercentageColorPosition/cx:percent"
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_ExtremeValueColorPosition/cx:extremeValue",
+          "PropertyName": "ExtremeValueColorPosition"
+        },
+        {
+          "Name": "cx:CT_NumberColorPosition/cx:number",
+          "PropertyName": "NumberColorPosition"
+        },
+        {
+          "Name": "cx:CT_PercentageColorPosition/cx:percent",
+          "PropertyName": "PercentageColorPosition"
+        }
+      ]
+    },
+    {
+      "Name": "cx:CT_ValueColorMiddlePosition/cx:mid",
+      "ClassName": "ValueColorMiddlePosition",
+      "Summary": "Defines the ValueColorMiddlePosition Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_NumberColorPosition/cx:number",
+          "PropertyName": "NumberColorPosition"
+        },
+        {
+          "Name": "cx:CT_PercentageColorPosition/cx:percent",
+          "PropertyName": "PercentageColorPosition"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "cx:CT_NumberColorPosition/cx:number",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_PercentageColorPosition/cx:percent",
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
       "Name": "cx:CT_DataLabelVisibilities/cx:visibility",
       "ClassName": "DataLabelVisibilities",
       "Summary": "Defines the DataLabelVisibilities Class.",
@@ -1628,78 +3698,6 @@
           "PropertyComments": "value"
         }
       ]
-    },
-    {
-      "Name": "xsd:string/cx:separator",
-      "ClassName": "SeparatorXsdstring",
-      "Summary": "Defines the SeparatorXsdstring Class.",
-      "BaseClass": "OpenXmlLeafTextElement",
-      "IsDerived": true,
-      "IsLeafText": true,
-      "Version": "Office2016"
-    },
-    {
-      "Name": "xsd:string/cx:oddHeader",
-      "ClassName": "OddHeaderXsdstring",
-      "Summary": "Defines the OddHeaderXsdstring Class.",
-      "BaseClass": "OpenXmlLeafTextElement",
-      "IsDerived": true,
-      "IsLeafText": true,
-      "Version": "Office2016"
-    },
-    {
-      "Name": "xsd:string/cx:oddFooter",
-      "ClassName": "OddFooterXsdstring",
-      "Summary": "Defines the OddFooterXsdstring Class.",
-      "BaseClass": "OpenXmlLeafTextElement",
-      "IsDerived": true,
-      "IsLeafText": true,
-      "Version": "Office2016"
-    },
-    {
-      "Name": "xsd:string/cx:evenHeader",
-      "ClassName": "EvenHeaderXsdstring",
-      "Summary": "Defines the EvenHeaderXsdstring Class.",
-      "BaseClass": "OpenXmlLeafTextElement",
-      "IsDerived": true,
-      "IsLeafText": true,
-      "Version": "Office2016"
-    },
-    {
-      "Name": "xsd:string/cx:evenFooter",
-      "ClassName": "EvenFooterXsdstring",
-      "Summary": "Defines the EvenFooterXsdstring Class.",
-      "BaseClass": "OpenXmlLeafTextElement",
-      "IsDerived": true,
-      "IsLeafText": true,
-      "Version": "Office2016"
-    },
-    {
-      "Name": "xsd:string/cx:firstHeader",
-      "ClassName": "FirstHeaderXsdstring",
-      "Summary": "Defines the FirstHeaderXsdstring Class.",
-      "BaseClass": "OpenXmlLeafTextElement",
-      "IsDerived": true,
-      "IsLeafText": true,
-      "Version": "Office2016"
-    },
-    {
-      "Name": "xsd:string/cx:firstFooter",
-      "ClassName": "FirstFooterXsdstring",
-      "Summary": "Defines the FirstFooterXsdstring Class.",
-      "BaseClass": "OpenXmlLeafTextElement",
-      "IsDerived": true,
-      "IsLeafText": true,
-      "Version": "Office2016"
-    },
-    {
-      "Name": "xsd:string/cx:v",
-      "ClassName": "VXsdstring",
-      "Summary": "Cached text.",
-      "BaseClass": "OpenXmlLeafTextElement",
-      "IsDerived": true,
-      "IsLeafText": true,
-      "Version": "Office2016"
     },
     {
       "Name": "cx:CT_DataLabel/cx:dataLabel",
@@ -1833,6 +3831,140 @@
           ]
         }
       ]
+    },
+    {
+      "Name": "cx:CT_ValueColors/cx:valueColors",
+      "ClassName": "ValueColors",
+      "Summary": "Defines the ValueColors Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "a:CT_SolidColorFillProperties/cx:minColor",
+          "PropertyName": "MinColorSolidColorFillProperties"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/cx:midColor",
+          "PropertyName": "MidColorSolidColorFillProperties"
+        },
+        {
+          "Name": "a:CT_SolidColorFillProperties/cx:maxColor",
+          "PropertyName": "MaxColorSolidColorFillProperties"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_SolidColorFillProperties/cx:minColor",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_SolidColorFillProperties/cx:midColor",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "a:CT_SolidColorFillProperties/cx:maxColor",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_ValueColorPositions/cx:valueColorPositions",
+      "ClassName": "ValueColorPositions",
+      "Summary": "Defines the ValueColorPositions Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "Type": "Int32Value",
+          "Version": "Office2016",
+          "PropertyComments": "count",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "2"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "3"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "cx:CT_ValueColorEndPosition/cx:min",
+          "PropertyName": "MinValueColorEndPosition"
+        },
+        {
+          "Name": "cx:CT_ValueColorMiddlePosition/cx:mid",
+          "PropertyName": "ValueColorMiddlePosition"
+        },
+        {
+          "Name": "cx:CT_ValueColorEndPosition/cx:max",
+          "PropertyName": "MaxValueColorEndPosition"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_ValueColorEndPosition/cx:min",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ValueColorMiddlePosition/cx:mid",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ValueColorEndPosition/cx:max",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
     },
     {
       "Name": "cx:CT_DataPoint/cx:dataPt",
@@ -2042,6 +4174,10 @@
           "PropertyName": "ParentLabelLayout"
         },
         {
+          "Name": "cx:CT_RegionLabelLayout/cx:regionLabelLayout",
+          "PropertyName": "RegionLabelLayout"
+        },
+        {
           "Name": "cx:CT_SeriesElementVisibilities/cx:visibility",
           "PropertyName": "SeriesElementVisibilities"
         },
@@ -2050,6 +4186,9 @@
         },
         {
           "Name": "cx:CT_Binning/cx:binning"
+        },
+        {
+          "Name": "cx:CT_Geography/cx:geography"
         },
         {
           "Name": "cx:CT_Statistics/cx:statistics"
@@ -2066,6 +4205,15 @@
         "Items": [
           {
             "Name": "cx:CT_ParentLabelLayout/cx:parentLabelLayout",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_RegionLabelLayout/cx:regionLabelLayout",
             "Occurs": [
               {
                 "Max": 1
@@ -2109,6 +4257,15 @@
                 "InitialVersion": "Office2016"
               }
             ]
+          },
+          {
+            "Name": "cx:CT_Geography/cx:geography",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
           },
           {
             "Name": "cx:CT_Statistics/cx:statistics",
@@ -2250,6 +4407,14 @@
           "PropertyName": "ShapeProperties"
         },
         {
+          "Name": "cx:CT_ValueColors/cx:valueColors",
+          "PropertyName": "ValueColors"
+        },
+        {
+          "Name": "cx:CT_ValueColorPositions/cx:valueColorPositions",
+          "PropertyName": "ValueColorPositions"
+        },
+        {
           "Name": "cx:CT_DataPoint/cx:dataPt"
         },
         {
@@ -2282,6 +4447,24 @@
           },
           {
             "Name": "a:CT_ShapeProperties/cx:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ValueColors/cx:valueColors",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ValueColorPositions/cx:valueColorPositions",
             "Occurs": [
               {
                 "Max": 1
@@ -2775,6 +4958,60 @@
           },
           {
             "Name": "a:CT_TextBody/cx:txPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_ExtensionList/cx:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "cx:CT_FormatOverride/cx:fmtOvr",
+      "ClassName": "FormatOverride",
+      "Summary": "Defines the FormatOverride Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":idx",
+          "Type": "UInt32Value",
+          "Version": "Office2016",
+          "PropertyComments": "idx",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_ShapeProperties/cx:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "cx:CT_ExtensionList/cx:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_ShapeProperties/cx:spPr",
             "Occurs": [
               {
                 "Max": 1
@@ -3455,6 +5692,30 @@
       }
     },
     {
+      "Name": "cx:CT_FormatOverrides/cx:fmtOvrs",
+      "ClassName": "FormatOverrides",
+      "Summary": "Defines the FormatOverrides Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2016",
+      "Children": [
+        {
+          "Name": "cx:CT_FormatOverride/cx:fmtOvr"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "cx:CT_FormatOverride/cx:fmtOvr",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Office2016"
+          }
+        ]
+      }
+    },
+    {
       "Name": "cx:CT_PrintSettings/cx:printSettings",
       "ClassName": "PrintSettings",
       "Summary": "Defines the PrintSettings Class.",
@@ -3509,102 +5770,6 @@
       }
     },
     {
-      "Name": "cx:CT_Formula/cx:f",
-      "ClassName": "Formula",
-      "Summary": "Data reference.",
-      "BaseClass": "OpenXmlLeafTextElement",
-      "IsLeafText": true,
-      "Version": "Office2016",
-      "Attributes": [
-        {
-          "QName": ":dir",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormulaDirection\u003E",
-          "Version": "Office2016",
-          "PropertyComments": "dir"
-        }
-      ]
-    },
-    {
-      "Name": "cx:CT_StringLevel/cx:lvl",
-      "ClassName": "StringLevel",
-      "Summary": "Optional cached data.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Version": "Office2016",
-      "Attributes": [
-        {
-          "QName": ":ptCount",
-          "Type": "UInt32Value",
-          "Version": "Office2016",
-          "PropertyComments": "ptCount",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "cx:CT_StringValue/cx:pt"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "cx:CT_StringValue/cx:pt",
-            "Occurs": [
-              {}
-            ],
-            "InitialVersion": "Office2016"
-          }
-        ]
-      }
-    },
-    {
-      "Name": "cx:CT_NumericLevel/cx:lvl",
-      "ClassName": "NumericLevel",
-      "Summary": "Optional cached data.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Version": "Office2016",
-      "Attributes": [
-        {
-          "QName": ":ptCount",
-          "Type": "UInt32Value",
-          "Version": "Office2016",
-          "PropertyComments": "ptCount",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            }
-          ]
-        },
-        {
-          "QName": ":formatCode",
-          "Type": "StringValue",
-          "Version": "Office2016",
-          "PropertyComments": "formatCode"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "cx:CT_NumericValue/cx:pt"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "cx:CT_NumericValue/cx:pt",
-            "Occurs": [
-              {}
-            ],
-            "InitialVersion": "Office2016"
-          }
-        ]
-      }
-    },
-    {
       "Name": "c:CT_UnsignedInt/cx:idx",
       "ClassName": "UnsignedIntegerType",
       "Summary": "Index of subtotal data point.",
@@ -3649,6 +5814,14 @@
         {
           "Version": "Office2016",
           "Value": "cat"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "colorStr"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "entityId"
         }
       ],
       "Version": "Office2016"
@@ -3672,6 +5845,10 @@
         {
           "Version": "Office2016",
           "Value": "size"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "colorVal"
         }
       ],
       "Version": "Office2016"
@@ -3802,7 +5979,15 @@
         },
         {
           "Version": "Office2016",
+          "Value": "funnel"
+        },
+        {
+          "Version": "Office2016",
           "Value": "paretoLine"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "regionMap"
         },
         {
           "Version": "Office2016",
@@ -3839,6 +6024,25 @@
       "Version": "Office2016"
     },
     {
+      "Type": "cx:ST_RegionLabelLayout",
+      "Name": "RegionLabelLayoutEnum",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "none"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "bestFitOnly"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "showAll"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
       "Type": "cx:ST_IntervalClosedSide",
       "Name": "IntervalClosedSide",
       "Facets": [
@@ -3849,6 +6053,119 @@
         {
           "Version": "Office2016",
           "Value": "r"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_EntityType",
+      "Name": "EntityTypeEnum",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "Address"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "AdminDistrict"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "AdminDistrict2"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "AdminDistrict3"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "Continent"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "CountryRegion"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "Locality"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "Ocean"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "Planet"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "PostalCode"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "Region"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "Unsupported"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_GeoProjectionType",
+      "Name": "GeoProjectionType",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "mercator"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "miller"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "robinson"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "albers"
+        }
+      ],
+      "Version": "Office2016"
+    },
+    {
+      "Type": "cx:ST_GeoMappingLevel",
+      "Name": "GeoMappingLevel",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "dataOnly"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "postalCode"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "county"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "state"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "countryRegion"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "countryRegionList"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "world"
         }
       ],
       "Version": "Office2016"

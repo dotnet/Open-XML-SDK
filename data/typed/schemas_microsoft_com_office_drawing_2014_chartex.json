@@ -1,11 +1,27 @@
 [
   {
+    "Name": "cx:CT_Formula/",
+    "ClassName": "OpenXmlFormulaElement"
+  },
+  {
     "Name": "cx:CT_Gridlines/",
     "ClassName": "OpenXmlGridlinesElement"
   },
   {
+    "Name": "a:CT_SolidColorFillProperties/",
+    "ClassName": "OpenXmlSolidColorFillPropertiesElement"
+  },
+  {
     "Name": "cx:CT_TickMarks/",
     "ClassName": "OpenXmlTickMarksElement"
+  },
+  {
+    "Name": "cx:CT_ValueColorEndPosition/",
+    "ClassName": "OpenXmlValueColorEndPositionElement"
+  },
+  {
+    "Name": "cx:CT_Address/cx:address",
+    "ClassName": "Address"
   },
   {
     "Name": "cx:CT_Aggregation/cx:aggregation",
@@ -18,6 +34,10 @@
   {
     "Name": "cx:ST_AxisId/cx:axisId",
     "ClassName": "AxisId"
+  },
+  {
+    "Name": "xsd:base64Binary/cx:binary",
+    "ClassName": "Xsdbase64Binary"
   },
   {
     "Name": "xsd:unsignedInt/cx:binCount",
@@ -40,6 +60,10 @@
     "ClassName": "Chart"
   },
   {
+    "Name": "cx:CT_RelId/cx:chart",
+    "ClassName": "RelId"
+  },
+  {
     "Name": "cx:CT_ChartData/cx:chartData",
     "ClassName": "ChartData"
   },
@@ -49,8 +73,20 @@
     "PartClassName": "ExtendedChartPart"
   },
   {
+    "Name": "cx:CT_Clear/cx:clear",
+    "ClassName": "Clear"
+  },
+  {
     "Name": "a:CT_ColorMapping/cx:clrMapOvr",
     "ClassName": "ColorMappingType"
+  },
+  {
+    "Name": "xsd:string/cx:copyright",
+    "ClassName": "CopyrightXsdstring"
+  },
+  {
+    "Name": "cx:CT_Copyrights/cx:copyrights",
+    "ClassName": "Copyrights"
   },
   {
     "Name": "cx:CT_Data/cx:data",
@@ -77,6 +113,10 @@
     "ClassName": "DataPoint"
   },
   {
+    "Name": "cx:ST_EntityType/cx:entityType",
+    "ClassName": "EntityType"
+  },
+  {
     "Name": "xsd:string/cx:evenFooter",
     "ClassName": "EvenFooterXsdstring"
   },
@@ -97,6 +137,10 @@
     "ClassName": "ExtensionList"
   },
   {
+    "Name": "cx:CT_ExtremeValueColorPosition/cx:extremeValue",
+    "ClassName": "ExtremeValueColorPosition"
+  },
+  {
     "Name": "cx:CT_Formula/cx:f",
     "ClassName": "Formula"
   },
@@ -107,6 +151,126 @@
   {
     "Name": "xsd:string/cx:firstHeader",
     "ClassName": "FirstHeaderXsdstring"
+  },
+  {
+    "Name": "cx:CT_FormatOverride/cx:fmtOvr",
+    "ClassName": "FormatOverride"
+  },
+  {
+    "Name": "cx:CT_FormatOverrides/cx:fmtOvrs",
+    "ClassName": "FormatOverrides"
+  },
+  {
+    "Name": "cx:CT_GeoCache/cx:geoCache",
+    "ClassName": "GeoCache"
+  },
+  {
+    "Name": "cx:CT_GeoChildEntities/cx:geoChildEntities",
+    "ClassName": "GeoChildEntities"
+  },
+  {
+    "Name": "cx:CT_GeoChildEntitiesQuery/cx:geoChildEntitiesQuery",
+    "ClassName": "GeoChildEntitiesQuery"
+  },
+  {
+    "Name": "cx:CT_GeoChildEntitiesQueryResult/cx:geoChildEntitiesQueryResult",
+    "ClassName": "GeoChildEntitiesQueryResult"
+  },
+  {
+    "Name": "cx:CT_GeoChildEntitiesQueryResults/cx:geoChildEntitiesQueryResults",
+    "ClassName": "GeoChildEntitiesQueryResults"
+  },
+  {
+    "Name": "cx:CT_GeoChildTypes/cx:geoChildTypes",
+    "ClassName": "GeoChildTypes"
+  },
+  {
+    "Name": "cx:CT_GeoData/cx:geoData",
+    "ClassName": "GeoData"
+  },
+  {
+    "Name": "cx:CT_GeoDataEntityQuery/cx:geoDataEntityQuery",
+    "ClassName": "GeoDataEntityQuery"
+  },
+  {
+    "Name": "cx:CT_GeoDataEntityQueryResult/cx:geoDataEntityQueryResult",
+    "ClassName": "GeoDataEntityQueryResult"
+  },
+  {
+    "Name": "cx:CT_GeoDataEntityQueryResults/cx:geoDataEntityQueryResults",
+    "ClassName": "GeoDataEntityQueryResults"
+  },
+  {
+    "Name": "cx:CT_GeoDataPointQuery/cx:geoDataPointQuery",
+    "ClassName": "GeoDataPointQuery"
+  },
+  {
+    "Name": "cx:CT_GeoDataPointToEntityQuery/cx:geoDataPointToEntityQuery",
+    "ClassName": "GeoDataPointToEntityQuery"
+  },
+  {
+    "Name": "cx:CT_GeoDataPointToEntityQueryResult/cx:geoDataPointToEntityQueryResult",
+    "ClassName": "GeoDataPointToEntityQueryResult"
+  },
+  {
+    "Name": "cx:CT_GeoDataPointToEntityQueryResults/cx:geoDataPointToEntityQueryResults",
+    "ClassName": "GeoDataPointToEntityQueryResults"
+  },
+  {
+    "Name": "cx:CT_GeoEntity/cx:geoEntity",
+    "ClassName": "GeoEntity"
+  },
+  {
+    "Name": "cx:CT_Geography/cx:geography",
+    "ClassName": "Geography"
+  },
+  {
+    "Name": "cx:CT_GeoHierarchyEntity/cx:geoHierarchyEntity",
+    "ClassName": "GeoHierarchyEntity"
+  },
+  {
+    "Name": "cx:CT_GeoLocation/cx:geoLocation",
+    "ClassName": "GeoLocation"
+  },
+  {
+    "Name": "cx:CT_GeoLocationQuery/cx:geoLocationQuery",
+    "ClassName": "GeoLocationQuery"
+  },
+  {
+    "Name": "cx:CT_GeoLocationQueryResult/cx:geoLocationQueryResult",
+    "ClassName": "GeoLocationQueryResult"
+  },
+  {
+    "Name": "cx:CT_GeoLocationQueryResults/cx:geoLocationQueryResults",
+    "ClassName": "GeoLocationQueryResults"
+  },
+  {
+    "Name": "cx:CT_GeoLocations/cx:geoLocations",
+    "ClassName": "GeoLocations"
+  },
+  {
+    "Name": "cx:CT_GeoParentEntitiesQuery/cx:geoParentEntitiesQuery",
+    "ClassName": "GeoParentEntitiesQuery"
+  },
+  {
+    "Name": "cx:CT_GeoParentEntitiesQueryResult/cx:geoParentEntitiesQueryResult",
+    "ClassName": "GeoParentEntitiesQueryResult"
+  },
+  {
+    "Name": "cx:CT_GeoParentEntitiesQueryResults/cx:geoParentEntitiesQueryResults",
+    "ClassName": "GeoParentEntitiesQueryResults"
+  },
+  {
+    "Name": "cx:CT_GeoParentEntity/cx:geoParentEntity",
+    "ClassName": "GeoParentEntity"
+  },
+  {
+    "Name": "cx:CT_GeoPolygon/cx:geoPolygon",
+    "ClassName": "GeoPolygon"
+  },
+  {
+    "Name": "cx:CT_GeoPolygons/cx:geoPolygons",
+    "ClassName": "GeoPolygons"
   },
   {
     "Name": "cx:CT_HeaderFooter/cx:headerFooter",
@@ -141,12 +305,44 @@
     "ClassName": "MajorTickMarksTickMarks"
   },
   {
+    "Name": "cx:CT_ValueColorEndPosition/cx:max",
+    "ClassName": "MaxValueColorEndPosition"
+  },
+  {
+    "Name": "a:CT_SolidColorFillProperties/cx:maxColor",
+    "ClassName": "MaxColorSolidColorFillProperties"
+  },
+  {
+    "Name": "cx:CT_ValueColorMiddlePosition/cx:mid",
+    "ClassName": "ValueColorMiddlePosition"
+  },
+  {
+    "Name": "a:CT_SolidColorFillProperties/cx:midColor",
+    "ClassName": "MidColorSolidColorFillProperties"
+  },
+  {
+    "Name": "cx:CT_ValueColorEndPosition/cx:min",
+    "ClassName": "MinValueColorEndPosition"
+  },
+  {
+    "Name": "a:CT_SolidColorFillProperties/cx:minColor",
+    "ClassName": "MinColorSolidColorFillProperties"
+  },
+  {
     "Name": "cx:CT_Gridlines/cx:minorGridlines",
     "ClassName": "MinorGridlinesGridlines"
   },
   {
     "Name": "cx:CT_TickMarks/cx:minorTickMarks",
     "ClassName": "MinorTickMarksTickMarks"
+  },
+  {
+    "Name": "cx:CT_Formula/cx:nf",
+    "ClassName": "NfFormula"
+  },
+  {
+    "Name": "cx:CT_NumberColorPosition/cx:number",
+    "ClassName": "NumberColorPosition"
   },
   {
     "Name": "cx:CT_NumericDimension/cx:numDim",
@@ -181,6 +377,10 @@
     "ClassName": "ParentLabelLayout"
   },
   {
+    "Name": "cx:CT_PercentageColorPosition/cx:percent",
+    "ClassName": "PercentageColorPosition"
+  },
+  {
     "Name": "cx:CT_PlotArea/cx:plotArea",
     "ClassName": "PlotArea"
   },
@@ -203,6 +403,10 @@
   {
     "Name": "cx:CT_StringValue/cx:pt",
     "ClassName": "ChartStringValue"
+  },
+  {
+    "Name": "cx:CT_RegionLabelLayout/cx:regionLabelLayout",
+    "ClassName": "RegionLabelLayout"
   },
   {
     "Name": "a:CT_TextBody/cx:rich",
@@ -271,6 +475,14 @@
   {
     "Name": "cx:CT_ValueAxisScaling/cx:valScaling",
     "ClassName": "ValueAxisScaling"
+  },
+  {
+    "Name": "cx:CT_ValueColorPositions/cx:valueColorPositions",
+    "ClassName": "ValueColorPositions"
+  },
+  {
+    "Name": "cx:CT_ValueColors/cx:valueColors",
+    "ClassName": "ValueColors"
   },
   {
     "Name": "cx:CT_DataLabelVisibilities/cx:visibility",
