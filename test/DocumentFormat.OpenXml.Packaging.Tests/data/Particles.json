@@ -33507,6 +33507,88 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Presentation.Extension",
+           "MaxOccurs": 0,
+           "MinOccurs": 0
+          }
+         ],
+         "ParticleType": "Sequence"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Group"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reaction",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ReactionInstance",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ReactionInstance",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reaction",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo",
   "Value": [
    {

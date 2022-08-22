@@ -345,6 +345,11 @@
     "Version": "Microsoft365"
   },
   {
+    "Prefix": "p223",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2022/03/main",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "packaging",
     "Uri": "http://schemas.microsoft.com/office/internal/2007/ofapi/packaging"
   },

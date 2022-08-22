@@ -128,6 +128,10 @@
     "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main"
   },
   {
+    "Prefix": "p223",
+    "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main"
+  },
+  {
     "Prefix": "xxpvi",
     "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo"
   },
