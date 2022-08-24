@@ -1,0 +1,100 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021",
+  "Types": [
+    {
+      "Name": "xxl21:CT_ExternalBookAlternateUrls/xxl21:alternateUrls",
+      "ClassName": "ExternalBookAlternateUrls",
+      "Summary": "Defines the ExternalBookAlternateUrls Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":driveId",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "driveId"
+        },
+        {
+          "QName": ":itemId",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "itemId"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xxl21:CT_AlternateUrl/xxl21:absoluteUrl",
+          "PropertyName": "AbsoluteUrlAlternateUrl"
+        },
+        {
+          "Name": "xxl21:CT_AlternateUrl/xxl21:relativeUrl",
+          "PropertyName": "RelativeUrlAlternateUrl"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xxl21:CT_AlternateUrl/xxl21:absoluteUrl",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xxl21:CT_AlternateUrl/xxl21:relativeUrl",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xxl21:CT_AlternateUrl/xxl21:absoluteUrl",
+      "ClassName": "AbsoluteUrlAlternateUrl",
+      "Summary": "Defines the AbsoluteUrlAlternateUrl Class.",
+      "BaseClass": "OpenXmlAlternateUrlElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "xxl21:CT_AlternateUrl/xxl21:relativeUrl",
+      "ClassName": "RelativeUrlAlternateUrl",
+      "Summary": "Defines the RelativeUrlAlternateUrl Class.",
+      "BaseClass": "OpenXmlAlternateUrlElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "xxl21:CT_AlternateUrl/",
+      "ClassName": "OpenXmlAlternateUrlElement",
+      "Summary": "Defines the OpenXmlAlternateUrlElement Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

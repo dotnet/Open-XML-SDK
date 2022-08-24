@@ -29293,7 +29293,7 @@
     {
       "Name": "w:CT_NonNegativeDecimalNumber/w:abstractNumId",
       "ClassName": "AbstractNumId",
-      "Summary": "Abstract Numbering Definition Reference.",
+      "Summary": "Defines the AbstractNumId Class.",
       "BaseClass": "NonNegativeDecimalNumberType",
       "IsDerived": true,
       "IsLeafElement": true
@@ -40285,59 +40285,6 @@
       }
     },
     {
-      "Name": "w:CT_NumLvl/w:lvlOverride",
-      "ClassName": "LevelOverride",
-      "Summary": "Numbering Level Definition Override.",
-      "CompositeType": "OneSequence",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": "w:ilvl",
-          "PropertyName": "LevelIndex",
-          "Type": "Int32Value",
-          "PropertyComments": "Numbering Level ID",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "w:CT_DecimalNumber/w:startOverride",
-          "PropertyName": "StartOverrideNumberingValue",
-          "PropertyComments": "Numbering Level Starting Value Override"
-        },
-        {
-          "Name": "w:CT_Lvl/w:lvl",
-          "PropertyName": "Level",
-          "PropertyComments": "Numbering Level Override Definition"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "w:CT_DecimalNumber/w:startOverride",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "w:CT_Lvl/w:lvl",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "Name": "w:CT_NumPicBullet/w:numPicBullet",
       "ClassName": "NumberingPictureBullet",
       "Summary": "Picture Numbering Symbol Definition.",
@@ -40521,19 +40468,23 @@
           "QName": "w:numId",
           "PropertyName": "NumberID",
           "Type": "Int32Value",
-          "PropertyComments": "Numbering Definition Instance ID",
+          "PropertyComments": "numId",
           "Validators": [
             {
               "Name": "RequiredValidator"
             }
           ]
+        },
+        {
+          "QName": "w:durableId",
+          "Type": "Int32Value",
+          "PropertyComments": "durableId"
         }
       ],
       "Children": [
         {
           "Name": "w:CT_NonNegativeDecimalNumber/w:abstractNumId",
-          "PropertyName": "AbstractNumId",
-          "PropertyComments": "Abstract Numbering Definition Reference"
+          "PropertyName": "AbstractNumId"
         },
         {
           "Name": "w:CT_NumLvl/w:lvlOverride"
@@ -51361,6 +51312,59 @@
           ]
         }
       ]
+    },
+    {
+      "Name": "w:CT_NumLvl/w:lvlOverride",
+      "ClassName": "LevelOverride",
+      "Summary": "Defines the LevelOverride Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "w:ilvl",
+          "PropertyName": "LevelIndex",
+          "Type": "Int32Value",
+          "PropertyComments": "Numbering Level ID",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "w:CT_DecimalNumber/w:startOverride",
+          "PropertyName": "StartOverrideNumberingValue",
+          "PropertyComments": "Numbering Level Starting Value Override"
+        },
+        {
+          "Name": "w:CT_Lvl/w:lvl",
+          "PropertyName": "Level",
+          "PropertyComments": "Numbering Level Override Definition"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "w:CT_DecimalNumber/w:startOverride",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "w:CT_Lvl/w:lvl",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "Enums": [

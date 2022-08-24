@@ -22368,6 +22368,27 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls",
+    "Children": [
+      {
+        "Name": "absoluteUrl",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021"
+      },
+      {
+        "Name": "relativeUrl",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo",
     "Children": [
       {
