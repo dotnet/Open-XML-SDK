@@ -22332,42 +22332,6 @@
     "Children": []
   },
   {
-    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList",
-    "Children": [
-      {
-        "Name": "ext",
-        "Namespace": "http://schemas.openxmlformats.org/presentationml/2006/main"
-      }
-    ]
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reaction",
-    "Children": [
-      {
-        "Name": "instance",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/03/main"
-      }
-    ]
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ReactionInstance",
-    "Children": [
-      {
-        "Name": "extLst",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/03/main"
-      }
-    ]
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions",
-    "Children": [
-      {
-        "Name": "rxn",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/03/main"
-      }
-    ]
-  },
-  {
     "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl",
     "Children": []
   },
