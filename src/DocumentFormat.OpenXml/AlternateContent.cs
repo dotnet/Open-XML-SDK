@@ -117,44 +117,14 @@ namespace DocumentFormat.OpenXml
             return CloneImp<AlternateContent>(deep);
         }
 
-        private protected override IFeatureCollection CreateFeatures() => new AlternateContentFeatures(this);
-
-        private class AlternateContentFeatures : ElementFeatureCollection, IElementMetadata
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
-            public AlternateContentFeatures(OpenXmlElement owner)
-                : base(owner)
-            {
-            }
+            base.ConfigureMetadata(builder);
 
-            public override TFeature Get<TFeature>()
-            {
-                if (typeof(TFeature) == typeof(IElementMetadata))
-                {
-                    return (TFeature)(object)this;
-                }
+            builder.SetSchema(InternalQName);
 
-                return base.Get<TFeature>()!;
-            }
-
-            Type IElementMetadata.Type => typeof(AlternateContent);
-
-            ReadOnlyArray<AttributeMetadata> IElementMetadata.Attributes => default;
-
-            FileFormatVersions IElementMetadata.Availability => FileFormatVersions.Office2007;
-
-            ElementFactoryCollection IElementMetadata.Children { get; } = new(new[]
-            {
-                new ElementFactory(typeof(AlternateContentChoice), AlternateContentChoice.InternalQName, static () => new AlternateContentChoice()),
-                new ElementFactory(typeof(AlternateContentFallback), AlternateContentFallback.InternalQName, static () => new AlternateContentFallback()),
-            });
-
-            ReadOnlyArray<IValidator> IElementMetadata.Constraints => default;
-
-            CompiledParticle? IElementMetadata.Particle => new(null);
-
-            OpenXmlQualifiedName IElementMetadata.QName => InternalQName;
-
-            ReadOnlyArray<IValidator> IElementMetadata.Validators => default;
+            builder.AddChild<AlternateContentChoice>();
+            builder.AddChild<AlternateContentFallback>();
         }
     }
 }

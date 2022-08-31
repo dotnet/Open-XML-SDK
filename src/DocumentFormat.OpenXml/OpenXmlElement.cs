@@ -2620,27 +2620,19 @@ namespace DocumentFormat.OpenXml
 
             public bool IsReadOnly => true;
 
-            public int Revision => GetParentFeatures()?.Revision ?? 0;
+            public int Revision => GetPartFeatures()?.Revision ?? 0;
 
             public virtual IFeatureCollection Default => FeatureCollection.Default;
 
             [KnownFeature(typeof(AnnotationsFeature))]
             [KnownFeature(typeof(IElementMetadata), Factory = nameof(CreateMetadata))]
-            [DelegatedFeature(nameof(GetParentFeatures))]
+            [DelegatedFeature(nameof(GetPartFeatures))]
             [DelegatedFeature(nameof(Default))]
             private partial TFeature? GetBuiltIn<TFeature>();
 
             public virtual TFeature? Get<TFeature>() => GetBuiltIn<TFeature>();
 
-            private IFeatureCollection? GetParentFeatures()
-            {
-                if (_owner is OpenXmlPartRootElement root)
-                {
-                    return root.OpenXmlPart?.Features;
-                }
-
-                return _owner.Parent?.Features;
-            }
+            private IFeatureCollection? GetPartFeatures() => _owner.GetPart()?.Features;
 
             private IElementMetadata CreateMetadata() => this.GetRequired<IElementMetadataFactoryFeature>().GetMetadata(_owner);
 
