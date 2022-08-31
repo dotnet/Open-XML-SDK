@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
-    internal class TypedElementMetadataFactoryFeature : IElementMetadataFactoryFeature
+    internal class ElementMetadataFactoryFeature : IElementMetadataFactoryFeature
     {
         private readonly ConcurrentDictionary<Type, ElementMetadata> _lookup = new(new[]
         {

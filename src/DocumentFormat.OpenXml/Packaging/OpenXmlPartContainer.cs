@@ -1966,14 +1966,12 @@ namespace DocumentFormat.OpenXml.Packaging
 
             protected virtual IFeatureCollection Default => FeatureCollection.Default;
 
-            protected virtual TFeature? GetPartFeature<TFeature>() => default;
-
             [KnownFeature(typeof(AnnotationsFeature))]
             [DelegatedFeature(nameof(_other))]
             [DelegatedFeature(nameof(Default))]
             private partial TFeature? GetDefault<TFeature>();
 
-            public TFeature? Get<TFeature>() => GetPartFeature<TFeature>() ?? GetDefault<TFeature>();
+            public TFeature? Get<TFeature>() => GetDefault<TFeature>();
 
             public void Set<TFeature>(TFeature? instance)
             {

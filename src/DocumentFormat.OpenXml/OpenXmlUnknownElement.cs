@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -14,7 +15,7 @@ namespace DocumentFormat.OpenXml
     /// Represents elements that are not defined in the Office Open XML ECMA standard.
     /// </summary>
     [OfficeAvailability(FileFormatVersions.None)]
-    public class OpenXmlUnknownElement : TypedOpenXmlCompositeElement
+    public class OpenXmlUnknownElement : OpenXmlCompositeElement
     {
         private string _namespaceUri;
         private string _tagName;

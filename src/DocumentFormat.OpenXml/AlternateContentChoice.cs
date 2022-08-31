@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines an mc:Choice element in mc:AlternateContent.
     /// </summary>
-    public class AlternateContentChoice : TypedOpenXmlCompositeElement
+    public class AlternateContentChoice : OpenXmlCompositeElement
     {
         internal static OpenXmlQualifiedName InternalQName => new(AlternateContent.InternalQName.Namespace.Uri, Name);
 

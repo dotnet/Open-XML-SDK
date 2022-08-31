@@ -9,13 +9,13 @@ namespace DocumentFormat.OpenXml.Benchmarks
     public class ElementMetadataTests
     {
         private OpenXmlElement _element;
-        private TypedElementMetadataFactoryFeature _provider;
+        private ElementMetadataFactoryFeature _provider;
 
         [GlobalSetup]
         public void Setup()
         {
             _element = new AlternateContent();
-            _provider = new TypedElementMetadataFactoryFeature();
+            _provider = new ElementMetadataFactoryFeature();
         }
 
         [Benchmark]

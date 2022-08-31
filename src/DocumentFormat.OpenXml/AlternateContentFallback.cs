@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines a mc:Fallback element in mc:AlternateContent.
     /// </summary>
-    public class AlternateContentFallback : TypedOpenXmlCompositeElement
+    public class AlternateContentFallback : OpenXmlCompositeElement
     {
         internal static OpenXmlQualifiedName InternalQName => new(AlternateContent.InternalQName.Namespace.Uri, Name);
 
