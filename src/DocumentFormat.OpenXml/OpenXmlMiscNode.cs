@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents an Open XML non element node (i.e. PT, Comments, Entity, Notation, XmlDeclaration).
     /// </summary>
-    public class OpenXmlMiscNode : OpenXmlElement
+    public class OpenXmlMiscNode : TypedOpenXmlElement
     {
         private const string StrCDataSectionName = "#cdata-section";
         private const string StrCommentName = "#comment";

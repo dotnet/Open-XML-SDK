@@ -6,7 +6,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <summary>
     /// Defines SdtElement - the base class for the sdt elements.
     /// </summary>
-    public abstract class SdtElement : OpenXmlCompositeElement
+    public abstract class SdtElement : TypedOpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtElement class.

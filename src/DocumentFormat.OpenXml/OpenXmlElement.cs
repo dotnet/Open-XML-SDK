@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
@@ -67,12 +68,14 @@ namespace DocumentFormat.OpenXml
             {
                 if (_features is null)
                 {
-                    _features = new ElementFeatureCollection(this);
+                    _features = CreateFeatures();
                 }
 
                 return _features;
             }
         }
+
+        private protected virtual IFeatureCollection CreateFeatures() => new ElementFeatureCollection(this);
 
         private MarkupCompatibilityAttributes? McAttributesFiled
         {
@@ -2606,7 +2609,7 @@ namespace DocumentFormat.OpenXml
             return root as OpenXmlPartRootElement;
         }
 
-        private sealed partial class ElementFeatureCollection : IFeatureCollection
+        private protected partial class ElementFeatureCollection : IFeatureCollection
         {
             private readonly OpenXmlElement _owner;
 
@@ -2617,15 +2620,27 @@ namespace DocumentFormat.OpenXml
 
             public bool IsReadOnly => true;
 
-            public int Revision => GetPartFeatures()?.Revision ?? 0;
+            public int Revision => GetParentFeatures()?.Revision ?? 0;
+
+            public virtual IFeatureCollection Default => FeatureCollection.Default;
 
             [KnownFeature(typeof(AnnotationsFeature))]
             [KnownFeature(typeof(IElementMetadata), Factory = nameof(CreateMetadata))]
-            [DelegatedFeature(nameof(GetPartFeatures))]
-            [DelegatedFeature(nameof(FeatureCollection.TypedOrDefault), typeof(FeatureCollection))]
-            public partial TFeature? Get<TFeature>();
+            [DelegatedFeature(nameof(GetParentFeatures))]
+            [DelegatedFeature(nameof(Default))]
+            private partial TFeature? GetBuiltIn<TFeature>();
 
-            public IFeatureCollection? GetPartFeatures() => _owner.GetPart()?.Features;
+            public virtual TFeature? Get<TFeature>() => GetBuiltIn<TFeature>();
+
+            private IFeatureCollection? GetParentFeatures()
+            {
+                if (_owner is OpenXmlPartRootElement root)
+                {
+                    return root.OpenXmlPart?.Features;
+                }
+
+                return _owner.Parent?.Features;
+            }
 
             private IElementMetadata CreateMetadata() => this.GetRequired<IElementMetadataFactoryFeature>().GetMetadata(_owner);
 

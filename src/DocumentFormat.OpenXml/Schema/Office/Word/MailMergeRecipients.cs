@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <summary>
     /// Defines MailMergeRecipients.
     /// </summary>
-    public partial class MailMergeRecipients : OpenXmlPartRootElement
+    public partial class MailMergeRecipients
     {
         /// <summary>
         /// MailMergeRecipients constructor.

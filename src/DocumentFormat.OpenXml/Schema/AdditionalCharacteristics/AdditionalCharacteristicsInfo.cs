@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     /// <summary>
     /// Defines AdditionalCharacteristics.
     /// </summary>
-    public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
+    public partial class AdditionalCharacteristicsInfo
     {
         /// <summary>
         /// AdditionalCharacteristics constructor.

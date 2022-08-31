@@ -49,6 +49,7 @@ public static class PartWriter
             writer.Write("public partial class ");
             writer.Write(type.Name);
             writer.Write(" : ");
+
             writer.Write(type.Base);
 
             if (type.HasFixedContent)

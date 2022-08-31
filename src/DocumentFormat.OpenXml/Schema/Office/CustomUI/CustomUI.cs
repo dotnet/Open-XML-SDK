@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <summary>
     /// Defines CustomUI.
     /// </summary>
-    public partial class CustomUI : OpenXmlPartRootElement
+    public partial class CustomUI
     {
         /// <summary>
         /// CustomUI constructor.

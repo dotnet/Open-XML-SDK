@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 });
         }
 
-        private class BaseElement : OpenXmlElement
+        private class BaseElement : TypedOpenXmlElement
         {
             public override bool HasChildren => throw new NotImplementedException();
 

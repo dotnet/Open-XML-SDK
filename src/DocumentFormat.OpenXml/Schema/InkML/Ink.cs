@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <summary>
     /// Defines Ink.
     /// </summary>
-    public partial class Ink : OpenXmlPartRootElement
+    public partial class Ink
     {
         /// <summary>
         /// Ink constructor.

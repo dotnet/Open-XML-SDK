@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines MailMergeRecipientDataPart.
     /// </summary>
-    public partial class MailMergeRecipientDataPart : OpenXmlPart
+    public partial class MailMergeRecipientDataPart
     {
         private OpenXmlPartRootElement? _rootEle;
 
