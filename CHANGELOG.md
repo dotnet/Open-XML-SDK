@@ -4,11 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.18.0] 2022-xx-xx
+## [2.18.0] 2022-09-06
 
 ### Added
-- Added DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021 namespace
-- Added durableId attribute to DocumentFormat.OpenXml.Wordprocessing.NumberingPictureBullet
+- Added DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021 namespace (#1196)
+- Added durableId attribute to DocumentFormat.OpenXml.Wordprocessing.NumberingPictureBullet (#1196)
+- Added few base classes for typed elements, parts, and packages (#1185)
+
+### Changed
+- Adjusted LICENSE.md to conform to .NET Foundation requirements (#1194)
+- Miscellaneous changes for better perf for internal services
 
 ## [2.17.1] - 2022-06-28
 
