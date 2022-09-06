@@ -16479,77 +16479,6 @@
       ]
     },
     {
-      "Name": "x:CT_ExternalSheetNames/x:sheetNames",
-      "ClassName": "SheetNames",
-      "Summary": "Supporting Workbook Sheet Names.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "x:CT_ExternalSheetName/x:sheetName"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_ExternalSheetName/x:sheetName",
-            "Occurs": [
-              {
-                "Min": 1,
-                "Max": 65534
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_ExternalDefinedNames/x:definedNames",
-      "ClassName": "ExternalDefinedNames",
-      "Summary": "Named Links.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "x:CT_ExternalDefinedName/x:definedName"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_ExternalDefinedName/x:definedName",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_ExternalSheetDataSet/x:sheetDataSet",
-      "ClassName": "SheetDataSet",
-      "Summary": "Cached Worksheet Data.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "x:CT_ExternalSheetData/x:sheetData"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_ExternalSheetData/x:sheetData",
-            "Occurs": [
-              {
-                "Min": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "Name": "x:CT_ExternalDefinedName/x:definedName",
       "ClassName": "ExternalDefinedName",
       "Summary": "Defined Name.",
@@ -16902,24 +16831,38 @@
       ],
       "Children": [
         {
+          "Name": "xxl21:CT_ExternalBookAlternateUrls/xxl21:alternateUrls",
+          "PropertyName": "ExternalBookAlternateUrls",
+          "PropertyComments": "Alternate URLs and identifiers of the external book"
+        },
+        {
           "Name": "x:CT_ExternalSheetNames/x:sheetNames",
           "PropertyName": "SheetNames",
-          "PropertyComments": "Supporting Workbook Sheet Names"
+          "PropertyComments": "Sheet names of supporting book"
         },
         {
           "Name": "x:CT_ExternalDefinedNames/x:definedNames",
           "PropertyName": "ExternalDefinedNames",
-          "PropertyComments": "Named Links"
+          "PropertyComments": "Defined names associated with supporting book."
         },
         {
           "Name": "x:CT_ExternalSheetDataSet/x:sheetDataSet",
           "PropertyName": "SheetDataSet",
-          "PropertyComments": "Cached Worksheet Data"
+          "PropertyComments": "Cached worksheet data associated with supporting book"
         }
       ],
       "Particle": {
         "Kind": "Sequence",
         "Items": [
+          {
+            "Name": "xxl21:CT_ExternalBookAlternateUrls/xxl21:alternateUrls",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          },
           {
             "Name": "x:CT_ExternalSheetNames/x:sheetNames",
             "Occurs": [
@@ -25449,6 +25392,77 @@
             "Occurs": [
               {
                 "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ExternalSheetNames/x:sheetNames",
+      "ClassName": "SheetNames",
+      "Summary": "Sheet names of supporting book.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "x:CT_ExternalSheetName/x:sheetName"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_ExternalSheetName/x:sheetName",
+            "Occurs": [
+              {
+                "Min": 1,
+                "Max": 65534
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ExternalDefinedNames/x:definedNames",
+      "ClassName": "ExternalDefinedNames",
+      "Summary": "Defined names associated with supporting book..",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "x:CT_ExternalDefinedName/x:definedName"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_ExternalDefinedName/x:definedName",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ExternalSheetDataSet/x:sheetDataSet",
+      "ClassName": "SheetDataSet",
+      "Summary": "Cached worksheet data associated with supporting book.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "x:CT_ExternalSheetData/x:sheetData"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_ExternalSheetData/x:sheetData",
+            "Occurs": [
+              {
+                "Min": 1
               }
             ]
           }

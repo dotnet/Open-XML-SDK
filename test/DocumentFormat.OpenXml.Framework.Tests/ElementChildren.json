@@ -43254,6 +43254,10 @@
     "Element": "DocumentFormat.OpenXml.Spreadsheet.ExternalBook",
     "Children": [
       {
+        "Name": "alternateUrls",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021"
+      },
+      {
         "Name": "definedNames",
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       },
