@@ -8,6 +8,10 @@ pr:
     include:
     - main
     - release/*
+  paths:
+    exclude:
+      - '**/*.md'
+      - docs
 
 variables:
   RunPeVerify: true
