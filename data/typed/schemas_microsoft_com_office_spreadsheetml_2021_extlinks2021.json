@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "xxl21:CT_AlternateUrl/",
+    "ClassName": "OpenXmlAlternateUrlElement"
+  },
+  {
+    "Name": "xxl21:CT_AlternateUrl/xxl21:absoluteUrl",
+    "ClassName": "AbsoluteUrlAlternateUrl"
+  },
+  {
+    "Name": "xxl21:CT_ExternalBookAlternateUrls/xxl21:alternateUrls",
+    "ClassName": "ExternalBookAlternateUrls"
+  },
+  {
+    "Name": "xxl21:CT_AlternateUrl/xxl21:relativeUrl",
+    "ClassName": "RelativeUrlAlternateUrl"
+  }
+]

@@ -33507,6 +33507,27 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo",
   "Value": [
    {
@@ -62045,9 +62066,33 @@
   "Key": "DocumentFormat.OpenXml.Spreadsheet.ExternalBook",
   "Value": [
    {
-    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.SheetNames",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.SheetDataSet",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   },
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls",
+       "MinOccurs": 0
+      },
       {
        "ElementType": "DocumentFormat.OpenXml.Spreadsheet.SheetNames",
        "MinOccurs": 0
