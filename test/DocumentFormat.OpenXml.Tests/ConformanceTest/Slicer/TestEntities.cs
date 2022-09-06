@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
         /// </summary>
         /// <param name="stream">Editing target stream</param>
         /// <param name="log">Logger</param>
-        public void EditElements(Stream stream, VerifiableLog log)
+        internal void EditElements(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
         /// </summary>
         /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyElements(Stream stream, VerifiableLog log)
+        internal void VerifyElements(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {

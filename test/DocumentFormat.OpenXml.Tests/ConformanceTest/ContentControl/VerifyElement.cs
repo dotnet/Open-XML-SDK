@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         /// <summary>
         /// To check whether a document has been changed correctly
         /// </summary>
-        public static void VerifyContentControlElement(Stream stream, VerifiableLog log)
+        internal static void VerifyContentControlElement(Stream stream, VerifiableLog log)
         {
             using (WordprocessingDocument package = WordprocessingDocument.Open(stream, false))
             {

@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void EditAttribute(Stream stream, VerifiableLog log)
+        internal void EditAttribute(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyAttribute(Stream stream, VerifiableLog log)
+        internal void VerifyAttribute(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void DeletAttribute(Stream stream, VerifiableLog log)
+        internal void DeletAttribute(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyDeletedAttribute(Stream stream, VerifiableLog log)
+        internal void VerifyDeletedAttribute(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// </summary>
         /// <param name="stream">Target excel stream</param>
         /// <param name="log">Logger</param>
-        public void AddAttribute(Stream stream, VerifiableLog log)
+        internal void AddAttribute(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyAddedAttribute(Stream stream, VerifiableLog log)
+        internal void VerifyAddedAttribute(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {

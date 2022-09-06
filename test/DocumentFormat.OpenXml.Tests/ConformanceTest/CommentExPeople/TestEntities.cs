@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         /// <summary>
         /// Reading of People part element.
         /// </summary>
-        public void ReadElements(Stream stream, VerifiableLog log)
+        internal void ReadElements(Stream stream, VerifiableLog log)
         {
             using (WordprocessingDocument package = WordprocessingDocument.Open(stream, true))
             {
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         /// <summary>
         /// Editing of People part element.
         /// </summary>
-        public void EditElements(Stream stream, VerifiableLog log)
+        internal void EditElements(Stream stream, VerifiableLog log)
         {
             using (WordprocessingDocument package = WordprocessingDocument.Open(stream, true))
             {
@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         /// <summary>
         /// Verifying of People part element.
         /// </summary>
-        public void VerifyElements(Stream stream, VerifiableLog log)
+        internal void VerifyElements(Stream stream, VerifiableLog log)
         {
             using (WordprocessingDocument package = WordprocessingDocument.Open(stream, false))
             {

@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         /// <summary>
         /// Editing chartTrackingReferenceBased element
         /// </summary>
-        public void EditElements(Stream stream, VerifiableLog log)
+        internal void EditElements(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         /// <summary>
         /// Verifying the chartTrackingReferenceBased element the existence
         /// </summary>
-        public void VerifyElements(Stream stream, VerifiableLog log)
+        internal void VerifyElements(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         /// <summary>
         /// Deleting chartTrackingReferenceBased element
         /// </summary>
-        public void DeleteElements(Stream stream, VerifiableLog log)
+        internal void DeleteElements(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         /// <summary>
         /// Verifying the chartTrackingReferenceBased element the deleting
         /// </summary>
-        public void VerifyDeleteElements(Stream stream, VerifiableLog log)
+        internal void VerifyDeleteElements(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         /// <summary>
         /// Append the chartTrackingReferenceBased element
         /// </summary>
-        public void AddElements(Stream stream, VerifiableLog log)
+        internal void AddElements(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         /// <summary>
         /// Verifying the chartTrackingReferenceBased element the appending
         /// </summary>
-        public void VerifyAddElements(Stream stream, VerifiableLog log)
+        internal void VerifyAddElements(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {

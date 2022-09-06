@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Tests.Common;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
