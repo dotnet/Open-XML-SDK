@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPackage : OpenXmlPartContainer, IDisposable
     {
-        private protected const string ObsoleteMessage = "The parameterless constructor never initialized anything. This will be removed in future updates.";
+        private protected const string DoNotUseParameterlessConstructor = "The parameterless constructor never initialized anything. This will be removed in future updates.";
 
         private readonly PartExtensionProvider _partExtensionProvider = new PartExtensionProvider();
         private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class.
         /// </summary>
-        [Obsolete(ObsoleteMessage)]
+        [Obsolete(DoNotUseParameterlessConstructor)]
         protected OpenXmlPackage()
             : base()
         {

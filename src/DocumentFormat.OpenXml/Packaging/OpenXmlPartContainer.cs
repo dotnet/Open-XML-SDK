@@ -1949,27 +1949,29 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal virtual IFeatureCollection CreatePartFeatures(IFeatureCollection? other = null) => new PartContainerFeatureCollection(FeatureCollection.Default, other);
+        internal virtual IFeatureCollection CreatePartFeatures(IFeatureCollection? other = null) => new PartContainerFeatureCollection(other);
 
-        internal sealed partial class PartContainerFeatureCollection : IFeatureCollection
+        internal partial class PartContainerFeatureCollection : IFeatureCollection
         {
             private readonly IFeatureCollection? _other;
-            private readonly IFeatureCollection _defaultCollection;
 
             public bool IsReadOnly => true;
 
             public int Revision => 0;
 
-            public PartContainerFeatureCollection(IFeatureCollection defaultCollection, IFeatureCollection? other = null)
+            public PartContainerFeatureCollection(IFeatureCollection? other = null)
             {
                 _other = other;
-                _defaultCollection = defaultCollection;
             }
+
+            protected virtual IFeatureCollection Default => FeatureCollection.Default;
 
             [KnownFeature(typeof(AnnotationsFeature))]
             [DelegatedFeature(nameof(_other))]
-            [DelegatedFeature(nameof(_defaultCollection))]
-            public partial TFeature? Get<TFeature>();
+            [DelegatedFeature(nameof(Default))]
+            private partial TFeature? GetDefault<TFeature>();
+
+            public TFeature? Get<TFeature>() => GetDefault<TFeature>();
 
             public void Set<TFeature>(TFeature? instance)
             {

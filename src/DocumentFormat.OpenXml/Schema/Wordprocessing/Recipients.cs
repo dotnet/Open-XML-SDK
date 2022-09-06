@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <summary>
     /// Defines Recipients.
     /// </summary>
-    public partial class Recipients : OpenXmlPartRootElement
+    public partial class Recipients
     {
         /// <summary>
         /// Recipients constructor.

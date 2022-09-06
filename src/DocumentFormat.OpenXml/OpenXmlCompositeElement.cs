@@ -19,6 +19,8 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public abstract class OpenXmlCompositeElement : OpenXmlElement
     {
+        private protected const string UseGenericVersion = "Should use the generic version of this. This overload will be removed in a future version.";
+
         private OpenXmlElement? _lastChild;
 
         /// <summary>
@@ -42,7 +44,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the OpenXmlCompositeElement class using the supplied collection of elements.
         /// </summary>
         /// <param name="childrenElements">A collection of elements.</param>
-        [Obsolete("Should use the generic version of this. This overload will be removed in a future version.")]
+        [Obsolete(UseGenericVersion)]
         protected OpenXmlCompositeElement(IEnumerable childrenElements)
             : this()
         {

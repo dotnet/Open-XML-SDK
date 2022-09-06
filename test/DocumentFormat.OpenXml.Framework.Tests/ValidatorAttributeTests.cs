@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void NoValidators()
         {
-            var provider = new TypedElementMetadataFactoryFeature();
+            var provider = new ElementMetadataFactoryFeature();
             var attributes = provider.GetMetadata(new NoValidatorsElement());
             var attribute = Assert.Single(attributes.Attributes);
 
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void RequiredValidation()
         {
-            var provider = new TypedElementMetadataFactoryFeature();
+            var provider = new ElementMetadataFactoryFeature();
             var attributes = provider.GetMetadata(new ContainsRequiredValidator());
             var attribute = Assert.Single(attributes.Attributes);
 
@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void JustUnion()
         {
-            var provider = new TypedElementMetadataFactoryFeature();
+            var provider = new ElementMetadataFactoryFeature();
             var attributes = provider.GetMetadata(new JustUnionValidator());
             var attribute = Assert.Single(attributes.Attributes);
 
@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 });
         }
 
-        private class BaseElement : OpenXmlElement
+        private class BaseElement : TypedOpenXmlElement
         {
             public override bool HasChildren => throw new NotImplementedException();
 

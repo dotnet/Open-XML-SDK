@@ -42,6 +42,7 @@ namespace DocumentFormat.OpenXml.Tests
                 .GetTypeInfo()
                 .Assembly
                 .DefinedTypes
+                .Where(t => t != typeof(TypedOpenXmlPart))
                 .Concat(fromFramework)
                 .Distinct()
                 .Where(t => typeof(OpenXmlPart).GetTypeInfo().IsAssignableFrom(t))
@@ -151,6 +152,7 @@ namespace DocumentFormat.OpenXml.Tests
                 .GetTypeInfo()
                 .Assembly
                 .GetTypes()
+                .Where(t => !t.IsAbstract)
                 .Where(typeof(OpenXmlPart).IsAssignableFrom)
                 .Where(a => !_abstractOpenXmlParts.Contains(a))
                 .Select(a => (OpenXmlPart)Activator.CreateInstance(a, true));

@@ -12,6 +12,8 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class AlternateContentFallback : OpenXmlCompositeElement
     {
+        internal static OpenXmlQualifiedName InternalQName => new(AlternateContent.InternalQName.Namespace.Uri, Name);
+
         private const string Name = "Fallback";
 
         /// <summary>

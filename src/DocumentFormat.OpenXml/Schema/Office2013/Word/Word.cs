@@ -6,7 +6,7 @@ using System.ComponentModel;
 
 namespace DocumentFormat.OpenXml.Office2013.Word
 {
-    public partial class Person : OpenXmlCompositeElement
+    public partial class Person
     {
         /// <summary>
         /// Gets or sets the <see cref="Contact"/> value. It is only available for backwards compatibility

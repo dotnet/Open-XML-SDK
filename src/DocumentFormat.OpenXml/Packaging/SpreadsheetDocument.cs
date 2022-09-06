@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(RibbonAndBackstageCustomizationsPart), false, false)]
     [PartConstraint(typeof(WebExTaskpanesPart), false, false)]
     [PartConstraint(typeof(LabelInfoPart), false, false)]
-    public partial class SpreadsheetDocument : OpenXmlPackage
+    public partial class SpreadsheetDocument : TypedOpenXmlPackage
     {
         /// <summary>
         /// Gets the relationship type of the main part.
@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates a SpreadsheetDocument.
         /// </summary>
-        [Obsolete(ObsoleteMessage)]
+        [Obsolete(DoNotUseParameterlessConstructor)]
         protected SpreadsheetDocument()
             : base()
         {
@@ -783,7 +783,5 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion Package-based cloning
 
         #endregion cloning
-
-        internal override IFeatureCollection CreatePartFeatures(IFeatureCollection? other) => new PartContainerFeatureCollection(TypedFeatures.Shared, other);
     }
 }

@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// </summary>
     [Obsolete("Please use UnsignedIntegerType as this type will be removed in a future version")]
     [EditorBrowsable(EditorBrowsableState.Never)]
-    public partial class IdxXsdunsignedInt : OpenXmlLeafTextElement
+    public partial class IdxXsdunsignedInt : TypedOpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the IdxXsdunsignedInt class.

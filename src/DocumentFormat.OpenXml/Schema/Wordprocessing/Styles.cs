@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <summary>
     /// Defines Styles.
     /// </summary>
-    public partial class Styles : OpenXmlPartRootElement
+    public partial class Styles
     {
         /// <summary>
         /// Styles constructor.

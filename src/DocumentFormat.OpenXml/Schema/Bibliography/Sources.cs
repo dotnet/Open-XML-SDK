@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <summary>
     /// Defines Sources.
     /// </summary>
-    public partial class Sources : OpenXmlPartRootElement
+    public partial class Sources
     {
         /// <summary>
         /// Sources constructor.
