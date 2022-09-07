@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// </summary>
         /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        public void EditElement(Stream stream, VerifiableLog log)
+        internal void EditElement(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -139,7 +139,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// </summary>
         /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyElement(Stream stream, VerifiableLog log)
+        internal void VerifyElement(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
@@ -191,7 +191,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// </summary>
         /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        public void DeleteElement(Stream stream, VerifiableLog log)
+        internal void DeleteElement(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -247,7 +247,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// </summary>
         /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyDeletedElement(Stream stream, VerifiableLog log)
+        internal void VerifyDeletedElement(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
@@ -270,7 +270,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// </summary>
         /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        public void AddElement(Stream stream, VerifiableLog log)
+        internal void AddElement(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -329,7 +329,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// </summary>
         /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyAddedElemenet(Stream stream, VerifiableLog log)
+        internal void VerifyAddedElemenet(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {

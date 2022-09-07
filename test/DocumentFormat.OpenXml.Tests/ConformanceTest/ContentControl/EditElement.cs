@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 {
     public static class EditElement
     {
-        public static void EditContentControlElements(Stream stream, VerifiableLog log)
+        internal static void EditContentControlElements(Stream stream, VerifiableLog log)
         {
             using (WordprocessingDocument package = WordprocessingDocument.Open(stream, true))
             {

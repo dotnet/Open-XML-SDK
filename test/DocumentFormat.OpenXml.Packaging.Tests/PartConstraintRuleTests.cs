@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Tests.Common.OutputHelperExtensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;

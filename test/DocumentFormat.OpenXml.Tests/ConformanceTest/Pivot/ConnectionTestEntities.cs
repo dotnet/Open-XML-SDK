@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void VerifyConnection(Stream stream, VerifiableLog log)
+        internal void VerifyConnection(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void EditElement(Stream stream, VerifiableLog log)
+        internal void EditElement(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void VerifyElement(Stream stream, VerifiableLog log)
+        internal void VerifyElement(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void DeleteElement(Stream stream, VerifiableLog log)
+        internal void DeleteElement(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void VerifyDeletedElement(Stream stream, VerifiableLog log)
+        internal void VerifyDeletedElement(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void AddElement(Stream stream, VerifiableLog log)
+        internal void AddElement(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
@@ -195,7 +195,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             }
         }
 
-        public void VerifyAddedElement(Stream stream, VerifiableLog log)
+        internal void VerifyAddedElement(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {

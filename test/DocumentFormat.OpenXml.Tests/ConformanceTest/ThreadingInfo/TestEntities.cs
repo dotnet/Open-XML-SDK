@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Editing ThreadingInfo element
         /// </summary>
-        public void EditElements(Stream stream, VerifiableLog log)
+        internal void EditElements(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Verifying the ThreadingInfo element the existence
         /// </summary>
-        public void VerifyElements(Stream stream, VerifiableLog log)
+        internal void VerifyElements(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Deleting ThreadingInfo element
         /// </summary>
-        public void DeleteElements(Stream stream, VerifiableLog log)
+        internal void DeleteElements(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Verifying the ThreadingInfo element the deleting
         /// </summary>
-        public void VerifyDeleteElements(Stream stream, VerifiableLog log)
+        internal void VerifyDeleteElements(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Append the ThreadingInfo element
         /// </summary>
-        public void AddElements(Stream stream, VerifiableLog log)
+        internal void AddElements(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Verifying the workbookPr element the appending
         /// </summary>
-        public void VerifyAddElements(Stream stream, VerifiableLog log)
+        internal void VerifyAddElements(Stream stream, VerifiableLog log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {

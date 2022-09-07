@@ -5,7 +5,7 @@ using System;
 using System.Globalization;
 using System.Threading;
 
-namespace DocumentFormat.OpenXml.Tests.Common
+namespace DocumentFormat.OpenXml.Tests
 {
     internal readonly struct CultureInfoTester : IDisposable
     {

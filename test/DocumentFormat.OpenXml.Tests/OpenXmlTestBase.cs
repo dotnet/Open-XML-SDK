@@ -13,6 +13,6 @@ namespace DocumentFormat.OpenXml.Tests
             Log = new VerifiableLog(output);
         }
 
-        protected VerifiableLog Log { get; }
+        private protected VerifiableLog Log { get; }
     }
 }

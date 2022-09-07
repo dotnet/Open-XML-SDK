@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         /// <summary>
         /// Editing workbookPr element
         /// </summary>
-        public void EditElements(Stream stream, VerifiableLog log)
+        internal void EditElements(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyElements(Stream stream, VerifiableLog log)
+        internal void VerifyElements(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void DeleteElements(Stream stream, VerifiableLog log)
+        internal void DeleteElements(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
@@ -111,7 +111,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyDeleteElements(Stream stream, VerifiableLog log)
+        internal void VerifyDeleteElements(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
@@ -131,7 +131,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         /// </summary>
         /// <param name="stream">Target excel stream</param>
         /// <param name="log">Logger</param>
-        public void AddElement(Stream stream, VerifiableLog log)
+        internal void AddElement(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
@@ -169,7 +169,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        public void VerifyAddElements(Stream stream, VerifiableLog log)
+        internal void VerifyAddElements(Stream stream, VerifiableLog log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {

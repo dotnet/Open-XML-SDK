@@ -1,13 +1,15 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using System;
 using Xunit;
 using Xunit.Abstractions;
 
 namespace LogUtil
 {
-    public class VerifiableLog
+    internal class VerifiableLog
     {
         private readonly ITestOutputHelper _output;
 

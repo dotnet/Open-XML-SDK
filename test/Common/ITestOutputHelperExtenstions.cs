@@ -6,9 +6,9 @@ using Newtonsoft.Json.Converters;
 using System.IO;
 using Xunit.Abstractions;
 
-namespace DocumentFormat.OpenXml.Tests.Common.OutputHelperExtensions
+namespace DocumentFormat.OpenXml.Tests
 {
-    public static class ITestOutputHelperExtenstions
+    internal static class ITestOutputHelperExtenstions
     {
         public static void WriteObjectToTempFile(this ITestOutputHelper output, string name, object obj)
         {

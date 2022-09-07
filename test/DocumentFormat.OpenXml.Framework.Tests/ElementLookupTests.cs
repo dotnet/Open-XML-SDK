@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Tests.Common.OutputHelperExtensions;
+using DocumentFormat.OpenXml.Tests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
