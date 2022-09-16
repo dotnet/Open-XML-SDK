@@ -1811,6 +1811,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             foreach (var relationship in relationshipCollection)
             {
+                // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1205
+                if (relationship.RelationshipType == @"http://schemas.microsoft.com/office/2006/relationships/recovered")
+                {
+                    continue;
+                }
+
                 if (relationship.RelationshipType == HyperlinkRelationship.RelationshipTypeConst)
                 {
                     // Fix bug #517956 - both internal and external hyperlinks should be loaded as HyperlinkRelationship.
