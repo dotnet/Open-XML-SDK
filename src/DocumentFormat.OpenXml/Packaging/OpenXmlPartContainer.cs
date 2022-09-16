@@ -1811,7 +1811,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             foreach (var relationship in relationshipCollection)
             {
-                // http://github.com/
+                // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1205
                 if (relationship.RelationshipType == @"http://schemas.microsoft.com/office/2006/relationships/recovered")
                 {
                     continue;
