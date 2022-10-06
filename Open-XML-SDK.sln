@@ -89,6 +89,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerPointModernCommentSamp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVGExample", "samples\SVGExample\SVGExample.csproj", "{BADAC0CC-F3E6-440E-B322-DA2B97625F26}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RichData", "samples\RichData\RichData.csproj", "{8EE9F34E-EAA1-4F03-B388-8076CE44DD7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -187,6 +189,10 @@ Global
 		{BADAC0CC-F3E6-440E-B322-DA2B97625F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BADAC0CC-F3E6-440E-B322-DA2B97625F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BADAC0CC-F3E6-440E-B322-DA2B97625F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EE9F34E-EAA1-4F03-B388-8076CE44DD7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE9F34E-EAA1-4F03-B388-8076CE44DD7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE9F34E-EAA1-4F03-B388-8076CE44DD7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE9F34E-EAA1-4F03-B388-8076CE44DD7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,6 +222,7 @@ Global
 		{5241BCF2-331D-428E-A9C4-F8DF92C8F726} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 		{3ECC7570-3501-479D-9CD9-64799C2AD149} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 		{BADAC0CC-F3E6-440E-B322-DA2B97625F26} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
+		{8EE9F34E-EAA1-4F03-B388-8076CE44DD7B} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F476383-E917-43D1-A1E5-9A61A47DA3F5}
