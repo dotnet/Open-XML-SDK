@@ -6,8 +6,9 @@ using DocumentFormat.OpenXml.Office2019.Excel.RichData2;
 using DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Wordprocessing;
 using System;
-
+using NumberingFormat = DocumentFormat.OpenXml.Spreadsheet.NumberingFormat;
 using Value = DocumentFormat.OpenXml.Office2019.Excel.RichData.Value;
 
 namespace RichData
@@ -54,6 +55,10 @@ namespace RichData
                 AddRichStylesPart(workbookPart);
 
                 AddRdSupportingPropertyBagStructurePart(workbookPart);
+
+                AddRdSupportingPropertyBagPart(workbookPart);
+
+                AddRdRichValueTypesPart(workbookPart);
 
                 // Close and save the spreadsheet
                 spreadsheetDocument.Close();
@@ -310,49 +315,316 @@ namespace RichData
 
             rdSupportingPropertyBagStructurePart.SupportingPropertyBagStructures = new SupportingPropertyBagStructures(
                     new SupportingPropertyBagStructure(
-                        new Key() { N = "SourceText", T = RichValueValueType.S },
-                        new Key() { N = "LicenseText", T = RichValueValueType.S },
-                        new Key() { N = "SourceAddress", T = RichValueValueType.S },
-                        new Key() { N = "LicenseAddress", T = RichValueValueType.S }),
+                        new SupportingPropertyBagKey() { N = "SourceText", T = SupportingPropertyBagValueType.S },
+                        new SupportingPropertyBagKey() { N = "LicenseText", T = SupportingPropertyBagValueType.S },
+                        new SupportingPropertyBagKey() { N = "SourceAddress", T = SupportingPropertyBagValueType.S },
+                        new SupportingPropertyBagKey() { N = "LicenseAddress", T = SupportingPropertyBagValueType.S }),
                     new SupportingPropertyBagStructure(
-                        new Key() { N = "Area", T = RichValueValueType.Spb },
-                        new Key() { N = "Name", T = RichValueValueType.Spb },
-                        new Key() { N = "Population", T = RichValueValueType.Spb },
-                        new Key() { N = "UniqueName", T = RichValueValueType.Spb },
-                        new Key() { N = "Description", T = RichValueValueType.Spb },
-                        new Key() { N = "Country/region", T = RichValueValueType.Spb },
-                        new Key() { N = "Admin Division 1 (State/province/other)", T = RichValueValueType.Spb },
-                        new Key() { N = "Admin Division 2 (County/district/other)", T = RichValueValueType.Spb }),
+                        new SupportingPropertyBagKey() { N = "Area", T = SupportingPropertyBagValueType.Spb },
+                        new SupportingPropertyBagKey() { N = "Name", T = SupportingPropertyBagValueType.Spb },
+                        new SupportingPropertyBagKey() { N = "Population", T = SupportingPropertyBagValueType.Spb },
+                        new SupportingPropertyBagKey() { N = "UniqueName", T = SupportingPropertyBagValueType.Spb },
+                        new SupportingPropertyBagKey() { N = "Description", T = SupportingPropertyBagValueType.Spb },
+                        new SupportingPropertyBagKey() { N = "Country/region", T = SupportingPropertyBagValueType.Spb },
+                        new SupportingPropertyBagKey() { N = "Admin Division 1 (State/province/other)", T = SupportingPropertyBagValueType.Spb },
+                        new SupportingPropertyBagKey() { N = "Admin Division 2 (County/district/other)", T = SupportingPropertyBagValueType.Spb }),
                     new SupportingPropertyBagStructure(
-                        new Key() { N = "^Order", T = RichValueValueType.Spb },
-                        new Key() { N = "TitleProperty", T = RichValueValueType.S },
-                        new Key() { N = "SubTitleProperty", T = RichValueValueType.S }),
+                        new SupportingPropertyBagKey() { N = "^Order", T = SupportingPropertyBagValueType.Spb },
+                        new SupportingPropertyBagKey() { N = "TitleProperty", T = SupportingPropertyBagValueType.S },
+                        new SupportingPropertyBagKey() { N = "SubTitleProperty", T = SupportingPropertyBagValueType.S }),
                     new SupportingPropertyBagStructure(
-                        new Key() { N = "ShowInCardView", T = RichValueValueType.B },
-                        new Key() { N = "ShowInDotNotation", T = RichValueValueType.B },
-                        new Key() { N = "ShowInAutoComplete", T = RichValueValueType.B }),
+                        new SupportingPropertyBagKey() { N = "ShowInCardView", T = SupportingPropertyBagValueType.B },
+                        new SupportingPropertyBagKey() { N = "ShowInDotNotation", T = SupportingPropertyBagValueType.B },
+                        new SupportingPropertyBagKey() { N = "ShowInAutoComplete", T = SupportingPropertyBagValueType.B }),
                     new SupportingPropertyBagStructure(
-                        new Key() { N = "ShowInDotNotation", T = RichValueValueType.B },
-                        new Key() { N = "ShowInAutoComplete", T = RichValueValueType.B }),
+                        new SupportingPropertyBagKey() { N = "ShowInDotNotation", T = SupportingPropertyBagValueType.B },
+                        new SupportingPropertyBagKey() { N = "ShowInAutoComplete", T = SupportingPropertyBagValueType.B }),
                     new SupportingPropertyBagStructure(
-                        new Key() { N = "UniqueName", T = RichValueValueType.Spb },
-                        new Key() { N = "VDPID/VSID", T = RichValueValueType.Spb },
-                        new Key() { N = "Description", T = RichValueValueType.Spb },
-                        new Key() { N = "LearnMoreOnLink", T = RichValueValueType.Spb }),
+                        new SupportingPropertyBagKey() { N = "UniqueName", T = SupportingPropertyBagValueType.Spb },
+                        new SupportingPropertyBagKey() { N = "VDPID/VSID", T = SupportingPropertyBagValueType.Spb },
+                        new SupportingPropertyBagKey() { N = "Description", T = SupportingPropertyBagValueType.Spb },
+                        new SupportingPropertyBagKey() { N = "LearnMoreOnLink", T = SupportingPropertyBagValueType.Spb }),
                     new SupportingPropertyBagStructure(
-                        new Key() { N = "Name", T = RichValueValueType.I },
-                        new Key() { N = "Image", T = RichValueValueType.I },
-                        new Key() { N = "Description", T = RichValueValueType.I }),
+                        new SupportingPropertyBagKey() { N = "Name", T = SupportingPropertyBagValueType.I },
+                        new SupportingPropertyBagKey() { N = "Image", T = SupportingPropertyBagValueType.I },
+                        new SupportingPropertyBagKey() { N = "Description", T = SupportingPropertyBagValueType.I }),
                     new SupportingPropertyBagStructure(
-                        new Key() { N = "link", T = RichValueValueType.S },
-                        new Key() { N = "logo", T = RichValueValueType.S },
-                        new Key() { N = "name", T = RichValueValueType.S }),
+                        new SupportingPropertyBagKey() { N = "link", T = SupportingPropertyBagValueType.S },
+                        new SupportingPropertyBagKey() { N = "logo", T = SupportingPropertyBagValueType.S },
+                        new SupportingPropertyBagKey() { N = "name", T = SupportingPropertyBagValueType.S }),
                     new SupportingPropertyBagStructure(
-                        new Key() { N = "Area", T = RichValueValueType.S },
-                        new Key() { N = "Population", T = RichValueValueType.S }),
+                        new SupportingPropertyBagKey() { N = "Area", T = SupportingPropertyBagValueType.S },
+                        new SupportingPropertyBagKey() { N = "Population", T = SupportingPropertyBagValueType.S }),
                     new SupportingPropertyBagStructure(
-                        new Key() { N = "_Self", T = RichValueValueType.I }))
+                        new SupportingPropertyBagKey() { N = "_Self", T = SupportingPropertyBagValueType.I }))
             { Count = 10 };
+        }
+
+        private static void AddRdSupportingPropertyBagPart(WorkbookPart workbookPart)
+        {
+            RdSupportingPropertyBagPart rdSupportingPropertyBagPart = workbookPart.AddNewPart<RdSupportingPropertyBagPart>();
+
+            rdSupportingPropertyBagPart.SupportingPropertyBags =
+                new SupportingPropertyBags(
+                    new SupportingPropertyBagArrayData(
+                        new SupportingPropertyBagArray(
+                            new SupportingPropertyBagArrayValue("%EntityServiceId") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("%IsRefreshable") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("%EntityCulture") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("%EntityId") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("_Icon") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("_Provider") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("_Attribution") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("_Display") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("Name") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("_Format") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("Admin Division 2 (County/district/other)") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("Admin Division 1 (State/province/other)") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("Country/region") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("Leader(s)") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("_SubLabel") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("Population") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("Area") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("Latitude") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("Longitude") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("Time zone(s)") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("_Flags") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("VDPID/VSID") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("UniqueName") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("_DisplayString") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("LearnMoreOnLink") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("Image") { T = SupportingPropertyBagArrayValueType.S },
+                            new SupportingPropertyBagArrayValue("Description") { T = SupportingPropertyBagArrayValueType.S })
+                        { Count = 27 })
+                    { Count = 1 },
+                    new SupportingPropertyBagData(
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("Wikipedia	Wikipedia	Wikipedia	Wikipedia	"),
+                            new SupportingPropertyBagArrayValue("CC-BY-SA	CC-BY-SA	CC-BY-SA	CC-BY-SA	"),
+                            new SupportingPropertyBagArrayValue("http://en.wikipedia.org/wiki/Seattle	http://de.wikipedia.org/wiki/Seattle	http://es.wikipedia.org/wiki/Seattle	http://fr.wikipedia.org/wiki/Seattle	"),
+                            new SupportingPropertyBagArrayValue("http://creativecommons.org/licenses/by-sa/3.0/	http://creativecommons.org/licenses/by-sa/3.0/	http://creativecommons.org/licenses/by-sa/3.0/	http://creativecommons.org/licenses/by-sa/3.0/	"))
+                        { S = 0 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("Wikipedia	Sec	"),
+                            new SupportingPropertyBagArrayValue("CC-BY-SA		"),
+                            new SupportingPropertyBagArrayValue("http://en.wikipedia.org/wiki/Seattle https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001930189	"),
+                            new SupportingPropertyBagArrayValue("http://creativecommons.org/licenses/by-sa/3.0/		"))
+                        { S = 0 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("Wikipedia	"),
+                            new SupportingPropertyBagArrayValue("CC-BY-SA	"),
+                            new SupportingPropertyBagArrayValue("http://en.wikipedia.org/wiki/Seattle	"),
+                            new SupportingPropertyBagArrayValue("http://creativecommons.org/licenses/by-sa/3.0/	"))
+                        { S = 0 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("Wikipedia	Wikipedia	Sec	"),
+                            new SupportingPropertyBagArrayValue("CC-BY-SA	CC-BY-SA		"),
+                            new SupportingPropertyBagArrayValue("http://en.wikipedia.org/wiki/Seattle https://en.wikipedia.org/wiki/Seattle https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001930189	"),
+                            new SupportingPropertyBagArrayValue("http://creativecommons.org/licenses/by-sa/3.0/	http://creativecommons.org/licenses/by-sa/3.0/		"))
+                        { S = 0 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("Wikipedia	Wikipedia	"),
+                            new SupportingPropertyBagArrayValue("CC-BY-SA	CC-BY-SA	"),
+                            new SupportingPropertyBagArrayValue("http://en.wikipedia.org/wiki/Seattle	https://en.wikipedia.org/wiki/Seattle	"),
+                            new SupportingPropertyBagArrayValue("http://creativecommons.org/licenses/by-sa/3.0/	http://creativecommons.org/licenses/by-sa/3.0/	"))
+                        { S = 0 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("Wikipedia	Wikipedia	"),
+                            new SupportingPropertyBagArrayValue("CC-BY-SA	CC-BY-SA	"),
+                            new SupportingPropertyBagArrayValue("http://en.wikipedia.org/wiki/Seattle	http://fr.wikipedia.org/wiki/Seattle	"),
+                            new SupportingPropertyBagArrayValue("http://creativecommons.org/licenses/by-sa/3.0/	http://creativecommons.org/licenses/by-sa/3.0/	"))
+                        { S = 0 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("0"),
+                            new SupportingPropertyBagArrayValue("1"),
+                            new SupportingPropertyBagArrayValue("2"),
+                            new SupportingPropertyBagArrayValue("1"),
+                            new SupportingPropertyBagArrayValue("2"),
+                            new SupportingPropertyBagArrayValue("3"),
+                            new SupportingPropertyBagArrayValue("4"),
+                            new SupportingPropertyBagArrayValue("5"))
+                        { S = 1 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("0"),
+                            new SupportingPropertyBagArrayValue("Name"),
+                            new SupportingPropertyBagArrayValue("LearnMoreOnLink"))
+                        { S = 2 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("0"),
+                            new SupportingPropertyBagArrayValue("0"),
+                            new SupportingPropertyBagArrayValue("0"))
+                        { S = 3 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("0"),
+                            new SupportingPropertyBagArrayValue("0"))
+                        { S = 4 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("8"),
+                            new SupportingPropertyBagArrayValue("8"),
+                            new SupportingPropertyBagArrayValue("9"),
+                            new SupportingPropertyBagArrayValue("8"))
+                        { S = 5 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("1"),
+                            new SupportingPropertyBagArrayValue("2"),
+                            new SupportingPropertyBagArrayValue("3"))
+                        { S = 6 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("https://www.bing.com"),
+                            new SupportingPropertyBagArrayValue("https://www.bing.com/th?id=Ga%5Cbing_yt.png&amp;w=100&amp;h=40&amp;c=0&amp;pid=0.1"),
+                            new SupportingPropertyBagArrayValue("Powered by Bing"))
+                        { S = 7 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("square km"),
+                            new SupportingPropertyBagArrayValue("2020"))
+                        { S = 8 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("4"))
+                        { S = 9 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("Wikipedia	"),
+                            new SupportingPropertyBagArrayValue("CC BY-SA 3.0	"),
+                            new SupportingPropertyBagArrayValue("http://nl.wikipedia.org/wiki/Seattle	"),
+                            new SupportingPropertyBagArrayValue("https://creativecommons.org/licenses/by-sa/3.0	"))
+                        { S = 0 },
+                        new SupportingPropertyBag(
+                            new SupportingPropertyBagArrayValue("5"))
+                        { S = 9 })
+                    { Count = 17 });
+        }
+
+        private static void AddRdRichValueTypesPart(WorkbookPart workbookPart)
+        {
+            RdRichValueTypesPart rdRichValueTypesPart = workbookPart.AddNewPart<RdRichValueTypesPart>();
+
+            rdRichValueTypesPart.RichValueTypesInfo =
+                new RichValueTypesInfo(
+                    new RichValueGlobalType(
+                        new RichValueTypeKeyFlags(
+                            new RichValueTypeReservedKey(
+                                new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromFile", Value = true },
+                                new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                            { Name = "_Self" },
+                            new RichValueTypeReservedKey(
+                                new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                            { Name = "_DisplayString" },
+                            new RichValueTypeReservedKey(
+                                new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                            { Name = "_Flags" },
+                            new RichValueTypeReservedKey(
+                                new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                            { Name = "_Format" },
+                            new RichValueTypeReservedKey(
+                                new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                            { Name = "_SubLabel" },
+                            new RichValueTypeReservedKey(
+                                new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                            { Name = "_Attribution" },
+                            new RichValueTypeReservedKey(
+                                new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                            { Name = "_Icon" },
+                            new RichValueTypeReservedKey(
+                                new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                            { Name = "_Display" },
+                            new RichValueTypeReservedKey(
+                                new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                            { Name = "_CanonicalPropertyNames" },
+                            new RichValueTypeReservedKey(
+                                new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                            { Name = "_ClassificationId" })),
+                    new RichValueTypes(
+                        new RichValueType(
+                            new RichValueTypeKeyFlags(
+                                new RichValueTypeReservedKey(
+                                  new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                  new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                  new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%EntityServiceId" },
+                                new RichValueTypeReservedKey(
+                                  new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                  new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                  new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%EntityCulture" },
+                                new RichValueTypeReservedKey(
+                                  new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                  new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                  new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%EntityId" },
+                                new RichValueTypeReservedKey(
+                                  new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                  new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                  new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false },
+                                  new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })))
+                        { Name = "_linkedentity2" },
+                        new RichValueType(
+                            new RichValueTypeKeyFlags(
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%ProviderInfo" },
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%DataProviderExternalLinkLogo" },
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%DataProviderExternalLink" },
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                                { Name = "%DataRetrievedTime" },
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%EntityDomainIdString" },
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%InfoToolTipLabelNames" },
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%InfoToolTipLabelValues" },
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%InfoToolTipLabelValuesType" },
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%DataProviderString" },
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%ClassificationId" },
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                                { Name = "%OutdatedReason" }))
+                        { Name = "_linkedentity2core" },
+                        new RichValueType(
+                            new RichValueTypeKeyFlags(
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false })
+                                { Name = "WebImageIdentifier" }))
+                        { Name = "_webimage" }));
+
+            rdRichValueTypesPart.RichValueTypesInfo.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
+            rdRichValueTypesPart.RichValueTypesInfo.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
         }
     }
 }
