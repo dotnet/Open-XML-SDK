@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Office2019.Excel.RichData;
 using DocumentFormat.OpenXml.Office2019.Excel.RichData2;
 using DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage;
@@ -8,6 +9,8 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using NumberingFormat = DocumentFormat.OpenXml.Spreadsheet.NumberingFormat;
 using Value = DocumentFormat.OpenXml.Office2019.Excel.RichData.Value;
 
@@ -28,8 +31,7 @@ namespace RichData
             }
             else if (Common.ExampleUtilities.CheckIfFilesExist(args))
             {
-                // InsertRichData(args[0]);
-                InsertRichData(@"C:\source\deleteThis\test2\bar.xlsx");
+                InsertRichData(args[0]);
             }
         }
 
@@ -59,6 +61,10 @@ namespace RichData
                 AddRdSupportingPropertyBagPart(workbookPart);
 
                 AddRdRichValueTypesPart(workbookPart);
+
+                AddSheetData(spreadsheetDocument);
+
+                AddMetaDataPart(workbookPart);
 
                 // Close and save the spreadsheet
                 spreadsheetDocument.Close();
@@ -125,7 +131,8 @@ namespace RichData
                     new Value("12"),
                     new Value("15"),
                     new Value("6"),
-                    new Value("0"))
+                    new Value("0"),
+                    new Value("Image of Seattle"))
                 { S = 2 },
                 new RichValue(
                     new RichValueFallback("47.603228999999999"),
@@ -142,7 +149,7 @@ namespace RichData
                     new Value("0"))
                 { S = 3 },
                 new RichValue(
-                    new Value("https://www.bing.com/search?q=seattle&amp;form=skydnc"),
+                    new Value(@"https://www.bing.com/search?q=seattle&amp;form=skydnc"),
                     new Value("Learn more on Bing"))
                 { S = 4 },
                 new RichValue(
@@ -303,10 +310,6 @@ namespace RichData
                     new RichStyle(
                         new RichStylePropertyValue("0.0000") { I = 3 })
                     { Dxfid = 1 }));
-
-
-            // does mc:Ignorable="x" need to be set here?
-            // richStylesPart.RichStylesheet.SetAttribute(new DocumentFormat.OpenXml.OpenXmlAttribute())
         }
 
         private static void AddRdSupportingPropertyBagStructurePart(WorkbookPart workbookPart)
@@ -554,10 +557,31 @@ namespace RichData
                                   new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
                                   new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
                                   new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false },
-                                  new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })))
+                                  new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                                { Name = "%cvi" }))
                         { Name = "_linkedentity2" },
                         new RichValueType(
                             new RichValueTypeKeyFlags(
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%EntityServiceId" },
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%EntityCulture" },
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false })
+                                { Name = "%EntityId" },
+                                new RichValueTypeReservedKey(
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ShowInAutoComplete", Value = false },
+                                    new RichValueTypeReservedKeyFlag() { Name = "ExcludeFromCalcComparison", Value = true })
+                                { Name = "%IsRefreshable" },
                                 new RichValueTypeReservedKey(
                                     new RichValueTypeReservedKeyFlag() { Name = "ShowInCardView", Value = false },
                                     new RichValueTypeReservedKeyFlag() { Name = "ShowInDotNotation", Value = false },
@@ -625,6 +649,84 @@ namespace RichData
 
             rdRichValueTypesPart.RichValueTypesInfo.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             rdRichValueTypesPart.RichValueTypesInfo.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
+        }
+
+        private static void AddSheetData(SpreadsheetDocument spreadsheetDocument)
+        {
+            if (spreadsheetDocument.WorkbookPart.GetPartsOfType<SharedStringTablePart>().Count() == 0)
+            {
+                SharedStringTablePart shareStringPart = spreadsheetDocument.WorkbookPart.AddNewPart<SharedStringTablePart>();
+                shareStringPart.SharedStringTable = new SharedStringTable();
+            }
+
+            Worksheet worksheet = spreadsheetDocument.WorkbookPart.WorksheetParts.First().Worksheet;
+
+            if (worksheet is not null)
+            {
+                List<StringValue> stringValues = new List<StringValue>();
+                stringValues.Add("1:1");
+
+                SheetData sheetData = worksheet.GetFirstChild<SheetData>();
+
+                if (sheetData is not null)
+                {
+                    sheetData.AppendChild(
+                        new Row(
+                            new Cell(
+                                    new Xstring("#VALUE!"))
+                            { CellReference = "A1", DataType = CellValues.Error, ValueMetaIndex = 1 })
+                        { RowIndex = 1, Spans = new ListValue<StringValue>(stringValues), DyDescent = .25 });
+                }
+                else
+                {
+                    worksheet.AppendChild(new SheetData(
+                            new Row(
+                                    new Cell(
+                                            new Value("#VALUE!"))
+                                    { CellReference = "A1", DataType = CellValues.Error, ValueMetaIndex = 1 })
+                            { RowIndex = 1, Spans = new ListValue<StringValue>(stringValues), DyDescent = .25 }));
+                }
+            }
+        }
+
+        private static void AddMetaDataPart(WorkbookPart workbookPart)
+        {
+            if (workbookPart.CellMetadataPart is null)
+            {
+                workbookPart.AddNewPart<CellMetadataPart>();
+            }
+
+            workbookPart.CellMetadataPart.Metadata =
+                new Metadata(
+                    new MetadataTypes(
+                        new MetadataType()
+                        {
+                            Name = "XLRICHVALUE",
+                            MinSupportedVersion = 120000,
+                            Copy = true,
+                            PasteAll = true,
+                            PasteValues = true,
+                            Merge = true,
+                            SplitFirst = true,
+                            RowColumnShift = true,
+                            ClearFormats = true,
+                            ClearComments = true,
+                            Assign = true,
+                            Coerce = true,
+                        })
+                    { Count = 1 },
+                    new FutureMetadata(
+                        new MetadataBlock(
+                            new CacheFieldExtensionList(
+                                new Extension(
+                                    new RichValueBlock() { I = 0 })
+                                { Uri = "{3e2802c4-a4d2-4d8b-9148-e3be6c30e623}" })))
+                    { Name = "XLRICHVALUE", Count = 1 },
+                    new ValueMetadata(
+                        new MetadataBlock(
+                            new MetadataRecord()
+                            { TypeIndex = 1, Val = 0 }))
+                    { Count = 1 });
         }
     }
 }
