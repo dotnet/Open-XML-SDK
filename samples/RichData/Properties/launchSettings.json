@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "RichData": {
-      "commandName": "Project",
-      "commandLineArgs": "\"C:\\source\\deleteThis\\test\\foo.xlsx\""
-    }
-  }
-}
