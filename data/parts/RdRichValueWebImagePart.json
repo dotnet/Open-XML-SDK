@@ -4,10 +4,10 @@
   "Base": "OpenXmlPart",
   "ContentType": "application/vnd.ms-excel.rdrichvaluewebimage\u002Bxml",
   "RelationshipType": "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage",
-  "Target": "rdrichvaluewebimage",
+  "Target": "rdRichValueWebImage",
   "RootElement": "webImagesSrd",
   "Paths": {
-    "General": "richdata"
+    "General": "richData"
   },
   "Version": "Office2021"
 }
