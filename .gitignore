@@ -187,3 +187,5 @@ project.lock.json
 *.exe
 
 msbuild.binlog
+
+/.idea/
