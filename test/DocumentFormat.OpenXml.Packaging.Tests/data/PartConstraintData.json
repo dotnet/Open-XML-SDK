@@ -3506,8 +3506,8 @@
     "IsContentTypeFixed": true,
     "RelationshipType": "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage",
     "TargetFileExtension": ".xml",
-    "TargetName": "rdrichvaluewebimage",
-    "TargetPath": "richdata",
+    "TargetName": "rdRichValueWebImage",
+    "TargetPath": "richData",
     "DataParts": {},
     "Parts": {}
   },
