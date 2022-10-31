@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Svg" Version="3.3.0" />
+    <PackageReference Include="Svg" Version="3.4.4" />
   </ItemGroup>
 
   <ItemGroup>
