@@ -1975,9 +1975,9 @@ namespace DocumentFormat.OpenXml.Packaging
             [KnownFeature(typeof(AnnotationsFeature))]
             [DelegatedFeature(nameof(_other))]
             [DelegatedFeature(nameof(Default))]
-            private partial TFeature? GetDefault<TFeature>();
+            private partial T? GetDefault<T>();
 
-            public TFeature? Get<TFeature>() => GetDefault<TFeature>();
+            public T? Get<T>() => GetDefault<T>();
 
             public void Set<TFeature>(TFeature? instance)
             {

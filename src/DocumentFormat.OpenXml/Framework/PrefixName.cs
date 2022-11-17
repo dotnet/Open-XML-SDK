@@ -19,7 +19,7 @@ internal readonly struct PrefixName
 
     public static PrefixName Parse(string name)
     {
-#if NET5_0
+#if NET5_0_OR_GREATER
         var idx = name.IndexOf(':', StringComparison.Ordinal);
 #else
         var idx = name.IndexOf(':');

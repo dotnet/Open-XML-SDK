@@ -13,7 +13,7 @@ jobs:
         useGlobalJson: true
 
     - task: UseDotNet@2
-      displayName: 'Install .NET 5 SDK'
+      displayName: 'Install .NET 5 SDK for GitVersion'
       inputs:
         packageType: 'sdk'
         version: 5.x 

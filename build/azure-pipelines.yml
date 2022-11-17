@@ -24,20 +24,27 @@ stages:
         parameters:
           buildTargets:
             - name: net35
+              runtimes:
+                - 6.0.11
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
             - name: net40
+              runtimes:
+                - 6.0.11
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
             - name: net46
+              runtimes:
+                - 6.0.11
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
             - name: netstandard1_3
               runtimes:
                 - 2.1.23
+                - 6.0.11
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
@@ -46,6 +53,7 @@ stages:
             - name: netcoreapp2_1
               runtimes:
                 - 2.1.23
+                - 6.0.11
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
@@ -54,12 +62,15 @@ stages:
             - name: netcoreapp3_1
               runtimes:
                 - 3.1.10
+                - 6.0.11
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
                 - image: 'ubuntu-20.04'
                   name: 'linux'
             - name: net5_0
+              runtimes:
+                - 6.0.11
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'

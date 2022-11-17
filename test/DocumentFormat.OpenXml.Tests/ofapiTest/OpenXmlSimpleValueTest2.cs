@@ -6,8 +6,10 @@ using System;
 using System.Globalization;
 using Xunit;
 
+#pragma warning disable CS8981
 using M = DocumentFormat.OpenXml.Math;
 using xvml = DocumentFormat.OpenXml.Vml.Spreadsheet;
+#pragma warning restore CS8981
 
 namespace DocumentFormat.OpenXml.Tests
 {

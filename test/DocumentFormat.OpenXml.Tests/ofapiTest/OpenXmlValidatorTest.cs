@@ -1033,7 +1033,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value 'abc'. The string 'abc' is not a valid 'Single' value.", actual.First().Description);
 
-#if !NETCOREAPP3_1 && !NET5_0 // Fails due to https://github.com/dotnet/coreclr/issues/27898
+#if !NETCOREAPP3_1 && !NET5_0_OR_GREATER // Fails due to https://github.com/dotnet/coreclr/issues/27898
             // float overflow
             element.Val.InnerText = "-3.402823e39";
             actual = O12Validator.Validate(element);
@@ -1098,7 +1098,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value 'abc'. The string 'abc' is not a valid 'Double' value.", actual.First().Description);
 
-#if !NETCOREAPP3_1 && !NET5_0 // Fails due to https://github.com/dotnet/coreclr/issues/27898
+#if !NETCOREAPP3_1 && !NET5_0_OR_GREATER // Fails due to https://github.com/dotnet/coreclr/issues/27898
             // double overflow
             element.Val.InnerText = "-1.79769313486232e309";
             actual = O12Validator.Validate(element);

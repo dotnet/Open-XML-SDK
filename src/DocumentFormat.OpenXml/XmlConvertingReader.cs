@@ -97,8 +97,10 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override int AttributeCount => BaseReader.AttributeCount;
 
+#pragma warning disable CS8603
         /// <inheritdoc/>
-        public override string? BaseURI => BaseReader.BaseURI;
+        public override string BaseURI => BaseReader.BaseURI;
+#pragma warning restore CS8603
 
         /// <inheritdoc/>
         public override bool CanReadBinaryContent => BaseReader.CanReadBinaryContent;

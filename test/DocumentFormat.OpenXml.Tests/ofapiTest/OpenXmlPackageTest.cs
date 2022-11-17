@@ -10,11 +10,13 @@ using Xunit;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 
+#pragma warning disable CS8981
 using a = DocumentFormat.OpenXml.Drawing;
 using pic = DocumentFormat.OpenXml.Drawing.Pictures;
 using w = DocumentFormat.OpenXml.Wordprocessing;
 using wp = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using x = DocumentFormat.OpenXml.Spreadsheet;
+#pragma warning restore CS8981
 
 namespace DocumentFormat.OpenXml.Tests
 {
