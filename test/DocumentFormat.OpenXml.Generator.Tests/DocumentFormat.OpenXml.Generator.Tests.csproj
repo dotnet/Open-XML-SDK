@@ -1,13 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <TargetFrameworks>$(BenchmarkTargetFramework)</TargetFrameworks>
+    <TargetFrameworks>net6.0</TargetFrameworks>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.SourceGenerators.Testing.XUnit" />
+    <PackageReference Include="Microsoft.CodeAnalysis" Version="4.1.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.SourceGenerators.Testing.XUnit" Version="1.1.1" />
   </ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\..\gen\DocumentFormat.OpenXml.Generator\DocumentFormat.OpenXml.Generator.csproj" />
   </ItemGroup>
+
 </Project>

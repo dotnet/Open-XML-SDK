@@ -38,21 +38,28 @@ stages:
             - name: netstandard1_3
               runtimes:
                 - 2.1.23
-                - 6.0.11
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
                 - image: 'ubuntu-20.04'
                   name: 'linux'
-            - name: net6_0
+            - name: netcoreapp2_1
               runtimes:
-                - 6.0.11
+                - 2.1.23
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
                 - image: 'ubuntu-20.04'
                   name: 'linux'
-            - name: net7_0
+            - name: netcoreapp3_1
+              runtimes:
+                - 3.1.10
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
+                - image: 'ubuntu-20.04'
+                  name: 'linux'
+            - name: net5_0
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'

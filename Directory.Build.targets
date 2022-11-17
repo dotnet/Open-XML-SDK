@@ -51,14 +51,14 @@
   <ItemGroup>
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)\stylecop.json" />
 
-    <PackageReference Include="StyleCop.Analyzers">
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.321">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
 
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
@@ -76,7 +76,7 @@
   </PropertyGroup>
 
   <Import Condition="$(IncludeFrameworkShims)" Project="$(MSBuildThisFileDirectory)src\common\FrameworkShims.targets" />
-  <Import Condition="$(IncludeSourceGenerator)" Project="$(MSBuildThisFileDirectory)gen\DocumentFormat.OpenXml.Generator\SourceGenerator.targets" />
+  <Import Condition="$(IncludeSourceGenerator)" Project="$(MSBuildThisFileDirectory)gen\DocumentFormat.OpenXml.Generator\SourceGenerator.targets"/>
 
   <PropertyGroup>
     <PackageOutputPath>$(MSBuildThisFileDirectory)bin\$(Configuration)\packages\</PackageOutputPath>

@@ -1,4 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Nullable>enable</Nullable>
@@ -7,11 +8,14 @@
     <IncludeInitShim>true</IncludeInitShim>
     <IsRoslynComponent>true</IsRoslynComponent>
   </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.1.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3" PrivateAssets="all" />
   </ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\DocumentFormat.OpenXml.Generator.Models\DocumentFormat.OpenXml.Generator.Models.csproj" />
   </ItemGroup>
+
 </Project>

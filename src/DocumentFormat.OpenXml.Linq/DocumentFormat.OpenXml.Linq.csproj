@@ -40,7 +40,7 @@
 
     <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
       <ItemGroup>
-        <PackageReference Include="System.Xml.ReaderWriter" />
+        <PackageReference Include="System.Xml.ReaderWriter" Version="4.3.1" />
       </ItemGroup>
     </When>
   </Choose>

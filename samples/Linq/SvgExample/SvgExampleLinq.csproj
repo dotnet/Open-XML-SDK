@@ -1,23 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
   <ItemGroup>
-    <!--
+      <!--
 		SVG image downloaded from https://freesvg.org/.
 		License: https://creativecommons.org/publicdomain/zero/1.0/
 		-->
-    <Content Include="Content\Dinosaur.svg">
+	  <Content Include="Content\Dinosaur.svg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\EmptySlide.pptx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+
   <ItemGroup>
-    <PackageReference Include="Svg" />
+    <PackageReference Include="Svg" Version="3.4.4" />
   </ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\DocumentFormat.OpenXml.Linq\DocumentFormat.OpenXml.Linq.csproj" />
   </ItemGroup>
+
 </Project>
