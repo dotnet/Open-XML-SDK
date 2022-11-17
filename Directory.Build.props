@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
   <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <IsShipped>false</IsShipped>
     <NoWarn>$(NoWarn);SA0001</NoWarn>
-    <SystemIOPackagingVersion>4.7.0</SystemIOPackagingVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 
     <!-- Because of the size of the project, to facilitate  quick development, by default only single

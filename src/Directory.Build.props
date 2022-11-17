@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Import Project="..\Directory.Build.props" />
-
   <PropertyGroup>
     <Nullable>enable</Nullable>
     <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
-
   <PropertyGroup>
     <Authors>Microsoft</Authors>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -21,7 +19,6 @@
     <!-- For backwards compatibility. See https://aka.ms/deprecateIconUrl -->
     <PackageIconUrl>https://raw.githubusercontent.com/OfficeDev/Open-XML-SDK/master/icon.png</PackageIconUrl>
   </PropertyGroup>
-
   <PropertyGroup>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -29,17 +26,13 @@
     <IncludeSymbols>true</IncludeSymbols>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
-
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)..\icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
   </ItemGroup>
-
 </Project>
