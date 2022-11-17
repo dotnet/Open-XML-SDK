@@ -35,7 +35,7 @@ internal partial class TypedFeatures : IFeatureCollection
     [KnownFeature(typeof(IPartFactory), typeof(ReflectionPartFactory))]
     [DelegatedFeature(nameof(FeatureCollection.Default), typeof(FeatureCollection))]
     [ThreadSafe]
-    public partial TFeature? Get<TFeature>();
+    public partial T? Get<T>();
 
     public void Set<TFeature>(TFeature? instance)
     {

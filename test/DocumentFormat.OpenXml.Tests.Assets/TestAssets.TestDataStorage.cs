@@ -259,7 +259,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     public static class Wordprocessing
                     {
-                        public const string Complex1NOR = "TestDataStorage.v2FxTestFiles.asSources.wordprocessing.complex1.NOR.docx";
+                        public const string Complex1NOR = "TestDataStorage.v2FxTestFiles.asSources.wordprocessing.complex1_NOR.docx";
                     }
                 }
 

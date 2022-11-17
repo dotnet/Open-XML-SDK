@@ -1,18 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFrameworks>$(AssetsTargetFrameworks)</TargetFrameworks>
     <NoWarn>$(NoWarn);CA1822;CA1034</NoWarn>
     <IsTestProject>false</IsTestProject>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
-
   <ItemGroup>
-    <EmbeddedResource Include="assets\**\*.*" />
+    <EmbeddedResource Include="assets\**\*" />
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit" />
   </ItemGroup>
-
 </Project>

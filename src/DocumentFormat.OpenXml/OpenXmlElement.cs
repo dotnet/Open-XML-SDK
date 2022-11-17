@@ -2628,9 +2628,9 @@ namespace DocumentFormat.OpenXml
             [KnownFeature(typeof(IElementMetadata), Factory = nameof(CreateMetadata))]
             [DelegatedFeature(nameof(GetPartFeatures))]
             [DelegatedFeature(nameof(Default))]
-            private partial TFeature? GetBuiltIn<TFeature>();
+            private partial T? GetBuiltIn<T>();
 
-            public virtual TFeature? Get<TFeature>() => GetBuiltIn<TFeature>();
+            public virtual T? Get<T>() => GetBuiltIn<T>();
 
             private IFeatureCollection? GetPartFeatures() => _owner.GetPart()?.Features;
 

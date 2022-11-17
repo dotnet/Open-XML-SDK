@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml
         public override int AttributeCount => BaseReader.AttributeCount;
 
         /// <inheritdoc/>
-        public override string? BaseURI => BaseReader.BaseURI;
+        public override string BaseURI => BaseReader.BaseURI;
 
         /// <inheritdoc/>
         public override bool CanReadBinaryContent => BaseReader.CanReadBinaryContent;

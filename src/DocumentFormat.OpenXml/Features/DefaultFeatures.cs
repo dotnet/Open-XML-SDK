@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Features
         [KnownFeature(typeof(IOpenXmlNamespaceResolver), typeof(NoDataNamespaceResolver))]
         [KnownFeature(typeof(IElementMetadataFactoryFeature), typeof(ElementMetadataFactoryFeature))]
         [ThreadSafe]
-        public partial TFeature? Get<TFeature>();
+        public partial T? Get<T>();
 
         public void Set<TFeature>(TFeature? instance)
         {
