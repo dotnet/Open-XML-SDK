@@ -24,14 +24,20 @@ stages:
         parameters:
           buildTargets:
             - name: net35
+              runtimes:
+                - 6.0.11
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
             - name: net40
+              runtimes:
+                - 6.0.11
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
             - name: net46
+              runtimes:
+                - 6.0.11
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
