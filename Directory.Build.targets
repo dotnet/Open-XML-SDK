@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-
   <!--
     Since this project supports multiple configurations which don't all have the same surface area, the following define
     constants are used to conditionally compile features:
@@ -19,70 +18,54 @@
     FEATURE_XML_QUOTECHAR            : XmlReader.QuoteChar is an abstract member
     FEATURE_XML_SCHEMA               : XML Schema is available in the platform
   -->
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
     <DefineConstants>$(DefineConstants);FEATURE_PACKAGE_FLUSH;FEATURE_XML_PROHIBIT_DTD</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net452' ">
     <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_PACKAGE_FLUSH;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_DISPOSE_PROTECTED;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net452' ">
     <DefineConstants>$(DefineConstants);FEATURE_CONCURRENT_COLLECTIONS;FEATURE_CANCELLATION_TOKEN</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' OR '$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'net5.0' ">
     <DefineConstants> $(DefineConstants);FEATURE_ARRAY_EMPTY;FEATURE_CONCURRENT_COLLECTIONS;FEATURE_CANCELLATION_TOKEN</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'netcoreapp2.1' OR '$(TargetFramework)' == 'netcoreapp3.1' OR '$(TargetFramework)' == 'net5.0' ">
     <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_SCHEMA_GENERATOR;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_CANCELLATION_TOKEN</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
     <DefineConstants>$(DefineConstants);FEATURE_PACKAGE_FLUSH</DefineConstants>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
     <DefineConstants>$(DefineConstants);FEATURE_SPAN</DefineConstants>
   </PropertyGroup>
-
   <ItemGroup>
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)\stylecop.json" />
-
-    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.321">
+    <PackageReference Include="StyleCop.Analyzers">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
-
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
   <!-- The tool is used by default, but we don't want it to. It must be set in a target to ensure it is not overridden -->
   <Target Name="BeforeResGen" Condition=" '$(TargetFramework)' == 'net35' ">
     <PropertyGroup>
       <ResGenExecuteAsTool>false</ResGenExecuteAsTool>
     </PropertyGroup>
   </Target>
-
   <PropertyGroup>
     <IncludeFrameworkShims Condition=" '$(IncludeFrameworkShims)' == '' ">false</IncludeFrameworkShims>
   </PropertyGroup>
-
   <Import Condition="$(IncludeFrameworkShims)" Project="$(MSBuildThisFileDirectory)src\common\FrameworkShims.targets" />
-  <Import Condition="$(IncludeSourceGenerator)" Project="$(MSBuildThisFileDirectory)gen\DocumentFormat.OpenXml.Generator\SourceGenerator.targets"/>
-
+  <Import Condition="$(IncludeSourceGenerator)" Project="$(MSBuildThisFileDirectory)gen\DocumentFormat.OpenXml.Generator\SourceGenerator.targets" />
   <PropertyGroup>
     <PackageOutputPath>$(MSBuildThisFileDirectory)bin\$(Configuration)\packages\</PackageOutputPath>
     <PackageOutputPath Condition="$(IsShipped)">$(PackageOutputPath)shipping\</PackageOutputPath>
   </PropertyGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'net35' OR $(TargetFramework.StartsWith('net4'))">
     <Reference Include="WindowsBase" />
   </ItemGroup>

@@ -5,46 +5,33 @@
         <NoWarn>$(NoWarn);CA1303;CA1307;CA1309;CA1822;CA1062</NoWarn>
         <CommonFilesDirectory>$(MSBuildThisFileDirectory)Common/</CommonFilesDirectory>
       </PropertyGroup>
-
       <ItemGroup>
         <CommonFiles Include="$(CommonFilesDirectory)**/*.cs" />
-
         <Compile Include="@(CommonFiles)">
           <Link>Common/$([MSBuild]::MakeRelative($(CommonFilesDirectory), %(FullPath)))</Link>
         </Compile>
       </ItemGroup>
-
       <ItemGroup>
-        <!-- To address CVE-2017-0249 that System.Net.Http has a vulnerability. This will only affect the tests and benchmarks as the
-            framework library doesn't require System.Net.Http. This is brought in by the .NET Core app framework -->
-        <PackageReference Include="System.Net.Http" Version="4.3.4" Condition="!$(IsShipped)" />
-
         <!-- Need to bring this in manually as the test framework itself tries to bring in 9.0.0 -->
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-        <PackageReference Include="System.ValueTuple" Version="4.5.0" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
-        <PackageReference Include="NSubstitute" Version="4.3.0" />
-        <PackageReference Include="xunit" Version="2.4.1" />
-        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+        <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="System.ValueTuple" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" />
+        <PackageReference Include="NSubstitute" />
+        <PackageReference Include="xunit" />
+        <PackageReference Include="xunit.runner.visualstudio">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
         </PackageReference>
       </ItemGroup>
     </When>
   </Choose>
-
-  <Target Name="PublishProjectIfFrameworkSet"
-          DependsOnTargets="Publish"
-          Condition=" '$(TargetFramework)' != '' " />
-
+  <Target Name="PublishProjectIfFrameworkSet" DependsOnTargets="Publish" Condition=" '$(TargetFramework)' != '' " />
   <Target Name="PublishProjectForAllFrameworksIfFrameworkUnset" Condition=" '$(TargetFramework)' == '' ">
     <ItemGroup>
       <_PublishFramework Include="$(TargetFrameworks)" />
     </ItemGroup>
     <MSBuild Projects="$(MSBuildProjectFile)" Targets="Publish" Properties="TargetFramework=%(_PublishFramework.Identity)" />
   </Target>
-
   <Target Name="PublishAll" Condition="$(IsTestProject) OR $(IsBenchmarkProject)" DependsOnTargets="PublishProjectIfFrameworkSet;PublishProjectForAllFrameworksIfFrameworkUnset" />
-
   <Import Project="..\Directory.Build.targets" />
 </Project>

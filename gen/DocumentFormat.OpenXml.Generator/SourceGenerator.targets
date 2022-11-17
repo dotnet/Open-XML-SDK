@@ -1,24 +1,16 @@
 ﻿<Project>
   <Import Project="$(MSBuildThisFileDirectory)../../data/OpenXmlData.targets" />
-
   <ItemGroup>
     <OoxGenerator Include="$(MSBuildThisFileDirectory)DocumentFormat.OpenXml.Generator.csproj" />
     <OoxGenerator Include="$(MSBuildThisFileDirectory)../DocumentFormat.OpenXml.Generator.Models/DocumentFormat.OpenXml.Generator.Models.csproj" />
   </ItemGroup>
-
   <ItemGroup>
-    <ProjectReference Include="@(OoxGenerator)"
-                      OutputItemType="Analyzer"
-                      ReferenceOutputAssembly="false"
-                      SkipGetTargetFrameworkProperties="true"
-                      GlobalPropertiesToRemove="TargetFramework" />
+    <ProjectReference Include="@(OoxGenerator)" OutputItemType="Analyzer" ReferenceOutputAssembly="false" SkipGetTargetFrameworkProperties="true" GlobalPropertiesToRemove="TargetFramework" />
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" PrivateAssets="all" GeneratePathProperty="true" />
+    <PackageReference Include="Newtonsoft.Json" PrivateAssets="all" GeneratePathProperty="true" />
     <Analyzer Include="$(PkgNewtonsoft_Json)\lib\netstandard2.0\*.dll" Visible="false" />
   </ItemGroup>
-
   <ItemGroup>
     <AdditionalFiles Include="@(OpenXmlDataNamespace)" OpenXml="Namespace" LinkBase="data" />
     <AdditionalFiles Include="@(OpenXmlDataSchematron)" OpenXml="Schematron" LinkBase="data" />
@@ -27,12 +19,10 @@
     <AdditionalFiles Include="@(OpenXmlDataTypedNamespace)" OpenXml="TypedNamespace" LinkBase="data/typed" />
     <AdditionalFiles Include="@(OpenXmlDataTypedSchema)" OpenXml="TypedSchema" LinkBase="data/typed" />
   </ItemGroup>
-
   <ItemGroup>
     <CompilerVisibleItemMetadata Include="AdditionalFiles" MetadataName="OpenXml" />
     <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_NamespaceLookup" />
     <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_Parts" />
     <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_Schemas" />
   </ItemGroup>
-
 </Project>
