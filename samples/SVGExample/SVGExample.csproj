@@ -1,7 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-	<ItemGroup>
-		<PackageReference Include="Svg" Version="3.4.4" />
-	</ItemGroup>
-
+  <ItemGroup>
+    <PackageReference Include="Svg" />
+  </ItemGroup>
 </Project>

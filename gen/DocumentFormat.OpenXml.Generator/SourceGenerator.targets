@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" PrivateAssets="all" GeneratePathProperty="true" />
+    <PackageReference Include="Newtonsoft.Json" PrivateAssets="all" GeneratePathProperty="true" />
     <Analyzer Include="$(PkgNewtonsoft_Json)\lib\netstandard2.0\*.dll" Visible="false" />
   </ItemGroup>
 

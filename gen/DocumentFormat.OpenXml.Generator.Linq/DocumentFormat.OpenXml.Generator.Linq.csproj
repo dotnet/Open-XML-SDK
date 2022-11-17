@@ -5,7 +5,7 @@
       This is a code generator and would not need multiple targets. However, due to the build matrix on
       the CI system, there are times when this project will need to be built supporting a .NET 3.5 target.
 
-      To simplify this, only builds targeting .NET 5.0 will actually have any code and on other targets
+      To simplify this, only builds targeting the latest .NET will actually have any code and on other targets
       will be a no-op.
       -->
     <TargetFrameworks>$(SamplesFrameworks)</TargetFrameworks>
@@ -15,9 +15,9 @@
   </PropertyGroup>
 
   <Choose>
-    <When Condition=" '$(TargetFramework)' == 'net5.0'">
+    <When Condition=" '$(TargetFramework)' == 'net7.0'">
       <ItemGroup>
-        <PackageReference Include="System.CodeDom" Version="6.0.0" />
+        <PackageReference Include="System.CodeDom" />
         <ProjectReference Include="..\..\src\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
         <Compile Remove="Program.Empty.cs" />
       </ItemGroup>

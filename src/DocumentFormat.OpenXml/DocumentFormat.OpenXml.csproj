@@ -64,7 +64,7 @@
 
     <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
       <ItemGroup>
-        <PackageReference Include="System.IO.Packaging" Version="$(SystemIOPackagingVersion)" />
+        <PackageReference Include="System.IO.Packaging" />
       </ItemGroup>
 
       <!-- In order to support .NET Native, we need to include an appropriate .rd.xml -->
@@ -76,7 +76,7 @@
 
     <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
       <ItemGroup>
-        <PackageReference Include="System.IO.Packaging" Version="$(SystemIOPackagingVersion)" />
+        <PackageReference Include="System.IO.Packaging" />
       </ItemGroup>
 
       <!-- In order to support .NET Native, we need to include an appropriate .rd.xml -->
@@ -85,9 +85,9 @@
       </ItemGroup>
     </When>
 
-    <When Condition=" '$(TargetFramework)' == 'net5.0' ">
+    <When Condition=" '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">
       <ItemGroup>
-        <PackageReference Include="System.IO.Packaging" Version="$(SystemIOPackagingVersion)" />
+        <PackageReference Include="System.IO.Packaging" />
       </ItemGroup>
 
       <!-- In order to support .NET Native, we need to include an appropriate .rd.xml -->
