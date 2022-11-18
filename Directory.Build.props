@@ -44,7 +44,7 @@
         <TestTargetFrameworks>net452</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
         <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
-        <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
+        <LatestTargetFramework>net461</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -54,7 +54,7 @@
         <TestTargetFrameworks>net452</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
         <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
-        <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
+        <LatestTargetFramework>net461</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -63,7 +63,7 @@
         <ProductTargetFrameworks>net46</ProductTargetFrameworks>
         <TestTargetFrameworks>net46</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
+        <LatestTargetFramework>net461</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -73,7 +73,7 @@
         <TestTargetFrameworks>net6.0</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
         <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
-        <BenchmarkTargetFramework>net6.0</BenchmarkTargetFramework>
+        <LatestTargetFramework>net6.0</LatestTargetFramework>
         <SamplesFrameworks>net6.0</SamplesFrameworks>
         <!-- Used to special case some tests for running netstandard1.3 build on .NET Core 2.1 -->
         <DefineConstants>$(DefineConstants);NETSTANDARD1_3_SDK</DefineConstants>
@@ -84,7 +84,7 @@
         <ProductTargetFrameworks>net5.0</ProductTargetFrameworks>
         <TestTargetFrameworks>net5.0</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <BenchmarkTargetFramework>net5.0</BenchmarkTargetFramework>
+        <LatestTargetFramework>net5.0</LatestTargetFramework>
         <SamplesFrameworks>net5.0</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -93,7 +93,7 @@
         <ProductTargetFrameworks>net6.0</ProductTargetFrameworks>
         <TestTargetFrameworks>net6.0</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <BenchmarkTargetFramework>net6.0</BenchmarkTargetFramework>
+        <LatestTargetFramework>net6.0</LatestTargetFramework>
         <SamplesFrameworks>net6.0</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -102,7 +102,7 @@
         <ProductTargetFrameworks>net7.0</ProductTargetFrameworks>
         <TestTargetFrameworks>net7.0</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <BenchmarkTargetFramework>net7.0</BenchmarkTargetFramework>
+        <LatestTargetFramework>net7.0</LatestTargetFramework>
         <SamplesFrameworks>net7.0</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -112,11 +112,11 @@
         .NET Standard target must be first to avoid a ResXFileCodeGenerator issue
         (tracked at https://github.com/dotnet/project-system/issues/1519)
         -->
-        <ProductTargetFrameworks>netstandard1.3;netstandard2.0;net35;net40;net46</ProductTargetFrameworks>
-        <AssetsTargetFrameworks>net452;netstandard1.3</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net452;net46;net6.0;net7.0</TestTargetFrameworks>
-        <BenchmarkTargetFramework>net6.0</BenchmarkTargetFramework>
-        <SamplesFrameworks>net472;net6.0</SamplesFrameworks>
+        <ProductTargetFrameworks>netstandard1.3;netstandard2.0</ProductTargetFrameworks>
+        <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
+        <TestTargetFrameworks>net5.0;net6.0;net7.0</TestTargetFrameworks>
+        <LatestTargetFramework>net6.0</LatestTargetFramework>
+        <SamplesFrameworks>net6.0</SamplesFrameworks>
       </PropertyGroup>
     </When>
     <Otherwise>
@@ -124,7 +124,7 @@
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
         <TestTargetFrameworks>net7.0</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <BenchmarkTargetFramework>net7.0</BenchmarkTargetFramework>
+        <LatestTargetFramework>net7.0</LatestTargetFramework>
         <SamplesFrameworks>net7.0</SamplesFrameworks>
         <__InvalidProjectLoadStyle>true</__InvalidProjectLoadStyle>
       </PropertyGroup>
