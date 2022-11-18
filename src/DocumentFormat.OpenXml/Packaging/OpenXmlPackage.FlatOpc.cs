@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         private static string ToChunkedBase64String(PackagePart part)
-        {             
+        {
             using (Stream stream = part.GetStream())
             {
                 var byteArray = new byte[stream.Length];
