@@ -85,7 +85,7 @@
       </ItemGroup>
     </When>
 
-    <When Condition=" '$(TargetFramework)' == 'net7.0' ">
+    <When Condition=" '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">
       <ItemGroup>
         <PackageReference Include="System.IO.Packaging" />
       </ItemGroup>
