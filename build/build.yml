@@ -24,12 +24,6 @@ jobs:
           packageType: 'sdk'
           useGlobalJson: true
 
-      - task: UseDotNet@2
-        displayName: 'Install .NET 5 SDK'
-        inputs:
-          packageType: 'sdk'
-          version: 5.x 
-
       - ${{ each runtime in buildTarget.runtimes }}:
         - task: UseDotNet@2
           displayName: 'Install .NET Runtime ${{ runtime }}'
