@@ -3,7 +3,7 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml.Packaging;
+namespace DocumentFormat.OpenXml.Features;
 
 internal interface IPartUriFeature
 {
