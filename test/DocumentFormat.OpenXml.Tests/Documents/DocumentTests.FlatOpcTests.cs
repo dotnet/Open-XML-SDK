@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact(Skip = "Fails on .NET 6+ for unknown reason")]
+        [Fact]
         public void CanCreateFlatOpcDocuments3()
         {
             using (var inputStream = GetStream(Path))
@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact(Skip = "Fails on .NET 6+ for unknown reason")]
+        [Fact]
         public void CanCreateFlatOpcDocuments4()
         {
             using (var inputStream = GetStream(Path))
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact(Skip = "Fails on .NET 6+ for unknown reason")]
+        [Fact]
         public void CanCreateFlatOpcDocuments5()
         {
             using (var inputStream = GetStream(Path))
