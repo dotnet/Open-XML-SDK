@@ -68,22 +68,22 @@
     <When Condition=" '$(ProjectLoadStyle)' == 'netstandard1_3' ">
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard1.3</ProductTargetFrameworks>
-        <TestTargetFrameworks>net7.0</TestTargetFrameworks>
+        <TestTargetFrameworks>net6.0</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
         <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
-        <BenchmarkTargetFramework>net7.0</BenchmarkTargetFramework>
-        <SamplesFrameworks>net7.0</SamplesFrameworks>
+        <BenchmarkTargetFramework>net6.0</BenchmarkTargetFramework>
+        <SamplesFrameworks>net6.0</SamplesFrameworks>
         <!-- Used to special case some tests for running netstandard1.3 build on .NET Core 2.1 -->
         <DefineConstants>$(DefineConstants);NETSTANDARD1_3_SDK</DefineConstants>
       </PropertyGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'net7_0' ">
       <PropertyGroup>
-        <ProductTargetFrameworks>net7.0</ProductTargetFrameworks>
-        <TestTargetFrameworks>net7.0</TestTargetFrameworks>
+        <ProductTargetFrameworks>net6.0</ProductTargetFrameworks>
+        <TestTargetFrameworks>net6.0</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <BenchmarkTargetFramework>net7.0</BenchmarkTargetFramework>
-        <SamplesFrameworks>net7.0</SamplesFrameworks>
+        <BenchmarkTargetFramework>net6.0</BenchmarkTargetFramework>
+        <SamplesFrameworks>net6.0</SamplesFrameworks>
       </PropertyGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'All' ">
@@ -94,9 +94,9 @@
         -->
         <ProductTargetFrameworks>netstandard1.3;netstandard2.0;net35;net40;net46</ProductTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard1.3</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net452;net46;net7.0</TestTargetFrameworks>
-        <BenchmarkTargetFramework>net7.0</BenchmarkTargetFramework>
-        <SamplesFrameworks>net472;net7.0</SamplesFrameworks>
+        <TestTargetFrameworks>net452;net46;net6.0</TestTargetFrameworks>
+        <BenchmarkTargetFramework>net6.0</BenchmarkTargetFramework>
+        <SamplesFrameworks>net472;net6.0</SamplesFrameworks>
       </PropertyGroup>
     </When>
     <Otherwise>
