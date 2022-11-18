@@ -9,7 +9,7 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-    internal class PartUriHelper
+    internal class PartUriHelper : IPartUriFeature
     {
         private readonly Dictionary<string, int> _sequenceNumbers = new Dictionary<string, int>(20, StringComparer.Ordinal);
         private readonly Dictionary<Uri, int> _reservedUri = new Dictionary<Uri, int>();
