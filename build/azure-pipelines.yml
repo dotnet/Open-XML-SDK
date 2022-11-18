@@ -49,6 +49,14 @@ stages:
                   name: 'windows'
                 - image: 'ubuntu-20.04'
                   name: 'linux'
+            - name: net6_0
+              runtimes:
+                - 6.0.11
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
+                - image: 'ubuntu-20.04'
+                  name: 'linux'
             - name: net7_0
               runtimes:
                 - 6.0.11
