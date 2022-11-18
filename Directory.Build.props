@@ -11,13 +11,13 @@
          - net35:              .NET Framework 3.5
          - net40:              .NET Framework 4.0
          - net46:              .NET Framework 4.6
-         - netstandard1_3:     .NET Core 2.1 (but running .NET Standard 1.3 build)
-         - netcoreapp2_1:      .NET Core 2.1
-         - netcoreapp3_1:      .NET Core 3.1
+         - netstandard1_3:     .NET 6.0 (but running .NET Standard 1.3 build)
          - net5_0:             .NET 5.0
-         - All: Will build for all platforms
+         - net6_0:             .NET 6.0
+         - net7_0:             .NET 7.0
+         - All:                Will build for all platforms
          -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">net5_0</ProjectLoadStyle>
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">net7_0</ProjectLoadStyle>
     <__InvalidProjectLoadStyle>false</__InvalidProjectLoadStyle>
   </PropertyGroup>
 
@@ -44,7 +44,7 @@
         <TestTargetFrameworks>net452</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
         <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
-        <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
+        <LatestTargetFramework>net461</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -54,7 +54,7 @@
         <TestTargetFrameworks>net452</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
         <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
-        <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
+        <LatestTargetFramework>net461</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -63,38 +63,20 @@
         <ProductTargetFrameworks>net46</ProductTargetFrameworks>
         <TestTargetFrameworks>net46</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
+        <LatestTargetFramework>net461</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'netstandard1_3' ">
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard1.3</ProductTargetFrameworks>
-        <TestTargetFrameworks>netcoreapp2.1</TestTargetFrameworks>
+        <TestTargetFrameworks>net6.0</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
         <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
-        <BenchmarkTargetFramework>netcoreapp2.1</BenchmarkTargetFramework>
-        <SamplesFrameworks>netcoreapp2.1</SamplesFrameworks>
+        <LatestTargetFramework>net6.0</LatestTargetFramework>
+        <SamplesFrameworks>net6.0</SamplesFrameworks>
         <!-- Used to special case some tests for running netstandard1.3 build on .NET Core 2.1 -->
         <DefineConstants>$(DefineConstants);NETSTANDARD1_3_SDK</DefineConstants>
-      </PropertyGroup>
-    </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'netcoreapp2_1' ">
-      <PropertyGroup>
-        <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
-        <TestTargetFrameworks>netcoreapp2.1</TestTargetFrameworks>
-        <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <BenchmarkTargetFramework>netcoreapp2.1</BenchmarkTargetFramework>
-        <SamplesFrameworks>netcoreapp2.1</SamplesFrameworks>
-      </PropertyGroup>
-    </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'netcoreapp3_1' ">
-      <PropertyGroup>
-        <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
-        <TestTargetFrameworks>netcoreapp3.1</TestTargetFrameworks>
-        <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <BenchmarkTargetFramework>netcoreapp3.1</BenchmarkTargetFramework>
-        <SamplesFrameworks>netcoreapp3.1</SamplesFrameworks>
       </PropertyGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'net5_0' ">
@@ -102,8 +84,26 @@
         <ProductTargetFrameworks>net5.0</ProductTargetFrameworks>
         <TestTargetFrameworks>net5.0</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <BenchmarkTargetFramework>net5.0</BenchmarkTargetFramework>
+        <LatestTargetFramework>net5.0</LatestTargetFramework>
         <SamplesFrameworks>net5.0</SamplesFrameworks>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(ProjectLoadStyle)' == 'net6_0' ">
+      <PropertyGroup>
+        <ProductTargetFrameworks>net6.0</ProductTargetFrameworks>
+        <TestTargetFrameworks>net6.0</TestTargetFrameworks>
+        <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
+        <LatestTargetFramework>net6.0</LatestTargetFramework>
+        <SamplesFrameworks>net6.0</SamplesFrameworks>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(ProjectLoadStyle)' == 'net7_0' ">
+      <PropertyGroup>
+        <ProductTargetFrameworks>net7.0</ProductTargetFrameworks>
+        <TestTargetFrameworks>net7.0</TestTargetFrameworks>
+        <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
+        <LatestTargetFramework>net7.0</LatestTargetFramework>
+        <SamplesFrameworks>net7.0</SamplesFrameworks>
       </PropertyGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'All' ">
@@ -114,18 +114,18 @@
         -->
         <ProductTargetFrameworks>netstandard1.3;netstandard2.0;net35;net40;net46</ProductTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard1.3</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net452;net46;netcoreapp2.1;netcoreapp3.1;net5.0</TestTargetFrameworks>
-        <BenchmarkTargetFramework>net5.0</BenchmarkTargetFramework>
-        <SamplesFrameworks>net472;netcoreapp2.1;netcoreapp3.1;net5.0</SamplesFrameworks>
+        <TestTargetFrameworks>net452;net46;net6.0;net7.0</TestTargetFrameworks>
+        <LatestTargetFramework>net7.0</LatestTargetFramework>
+        <SamplesFrameworks>net472;net7.0</SamplesFrameworks>
       </PropertyGroup>
     </When>
     <Otherwise>
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
-        <TestTargetFrameworks>netcoreapp3.1</TestTargetFrameworks>
+        <TestTargetFrameworks>net7.0</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <BenchmarkTargetFramework>netcoreapp3.1</BenchmarkTargetFramework>
-        <SamplesFrameworks>netcoreapp3.1</SamplesFrameworks>
+        <LatestTargetFramework>net7.0</LatestTargetFramework>
+        <SamplesFrameworks>net7.0</SamplesFrameworks>
         <__InvalidProjectLoadStyle>true</__InvalidProjectLoadStyle>
       </PropertyGroup>
     </Otherwise>

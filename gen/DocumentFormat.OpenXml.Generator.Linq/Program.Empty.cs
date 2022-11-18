@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.CodeGeneration.Linq
     {
         private static void Main()
         {
-            Console.WriteLine("Tool only available on .NET 5.0 builds");
+            Console.WriteLine("Tool only available on latest .NET builds");
         }
     }
 }

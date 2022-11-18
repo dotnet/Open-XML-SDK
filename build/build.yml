@@ -46,25 +46,3 @@ jobs:
         inputs:
           command: 'test'
           arguments: '-c $(buildConfiguration)'
-
-      # NuGet tool installer
-      # Acquires a specific version of NuGet from the internet or the tools cache and adds it to the PATH. Use this task to change the version of NuGet used in the NuGet tasks.
-      - task: NuGetToolInstaller@1
-        displayName: Install Nuget
-        inputs:
-          versionSpec: 5.7.3 
-
-          #checkLatest: false # Optional
-
-          # - task: DotNetCoreCLI@2
-          #   displayName: 'Benchmark'
-          #   inputs:
-          #     command: 'run'
-          #     projects: 'test/DocumentFormat.OpenXml.Benchmarks/DocumentFormat.OpenXml.Benchmarks.csproj'
-          #     arguments: '-c Release -- $(Build.ArtifactStagingDirectory)/results'
-          #   condition: eq('release', variables['buildConfiguration'])
-
-          # - publish: '$(Build.ArtifactStagingDirectory)/results'
-          #   artifact: benchmarks_${{ buildTarget.name }}_${{ vmImage.name }}
-          #   displayName: 'Upload benchmark results'
-          #   condition: eq('release', variables['buildConfiguration'])
