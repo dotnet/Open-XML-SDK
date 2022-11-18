@@ -114,7 +114,7 @@
         -->
         <ProductTargetFrameworks>netstandard1.3;netstandard2.0;net35;net40;net46</ProductTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard1.3</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net452;net46;net6.0</TestTargetFrameworks>
+        <TestTargetFrameworks>net452;net46;net6.0;net7.0</TestTargetFrameworks>
         <BenchmarkTargetFramework>net6.0</BenchmarkTargetFramework>
         <SamplesFrameworks>net472;net6.0</SamplesFrameworks>
       </PropertyGroup>
