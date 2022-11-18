@@ -7,9 +7,9 @@ namespace DocumentFormat.OpenXml.Packaging;
 
 internal interface IPartUriFeature
 {
-    Uri GetUniquePartUri(string contentType, Uri parentUri, string targetPath, string targetName, string targetExt);
+    Uri CreatePartUri(string contentType, Uri parentUri, string targetPath, string targetName, string targetExt, bool forceUnique = true);
 
-    Uri GetUniquePartUri(string contentType, Uri parentUri, Uri targetUri);
+    Uri EnsureUniquePartUri(string contentType, Uri parentUri, Uri targetUri);
 
     void ReserveUri(string contentType, Uri partUri);
 }

@@ -24,10 +24,10 @@ internal static class CloneExtensions
             _package.Features.Set<IPartUriFeature>(this);
         }
 
-        Uri IPartUriFeature.GetUniquePartUri(string contentType, Uri parentUri, string targetPath, string targetName, string targetExt)
-            => _partUri.GetUniquePartUri(contentType, parentUri, targetPath, targetName, targetExt);
+        Uri IPartUriFeature.CreatePartUri(string contentType, Uri parentUri, string targetPath, string targetName, string targetExt, bool forceUnique)
+            => _partUri.CreatePartUri(contentType, parentUri, targetPath, targetName, targetExt, forceUnique: false);
 
-        Uri IPartUriFeature.GetUniquePartUri(string contentType, Uri parentUri, Uri targetUri)
+        Uri IPartUriFeature.EnsureUniquePartUri(string contentType, Uri parentUri, Uri targetUri)
         {
             _partUri.ReserveUri(contentType, targetUri);
             return targetUri;

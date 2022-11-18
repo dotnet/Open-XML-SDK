@@ -17,10 +17,10 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             var helper = new PartUriHelper();
 
-            var unique = helper.GetUniquePartUri(contentType, new Uri(parentUri, UriKind.Relative), new Uri(targetUri, UriKind.Relative));
+            var unique = helper.EnsureUniquePartUri(contentType, new Uri(parentUri, UriKind.Relative), new Uri(targetUri, UriKind.Relative));
             Assert.Equal(new Uri(expectedOnce, UriKind.Relative), unique);
 
-            var unique2 = helper.GetUniquePartUri(contentType, new Uri(parentUri, UriKind.Relative), new Uri(targetUri, UriKind.Relative));
+            var unique2 = helper.EnsureUniquePartUri(contentType, new Uri(parentUri, UriKind.Relative), new Uri(targetUri, UriKind.Relative));
             Assert.Equal(new Uri(expectedTwice, UriKind.Relative), unique2);
         }
 
@@ -29,21 +29,23 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         public void GetUniquePartUri5Arg(string contentType, string parentUri, string targetUri, string expectedOnce, string expectedTwice)
         {
             var helper = new PartUriHelper();
-            var unique1 = helper.GetUniquePartUri(
+            var unique1 = helper.CreatePartUri(
                 contentType,
                 PackUriHelper.ResolvePartUri(new Uri(parentUri, UriKind.Relative), new Uri(targetUri, UriKind.Relative)),
                 ".",
                 Path.GetFileNameWithoutExtension(targetUri),
-                Path.GetExtension(targetUri));
+                Path.GetExtension(targetUri),
+                forceUnique: true);
 
             Assert.Equal(new Uri(expectedOnce, UriKind.Relative), unique1);
 
-            var unique2 = helper.GetUniquePartUri(
+            var unique2 = helper.CreatePartUri(
                 contentType,
                 PackUriHelper.ResolvePartUri(new Uri(parentUri, UriKind.Relative), new Uri(targetUri, UriKind.Relative)),
                 ".",
                 Path.GetFileNameWithoutExtension(targetUri),
-                Path.GetExtension(targetUri));
+                Path.GetExtension(targetUri),
+                forceUnique: true);
 
             Assert.Equal(new Uri(expectedTwice, UriKind.Relative), unique2);
         }
@@ -60,7 +62,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             helper.ReserveUri(contentType, partUri);
 
-            var unique = helper.GetUniquePartUri(contentType, partUri, ".", Path.GetFileNameWithoutExtension(targetUri), Path.GetExtension(targetUri));
+            var unique = helper.CreatePartUri(contentType, partUri, ".", Path.GetFileNameWithoutExtension(targetUri), Path.GetExtension(targetUri), forceUnique: true);
 
             Assert.Equal(new Uri(expected2, UriKind.Relative), unique);
         }

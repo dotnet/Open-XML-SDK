@@ -456,7 +456,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // check to avoid name conflict with orphan parts in the packages.
             do
             {
-                partUri = UriHelper.GetUniquePartUri(contentType, parentUri, targetPath, targetName, targetExt);
+                partUri = UriHelper.CreatePartUri(contentType, parentUri, targetPath, targetName, targetExt);
             }
             while (_package.PartExists(partUri));
 
@@ -480,7 +480,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // check to avoid name conflict with orphan parts in the packages.
             do
             {
-                partUri = UriHelper.GetUniquePartUri(contentType, parentUri, targetUri);
+                partUri = UriHelper.EnsureUniquePartUri(contentType, parentUri, targetUri);
             }
             while (_package.PartExists(partUri));
 
