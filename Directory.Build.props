@@ -129,7 +129,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <LangVersion>10.0</LangVersion>
+    <LangVersion>11.0</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -148,4 +148,10 @@
     <IsTestProject Condition=" '$(IsTestProject)' == '' ">false</IsTestProject>
     <IsBenchmarkProject Condition=" '$(IsBenchmarkProject)' == '' ">false</IsBenchmarkProject>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>$(MSBuildThisFileDirectory)/Generated/$(MSBuildProjectName)</CompilerGeneratedFilesOutputPath>
+  </PropertyGroup>
+
 </Project>
