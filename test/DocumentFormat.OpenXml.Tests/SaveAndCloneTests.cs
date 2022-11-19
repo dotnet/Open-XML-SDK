@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System.IO;
 using System.IO.Packaging;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -468,6 +469,28 @@ namespace DocumentFormat.OpenXml.Tests
                     PackageAssert.Equal(source, dest);
                 }
             }
+        }
+
+        [Fact]
+        public void CloneRetainsPartNames()
+        {
+            // Arrange
+            using var stream = new MemoryStream();
+            using var presentation = PresentationDocument.Create(stream, PresentationDocumentType.Presentation);
+
+            var presentationPart = presentation.AddPresentationPart();
+            var slidePart = presentationPart.AddNewPart<SlidePart>();
+
+            // Act
+            using var duplicate = (PresentationDocument)presentation.Clone();
+            duplicate.PresentationPart.AddNewPart<SlidePart>();
+            duplicate.Save();
+
+            // Assert
+            Assert.Collection(
+                duplicate.PresentationPart.SlideParts,
+                slide => Assert.Equal("/ppt/slides/slide1.xml", slide.Uri.ToString()),
+                slide => Assert.Equal("/ppt/slides/slide2.xml", slide.Uri.ToString()));
         }
     }
 }

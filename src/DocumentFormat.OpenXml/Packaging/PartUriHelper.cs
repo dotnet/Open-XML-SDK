@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -9,7 +10,7 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-    internal class PartUriHelper
+    internal class PartUriHelper : IPartUriFeature
     {
         private readonly Dictionary<string, int> _sequenceNumbers = new Dictionary<string, int>(20, StringComparer.Ordinal);
         private readonly Dictionary<Uri, int> _reservedUri = new Dictionary<Uri, int>();
@@ -76,32 +77,42 @@ namespace DocumentFormat.OpenXml.Packaging
             AddToReserveUri(PackUriHelper.GetNormalizedPartUri(partUri));
         }
 
-        public Uri GetUniquePartUri(string contentType, Uri parentUri, string targetPath, string targetName, string targetExt)
+        public Uri CreatePartUri(string contentType, Uri parentUri, string targetPath, string targetName, string targetExt, bool forceUnique)
         {
             Uri partUri;
 
-            do
+            if (forceUnique)
             {
-                var sequenceNumber = GetNextSequenceNumber(contentType);
-                var path = Path.Combine(targetPath, string.Concat(targetName, sequenceNumber, targetExt));
+                do
+                {
+                    var sequenceNumber = GetNextSequenceNumber(contentType);
+                    var path = Path.Combine(targetPath, string.Concat(targetName, sequenceNumber, targetExt));
+
+                    partUri = PackUriHelper.ResolvePartUri(parentUri, new Uri(path, UriHelper.RelativeOrAbsolute));
+                }
+                while (_reservedUri.ContainsKey(partUri));
+            }
+            else
+            {
+                var path = Path.Combine(targetPath, string.Concat(targetName, targetExt));
 
                 partUri = PackUriHelper.ResolvePartUri(parentUri, new Uri(path, UriHelper.RelativeOrAbsolute));
             }
-            while (_reservedUri.ContainsKey(partUri));
 
             AddToReserveUri(partUri);
 
             return partUri;
         }
 
-        public Uri GetUniquePartUri(string contentType, Uri parentUri, Uri targetUri)
+        public Uri EnsureUniquePartUri(string contentType, Uri parentUri, Uri targetUri)
         {
-            return GetUniquePartUri(
+            return CreatePartUri(
                 contentType,
                 PackUriHelper.ResolvePartUri(parentUri, targetUri),
                 ".",
                 Path.GetFileNameWithoutExtension(targetUri.OriginalString),
-                Path.GetExtension(targetUri.OriginalString));
+                Path.GetExtension(targetUri.OriginalString),
+                forceUnique: true);
         }
 
         private void AddToReserveUri(Uri partUri) => _reservedUri.Add(partUri, 0);

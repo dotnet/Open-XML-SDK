@@ -23,11 +23,11 @@ public abstract class TypedOpenXmlPackage : OpenXmlPackage
     {
     }
 
-    internal override IFeatureCollection CreatePartFeatures(IFeatureCollection? other = null) => new TypedPartFeatures(other);
+    internal override IFeatureCollection CreatePartFeatures(IFeatureCollection? other = null) => new TypedPackageFeature(other);
 
-    private class TypedPartFeatures : PartContainerFeatureCollection
+    private class TypedPackageFeature : PackageFeatureCollection
     {
-        public TypedPartFeatures(IFeatureCollection? other = null)
+        public TypedPackageFeature(IFeatureCollection? other = null)
             : base(other)
         {
         }

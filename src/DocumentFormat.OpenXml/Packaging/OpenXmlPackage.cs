@@ -28,7 +28,6 @@ namespace DocumentFormat.OpenXml.Packaging
         private bool _disposed;
         private Package _package;
         private string _mainPartContentType;
-        private PartUriHelper _partUriHelper = new PartUriHelper();
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class.
@@ -41,6 +40,8 @@ namespace DocumentFormat.OpenXml.Packaging
             _mainPartContentType = null!;
             OpenSettings = null!;
         }
+
+        private IPartUriFeature UriHelper => Features.GetRequired<IPartUriFeature>();
 
         private protected OpenXmlPackage(in PackageLoader loader, OpenSettings settings)
             : base()
@@ -433,7 +434,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            _partUriHelper.ReserveUri(contentType, partUri);
+            UriHelper.ReserveUri(contentType, partUri);
         }
 
         /// <summary>
@@ -455,7 +456,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // check to avoid name conflict with orphan parts in the packages.
             do
             {
-                partUri = _partUriHelper.GetUniquePartUri(contentType, parentUri, targetPath, targetName, targetExt);
+                partUri = UriHelper.CreatePartUri(contentType, parentUri, targetPath, targetName, targetExt);
             }
             while (_package.PartExists(partUri));
 
@@ -479,7 +480,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // check to avoid name conflict with orphan parts in the packages.
             do
             {
-                partUri = _partUriHelper.GetUniquePartUri(contentType, parentUri, targetUri);
+                partUri = UriHelper.EnsureUniquePartUri(contentType, parentUri, targetUri);
             }
             while (_package.PartExists(partUri));
 
@@ -527,7 +528,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 _package = null!;
                 ChildrenRelationshipParts.Clear();
                 ReferenceRelationshipList.Clear();
-                _partUriHelper = null!;
 
                 closing?.OnChange(this, EventType.Closed);
             }
@@ -1140,7 +1140,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 // thrown within OpenXmlPackage.OpenCore(string, bool) by the
                 //     this._metroPackage = Package.Open(path, ...);
                 // assignment.
-                using (OpenXmlPackage clone = CreateClone(stream))
+                using (var clone = CreateClone(stream))
+                using (clone.EnableCloningFeatures())
                 {
                     foreach (var part in Parts)
                     {
@@ -1207,7 +1208,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
         /// <param name="openSettings">The advanced settings for opening a document.</param>
         /// <returns>The cloned document.</returns>
-        public OpenXmlPackage Clone(string path, bool isEditable, OpenSettings openSettings)
+        public OpenXmlPackage Clone(string path, bool isEditable, OpenSettings? openSettings)
         {
             if (path is null)
             {
@@ -1234,7 +1235,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 // Use the same approach as for the streams-based cloning, i.e., close
                 // and reopen the document.
-                using (OpenXmlPackage clone = CreateClone(path))
+                using (var clone = CreateClone(path))
+                using (clone.EnableCloningFeatures())
                 {
                     foreach (var part in Parts)
                     {
@@ -1343,5 +1345,36 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion Package-based cloning
 
         #endregion saving and cloning
+
+        internal override IFeatureCollection CreatePartFeatures(IFeatureCollection? other = null) => new PackageFeatureCollection(other);
+
+        internal partial class PackageFeatureCollection : IFeatureCollection
+        {
+            private readonly IFeatureCollection? _other;
+
+            public bool IsReadOnly => true;
+
+            public int Revision => 0;
+
+            public PackageFeatureCollection(IFeatureCollection? other)
+            {
+                _other = other;
+            }
+
+            protected virtual IFeatureCollection Default => FeatureCollection.Default;
+
+            [KnownFeature(typeof(IPartUriFeature), typeof(PartUriHelper))]
+            [KnownFeature(typeof(AnnotationsFeature))]
+            [DelegatedFeature(nameof(_other))]
+            [DelegatedFeature(nameof(Default))]
+            private partial T? GetDefault<T>();
+
+            public T? Get<T>() => GetDefault<T>();
+
+            public void Set<TFeature>(TFeature? instance)
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }
