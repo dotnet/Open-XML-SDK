@@ -7,5 +7,5 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal interface IPartFactory
 {
-    T Create<T>() where T : OpenXmlPart;
+    T? Create<T>() where T : OpenXmlPart;
 }
