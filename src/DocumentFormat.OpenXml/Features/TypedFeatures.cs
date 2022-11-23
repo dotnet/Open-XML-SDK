@@ -29,7 +29,7 @@ internal partial class TypedFeatures : IFeatureCollection
 
     public int Revision => 0;
 
-    [KnownFeature(typeof(IRootElementFactory), typeof(ReflectionBasedRootElementFactory))]
+    [KnownFeature(typeof(IRootElementFactory), typeof(TypedRootElementFactory))]
     [KnownFeature(typeof(IPartMetadataFeature), typeof(CachedPartMetadataProvider))]
     [KnownFeature(typeof(IOpenXmlNamespaceResolver), typeof(OpenXmlNamespaceResolver))]
     [KnownFeature(typeof(IPartFactory), typeof(TypedPartFactory))]
