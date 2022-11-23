@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Features
 {
@@ -11,12 +10,11 @@ namespace DocumentFormat.OpenXml.Features
     /// </summary>
     public class FeatureCollection : IFeatureCollection
     {
-        private readonly int _initialCapacity = 2;
         private readonly IFeatureCollection? _defaults;
-        private Dictionary<Type, object>? _features;
-        private volatile int _containerRevision;
 
         private FeatureCollection? _readOnly;
+
+        private FeatureContainer _container;
 
         /// <summary>
         /// Initializes a new instance of <see cref="FeatureCollection"/>.
@@ -37,7 +35,7 @@ namespace DocumentFormat.OpenXml.Features
                 throw new ArgumentOutOfRangeException(nameof(initialCapacity));
             }
 
-            _initialCapacity = initialCapacity;
+            _container = new FeatureContainer(initialCapacity);
         }
 
         /// <summary>
@@ -52,7 +50,7 @@ namespace DocumentFormat.OpenXml.Features
         }
 
         /// <inheritdoc/>
-        public virtual int Revision => _containerRevision + (_defaults?.Revision ?? 0);
+        public virtual int Revision => _container.Revision + (_defaults?.Revision ?? 0);
 
         /// <inheritdoc/>
         public bool IsReadOnly { get; }
@@ -60,7 +58,7 @@ namespace DocumentFormat.OpenXml.Features
         /// <inheritdoc/>
         public TFeature? Get<TFeature>()
         {
-            if (_features is not null && _features.TryGetValue(typeof(TFeature), out var feature) && feature is TFeature t)
+            if (_container.Get<TFeature>() is { } t)
             {
                 return t;
             }
@@ -80,23 +78,7 @@ namespace DocumentFormat.OpenXml.Features
                 throw new NotSupportedException();
             }
 
-            if (instance is null)
-            {
-                if (_features is not null && _features.Remove(typeof(TFeature)))
-                {
-                    _containerRevision++;
-                }
-
-                return;
-            }
-
-            if (_features is null)
-            {
-                _features = new(_initialCapacity);
-            }
-
-            _features[typeof(TFeature)] = instance;
-            _containerRevision++;
+            _container.Set(instance);
         }
 
         internal static IFeatureCollection Empty { get; } = new EmptyFeatures();

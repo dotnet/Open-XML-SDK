@@ -15,17 +15,4 @@ public abstract partial class TypedOpenXmlPart : OpenXmlPart
     private protected TypedOpenXmlPart()
     {
     }
-
-    internal override IFeatureCollection CreatePartFeatures(IFeatureCollection? other = null)
-        => new PartContainerFeatureCollection(other);
-
-    private class TypedPartFeatures : PartContainerFeatureCollection
-    {
-        public TypedPartFeatures(IFeatureCollection? other)
-            : base(other)
-        {
-        }
-
-        protected override IFeatureCollection Default => TypedFeatures.Shared;
-    }
-}
+ }

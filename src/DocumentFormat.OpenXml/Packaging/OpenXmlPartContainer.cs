@@ -1957,40 +1957,10 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (_features is null)
                 {
-                    _features = new FeatureCollection(CreatePartFeatures());
+                    _features = new FeatureCollection(FeatureCollection.Default);
                 }
 
                 return _features;
-            }
-        }
-
-        internal virtual IFeatureCollection CreatePartFeatures(IFeatureCollection? other = null) => new PartContainerFeatureCollection(other);
-
-        internal partial class PartContainerFeatureCollection : IFeatureCollection
-        {
-            private readonly IFeatureCollection? _other;
-
-            public bool IsReadOnly => true;
-
-            public int Revision => 0;
-
-            public PartContainerFeatureCollection(IFeatureCollection? other = null)
-            {
-                _other = other;
-            }
-
-            protected virtual IFeatureCollection Default => FeatureCollection.Default;
-
-            [KnownFeature(typeof(AnnotationsFeature))]
-            [DelegatedFeature(nameof(_other))]
-            [DelegatedFeature(nameof(Default))]
-            private partial T? GetDefault<T>();
-
-            public T? Get<T>() => GetDefault<T>();
-
-            public void Set<TFeature>(TFeature? instance)
-            {
-                throw new NotImplementedException();
             }
         }
     }
