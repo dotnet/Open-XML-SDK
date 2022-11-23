@@ -16,8 +16,9 @@ public class PartGenerator : IIncrementalGenerator
     {
         var openXml = context.GetOpenXmlGeneratorContext().GetOpenXmlServices();
         var options = context.GetOpenXmlOptions().Select(static (o, _) => o.GenerateParts);
+        var parts = openXml.Combine(options);
 
-        context.RegisterSourceOutput(openXml.Combine(options), (context, data) =>
+        context.RegisterSourceOutput(parts, (context, data) =>
         {
             if (!data.Right)
             {
@@ -25,19 +26,25 @@ public class PartGenerator : IIncrementalGenerator
             }
 
             var openXml = data.Left;
-            var sb = new StringBuilder();
-            var sw = new StringWriter(sb);
-            var writer = new IndentedTextWriter(sw);
 
-            foreach (var part in openXml.Context.Parts)
-            {
-                sb.Clear();
-
-                writer.WriteFileHeader();
-                writer.WritePart(openXml, part);
-
-                context.AddSource(part.Name, sb.ToString());
-            }
+            WritePartFiles(context, openXml);
         });
+    }
+
+    private static void WritePartFiles(SourceProductionContext context, OpenXmlGeneratorServices openXml)
+    {
+        var sb = new StringBuilder();
+        var sw = new StringWriter(sb);
+        var writer = new IndentedTextWriter(sw);
+
+        foreach (var part in openXml.Context.Parts)
+        {
+            sb.Clear();
+
+            writer.WriteFileHeader();
+            writer.WritePart(openXml, part);
+
+            context.AddSource(part.Name, sb.ToString());
+        }
     }
 }
