@@ -2,7 +2,7 @@
 <Project>
   <Import Project="..\Directory.Build.props" />
   <PropertyGroup>
-    <IsTrimmable>true</IsTrimmable>
+    <IsTrimmable Condition=" '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">true</IsTrimmable>
     <Nullable>enable</Nullable>
     <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
