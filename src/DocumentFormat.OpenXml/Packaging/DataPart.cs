@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -250,7 +251,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             Uri parentUri = new Uri("/", UriKind.Relative);
 
-            _uri = _openXmlPackage.GetUniquePartUri(contentType, parentUri, partUri);
+            _uri = _openXmlPackage.Features.GetRequired<IPartUriFeature>().EnsureUniquePartUri(contentType, parentUri, partUri);
 
             _metroPart = _openXmlPackage.CreateMetroPart(_uri, contentType);
         }
@@ -271,7 +272,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 targetFileExt = extension;
             }
 
-            return openXmlPackage.GetUniquePartUri(contentType, new Uri("/", UriKind.Relative), TargetPath, TargetName, targetFileExt);
+            return openXmlPackage.Features.GetRequired<IPartUriFeature>().CreatePartUri(contentType, new Uri("/", UriKind.Relative), TargetPath, TargetName, targetFileExt);
         }
 
         // destroy itself (aka. dispose)

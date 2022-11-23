@@ -3,7 +3,6 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,8 +39,6 @@ namespace DocumentFormat.OpenXml.Packaging
             _mainPartContentType = null!;
             OpenSettings = null!;
         }
-
-        private IPartUriFeature UriHelper => Features.GetRequired<IPartUriFeature>();
 
         private protected OpenXmlPackage(in PackageLoader loader, OpenSettings settings)
             : base()
@@ -419,72 +416,6 @@ namespace DocumentFormat.OpenXml.Packaging
             validationSettings.FileFormat = fileFormatVersions;
 
             Validate(validationSettings);
-        }
-
-        #endregion
-
-        #region internal methods
-
-        /// <summary>
-        /// Reserves the URI of the loaded part.
-        /// </summary>
-        /// <param name="contentType"></param>
-        /// <param name="partUri"></param>
-        internal void ReserveUri(string contentType, Uri partUri)
-        {
-            ThrowIfObjectDisposed();
-
-            UriHelper.ReserveUri(contentType, partUri);
-        }
-
-        /// <summary>
-        /// Gets a unique part URI for the newly created part.
-        /// </summary>
-        /// <param name="contentType">The content type of the part.</param>
-        /// <param name="parentUri">The URI of the parent part.</param>
-        /// <param name="targetPath"></param>
-        /// <param name="targetName"></param>
-        /// <param name="targetExt"></param>
-        /// <returns></returns>
-        internal Uri GetUniquePartUri(string contentType, Uri parentUri, string targetPath, string targetName, string targetExt)
-        {
-            ThrowIfObjectDisposed();
-
-            Uri partUri;
-
-            // fix bug #241492
-            // check to avoid name conflict with orphan parts in the packages.
-            do
-            {
-                partUri = UriHelper.CreatePartUri(contentType, parentUri, targetPath, targetName, targetExt);
-            }
-            while (_package.PartExists(partUri));
-
-            return partUri;
-        }
-
-        /// <summary>
-        /// Gets a unique part URI for the newly created part.
-        /// </summary>
-        /// <param name="contentType">The content type of the part.</param>
-        /// <param name="parentUri">The URI of the parent part.</param>
-        /// <param name="targetUri"></param>
-        /// <returns></returns>
-        internal Uri GetUniquePartUri(string contentType, Uri parentUri, Uri targetUri)
-        {
-            ThrowIfObjectDisposed();
-
-            Uri partUri;
-
-            // fix bug #241492
-            // check to avoid name conflict with orphan parts in the packages.
-            do
-            {
-                partUri = UriHelper.EnsureUniquePartUri(contentType, parentUri, targetUri);
-            }
-            while (_package.PartExists(partUri));
-
-            return partUri;
         }
 
         #endregion
@@ -1404,9 +1335,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 return default;
             }
 
-            [KnownFeature(typeof(IPartUriFeature), typeof(PartUriHelper))]
+            [KnownFeature(typeof(IPartUriFeature), Factory = nameof(CreatePartUri))]
             [KnownFeature(typeof(AnnotationsFeature))]
             private partial T? GetInternal<T>();
+
+            private IPartUriFeature CreatePartUri() => new PackagePartUriHelper(this);
 
             public void Set<TFeature>(TFeature? instance)
                 => _container.Set(instance);
