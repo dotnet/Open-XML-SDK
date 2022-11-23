@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // add the _uri to be reserved
-            openXmlPackage.ReserveUri(ContentType, Uri);
+            Features.GetRequired<IPartUriFeature>().ReserveUri(ContentType, Uri);
 
             // load recursively
             var relationshipCollection = new PackagePartRelationshipPropertyCollection(PackagePart, Features.GetNamespaceResolver());
@@ -203,7 +203,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             targetFileExt ??= TargetFileExtension;
 
-            _uri = _openXmlPackage.GetUniquePartUri(contentType, parentUri, targetPath, TargetName, targetFileExt);
+            _uri = _openXmlPackage.Features.GetRequired<IPartUriFeature>().CreatePartUri(contentType, parentUri, targetPath, TargetName, targetFileExt);
 
             _packagePart = _openXmlPackage.CreateMetroPart(_uri, contentType);
         }
@@ -236,7 +236,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             Uri parentUri = parent is not null ? parent.Uri : new Uri("/", UriKind.Relative);
 
-            _uri = openXmlPackage.GetUniquePartUri(contentType, parentUri, partUri);
+            _uri = openXmlPackage.Features.GetRequired<IPartUriFeature>().EnsureUniquePartUri(contentType, parentUri, partUri);
 
             _packagePart = openXmlPackage.CreateMetroPart(_uri, contentType);
         }
