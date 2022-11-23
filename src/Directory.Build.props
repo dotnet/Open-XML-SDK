@@ -2,6 +2,7 @@
 <Project>
   <Import Project="..\Directory.Build.props" />
   <PropertyGroup>
+    <IsTrimmable>true</IsTrimmable>
     <Nullable>enable</Nullable>
     <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
