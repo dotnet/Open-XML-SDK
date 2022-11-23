@@ -3,6 +3,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml
 {
@@ -11,7 +12,11 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     /// <typeparam name="T">Every enum value must be an enum with the <see cref="EnumStringAttribute"/> object.</typeparam>
     [DebuggerDisplay("{InnerText}")]
-    public class EnumValue<T> : OpenXmlSimpleValue<T>
+    public class EnumValue<
+#if NET5_0_OR_GREATER
+    [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicFields | DynamicallyAccessedMemberTypes.NonPublicFields)]
+#endif
+    T> : OpenXmlSimpleValue<T>
         where T : struct
     {
         /// <summary>
