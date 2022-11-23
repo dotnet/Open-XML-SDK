@@ -1077,8 +1077,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            // use reflection to create the instance. As the default constructor of part is not "public"
             var part = Features.GetRequired<IPartFactory>().Create<T>();
+
+            if (part is null)
+            {
+                throw new OpenXmlPackageException(ExceptionMessages.AddedPartIsNotAllowed);
+            }
 
             try
             {
@@ -1143,6 +1147,11 @@ namespace DocumentFormat.OpenXml.Packaging
             if (part is ExtendedPart)
             {
                 throw new ArgumentOutOfRangeException(nameof(T), ExceptionMessages.ExtendedPartNotAllowed);
+            }
+
+            if (part is null)
+            {
+                throw new OpenXmlPackageException(ExceptionMessages.AddedPartIsNotAllowed);
             }
 
             if (contentType is not null && part.IsContentTypeFixed && !string.Equals(contentType, part.ContentType, StringComparison.Ordinal))
