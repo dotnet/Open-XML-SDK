@@ -43,6 +43,6 @@ namespace DocumentFormat.OpenXml.Packaging
             return partUri;
         }
 
-        public void ReserveUri(string contentType, Uri partUri)=>_other.ReserveUri(contentType, partUri);
+        public void ReserveUri(string contentType, Uri partUri) => _other.ReserveUri(contentType, partUri);
     }
 }
