@@ -49,8 +49,10 @@ jobs:
       inputs:
         targetType: 'inline'
         script: |
-          git status --porcelain -- .\generated
-          exit $LastExitCode
+          if(git status --porcelain -- .\generated){
+            Write-Host  "##vso[task.LogIssue type=error;]Generated files are not in sync"
+            exit 1
+          }
 
     - task: CopyFiles@2
       inputs:
