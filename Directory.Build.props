@@ -149,9 +149,4 @@
     <IsBenchmarkProject Condition=" '$(IsBenchmarkProject)' == '' ">false</IsBenchmarkProject>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-    <CompilerGeneratedFilesOutputPath>$(MSBuildThisFileDirectory)/generated/$(MSBuildProjectName)</CompilerGeneratedFilesOutputPath>
-  </PropertyGroup>
-
 </Project>
