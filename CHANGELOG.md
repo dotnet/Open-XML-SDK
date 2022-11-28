@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.19.0]
+
+### Added
+- .NET 6 target with support for trimming (#1243, #1240)
+
+### Fixed
+- Removed reflection usage where possible (#1240)
+- Fixed issue where some URIs might be changed when cloning or creating copy (#1234)
+- Fixed issue in FlatOpc generation that would not read the full stream on .NET 6+ (#1232)
+- Fixed issue where restored relationships wouldn't load correctly (#1207)
+
 ## [2.18.0] 2022-09-06
 
 ### Added

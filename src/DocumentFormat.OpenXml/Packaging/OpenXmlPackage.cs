@@ -3,7 +3,6 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,8 +39,6 @@ namespace DocumentFormat.OpenXml.Packaging
             _mainPartContentType = null!;
             OpenSettings = null!;
         }
-
-        private IPartUriFeature UriHelper => Features.GetRequired<IPartUriFeature>();
 
         private protected OpenXmlPackage(in PackageLoader loader, OpenSettings settings)
             : base()
@@ -419,72 +416,6 @@ namespace DocumentFormat.OpenXml.Packaging
             validationSettings.FileFormat = fileFormatVersions;
 
             Validate(validationSettings);
-        }
-
-        #endregion
-
-        #region internal methods
-
-        /// <summary>
-        /// Reserves the URI of the loaded part.
-        /// </summary>
-        /// <param name="contentType"></param>
-        /// <param name="partUri"></param>
-        internal void ReserveUri(string contentType, Uri partUri)
-        {
-            ThrowIfObjectDisposed();
-
-            UriHelper.ReserveUri(contentType, partUri);
-        }
-
-        /// <summary>
-        /// Gets a unique part URI for the newly created part.
-        /// </summary>
-        /// <param name="contentType">The content type of the part.</param>
-        /// <param name="parentUri">The URI of the parent part.</param>
-        /// <param name="targetPath"></param>
-        /// <param name="targetName"></param>
-        /// <param name="targetExt"></param>
-        /// <returns></returns>
-        internal Uri GetUniquePartUri(string contentType, Uri parentUri, string targetPath, string targetName, string targetExt)
-        {
-            ThrowIfObjectDisposed();
-
-            Uri partUri;
-
-            // fix bug #241492
-            // check to avoid name conflict with orphan parts in the packages.
-            do
-            {
-                partUri = UriHelper.CreatePartUri(contentType, parentUri, targetPath, targetName, targetExt);
-            }
-            while (_package.PartExists(partUri));
-
-            return partUri;
-        }
-
-        /// <summary>
-        /// Gets a unique part URI for the newly created part.
-        /// </summary>
-        /// <param name="contentType">The content type of the part.</param>
-        /// <param name="parentUri">The URI of the parent part.</param>
-        /// <param name="targetUri"></param>
-        /// <returns></returns>
-        internal Uri GetUniquePartUri(string contentType, Uri parentUri, Uri targetUri)
-        {
-            ThrowIfObjectDisposed();
-
-            Uri partUri;
-
-            // fix bug #241492
-            // check to avoid name conflict with orphan parts in the packages.
-            do
-            {
-                partUri = UriHelper.EnsureUniquePartUri(contentType, parentUri, targetUri);
-            }
-            while (_package.PartExists(partUri));
-
-            return partUri;
         }
 
         #endregion
@@ -1346,35 +1277,72 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #endregion saving and cloning
 
-        internal override IFeatureCollection CreatePartFeatures(IFeatureCollection? other = null) => new PackageFeatureCollection(other);
-
-        internal partial class PackageFeatureCollection : IFeatureCollection
+        /// <inheritdoc/>
+        public override IFeatureCollection Features
         {
-            private readonly IFeatureCollection? _other;
-
-            public bool IsReadOnly => true;
-
-            public int Revision => 0;
-
-            public PackageFeatureCollection(IFeatureCollection? other)
+            get
             {
-                _other = other;
+                if (_features is null)
+                {
+                    _features = new PackageFeatureCollection(this, FeatureCollection.Default);
+                }
+
+                return _features;
+            }
+        }
+
+        private protected partial class PackageFeatureCollection : IFeatureCollection, IContainerFeature<OpenXmlPackage>
+        {
+            private readonly OpenXmlPackage _package;
+            private readonly IFeatureCollection? _parent;
+
+            private FeatureContainer _container;
+
+            public PackageFeatureCollection(OpenXmlPackage package, IFeatureCollection? parent)
+            {
+                _package = package;
+                _parent = parent;
             }
 
-            protected virtual IFeatureCollection Default => FeatureCollection.Default;
+            public bool IsReadOnly => false;
 
-            [KnownFeature(typeof(IPartUriFeature), typeof(PartUriHelper))]
+            public int Revision => _container.Revision + (_parent?.Revision ?? 0);
+
+            OpenXmlPackage IContainerFeature<OpenXmlPackage>.Value => _package;
+
+            public TFeature? Get<TFeature>()
+            {
+                if (_container.Get<TFeature>() is { } other)
+                {
+                    return other;
+                }
+
+                if (this is TFeature @this)
+                {
+                    return @this;
+                }
+
+                if (GetInternal<TFeature>() is { } @internal)
+                {
+                    return @internal;
+                }
+
+                if (_parent is { } p && p.Get<TFeature>() is { } parent)
+                {
+                    return parent;
+                }
+
+                return default;
+            }
+
+            [KnownFeature(typeof(IPartUriFeature), Factory = nameof(CreatePartUri))]
             [KnownFeature(typeof(AnnotationsFeature))]
-            [DelegatedFeature(nameof(_other))]
-            [DelegatedFeature(nameof(Default))]
-            private partial T? GetDefault<T>();
+            private partial T? GetInternal<T>();
 
-            public T? Get<T>() => GetDefault<T>();
+            private IPartUriFeature CreatePartUri() => new PackagePartUriHelper(this);
 
             public void Set<TFeature>(TFeature? instance)
-            {
-                throw new NotImplementedException();
-            }
+                => _container.Set(instance);
         }
     }
 }

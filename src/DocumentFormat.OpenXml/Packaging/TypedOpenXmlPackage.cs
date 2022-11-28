@@ -23,15 +23,17 @@ public abstract class TypedOpenXmlPackage : OpenXmlPackage
     {
     }
 
-    internal override IFeatureCollection CreatePartFeatures(IFeatureCollection? other = null) => new TypedPackageFeature(other);
-
-    private class TypedPackageFeature : PackageFeatureCollection
+    /// <inheritdoc/>
+    public override IFeatureCollection Features
     {
-        public TypedPackageFeature(IFeatureCollection? other = null)
-            : base(other)
+        get
         {
-        }
+            if (_features is null)
+            {
+                _features = new PackageFeatureCollection(this, TypedFeatures.Shared);
+            }
 
-        protected override IFeatureCollection Default => TypedFeatures.Shared;
+            return _features;
+        }
     }
 }

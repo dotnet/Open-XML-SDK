@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Represents an abstract base class for all OpenXml parts.
     /// </summary>
-    public abstract class OpenXmlPart : OpenXmlPartContainer
+    public abstract partial class OpenXmlPart : OpenXmlPartContainer
     {
         private const string DefaultTargetExt = ".xml";
 
@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // add the _uri to be reserved
-            openXmlPackage.ReserveUri(ContentType, Uri);
+            Features.GetRequired<IPartUriFeature>().ReserveUri(ContentType, Uri);
 
             // load recursively
             var relationshipCollection = new PackagePartRelationshipPropertyCollection(PackagePart, Features.GetNamespaceResolver());
@@ -203,7 +203,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             targetFileExt ??= TargetFileExtension;
 
-            _uri = _openXmlPackage.GetUniquePartUri(contentType, parentUri, targetPath, TargetName, targetFileExt);
+            _uri = _openXmlPackage.Features.GetRequired<IPartUriFeature>().CreatePartUri(contentType, parentUri, targetPath, TargetName, targetFileExt);
 
             _packagePart = _openXmlPackage.CreateMetroPart(_uri, contentType);
         }
@@ -236,7 +236,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             Uri parentUri = parent is not null ? parent.Uri : new Uri("/", UriKind.Relative);
 
-            _uri = openXmlPackage.GetUniquePartUri(contentType, parentUri, partUri);
+            _uri = openXmlPackage.Features.GetRequired<IPartUriFeature>().EnsureUniquePartUri(contentType, parentUri, partUri);
 
             _packagePart = openXmlPackage.CreateMetroPart(_uri, contentType);
         }
@@ -792,21 +792,62 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (_features is null)
                 {
-                    if (_openXmlPackage is { } package)
-                    {
-                        _features = package.CreatePartFeatures(package.Features);
-                    }
-                    else
-                    {
-                        _features = CreatePartFeatures();
-                    }
-
-                    // Make writeable
-                    _features = new FeatureCollection(_features);
+                    _features = new PartFeatureCollection(this);
                 }
 
                 return _features;
             }
+        }
+
+        private protected partial class PartFeatureCollection : IFeatureCollection, IContainerFeature<OpenXmlPart>
+        {
+            private readonly OpenXmlPart _part;
+
+            private FeatureContainer _container;
+
+            public PartFeatureCollection(OpenXmlPart part)
+            {
+                _part = part;
+            }
+
+            public bool IsReadOnly => false;
+
+            public int Revision => _container.Revision + (Parent?.Revision ?? 0);
+
+            OpenXmlPart IContainerFeature<OpenXmlPart>.Value => _part;
+
+            private IFeatureCollection Parent => _part.OpenXmlPackage.Features;
+
+            public TFeature? Get<TFeature>()
+            {
+                if (_container.Get<TFeature>() is { } other)
+                {
+                    return other;
+                }
+
+                if (this is TFeature @this)
+                {
+                    return @this;
+                }
+
+                if (GetInternal<TFeature>() is { } @internal)
+                {
+                    return @internal;
+                }
+
+                if (Parent.Get<TFeature>() is { } parent)
+                {
+                    return parent;
+                }
+
+                return default;
+            }
+
+            [KnownFeature(typeof(AnnotationsFeature))]
+            private partial T? GetInternal<T>();
+
+            public void Set<TFeature>(TFeature? instance)
+                => _container.Set(instance);
         }
 
         #region MC Staffs

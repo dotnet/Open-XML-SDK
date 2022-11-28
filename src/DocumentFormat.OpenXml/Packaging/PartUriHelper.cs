@@ -10,11 +10,8 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-    internal class PartUriHelper : IPartUriFeature
+    internal sealed class PartUriHelper : IPartUriFeature
     {
-        private readonly Dictionary<string, int> _sequenceNumbers = new Dictionary<string, int>(20, StringComparer.Ordinal);
-        private readonly Dictionary<Uri, int> _reservedUri = new Dictionary<Uri, int>();
-
         /// <summary>
         /// List of contentTypes that need to have a '1' appended to the name for the first item in the package.
         /// Section numbers in comments refer to the ISO/IEC 29500 standard.
@@ -71,6 +68,9 @@ namespace DocumentFormat.OpenXml.Packaging
             "application/vnd.openxmlformats-officedocument.presentationml.printerSettings",
         };
 
+        private readonly Dictionary<string, int> _sequenceNumbers = new Dictionary<string, int>(20, StringComparer.Ordinal);
+        private readonly Dictionary<Uri, int> _reservedUri = new Dictionary<Uri, int>();
+
         public void ReserveUri(string contentType, Uri partUri)
         {
             GetNextSequenceNumber(contentType);
@@ -107,12 +107,12 @@ namespace DocumentFormat.OpenXml.Packaging
         public Uri EnsureUniquePartUri(string contentType, Uri parentUri, Uri targetUri)
         {
             return CreatePartUri(
-                contentType,
-                PackUriHelper.ResolvePartUri(parentUri, targetUri),
-                ".",
-                Path.GetFileNameWithoutExtension(targetUri.OriginalString),
-                Path.GetExtension(targetUri.OriginalString),
-                forceUnique: true);
+                    contentType,
+                    PackUriHelper.ResolvePartUri(parentUri, targetUri),
+                    ".",
+                    Path.GetFileNameWithoutExtension(targetUri.OriginalString),
+                    Path.GetExtension(targetUri.OriginalString),
+                    forceUnique: true);
         }
 
         private void AddToReserveUri(Uri partUri) => _reservedUri.Add(partUri, 0);

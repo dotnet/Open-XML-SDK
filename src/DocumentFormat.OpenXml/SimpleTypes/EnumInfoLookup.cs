@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
 namespace DocumentFormat.OpenXml
@@ -22,7 +23,11 @@ namespace DocumentFormat.OpenXml
     ///   - Does not have an <see cref="EnumStringAttribute"/> for each member
     ///   - Has no members
     /// </remarks>
-    internal static class EnumInfoLookup<TEnum>
+    internal static class EnumInfoLookup<
+#if NET5_0_OR_GREATER
+    [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicFields | DynamicallyAccessedMemberTypes.NonPublicFields)]
+#endif
+    TEnum>
         where TEnum : struct
     {
         private static EnumStringLookupImpl Instance { get; } = new EnumStringLookupImpl();

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.IO;
@@ -85,6 +86,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             using (var m = new MemoryStream())
             using (var doc = SpreadsheetDocument.Create(m, SpreadsheetDocumentType.Workbook, true))
             {
+                doc.Features.Set<IPartFactory>(new CustomFactory(doc.Features.Get<IPartFactory>()));
+
                 var wb = doc.AddWorkbookPart();
 
                 // Adding new worksheet part using custom worksheetpart derived class
@@ -94,11 +97,29 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             }
         }
 
-#pragma warning disable CA1812
         private sealed class PsWorksheetPart : WorksheetPart
         {
         }
-#pragma warning restore CA1812
+
+        private class CustomFactory : IPartFactory
+        {
+            private readonly IPartFactory _other;
+
+            public CustomFactory(IPartFactory other)
+            {
+                _other = other;
+            }
+
+            public T Create<T>() where T : OpenXmlPart
+            {
+                if (typeof(T) == typeof(PsWorksheetPart))
+                {
+                    return (T)(object)new PsWorksheetPart();
+                }
+
+                return _other.Create<T>();
+            }
+        }
 
         [RelationshipType(Relationship)]
         private class ConstraintTest1

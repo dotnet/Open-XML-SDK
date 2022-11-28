@@ -1077,8 +1077,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            // use reflection to create the instance. As the default constructor of part is not "public"
             var part = Features.GetRequired<IPartFactory>().Create<T>();
+
+            if (part is null)
+            {
+                throw new OpenXmlPackageException(ExceptionMessages.AddedPartIsNotAllowed);
+            }
 
             try
             {
@@ -1143,6 +1147,11 @@ namespace DocumentFormat.OpenXml.Packaging
             if (part is ExtendedPart)
             {
                 throw new ArgumentOutOfRangeException(nameof(T), ExceptionMessages.ExtendedPartNotAllowed);
+            }
+
+            if (part is null)
+            {
+                throw new OpenXmlPackageException(ExceptionMessages.AddedPartIsNotAllowed);
             }
 
             if (contentType is not null && part.IsContentTypeFixed && !string.Equals(contentType, part.ContentType, StringComparison.Ordinal))
@@ -1948,40 +1957,10 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (_features is null)
                 {
-                    _features = new FeatureCollection(CreatePartFeatures());
+                    _features = new FeatureCollection(FeatureCollection.Default);
                 }
 
                 return _features;
-            }
-        }
-
-        internal virtual IFeatureCollection CreatePartFeatures(IFeatureCollection? other = null) => new PartContainerFeatureCollection(other);
-
-        internal partial class PartContainerFeatureCollection : IFeatureCollection
-        {
-            private readonly IFeatureCollection? _other;
-
-            public bool IsReadOnly => true;
-
-            public int Revision => 0;
-
-            public PartContainerFeatureCollection(IFeatureCollection? other = null)
-            {
-                _other = other;
-            }
-
-            protected virtual IFeatureCollection Default => FeatureCollection.Default;
-
-            [KnownFeature(typeof(AnnotationsFeature))]
-            [DelegatedFeature(nameof(_other))]
-            [DelegatedFeature(nameof(Default))]
-            private partial T? GetDefault<T>();
-
-            public T? Get<T>() => GetDefault<T>();
-
-            public void Set<TFeature>(TFeature? instance)
-            {
-                throw new NotImplementedException();
             }
         }
     }

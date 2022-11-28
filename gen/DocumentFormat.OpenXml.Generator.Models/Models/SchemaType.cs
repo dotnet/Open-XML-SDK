@@ -11,6 +11,8 @@ public class SchemaType
 
     public bool IsPart => !string.IsNullOrEmpty(Part);
 
+    public bool IsRootElement => IsPart || BaseClass == "OpenXmlPartRootElement" || BaseClass == "OpenXmlPartRootElement";
+
     public string Part { get; set; } = null!;
 
     public ParticleOrderType CompositeType { get; set; }
