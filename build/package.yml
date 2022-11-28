@@ -28,6 +28,13 @@ jobs:
           dotnet gitversion /output buildserver /nofetch
 
     - task: PowerShell@2
+      displayName: Remove generated files for baseline
+      inputs:
+        targetType: 'inline'
+        script: |
+          Remove-Item generated/ -Include *.g.cs -Recurse
+
+    - task: PowerShell@2
       displayName: 'Create NuGet package'
       name: createPackage
       inputs:
