@@ -49,9 +49,10 @@ jobs:
       inputs:
         targetType: 'inline'
         script: |
-          git status --porcelain -- .\Generated\
+          git status --porcelain -- .\generated
           
           if ($exitCode -ne 0) {
+            git status -- .\generated
             Write-Error ("[Error] Generated files are not in sync")
           }
 
