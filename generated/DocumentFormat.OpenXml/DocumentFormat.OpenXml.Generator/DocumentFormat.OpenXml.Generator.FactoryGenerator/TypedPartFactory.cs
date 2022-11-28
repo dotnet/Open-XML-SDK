@@ -11,6 +11,7 @@ using DocumentFormat.OpenXml.Packaging;
 namespace DocumentFormat.OpenXml.Features;
 internal partial class TypedPartFactory : IPartFactory
 {
+    
     public T? Create<T>() where T : OpenXmlPart
     {
         if (typeof(T) == typeof(AlternativeFormatImportPart))
