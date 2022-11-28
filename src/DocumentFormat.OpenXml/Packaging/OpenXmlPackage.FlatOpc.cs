@@ -132,22 +132,7 @@ namespace DocumentFormat.OpenXml.Packaging
             using var stream = part.GetStream();
             var size = checked((int)stream.Length);
             var buffer = new byte[size];
-
-#if NET7_0_OR_GREATER
             stream.ReadExactly(buffer);
-#else
-            var totalRead = 0;
-            while (totalRead < size)
-            {
-                var bytesRead = stream.Read(buffer, totalRead, size - totalRead);
-                if (bytesRead == 0)
-                {
-                    break;
-                }
-
-                totalRead += bytesRead;
-            }
-#endif
 
             return ToChunkedBase64String(buffer);
         }

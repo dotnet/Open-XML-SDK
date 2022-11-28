@@ -1,0 +1,27 @@
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+namespace System.IO
+{
+    internal static class StreamReadExtensions
+    {
+        public static void ReadExactly(this Stream source, byte[] destination)
+        {
+#if NET7_0_OR_GREATER
+            source.ReadExactly(destination);
+#else
+            var totalRead = 0;
+            while (totalRead < destination.Length)
+            {
+                var bytesRead = source.Read(destination, totalRead, destination.Length - totalRead);
+                if (bytesRead == 0)
+                {
+                    break;
+                }
+
+                totalRead += bytesRead;
+            }
+#endif
+        }
+    }
+}

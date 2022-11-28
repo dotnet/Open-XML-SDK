@@ -4,6 +4,10 @@
     <IncludeSpanShim Condition=" '$(IncludeSpanShim)' == '' ">true</IncludeSpanShim>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\IO\StreamReadExtensions.cs" />
+  </ItemGroup>
+
   <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
     <ShimFile Include="$(MSBuildThisFileDirectory)System\HashCode.cs" />
     <ShimFile Include="$(MSBuildThisFileDirectory)System\Lazy{T}.cs" />
