@@ -29,6 +29,7 @@ jobs:
 
     - task: PowerShell@2
       displayName: Remove generated files for baseline
+      name: removeBaseline
       inputs:
         targetType: 'inline'
         script: |
@@ -44,6 +45,7 @@ jobs:
 
     - task: PowerShell@2
       displayName: Validate generated files
+      name: validateGenerated
       inputs:
         targetType: 'inline'
         script: |
