@@ -151,7 +151,7 @@
 
   <PropertyGroup>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-    <CompilerGeneratedFilesOutputPath>$(MSBuildThisFileDirectory)/Generated/$(MSBuildProjectName)</CompilerGeneratedFilesOutputPath>
+    <CompilerGeneratedFilesOutputPath>$(MSBuildThisFileDirectory)/generated/$(MSBuildProjectName)</CompilerGeneratedFilesOutputPath>
   </PropertyGroup>
 
 </Project>
