@@ -35,6 +35,17 @@ jobs:
         script: |
           dotnet pack -c $(Configuration)
 
+    - task: PowerShell@2
+      displayName: Validate generated files
+      inputs:
+        targetType: 'inline'
+        script: |
+          git status --porcelain -- .\Generated\
+          
+          if ($exitCode -ne 0) {
+            Write-Error ("[Error] Generated files are not in sync")
+          }
+
     - task: CopyFiles@2
       inputs:
         sourceFolder: 'bin\$(Configuration)\packages\shipping'
