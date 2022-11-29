@@ -130,11 +130,11 @@ namespace DocumentFormat.OpenXml.Packaging
         private static string ToChunkedBase64String(PackagePart part)
         {
             using var stream = part.GetStream();
-            using var memory = new MemoryStream((int)stream.Length);
+            var size = checked((int)stream.Length);
+            var buffer = new byte[size];
+            stream.ReadExactly(buffer);
 
-            stream.CopyTo(memory);
-
-            return ToChunkedBase64String(memory.ToArray());
+            return ToChunkedBase64String(buffer);
         }
 
         private static string ToChunkedBase64String(byte[] byteArray)
