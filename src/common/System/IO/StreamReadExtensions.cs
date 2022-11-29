@@ -3,13 +3,11 @@
 
 namespace System.IO
 {
+#if !NET7_0_OR_GREATER
     internal static class StreamReadExtensions
     {
         public static void ReadExactly(this Stream source, byte[] destination)
         {
-#if NET7_0_OR_GREATER
-            source.ReadExactly(destination);
-#else
             var totalRead = 0;
             while (totalRead < destination.Length)
             {
@@ -21,7 +19,7 @@ namespace System.IO
 
                 totalRead += bytesRead;
             }
-#endif
         }
     }
+#endif
 }
