@@ -28,12 +28,32 @@ jobs:
           dotnet gitversion /output buildserver /nofetch
 
     - task: PowerShell@2
+      displayName: Remove generated files for baseline
+      name: removeBaseline
+      inputs:
+        targetType: 'inline'
+        script: |
+          Remove-Item generated/ -Include *.g.cs -Recurse
+
+    - task: PowerShell@2
       displayName: 'Create NuGet package'
       name: createPackage
       inputs:
         targetType: 'inline'
         script: |
           dotnet pack -c $(Configuration)
+
+    - task: PowerShell@2
+      displayName: Validate generated files
+      name: validateGenerated
+      inputs:
+        targetType: 'inline'
+        script: |
+          git status
+          if(git status --porcelain -- .\generated){
+            Write-Host  "##vso[task.LogIssue type=error;]Generated files are not in sync"
+            exit 1
+          }
 
     - task: CopyFiles@2
       inputs:

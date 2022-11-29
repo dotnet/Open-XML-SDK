@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-  <Import Project="..\Directory.Build.props" />
+  <Import Project="..\Directory.Build.props" />  
+  <PropertyGroup>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>$(MSBuildThisFileDirectory)/../generated/$(MSBuildProjectName)</CompilerGeneratedFilesOutputPath>
+  </PropertyGroup>
   <PropertyGroup>
     <IsTrimmable Condition=" '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">true</IsTrimmable>
     <Nullable>enable</Nullable>
