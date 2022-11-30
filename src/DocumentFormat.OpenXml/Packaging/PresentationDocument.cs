@@ -95,8 +95,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override ApplicationType ApplicationType => ApplicationType.PowerPoint;
-
         private void UpdateDocumentTypeFromContentType()
         {
             if (MainPartContentType is null)
@@ -767,12 +765,15 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        private partial class PresentationDocumentFeatures : TypedPackageFeatureCollection
+        private partial class PresentationDocumentFeatures : TypedPackageFeatureCollection,
+            IApplicationTypeFeature
         {
             public PresentationDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            ApplicationType IApplicationTypeFeature.Type => ApplicationType.PowerPoint;
         }
     }
 }

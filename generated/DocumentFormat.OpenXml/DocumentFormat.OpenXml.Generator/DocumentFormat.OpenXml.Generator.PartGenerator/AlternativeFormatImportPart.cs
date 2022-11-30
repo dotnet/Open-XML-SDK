@@ -36,6 +36,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Extension => ".dat";
             string ITargetFeature.Name => "afchunk";
         }
     

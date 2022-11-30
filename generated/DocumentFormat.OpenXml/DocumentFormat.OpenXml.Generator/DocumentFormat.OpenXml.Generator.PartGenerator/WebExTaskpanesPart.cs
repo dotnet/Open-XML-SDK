@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
             string ITargetFeature.Name => "taskpanes";
-            string ITargetFeature.Path => Package.ApplicationType switch
+            string ITargetFeature.Path => (Get<IApplicationTypeFeature>()?.Type ?? ApplicationType.None) switch
             {
                 ApplicationType.Word => "word/webextensions",
                 ApplicationType.Excel => "xl/webextensions",

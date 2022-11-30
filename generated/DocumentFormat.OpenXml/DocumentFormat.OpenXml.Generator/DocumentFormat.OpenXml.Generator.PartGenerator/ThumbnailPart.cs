@@ -36,6 +36,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Extension => ".bin";
             string ITargetFeature.Name => "thumbnail";
             string ITargetFeature.Path => "docProps";
         }

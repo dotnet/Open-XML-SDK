@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using NSubstitute;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -130,6 +131,7 @@ namespace DocumentFormat.OpenXml.Tests
                 .Select(t =>
                 {
                     var targets = t.Features.GetRequired<ITargetFeature>();
+
                     return new
                     {
                         Name = t.GetType().FullName,
@@ -152,6 +154,9 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static IEnumerable<OpenXmlPart> GetParts()
         {
+            var appType = Substitute.For<IApplicationTypeFeature>();
+            appType.Type.Returns(ApplicationType.None);
+
             var metadata = new TypedFeatures().GetRequired<IPartMetadataFeature>();
             var parts = typeof(TypedFeatures)
                 .GetTypeInfo()
@@ -165,6 +170,8 @@ namespace DocumentFormat.OpenXml.Tests
             foreach (var part in parts)
             {
                 part.Features.Set(metadata);
+                part.Features.Set(appType);
+
                 yield return part;
             }
         }

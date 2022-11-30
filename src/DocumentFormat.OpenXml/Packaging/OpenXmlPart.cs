@@ -9,7 +9,6 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 using System.Xml;
-using System.Net.Mime;
 
 #if FEATURE_XML_SCHEMA
 using System.ComponentModel;

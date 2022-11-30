@@ -184,7 +184,7 @@ public static class PartWriter
 
     private static void WriteTargetPaths(IndentedTextWriter writer, Part type)
     {
-        if (type.HasFixedContent & type.Extension is not null)
+        if (type.Extension is not null)
         {
             writer.Write("string ITargetFeature.Extension => ");
             writer.WriteString(type.Extension);
@@ -226,7 +226,7 @@ public static class PartWriter
         }
         else
         {
-            writer.WriteLine("string ITargetFeature.Path => Package.ApplicationType switch");
+            writer.WriteLine("string ITargetFeature.Path => (Get<IApplicationTypeFeature>()?.Type ?? ApplicationType.None) switch");
 
             using (writer.AddBlock(new() { IncludeSemiColon = true }))
             {

@@ -93,8 +93,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override ApplicationType ApplicationType => ApplicationType.Excel;
-
         private void UpdateDocumentTypeFromContentType()
         {
             if (MainPartContentType is null)
@@ -767,12 +765,15 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        private partial class SpreadsheetDocumentFeatures : TypedPackageFeatureCollection
+        private partial class SpreadsheetDocumentFeatures : TypedPackageFeatureCollection,
+            IApplicationTypeFeature
         {
             public SpreadsheetDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            ApplicationType IApplicationTypeFeature.Type => ApplicationType.Excel;
         }
     }
 }

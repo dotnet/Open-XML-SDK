@@ -19,15 +19,13 @@ public abstract partial class OpenXmlPart
 
         protected OpenXmlPart Part { get; }
 
-        protected OpenXmlPackage Package => Part._openXmlPackage ?? throw new InvalidOperationException("Part is not fully initialized");
-
         public bool IsReadOnly => false;
 
         public int Revision => _container.Revision + (Parent?.Revision ?? 0);
 
         OpenXmlPart IContainerFeature<OpenXmlPart>.Value => Part;
 
-        private IFeatureCollection Parent => Package.Features;
+        private IFeatureCollection? Parent => Part._openXmlPackage?.Features;
 
         string ITargetFeature.Path => ".";
 
@@ -52,9 +50,9 @@ public abstract partial class OpenXmlPart
                 return @internal;
             }
 
-            if (Parent.Get<TFeature>() is { } parent)
+            if (Parent is { } parent && parent.Get<TFeature>() is { } fromParent)
             {
-                return parent;
+                return fromParent;
             }
 
             return default;

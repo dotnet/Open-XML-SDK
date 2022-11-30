@@ -134,8 +134,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal OpenSettings OpenSettings { get; set; }
 
-        internal virtual ApplicationType ApplicationType => ApplicationType.None;
-
         /// <summary>
         /// Gets a value indicating whether this package contains Transitional relationships converted from Strict.
         /// </summary>
@@ -1278,20 +1276,13 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion saving and cloning
 
         /// <inheritdoc/>
-        public override IFeatureCollection Features
-        {
-            get
-            {
-                if (_features is null)
-                {
-                    _features = new PackageFeatureCollection(this, FeatureCollection.Default);
-                }
+        public override IFeatureCollection Features => _features ??= new PackageFeatureCollection(this, FeatureCollection.Default);
 
-                return _features;
-            }
-        }
-
-        private protected partial class PackageFeatureCollection : IFeatureCollection, IContainerFeature<OpenXmlPackage>, IPartFactoryFeature
+        private protected partial class PackageFeatureCollection :
+            IFeatureCollection,
+            IContainerFeature<OpenXmlPackage>,
+            IPartFactoryFeature,
+            IApplicationTypeFeature
         {
             private readonly OpenXmlPackage _package;
             private readonly IFeatureCollection? _parent;
@@ -1309,6 +1300,8 @@ namespace DocumentFormat.OpenXml.Packaging
             public int Revision => _container.Revision + (_parent?.Revision ?? 0);
 
             OpenXmlPackage IContainerFeature<OpenXmlPackage>.Value => _package;
+
+            ApplicationType IApplicationTypeFeature.Type => ApplicationType.None;
 
             public TFeature? Get<TFeature>()
             {

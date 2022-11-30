@@ -92,8 +92,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override ApplicationType ApplicationType => ApplicationType.Word;
-
         private void UpdateDocumentTypeFromContentType()
         {
             if (MainPartContentType is null)
@@ -807,12 +805,15 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        private partial class WordprocessingDocumentFeatures : TypedPackageFeatureCollection
+        private partial class WordprocessingDocumentFeatures : TypedPackageFeatureCollection,
+            IApplicationTypeFeature
         {
             public WordprocessingDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            ApplicationType IApplicationTypeFeature.Type => ApplicationType.Word;
         }
     }
 }
