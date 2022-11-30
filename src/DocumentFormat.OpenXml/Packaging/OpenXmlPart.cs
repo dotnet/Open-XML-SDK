@@ -799,57 +799,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        private protected partial class PartFeatureCollection : IFeatureCollection, IContainerFeature<OpenXmlPart>
-        {
-            private readonly OpenXmlPart _part;
-
-            private FeatureContainer _container;
-
-            public PartFeatureCollection(OpenXmlPart part)
-            {
-                _part = part;
-            }
-
-            public bool IsReadOnly => false;
-
-            public int Revision => _container.Revision + (Parent?.Revision ?? 0);
-
-            OpenXmlPart IContainerFeature<OpenXmlPart>.Value => _part;
-
-            private IFeatureCollection Parent => _part.OpenXmlPackage.Features;
-
-            public TFeature? Get<TFeature>()
-            {
-                if (_container.Get<TFeature>() is { } other)
-                {
-                    return other;
-                }
-
-                if (this is TFeature @this)
-                {
-                    return @this;
-                }
-
-                if (GetInternal<TFeature>() is { } @internal)
-                {
-                    return @internal;
-                }
-
-                if (Parent.Get<TFeature>() is { } parent)
-                {
-                    return parent;
-                }
-
-                return default;
-            }
-
-            [KnownFeature(typeof(AnnotationsFeature))]
-            private partial T? GetInternal<T>();
-
-            public void Set<TFeature>(TFeature? instance)
-                => _container.Set(instance);
-        }
-
         #region MC Staffs
 
         internal MarkupCompatibilityProcessSettings? MCSettings { get; set; }

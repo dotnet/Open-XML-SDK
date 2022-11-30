@@ -166,6 +166,11 @@ public static class PartWriter
         }
     }
 
+    private static void WriteTargetPaths(IndentedTextWriter writer, Part type)
+    {
+        if(type.Target)
+    }
+
     private static IEnumerable<Item> GetStronglyTypedProperties(Part type)
     {
         if (type.ContentType is not null)
