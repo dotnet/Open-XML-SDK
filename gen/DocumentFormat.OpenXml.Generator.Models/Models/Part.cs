@@ -15,6 +15,8 @@ public class Part
         set => _base = value.Equals("OpenXmlPart") ? "TypedOpenXmlPart" : value;
     }
 
+    public bool IsPackage => string.Equals(Base, "OpenXmlPackage", StringComparison.Ordinal);
+
     public bool HasFixedContent => ContentType is not null;
 
     public string? ContentType { get; set; }
