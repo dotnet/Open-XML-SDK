@@ -9,7 +9,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 
 namespace DocumentFormat.OpenXml.Features;
-internal partial class TypedPartFactory : IPartFactory
+internal partial class TypedPartFactory : ITypedPartFactoryFeature
 {
     public T? Create<T>() where T : OpenXmlPart
     {

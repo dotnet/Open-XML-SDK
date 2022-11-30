@@ -1077,7 +1077,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            var part = Features.GetRequired<IPartFactory>().Create<T>();
+            var part = Features.GetRequired<ITypedPartFactoryFeature>().Create<T>();
 
             if (part is null)
             {
@@ -1142,7 +1142,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // Use reflection to create the instance as the default constructor of part is not public
-            var part = Features.GetRequired<IPartFactory>().Create<T>();
+            var part = Features.GetRequired<ITypedPartFactoryFeature>().Create<T>();
 
             if (part is ExtendedPart)
             {

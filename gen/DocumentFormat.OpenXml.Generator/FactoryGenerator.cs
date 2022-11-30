@@ -133,7 +133,7 @@ public class FactoryGenerator : IIncrementalGenerator
         writer.WriteLine();
         writer.WriteLine("namespace DocumentFormat.OpenXml.Features;");
 
-        writer.WriteLine("internal partial class TypedPartFactory : IPartFactory");
+        writer.WriteLine("internal partial class TypedPartFactory : ITypedPartFactoryFeature");
 
         using (writer.AddBlock())
         {
