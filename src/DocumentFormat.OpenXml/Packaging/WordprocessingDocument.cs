@@ -822,6 +822,28 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #endregion Package-based cloning
 
-        #endregion cloning
+        #endregion cloning 
+
+        /// <inheritdoc/>
+        public override IFeatureCollection Features
+        {
+            get
+            {
+                if (_features is null)
+                {
+                    _features = new WordprocessingDocumentFeatures(this);
+                }
+
+                return _features;
+            }
+        }
+
+        private partial class WordprocessingDocumentFeatures : TypedPackageFeatureCollection
+        {
+            public WordprocessingDocumentFeatures(TypedOpenXmlPackage package)
+                : base(package)
+            {
+            }
+        }
     }
 }

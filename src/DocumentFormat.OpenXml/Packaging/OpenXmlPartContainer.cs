@@ -1805,7 +1805,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
             else
             {
-                return new ExtendedPart(relationshipType);
+                return Features.GetRequired<IPartFactoryFeature>().Create(relationshipType);
             }
         }
 

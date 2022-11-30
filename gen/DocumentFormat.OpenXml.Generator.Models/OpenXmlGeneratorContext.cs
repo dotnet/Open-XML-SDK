@@ -35,4 +35,6 @@ public record OpenXmlGeneratorContext
     public ImmutableArray<StronglyTypedNamespace> TypedNamespaces { get; init; } = ImmutableArray.Create<StronglyTypedNamespace>();
 
     public ImmutableArray<StronglyTypedElement> TypedClasses { get; init; } = ImmutableArray.Create<StronglyTypedElement>();
+
+    public ImmutableArray<Part> Packages { get; init; } = ImmutableArray.Create<Part>();
 }

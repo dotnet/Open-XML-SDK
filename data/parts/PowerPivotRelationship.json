@@ -1,0 +1,12 @@
+{
+  "Name": "PowerPivotRelationship",
+  "Base": "DataPartReferenceRelationship",
+  "ContentType": "application/vnd.openxmlformats-officedocument.model\u002Bdata",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/powerPivotData",
+  "Target": "item",
+  "Extension": ".data",
+  "Paths": {
+    "General": "model"
+  },
+  "Version": "Office2013"
+}

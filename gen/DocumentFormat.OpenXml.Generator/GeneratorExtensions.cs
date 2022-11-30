@@ -90,12 +90,19 @@ public static class GeneratorExtensions
         var stronglyTypedSchema = openXmlFiles.GetStronglyTypedSchemas();
         var stronglyTypedNamespace = openXmlFiles.GetStronglyTypedNamespace();
 
+        var skippedBaseClass = new HashSet<string>(StringComparer.Ordinal)
+        {
+            "OpenXmlPackage",
+            "DataPartReferenceRelationship",
+        };
+
         return namespaces.Combine(namespaceTypes).Combine(parts).Combine(schematrons).Combine(stronglyTypedSchema).Combine(stronglyTypedNamespace)
             .Select((arg, token) => new OpenXmlGeneratorContext
             {
                 KnownNamespaces = arg.Left.Left.Left.Left.Left,
                 Namespaces = arg.Left.Left.Left.Left.Right,
-                Parts = arg.Left.Left.Left.Right,
+                Parts = arg.Left.Left.Left.Right.Where(t => !skippedBaseClass.Contains(t.Base)).ToImmutableArray(),
+                Packages = arg.Left.Left.Left.Right.Where(t => string.Equals(t.Base, "OpenXmlPackage", StringComparison.Ordinal)).ToImmutableArray(),
                 Schematrons = arg.Left.Left.Right,
                 TypedClasses = arg.Left.Right,
                 TypedNamespaces = arg.Right,

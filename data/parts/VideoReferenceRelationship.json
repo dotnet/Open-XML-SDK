@@ -1,0 +1,10 @@
+{
+  "Name": "VideoReferenceRelationship",
+  "Base": "DataPartReferenceRelationship",
+  "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/video",
+  "Target": "video",
+  "Extension": ".bin",
+  "Paths": {
+    "General": "../media"
+  }
+}
