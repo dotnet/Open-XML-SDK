@@ -1,6 +1,8 @@
 # Features
 
-Features are a new concept in v2.14 and later that allows for behavior and state to be contained within the document or part. This is accessed via `OpenXmlPartContainer.Features` property and a document's features will be inherited into a part. All elements within a part will have a read-only access to the part's features (and thus the document's as well).
+Features are a new concept in v2.14 and later that allows for behavior and state to be contained within the document or part. This is accessed via `Features` property  on packages, parts, and elements. Elements inherit part features, and parts inherit package features.
+
+This is inspired by the pattern ASP.NET Core uses to modify behavior of HttpContext: https://learn.microsoft.com/aspnet/core/fundamentals/request-features
 
 ## Current Features
 
