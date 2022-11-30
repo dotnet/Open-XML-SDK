@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -147,12 +148,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public TableStylesPart? TableStylesPart => GetSubPartOfType<TableStylesPart>();
 
-        /// <inheritdoc/>
-        internal sealed override string TargetName => "presentation";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => "ppt";
-
         /// <summary>
         /// Gets the ThemePart of the PresentationPart
         /// </summary>
@@ -276,5 +271,16 @@ namespace DocumentFormat.OpenXml.Packaging
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddFontPart(contentType);
         }
+        
+        /// <inheritdoc/>
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Name => "presentation";
+            string ITargetFeature.Path => "ppt";
+        }
+    
     }
 }

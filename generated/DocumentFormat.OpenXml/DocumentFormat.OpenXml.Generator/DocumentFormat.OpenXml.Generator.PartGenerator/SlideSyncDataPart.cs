@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -75,11 +76,16 @@ namespace DocumentFormat.OpenXml.Packaging
                 SetDomTree(value);
             }
         }
-
+        
         /// <inheritdoc/>
-        internal sealed override string TargetName => "slideUpdateInfo";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => "slideUpdateInfo";
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Name => "slideUpdateInfo";
+            string ITargetFeature.Path => "slideUpdateInfo";
+        }
+    
     }
 }

@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -45,15 +46,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
-
-        /// <inheritdoc/>
-        internal sealed override string TargetFileExtension => ".vml";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetName => "vmldrawing";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => "../drawings";
 
         /// <summary>
         /// Adds a ImagePart to the VmlDrawingPart
@@ -106,5 +98,17 @@ namespace DocumentFormat.OpenXml.Packaging
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddImagePart(contentType);
         }
+        
+        /// <inheritdoc/>
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Extension => ".vml";
+            string ITargetFeature.Name => "vmldrawing";
+            string ITargetFeature.Path => "../drawings";
+        }
+    
     }
 }

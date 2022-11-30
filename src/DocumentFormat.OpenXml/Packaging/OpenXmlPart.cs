@@ -9,6 +9,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 using System.Xml;
+using System.Net.Mime;
 
 #if FEATURE_XML_SCHEMA
 using System.ComponentModel;
@@ -22,8 +23,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPart : OpenXmlPartContainer
     {
-        private const string DefaultTargetExt = ".xml";
-
         private OpenXmlPackage? _openXmlPackage;
         private PackagePart? _packagePart;
         private Uri? _uri;
@@ -135,27 +134,6 @@ namespace DocumentFormat.OpenXml.Packaging
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
-        // get app specific TargetPath if exists
-        private string? GetTargetPath(OpenXmlPackage package, string? defaultPath)
-        {
-            if (TargetPathOfWord is not null && package.ApplicationType == ApplicationType.Word)
-            {
-                return TargetPathOfWord;
-            }
-            else if (TargetPathOfExcel is not null && package.ApplicationType == ApplicationType.Excel)
-            {
-                return TargetPathOfExcel;
-            }
-            else if (TargetPathOfPPT is not null && package.ApplicationType == ApplicationType.PowerPoint)
-            {
-                return TargetPathOfPPT;
-            }
-            else
-            {
-                return defaultPath;
-            }
-        }
-
         // create a new part in this package
         internal void CreateInternal(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, string contentType, string? targetExt)
         {
@@ -186,26 +164,52 @@ namespace DocumentFormat.OpenXml.Packaging
 
             Uri parentUri = parent is not null ? parent.Uri : new Uri("/", UriKind.Relative);
 
-            // OpenXmlPart parentPart = this._ownerPart;
+            var targets = GetAndVerifyTargetFeature(openXmlPackage, contentType, targetExt);
 
-            // Uri is auto generated to make sure it's unique
-            var targetPath = GetTargetPath(openXmlPackage, TargetPath) ?? ".";
+            _uri = Features.GetRequired<IPartUriFeature>().CreatePartUri(contentType, parentUri, targets.Path, targets.Name, targets.Extension);
 
-            string? targetFileExt = targetExt;
+            _packagePart = _openXmlPackage.CreateMetroPart(_uri, contentType);
+        }
+
+        private ITargetFeature GetAndVerifyTargetFeature(OpenXmlPackage openXmlPackage, string contentType, string? targetExt)
+        {
+            var targets = Features.GetRequired<ITargetFeature>();
 
             if (!IsContentTypeFixed)
             {
-                if (!openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out targetFileExt))
+                if (!openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out var found))
                 {
-                    targetFileExt = targetExt;
+                    targetExt = found;
+                }
+
+                if (targetExt is not null && targets.Extension != targetExt)
+                {
+                    var updated = new UpdatedExtensionTargetFeature(targets, targetExt);
+
+                    Features.Set<ITargetFeature>(updated);
+
+                    return updated;
                 }
             }
 
-            targetFileExt ??= TargetFileExtension;
+            return targets;
+        }
 
-            _uri = _openXmlPackage.Features.GetRequired<IPartUriFeature>().CreatePartUri(contentType, parentUri, targetPath, TargetName, targetFileExt);
+        private sealed class UpdatedExtensionTargetFeature : ITargetFeature
+        {
+            private readonly ITargetFeature _other;
 
-            _packagePart = _openXmlPackage.CreateMetroPart(_uri, contentType);
+            public UpdatedExtensionTargetFeature(ITargetFeature other, string extension)
+            {
+                _other = other;
+                Extension = extension;
+            }
+
+            public string Path => _other.Path;
+
+            public string Name => _other.Name;
+
+            public string Extension { get; }
         }
 
         // create a new part in this package
@@ -545,39 +549,6 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets the internal path to be used for the part name.
-        /// </summary>
-        internal virtual string? TargetPath => null;
-
-        /// <summary>
-        /// Gets the internal path (Word specific TargetPath) to be used for the part name.
-        /// </summary>
-        internal virtual string? TargetPathOfWord => null;
-
-        /// <summary>
-        /// Gets the internal path (Excel specific TargetPath) to be used for the part name.
-        /// </summary>
-        internal virtual string? TargetPathOfExcel => null;
-
-        /// <summary>
-        /// Gets the internal path (PPT specific TargetPath) to be used for the part name.
-        /// </summary>
-        internal virtual string? TargetPathOfPPT => null;
-
-        /// <summary>
-        /// Gets the file base name to be used for the part name in the package.
-        /// </summary>
-        internal abstract string TargetName { get; }
-
-        /// <summary>
-        /// Gets the file extension to be used for the part in the package.
-        /// </summary>
-        internal virtual string TargetFileExtension
-        {
-            get { return DefaultTargetExt; }
-        }
-
-        /// <summary>
         /// Gets or sets the root element field.
         /// </summary>
         /// <exception cref="InvalidOperationException">If the part does not have root element defined.</exception>
@@ -786,18 +757,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion
 
         /// <inheritdoc/>
-        public override IFeatureCollection Features
-        {
-            get
-            {
-                if (_features is null)
-                {
-                    _features = new PartFeatureCollection(this);
-                }
-
-                return _features;
-            }
-        }
+        public override IFeatureCollection Features => _features ??= new PartFeatureCollection(this);
 
         #region MC Staffs
 

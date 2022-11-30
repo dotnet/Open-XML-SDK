@@ -81,11 +81,13 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Same(PartConstraintCollection.Instance, part.GetPartMetadata().DataPartReferenceConstraints);
             }
 
+            var targets = part.Features.GetRequired<ITargetFeature>();
+
             Assert.Equal(data.IsContentTypeFixed, part.IsContentTypeFixed);
             Assert.Equal(data.RelationshipType, part.RelationshipType);
-            Assert.Equal(data.TargetFileExtension, part.TargetFileExtension);
-            Assert.Equal(data.TargetName, part.TargetName);
-            Assert.Equal(data.TargetPath, part.TargetPath);
+            Assert.Equal(data.TargetFileExtension, targets.Extension);
+            Assert.Equal(data.TargetName, targets.Name);
+            Assert.Equal(data.TargetPath, targets.Path);
 
             if (part.IsContentTypeFixed)
             {
@@ -125,17 +127,21 @@ namespace DocumentFormat.OpenXml.Tests
         public void ExportData()
         {
             var result = GetParts()
-                .Select(t => new
+                .Select(t =>
                 {
-                    Name = t.GetType().FullName,
-                    ContentType = t.IsContentTypeFixed ? t.ContentType : null,
-                    IsContentTypeFixed = t.IsContentTypeFixed,
-                    RelationshipType = t.RelationshipType,
-                    TargetFileExtension = t.TargetFileExtension,
-                    TargetName = t.TargetName,
-                    TargetPath = t.TargetPath,
-                    DataParts = t.GetPartMetadata().DataPartReferenceConstraints,
-                    Parts = t.GetPartMetadata().PartConstraints,
+                    var targets = t.Features.GetRequired<ITargetFeature>();
+                    return new
+                    {
+                        Name = t.GetType().FullName,
+                        ContentType = t.IsContentTypeFixed ? t.ContentType : null,
+                        IsContentTypeFixed = t.IsContentTypeFixed,
+                        RelationshipType = t.RelationshipType,
+                        TargetFileExtension = targets.Extension,
+                        TargetName = targets.Name,
+                        TargetPath = targets.Path,
+                        DataParts = t.GetPartMetadata().DataPartReferenceConstraints,
+                        Parts = t.GetPartMetadata().PartConstraints,
+                    };
                 })
                 .OrderBy(d => d.Name, StringComparer.Ordinal);
 

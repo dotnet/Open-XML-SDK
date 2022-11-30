@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -52,21 +53,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
 
-        /// <inheritdoc/>
-        internal sealed override string TargetName => "taskpanes";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => "../webextensions";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPathOfExcel => "xl/webextensions";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPathOfPPT => "ppt/webextensions";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPathOfWord => "word/webextensions";
-
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
@@ -102,5 +88,22 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             return version.AtLeast(FileFormatVersions.Office2013);
         }
+        
+        /// <inheritdoc/>
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Name => "taskpanes";
+            string ITargetFeature.Path => Package.ApplicationType switch
+            {
+                ApplicationType.Word => "word/webextensions",
+                ApplicationType.Excel => "xl/webextensions",
+                ApplicationType.PowerPoint => "ppt/webextensions",
+                _ => "../webextensions",
+            };
+        }
+    
     }
 }

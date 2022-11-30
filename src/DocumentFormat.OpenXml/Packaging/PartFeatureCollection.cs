@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
+using System;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
@@ -9,26 +10,30 @@ public abstract partial class OpenXmlPart
 {
     private protected partial class PartFeatureCollection : IFeatureCollection, IContainerFeature<OpenXmlPart>, ITargetFeature
     {
-        private readonly OpenXmlPart _part;
-
         private FeatureContainer _container;
 
         public PartFeatureCollection(OpenXmlPart part)
         {
-            _part = part;
+            Part = part;
         }
+
+        protected OpenXmlPart Part { get; }
+
+        protected OpenXmlPackage Package => Part._openXmlPackage ?? throw new InvalidOperationException("Part is not fully initialized");
 
         public bool IsReadOnly => false;
 
         public int Revision => _container.Revision + (Parent?.Revision ?? 0);
 
-        OpenXmlPart IContainerFeature<OpenXmlPart>.Value => _part;
+        OpenXmlPart IContainerFeature<OpenXmlPart>.Value => Part;
 
-        private IFeatureCollection Parent => _part.OpenXmlPackage.Features;
+        private IFeatureCollection Parent => Package.Features;
 
         string ITargetFeature.Path => ".";
 
         string ITargetFeature.Extension => ".xml";
+
+        string ITargetFeature.Name => string.Empty;
 
         public TFeature? Get<TFeature>()
         {
