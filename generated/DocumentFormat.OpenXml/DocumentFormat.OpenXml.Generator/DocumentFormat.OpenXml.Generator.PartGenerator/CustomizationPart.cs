@@ -87,23 +87,5 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WordAttachedToolbarsPart of the CustomizationPart
         /// </summary>
         public WordAttachedToolbarsPart? WordAttachedToolbarsPart => GetSubPartOfType<WordAttachedToolbarsPart>();
-
-        /// <inheritdoc/>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            switch (relationshipType)
-            {
-                case WordAttachedToolbarsPart.RelationshipTypeConstant:
-                    return new WordAttachedToolbarsPart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
     }
 }

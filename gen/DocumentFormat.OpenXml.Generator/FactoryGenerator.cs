@@ -21,6 +21,14 @@ public class FactoryGenerator : IIncrementalGenerator
 
         var partFactory = openXml.Select((o, token) =>
         {
+            // Some parts serve in multiple places and end up getting pulled in here unintentionally
+            var invalidParts = new Dictionary<string, HashSet<string>>
+            {
+                { "PresentationDocument", new() { "WorksheetCommentsPart", "SpreadsheetPrinterSettingsPart" } },
+                { "SpreadsheetDocument", new() { "SlideCommentsPart" } },
+                { "WordprocessingDocument", new() { "WorksheetCommentsPart", "SlideCommentsPart", "SpreadsheetPrinterSettingsPart" } },
+            };
+
             var result = ImmutableDictionary.CreateBuilder<string, ImmutableArray<Models.Part>>();
 
             try
@@ -29,6 +37,7 @@ public class FactoryGenerator : IIncrementalGenerator
 
                 foreach (var doc in o.Context.Packages)
                 {
+                    var invalid = invalidParts[doc.Name];
                     var seen = new HashSet<string>();
                     var queue = new Queue<Models.Part>();
                     queue.Enqueue(doc);
@@ -40,7 +49,7 @@ public class FactoryGenerator : IIncrementalGenerator
 
                         foreach (var child in part.Children)
                         {
-                            if (seen.Add(child.Name) && dict.TryGetValue(child.Name, out var childPart))
+                            if (!child.IsDataPartReference && !invalid.Contains(child.Name) && seen.Add(child.Name) && dict.TryGetValue(child.Name, out var childPart))
                             {
                                 queue.Enqueue(childPart);
                                 partResult.Add(childPart);
@@ -94,25 +103,19 @@ public class FactoryGenerator : IIncrementalGenerator
 
                 using (writer.AddBlock())
                 {
-                    writer.WriteLine("OpenXmlPart IPartFactoryFeature.Create(string relationship)");
+                    writer.WriteLine("OpenXmlPart? IPartFactoryFeature.Create(string relationship) => relationship switch");
 
-                    using (writer.AddBlock())
+                    using (writer.AddBlock(new() { IncludeSemiColon = true }))
                     {
                         foreach (var relationship in part.Value)
                         {
-                            writer.Write("if (relationship == \"");
-                            writer.Write(relationship.RelationshipType);
-                            writer.WriteLine("\")");
-
-                            using (writer.AddBlock())
-                            {
-                                writer.Write("return new ");
-                                writer.Write(relationship.Name);
-                                writer.WriteLine("();");
-                            }
+                            writer.WriteString(relationship.RelationshipType);
+                            writer.Write(" => new ");
+                            writer.Write(relationship.Name);
+                            writer.WriteLine("(),");
                         }
 
-                        writer.WriteLine("return new ExtendedPart(relationship);");
+                        writer.WriteLine("_ => default,");
                     }
                 }
             }

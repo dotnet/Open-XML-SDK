@@ -98,24 +98,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<WebExtensionPart> WebExtensionParts => GetPartsOfType<WebExtensionPart>();
 
-        /// <inheritdoc/>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            switch (relationshipType)
-            {
-                case WebExtensionPart.RelationshipTypeConstant:
-                    return new WebExtensionPart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
-
         internal override bool IsInVersion(FileFormatVersions version)
         {
             return version.AtLeast(FileFormatVersions.Office2013);

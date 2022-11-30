@@ -14,378 +14,101 @@ partial class SpreadsheetDocument
 {
     partial class SpreadsheetDocumentFeatures : IPartFactoryFeature
     {
-        OpenXmlPart IPartFactoryFeature.Create(string relationship)
+        OpenXmlPart? IPartFactoryFeature.Create(string relationship) => relationship switch
         {
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument")
-            {
-                return new WorkbookPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties")
-            {
-                return new CoreFilePropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties")
-            {
-                return new ExtendedFilePropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties")
-            {
-                return new CustomFilePropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail")
-            {
-                return new ThumbnailPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin")
-            {
-                return new DigitalSignatureOriginPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization")
-            {
-                return new QuickAccessToolbarCustomizationsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility")
-            {
-                return new RibbonExtensibilityPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility")
-            {
-                return new RibbonAndBackstageCustomizationsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes")
-            {
-                return new WebExTaskpanesPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2020/02/relationships/classificationlabels")
-            {
-                return new LabelInfoPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml")
-            {
-                return new CustomXmlPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain")
-            {
-                return new CalculationChainPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sheetMetadata")
-            {
-                return new CellMetadataPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/connections")
-            {
-                return new ConnectionsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/xmlMaps")
-            {
-                return new CustomXmlMappingsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings")
-            {
-                return new SharedStringTablePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionHeaders")
-            {
-                return new WorkbookRevisionHeaderPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/usernames")
-            {
-                return new WorkbookUserDataPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles")
-            {
-                return new WorkbookStylesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme")
-            {
-                return new ThemePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/volatileDependencies")
-            {
-                return new VolatileDependenciesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet")
-            {
-                return new ChartsheetPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet")
-            {
-                return new DialogsheetPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLink")
-            {
-                return new ExternalWorkbookPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition")
-            {
-                return new PivotTableCacheDefinitionPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet")
-            {
-                return new WorksheetPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/attachedToolbars")
-            {
-                return new ExcelAttachedToolbarsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/vbaProject")
-            {
-                return new VbaProjectPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet")
-            {
-                return new MacroSheetPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/xlIntlMacrosheet")
-            {
-                return new InternationalMacroSheetPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2007/relationships/customDataProps")
-            {
-                return new CustomDataPropertiesPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2007/relationships/slicerCache")
-            {
-                return new SlicerCachePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/timelineCache")
-            {
-                return new TimeLineCachePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/10/relationships/person")
-            {
-                return new WorkbookPersonPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValue")
-            {
-                return new RdRichValuePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueStructure")
-            {
-                return new RdRichValueStructurePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/06/relationships/rdArray")
-            {
-                return new RdArrayPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/06/relationships/richStyles")
-            {
-                return new RichStylesPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBag")
-            {
-                return new RdSupportingPropertyBagPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBagStructure")
-            {
-                return new RdSupportingPropertyBagStructurePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueTypes")
-            {
-                return new RdRichValueTypesPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage")
-            {
-                return new RdRichValueWebImagePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature")
-            {
-                return new XmlSignaturePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image")
-            {
-                return new ImagePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/webextension")
-            {
-                return new WebExtensionPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps")
-            {
-                return new CustomXmlPropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionLog")
-            {
-                return new WorkbookRevisionLogPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings")
-            {
-                return new SpreadsheetPrinterSettingsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing")
-            {
-                return new DrawingsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing")
-            {
-                return new VmlDrawingPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject")
-            {
-                return new EmbeddedObjectPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords")
-            {
-                return new PivotTableCacheRecordsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments")
-            {
-                return new WorksheetCommentsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable")
-            {
-                return new PivotTablePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells")
-            {
-                return new SingleCellTablePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table")
-            {
-                return new TableDefinitionPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control")
-            {
-                return new EmbeddedControlPersistencePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp")
-            {
-                return new ControlPropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package")
-            {
-                return new EmbeddedPackagePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty")
-            {
-                return new CustomPropertyPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/wsSortMap")
-            {
-                return new WorksheetSortMapPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable")
-            {
-                return new QueryTablePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary")
-            {
-                return new EmbeddedControlPersistenceBinaryDataPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2007/relationships/slicer")
-            {
-                return new SlicersPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/timeline")
-            {
-                return new TimeLinePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment")
-            {
-                return new WorksheetThreadedCommentsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/06/relationships/model3d")
-            {
-                return new Model3DReferenceRelationshipPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView")
-            {
-                return new NamedSheetViewsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/wordVbaData")
-            {
-                return new VbaDataPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2007/relationships/customData")
-            {
-                return new CustomDataPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart")
-            {
-                return new ChartPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2014/relationships/chartEx")
-            {
-                return new ExtendedChartPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors")
-            {
-                return new DiagramColorsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData")
-            {
-                return new DiagramDataPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing")
-            {
-                return new DiagramPersistLayoutPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout")
-            {
-                return new DiagramLayoutDefinitionPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle")
-            {
-                return new DiagramStylePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText")
-            {
-                return new LegacyDiagramTextPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes")
-            {
-                return new ChartDrawingPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride")
-            {
-                return new ThemeOverridePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/chartStyle")
-            {
-                return new ChartStylePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle")
-            {
-                return new ChartColorStylePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide")
-            {
-                return new SlidePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments")
-            {
-                return new SlideCommentsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide")
-            {
-                return new NotesSlidePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout")
-            {
-                return new SlideLayoutPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideUpdateInfo")
-            {
-                return new SlideSyncDataPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags")
-            {
-                return new UserDefinedTagsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2018/10/relationships/comments")
-            {
-                return new PowerPointCommentPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster")
-            {
-                return new NotesMasterPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster")
-            {
-                return new SlideMasterPart();
-            }
-            return new ExtendedPart(relationship);
-        }
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" => new WorkbookPart(),
+            "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" => new CoreFilePropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties" => new ExtendedFilePropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties" => new CustomFilePropertiesPart(),
+            "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail" => new ThumbnailPart(),
+            "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin" => new DigitalSignatureOriginPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization" => new QuickAccessToolbarCustomizationsPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility" => new RibbonExtensibilityPart(),
+            "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility" => new RibbonAndBackstageCustomizationsPart(),
+            "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes" => new WebExTaskpanesPart(),
+            "http://schemas.microsoft.com/office/2020/02/relationships/classificationlabels" => new LabelInfoPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml" => new CustomXmlPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain" => new CalculationChainPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sheetMetadata" => new CellMetadataPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/connections" => new ConnectionsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/xmlMaps" => new CustomXmlMappingsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings" => new SharedStringTablePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionHeaders" => new WorkbookRevisionHeaderPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/usernames" => new WorkbookUserDataPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" => new WorkbookStylesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme" => new ThemePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/volatileDependencies" => new VolatileDependenciesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet" => new ChartsheetPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet" => new DialogsheetPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLink" => new ExternalWorkbookPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition" => new PivotTableCacheDefinitionPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" => new WorksheetPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/attachedToolbars" => new ExcelAttachedToolbarsPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/vbaProject" => new VbaProjectPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet" => new MacroSheetPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/xlIntlMacrosheet" => new InternationalMacroSheetPart(),
+            "http://schemas.microsoft.com/office/2007/relationships/customDataProps" => new CustomDataPropertiesPart(),
+            "http://schemas.microsoft.com/office/2007/relationships/slicerCache" => new SlicerCachePart(),
+            "http://schemas.microsoft.com/office/2011/relationships/timelineCache" => new TimeLineCachePart(),
+            "http://schemas.microsoft.com/office/2017/10/relationships/person" => new WorkbookPersonPart(),
+            "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValue" => new RdRichValuePart(),
+            "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueStructure" => new RdRichValueStructurePart(),
+            "http://schemas.microsoft.com/office/2017/06/relationships/rdArray" => new RdArrayPart(),
+            "http://schemas.microsoft.com/office/2017/06/relationships/richStyles" => new RichStylesPart(),
+            "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBag" => new RdSupportingPropertyBagPart(),
+            "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBagStructure" => new RdSupportingPropertyBagStructurePart(),
+            "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueTypes" => new RdRichValueTypesPart(),
+            "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage" => new RdRichValueWebImagePart(),
+            "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature" => new XmlSignaturePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" => new ImagePart(),
+            "http://schemas.microsoft.com/office/2011/relationships/webextension" => new WebExtensionPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps" => new CustomXmlPropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionLog" => new WorkbookRevisionLogPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings" => new SpreadsheetPrinterSettingsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing" => new DrawingsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing" => new VmlDrawingPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject" => new EmbeddedObjectPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords" => new PivotTableCacheRecordsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments" => new WorksheetCommentsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable" => new PivotTablePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells" => new SingleCellTablePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table" => new TableDefinitionPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control" => new EmbeddedControlPersistencePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp" => new ControlPropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package" => new EmbeddedPackagePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty" => new CustomPropertyPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/wsSortMap" => new WorksheetSortMapPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable" => new QueryTablePart(),
+            "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary" => new EmbeddedControlPersistenceBinaryDataPart(),
+            "http://schemas.microsoft.com/office/2007/relationships/slicer" => new SlicersPart(),
+            "http://schemas.microsoft.com/office/2011/relationships/timeline" => new TimeLinePart(),
+            "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment" => new WorksheetThreadedCommentsPart(),
+            "http://schemas.microsoft.com/office/2017/06/relationships/model3d" => new Model3DReferenceRelationshipPart(),
+            "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView" => new NamedSheetViewsPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/wordVbaData" => new VbaDataPart(),
+            "http://schemas.microsoft.com/office/2007/relationships/customData" => new CustomDataPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart" => new ChartPart(),
+            "http://schemas.microsoft.com/office/2014/relationships/chartEx" => new ExtendedChartPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors" => new DiagramColorsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData" => new DiagramDataPart(),
+            "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing" => new DiagramPersistLayoutPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout" => new DiagramLayoutDefinitionPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle" => new DiagramStylePart(),
+            "http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText" => new LegacyDiagramTextPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes" => new ChartDrawingPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride" => new ThemeOverridePart(),
+            "http://schemas.microsoft.com/office/2011/relationships/chartStyle" => new ChartStylePart(),
+            "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle" => new ChartColorStylePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide" => new SlidePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide" => new NotesSlidePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout" => new SlideLayoutPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideUpdateInfo" => new SlideSyncDataPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags" => new UserDefinedTagsPart(),
+            "http://schemas.microsoft.com/office/2018/10/relationships/comments" => new PowerPointCommentPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster" => new NotesMasterPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster" => new SlideMasterPart(),
+            _ => default,
+        };
     }
 }
 
@@ -393,294 +116,79 @@ partial class PresentationDocument
 {
     partial class PresentationDocumentFeatures : IPartFactoryFeature
     {
-        OpenXmlPart IPartFactoryFeature.Create(string relationship)
+        OpenXmlPart? IPartFactoryFeature.Create(string relationship) => relationship switch
         {
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument")
-            {
-                return new PresentationPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties")
-            {
-                return new CoreFilePropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties")
-            {
-                return new ExtendedFilePropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties")
-            {
-                return new CustomFilePropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail")
-            {
-                return new ThumbnailPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin")
-            {
-                return new DigitalSignatureOriginPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization")
-            {
-                return new QuickAccessToolbarCustomizationsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility")
-            {
-                return new RibbonExtensibilityPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility")
-            {
-                return new RibbonAndBackstageCustomizationsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes")
-            {
-                return new WebExTaskpanesPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2020/02/relationships/classificationlabels")
-            {
-                return new LabelInfoPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml")
-            {
-                return new CustomXmlPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font")
-            {
-                return new FontPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps")
-            {
-                return new PresentationPropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles")
-            {
-                return new TableStylesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme")
-            {
-                return new ThemePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps")
-            {
-                return new ViewPropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster")
-            {
-                return new NotesMasterPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide")
-            {
-                return new SlidePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster")
-            {
-                return new SlideMasterPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags")
-            {
-                return new UserDefinedTagsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors")
-            {
-                return new CommentAuthorsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster")
-            {
-                return new HandoutMasterPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/legacyDocTextInfo")
-            {
-                return new LegacyDiagramTextInfoPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/vbaProject")
-            {
-                return new VbaProjectPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2018/10/relationships/comments")
-            {
-                return new PowerPointCommentPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2018/10/relationships/authors")
-            {
-                return new PowerPointAuthorsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature")
-            {
-                return new XmlSignaturePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image")
-            {
-                return new ImagePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/webextension")
-            {
-                return new WebExtensionPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps")
-            {
-                return new CustomXmlPropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart")
-            {
-                return new ChartPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2014/relationships/chartEx")
-            {
-                return new ExtendedChartPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors")
-            {
-                return new DiagramColorsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData")
-            {
-                return new DiagramDataPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing")
-            {
-                return new DiagramPersistLayoutPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout")
-            {
-                return new DiagramLayoutDefinitionPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle")
-            {
-                return new DiagramStylePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject")
-            {
-                return new EmbeddedObjectPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package")
-            {
-                return new EmbeddedPackagePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing")
-            {
-                return new VmlDrawingPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary")
-            {
-                return new EmbeddedControlPersistenceBinaryDataPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/06/relationships/model3d")
-            {
-                return new Model3DReferenceRelationshipPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments")
-            {
-                return new SlideCommentsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide")
-            {
-                return new NotesSlidePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride")
-            {
-                return new ThemeOverridePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout")
-            {
-                return new SlideLayoutPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideUpdateInfo")
-            {
-                return new SlideSyncDataPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control")
-            {
-                return new EmbeddedControlPersistencePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/wordVbaData")
-            {
-                return new VbaDataPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes")
-            {
-                return new ChartDrawingPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/chartStyle")
-            {
-                return new ChartStylePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle")
-            {
-                return new ChartColorStylePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet")
-            {
-                return new WorksheetPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText")
-            {
-                return new LegacyDiagramTextPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings")
-            {
-                return new SpreadsheetPrinterSettingsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing")
-            {
-                return new DrawingsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments")
-            {
-                return new WorksheetCommentsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable")
-            {
-                return new PivotTablePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells")
-            {
-                return new SingleCellTablePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table")
-            {
-                return new TableDefinitionPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp")
-            {
-                return new ControlPropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty")
-            {
-                return new CustomPropertyPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/wsSortMap")
-            {
-                return new WorksheetSortMapPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable")
-            {
-                return new QueryTablePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2007/relationships/slicer")
-            {
-                return new SlicersPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/timeline")
-            {
-                return new TimeLinePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment")
-            {
-                return new WorksheetThreadedCommentsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView")
-            {
-                return new NamedSheetViewsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition")
-            {
-                return new PivotTableCacheDefinitionPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords")
-            {
-                return new PivotTableCacheRecordsPart();
-            }
-            return new ExtendedPart(relationship);
-        }
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" => new PresentationPart(),
+            "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" => new CoreFilePropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties" => new ExtendedFilePropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties" => new CustomFilePropertiesPart(),
+            "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail" => new ThumbnailPart(),
+            "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin" => new DigitalSignatureOriginPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization" => new QuickAccessToolbarCustomizationsPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility" => new RibbonExtensibilityPart(),
+            "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility" => new RibbonAndBackstageCustomizationsPart(),
+            "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes" => new WebExTaskpanesPart(),
+            "http://schemas.microsoft.com/office/2020/02/relationships/classificationlabels" => new LabelInfoPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml" => new CustomXmlPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font" => new FontPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps" => new PresentationPropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles" => new TableStylesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme" => new ThemePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps" => new ViewPropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster" => new NotesMasterPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide" => new SlidePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster" => new SlideMasterPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags" => new UserDefinedTagsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors" => new CommentAuthorsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster" => new HandoutMasterPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/legacyDocTextInfo" => new LegacyDiagramTextInfoPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/vbaProject" => new VbaProjectPart(),
+            "http://schemas.microsoft.com/office/2018/10/relationships/comments" => new PowerPointCommentPart(),
+            "http://schemas.microsoft.com/office/2018/10/relationships/authors" => new PowerPointAuthorsPart(),
+            "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature" => new XmlSignaturePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" => new ImagePart(),
+            "http://schemas.microsoft.com/office/2011/relationships/webextension" => new WebExtensionPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps" => new CustomXmlPropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart" => new ChartPart(),
+            "http://schemas.microsoft.com/office/2014/relationships/chartEx" => new ExtendedChartPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors" => new DiagramColorsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData" => new DiagramDataPart(),
+            "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing" => new DiagramPersistLayoutPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout" => new DiagramLayoutDefinitionPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle" => new DiagramStylePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject" => new EmbeddedObjectPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package" => new EmbeddedPackagePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing" => new VmlDrawingPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary" => new EmbeddedControlPersistenceBinaryDataPart(),
+            "http://schemas.microsoft.com/office/2017/06/relationships/model3d" => new Model3DReferenceRelationshipPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments" => new SlideCommentsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide" => new NotesSlidePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride" => new ThemeOverridePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout" => new SlideLayoutPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideUpdateInfo" => new SlideSyncDataPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control" => new EmbeddedControlPersistencePart(),
+            "http://schemas.microsoft.com/office/2006/relationships/wordVbaData" => new VbaDataPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes" => new ChartDrawingPart(),
+            "http://schemas.microsoft.com/office/2011/relationships/chartStyle" => new ChartStylePart(),
+            "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle" => new ChartColorStylePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" => new WorksheetPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText" => new LegacyDiagramTextPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing" => new DrawingsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable" => new PivotTablePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells" => new SingleCellTablePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table" => new TableDefinitionPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp" => new ControlPropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty" => new CustomPropertyPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/wsSortMap" => new WorksheetSortMapPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable" => new QueryTablePart(),
+            "http://schemas.microsoft.com/office/2007/relationships/slicer" => new SlicersPart(),
+            "http://schemas.microsoft.com/office/2011/relationships/timeline" => new TimeLinePart(),
+            "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment" => new WorksheetThreadedCommentsPart(),
+            "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView" => new NamedSheetViewsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition" => new PivotTableCacheDefinitionPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords" => new PivotTableCacheRecordsPart(),
+            _ => default,
+        };
     }
 }
 
@@ -688,353 +196,92 @@ partial class WordprocessingDocument
 {
     partial class WordprocessingDocumentFeatures : IPartFactoryFeature
     {
-        OpenXmlPart IPartFactoryFeature.Create(string relationship)
+        OpenXmlPart? IPartFactoryFeature.Create(string relationship) => relationship switch
         {
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument")
-            {
-                return new MainDocumentPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties")
-            {
-                return new CoreFilePropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties")
-            {
-                return new ExtendedFilePropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties")
-            {
-                return new CustomFilePropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail")
-            {
-                return new ThumbnailPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin")
-            {
-                return new DigitalSignatureOriginPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization")
-            {
-                return new QuickAccessToolbarCustomizationsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility")
-            {
-                return new RibbonExtensibilityPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility")
-            {
-                return new RibbonAndBackstageCustomizationsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes")
-            {
-                return new WebExTaskpanesPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2020/02/relationships/classificationlabels")
-            {
-                return new LabelInfoPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml")
-            {
-                return new CustomXmlPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/glossaryDocument")
-            {
-                return new GlossaryDocumentPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme")
-            {
-                return new ThemePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments")
-            {
-                return new WordprocessingCommentsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings")
-            {
-                return new DocumentSettingsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes")
-            {
-                return new EndnotesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable")
-            {
-                return new FontTablePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes")
-            {
-                return new FootnotesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering")
-            {
-                return new NumberingDefinitionsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles")
-            {
-                return new StyleDefinitionsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2007/relationships/stylesWithEffects")
-            {
-                return new StylesWithEffectsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings")
-            {
-                return new WebSettingsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer")
-            {
-                return new FooterPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header")
-            {
-                return new HeaderPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings")
-            {
-                return new WordprocessingPrinterSettingsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations")
-            {
-                return new CustomizationPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/vbaProject")
-            {
-                return new VbaProjectPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/commentsExtended")
-            {
-                return new WordprocessingCommentsExPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/people")
-            {
-                return new WordprocessingPeoplePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2016/09/relationships/commentsIds")
-            {
-                return new WordprocessingCommentsIdsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2019/05/relationships/documenttasks")
-            {
-                return new DocumentTasksPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2018/08/relationships/commentsExtensible")
-            {
-                return new WordCommentsExtensiblePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk")
-            {
-                return new AlternativeFormatImportPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart")
-            {
-                return new ChartPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2014/relationships/chartEx")
-            {
-                return new ExtendedChartPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors")
-            {
-                return new DiagramColorsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData")
-            {
-                return new DiagramDataPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing")
-            {
-                return new DiagramPersistLayoutPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout")
-            {
-                return new DiagramLayoutDefinitionPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle")
-            {
-                return new DiagramStylePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control")
-            {
-                return new EmbeddedControlPersistencePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject")
-            {
-                return new EmbeddedObjectPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package")
-            {
-                return new EmbeddedPackagePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image")
-            {
-                return new ImagePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/06/relationships/model3d")
-            {
-                return new Model3DReferenceRelationshipPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature")
-            {
-                return new XmlSignaturePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/webextension")
-            {
-                return new WebExtensionPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps")
-            {
-                return new CustomXmlPropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData")
-            {
-                return new MailMergeRecipientDataPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font")
-            {
-                return new FontPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/attachedToolbars")
-            {
-                return new WordAttachedToolbarsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/wordVbaData")
-            {
-                return new VbaDataPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes")
-            {
-                return new ChartDrawingPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride")
-            {
-                return new ThemeOverridePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/chartStyle")
-            {
-                return new ChartStylePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle")
-            {
-                return new ChartColorStylePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide")
-            {
-                return new SlidePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet")
-            {
-                return new WorksheetPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary")
-            {
-                return new EmbeddedControlPersistenceBinaryDataPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing")
-            {
-                return new VmlDrawingPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments")
-            {
-                return new SlideCommentsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide")
-            {
-                return new NotesSlidePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout")
-            {
-                return new SlideLayoutPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideUpdateInfo")
-            {
-                return new SlideSyncDataPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags")
-            {
-                return new UserDefinedTagsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2018/10/relationships/comments")
-            {
-                return new PowerPointCommentPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings")
-            {
-                return new SpreadsheetPrinterSettingsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing")
-            {
-                return new DrawingsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments")
-            {
-                return new WorksheetCommentsPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable")
-            {
-                return new PivotTablePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells")
-            {
-                return new SingleCellTablePart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table")
-            {
-                return new TableDefinitionPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp")
-            {
-                return new ControlPropertiesPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty")
-            {
-                return new CustomPropertyPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/wsSortMap")
-            {
-                return new WorksheetSortMapPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable")
-            {
-                return new QueryTablePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2007/relationships/slicer")
-            {
-                return new SlicersPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2011/relationships/timeline")
-            {
-                return new TimeLinePart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment")
-            {
-                return new WorksheetThreadedCommentsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView")
-            {
-                return new NamedSheetViewsPart();
-            }
-            if (relationship == "http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText")
-            {
-                return new LegacyDiagramTextPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster")
-            {
-                return new NotesMasterPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster")
-            {
-                return new SlideMasterPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition")
-            {
-                return new PivotTableCacheDefinitionPart();
-            }
-            if (relationship == "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords")
-            {
-                return new PivotTableCacheRecordsPart();
-            }
-            return new ExtendedPart(relationship);
-        }
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" => new MainDocumentPart(),
+            "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" => new CoreFilePropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties" => new ExtendedFilePropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties" => new CustomFilePropertiesPart(),
+            "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail" => new ThumbnailPart(),
+            "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin" => new DigitalSignatureOriginPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization" => new QuickAccessToolbarCustomizationsPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility" => new RibbonExtensibilityPart(),
+            "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility" => new RibbonAndBackstageCustomizationsPart(),
+            "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes" => new WebExTaskpanesPart(),
+            "http://schemas.microsoft.com/office/2020/02/relationships/classificationlabels" => new LabelInfoPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml" => new CustomXmlPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/glossaryDocument" => new GlossaryDocumentPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme" => new ThemePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments" => new WordprocessingCommentsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings" => new DocumentSettingsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes" => new EndnotesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable" => new FontTablePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes" => new FootnotesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering" => new NumberingDefinitionsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" => new StyleDefinitionsPart(),
+            "http://schemas.microsoft.com/office/2007/relationships/stylesWithEffects" => new StylesWithEffectsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings" => new WebSettingsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" => new FooterPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header" => new HeaderPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings" => new WordprocessingPrinterSettingsPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations" => new CustomizationPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/vbaProject" => new VbaProjectPart(),
+            "http://schemas.microsoft.com/office/2011/relationships/commentsExtended" => new WordprocessingCommentsExPart(),
+            "http://schemas.microsoft.com/office/2011/relationships/people" => new WordprocessingPeoplePart(),
+            "http://schemas.microsoft.com/office/2016/09/relationships/commentsIds" => new WordprocessingCommentsIdsPart(),
+            "http://schemas.microsoft.com/office/2019/05/relationships/documenttasks" => new DocumentTasksPart(),
+            "http://schemas.microsoft.com/office/2018/08/relationships/commentsExtensible" => new WordCommentsExtensiblePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk" => new AlternativeFormatImportPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart" => new ChartPart(),
+            "http://schemas.microsoft.com/office/2014/relationships/chartEx" => new ExtendedChartPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors" => new DiagramColorsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData" => new DiagramDataPart(),
+            "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing" => new DiagramPersistLayoutPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout" => new DiagramLayoutDefinitionPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle" => new DiagramStylePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control" => new EmbeddedControlPersistencePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject" => new EmbeddedObjectPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package" => new EmbeddedPackagePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" => new ImagePart(),
+            "http://schemas.microsoft.com/office/2017/06/relationships/model3d" => new Model3DReferenceRelationshipPart(),
+            "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature" => new XmlSignaturePart(),
+            "http://schemas.microsoft.com/office/2011/relationships/webextension" => new WebExtensionPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps" => new CustomXmlPropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData" => new MailMergeRecipientDataPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font" => new FontPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/attachedToolbars" => new WordAttachedToolbarsPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/wordVbaData" => new VbaDataPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes" => new ChartDrawingPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride" => new ThemeOverridePart(),
+            "http://schemas.microsoft.com/office/2011/relationships/chartStyle" => new ChartStylePart(),
+            "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle" => new ChartColorStylePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide" => new SlidePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" => new WorksheetPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary" => new EmbeddedControlPersistenceBinaryDataPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing" => new VmlDrawingPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide" => new NotesSlidePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout" => new SlideLayoutPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideUpdateInfo" => new SlideSyncDataPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags" => new UserDefinedTagsPart(),
+            "http://schemas.microsoft.com/office/2018/10/relationships/comments" => new PowerPointCommentPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing" => new DrawingsPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable" => new PivotTablePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells" => new SingleCellTablePart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table" => new TableDefinitionPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp" => new ControlPropertiesPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty" => new CustomPropertyPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/wsSortMap" => new WorksheetSortMapPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable" => new QueryTablePart(),
+            "http://schemas.microsoft.com/office/2007/relationships/slicer" => new SlicersPart(),
+            "http://schemas.microsoft.com/office/2011/relationships/timeline" => new TimeLinePart(),
+            "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment" => new WorksheetThreadedCommentsPart(),
+            "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView" => new NamedSheetViewsPart(),
+            "http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText" => new LegacyDiagramTextPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster" => new NotesMasterPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster" => new SlideMasterPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition" => new PivotTableCacheDefinitionPart(),
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords" => new PivotTableCacheRecordsPart(),
+            _ => default,
+        };
     }
 }

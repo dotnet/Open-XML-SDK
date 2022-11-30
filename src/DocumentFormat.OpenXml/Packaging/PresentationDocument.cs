@@ -427,37 +427,6 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates an instance of OpenXmlPart according to the given relationship type.
-        /// </summary>
-        /// <param name="relationshipType">Relationship type.</param>
-        /// <returns>An instance of OpenXmlPart.</returns>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            return relationshipType switch
-            {
-                PresentationPart.RelationshipTypeConstant => new PresentationPart(),
-                CoreFilePropertiesPart.RelationshipTypeConstant => new CoreFilePropertiesPart(),
-                ExtendedFilePropertiesPart.RelationshipTypeConstant => new ExtendedFilePropertiesPart(),
-                CustomFilePropertiesPart.RelationshipTypeConstant => new CustomFilePropertiesPart(),
-                ThumbnailPart.RelationshipTypeConstant => new ThumbnailPart(),
-                DigitalSignatureOriginPart.RelationshipTypeConstant => new DigitalSignatureOriginPart(),
-                QuickAccessToolbarCustomizationsPart.RelationshipTypeConstant => new QuickAccessToolbarCustomizationsPart(),
-                RibbonExtensibilityPart.RelationshipTypeConstant => new RibbonExtensibilityPart(),
-                RibbonAndBackstageCustomizationsPart.RelationshipTypeConstant => new RibbonAndBackstageCustomizationsPart(),
-                WebExTaskpanesPart.RelationshipTypeConstant => new WebExTaskpanesPart(),
-                LabelInfoPart.RelationshipTypeConstant => new LabelInfoPart(),
-                _ => throw new ArgumentOutOfRangeException(nameof(relationshipType)),
-            };
-        }
-
-        /// <summary>
         /// Creates the PresentationPart and add it to this document.
         /// </summary>
         /// <returns>The newly added PresentationPart.</returns>

@@ -363,48 +363,6 @@ namespace DocumentFormat.OpenXml.Packaging
             return AddDataPartReferenceRelationship<VideoReferenceRelationship>(mediaDataPart, id);
         }
 
-        /// <inheritdoc/>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            switch (relationshipType)
-            {
-                case AlternativeFormatImportPart.RelationshipTypeConstant:
-                    return new AlternativeFormatImportPart();
-                case ChartPart.RelationshipTypeConstant:
-                    return new ChartPart();
-                case ExtendedChartPart.RelationshipTypeConstant:
-                    return new ExtendedChartPart();
-                case DiagramColorsPart.RelationshipTypeConstant:
-                    return new DiagramColorsPart();
-                case DiagramDataPart.RelationshipTypeConstant:
-                    return new DiagramDataPart();
-                case DiagramPersistLayoutPart.RelationshipTypeConstant:
-                    return new DiagramPersistLayoutPart();
-                case DiagramLayoutDefinitionPart.RelationshipTypeConstant:
-                    return new DiagramLayoutDefinitionPart();
-                case DiagramStylePart.RelationshipTypeConstant:
-                    return new DiagramStylePart();
-                case EmbeddedControlPersistencePart.RelationshipTypeConstant:
-                    return new EmbeddedControlPersistencePart();
-                case EmbeddedObjectPart.RelationshipTypeConstant:
-                    return new EmbeddedObjectPart();
-                case EmbeddedPackagePart.RelationshipTypeConstant:
-                    return new EmbeddedPackagePart();
-                case ImagePart.RelationshipTypeConstant:
-                    return new ImagePart();
-                case Model3DReferenceRelationshipPart.RelationshipTypeConstant:
-                    return new Model3DReferenceRelationshipPart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
-
         internal override bool IsInVersion(FileFormatVersions version)
         {
             return version.AtLeast(FileFormatVersions.Office2019);

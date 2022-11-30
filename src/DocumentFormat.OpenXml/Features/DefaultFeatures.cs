@@ -7,7 +7,7 @@ using System;
 
 namespace DocumentFormat.OpenXml.Features
 {
-    internal partial class DefaultFeatures : IFeatureCollection, IPartFactoryFeature
+    internal partial class DefaultFeatures : IFeatureCollection
     {
         public static IFeatureCollection Shared { get; } = new DefaultFeatures();
 
@@ -19,23 +19,11 @@ namespace DocumentFormat.OpenXml.Features
         [KnownFeature(typeof(IOpenXmlNamespaceResolver), typeof(NoDataNamespaceResolver))]
         [KnownFeature(typeof(IElementMetadataFactoryFeature), typeof(ElementMetadataFactoryFeature))]
         [ThreadSafe]
-        private partial T? GetInternal<T>();
-
-        public TFeature? Get<TFeature>()
-        {
-            if (this is TFeature @this)
-            {
-                return @this;
-            }
-
-            return GetInternal<TFeature>();
-        }
+        public partial T? Get<T>();
 
         public void Set<TFeature>(TFeature? instance)
         {
             throw new NotSupportedException();
         }
-
-        OpenXmlPart IPartFactoryFeature.Create(string relationshipType) => new ExtendedPart(relationshipType);
     }
 }

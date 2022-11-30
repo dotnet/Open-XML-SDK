@@ -117,29 +117,5 @@ namespace DocumentFormat.OpenXml.Packaging
             InitPart(childPart, contentType);
             return childPart;
         }
-
-        /// <inheritdoc/>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            switch (relationshipType)
-            {
-                case SpreadsheetPrinterSettingsPart.RelationshipTypeConstant:
-                    return new SpreadsheetPrinterSettingsPart();
-                case DrawingsPart.RelationshipTypeConstant:
-                    return new DrawingsPart();
-                case VmlDrawingPart.RelationshipTypeConstant:
-                    return new VmlDrawingPart();
-                case EmbeddedObjectPart.RelationshipTypeConstant:
-                    return new EmbeddedObjectPart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
     }
 }

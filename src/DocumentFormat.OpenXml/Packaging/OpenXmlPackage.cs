@@ -1291,7 +1291,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        private protected partial class PackageFeatureCollection : IFeatureCollection, IContainerFeature<OpenXmlPackage>
+        private protected partial class PackageFeatureCollection : IFeatureCollection, IContainerFeature<OpenXmlPackage>, IPartFactoryFeature
         {
             private readonly OpenXmlPackage _package;
             private readonly IFeatureCollection? _parent;
@@ -1343,6 +1343,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
             public void Set<TFeature>(TFeature? instance)
                 => _container.Set(instance);
+
+            OpenXmlPart? IPartFactoryFeature.Create(string relationshipType) => null;
         }
     }
 }

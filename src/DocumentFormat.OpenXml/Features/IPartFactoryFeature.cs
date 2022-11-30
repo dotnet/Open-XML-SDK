@@ -7,5 +7,5 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal interface IPartFactoryFeature
 {
-    OpenXmlPart Create(string relationshipType);
+    OpenXmlPart? Create(string relationshipType);
 }

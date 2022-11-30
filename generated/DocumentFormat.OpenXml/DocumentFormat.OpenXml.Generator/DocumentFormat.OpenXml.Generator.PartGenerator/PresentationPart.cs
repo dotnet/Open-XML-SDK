@@ -276,53 +276,5 @@ namespace DocumentFormat.OpenXml.Packaging
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddFontPart(contentType);
         }
-
-        /// <inheritdoc/>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            switch (relationshipType)
-            {
-                case CustomXmlPart.RelationshipTypeConstant:
-                    return new CustomXmlPart();
-                case FontPart.RelationshipTypeConstant:
-                    return new FontPart();
-                case PresentationPropertiesPart.RelationshipTypeConstant:
-                    return new PresentationPropertiesPart();
-                case TableStylesPart.RelationshipTypeConstant:
-                    return new TableStylesPart();
-                case ThemePart.RelationshipTypeConstant:
-                    return new ThemePart();
-                case ViewPropertiesPart.RelationshipTypeConstant:
-                    return new ViewPropertiesPart();
-                case NotesMasterPart.RelationshipTypeConstant:
-                    return new NotesMasterPart();
-                case SlidePart.RelationshipTypeConstant:
-                    return new SlidePart();
-                case SlideMasterPart.RelationshipTypeConstant:
-                    return new SlideMasterPart();
-                case UserDefinedTagsPart.RelationshipTypeConstant:
-                    return new UserDefinedTagsPart();
-                case CommentAuthorsPart.RelationshipTypeConstant:
-                    return new CommentAuthorsPart();
-                case HandoutMasterPart.RelationshipTypeConstant:
-                    return new HandoutMasterPart();
-                case LegacyDiagramTextInfoPart.RelationshipTypeConstant:
-                    return new LegacyDiagramTextInfoPart();
-                case VbaProjectPart.RelationshipTypeConstant:
-                    return new VbaProjectPart();
-                case PowerPointCommentPart.RelationshipTypeConstant:
-                    return new PowerPointCommentPart();
-                case PowerPointAuthorsPart.RelationshipTypeConstant:
-                    return new PowerPointAuthorsPart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
     }
 }
