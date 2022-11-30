@@ -2,12 +2,9 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Generator.Editor;
-using DocumentFormat.OpenXml.Generator.Generators.Parts;
 using Microsoft.CodeAnalysis;
 using System.CodeDom.Compiler;
 using System.Collections.Immutable;
-using System.Linq.Expressions;
-using System.Text;
 
 namespace DocumentFormat.OpenXml.Generator;
 
@@ -19,56 +16,9 @@ public class FactoryGenerator : IIncrementalGenerator
         var openXml = context.GetOpenXmlGeneratorContext()
             .GetOpenXmlServices();
 
-        var partFactory = openXml.Select((o, token) =>
-        {
-            // Some parts serve in multiple places and end up getting pulled in here unintentionally
-            var invalidParts = new Dictionary<string, HashSet<string>>
-            {
-                { "PresentationDocument", new() { "WorksheetCommentsPart", "SpreadsheetPrinterSettingsPart" } },
-                { "SpreadsheetDocument", new() { "SlideCommentsPart" } },
-                { "WordprocessingDocument", new() { "WorksheetCommentsPart", "SlideCommentsPart", "SpreadsheetPrinterSettingsPart" } },
-            };
+        var packageFactories = openXml.GetPackageFactories();
 
-            var result = ImmutableDictionary.CreateBuilder<string, ImmutableArray<Models.Part>>();
-
-            try
-            {
-                var dict = o.Context.Parts.ToDictionary(p => p.Name);
-
-                foreach (var doc in o.Context.Packages)
-                {
-                    var invalid = invalidParts[doc.Name];
-                    var seen = new HashSet<string>();
-                    var queue = new Queue<Models.Part>();
-                    queue.Enqueue(doc);
-                    var partResult = ImmutableArray.CreateBuilder<Models.Part>();
-
-                    while (queue.Count > 0)
-                    {
-                        var part = queue.Dequeue();
-
-                        foreach (var child in part.Children)
-                        {
-                            if (!child.IsDataPartReference && !invalid.Contains(child.Name) && seen.Add(child.Name) && dict.TryGetValue(child.Name, out var childPart))
-                            {
-                                queue.Enqueue(childPart);
-                                partResult.Add(childPart);
-                            }
-                        }
-                    }
-
-                    result.Add(doc.Name, partResult.ToImmutable());
-                }
-            }
-            catch (Exception e)
-            {
-                result.Add("Error", ImmutableArray.Create(new Models.Part { Name = e.Message }));
-            }
-
-            return result.ToImmutable();
-        });
-
-        context.RegisterSourceOutput(partFactory, GenerateDocumentSpecificPartFeature);
+        context.RegisterSourceOutput(packageFactories, GenerateDocumentSpecificPartFeature);
         context.RegisterSourceOutput(openXml, (context, openXml) =>
         {
             GeneratePartFactory(context, openXml);
@@ -76,29 +26,28 @@ public class FactoryGenerator : IIncrementalGenerator
         });
     }
 
-    private static void GenerateDocumentSpecificPartFeature(SourceProductionContext context, ImmutableDictionary<string, ImmutableArray<Models.Part>> parts)
+    private static void GenerateDocumentSpecificPartFeature(SourceProductionContext context, ImmutableArray<PackageInformation> packages)
     {
-        using var sw = new StringWriter();
-        using var writer = new IndentedTextWriter(sw);
-
-        writer.WriteFileHeader();
-
-        writer.WriteLine("using DocumentFormat.OpenXml;");
-        writer.WriteLine("using DocumentFormat.OpenXml.Features;");
-        writer.WriteLine();
-        writer.WriteLine("namespace DocumentFormat.OpenXml.Packaging;");
-
-        foreach (var part in parts)
+        foreach (var package in packages)
         {
+            using var sw = new StringWriter();
+            using var writer = new IndentedTextWriter(sw);
+
+            writer.WriteFileHeader();
+
+            writer.WriteLine("using DocumentFormat.OpenXml;");
+            writer.WriteLine("using DocumentFormat.OpenXml.Features;");
+            writer.WriteLine();
+            writer.WriteLine("namespace DocumentFormat.OpenXml.Packaging;");
             writer.WriteLine();
 
             writer.Write("partial class ");
-            writer.WriteLine(part.Key);
+            writer.WriteLine(package.ClassName);
 
             using (writer.AddBlock())
             {
                 writer.Write("partial class ");
-                writer.Write(part.Key);
+                writer.Write(package.ClassName);
                 writer.WriteLine("Features : IPartFactoryFeature");
 
                 using (writer.AddBlock())
@@ -107,10 +56,10 @@ public class FactoryGenerator : IIncrementalGenerator
 
                     using (writer.AddBlock(new() { IncludeSemiColon = true }))
                     {
-                        foreach (var relationship in part.Value)
+                        foreach (var relationship in package.Parts)
                         {
-                            writer.WriteString(relationship.RelationshipType);
-                            writer.Write(" => new ");
+                            writer.Write(relationship.Name);
+                            writer.Write(".RelationshipTypeConstant => new ");
                             writer.Write(relationship.Name);
                             writer.WriteLine("(),");
                         }
@@ -119,9 +68,9 @@ public class FactoryGenerator : IIncrementalGenerator
                     }
                 }
             }
-        }
 
-        context.AddSource("DocumentPartFactoryFeature", sw.ToString());
+            context.AddSource($"{package.ClassName}PartFactoryFeature", sw.ToString());
+        }
     }
 
     private static void GeneratePartFactory(SourceProductionContext context, OpenXmlGeneratorServices openXml)
