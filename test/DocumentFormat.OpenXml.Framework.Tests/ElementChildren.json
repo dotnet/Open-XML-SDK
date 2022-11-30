@@ -22183,6 +22183,40 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentReplyV2Moniker",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentReplyV2MonikerList",
+    "Children": [
+      {
+        "Name": "cmMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/9/main/command"
+      },
+      {
+        "Name": "cmRplyMk",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/9/main/command"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2MonikerList",
+    "Children": [
+      {
+        "Name": "sldMkLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2013/main/command"
+      },
+      {
+        "Name": "cmMK",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/9/main/command"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AddEmpty",
     "Children": []
   },
@@ -22350,6 +22384,10 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.RichDataPivotCacheGuid",
     "Children": []
   },
   {
@@ -44670,6 +44708,10 @@
       {
         "Name": "cacheVersionInfo",
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
+      },
+      {
+        "Name": "richInfo",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       }
     ]
   },
@@ -45310,6 +45352,10 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Spreadsheet.RgbColor",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Spreadsheet.RichDataPivotCacheGuid",
     "Children": []
   },
   {

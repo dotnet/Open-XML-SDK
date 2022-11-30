@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - .NET 6 target with support for trimming (#1243, #1240)
+- Added DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData namespace
+- Added DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command namespace
+- Added DocumentFormat.OpenXml.Office.PowerPoint.Y2022.Main.Command namespace
+- Added Child RichDataPivotCacheGuid to DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition
 
 ### Fixed
 - Removed reflection usage where possible (#1240)

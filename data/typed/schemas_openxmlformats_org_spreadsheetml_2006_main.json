@@ -1382,6 +1382,10 @@
     "ClassName": "RgbColor"
   },
   {
+    "Name": "xprd:CT_PivotCacheGuid/x:richInfo",
+    "ClassName": "RichDataPivotCacheGuid"
+  },
+  {
     "Name": "x:CT_BorderPr/x:right",
     "ClassName": "RightBorder"
   },

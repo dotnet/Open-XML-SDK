@@ -1,0 +1,141 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2019/9/main/command",
+  "Types": [
+    {
+      "Name": "pc2:CT_CommentV2MonikerList/pc2:cmMkLst",
+      "ClassName": "CommentV2MonikerList",
+      "Summary": "Defines the CommentV2MonikerList Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "pc:CT_SlideMonikerList/pc:sldMkLst",
+          "PropertyName": "SlideMonikerList"
+        },
+        {
+          "Name": "pc2:CT_CommentV2Moniker/pc2:cmMK",
+          "PropertyName": "CommentV2Moniker"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "pc:CT_SlideMonikerList/pc:sldMkLst",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "pc2:CT_CommentV2Moniker/pc2:cmMK",
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc2:CT_CommentReplyV2MonikerList/pc2:cmRplyMkLst",
+      "ClassName": "CommentReplyV2MonikerList",
+      "Summary": "Defines the CommentReplyV2MonikerList Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "pc2:CT_CommentV2MonikerList/pc2:cmMkLst",
+          "PropertyName": "CommentV2MonikerList"
+        },
+        {
+          "Name": "pc2:CT_CommentReplyV2Moniker/pc2:cmRplyMk",
+          "PropertyName": "CommentReplyV2Moniker"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "pc2:CT_CommentV2MonikerList/pc2:cmMkLst",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "pc2:CT_CommentReplyV2Moniker/pc2:cmRplyMk",
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "pc2:CT_CommentV2Moniker/pc2:cmMK",
+      "ClassName": "CommentV2Moniker",
+      "Summary": "Defines the CommentV2Moniker Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "pc2:CT_CommentReplyV2Moniker/pc2:cmRplyMk",
+      "ClassName": "CommentReplyV2Moniker",
+      "Summary": "Defines the CommentReplyV2Moniker Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

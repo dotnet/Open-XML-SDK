@@ -359,6 +359,16 @@
     "Version": "Office2016"
   },
   {
+    "Prefix": "pc2",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2019/9/main/command",
+    "Version": "Microsoft365"
+  },
+  {
+    "Prefix": "pc226",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2022/06/main/command",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "pic",
     "Uri": "http://schemas.openxmlformats.org/drawingml/2006/picture"
   },
@@ -623,6 +633,11 @@
     "Prefix": "xpdl",
     "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2016/pivotdefaultlayout",
     "Version": "Office2019"
+  },
+  {
+    "Prefix": "xprd",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotRichData",
+    "Version": "Microsoft365"
   },
   {
     "Prefix": "xr",
