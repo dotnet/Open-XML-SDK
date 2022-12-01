@@ -13,10 +13,10 @@ steps:
     workingDirectory: '$(Pipeline.Workspace)/unsigned'
 
   - task: UseDotNet@2
-    displayName: 'Install .NET Core 2.1 runtime for signing'
+    displayName: 'Install .NET Core 2.1 for signing'
     inputs:
-      packageType: 'runtime'
-      version: 2.1.0
+      packageType: 'sdk'
+      version: 2.1.818
 
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
     displayName: 'OpenXML SDK Assembly ESRP CodeSigning'
