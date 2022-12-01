@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             using (var m = new MemoryStream())
             using (var doc = SpreadsheetDocument.Create(m, SpreadsheetDocumentType.Workbook, true))
             {
-                doc.Features.Set<IPartFactory>(new CustomFactory(doc.Features.Get<IPartFactory>()));
+                doc.Features.Set<ITypedPartFactoryFeature>(new CustomFactory(doc.Features.Get<ITypedPartFactoryFeature>()));
 
                 var wb = doc.AddWorkbookPart();
 
@@ -101,11 +101,11 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
         }
 
-        private class CustomFactory : IPartFactory
+        private class CustomFactory : ITypedPartFactoryFeature
         {
-            private readonly IPartFactory _other;
+            private readonly ITypedPartFactoryFeature _other;
 
-            public CustomFactory(IPartFactory other)
+            public CustomFactory(ITypedPartFactoryFeature other)
             {
                 _other = other;
             }

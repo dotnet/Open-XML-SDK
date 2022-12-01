@@ -1077,7 +1077,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            var part = Features.GetRequired<IPartFactory>().Create<T>();
+            var part = Features.GetRequired<ITypedPartFactoryFeature>().Create<T>();
 
             if (part is null)
             {
@@ -1142,7 +1142,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // Use reflection to create the instance as the default constructor of part is not public
-            var part = Features.GetRequired<IPartFactory>().Create<T>();
+            var part = Features.GetRequired<ITypedPartFactoryFeature>().Create<T>();
 
             if (part is ExtendedPart)
             {
@@ -1792,21 +1792,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The created new part.</returns>
         internal OpenXmlPart CreateOpenXmlPart(string relationshipType)
         {
-            ThrowIfObjectDisposed();
-
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            if (this.GetPartMetadata().PartConstraints.ContainsRelationship(relationshipType))
-            {
-                return CreatePartCore(relationshipType);
-            }
-            else
-            {
-                return new ExtendedPart(relationshipType);
-            }
+            return Features.GetRequired<IPartFactoryFeature>().Create(relationshipType) ?? new ExtendedPart(relationshipType);
         }
 
         /// <summary>
@@ -1910,23 +1896,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         protected abstract void ThrowIfObjectDisposed();
 
-        /// <summary>
-        /// Create the object of strong typed class according the relationshipType
-        /// </summary>
-        /// <param name="relationshipType">The relationship type of the class.</param>
-        /// <returns>A new object of strong typed class.</returns>
-        internal virtual OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            ThrowIfObjectDisposed();
-
-            return new ExtendedPart(relationshipType);
-        }
-
         internal abstract OpenXmlPart NewPart(string relationshipType, string contentType);
 
         internal abstract void DeleteRelationship(string id);
@@ -1955,6 +1924,8 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
+                ThrowIfObjectDisposed();
+
                 if (_features is null)
                 {
                     _features = new FeatureCollection(FeatureCollection.Default);

@@ -95,7 +95,8 @@ public static class GeneratorExtensions
             {
                 KnownNamespaces = arg.Left.Left.Left.Left.Left,
                 Namespaces = arg.Left.Left.Left.Left.Right,
-                Parts = arg.Left.Left.Left.Right,
+                Parts = arg.Left.Left.Left.Right.Where(t => !t.IsPackage).ToImmutableArray(),
+                Packages = arg.Left.Left.Left.Right.Where(t => t.IsPackage).ToImmutableArray(),
                 Schematrons = arg.Left.Left.Right,
                 TypedClasses = arg.Left.Right,
                 TypedNamespaces = arg.Right,
@@ -118,6 +119,49 @@ public static class GeneratorExtensions
                     return default;
                 })
                 .Where(args => args != default);
+
+    public static IncrementalValueProvider<ImmutableArray<PackageInformation>> GetPackageFactories(this IncrementalValueProvider<OpenXmlGeneratorServices> services)
+        => services.Select((o, token) =>
+        {
+            // Some parts serve in multiple places and end up getting pulled in here unintentionally
+            var invalidParts = new Dictionary<string, HashSet<string>>
+            {
+                { "PresentationDocument", new() { "WorksheetCommentsPart", "SpreadsheetPrinterSettingsPart" } },
+                { "SpreadsheetDocument", new() { "SlideCommentsPart" } },
+                { "WordprocessingDocument", new() { "WorksheetCommentsPart", "SlideCommentsPart", "SpreadsheetPrinterSettingsPart" } },
+            };
+
+            var result = ImmutableArray.CreateBuilder<PackageInformation>();
+
+            var dict = o.Context.Parts.ToDictionary(p => p.Name);
+
+            foreach (var doc in o.Context.Packages)
+            {
+                var invalid = invalidParts[doc.Name];
+                var seen = new HashSet<string>();
+                var queue = new Queue<Part>();
+                queue.Enqueue(doc);
+                var partResult = ImmutableArray.CreateBuilder<Part>();
+
+                while (queue.Count > 0)
+                {
+                    var part = queue.Dequeue();
+
+                    foreach (var child in part.Children)
+                    {
+                        if (!child.IsDataPartReference && !invalid.Contains(child.Name) && seen.Add(child.Name) && dict.TryGetValue(child.Name, out var childPart))
+                        {
+                            queue.Enqueue(childPart);
+                            partResult.Add(childPart);
+                        }
+                    }
+                }
+
+                result.Add(new(doc.Name, partResult.ToImmutable()));
+            }
+
+            return result.ToImmutable();
+        });
 
     private static IncrementalValuesProvider<AdditionalText> IsOpenXmlType(this IncrementalOpenXmlTextValuesProvider types, string type)
         => types.Where(t => string.Equals(t.Type, type, StringComparison.Ordinal)).Select((t, _) => t.Text);

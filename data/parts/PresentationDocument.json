@@ -1,0 +1,61 @@
+{
+  "Name": "PresentationDocument",
+  "Base": "OpenXmlPackage",
+  "Paths": {},
+  "Children": [
+    {
+      "MinOccursIsNonZero": true,
+      "ApiName": "PresentationPart",
+      "Name": "PresentationPart"
+    },
+    {
+      "ApiName": "CoreFilePropertiesPart",
+      "Name": "CoreFilePropertiesPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "ExtendedFilePropertiesPart",
+      "Name": "ExtendedFilePropertiesPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "CustomFilePropertiesPart",
+      "Name": "CustomFilePropertiesPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "ThumbnailPart",
+      "Name": "ThumbnailPart"
+    },
+    {
+      "ApiName": "DigitalSignatureOriginPart",
+      "Name": "DigitalSignatureOriginPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "QuickAccessToolbarCustomizationsPart",
+      "Name": "QuickAccessToolbarCustomizationsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "RibbonExtensibilityPart",
+      "Name": "RibbonExtensibilityPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "RibbonAndBackstageCustomizationsPart",
+      "Name": "RibbonAndBackstageCustomizationsPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "WebExTaskpanesPart",
+      "Name": "WebExTaskpanesPart",
+      "HasFixedContent": true
+    },
+    {
+      "ApiName": "LabelInfoPart",
+      "Name": "LabelInfoPart",
+      "HasFixedContent": true
+    }
+  ]
+}

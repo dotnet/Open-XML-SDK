@@ -87,23 +87,5 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WorkbookRevisionLogParts of the WorkbookRevisionHeaderPart
         /// </summary>
         public IEnumerable<WorkbookRevisionLogPart> WorkbookRevisionLogParts => GetPartsOfType<WorkbookRevisionLogPart>();
-
-        /// <inheritdoc/>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            switch (relationshipType)
-            {
-                case WorkbookRevisionLogPart.RelationshipTypeConstant:
-                    return new WorkbookRevisionLogPart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
     }
 }

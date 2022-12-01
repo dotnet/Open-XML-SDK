@@ -467,37 +467,6 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates an instance of OpenXmlPart according to the given relationship type.
-        /// </summary>
-        /// <param name="relationshipType">Relationship type.</param>
-        /// <returns>An instance of OpenXmlPart.</returns>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            return relationshipType switch
-            {
-                MainDocumentPart.RelationshipTypeConstant => new MainDocumentPart(),
-                CoreFilePropertiesPart.RelationshipTypeConstant => new CoreFilePropertiesPart(),
-                ExtendedFilePropertiesPart.RelationshipTypeConstant => new ExtendedFilePropertiesPart(),
-                CustomFilePropertiesPart.RelationshipTypeConstant => new CustomFilePropertiesPart(),
-                ThumbnailPart.RelationshipTypeConstant => new ThumbnailPart(),
-                DigitalSignatureOriginPart.RelationshipTypeConstant => new DigitalSignatureOriginPart(),
-                QuickAccessToolbarCustomizationsPart.RelationshipTypeConstant => new QuickAccessToolbarCustomizationsPart(),
-                RibbonExtensibilityPart.RelationshipTypeConstant => new RibbonExtensibilityPart(),
-                RibbonAndBackstageCustomizationsPart.RelationshipTypeConstant => new RibbonAndBackstageCustomizationsPart(),
-                WebExTaskpanesPart.RelationshipTypeConstant => new WebExTaskpanesPart(),
-                LabelInfoPart.RelationshipTypeConstant => new LabelInfoPart(),
-                _ => throw new ArgumentOutOfRangeException(nameof(relationshipType)),
-            };
-        }
-
-        /// <summary>
         /// Adds a new part of type <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">The class of the part.</typeparam>
@@ -823,5 +792,27 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion Package-based cloning
 
         #endregion cloning
+
+        /// <inheritdoc/>
+        public override IFeatureCollection Features
+        {
+            get
+            {
+                if (_features is null)
+                {
+                    _features = new WordprocessingDocumentFeatures(this);
+                }
+
+                return _features;
+            }
+        }
+
+        private partial class WordprocessingDocumentFeatures : TypedPackageFeatureCollection
+        {
+            public WordprocessingDocumentFeatures(TypedOpenXmlPackage package)
+                : base(package)
+            {
+            }
+        }
     }
 }

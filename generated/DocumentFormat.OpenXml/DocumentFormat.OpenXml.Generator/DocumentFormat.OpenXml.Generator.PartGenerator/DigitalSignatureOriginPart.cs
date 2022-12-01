@@ -48,23 +48,5 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the XmlSignatureParts of the DigitalSignatureOriginPart
         /// </summary>
         public IEnumerable<XmlSignaturePart> XmlSignatureParts => GetPartsOfType<XmlSignaturePart>();
-
-        /// <inheritdoc/>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            switch (relationshipType)
-            {
-                case XmlSignaturePart.RelationshipTypeConstant:
-                    return new XmlSignaturePart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
     }
 }

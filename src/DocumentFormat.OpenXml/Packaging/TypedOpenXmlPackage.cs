@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// An implementation of <see cref="OpenXmlPackage"/> that provides strongly-typed services.
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
-public abstract class TypedOpenXmlPackage : OpenXmlPackage
+public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
 {
     [Obsolete(DoNotUseParameterlessConstructor)]
     private protected TypedOpenXmlPackage()
@@ -23,17 +23,11 @@ public abstract class TypedOpenXmlPackage : OpenXmlPackage
     {
     }
 
-    /// <inheritdoc/>
-    public override IFeatureCollection Features
+    private protected abstract partial class TypedPackageFeatureCollection : PackageFeatureCollection
     {
-        get
+        protected TypedPackageFeatureCollection(TypedOpenXmlPackage package)
+            : base(package, TypedFeatures.Shared)
         {
-            if (_features is null)
-            {
-                _features = new PackageFeatureCollection(this, TypedFeatures.Shared);
-            }
-
-            return _features;
         }
     }
 }

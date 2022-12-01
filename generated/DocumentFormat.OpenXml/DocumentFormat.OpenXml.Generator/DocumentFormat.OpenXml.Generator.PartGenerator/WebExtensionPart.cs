@@ -141,24 +141,6 @@ namespace DocumentFormat.OpenXml.Packaging
             return AddImagePart(contentType);
         }
 
-        /// <inheritdoc/>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            switch (relationshipType)
-            {
-                case ImagePart.RelationshipTypeConstant:
-                    return new ImagePart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
-
         internal override bool IsInVersion(FileFormatVersions version)
         {
             return version.AtLeast(FileFormatVersions.Office2013);
