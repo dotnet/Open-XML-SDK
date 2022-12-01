@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed issue where some URIs might be changed when cloning or creating copy (#1234)
 - Fixed issue in FlatOpc generation that would not read the full stream on .NET 6+ (#1232)
 - Fixed issue where restored relationships wouldn't load correctly (#1207)
+- Fixed .NET Core Remote Code Execution Vulnerability (#1222)
 
 ## [2.18.0] 2022-09-06
 
