@@ -138,7 +138,6 @@ public static class PartWriter
         yield return GetConstructors(type);
         yield return GetStronglyTypedProperties(type);
         yield return GetTypedPartProperties(type);
-        yield return new[] { GetCreatePartCoreMethod(type) };
         yield return GetAddPartMethods(type);
         yield return GetInVersionMethod(type);
         yield return GetSchemaTypedParts(services, type);
@@ -365,60 +364,6 @@ public static class PartWriter
                 writer.Write("return version.AtLeast(FileFormatVersions.");
                 writer.Write(type.Version);
                 writer.WriteLine(");");
-            }
-        });
-    }
-
-    private static Item? GetCreatePartCoreMethod(Part type)
-    {
-        if (!type.Children.Any(d => !d.IsDataPartReference))
-        {
-            return null;
-        }
-
-        return new(ItemType.Method, "CreatepartCore", writer =>
-        {
-            writer.WriteInheritDoc();
-            writer.WriteLine("internal sealed override OpenXmlPart CreatePartCore(string relationshipType)");
-
-            using (writer.AddBlock(_options))
-            {
-                writer.WriteLine("ThrowIfObjectDisposed();");
-                writer.WriteLine("if (relationshipType is null)");
-
-                using (writer.AddBlock(_options))
-                {
-                    writer.WriteLine("throw new ArgumentNullException(nameof(relationshipType));");
-                }
-
-                writer.WriteLineNoTabs();
-                writer.WriteLine();
-
-                writer.WriteLine("switch (relationshipType)");
-                using (writer.AddBlock(_options))
-                {
-                    foreach (var child in type.Children)
-                    {
-                        if (!child.IsDataPartReference)
-                        {
-                            writer.Write("case ");
-                            writer.Write(child.Name);
-                            writer.Write(".RelationshipTypeConstant:");
-                            writer.Indent++;
-                            writer.WriteLine();
-                            writer.Write("return new ");
-                            writer.Write(child.Name);
-                            writer.Write("();");
-                            writer.Indent--;
-                            writer.WriteLine();
-                        }
-                    }
-                }
-
-                writer.WriteLineNoTabs();
-                writer.WriteLine();
-
-                writer.WriteLine("throw new ArgumentOutOfRangeException(nameof(relationshipType));");
             }
         });
     }

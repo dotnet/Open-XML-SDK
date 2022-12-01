@@ -189,3 +189,6 @@ project.lock.json
 msbuild.binlog
 
 /.idea/
+
+Microsoft.Interop.JavaScript.JSImportGenerator/
+Microsoft.Interop.LibraryImportGenerator/

@@ -151,27 +151,5 @@ namespace DocumentFormat.OpenXml.Packaging
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddImagePart(contentType);
         }
-
-        /// <inheritdoc/>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            switch (relationshipType)
-            {
-                case ImagePart.RelationshipTypeConstant:
-                    return new ImagePart();
-                case SlidePart.RelationshipTypeConstant:
-                    return new SlidePart();
-                case WorksheetPart.RelationshipTypeConstant:
-                    return new WorksheetPart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
     }
 }

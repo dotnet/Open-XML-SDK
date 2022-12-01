@@ -493,59 +493,5 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             return AddDataPartReferenceRelationship<VideoReferenceRelationship>(mediaDataPart, id);
         }
-
-        /// <inheritdoc/>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            switch (relationshipType)
-            {
-                case CustomXmlPart.RelationshipTypeConstant:
-                    return new CustomXmlPart();
-                case ChartPart.RelationshipTypeConstant:
-                    return new ChartPart();
-                case ExtendedChartPart.RelationshipTypeConstant:
-                    return new ExtendedChartPart();
-                case DiagramColorsPart.RelationshipTypeConstant:
-                    return new DiagramColorsPart();
-                case DiagramDataPart.RelationshipTypeConstant:
-                    return new DiagramDataPart();
-                case DiagramPersistLayoutPart.RelationshipTypeConstant:
-                    return new DiagramPersistLayoutPart();
-                case DiagramLayoutDefinitionPart.RelationshipTypeConstant:
-                    return new DiagramLayoutDefinitionPart();
-                case DiagramStylePart.RelationshipTypeConstant:
-                    return new DiagramStylePart();
-                case EmbeddedObjectPart.RelationshipTypeConstant:
-                    return new EmbeddedObjectPart();
-                case EmbeddedPackagePart.RelationshipTypeConstant:
-                    return new EmbeddedPackagePart();
-                case ImagePart.RelationshipTypeConstant:
-                    return new ImagePart();
-                case VmlDrawingPart.RelationshipTypeConstant:
-                    return new VmlDrawingPart();
-                case EmbeddedControlPersistenceBinaryDataPart.RelationshipTypeConstant:
-                    return new EmbeddedControlPersistenceBinaryDataPart();
-                case Model3DReferenceRelationshipPart.RelationshipTypeConstant:
-                    return new Model3DReferenceRelationshipPart();
-                case SlidePart.RelationshipTypeConstant:
-                    return new SlidePart();
-                case SlideMasterPart.RelationshipTypeConstant:
-                    return new SlideMasterPart();
-                case ThemeOverridePart.RelationshipTypeConstant:
-                    return new ThemeOverridePart();
-                case UserDefinedTagsPart.RelationshipTypeConstant:
-                    return new UserDefinedTagsPart();
-                case EmbeddedControlPersistencePart.RelationshipTypeConstant:
-                    return new EmbeddedControlPersistencePart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
     }
 }

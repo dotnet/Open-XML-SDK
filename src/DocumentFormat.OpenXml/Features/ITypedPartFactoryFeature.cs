@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal interface IPartFactory
+internal interface ITypedPartFactoryFeature
 {
     T? Create<T>() where T : OpenXmlPart;
 }

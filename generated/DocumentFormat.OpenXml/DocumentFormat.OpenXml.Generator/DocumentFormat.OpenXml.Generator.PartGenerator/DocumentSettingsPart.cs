@@ -197,25 +197,5 @@ namespace DocumentFormat.OpenXml.Packaging
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddMailMergeRecipientDataPart(contentType);
         }
-
-        /// <inheritdoc/>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            switch (relationshipType)
-            {
-                case MailMergeRecipientDataPart.RelationshipTypeConstant:
-                    return new MailMergeRecipientDataPart();
-                case ImagePart.RelationshipTypeConstant:
-                    return new ImagePart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
     }
 }

@@ -45,23 +45,5 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the VbaDataPart of the VbaProjectPart
         /// </summary>
         public VbaDataPart? VbaDataPart => GetSubPartOfType<VbaDataPart>();
-
-        /// <inheritdoc/>
-        internal sealed override OpenXmlPart CreatePartCore(string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-            if (relationshipType is null)
-            {
-                throw new ArgumentNullException(nameof(relationshipType));
-            }
-
-            switch (relationshipType)
-            {
-                case VbaDataPart.RelationshipTypeConstant:
-                    return new VbaDataPart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
     }
 }
