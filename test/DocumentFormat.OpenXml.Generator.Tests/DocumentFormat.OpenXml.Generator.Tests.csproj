@@ -8,6 +8,7 @@
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.SourceGenerators.Testing.XUnit" />
     <PackageReference Include="NuGet.Common" />
     <PackageReference Include="NuGet.Packaging" />
+    <PackageReference Include="NuGet.Packaging.Core" />
     <PackageReference Include="NuGet.Protocol" />
     <PackageReference Include="NuGet.Resolver" />
   </ItemGroup>
