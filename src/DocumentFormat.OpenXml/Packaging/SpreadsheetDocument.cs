@@ -638,15 +638,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new SpreadsheetDocumentFeatures(this);
 
-        private partial class SpreadsheetDocumentFeatures :
-            TypedPackageFeatureCollection<SpreadsheetDocumentType, WorkbookPart>,
-            IApplicationTypeFeature
+        private partial class SpreadsheetDocumentFeatures : TypedPackageFeatureCollection<SpreadsheetDocumentType, WorkbookPart>,
+            IApplicationTypeFeature,
             IMainPartFeature
         {
             public SpreadsheetDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            ApplicationType IApplicationTypeFeature.Type => ApplicationType.Excel;
 
             protected override WorkbookPart CreateMainPart() => new();
 
@@ -671,8 +672,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-excel.addin.macroEnabled.main+xml" => SpreadsheetDocumentType.AddIn,
                 _ => default,
             };
-
-            ApplicationType IApplicationTypeFeature.Type => ApplicationType.Excel;
         }
     }
 }

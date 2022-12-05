@@ -679,14 +679,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new WordprocessingDocumentFeatures(this);
 
-        private partial class WordprocessingDocumentFeatures :
-            TypedPackageFeatureCollection<WordprocessingDocumentType, MainDocumentPart>,
-            IMainPartFeature
+        private partial class WordprocessingDocumentFeatures : TypedPackageFeatureCollection<WordprocessingDocumentType, MainDocumentPart>,
+            IMainPartFeature,
+            IApplicationTypeFeature
         {
             public WordprocessingDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            ApplicationType IApplicationTypeFeature.Type => ApplicationType.Word;
 
             protected override MainDocumentPart CreateMainPart() => new();
 
@@ -709,8 +711,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-word.template.macroEnabledTemplate.main+xml" => WordprocessingDocumentType.MacroEnabledTemplate,
                 _ => default,
             };
-
-            ApplicationType IApplicationTypeFeature.Type => ApplicationType.Word;
         }
     }
 }

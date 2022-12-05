@@ -636,14 +636,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new PresentationDocumentFeatures(this);
 
-        private partial class PresentationDocumentFeatures :
-            TypedPackageFeatureCollection<PresentationDocumentType, PresentationPart>,
+        private partial class PresentationDocumentFeatures : TypedPackageFeatureCollection<PresentationDocumentType, PresentationPart>,
+            IApplicationTypeFeature,
             IMainPartFeature
         {
             public PresentationDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            ApplicationType IApplicationTypeFeature.Type => ApplicationType.PowerPoint;
 
             string IMainPartFeature.RelationshipType => PresentationPart.RelationshipTypeConstant;
 
@@ -672,8 +674,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-powerpoint.addin.macroEnabled.main+xml" => PresentationDocumentType.AddIn,
                 _ => default,
             };
-
-            ApplicationType IApplicationTypeFeature.Type => ApplicationType.PowerPoint;
         }
     }
 }
