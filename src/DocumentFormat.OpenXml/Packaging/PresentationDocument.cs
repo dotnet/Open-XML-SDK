@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.IO.Packaging;
 using System.Reflection;
@@ -28,40 +27,6 @@ namespace DocumentFormat.OpenXml.Packaging
     public partial class PresentationDocument : TypedOpenXmlPackage
     {
         /// <summary>
-        /// Gets the relationship type of the main part.
-        /// </summary>
-        internal sealed override string MainPartRelationshipType => PresentationPart.RelationshipTypeConstant;
-
-        private static Dictionary<PresentationDocumentType, string>? _validMainPartContentType;
-
-        private static Dictionary<PresentationDocumentType, string> MainPartContentTypes
-        {
-            get
-            {
-                if (_validMainPartContentType is null)
-                {
-                    _validMainPartContentType = new Dictionary<PresentationDocumentType, string>
-                    {
-                        { PresentationDocumentType.Presentation, @"application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml" },
-                        { PresentationDocumentType.Template, @"application/vnd.openxmlformats-officedocument.presentationml.template.main+xml" },
-                        { PresentationDocumentType.Slideshow, @"application/vnd.openxmlformats-officedocument.presentationml.slideshow.main+xml" },
-                        { PresentationDocumentType.MacroEnabledPresentation, @"application/vnd.ms-powerpoint.presentation.macroEnabled.main+xml" },
-                        { PresentationDocumentType.MacroEnabledTemplate, @"application/vnd.ms-powerpoint.template.macroEnabled.main+xml" },
-                        { PresentationDocumentType.MacroEnabledSlideshow, @"application/vnd.ms-powerpoint.slideshow.macroEnabled.main+xml" },
-                        { PresentationDocumentType.AddIn, @"application/vnd.ms-powerpoint.addin.macroEnabled.main+xml" },
-                    };
-                }
-
-                return _validMainPartContentType;
-            }
-        }
-
-        /// <summary>
-        /// Gets the list of valid content type for main part.
-        /// </summary>
-        internal sealed override ICollection<string> ValidMainPartContentTypes => MainPartContentTypes.Values;
-
-        /// <summary>
         /// Creates a PresentationDocument.
         /// </summary>
         [Obsolete(DoNotUseParameterlessConstructor)]
@@ -75,8 +40,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        private PresentationDocumentType _documentType;
-
         /// <summary>
         /// Gets the type of the PresentationDocument.
         /// </summary>
@@ -85,33 +48,17 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return _documentType;
+                return Features.GetRequired<IDocumentTypeFeature<PresentationDocumentType>>().Type;
             }
 
             private set
             {
                 ThrowIfObjectDisposed();
-                _documentType = value;
+                Features.GetRequired<IDocumentTypeFeature<PresentationDocumentType>>().Type = value;
             }
         }
 
         internal override ApplicationType ApplicationType => ApplicationType.PowerPoint;
-
-        private void UpdateDocumentTypeFromContentType()
-        {
-            if (MainPartContentType is null)
-            {
-                throw new InvalidOperationException();
-            }
-
-            foreach (KeyValuePair<PresentationDocumentType, string> types in MainPartContentTypes)
-            {
-                if (types.Value == MainPartContentType)
-                {
-                    DocumentType = types.Key;
-                }
-            }
-        }
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the specified file.
@@ -163,7 +110,6 @@ namespace DocumentFormat.OpenXml.Packaging
             => new PresentationDocument(PackageLoader.CreateCore(path), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                MainPartContentType = MainPartContentTypes[type],
             };
 
         /// <summary>
@@ -179,7 +125,6 @@ namespace DocumentFormat.OpenXml.Packaging
             => new PresentationDocument(PackageLoader.CreateCore(stream), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                MainPartContentType = MainPartContentTypes[type],
             };
 
         /// <summary>
@@ -195,7 +140,6 @@ namespace DocumentFormat.OpenXml.Packaging
             => new PresentationDocument(PackageLoader.CreateCore(package), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                MainPartContentType = MainPartContentTypes[type],
             };
 
         /// <summary>
@@ -303,14 +247,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new PresentationDocument(PackageLoader.OpenCore(path, isEditable), openSettings);
-
-            if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
-            {
-                doc.UpdateDocumentTypeFromContentType();
-            }
-
-            return doc;
+            return new PresentationDocument(PackageLoader.OpenCore(path, isEditable), openSettings);
         }
 
         /// <summary>
@@ -337,14 +274,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new PresentationDocument(PackageLoader.OpenCore(stream, isEditable), openSettings);
-
-            if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
-            {
-                doc.UpdateDocumentTypeFromContentType();
-            }
-
-            return doc;
+            return new PresentationDocument(PackageLoader.OpenCore(stream, isEditable), openSettings);
         }
 
         /// <summary>
@@ -370,14 +300,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new PresentationDocument(PackageLoader.OpenCore(package), openSettings);
-
-            if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
-            {
-                doc.UpdateDocumentTypeFromContentType();
-            }
-
-            return doc;
+            return new PresentationDocument(PackageLoader.OpenCore(package), openSettings);
         }
 
         /// <summary>
@@ -403,7 +326,6 @@ namespace DocumentFormat.OpenXml.Packaging
             PresentationDocumentType oldType = DocumentType;
 
             DocumentType = newType;
-            MainPartContentType = MainPartContentTypes[newType];
 
             if (PresentationPart is null)
             {
@@ -419,7 +341,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 if (e.Message == ExceptionMessages.CannotChangeDocumentType)
                 {
                     DocumentType = oldType;
-                    MainPartContentType = MainPartContentTypes[oldType];
                 }
 
                 throw;
@@ -525,7 +446,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (typeof(PresentationPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != PresentationDocument.MainPartContentTypes[_documentType])
+            if (typeof(PresentationPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != Features.GetRequired<IMainPartFeature>().ContentType)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
             }
@@ -754,25 +675,41 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion cloning
 
         /// <inheritdoc/>
-        public override IFeatureCollection Features
-        {
-            get
-            {
-                if (_features is null)
-                {
-                    _features = new PresentationDocumentFeatures(this);
-                }
+        public override IFeatureCollection Features => _features ??= new PresentationDocumentFeatures(this);
 
-                return _features;
-            }
-        }
-
-        private partial class PresentationDocumentFeatures : TypedPackageFeatureCollection
+        private partial class PresentationDocumentFeatures : TypedPackageFeatureCollection<PresentationDocumentType>,
+            IMainPartFeature
         {
             public PresentationDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            string IMainPartFeature.RelationshipType => PresentationPart.RelationshipTypeConstant;
+
+            protected override string? GetContentType(PresentationDocumentType type) => type switch
+            {
+                PresentationDocumentType.Presentation => "application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml",
+                PresentationDocumentType.Template => "application/vnd.openxmlformats-officedocument.presentationml.template.main+xml",
+                PresentationDocumentType.Slideshow => "application/vnd.openxmlformats-officedocument.presentationml.slideshow.main+xml",
+                PresentationDocumentType.MacroEnabledPresentation => "application/vnd.ms-powerpoint.presentation.macroEnabled.main+xml",
+                PresentationDocumentType.MacroEnabledTemplate => "application/vnd.ms-powerpoint.template.macroEnabled.main+xml",
+                PresentationDocumentType.MacroEnabledSlideshow => "application/vnd.ms-powerpoint.slideshow.macroEnabled.main+xml",
+                PresentationDocumentType.AddIn => "application/vnd.ms-powerpoint.addin.macroEnabled.main+xml",
+                _ => default,
+            };
+
+            protected override PresentationDocumentType? GetType(string contentPart) => contentPart switch
+            {
+                "application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml" => PresentationDocumentType.Presentation,
+                "application/vnd.openxmlformats-officedocument.presentationml.template.main+xml" => PresentationDocumentType.Template,
+                "application/vnd.openxmlformats-officedocument.presentationml.slideshow.main+xml" => PresentationDocumentType.Slideshow,
+                "application/vnd.ms-powerpoint.presentation.macroEnabled.main+xml" => PresentationDocumentType.MacroEnabledPresentation,
+                "application/vnd.ms-powerpoint.template.macroEnabled.main+xml" => PresentationDocumentType.MacroEnabledTemplate,
+                "application/vnd.ms-powerpoint.slideshow.macroEnabled.main+xml" => PresentationDocumentType.MacroEnabledSlideshow,
+                "application/vnd.ms-powerpoint.addin.macroEnabled.main+xml" => PresentationDocumentType.AddIn,
+                _ => default,
+            };
         }
     }
 }

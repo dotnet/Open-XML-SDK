@@ -7,7 +7,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -26,7 +25,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private bool _disposed;
         private Package _package;
-        private string _mainPartContentType;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class.
@@ -36,7 +34,6 @@ namespace DocumentFormat.OpenXml.Packaging
             : base()
         {
             _package = null!;
-            _mainPartContentType = null!;
             OpenSettings = null!;
         }
 
@@ -51,10 +48,6 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 Load(_package);
             }
-            else
-            {
-                _mainPartContentType = null!;
-            }
         }
 
         /// <summary>
@@ -65,7 +58,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Loads the package. This method must be called in the constructor of a derived class.
         /// </summary>
-        [MemberNotNull(nameof(_mainPartContentType))]
         private void Load(Package package)
         {
             try
@@ -89,28 +81,24 @@ namespace DocumentFormat.OpenXml.Packaging
                 //    OpenXmlPackageException exception = new OpenXmlPackageException(ExceptionMessages.StrictEditNeedsAutoSave);
                 //    throw exception;
                 // }
+                var mainPartFeature = Features.GetRequired<IMainPartFeature>();
 
                 // auto detect document type (main part type for Transitional)
                 foreach (var relationship in relationshipCollection)
                 {
-                    if (relationship.RelationshipType == MainPartRelationshipType)
+                    if (relationship.RelationshipType == mainPartFeature.RelationshipType)
                     {
                         hasMainPart = true;
 
                         var uriTarget = PackUriHelper.ResolvePartUri(new Uri("/", UriKind.Relative), relationship.TargetUri);
                         var metroPart = Package.GetPart(uriTarget);
 
-                        if (!IsValidMainPartContentType(metroPart.ContentType))
-                        {
-                            throw new OpenXmlPackageException(ExceptionMessages.InvalidPackageType);
-                        }
-
-                        MainPartContentType = metroPart.ContentType;
+                        mainPartFeature.ContentType = metroPart.ContentType;
                         break;
                     }
                 }
 
-                if (!hasMainPart || _mainPartContentType is null)
+                if (!hasMainPart)
                 {
                     throw new OpenXmlPackageException(ExceptionMessages.NoMainPart);
                 }
@@ -233,8 +221,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(part));
             }
 
-            if (part.RelationshipType == MainPartRelationshipType &&
-                part.ContentType != MainPartContentType)
+            var mainPart = Features.GetRequired<IMainPartFeature>();
+
+            if (part.RelationshipType == mainPart.RelationshipType && part.ContentType != mainPart.ContentType)
             {
                 throw new ArgumentOutOfRangeException(ExceptionMessages.MainPartIsDifferent);
             }
@@ -628,46 +617,12 @@ namespace DocumentFormat.OpenXml.Packaging
         #region internal methods related main part
 
         /// <summary>
-        /// Gets the relationship type of the main part.
-        /// </summary>
-        internal abstract string MainPartRelationshipType { get; }
-
-        /// <summary>
         /// Gets or sets the content type of the main part of the package.
         /// </summary>
         internal string MainPartContentType
         {
-            get
-            {
-                return _mainPartContentType;
-            }
-
-            set
-            {
-                if (IsValidMainPartContentType(value))
-                {
-                    _mainPartContentType = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(ExceptionMessages.InvalidMainPartContentType);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Gets the list of valid content types for the main part.
-        /// </summary>
-        internal abstract ICollection<string> ValidMainPartContentTypes { get; }
-
-        /// <summary>
-        /// Determines whether the content type is valid for the main part of the package.
-        /// </summary>
-        /// <param name="contentType">The content type.</param>
-        /// <returns>Returns true if the content type is valid.</returns>
-        internal bool IsValidMainPartContentType(string contentType)
-        {
-            return ValidMainPartContentTypes.Contains(contentType);
+            get => Features.GetRequired<IMainPartFeature>().ContentType;
+            set => Features.GetRequired<IMainPartFeature>().ContentType = value;
         }
 
         /// <summary>

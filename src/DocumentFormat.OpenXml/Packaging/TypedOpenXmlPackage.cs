@@ -23,11 +23,35 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
     {
     }
 
-    private protected abstract partial class TypedPackageFeatureCollection : PackageFeatureCollection
+    private protected abstract partial class TypedPackageFeatureCollection<TDocumentType> :
+        PackageFeatureCollection,
+        IMainPartFeature,
+        IDocumentTypeFeature<TDocumentType>
+        where TDocumentType : struct, Enum
     {
+        private TDocumentType _documentType;
+
         protected TypedPackageFeatureCollection(TypedOpenXmlPackage package)
             : base(package, TypedFeatures.Shared)
         {
         }
+
+        string IMainPartFeature.RelationshipType => string.Empty;
+
+        string IMainPartFeature.ContentType
+        {
+            get => GetContentType(_documentType)!;
+            set => _documentType = GetType(value) ?? throw new OpenXmlPackageException(ExceptionMessages.InvalidContentTypePart);
+        }
+
+        TDocumentType IDocumentTypeFeature<TDocumentType>.Type
+        {
+            get => _documentType;
+            set => _documentType = value;
+        }
+
+        protected abstract string? GetContentType(TDocumentType type);
+
+        protected abstract TDocumentType? GetType(string contentPart);
     }
 }
