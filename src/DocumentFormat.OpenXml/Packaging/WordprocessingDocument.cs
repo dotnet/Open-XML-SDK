@@ -519,16 +519,10 @@ namespace DocumentFormat.OpenXml.Packaging
             return childPart;
         }
 
-        /// <inheritdoc />
-        public override OpenXmlPart? RootPart => MainDocumentPart;
-
         /// <summary>
         /// Gets the MainDocumentPart of the WordprocessingDocument.
         /// </summary>
-        public MainDocumentPart? MainDocumentPart
-        {
-            get { return GetSubPartOfType<MainDocumentPart>(); }
-        }
+        public MainDocumentPart? MainDocumentPart => (MainDocumentPart?)RootPart;
 
         /// <summary>
         /// Gets the CoreFilePropertiesPart of the WordprocessingDocument.
@@ -688,13 +682,15 @@ namespace DocumentFormat.OpenXml.Packaging
         public override IFeatureCollection Features => _features ??= new WordprocessingDocumentFeatures(this);
 
         private partial class WordprocessingDocumentFeatures :
-            TypedPackageFeatureCollection<WordprocessingDocumentType>,
+            TypedPackageFeatureCollection<WordprocessingDocumentType, MainDocumentPart>,
             IMainPartFeature
         {
             public WordprocessingDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            protected override MainDocumentPart CreateMainPart() => new();
 
             string IMainPartFeature.RelationshipType => MainDocumentPart.RelationshipTypeConstant;
 
@@ -715,8 +711,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-word.template.macroEnabledTemplate.main+xml" => WordprocessingDocumentType.MacroEnabledTemplate,
                 _ => default,
             };
-
-            protected override void ChangeDocumentTypeInternal() => Package.ChangeDocumentTypeInternal(static () => new MainDocumentPart());
         }
     }
 }

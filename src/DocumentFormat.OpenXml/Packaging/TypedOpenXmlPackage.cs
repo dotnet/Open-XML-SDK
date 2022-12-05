@@ -5,7 +5,6 @@ using DocumentFormat.OpenXml.Features;
 using System;
 using System.ComponentModel;
 using System.IO;
-using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
@@ -25,14 +24,14 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
     {
     }
 
-    private protected abstract partial class TypedPackageFeatureCollection<TDocumentType> :
+    private protected abstract partial class TypedPackageFeatureCollection<TDocumentType, TMainPart> :
         PackageFeatureCollection,
         IMainPartFeature,
         IDocumentTypeFeature<TDocumentType>
         where TDocumentType : struct, Enum
+        where TMainPart : OpenXmlPart
     {
         private TDocumentType _documentType;
-        private OpenXmlPart? _mainPart;
 
         protected TypedPackageFeatureCollection(TypedOpenXmlPackage package)
             : base(package, TypedFeatures.Shared)
@@ -53,7 +52,9 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
             set => _documentType = value;
         }
 
-        OpenXmlPart? IMainPartFeature.Part => _mainPart;
+        protected TMainPart? MainPart => Package.GetSubPartOfType<TMainPart>();
+
+        OpenXmlPart? IMainPartFeature.Part => MainPart;
 
         void IDocumentTypeFeature<TDocumentType>.ChangeDocumentType(TDocumentType newType)
         {
@@ -71,14 +72,14 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
             var oldType = _documentType;
             _documentType = newType;
 
-            if (_mainPart is null)
+            if (MainPart is null)
             {
                 return;
             }
 
             try
             {
-                ChangeDocumentTypeInternal();
+                Package.ChangeDocumentTypeInternal(CreateMainPart());
             }
             catch (OpenXmlPackageException e)
             {
@@ -95,6 +96,6 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
 
         protected abstract TDocumentType? GetType(string contentPart);
 
-        protected abstract void ChangeDocumentTypeInternal();
+        protected abstract TMainPart CreateMainPart();
     }
 }

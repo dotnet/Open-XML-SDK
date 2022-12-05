@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the root part for the package.
         /// </summary>
-        public virtual OpenXmlPart? RootPart => throw new InvalidDataException(ExceptionMessages.UnknownPackage);
+        public virtual OpenXmlPart? RootPart => Features.GetRequired<IMainPartFeature>().Part;
 
         /// <summary>
         /// Loads the package. This method must be called in the constructor of a derived class.
@@ -630,7 +630,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <typeparam name="T">The type of the document's main part.</typeparam>
         /// <remarks>The MainDocumentPart will be changed.</remarks>
-        internal void ChangeDocumentTypeInternal<T>(Func<T> activator)
+        internal void ChangeDocumentTypeInternal<T>(T newMainPart)
             where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();
@@ -664,9 +664,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     ChildrenRelationshipParts.Remove(id);
                     DeleteRelationship(id);
                     mainPart.Destroy();
-
-                    // create new part
-                    T newMainPart = activator();
 
                     // do not call this.InitPart( ).  copy the code here
                     newMainPart.CreateInternal2(this, null, MainPartContentType, uri);

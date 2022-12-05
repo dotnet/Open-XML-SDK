@@ -476,16 +476,10 @@ namespace DocumentFormat.OpenXml.Packaging
             return childPart;
         }
 
-        /// <inheritdoc />
-        public override OpenXmlPart? RootPart => PresentationPart;
-
         /// <summary>
         /// Gets the PresentationPart of the PresentationDocument.
         /// </summary>
-        public PresentationPart? PresentationPart
-        {
-            get { return GetSubPartOfType<PresentationPart>(); }
-        }
+        public PresentationPart? PresentationPart => (PresentationPart?)RootPart;
 
         /// <summary>
         /// Gets the CoreFilePropertiesPart of the PresentationDocument.
@@ -644,7 +638,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new PresentationDocumentFeatures(this);
 
-        private partial class PresentationDocumentFeatures : TypedPackageFeatureCollection<PresentationDocumentType>,
+        private partial class PresentationDocumentFeatures :
+            TypedPackageFeatureCollection<PresentationDocumentType, PresentationPart>,
             IMainPartFeature
         {
             public PresentationDocumentFeatures(TypedOpenXmlPackage package)
@@ -654,7 +649,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             string IMainPartFeature.RelationshipType => PresentationPart.RelationshipTypeConstant;
 
-            protected override void ChangeDocumentTypeInternal() => Package.ChangeDocumentTypeInternal(static () => new PresentationPart());
+            protected override PresentationPart CreateMainPart() => new();
 
             protected override string? GetContentType(PresentationDocumentType type) => type switch
             {

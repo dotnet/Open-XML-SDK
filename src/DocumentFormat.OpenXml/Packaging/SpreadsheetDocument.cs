@@ -478,16 +478,10 @@ namespace DocumentFormat.OpenXml.Packaging
             return childPart;
         }
 
-        /// <inheritdoc />
-        public override OpenXmlPart? RootPart => WorkbookPart;
-
         /// <summary>
         /// Gets the WorkbookPart of the SpreadsheetDocument.
         /// </summary>
-        public WorkbookPart? WorkbookPart
-        {
-            get { return GetSubPartOfType<WorkbookPart>(); }
-        }
+        public WorkbookPart? WorkbookPart => (WorkbookPart?)RootPart;
 
         /// <summary>
         /// Gets the CoreFilePropertiesPart of the SpreadsheetDocument.
@@ -646,13 +640,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new SpreadsheetDocumentFeatures(this);
 
-        private partial class SpreadsheetDocumentFeatures : TypedPackageFeatureCollection<SpreadsheetDocumentType>,
+        private partial class SpreadsheetDocumentFeatures :
+            TypedPackageFeatureCollection<SpreadsheetDocumentType, WorkbookPart>,
             IMainPartFeature
         {
             public SpreadsheetDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            protected override WorkbookPart CreateMainPart() => new();
 
             string IMainPartFeature.RelationshipType => WorkbookPart.RelationshipTypeConstant;
 
@@ -675,8 +672,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-excel.addin.macroEnabled.main+xml" => SpreadsheetDocumentType.AddIn,
                 _ => default,
             };
-
-            protected override void ChangeDocumentTypeInternal() => Package.ChangeDocumentTypeInternal(static () => new WorkbookPart());
         }
     }
 }
