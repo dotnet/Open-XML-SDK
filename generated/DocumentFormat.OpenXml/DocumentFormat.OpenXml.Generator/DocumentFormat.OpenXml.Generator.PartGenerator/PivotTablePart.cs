@@ -84,6 +84,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public sealed override string RelationshipType => RelationshipTypeConstant;
         
         /// <inheritdoc/>
+<<<<<<< HEAD
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
         
         private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
@@ -93,5 +94,11 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Path => "../pivotTables";
         }
     
+=======
+        internal sealed override string TargetName => "pivotTable";
+
+        /// <inheritdoc/>
+        internal sealed override string TargetPath => "../pivotTables";
+>>>>>>> upstream/main
     }
 }

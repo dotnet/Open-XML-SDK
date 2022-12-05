@@ -37,6 +37,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public sealed override string RelationshipType => RelationshipTypeConstant;
         
         /// <inheritdoc/>
+<<<<<<< HEAD
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
         
         private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
@@ -46,5 +47,11 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Path => "../customXML";
         }
     
+=======
+        internal sealed override string TargetName => "item";
+
+        /// <inheritdoc/>
+        internal sealed override string TargetPath => "../customXML";
+>>>>>>> upstream/main
     }
 }

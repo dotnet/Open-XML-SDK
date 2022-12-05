@@ -84,6 +84,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
 
+<<<<<<< HEAD
+=======
+        /// <inheritdoc/>
+        internal sealed override string TargetName => "customDataProps";
+
+        /// <inheritdoc/>
+        internal sealed override string TargetPath => "customData";
+
+>>>>>>> upstream/main
         internal override bool IsInVersion(FileFormatVersions version)
         {
             return version.AtLeast(FileFormatVersions.Office2010);

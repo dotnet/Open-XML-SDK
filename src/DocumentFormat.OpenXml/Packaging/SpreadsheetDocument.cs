@@ -752,18 +752,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion cloning
 
         /// <inheritdoc/>
-        public override IFeatureCollection Features
-        {
-            get
-            {
-                if (_features is null)
-                {
-                    _features = new SpreadsheetDocumentFeatures(this);
-                }
-
-                return _features;
-            }
-        }
+        public override IFeatureCollection Features => _features ??= new SpreadsheetDocumentFeatures(this);
 
         private partial class SpreadsheetDocumentFeatures : TypedPackageFeatureCollection,
             IApplicationTypeFeature

@@ -84,6 +84,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
         
         /// <inheritdoc/>
+<<<<<<< HEAD
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
         
         private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
@@ -93,5 +94,11 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Path => "../tables";
         }
     
+=======
+        internal sealed override string TargetName => "table";
+
+        /// <inheritdoc/>
+        internal sealed override string TargetPath => "../tables";
+>>>>>>> upstream/main
     }
 }

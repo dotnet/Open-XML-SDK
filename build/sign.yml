@@ -12,6 +12,12 @@ steps:
       gci -r
     workingDirectory: '$(Pipeline.Workspace)/unsigned'
 
+  - task: UseDotNet@2
+    displayName: 'Install .NET Core 2.1 for signing'
+    inputs:
+      packageType: 'sdk'
+      version: 2.1.818
+
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
     displayName: 'OpenXML SDK Assembly ESRP CodeSigning'
     inputs:

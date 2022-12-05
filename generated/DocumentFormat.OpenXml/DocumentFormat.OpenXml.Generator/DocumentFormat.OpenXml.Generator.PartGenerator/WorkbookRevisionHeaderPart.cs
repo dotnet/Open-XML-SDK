@@ -82,6 +82,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WorkbookRevisionLogParts of the WorkbookRevisionHeaderPart
         /// </summary>
         public IEnumerable<WorkbookRevisionLogPart> WorkbookRevisionLogParts => GetPartsOfType<WorkbookRevisionLogPart>();
+<<<<<<< HEAD
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
@@ -93,5 +94,7 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Path => "revisions";
         }
     
+=======
+>>>>>>> upstream/main
     }
 }
