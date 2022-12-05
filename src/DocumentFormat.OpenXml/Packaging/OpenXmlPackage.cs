@@ -1248,22 +1248,23 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private protected partial class PackageFeatureCollection : IFeatureCollection, IContainerFeature<OpenXmlPackage>, IPartFactoryFeature
         {
-            private readonly OpenXmlPackage _package;
             private readonly IFeatureCollection? _parent;
 
             private FeatureContainer _container;
 
             public PackageFeatureCollection(OpenXmlPackage package, IFeatureCollection? parent)
             {
-                _package = package;
+                Package = package;
                 _parent = parent;
             }
+
+            protected OpenXmlPackage Package { get; }
 
             public bool IsReadOnly => false;
 
             public int Revision => _container.Revision + (_parent?.Revision ?? 0);
 
-            OpenXmlPackage IContainerFeature<OpenXmlPackage>.Value => _package;
+            OpenXmlPackage IContainerFeature<OpenXmlPackage>.Value => Package;
 
             public TFeature? Get<TFeature>()
             {

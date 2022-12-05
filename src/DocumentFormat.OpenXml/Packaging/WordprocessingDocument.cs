@@ -354,40 +354,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public void ChangeDocumentType(WordprocessingDocumentType newType)
         {
             ThrowIfObjectDisposed();
-
-            if (newType == DocumentType)
-            {
-                // same type, just return
-                return;
-            }
-
-            if (FileOpenAccess == FileAccess.Read)
-            {
-                throw new IOException(ExceptionMessages.PackageAccessModeIsReadonly);
-            }
-
-            WordprocessingDocumentType oldType = DocumentType;
-
-            DocumentType = newType;
-
-            if (MainDocumentPart is null)
-            {
-                return;
-            }
-
-            try
-            {
-                ChangeDocumentTypeInternal(static () => new MainDocumentPart());
-            }
-            catch (OpenXmlPackageException e)
-            {
-                if (e.Message == ExceptionMessages.CannotChangeDocumentType)
-                {
-                    DocumentType = oldType;
-                }
-
-                throw;
-            }
+            Features.GetRequired<IDocumentTypeFeature<WordprocessingDocumentType>>().ChangeDocumentType(newType);
         }
 
         /// <summary>
@@ -748,6 +715,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-word.template.macroEnabledTemplate.main+xml" => WordprocessingDocumentType.MacroEnabledTemplate,
                 _ => default,
             };
+
+            protected override void ChangeDocumentTypeInternal() => Package.ChangeDocumentTypeInternal(static () => new MainDocumentPart());
         }
     }
 }

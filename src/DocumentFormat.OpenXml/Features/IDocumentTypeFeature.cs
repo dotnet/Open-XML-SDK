@@ -7,4 +7,6 @@ internal interface IDocumentTypeFeature<T>
     where T : System.Enum
 {
     T Type { get; set; }
+
+    void ChangeDocumentType(T newType);
 }

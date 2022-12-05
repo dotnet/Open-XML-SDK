@@ -311,40 +311,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public void ChangeDocumentType(PresentationDocumentType newType)
         {
             ThrowIfObjectDisposed();
-
-            if (newType == DocumentType)
-            {
-                // same type, just return
-                return;
-            }
-
-            if (FileOpenAccess == FileAccess.Read)
-            {
-                throw new IOException(ExceptionMessages.PackageAccessModeIsReadonly);
-            }
-
-            PresentationDocumentType oldType = DocumentType;
-
-            DocumentType = newType;
-
-            if (PresentationPart is null)
-            {
-                return;
-            }
-
-            try
-            {
-                ChangeDocumentTypeInternal(static () => new PresentationPart());
-            }
-            catch (OpenXmlPackageException e)
-            {
-                if (e.Message == ExceptionMessages.CannotChangeDocumentType)
-                {
-                    DocumentType = oldType;
-                }
-
-                throw;
-            }
+            Features.GetRequired<IDocumentTypeFeature<PresentationDocumentType>>().ChangeDocumentType(newType);
         }
 
         /// <summary>
@@ -686,6 +653,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             string IMainPartFeature.RelationshipType => PresentationPart.RelationshipTypeConstant;
+
+            protected override void ChangeDocumentTypeInternal() => Package.ChangeDocumentTypeInternal(static () => new PresentationPart());
 
             protected override string? GetContentType(PresentationDocumentType type) => type switch
             {

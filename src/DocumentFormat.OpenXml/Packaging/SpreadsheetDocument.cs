@@ -313,40 +313,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public void ChangeDocumentType(SpreadsheetDocumentType newType)
         {
             ThrowIfObjectDisposed();
-
-            if (newType == DocumentType)
-            {
-                // same type, just return
-                return;
-            }
-
-            if (FileOpenAccess == FileAccess.Read)
-            {
-                throw new IOException(ExceptionMessages.PackageAccessModeIsReadonly);
-            }
-
-            SpreadsheetDocumentType oldType = DocumentType;
-
-            DocumentType = newType;
-
-            if (WorkbookPart is null)
-            {
-                return;
-            }
-
-            try
-            {
-                ChangeDocumentTypeInternal(static () => new WorkbookPart());
-            }
-            catch (OpenXmlPackageException e)
-            {
-                if (e.Message == ExceptionMessages.CannotChangeDocumentType)
-                {
-                    DocumentType = oldType;
-                }
-
-                throw;
-            }
+            Features.GetRequired<IDocumentTypeFeature<SpreadsheetDocumentType>>().ChangeDocumentType(newType);
         }
 
         /// <summary>
@@ -708,6 +675,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-excel.addin.macroEnabled.main+xml" => SpreadsheetDocumentType.AddIn,
                 _ => default,
             };
+
+            protected override void ChangeDocumentTypeInternal() => Package.ChangeDocumentTypeInternal(static () => new WorkbookPart());
         }
     }
 }

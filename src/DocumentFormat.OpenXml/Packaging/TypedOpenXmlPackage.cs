@@ -4,6 +4,8 @@
 using DocumentFormat.OpenXml.Features;
 using System;
 using System.ComponentModel;
+using System.IO;
+using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
@@ -30,6 +32,7 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
         where TDocumentType : struct, Enum
     {
         private TDocumentType _documentType;
+        private OpenXmlPart? _mainPart;
 
         protected TypedPackageFeatureCollection(TypedOpenXmlPackage package)
             : base(package, TypedFeatures.Shared)
@@ -50,8 +53,48 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
             set => _documentType = value;
         }
 
+        OpenXmlPart? IMainPartFeature.Part => _mainPart;
+
+        void IDocumentTypeFeature<TDocumentType>.ChangeDocumentType(TDocumentType newType)
+        {
+            if (newType.Equals(_documentType))
+            {
+                // same type, just return
+                return;
+            }
+
+            if (Package.FileOpenAccess == FileAccess.Read)
+            {
+                throw new IOException(ExceptionMessages.PackageAccessModeIsReadonly);
+            }
+
+            var oldType = _documentType;
+            _documentType = newType;
+
+            if (_mainPart is null)
+            {
+                return;
+            }
+
+            try
+            {
+                ChangeDocumentTypeInternal();
+            }
+            catch (OpenXmlPackageException e)
+            {
+                if (e.Message == ExceptionMessages.CannotChangeDocumentType)
+                {
+                    _documentType = oldType;
+                }
+
+                throw;
+            }
+        }
+
         protected abstract string? GetContentType(TDocumentType type);
 
         protected abstract TDocumentType? GetType(string contentPart);
+
+        protected abstract void ChangeDocumentTypeInternal();
     }
 }
