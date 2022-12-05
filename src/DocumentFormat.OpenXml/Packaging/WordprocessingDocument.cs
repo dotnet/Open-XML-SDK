@@ -680,8 +680,8 @@ namespace DocumentFormat.OpenXml.Packaging
         public override IFeatureCollection Features => _features ??= new WordprocessingDocumentFeatures(this);
 
         private partial class WordprocessingDocumentFeatures : TypedPackageFeatureCollection<WordprocessingDocumentType, MainDocumentPart>,
-            IMainPartFeature,
-            IApplicationTypeFeature
+            IApplicationTypeFeature,
+            IMainPartFeature
         {
             public WordprocessingDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
