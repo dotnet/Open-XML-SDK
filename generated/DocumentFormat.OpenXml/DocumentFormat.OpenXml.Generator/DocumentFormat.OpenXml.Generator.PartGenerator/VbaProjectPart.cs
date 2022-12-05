@@ -40,7 +40,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the VbaDataPart of the VbaProjectPart
         /// </summary>
         public VbaDataPart? VbaDataPart => GetSubPartOfType<VbaDataPart>();
-<<<<<<< HEAD
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
@@ -51,7 +50,5 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Name => "vbaProject";
         }
     
-=======
->>>>>>> upstream/main
     }
 }

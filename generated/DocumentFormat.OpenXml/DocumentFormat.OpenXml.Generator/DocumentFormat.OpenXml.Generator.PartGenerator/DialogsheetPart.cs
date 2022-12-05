@@ -112,7 +112,6 @@ namespace DocumentFormat.OpenXml.Packaging
             InitPart(childPart, contentType);
             return childPart;
         }
-<<<<<<< HEAD
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
@@ -124,7 +123,5 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Path => "dialogsheets";
         }
     
-=======
->>>>>>> upstream/main
     }
 }

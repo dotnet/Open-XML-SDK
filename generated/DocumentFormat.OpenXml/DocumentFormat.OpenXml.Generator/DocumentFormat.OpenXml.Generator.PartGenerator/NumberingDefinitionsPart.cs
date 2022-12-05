@@ -134,7 +134,6 @@ namespace DocumentFormat.OpenXml.Packaging
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddImagePart(contentType);
         }
-<<<<<<< HEAD
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
@@ -145,7 +144,5 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Name => "numbering";
         }
     
-=======
->>>>>>> upstream/main
     }
 }

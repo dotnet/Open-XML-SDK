@@ -82,7 +82,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WordAttachedToolbarsPart of the CustomizationPart
         /// </summary>
         public WordAttachedToolbarsPart? WordAttachedToolbarsPart => GetSubPartOfType<WordAttachedToolbarsPart>();
-<<<<<<< HEAD
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
@@ -93,7 +92,5 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Name => "customizations";
         }
     
-=======
->>>>>>> upstream/main
     }
 }

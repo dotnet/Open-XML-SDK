@@ -40,7 +40,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the XmlSignatureParts of the DigitalSignatureOriginPart
         /// </summary>
         public IEnumerable<XmlSignaturePart> XmlSignatureParts => GetPartsOfType<XmlSignaturePart>();
-<<<<<<< HEAD
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
@@ -53,7 +52,5 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Path => "_xmlsignatures";
         }
     
-=======
->>>>>>> upstream/main
     }
 }

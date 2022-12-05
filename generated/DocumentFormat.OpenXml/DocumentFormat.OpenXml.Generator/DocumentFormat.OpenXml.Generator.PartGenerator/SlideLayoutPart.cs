@@ -488,7 +488,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             return AddDataPartReferenceRelationship<VideoReferenceRelationship>(mediaDataPart, id);
         }
-<<<<<<< HEAD
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
@@ -500,7 +499,5 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Path => "../slideLayouts";
         }
     
-=======
->>>>>>> upstream/main
     }
 }
