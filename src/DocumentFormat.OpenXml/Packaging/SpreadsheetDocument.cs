@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.IO.Packaging;
 using System.Reflection;
@@ -28,38 +27,6 @@ namespace DocumentFormat.OpenXml.Packaging
     public partial class SpreadsheetDocument : TypedOpenXmlPackage
     {
         /// <summary>
-        /// Gets the relationship type of the main part.
-        /// </summary>
-        internal sealed override string MainPartRelationshipType => WorkbookPart.RelationshipTypeConstant;
-
-        private static Dictionary<SpreadsheetDocumentType, string>? _validMainPartContentType;
-
-        private static Dictionary<SpreadsheetDocumentType, string> MainPartContentTypes
-        {
-            get
-            {
-                if (_validMainPartContentType is null)
-                {
-                    _validMainPartContentType = new Dictionary<SpreadsheetDocumentType, string>
-                    {
-                        { SpreadsheetDocumentType.Workbook, @"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml" },
-                        { SpreadsheetDocumentType.Template, @"application/vnd.openxmlformats-officedocument.spreadsheetml.template.main+xml" },
-                        { SpreadsheetDocumentType.MacroEnabledWorkbook, @"application/vnd.ms-excel.sheet.macroEnabled.main+xml" },
-                        { SpreadsheetDocumentType.MacroEnabledTemplate, @"application/vnd.ms-excel.template.macroEnabled.main+xml" },
-                        { SpreadsheetDocumentType.AddIn, @"application/vnd.ms-excel.addin.macroEnabled.main+xml" },
-                    };
-                }
-
-                return _validMainPartContentType;
-            }
-        }
-
-        /// <summary>
-        /// Gets the list of valid content type for main part.
-        /// </summary>
-        internal sealed override ICollection<string> ValidMainPartContentTypes => MainPartContentTypes.Values;
-
-        /// <summary>
         /// Creates a SpreadsheetDocument.
         /// </summary>
         [Obsolete(DoNotUseParameterlessConstructor)]
@@ -73,8 +40,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        private SpreadsheetDocumentType _documentType;
-
         /// <summary>
         /// Gets the type of the SpreadsheetDocument.
         /// </summary>
@@ -83,29 +48,13 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return _documentType;
+                return Features.GetRequired<IDocumentTypeFeature<SpreadsheetDocumentType>>().Type;
             }
 
             private set
             {
                 ThrowIfObjectDisposed();
-                _documentType = value;
-            }
-        }
-
-        private void UpdateDocumentTypeFromContentType()
-        {
-            if (MainPartContentType is null)
-            {
-                throw new InvalidOperationException();
-            }
-
-            foreach (KeyValuePair<SpreadsheetDocumentType, string> types in MainPartContentTypes)
-            {
-                if (types.Value == MainPartContentType)
-                {
-                    DocumentType = types.Key;
-                }
+                Features.GetRequired<IDocumentTypeFeature<SpreadsheetDocumentType>>().Type = value;
             }
         }
 
@@ -159,7 +108,6 @@ namespace DocumentFormat.OpenXml.Packaging
             => new SpreadsheetDocument(PackageLoader.CreateCore(path), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                MainPartContentType = MainPartContentTypes[type],
             };
 
         /// <summary>
@@ -175,7 +123,6 @@ namespace DocumentFormat.OpenXml.Packaging
             => new SpreadsheetDocument(PackageLoader.CreateCore(stream), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                MainPartContentType = MainPartContentTypes[type],
             };
 
         /// <summary>
@@ -191,7 +138,6 @@ namespace DocumentFormat.OpenXml.Packaging
             => new SpreadsheetDocument(PackageLoader.CreateCore(package), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                MainPartContentType = MainPartContentTypes[type],
             };
 
         /// <summary>
@@ -261,14 +207,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(path, isEditable), openSettings);
-
-            if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
-            {
-                doc.UpdateDocumentTypeFromContentType();
-            }
-
-            return doc;
+            return new SpreadsheetDocument(PackageLoader.OpenCore(path, isEditable), openSettings);
         }
 
         /// <summary>
@@ -295,14 +234,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(stream, isEditable), openSettings);
-
-            if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
-            {
-                doc.UpdateDocumentTypeFromContentType();
-            }
-
-            return doc;
+            return new SpreadsheetDocument(PackageLoader.OpenCore(stream, isEditable), openSettings);
         }
 
         /// <summary>
@@ -328,14 +260,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(package), openSettings);
-
-            if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
-            {
-                doc.UpdateDocumentTypeFromContentType();
-            }
-
-            return doc;
+            return new SpreadsheetDocument(PackageLoader.OpenCore(package), openSettings);
         }
 
         /// <summary>
@@ -386,42 +311,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public void ChangeDocumentType(SpreadsheetDocumentType newType)
         {
             ThrowIfObjectDisposed();
-
-            if (newType == DocumentType)
-            {
-                // same type, just return
-                return;
-            }
-
-            if (FileOpenAccess == FileAccess.Read)
-            {
-                throw new IOException(ExceptionMessages.PackageAccessModeIsReadonly);
-            }
-
-            SpreadsheetDocumentType oldType = DocumentType;
-
-            DocumentType = newType;
-            MainPartContentType = MainPartContentTypes[newType];
-
-            if (WorkbookPart is null)
-            {
-                return;
-            }
-
-            try
-            {
-                ChangeDocumentTypeInternal(static () => new WorkbookPart());
-            }
-            catch (OpenXmlPackageException e)
-            {
-                if (e.Message == ExceptionMessages.CannotChangeDocumentType)
-                {
-                    DocumentType = oldType;
-                    MainPartContentType = MainPartContentTypes[oldType];
-                }
-
-                throw;
-            }
+            Features.GetRequired<IDocumentTypeFeature<SpreadsheetDocumentType>>().ChangeDocumentType(newType);
         }
 
         /// <summary>
@@ -442,7 +332,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (typeof(WorkbookPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != SpreadsheetDocument.MainPartContentTypes[_documentType])
+            if (typeof(WorkbookPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != Features.GetRequired<IMainPartFeature>().ContentType)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
             }
@@ -586,16 +476,10 @@ namespace DocumentFormat.OpenXml.Packaging
             return childPart;
         }
 
-        /// <inheritdoc />
-        public override OpenXmlPart? RootPart => WorkbookPart;
-
         /// <summary>
         /// Gets the WorkbookPart of the SpreadsheetDocument.
         /// </summary>
-        public WorkbookPart? WorkbookPart
-        {
-            get { return GetSubPartOfType<WorkbookPart>(); }
-        }
+        public WorkbookPart? WorkbookPart => (WorkbookPart?)RootPart;
 
         /// <summary>
         /// Gets the CoreFilePropertiesPart of the SpreadsheetDocument.
@@ -754,13 +638,39 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new SpreadsheetDocumentFeatures(this);
 
-        private partial class SpreadsheetDocumentFeatures : TypedPackageFeatureCollection,
+        private partial class SpreadsheetDocumentFeatures :
+            TypedPackageFeatureCollection<SpreadsheetDocumentType, WorkbookPart>,
             IApplicationTypeFeature
+            IMainPartFeature
         {
             public SpreadsheetDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            protected override WorkbookPart CreateMainPart() => new();
+
+            string IMainPartFeature.RelationshipType => WorkbookPart.RelationshipTypeConstant;
+
+            protected override string? GetContentType(SpreadsheetDocumentType type) => type switch
+            {
+                SpreadsheetDocumentType.Workbook => "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml",
+                SpreadsheetDocumentType.Template => "application/vnd.openxmlformats-officedocument.spreadsheetml.template.main+xml",
+                SpreadsheetDocumentType.MacroEnabledWorkbook => "application/vnd.ms-excel.sheet.macroEnabled.main+xml",
+                SpreadsheetDocumentType.MacroEnabledTemplate => "application/vnd.ms-excel.template.macroEnabled.main+xml",
+                SpreadsheetDocumentType.AddIn => "application/vnd.ms-excel.addin.macroEnabled.main+xml",
+                _ => default,
+            };
+
+            protected override SpreadsheetDocumentType? GetType(string contentPart) => contentPart switch
+            {
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml" => SpreadsheetDocumentType.Workbook,
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.template.main+xml" => SpreadsheetDocumentType.Template,
+                "application/vnd.ms-excel.sheet.macroEnabled.main+xml" => SpreadsheetDocumentType.MacroEnabledWorkbook,
+                "application/vnd.ms-excel.template.macroEnabled.main+xml" => SpreadsheetDocumentType.MacroEnabledTemplate,
+                "application/vnd.ms-excel.addin.macroEnabled.main+xml" => SpreadsheetDocumentType.AddIn,
+                _ => default,
+            };
 
             ApplicationType IApplicationTypeFeature.Type => ApplicationType.Excel;
         }

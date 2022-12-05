@@ -5,7 +5,6 @@ using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.IO.Packaging;
 using System.Reflection;
@@ -29,37 +28,6 @@ namespace DocumentFormat.OpenXml.Packaging
     public partial class WordprocessingDocument : TypedOpenXmlPackage
     {
         /// <summary>
-        /// Gets the relationship type of the main part.
-        /// </summary>
-        internal sealed override string MainPartRelationshipType => MainDocumentPart.RelationshipTypeConstant;
-
-        private static Dictionary<WordprocessingDocumentType, string>? _validMainPartContentType;
-
-        private static Dictionary<WordprocessingDocumentType, string> MainPartContentTypes
-        {
-            get
-            {
-                if (_validMainPartContentType is null)
-                {
-                    _validMainPartContentType = new Dictionary<WordprocessingDocumentType, string>
-                    {
-                        { WordprocessingDocumentType.Document, @"application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml" },
-                        { WordprocessingDocumentType.Template, @"application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml" },
-                        { WordprocessingDocumentType.MacroEnabledDocument, @"application/vnd.ms-word.document.macroEnabled.main+xml" },
-                        { WordprocessingDocumentType.MacroEnabledTemplate, @"application/vnd.ms-word.template.macroEnabledTemplate.main+xml" },
-                    };
-                }
-
-                return _validMainPartContentType;
-            }
-        }
-
-        /// <summary>
-        /// Gets the list of valid content type for main part.
-        /// </summary>
-        internal sealed override ICollection<string> ValidMainPartContentTypes => MainPartContentTypes.Values;
-
-        /// <summary>
         /// Creates a WordprocessingDocument.
         /// </summary>
         [Obsolete(DoNotUseParameterlessConstructor)]
@@ -72,8 +40,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        private WordprocessingDocumentType _documentType;
-
         /// <summary>
         /// Gets the type of the WordprocessingDocument.
         /// </summary>
@@ -82,29 +48,13 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return _documentType;
+                return Features.GetRequired<IDocumentTypeFeature<WordprocessingDocumentType>>().Type;
             }
 
             private set
             {
                 ThrowIfObjectDisposed();
-                _documentType = value;
-            }
-        }
-
-        private void UpdateDocumentTypeFromContentType()
-        {
-            if (MainPartContentType is null)
-            {
-                throw new InvalidOperationException();
-            }
-
-            foreach (KeyValuePair<WordprocessingDocumentType, string> types in MainPartContentTypes)
-            {
-                if (types.Value == MainPartContentType)
-                {
-                    DocumentType = types.Key;
-                }
+                Features.GetRequired<IDocumentTypeFeature<WordprocessingDocumentType>>().Type = value;
             }
         }
 
@@ -158,7 +108,6 @@ namespace DocumentFormat.OpenXml.Packaging
             => new(PackageLoader.CreateCore(path), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                MainPartContentType = MainPartContentTypes[type],
             };
 
         /// <summary>
@@ -174,7 +123,6 @@ namespace DocumentFormat.OpenXml.Packaging
             => new(PackageLoader.CreateCore(stream), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                MainPartContentType = MainPartContentTypes[type],
             };
 
         /// <summary>
@@ -190,7 +138,6 @@ namespace DocumentFormat.OpenXml.Packaging
             => new(PackageLoader.CreateCore(package), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                MainPartContentType = MainPartContentTypes[type],
             };
 
         /// <summary>
@@ -328,14 +275,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new WordprocessingDocument(PackageLoader.OpenCore(path, isEditable), openSettings);
-
-            if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
-            {
-                doc.UpdateDocumentTypeFromContentType();
-            }
-
-            return doc;
+            return new WordprocessingDocument(PackageLoader.OpenCore(path, isEditable), openSettings);
         }
 
         /// <summary>
@@ -362,14 +302,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new WordprocessingDocument(PackageLoader.OpenCore(stream, isEditable), openSettings);
-
-            if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
-            {
-                doc.UpdateDocumentTypeFromContentType();
-            }
-
-            return doc;
+            return new WordprocessingDocument(PackageLoader.OpenCore(stream, isEditable), openSettings);
         }
 
         /// <summary>
@@ -395,14 +328,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new WordprocessingDocument(PackageLoader.OpenCore(package), openSettings);
-
-            if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
-            {
-                doc.UpdateDocumentTypeFromContentType();
-            }
-
-            return doc;
+            return new WordprocessingDocument(PackageLoader.OpenCore(package), openSettings);
         }
 
         /// <summary>
@@ -426,42 +352,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public void ChangeDocumentType(WordprocessingDocumentType newType)
         {
             ThrowIfObjectDisposed();
-
-            if (newType == DocumentType)
-            {
-                // same type, just return
-                return;
-            }
-
-            if (FileOpenAccess == FileAccess.Read)
-            {
-                throw new IOException(ExceptionMessages.PackageAccessModeIsReadonly);
-            }
-
-            WordprocessingDocumentType oldType = DocumentType;
-
-            DocumentType = newType;
-            MainPartContentType = MainPartContentTypes[newType];
-
-            if (MainDocumentPart is null)
-            {
-                return;
-            }
-
-            try
-            {
-                ChangeDocumentTypeInternal(static () => new MainDocumentPart());
-            }
-            catch (OpenXmlPackageException e)
-            {
-                if (e.Message == ExceptionMessages.CannotChangeDocumentType)
-                {
-                    DocumentType = oldType;
-                    MainPartContentType = MainPartContentTypes[oldType];
-                }
-
-                throw;
-            }
+            Features.GetRequired<IDocumentTypeFeature<WordprocessingDocumentType>>().ChangeDocumentType(newType);
         }
 
         /// <summary>
@@ -482,7 +373,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (typeof(MainDocumentPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != WordprocessingDocument.MainPartContentTypes[_documentType])
+            if (typeof(MainDocumentPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != Features.GetRequired<IMainPartFeature>().ContentType)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
             }
@@ -626,16 +517,10 @@ namespace DocumentFormat.OpenXml.Packaging
             return childPart;
         }
 
-        /// <inheritdoc />
-        public override OpenXmlPart? RootPart => MainDocumentPart;
-
         /// <summary>
         /// Gets the MainDocumentPart of the WordprocessingDocument.
         /// </summary>
-        public MainDocumentPart? MainDocumentPart
-        {
-            get { return GetSubPartOfType<MainDocumentPart>(); }
-        }
+        public MainDocumentPart? MainDocumentPart => (MainDocumentPart?)RootPart;
 
         /// <summary>
         /// Gets the CoreFilePropertiesPart of the WordprocessingDocument.
@@ -794,13 +679,36 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new WordprocessingDocumentFeatures(this);
 
-        private partial class WordprocessingDocumentFeatures : TypedPackageFeatureCollection,
-            IApplicationTypeFeature
+        private partial class WordprocessingDocumentFeatures :
+            TypedPackageFeatureCollection<WordprocessingDocumentType, MainDocumentPart>,
+            IMainPartFeature
         {
             public WordprocessingDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            protected override MainDocumentPart CreateMainPart() => new();
+
+            string IMainPartFeature.RelationshipType => MainDocumentPart.RelationshipTypeConstant;
+
+            protected override string? GetContentType(WordprocessingDocumentType type) => type switch
+            {
+                WordprocessingDocumentType.Document => "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml",
+                WordprocessingDocumentType.Template => "application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml",
+                WordprocessingDocumentType.MacroEnabledDocument => "application/vnd.ms-word.document.macroEnabled.main+xml",
+                WordprocessingDocumentType.MacroEnabledTemplate => "application/vnd.ms-word.template.macroEnabledTemplate.main+xml",
+                _ => default,
+            };
+
+            protected override WordprocessingDocumentType? GetType(string contentPart) => contentPart switch
+            {
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml" => WordprocessingDocumentType.Document,
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml" => WordprocessingDocumentType.Template,
+                "application/vnd.ms-word.document.macroEnabled.main+xml" => WordprocessingDocumentType.MacroEnabledDocument,
+                "application/vnd.ms-word.template.macroEnabledTemplate.main+xml" => WordprocessingDocumentType.MacroEnabledTemplate,
+                _ => default,
+            };
 
             ApplicationType IApplicationTypeFeature.Type => ApplicationType.Word;
         }
