@@ -58,8 +58,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override ApplicationType ApplicationType => ApplicationType.PowerPoint;
-
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the specified file.
         /// </summary>
@@ -638,14 +636,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new PresentationDocumentFeatures(this);
 
-        private partial class PresentationDocumentFeatures :
-            TypedPackageFeatureCollection<PresentationDocumentType, PresentationPart>,
+        private partial class PresentationDocumentFeatures : TypedPackageFeatureCollection<PresentationDocumentType, PresentationPart>,
+            IApplicationTypeFeature,
             IMainPartFeature
         {
             public PresentationDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            ApplicationType IApplicationTypeFeature.Type => ApplicationType.PowerPoint;
 
             string IMainPartFeature.RelationshipType => PresentationPart.RelationshipTypeConstant;
 

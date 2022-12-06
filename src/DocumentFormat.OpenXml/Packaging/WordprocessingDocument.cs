@@ -58,8 +58,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override ApplicationType ApplicationType => ApplicationType.Word;
-
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the specified file.
         /// </summary>
@@ -681,14 +679,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new WordprocessingDocumentFeatures(this);
 
-        private partial class WordprocessingDocumentFeatures :
-            TypedPackageFeatureCollection<WordprocessingDocumentType, MainDocumentPart>,
+        private partial class WordprocessingDocumentFeatures : TypedPackageFeatureCollection<WordprocessingDocumentType, MainDocumentPart>,
+            IApplicationTypeFeature,
             IMainPartFeature
         {
             public WordprocessingDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            ApplicationType IApplicationTypeFeature.Type => ApplicationType.Word;
 
             protected override MainDocumentPart CreateMainPart() => new();
 

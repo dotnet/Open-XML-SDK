@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -28,14 +29,16 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
-
+        
         /// <inheritdoc/>
-        internal sealed override string TargetFileExtension => ".dat";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetName => "afchunk";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => ".";
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Extension => ".dat";
+            string ITargetFeature.Name => "afchunk";
+        }
+    
     }
 }

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
@@ -87,12 +88,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             if (current.Package is not null)
             {
                 level = SemanticValidationLevel.Package;
-                type = current.Package.ApplicationType;
+                type = current.Package.Features.GetRequired<IApplicationTypeFeature>().Type;
             }
             else if (current.Part is not null)
             {
                 level = SemanticValidationLevel.Part;
-                type = current.Part.OpenXmlPackage.ApplicationType;
+                type = current.Part.Features.GetRequired<IApplicationTypeFeature>().Type;
             }
             else
             {

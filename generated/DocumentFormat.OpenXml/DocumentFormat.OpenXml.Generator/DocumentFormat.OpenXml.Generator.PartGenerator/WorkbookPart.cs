@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -193,12 +194,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<SlicerCachePart> SlicerCacheParts => GetPartsOfType<SlicerCachePart>();
 
-        /// <inheritdoc/>
-        internal sealed override string TargetName => "workbook";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => "xl";
-
         /// <summary>
         /// Gets the ThemePart of the WorkbookPart
         /// </summary>
@@ -378,5 +373,16 @@ namespace DocumentFormat.OpenXml.Packaging
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddThumbnailPart(contentType);
         }
+        
+        /// <inheritdoc/>
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Name => "workbook";
+            string ITargetFeature.Path => "xl";
+        }
+    
     }
 }

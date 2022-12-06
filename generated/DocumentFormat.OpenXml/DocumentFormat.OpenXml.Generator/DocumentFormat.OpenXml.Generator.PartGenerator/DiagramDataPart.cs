@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -89,12 +90,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<SlidePart> SlideParts => GetPartsOfType<SlidePart>();
 
-        /// <inheritdoc/>
-        internal sealed override string TargetName => "data";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => "../graphics";
-
         /// <summary>
         /// Gets the WorksheetParts of the DiagramDataPart
         /// </summary>
@@ -151,5 +146,16 @@ namespace DocumentFormat.OpenXml.Packaging
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddImagePart(contentType);
         }
+        
+        /// <inheritdoc/>
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Name => "data";
+            string ITargetFeature.Path => "../graphics";
+        }
+    
     }
 }

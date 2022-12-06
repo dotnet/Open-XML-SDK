@@ -18,6 +18,7 @@ public static class PartWriter
 
     private static readonly string[] _usings = new[]
     {
+        "DocumentFormat.OpenXml.Features",
         "DocumentFormat.OpenXml.Framework",
         "System",
         "System.Collections.Generic",
@@ -79,6 +80,21 @@ public static class PartWriter
                     member.Action(writer);
 
                     newLine = true;
+                }
+
+                writer.WriteLine();
+                writer.WriteLine();
+
+                writer.WriteLine("/// <inheritdoc/>");
+                writer.WriteLine("public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);");
+                writer.WriteLine();
+
+                writer.WriteLine("private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature");
+
+                using (writer.AddBlock())
+                {
+                    writer.WriteLine("public GeneratedFeatures(OpenXmlPart part) : base(part) { }");
+                    WriteTargetPaths(writer, type);
                 }
             }
         }
@@ -166,6 +182,77 @@ public static class PartWriter
         }
     }
 
+    private static void WriteTargetPaths(IndentedTextWriter writer, Part type)
+    {
+        if (type.Extension is not null)
+        {
+            writer.Write("string ITargetFeature.Extension => ");
+            writer.WriteString(type.Extension);
+            writer.WriteLine(";");
+        }
+
+        if (type.Target is not null)
+        {
+            writer.Write("string ITargetFeature.Name => ");
+            writer.WriteString(type.Target);
+            writer.WriteLine(";");
+        }
+
+        var types = new List<(string, string)>();
+
+        if (type.Paths.Word is { } word)
+        {
+            types.Add(("Word", word));
+        }
+
+        if (type.Paths.Excel is { } excel)
+        {
+            types.Add(("Excel", excel));
+        }
+
+        if (type.Paths.PowerPoint is { } ppt)
+        {
+            types.Add(("PowerPoint", ppt));
+        }
+
+        if (types.Count == 0)
+        {
+            if (type.Paths.General is { } general && general != ".")
+            {
+                writer.Write("string ITargetFeature.Path => ");
+                writer.WriteString(general);
+                writer.WriteLine(";");
+            }
+        }
+        else
+        {
+            writer.WriteLine("string ITargetFeature.Path => (Get<IApplicationTypeFeature>()?.Type ?? ApplicationType.None) switch");
+
+            using (writer.AddBlock(new() { IncludeSemiColon = true }))
+            {
+                foreach (var item in types)
+                {
+                    writer.Write("ApplicationType.");
+                    writer.Write(item.Item1);
+                    writer.Write(" => ");
+                    writer.WriteString(item.Item2);
+                    writer.WriteLine(",");
+                }
+
+                if (type.Paths.General is { } general)
+                {
+                    writer.Write("_ => ");
+                    writer.WriteString(general);
+                    writer.WriteLine(",");
+                }
+                else
+                {
+                    writer.Write("_ => \".\",");
+                }
+            }
+        }
+    }
+
     private static IEnumerable<Item> GetStronglyTypedProperties(Part type)
     {
         if (type.ContentType is not null)
@@ -183,72 +270,6 @@ public static class PartWriter
             {
                 writer.WriteInheritDoc();
                 writer.Write("public sealed override string RelationshipType => RelationshipTypeConstant;");
-            });
-        }
-
-        if (type.Extension is not null)
-        {
-            yield return new(ItemType.Property, "TargetFileExtension", writer =>
-            {
-                writer.WriteInheritDoc();
-                writer.Write("internal sealed override string TargetFileExtension => ");
-                writer.WriteItem(type.Extension);
-                writer.Write(";");
-            });
-        }
-
-        if (type.Name is not null)
-        {
-            yield return new(ItemType.Property, "TargetName", writer =>
-            {
-                writer.WriteInheritDoc();
-                writer.Write("internal sealed override string TargetName => ");
-                writer.WriteItem(type.Target);
-                writer.Write(";");
-            });
-        }
-
-        if (type.Paths.General is not null)
-        {
-            yield return new(ItemType.Property, "TargetPath", writer =>
-            {
-                writer.WriteInheritDoc();
-                writer.Write("internal sealed override string TargetPath => ");
-                writer.WriteItem(type.Paths.General);
-                writer.Write(";");
-            });
-        }
-
-        if (type.Paths.Excel is not null)
-        {
-            yield return new(ItemType.Property, "TargetPathOfExcel", writer =>
-            {
-                writer.WriteInheritDoc();
-                writer.Write("internal sealed override string TargetPathOfExcel => ");
-                writer.WriteItem(type.Paths.Excel);
-                writer.Write(";");
-            });
-        }
-
-        if (type.Paths.PowerPoint is not null)
-        {
-            yield return new(ItemType.Property, "TargetPathOfPPT", writer =>
-            {
-                writer.WriteInheritDoc();
-                writer.Write("internal sealed override string TargetPathOfPPT => ");
-                writer.WriteItem(type.Paths.PowerPoint);
-                writer.Write(";");
-            });
-        }
-
-        if (type.Paths.Word is not null)
-        {
-            yield return new(ItemType.Property, "TargetPathOfWord", writer =>
-            {
-                writer.WriteInheritDoc();
-                writer.Write("internal sealed override string TargetPathOfWord => ");
-                writer.WriteItem(type.Paths.Word);
-                writer.Write(";");
             });
         }
     }

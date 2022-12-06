@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -77,15 +78,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
 
-        /// <inheritdoc/>
-        internal sealed override string TargetName => "authors";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => ".";
-
         internal override bool IsInVersion(FileFormatVersions version)
         {
             return version.AtLeast(FileFormatVersions.Office2021);
         }
+        
+        /// <inheritdoc/>
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Name => "authors";
+        }
+    
     }
 }

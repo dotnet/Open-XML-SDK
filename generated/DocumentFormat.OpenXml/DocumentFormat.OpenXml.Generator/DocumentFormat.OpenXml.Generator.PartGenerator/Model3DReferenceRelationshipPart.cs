@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -35,18 +36,21 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
 
-        /// <inheritdoc/>
-        internal sealed override string TargetFileExtension => ".glb";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetName => "model3d";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => "../media";
-
         internal override bool IsInVersion(FileFormatVersions version)
         {
             return version.AtLeast(FileFormatVersions.Office2019);
         }
+        
+        /// <inheritdoc/>
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Extension => ".glb";
+            string ITargetFeature.Name => "model3d";
+            string ITargetFeature.Path => "../media";
+        }
+    
     }
 }

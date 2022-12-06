@@ -58,8 +58,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override ApplicationType ApplicationType => ApplicationType.Excel;
-
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the specified file.
         /// </summary>
@@ -640,14 +638,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new SpreadsheetDocumentFeatures(this);
 
-        private partial class SpreadsheetDocumentFeatures :
-            TypedPackageFeatureCollection<SpreadsheetDocumentType, WorkbookPart>,
+        private partial class SpreadsheetDocumentFeatures : TypedPackageFeatureCollection<SpreadsheetDocumentType, WorkbookPart>,
+            IApplicationTypeFeature,
             IMainPartFeature
         {
             public SpreadsheetDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
             {
             }
+
+            ApplicationType IApplicationTypeFeature.Type => ApplicationType.Excel;
 
             protected override WorkbookPart CreateMainPart() => new();
 
