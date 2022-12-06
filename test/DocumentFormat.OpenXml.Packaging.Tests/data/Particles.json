@@ -33358,6 +33358,44 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentReplyV2MonikerList",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2MonikerList"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentReplyV2Moniker"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2MonikerList",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList",
   "Value": [
    {
@@ -64065,6 +64103,9 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.RichDataPivotCacheGuid"
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo"

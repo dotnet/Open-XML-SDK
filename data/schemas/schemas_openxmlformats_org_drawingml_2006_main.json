@@ -12078,60 +12078,6 @@
           "Name": "xdr14:CT_ContentPart/xdr14:contentPart"
         },
         {
-          "Name": "p:CT_CommentAuthorList/p:cmAuthorLst"
-        },
-        {
-          "Name": "p:CT_CommentList/p:cmLst"
-        },
-        {
-          "Name": "p:CT_OleObject/p:oleObj"
-        },
-        {
-          "Name": "p:CT_Presentation/p:presentation"
-        },
-        {
-          "Name": "p:CT_PresentationProperties/p:presentationPr"
-        },
-        {
-          "Name": "p:CT_Slide/p:sld"
-        },
-        {
-          "Name": "p:CT_SlideLayout/p:sldLayout"
-        },
-        {
-          "Name": "p:CT_SlideMaster/p:sldMaster"
-        },
-        {
-          "Name": "p:CT_HandoutMaster/p:handoutMaster"
-        },
-        {
-          "Name": "p:CT_NotesMaster/p:notesMaster"
-        },
-        {
-          "Name": "p:CT_NotesSlide/p:notes"
-        },
-        {
-          "Name": "p:CT_SlideSyncProperties/p:sldSyncPr"
-        },
-        {
-          "Name": "p:CT_TagList/p:tagLst"
-        },
-        {
-          "Name": "p:CT_ViewProperties/p:viewPr"
-        },
-        {
-          "Name": "p:CT_ContentPart/p:contentPart"
-        },
-        {
-          "Name": "p188:CT_AuthorList/p188:authorLst"
-        },
-        {
-          "Name": "p188:CT_CommentList/p188:cmLst"
-        },
-        {
-          "Name": "p188:CT_CommentRelationship/p188:commentRel"
-        },
-        {
           "Name": "pc:CT_CommentAuthorMonikerList/pc:cmAuthorMkLst"
         },
         {
@@ -12196,6 +12142,60 @@
         },
         {
           "Name": "pc:CT_CustomXmlPartMonikerList/pc:cXmlMkLst"
+        },
+        {
+          "Name": "p:CT_CommentAuthorList/p:cmAuthorLst"
+        },
+        {
+          "Name": "p:CT_CommentList/p:cmLst"
+        },
+        {
+          "Name": "p:CT_OleObject/p:oleObj"
+        },
+        {
+          "Name": "p:CT_Presentation/p:presentation"
+        },
+        {
+          "Name": "p:CT_PresentationProperties/p:presentationPr"
+        },
+        {
+          "Name": "p:CT_Slide/p:sld"
+        },
+        {
+          "Name": "p:CT_SlideLayout/p:sldLayout"
+        },
+        {
+          "Name": "p:CT_SlideMaster/p:sldMaster"
+        },
+        {
+          "Name": "p:CT_HandoutMaster/p:handoutMaster"
+        },
+        {
+          "Name": "p:CT_NotesMaster/p:notesMaster"
+        },
+        {
+          "Name": "p:CT_NotesSlide/p:notes"
+        },
+        {
+          "Name": "p:CT_SlideSyncProperties/p:sldSyncPr"
+        },
+        {
+          "Name": "p:CT_TagList/p:tagLst"
+        },
+        {
+          "Name": "p:CT_ViewProperties/p:viewPr"
+        },
+        {
+          "Name": "p:CT_ContentPart/p:contentPart"
+        },
+        {
+          "Name": "p188:CT_AuthorList/p188:authorLst"
+        },
+        {
+          "Name": "p188:CT_CommentList/p188:cmLst"
+        },
+        {
+          "Name": "p188:CT_CommentRelationship/p188:commentRel"
         },
         {
           "Name": "p1912:CT_TaskHistoryDetails/p1912:taskHistoryDetails"

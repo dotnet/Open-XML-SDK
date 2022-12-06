@@ -13,6 +13,7 @@ using DocumentFormat.OpenXml.Drawing.Spreadsheet;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo;
 using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Office2013.Excel;
@@ -49025,6 +49026,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled" /> <c>&lt;x15:pivotCacheDecoupled></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion" /> <c>&lt;x15:pivotCacheIdVersion></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition" /> <c>&lt;x15:timelinePivotCacheDefinition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RichDataPivotCacheGuid" /> <c>&lt;x:richInfo></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean" /> <c>&lt;xxpim:implicitMeasureSupport></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo" /> <c>&lt;xxpvi:cacheVersionInfo></c></description></item>
     /// </list>
@@ -49082,6 +49084,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RichDataPivotCacheGuid>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo>();
             builder.AddElement<PivotCacheDefinitionExtension>()
@@ -49097,6 +49100,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean), 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RichDataPivotCacheGuid), 1, 1, version: FileFormatVersions.Microsoft365),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
@@ -49104,6 +49108,49 @@ namespace DocumentFormat.OpenXml.Spreadsheet
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCacheDefinitionExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the RichDataPivotCacheGuid Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:richInfo.</para>
+    /// </summary>
+    [SchemaAttr("x:richInfo")]
+    public partial class RichDataPivotCacheGuid : TypedOpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the RichDataPivotCacheGuid class.
+        /// </summary>
+        public RichDataPivotCacheGuid() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>pivotCacheGuid, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: pivotCacheGuid</para>
+        /// </summary>
+        [SchemaAttr("pivotCacheGuid")]
+        public StringValue? PivotCacheGuid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:richInfo");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.AddElement<RichDataPivotCacheGuid>()
+                .AddAttribute("pivotCacheGuid", a => a.PivotCacheGuid, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RichDataPivotCacheGuid>(deep);
     }
 
     /// <summary>

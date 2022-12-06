@@ -124,12 +124,20 @@
     "Namespace": "DocumentFormat.OpenXml.Office.MetaAttributes"
   },
   {
+    "Prefix": "pc2",
+    "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command"
+  },
+  {
     "Prefix": "p216",
     "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main"
   },
   {
     "Prefix": "xxl21",
     "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021"
+  },
+  {
+    "Prefix": "xprd",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData"
   },
   {
     "Prefix": "xxpvi",

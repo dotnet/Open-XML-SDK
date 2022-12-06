@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "pc2:CT_CommentV2Moniker/pc2:cmMK",
+    "ClassName": "CommentV2Moniker"
+  },
+  {
+    "Name": "pc2:CT_CommentV2MonikerList/pc2:cmMkLst",
+    "ClassName": "CommentV2MonikerList"
+  },
+  {
+    "Name": "pc2:CT_CommentReplyV2Moniker/pc2:cmRplyMk",
+    "ClassName": "CommentReplyV2Moniker"
+  },
+  {
+    "Name": "pc2:CT_CommentReplyV2MonikerList/pc2:cmRplyMkLst",
+    "ClassName": "CommentReplyV2MonikerList"
+  }
+]
