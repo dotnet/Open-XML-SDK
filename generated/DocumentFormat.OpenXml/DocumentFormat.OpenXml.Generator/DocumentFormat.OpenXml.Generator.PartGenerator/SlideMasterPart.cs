@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -177,12 +178,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the SlideParts of the SlideMasterPart
         /// </summary>
         public IEnumerable<SlidePart> SlideParts => GetPartsOfType<SlidePart>();
-
-        /// <inheritdoc/>
-        internal sealed override string TargetName => "slideMaster";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => "slideMasters";
 
         /// <summary>
         /// Gets the ThemePart of the SlideMasterPart
@@ -493,5 +488,16 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             return AddDataPartReferenceRelationship<VideoReferenceRelationship>(mediaDataPart, id);
         }
+        
+        /// <inheritdoc/>
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Name => "slideMaster";
+            string ITargetFeature.Path => "slideMasters";
+        }
+    
     }
 }

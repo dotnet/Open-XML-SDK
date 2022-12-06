@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -51,12 +52,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
 
-        /// <inheritdoc/>
-        internal sealed override string TargetName => "rdRichValueWebImage";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => "richData";
-
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
@@ -87,5 +82,16 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             return version.AtLeast(FileFormatVersions.Office2021);
         }
+        
+        /// <inheritdoc/>
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Name => "rdRichValueWebImage";
+            string ITargetFeature.Path => "richData";
+        }
+    
     }
 }

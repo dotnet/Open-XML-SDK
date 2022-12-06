@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using System;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -32,15 +33,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public override string RelationshipType { get; }
-
-        /// <inheritdoc/>
-        internal override string TargetFileExtension => ".dat";
-
-        /// <inheritdoc/>
-        internal override string TargetPath => "udata";
-
-        /// <inheritdoc/>
-        internal override string TargetName => "data";
 
         /// <summary>
         /// Whether this part is available in a specific version of Office Application.
@@ -114,6 +106,23 @@ namespace DocumentFormat.OpenXml.Packaging
             var relationshipId = AttachChild(newPart, id);
 
             ChildrenRelationshipParts.Add(relationshipId, newPart);
+        }
+
+        /// <inheritdoc/>
+        public override IFeatureCollection Features => _features ??= new ExtendPartFeatures(this);
+
+        private sealed class ExtendPartFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public ExtendPartFeatures(OpenXmlPart part)
+                : base(part)
+            {
+            }
+
+            string ITargetFeature.Extension => ".dat";
+
+            string ITargetFeature.Path => "udata";
+
+            string ITargetFeature.Name => "data";
         }
     }
 }

@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -170,12 +171,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the SlidePart of the NotesSlidePart
         /// </summary>
         public SlidePart? SlidePart => GetSubPartOfType<SlidePart>();
-
-        /// <inheritdoc/>
-        internal sealed override string TargetName => "notesSlide";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => "../notesSlides";
 
         /// <summary>
         /// Gets the ThemeOverridePart of the NotesSlidePart
@@ -413,5 +408,16 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             return AddDataPartReferenceRelationship<VideoReferenceRelationship>(mediaDataPart, id);
         }
+        
+        /// <inheritdoc/>
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Name => "notesSlide";
+            string ITargetFeature.Path => "../notesSlides";
+        }
+    
     }
 }

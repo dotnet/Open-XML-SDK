@@ -15,4 +15,4 @@ public abstract partial class TypedOpenXmlPart : OpenXmlPart
     private protected TypedOpenXmlPart()
     {
     }
- }
+}

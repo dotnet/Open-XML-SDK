@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -228,12 +229,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the StylesWithEffectsPart of the GlossaryDocumentPart
         /// </summary>
         public StylesWithEffectsPart? StylesWithEffectsPart => GetSubPartOfType<StylesWithEffectsPart>();
-
-        /// <inheritdoc/>
-        internal sealed override string TargetName => "document";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => "glossary";
 
         /// <summary>
         /// Gets the VbaProjectPart of the GlossaryDocumentPart
@@ -475,5 +470,16 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             return AddDataPartReferenceRelationship<VideoReferenceRelationship>(mediaDataPart, id);
         }
+        
+        /// <inheritdoc/>
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Name => "document";
+            string ITargetFeature.Path => "glossary";
+        }
+    
     }
 }

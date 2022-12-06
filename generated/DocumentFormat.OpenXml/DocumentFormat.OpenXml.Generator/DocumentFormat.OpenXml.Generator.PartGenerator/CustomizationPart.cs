@@ -5,6 +5,7 @@
 
 #nullable enable
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -51,12 +52,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
 
-        /// <inheritdoc/>
-        internal sealed override string TargetName => "customizations";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => ".";
-
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
@@ -87,5 +82,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WordAttachedToolbarsPart of the CustomizationPart
         /// </summary>
         public WordAttachedToolbarsPart? WordAttachedToolbarsPart => GetSubPartOfType<WordAttachedToolbarsPart>();
+        
+        /// <inheritdoc/>
+        public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
+        
+        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        {
+            public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Name => "customizations";
+        }
+    
     }
 }
