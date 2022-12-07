@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             // load recursively
             var relationshipCollection = new PackagePartRelationshipPropertyCollection(PackagePart, Features.GetNamespaceResolver());
-            LoadReferencedPartsAndRelationships(openXmlPackage, this, relationshipCollection, loadedParts);
+            LoadReferencedPartsAndRelationships(_openXmlPackage, this, relationshipCollection, loadedParts);
         }
 
         // cannot use generic, at it will emit error
