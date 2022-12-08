@@ -24,7 +24,6 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         private OpenXmlPackage? _openXmlPackage;
         private PackagePart? _packagePart;
-        private Uri? _uri;
         private bool _isLoading;
 
         /// <summary>
@@ -34,8 +33,6 @@ namespace DocumentFormat.OpenXml.Packaging
             : base()
         {
         }
-
-        #region methods for LoadPart(), NewPart( ), AddPartFrom( )
 
         internal void Load(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, Uri uriTarget, string id, Dictionary<Uri, OpenXmlPart> loadedParts)
         {
@@ -49,30 +46,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            if (openXmlPackage is null && parent is null)
-            {
-                throw new ArgumentNullException(ExceptionMessages.PackageRelatedArgumentNullException);
-            }
-
-            if (parent is not null && openXmlPackage is not null &&
-                parent.OpenXmlPackage != openXmlPackage)
-            {
-                throw new ArgumentOutOfRangeException(nameof(parent));
-            }
-
-            if (parent is not null && openXmlPackage is null)
-            {
-                openXmlPackage = parent.OpenXmlPackage;
-            }
-
-            _openXmlPackage = openXmlPackage ?? throw new ArgumentNullException(nameof(openXmlPackage));
+            SetPackage(openXmlPackage, parent);
 
             Debug.Assert(loadedParts.ContainsKey(uriTarget));
 
-            _uri = uriTarget;
-
             // TODO: should we delay load?
-            var part = openXmlPackage.Package.GetPart(uriTarget);
+            var part = _openXmlPackage.Package.GetPart(uriTarget);
 
             _packagePart = part;
 
@@ -92,7 +71,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             // load recursively
             var relationshipCollection = new PackagePartRelationshipPropertyCollection(PackagePart, Features.GetNamespaceResolver());
-            LoadReferencedPartsAndRelationships(openXmlPackage, this, relationshipCollection, loadedParts);
+            LoadReferencedPartsAndRelationships(_openXmlPackage, this, relationshipCollection, loadedParts);
         }
 
         // cannot use generic, at it will emit error
@@ -120,7 +99,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 OpenXmlPart child = CreateOpenXmlPart(relationshipType);
 
-                child.CreateInternal(OpenXmlPackage, this, contentType, null);
+                child.CreateInternal(OpenXmlPackage, this, contentType, (string?)null);
 
                 // add it and get the id
                 string relationshipId = AttachChild(child);
@@ -133,41 +112,58 @@ namespace DocumentFormat.OpenXml.Packaging
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
-        // create a new part in this package
         internal void CreateInternal(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, string contentType, string? targetExt)
         {
-            // openXmlPackage, parent can not be all null
-            if (openXmlPackage is null && parent is null)
-            {
-                throw new ArgumentNullException(ExceptionMessages.PackageRelatedArgumentNullException);
-            }
+            SetPackage(openXmlPackage, parent);
 
-            if (parent is not null && openXmlPackage is not null && parent.OpenXmlPackage != openXmlPackage)
-            {
-                throw new ArgumentOutOfRangeException(nameof(parent));
-            }
+            Uri parentUri = parent is not null ? parent.Uri : new Uri("/", UriKind.Relative);
 
-            if (parent is not null && openXmlPackage is null)
-            {
-                openXmlPackage = parent.OpenXmlPackage;
-            }
+            var targets = GetAndVerifyTargetFeature(_openXmlPackage, contentType, targetExt);
+            var uri = Features.GetRequired<IPartUriFeature>().CreatePartUri(contentType, parentUri, targets.Path, targets.Name, targets.Extension);
 
+            CreatePart(_openXmlPackage, uri, contentType);
+        }
+
+        internal void CreateInternal(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, string contentType, Uri partUri)
+        {
+            SetPackage(openXmlPackage, parent);
+
+            var parentUri = parent is not null ? parent.Uri : new Uri("/", UriKind.Relative);
+            var uri = _openXmlPackage.Features.GetRequired<IPartUriFeature>().EnsureUniquePartUri(contentType, parentUri, partUri);
+
+            CreatePart(_openXmlPackage, uri, contentType);
+        }
+
+        [MemberNotNull(nameof(_packagePart))]
+        private void CreatePart(OpenXmlPackage package, Uri uri, string contentType)
+        {
+            _packagePart = package.CreateMetroPart(uri, contentType);
+        }
+
+        [MemberNotNull(nameof(_openXmlPackage))]
+        private void SetPackage(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent)
+        {
             // throw exception to catch error in our code
             if (_packagePart is not null)
             {
                 throw new InvalidOperationException();
             }
 
+            if (openXmlPackage is null && parent is null)
+            {
+                throw new ArgumentNullException(ExceptionMessages.PackageRelatedArgumentNullException);
+            }
+            else if (parent is not null && openXmlPackage is not null && parent.OpenXmlPackage != openXmlPackage)
+            {
+                throw new ArgumentOutOfRangeException(nameof(parent));
+            }
+            else if (parent is not null && openXmlPackage is null)
+            {
+                openXmlPackage = parent.OpenXmlPackage;
+            }
+
             // set the _openXmlPackage so ThrowIfObjectDisposed( ) do not throw.
             _openXmlPackage = openXmlPackage ?? throw new InvalidOperationException();
-
-            Uri parentUri = parent is not null ? parent.Uri : new Uri("/", UriKind.Relative);
-
-            var targets = GetAndVerifyTargetFeature(openXmlPackage, contentType, targetExt);
-
-            _uri = Features.GetRequired<IPartUriFeature>().CreatePartUri(contentType, parentUri, targets.Path, targets.Name, targets.Extension);
-
-            _packagePart = _openXmlPackage.CreateMetroPart(_uri, contentType);
         }
 
         private ITargetFeature GetAndVerifyTargetFeature(OpenXmlPackage openXmlPackage, string contentType, string? targetExt)
@@ -211,41 +207,6 @@ namespace DocumentFormat.OpenXml.Packaging
             public string Extension { get; }
         }
 
-        // create a new part in this package
-        internal void CreateInternal2(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, string contentType, Uri partUri)
-        {
-            // openXmlPackage, parent can not be all null
-            if (openXmlPackage is null && parent is null)
-            {
-                throw new ArgumentNullException(ExceptionMessages.PackageRelatedArgumentNullException);
-            }
-            else if (parent is not null && openXmlPackage is not null && parent.OpenXmlPackage != openXmlPackage)
-            {
-                throw new ArgumentOutOfRangeException(nameof(parent));
-            }
-            else if (parent is not null && openXmlPackage is null)
-            {
-                openXmlPackage = parent.OpenXmlPackage;
-            }
-
-            // throw exception to catch error in our code
-            if (_packagePart is not null)
-            {
-                throw new InvalidOperationException();
-            }
-
-            // set the _openXmlPackage so ThrowIfObjectDisposed( ) do not throw.
-            _openXmlPackage = openXmlPackage ?? throw new InvalidOperationException();
-
-            Uri parentUri = parent is not null ? parent.Uri : new Uri("/", UriKind.Relative);
-
-            _uri = openXmlPackage.Features.GetRequired<IPartUriFeature>().EnsureUniquePartUri(contentType, parentUri, partUri);
-
-            _packagePart = openXmlPackage.CreateMetroPart(_uri, contentType);
-        }
-
-        #endregion
-
         #region public properties
 
         /// <summary>
@@ -263,17 +224,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the internal part path in the package.
         /// </summary>
-        public Uri Uri
-        {
-            get
-            {
-                ThrowIfObjectDisposed();
-
-                Debug.Assert(_uri.OriginalString.Equals(_packagePart.Uri.OriginalString, StringComparison.OrdinalIgnoreCase));
-
-                return _uri;
-            }
-        }
+        public Uri Uri => PackagePart.Uri;
 
         #endregion
 
@@ -690,7 +641,6 @@ namespace DocumentFormat.OpenXml.Packaging
             ReferenceRelationshipList.Clear();
             _openXmlPackage = null;
             _packagePart = null;
-            _uri = null;
 
             // this._ownerPart = null;
             if (InternalRootElement is not null)
@@ -709,10 +659,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         [MemberNotNull(nameof(_openXmlPackage))]
         [MemberNotNull(nameof(_packagePart))]
-        [MemberNotNull(nameof(_uri))]
         protected sealed override void ThrowIfObjectDisposed()
         {
-            if (_openXmlPackage is null || _packagePart is null || _uri is null)
+            if (_openXmlPackage is null || _packagePart is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.PartIsDestroyed);
             }

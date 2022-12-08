@@ -664,7 +664,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     mainPart.Destroy();
 
                     // do not call this.InitPart( ).  copy the code here
-                    newMainPart.CreateInternal2(this, null, MainPartContentType, uri);
+                    newMainPart.CreateInternal(this, null, MainPartContentType, uri);
 
                     // add it and get the id
                     string relationshipId = AttachChild(newMainPart, id);
@@ -748,7 +748,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 OpenXmlPart child = CreateOpenXmlPart(relationshipType);
 
-                child.CreateInternal(this, null, contentType, null);
+                child.CreateInternal(this, null, contentType, targetExt: null);
 
                 // add it and get the id
                 string relationshipId = AttachChild(child);

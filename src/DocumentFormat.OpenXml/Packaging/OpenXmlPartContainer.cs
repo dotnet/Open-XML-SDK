@@ -1226,7 +1226,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     throw new ArgumentOutOfRangeException(nameof(newPart));
                 }
 
-                newPart.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, contentType, null);
+                newPart.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, contentType, targetExt: null);
 
                 var relationshipId = AttachChild(newPart, id);
 
@@ -1426,7 +1426,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 child = CreateOpenXmlPart(part.RelationshipType);
 
                 // try to keep the same name
-                child.CreateInternal2(InternalOpenXmlPackage, ThisOpenXmlPart, part.ContentType, part.Uri);
+                child.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, part.ContentType, part.Uri);
 
                 // if (keepIdAndUri)
                 // {
