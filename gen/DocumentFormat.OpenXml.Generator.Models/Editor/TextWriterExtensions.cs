@@ -129,7 +129,9 @@ public static class TextWriterExtensions
 
     public static void WriteNull(this TextWriter writer) => writer.Write("null");
 
-    public static void WriteString(this TextWriter writer, string input, bool isConstant = false)
+    public static void WriteBool(this TextWriter writer, bool value) => writer.Write(value ? "true" : "false");
+
+    public static void WriteString(this TextWriter writer, string? input, bool isConstant = false)
     {
         if (input is null)
         {

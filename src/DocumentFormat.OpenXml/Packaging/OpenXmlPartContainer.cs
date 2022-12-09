@@ -1209,7 +1209,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException);
             }
 
-            if (this.GetPartMetadata().PartConstraints.TryGetValue(newPart.RelationshipType, out var partConstraintRule))
+            if (Features.GetRequired<IPartConstraintFeature>().TryGetRule(newPart.RelationshipType, out var partConstraintRule))
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
@@ -1288,18 +1288,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            if (!this.GetPartMetadata().PartConstraints.TryGetValue(subPart.RelationshipType, out var partConstraintRule))
-            {
-                if (subPart is ExtendedPart)
-                {
-                    return AddSubPart(subPart, rId);
-                }
-                else
-                {
-                    throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
-                }
-            }
-            else
+            if (Features.GetRequired<IPartConstraintFeature>().TryGetRule(subPart.RelationshipType, out var partConstraintRule))
             {
                 if (partConstraintRule.PartContentType is not null && subPart.ContentType != partConstraintRule.PartContentType)
                 {
@@ -1322,6 +1311,17 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
 
                     return SetSubPart(subPart, rId);
+                }
+            }
+            else
+            {
+                if (subPart is ExtendedPart)
+                {
+                    return AddSubPart(subPart, rId);
+                }
+                else
+                {
+                    throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
                 }
             }
         }

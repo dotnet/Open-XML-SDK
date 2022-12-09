@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.ComponentModel;
 using System.IO;
@@ -27,7 +28,8 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
     private protected abstract partial class TypedPackageFeatureCollection<TDocumentType, TMainPart> :
         PackageFeatureCollection,
         IMainPartFeature,
-        IDocumentTypeFeature<TDocumentType>
+        IDocumentTypeFeature<TDocumentType>,
+        IKnownDataPartFeature
         where TDocumentType : struct, Enum
         where TMainPart : OpenXmlPart
     {
@@ -38,7 +40,7 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
         {
         }
 
-        string IMainPartFeature.RelationshipType => string.Empty;
+        string IMainPartFeature.RelationshipType => RelationshipType;
 
         string IMainPartFeature.ContentType
         {
@@ -92,10 +94,14 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
             }
         }
 
+        protected abstract string RelationshipType { get; }
+
         protected abstract string? GetContentType(TDocumentType type);
 
         protected abstract TDocumentType? GetType(string contentPart);
 
         protected abstract TMainPart CreateMainPart();
+
+        bool IKnownDataPartFeature.IsKnown(string relationshipId) => false;
     }
 }

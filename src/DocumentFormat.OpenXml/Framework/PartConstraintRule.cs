@@ -7,36 +7,41 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal readonly struct PartConstraintRule
     {
-        private readonly PartTypeInfo _info;
-
         public PartConstraintRule(
-            PartTypeInfo info,
+            string relationship,
+            string name,
+            string? contentType,
             bool minOccursIsNonZero,
-            bool maxOccursGreatThanOne)
+            bool maxOccursGreatThanOne,
+            FileFormatVersions version)
         {
-            _info = info;
-
+            RelationshipType = relationship;
+#pragma warning disable CS0618 // Type or member is obsolete
+            PartClassName = name;
+#pragma warning restore CS0618 // Type or member is obsolete
+            PartContentType = contentType;
             MinOccursIsNonZero = minOccursIsNonZero;
             MaxOccursGreatThanOne = maxOccursGreatThanOne;
+            FileFormat = version;
         }
 
         /// <summary>
         /// Gets the relationship type.
         /// </summary>
-        public string RelationshipType => _info.RelationshipType;
+        public string RelationshipType { get; }
 
         /// <summary>
         /// Gets the class name for the relationship type.
         /// </summary>
         [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
-        public string PartClassName => _info.PartClassName;
+        public string PartClassName { get; }
 
         /// <summary>
         /// Gets the content type of the part. Some types with fixed content types have
         /// same relationship type but different content type.
         /// </summary>
         /// <remarks>This value is null for non-fixed content type.</remarks>
-        public string? PartContentType => _info.PartContentType;
+        public string? PartContentType { get; }
 
         /// <summary>
         /// Gets a value indicating whether the min occurs > 0, (i.e. is required).
@@ -51,6 +56,6 @@ namespace DocumentFormat.OpenXml.Framework
         /// <summary>
         /// Gets the file format version information.
         /// </summary>
-        public FileFormatVersions FileFormat => _info.Availability;
+        public FileFormatVersions FileFormat { get; }
     }
 }

@@ -15,8 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the EmbeddedControlPersistencePart
     /// </summary>
-    [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(EmbeddedControlPersistenceBinaryDataPart), false, true)]
     public partial class EmbeddedControlPersistencePart : TypedOpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control";
@@ -91,12 +89,18 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
         
-        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        private sealed class GeneratedFeatures : TypedPartFeatureCollection, ITargetFeature, IPartConstraintFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
             string ITargetFeature.Extension => ".bin";
             string ITargetFeature.Name => "control";
             string ITargetFeature.Path => "embeddings";
+            private static readonly PartConstraints _partConstraints = new ()
+            {
+                { "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", "EmbeddedControlPersistenceBinaryDataPart", null, false, true, FileFormatVersions.Office2007 },
+            };
+            bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
+            IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;
         }
     
     }
