@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Framework;
 using System;
 using System.ComponentModel;
 using System.IO;
+using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
@@ -20,7 +21,7 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
     {
     }
 
-    private protected TypedOpenXmlPackage(in PackageLoader package, OpenSettings settings)
+    private protected TypedOpenXmlPackage(Package package, OpenSettings settings)
         : base(package, settings)
     {
     }

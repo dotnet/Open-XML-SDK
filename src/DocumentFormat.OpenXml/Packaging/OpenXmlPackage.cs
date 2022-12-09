@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -23,13 +24,12 @@ namespace DocumentFormat.OpenXml.Packaging
         private readonly PartExtensionProvider _partExtensionProvider = new PartExtensionProvider();
         private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
 
-        private bool _disposed;
-        private Package _package;
+        private Package? _package;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class.
         /// </summary>
-        [Obsolete(DoNotUseParameterlessConstructor)]
+        [Obsolete(DoNotUseParameterlessConstructor, error: true)]
         protected OpenXmlPackage()
             : base()
         {
@@ -37,17 +37,35 @@ namespace DocumentFormat.OpenXml.Packaging
             OpenSettings = null!;
         }
 
-        private protected OpenXmlPackage(in PackageLoader loader, OpenSettings settings)
+        /// <summary>
+        /// Create an <see cref="OpenXmlPackage"/>.
+        /// </summary>
+        /// <param name="package">Underlying package.</param>
+        /// <param name="settings">Settings to use</param>
+        private protected OpenXmlPackage(Package package, OpenSettings? settings = null)
             : base()
         {
-            OpenSettings = new OpenSettings(settings);
-
-            _package = loader.Package;
-
-            if (loader.IsOpen)
+            if (package is null)
             {
-                Load(_package);
+                throw new ArgumentNullException(nameof(package));
             }
+
+            if (package.FileOpenAccess == FileAccess.Write)
+            {
+                throw new OpenXmlPackageException(ExceptionMessages.PackageMustCanBeRead);
+            }
+
+            if (settings is not null &&
+                settings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
+                !settings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
+            {
+                throw new ArgumentException(ExceptionMessages.InvalidMCMode);
+            }
+
+            OpenSettings = new OpenSettings(settings);
+            _package = package;
+
+            Load(package);
         }
 
         /// <summary>
@@ -62,9 +80,15 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             try
             {
+                var relationshipCollection = new PackageRelationshipPropertyCollection(package, Features.GetNamespaceResolver());
+
+                if (relationshipCollection.Count == 0)
+                {
+                    return;
+                }
+
                 var loadedParts = new Dictionary<Uri, OpenXmlPart>();
                 var hasMainPart = false;
-                var relationshipCollection = new PackageRelationshipPropertyCollection(package, Features.GetNamespaceResolver());
 
                 // relationCollection.StrictRelationshipFound is true when this collection contains Transitional relationships converted from Strict.
                 StrictRelationshipFound = relationshipCollection.StrictRelationshipFound;
@@ -143,19 +167,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the FileAccess setting for the document.
         /// The current I/O access settings are: Read, Write, or ReadWrite.
         /// </summary>
-        public FileAccess FileOpenAccess => _package.FileOpenAccess;
+        public FileAccess FileOpenAccess => Package.FileOpenAccess;
 
         /// <summary>
         /// Gets the core package properties of the Open XML document.
         /// </summary>
-        public PackageProperties PackageProperties
-        {
-            get
-            {
-                ThrowIfObjectDisposed();
-                return Package.PackageProperties;
-            }
-        }
+        public PackageProperties PackageProperties => Package.PackageProperties;
 
         /// <summary>
         /// Gets or sets the compression level for the content of the new part
@@ -412,9 +429,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Thrown if an object is disposed.
         /// </summary>
+        [MemberNotNull(nameof(_package))]
         protected override void ThrowIfObjectDisposed()
         {
-            if (_disposed)
+            if (_package is null)
             {
                 throw new ObjectDisposedException(GetType().Name);
             }
@@ -426,7 +444,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="disposing">Specify true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
         {
-            if (_disposed)
+            if (_package is null)
             {
                 return;
             }
@@ -438,19 +456,17 @@ namespace DocumentFormat.OpenXml.Packaging
                 closing?.OnChange(this, EventType.Closing);
 
                 // Try to save contents of every part in the package
-                SavePartContents(AutoSave);
+                SavePartContents(AutoSave, _package);
                 DeleteUnusedDataPartOnClose();
 
-                // TODO: Close resources
-                _package.Close();
-                _package = null!;
                 ChildrenRelationshipParts.Clear();
                 ReferenceRelationshipList.Clear();
 
                 closing?.OnChange(this, EventType.Closed);
-            }
 
-            _disposed = true;
+                _package.Close();
+                _package = null;
+            }
         }
 
         /// <summary>
@@ -513,7 +529,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public bool AutoSave => OpenSettings.AutoSave;
 
-        private void SavePartContents(bool save)
+        private void SavePartContents(bool save, Package package)
         {
             bool isAnyPartChanged;
 
@@ -557,7 +573,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     // For Package: Invoking UpdateRelationshipTypesInPackage() changes the relationship types in the package.
                     // We need to new PackageRelationshipPropertyCollection to read through the package contents right here
                     // because some operation may have updated the package before we get here.
-                    relationshipCollection = new PackageRelationshipPropertyCollection(_package, Features.GetNamespaceResolver());
+                    relationshipCollection = new PackageRelationshipPropertyCollection(package, Features.GetNamespaceResolver());
                     relationshipCollection.UpdateRelationshipTypesInPackage();
                 }
             }
@@ -911,7 +927,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 lock (_saveAndCloneLock)
                 {
-                    SavePartContents(true);
+                    SavePartContents(true, _package);
                     Package.Flush();
                 }
             }
