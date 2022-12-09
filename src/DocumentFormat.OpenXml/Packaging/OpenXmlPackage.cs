@@ -456,7 +456,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 closing?.OnChange(this, EventType.Closing);
 
                 // Try to save contents of every part in the package
-                SavePartContents(AutoSave);
+                SavePartContents(AutoSave, _package);
                 DeleteUnusedDataPartOnClose();
 
                 // TODO: Close resources
@@ -529,7 +529,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public bool AutoSave => OpenSettings.AutoSave;
 
-        private void SavePartContents(bool save)
+        private void SavePartContents(bool save, Package package)
         {
             bool isAnyPartChanged;
 
@@ -573,7 +573,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     // For Package: Invoking UpdateRelationshipTypesInPackage() changes the relationship types in the package.
                     // We need to new PackageRelationshipPropertyCollection to read through the package contents right here
                     // because some operation may have updated the package before we get here.
-                    relationshipCollection = new PackageRelationshipPropertyCollection(_package, Features.GetNamespaceResolver());
+                    relationshipCollection = new PackageRelationshipPropertyCollection(package, Features.GetNamespaceResolver());
                     relationshipCollection.UpdateRelationshipTypesInPackage();
                 }
             }
@@ -927,7 +927,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 lock (_saveAndCloneLock)
                 {
-                    SavePartContents(true);
+                    SavePartContents(true, _package);
                     Package.Flush();
                 }
             }
