@@ -15,9 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the VbaProjectPart
     /// </summary>
-    [ContentType(ContentTypeConstant)]
-    [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(VbaDataPart), false, false)]
     public partial class VbaProjectPart : TypedOpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.vbaProject";
@@ -44,10 +41,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
         
-        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        private sealed class GeneratedFeatures : TypedPartFeatureCollection, ITargetFeature, IPartConstraintFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
             string ITargetFeature.Name => "vbaProject";
+            private static readonly PartConstraints _partConstraints = new ()
+            {
+                { "http://schemas.microsoft.com/office/2006/relationships/wordVbaData", "VbaDataPart", "application/vnd.ms-word.vbaData+xml", false, false, FileFormatVersions.Office2007 },
+            };
+            bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
+            IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;
         }
     
     }

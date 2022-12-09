@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.Threading;
 
@@ -30,7 +29,6 @@ internal partial class TypedFeatures : IFeatureCollection
     public int Revision => 0;
 
     [KnownFeature(typeof(IRootElementFactory), typeof(TypedRootElementFactory))]
-    [KnownFeature(typeof(IPartMetadataFeature), typeof(CachedPartMetadataProvider))]
     [KnownFeature(typeof(IOpenXmlNamespaceResolver), typeof(OpenXmlNamespaceResolver))]
     [KnownFeature(typeof(ITypedPartFactoryFeature), typeof(TypedPartFactory))]
     [DelegatedFeature(nameof(FeatureCollection.Default), typeof(FeatureCollection))]

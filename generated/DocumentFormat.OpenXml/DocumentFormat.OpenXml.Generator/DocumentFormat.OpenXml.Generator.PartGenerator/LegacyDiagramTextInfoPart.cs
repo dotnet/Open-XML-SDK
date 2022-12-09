@@ -15,8 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the LegacyDiagramTextInfoPart
     /// </summary>
-    [ContentType(ContentTypeConstant)]
-    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class LegacyDiagramTextInfoPart : TypedOpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.legacyDocTextInfo";
@@ -38,7 +36,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
         
-        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        private sealed class GeneratedFeatures : TypedPartFeatureCollection, ITargetFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
             string ITargetFeature.Extension => ".bin";

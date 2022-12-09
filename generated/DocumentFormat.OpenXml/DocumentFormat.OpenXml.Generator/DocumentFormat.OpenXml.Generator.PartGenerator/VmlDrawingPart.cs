@@ -15,10 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the VmlDrawingPart
     /// </summary>
-    [ContentType(ContentTypeConstant)]
-    [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(ImagePart), false, true)]
-    [PartConstraint(typeof(LegacyDiagramTextPart), false, true)]
     public partial class VmlDrawingPart : TypedOpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.vmlDrawing";
@@ -102,12 +98,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
         
-        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        private sealed class GeneratedFeatures : TypedPartFeatureCollection, ITargetFeature, IPartConstraintFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
             string ITargetFeature.Extension => ".vml";
             string ITargetFeature.Name => "vmldrawing";
             string ITargetFeature.Path => "../drawings";
+            private static readonly PartConstraints _partConstraints = new ()
+            {
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", "ImagePart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText", "LegacyDiagramTextPart", "application/vnd.ms-office.legacyDiagramText", false, true, FileFormatVersions.Office2007 },
+            };
+            bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
+            IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;
         }
     
     }

@@ -15,18 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DrawingsPart
     /// </summary>
-    [ContentType(ContentTypeConstant)]
-    [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(ChartPart), false, true)]
-    [PartConstraint(typeof(ExtendedChartPart), false, true)]
-    [PartConstraint(typeof(DiagramColorsPart), false, true)]
-    [PartConstraint(typeof(DiagramDataPart), false, true)]
-    [PartConstraint(typeof(DiagramPersistLayoutPart), false, true)]
-    [PartConstraint(typeof(DiagramLayoutDefinitionPart), false, true)]
-    [PartConstraint(typeof(DiagramStylePart), false, true)]
-    [PartConstraint(typeof(ImagePart), false, true)]
-    [PartConstraint(typeof(CustomXmlPart), false, true)]
-    [PartConstraint(typeof(WebExtensionPart), false, true)]
     public partial class DrawingsPart : TypedOpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawing+xml";
@@ -244,11 +232,26 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
         
-        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        private sealed class GeneratedFeatures : TypedPartFeatureCollection, ITargetFeature, IPartConstraintFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
             string ITargetFeature.Name => "drawing";
             string ITargetFeature.Path => "../drawings";
+            private static readonly PartConstraints _partConstraints = new ()
+            {
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", "ChartPart", "application/vnd.openxmlformats-officedocument.drawingml.chart+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2014/relationships/chartEx", "ExtendedChartPart", "application/vnd.ms-office.chartex+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", "DiagramColorsPart", "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", "DiagramDataPart", "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", "DiagramPersistLayoutPart", "application/vnd.ms-office.drawingml.diagramDrawing+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", "DiagramLayoutDefinitionPart", "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", "DiagramStylePart", "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", "ImagePart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", "CustomXmlPart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2011/relationships/webextension", "WebExtensionPart", "application/vnd.ms-office.webextension+xml", false, true, FileFormatVersions.Office2013 },
+            };
+            bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
+            IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;
         }
     
     }

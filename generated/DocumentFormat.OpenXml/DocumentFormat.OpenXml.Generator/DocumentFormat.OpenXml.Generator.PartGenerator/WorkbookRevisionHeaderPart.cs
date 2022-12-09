@@ -15,9 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorkbookRevisionHeaderPart
     /// </summary>
-    [ContentType(ContentTypeConstant)]
-    [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(WorkbookRevisionLogPart), false, true)]
     public partial class WorkbookRevisionHeaderPart : TypedOpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionHeaders+xml";
@@ -86,11 +83,17 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
         
-        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        private sealed class GeneratedFeatures : TypedPartFeatureCollection, ITargetFeature, IPartConstraintFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
             string ITargetFeature.Name => "revisionHeaders";
             string ITargetFeature.Path => "revisions";
+            private static readonly PartConstraints _partConstraints = new ()
+            {
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionLog", "WorkbookRevisionLogPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionLog+xml", false, true, FileFormatVersions.Office2007 },
+            };
+            bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
+            IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;
         }
     
     }

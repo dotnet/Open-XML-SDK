@@ -15,29 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorksheetPart
     /// </summary>
-    [ContentType(ContentTypeConstant)]
-    [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(SpreadsheetPrinterSettingsPart), false, true)]
-    [PartConstraint(typeof(DrawingsPart), false, false)]
-    [PartConstraint(typeof(VmlDrawingPart), false, true)]
-    [PartConstraint(typeof(WorksheetCommentsPart), false, false)]
-    [PartConstraint(typeof(PivotTablePart), false, true)]
-    [PartConstraint(typeof(SingleCellTablePart), false, false)]
-    [PartConstraint(typeof(TableDefinitionPart), false, true)]
-    [PartConstraint(typeof(EmbeddedControlPersistencePart), false, true)]
-    [PartConstraint(typeof(ControlPropertiesPart), false, true)]
-    [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
-    [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
-    [PartConstraint(typeof(ImagePart), false, true)]
-    [PartConstraint(typeof(CustomPropertyPart), false, true)]
-    [PartConstraint(typeof(WorksheetSortMapPart), false, false)]
-    [PartConstraint(typeof(QueryTablePart), false, true)]
-    [PartConstraint(typeof(EmbeddedControlPersistenceBinaryDataPart), false, true)]
-    [PartConstraint(typeof(SlicersPart), false, true)]
-    [PartConstraint(typeof(TimeLinePart), false, true)]
-    [PartConstraint(typeof(WorksheetThreadedCommentsPart), false, true)]
-    [PartConstraint(typeof(Model3DReferenceRelationshipPart), false, true)]
-    [PartConstraint(typeof(NamedSheetViewsPart), false, true)]
     public partial class WorksheetPart : TypedOpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml";
@@ -438,11 +415,37 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
         
-        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        private sealed class GeneratedFeatures : TypedPartFeatureCollection, ITargetFeature, IPartConstraintFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
             string ITargetFeature.Name => "sheet";
             string ITargetFeature.Path => "worksheets";
+            private static readonly PartConstraints _partConstraints = new ()
+            {
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", "SpreadsheetPrinterSettingsPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing", "DrawingsPart", "application/vnd.openxmlformats-officedocument.drawing+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", "VmlDrawingPart", "application/vnd.openxmlformats-officedocument.vmlDrawing", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", "WorksheetCommentsPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable", "PivotTablePart", "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotTable+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells", "SingleCellTablePart", "application/vnd.openxmlformats-officedocument.spreadsheetml.tableSingleCells+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table", "TableDefinitionPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.table+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", "EmbeddedControlPersistencePart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp", "ControlPropertiesPart", "application/vnd.ms-excel.controlproperties+xml", false, true, FileFormatVersions.Office2010 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", "EmbeddedObjectPart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", "EmbeddedPackagePart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", "ImagePart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty", "CustomPropertyPart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/wsSortMap", "WorksheetSortMapPart", "application/vnd.ms-excel.wsSortMap+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable", "QueryTablePart", "application/vnd.openxmlformats-officedocument.spreadsheetml.queryTable+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", "EmbeddedControlPersistenceBinaryDataPart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2007/relationships/slicer", "SlicersPart", "application/vnd.ms-excel.slicer+xml", false, true, FileFormatVersions.Office2010 },
+                { "http://schemas.microsoft.com/office/2011/relationships/timeline", "TimeLinePart", "application/vnd.ms-excel.timeline+xml", false, true, FileFormatVersions.Office2013 },
+                { "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment", "WorksheetThreadedCommentsPart", "application/vnd.ms-excel.threadedcomments+xml", false, true, FileFormatVersions.Office2019 },
+                { "http://schemas.microsoft.com/office/2017/06/relationships/model3d", "Model3DReferenceRelationshipPart", "model/gltf-binary", false, true, FileFormatVersions.Office2019 },
+                { "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView", "NamedSheetViewsPart", "application/vnd.ms-excel.namedsheetviews+xml", false, true, FileFormatVersions.Office2021 },
+            };
+            bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
+            IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;
         }
     
     }

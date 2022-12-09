@@ -14,6 +14,7 @@ public class OpenXmlGeneratorServices
     private readonly Dictionary<TypedQName, StronglyTypedElement> _lookup;
     private readonly Dictionary<(QName Type, string), StronglyTypedElement> _partLookup;
     private readonly Dictionary<QName, (SchemaEnum, string)> _enums;
+    private readonly Dictionary<string, Part> _parts;
     private readonly Dictionary<TypedQName, SchemaType> _types;
 
     public OpenXmlGeneratorServices(OpenXmlGeneratorContext context)
@@ -35,9 +36,13 @@ public class OpenXmlGeneratorServices
         _enums = context.Namespaces
             .SelectMany(d => d.Enums.Select(e => (e, GetNamespaceApi(d.TargetNamespace))))
             .ToDictionary(e => e.e.Type);
+        _parts = context.Parts
+            .ToDictionary(p => p.Name);
 
         Context = context;
     }
+
+    public Part GetPart(string name) => _parts[name];
 
     public bool TryGetEnum(QName qname, out SchemaEnum @enum, out string ns)
     {

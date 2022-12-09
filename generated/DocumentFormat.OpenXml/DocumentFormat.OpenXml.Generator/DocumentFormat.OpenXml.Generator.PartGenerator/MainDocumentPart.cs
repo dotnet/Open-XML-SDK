@@ -15,44 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the MainDocumentPart
     /// </summary>
-    [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(CustomXmlPart), false, true)]
-    [PartConstraint(typeof(GlossaryDocumentPart), false, false)]
-    [PartConstraint(typeof(ThemePart), false, false)]
-    [PartConstraint(typeof(ThumbnailPart), false, false)]
-    [PartConstraint(typeof(WordprocessingCommentsPart), false, false)]
-    [PartConstraint(typeof(DocumentSettingsPart), false, false)]
-    [PartConstraint(typeof(EndnotesPart), false, false)]
-    [PartConstraint(typeof(FontTablePart), false, false)]
-    [PartConstraint(typeof(FootnotesPart), false, false)]
-    [PartConstraint(typeof(NumberingDefinitionsPart), false, false)]
-    [PartConstraint(typeof(StyleDefinitionsPart), false, false)]
-    [PartConstraint(typeof(StylesWithEffectsPart), false, false)]
-    [PartConstraint(typeof(WebSettingsPart), false, false)]
-    [PartConstraint(typeof(FooterPart), false, true)]
-    [PartConstraint(typeof(HeaderPart), false, true)]
-    [PartConstraint(typeof(WordprocessingPrinterSettingsPart), false, true)]
-    [PartConstraint(typeof(CustomizationPart), false, false)]
-    [PartConstraint(typeof(VbaProjectPart), false, false)]
-    [PartConstraint(typeof(WordprocessingCommentsExPart), false, false)]
-    [PartConstraint(typeof(WordprocessingPeoplePart), false, false)]
-    [PartConstraint(typeof(WordprocessingCommentsIdsPart), false, false)]
-    [PartConstraint(typeof(DocumentTasksPart), false, false)]
-    [PartConstraint(typeof(WordCommentsExtensiblePart), false, false)]
-    [PartConstraint(typeof(AlternativeFormatImportPart), false, true)]
-    [PartConstraint(typeof(ChartPart), false, true)]
-    [PartConstraint(typeof(ExtendedChartPart), false, true)]
-    [PartConstraint(typeof(DiagramColorsPart), false, true)]
-    [PartConstraint(typeof(DiagramDataPart), false, true)]
-    [PartConstraint(typeof(DiagramPersistLayoutPart), false, true)]
-    [PartConstraint(typeof(DiagramLayoutDefinitionPart), false, true)]
-    [PartConstraint(typeof(DiagramStylePart), false, true)]
-    [PartConstraint(typeof(EmbeddedControlPersistencePart), false, true)]
-    [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
-    [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
-    [PartConstraint(typeof(ImagePart), false, true)]
-    [PartConstraint(typeof(Model3DReferenceRelationshipPart), false, true)]
-    [DataPartConstraint(typeof(VideoReferenceRelationship), false, true)]
     public partial class MainDocumentPart : TypedOpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
@@ -597,11 +559,53 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
         
-        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        private sealed class GeneratedFeatures : TypedPartFeatureCollection, ITargetFeature, IPartConstraintFeature, IKnownDataPartFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
             string ITargetFeature.Name => "document";
             string ITargetFeature.Path => "word";
+            private static readonly PartConstraints _partConstraints = new ()
+            {
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", "CustomXmlPart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/glossaryDocument", "GlossaryDocumentPart", "application/vnd.openxmlformats-officedocument.wordprocessingml.document.glossary+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", "ThemePart", "application/vnd.openxmlformats-officedocument.theme+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", "ThumbnailPart", null, false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments", "WordprocessingCommentsPart", "application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings", "DocumentSettingsPart", "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes", "EndnotesPart", "application/vnd.openxmlformats-officedocument.wordprocessingml.endnotes+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable", "FontTablePart", "application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes", "FootnotesPart", "application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering", "NumberingDefinitionsPart", "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles", "StyleDefinitionsPart", "application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2007/relationships/stylesWithEffects", "StylesWithEffectsPart", "application/vnd.ms-word.stylesWithEffects+xml", false, false, FileFormatVersions.Office2010 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings", "WebSettingsPart", "application/vnd.openxmlformats-officedocument.wordprocessingml.webSettings+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer", "FooterPart", "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header", "HeaderPart", "application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings", "WordprocessingPrinterSettingsPart", "application/vnd.openxmlformats-officedocument.wordprocessingml.printerSettings", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations", "CustomizationPart", "application/vnd.ms-word.keyMapCustomizations+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/vbaProject", "VbaProjectPart", "application/vnd.ms-office.vbaProject", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2011/relationships/commentsExtended", "WordprocessingCommentsExPart", "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtended+xml", false, false, FileFormatVersions.Office2013 },
+                { "http://schemas.microsoft.com/office/2011/relationships/people", "WordprocessingPeoplePart", "application/vnd.openxmlformats-officedocument.wordprocessingml.people+xml", false, false, FileFormatVersions.Office2013 },
+                { "http://schemas.microsoft.com/office/2016/09/relationships/commentsIds", "WordprocessingCommentsIdsPart", "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsIds+xml", false, false, FileFormatVersions.Office2019 },
+                { "http://schemas.microsoft.com/office/2019/05/relationships/documenttasks", "DocumentTasksPart", "application/vnd.ms-office.documenttasks+xml", false, false, FileFormatVersions.Office2021 },
+                { "http://schemas.microsoft.com/office/2018/08/relationships/commentsExtensible", "WordCommentsExtensiblePart", "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible+xml", false, false, FileFormatVersions.Office2021 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", "AlternativeFormatImportPart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", "ChartPart", "application/vnd.openxmlformats-officedocument.drawingml.chart+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2014/relationships/chartEx", "ExtendedChartPart", "application/vnd.ms-office.chartex+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", "DiagramColorsPart", "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", "DiagramDataPart", "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", "DiagramPersistLayoutPart", "application/vnd.ms-office.drawingml.diagramDrawing+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", "DiagramLayoutDefinitionPart", "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", "DiagramStylePart", "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", "EmbeddedControlPersistencePart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", "EmbeddedObjectPart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", "EmbeddedPackagePart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", "ImagePart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2017/06/relationships/model3d", "Model3DReferenceRelationshipPart", "model/gltf-binary", false, true, FileFormatVersions.Office2019 },
+            };
+            bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
+            IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;
+            bool IKnownDataPartFeature.IsKnown(string relationshipId) => relationshipId is VideoReferenceRelationship.RelationshipTypeConst;
         }
     
     }

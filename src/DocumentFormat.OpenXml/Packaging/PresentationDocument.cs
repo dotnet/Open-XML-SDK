@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Framework;
 using System;
 using System.IO;
 using System.IO.Packaging;
@@ -13,17 +12,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines PresentationDocument - an OpenXmlPackage represents a Presentation document
     /// </summary>
-    [PartConstraint(typeof(PresentationPart), true, false)]
-    [PartConstraint(typeof(CoreFilePropertiesPart), false, false)]
-    [PartConstraint(typeof(ExtendedFilePropertiesPart), false, false)]
-    [PartConstraint(typeof(CustomFilePropertiesPart), false, false)]
-    [PartConstraint(typeof(ThumbnailPart), false, false)]
-    [PartConstraint(typeof(DigitalSignatureOriginPart), false, false)]
-    [PartConstraint(typeof(QuickAccessToolbarCustomizationsPart), false, false)]
-    [PartConstraint(typeof(RibbonExtensibilityPart), false, false)]
-    [PartConstraint(typeof(RibbonAndBackstageCustomizationsPart), false, false)]
-    [PartConstraint(typeof(WebExTaskpanesPart), false, false)]
-    [PartConstraint(typeof(LabelInfoPart), false, false)]
     public partial class PresentationDocument : TypedOpenXmlPackage
     {
         /// <summary>
@@ -647,7 +635,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             ApplicationType IApplicationTypeFeature.Type => ApplicationType.PowerPoint;
 
-            string IMainPartFeature.RelationshipType => PresentationPart.RelationshipTypeConstant;
+            protected override string RelationshipType => PresentationPart.RelationshipTypeConstant;
 
             protected override PresentationPart CreateMainPart() => new();
 

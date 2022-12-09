@@ -77,6 +77,8 @@ namespace DocumentFormat.OpenXml.Validation
         /// <param name="processedParts">Parts already processed.</param>
         private IEnumerable<OpenXmlPackageValidationEventArgs> ValidateInternal(OpenXmlPartContainer container, FileFormatVersions version, Dictionary<OpenXmlPart, bool> processedParts)
         {
+            var containerConstraints = container.Features.GetRequired<IPartConstraintFeature>();
+
             foreach (var result in ValidateDataPartReferenceRelationships(container, version))
             {
                 yield return result;
@@ -96,9 +98,7 @@ namespace DocumentFormat.OpenXml.Validation
                     partOccurs.Add(part.RelationshipType, 1);
                 }
 
-                if (!(container is ExtendedPart) &&
-                    !container.GetPartMetadata().PartConstraints.ContainsRelationship(part.RelationshipType) &&
-                    part.IsInVersion(version))
+                if (container is not ExtendedPart && !containerConstraints.TryGetRule(part.RelationshipType, out _) && part.IsInVersion(version))
                 {
                     yield return new OpenXmlPackageValidationEventArgs(container)
                     {
@@ -112,11 +112,8 @@ namespace DocumentFormat.OpenXml.Validation
                 // if the part is not defined in this version, then should not report error, just treat it as ExtendedPart.
             }
 
-            foreach (var constraintRulePair in container.GetPartMetadata().PartConstraints)
+            foreach (var constraintRule in containerConstraints.Rules)
             {
-                var relatinshipType = constraintRulePair.Key;
-                var constraintRule = constraintRulePair.Value;
-
                 // validate the required parts
                 if (constraintRule.MinOccursIsNonZero
 
@@ -124,7 +121,7 @@ namespace DocumentFormat.OpenXml.Validation
                     && version.AtLeast(constraintRule.FileFormat))
                 {
                     // must have one
-                    if (container.GetSubPart(relatinshipType) is null)
+                    if (container.GetSubPart(constraintRule.RelationshipType) is null)
                     {
                         yield return new OpenXmlPackageValidationEventArgs(container)
                         {
@@ -141,7 +138,7 @@ namespace DocumentFormat.OpenXml.Validation
                     // only check rules apply to the specified version.
                     && version.AtLeast(constraintRule.FileFormat))
                 {
-                    if (partOccurs.TryGetValue(relatinshipType, out int occurs))
+                    if (partOccurs.TryGetValue(constraintRule.RelationshipType, out int occurs))
                     {
                         if (occurs > 1)
                         {
@@ -151,7 +148,7 @@ namespace DocumentFormat.OpenXml.Validation
                                 PartClassName = constraintRule.PartClassName,
                                 Part = container.ThisOpenXmlPart,
 #if DEBUG
-                                SubPart = container.GetSubPart(relatinshipType),
+                                SubPart = container.GetSubPart(constraintRule.RelationshipType),
 #endif
                             };
                         }
@@ -163,9 +160,9 @@ namespace DocumentFormat.OpenXml.Validation
             {
                 if (!processedParts.ContainsKey(part))
                 {
-                    if (!(part is ExtendedPart))
+                    if (part is not ExtendedPart)
                     {
-                        if (container.GetPartMetadata().PartConstraints.TryGetValue(part.RelationshipType, out var rule))
+                        if (containerConstraints.TryGetRule(part.RelationshipType, out var rule))
                         {
                             if (version.AtLeast(rule.FileFormat))
                             {
@@ -216,11 +213,13 @@ namespace DocumentFormat.OpenXml.Validation
 
         private static IEnumerable<OpenXmlPackageValidationEventArgs> ValidateDataPartReferenceRelationships(OpenXmlPartContainer container, FileFormatVersions version)
         {
+            var knownDataParts = container.Features.GetRequired<IKnownDataPartFeature>();
+
             // At current, only media / audio / video reference. There are all [0, unbounded].
             // So just check whether the reference is allowed.
             foreach (var dataPartReference in container.DataPartReferenceRelationships)
             {
-                if (!container.GetPartMetadata().DataPartReferenceConstraints.TryGetValue(dataPartReference.RelationshipType, out var constraintRule))
+                if (!knownDataParts.IsKnown(dataPartReference.RelationshipType))
                 {
                     yield return new OpenXmlPackageValidationEventArgs(container)
                     {

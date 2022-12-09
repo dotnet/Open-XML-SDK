@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines CustomUiPart. The CustomUiPart served as the base class of RibbonExtensibilityPart and QuickAccessToolbarCustomizationsPart.
     /// </summary>
-    public abstract partial class CustomUIPart : OpenXmlPart
+    public abstract partial class CustomUIPart : TypedOpenXmlPart
     {
         [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
         private Office.CustomUI.CustomUI? _rootEle;
