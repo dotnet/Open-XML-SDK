@@ -13,7 +13,6 @@ internal partial class TypedFeatures
 {
     private global::DocumentFormat.OpenXml.Features.IRootElementFactory? _TypedRootElementFactory;
     private global::DocumentFormat.OpenXml.Features.IOpenXmlNamespaceResolver? _OpenXmlNamespaceResolver;
-    private global::DocumentFormat.OpenXml.Features.ITypedPartFactoryFeature? _TypedPartFactory;
 
     public partial T? Get<T>()
     {
@@ -35,16 +34,6 @@ internal partial class TypedFeatures
             }
 
             return (T)_OpenXmlNamespaceResolver;
-        }
-
-        if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.ITypedPartFactoryFeature))
-        {
-            if (_TypedPartFactory is null)
-            {
-                Interlocked.CompareExchange(ref _TypedPartFactory, new TypedPartFactory(), null);
-            }
-
-            return (T)_TypedPartFactory;
         }
 
         if (global::DocumentFormat.OpenXml.Features.FeatureCollection.Default is global::DocumentFormat.OpenXml.Features.IFeatureCollection other1 && other1.Get<T>() is T result1)
