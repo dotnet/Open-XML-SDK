@@ -20,8 +20,13 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        internal OpenSettings(OpenSettings other)
+        internal OpenSettings(OpenSettings? other)
         {
+            if (other is null)
+            {
+                return;
+            }
+
             AutoSave = other.AutoSave;
             MarkupCompatibilityProcessSettings.ProcessMode = other.MarkupCompatibilityProcessSettings.ProcessMode;
             MarkupCompatibilityProcessSettings.TargetFileFormatVersions = other.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
