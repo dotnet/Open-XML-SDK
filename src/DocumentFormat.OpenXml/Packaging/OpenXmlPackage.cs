@@ -459,13 +459,13 @@ namespace DocumentFormat.OpenXml.Packaging
                 SavePartContents(AutoSave, _package);
                 DeleteUnusedDataPartOnClose();
 
-                // TODO: Close resources
-                _package.Close();
-                _package = null!;
                 ChildrenRelationshipParts.Clear();
                 ReferenceRelationshipList.Clear();
 
                 closing?.OnChange(this, EventType.Closed);
+
+                _package.Close();
+                _package = null;
             }
         }
 
