@@ -64,7 +64,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="partStream">The part stream.</param>
         /// <returns></returns>
-        public static OpenXmlReader Create(Stream partStream) => new OpenXmlPartReader(partStream);
+        [Obsolete(TypedOpenXmlPartReader.ObsoleteMessage, error: true)]
+        public static OpenXmlReader Create(Stream partStream) => new TypedOpenXmlPartReader(partStream, default);
 
         /// <summary>
         /// Creates an OpenXmlReader from the specified part stream and Boolean values.
@@ -72,7 +73,8 @@ namespace DocumentFormat.OpenXml
         /// <param name="partStream">The part stream.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         /// <returns></returns>
-        public static OpenXmlReader Create(Stream partStream, bool readMiscNodes) => new OpenXmlPartReader(partStream, readMiscNodes);
+        [Obsolete(TypedOpenXmlPartReader.ObsoleteMessage, error: true)]
+        public static OpenXmlReader Create(Stream partStream, bool readMiscNodes) => new TypedOpenXmlPartReader(partStream, new() { ReadMiscellaneousNodes = readMiscNodes });
 
         /// <summary>
         /// Creates an OpenXmlReader from the specified part stream and Boolean values.
@@ -81,7 +83,8 @@ namespace DocumentFormat.OpenXml
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space. The default value is true.</param>
         /// <returns></returns>
-        public static OpenXmlReader Create(Stream partStream, bool readMiscNodes, bool ignoreWhitespace) => new OpenXmlPartReader(partStream, readMiscNodes, ignoreWhitespace);
+        [Obsolete(TypedOpenXmlPartReader.ObsoleteMessage, error: true)]
+        public static OpenXmlReader Create(Stream partStream, bool readMiscNodes, bool ignoreWhitespace) => new TypedOpenXmlPartReader(partStream, new() { ReadMiscellaneousNodes = readMiscNodes, IgnoreWhitespace = ignoreWhitespace });
 
         /// <summary>
         /// Creates an OpenXmlReader from the OpenXmlElement (travel the DOM tree).

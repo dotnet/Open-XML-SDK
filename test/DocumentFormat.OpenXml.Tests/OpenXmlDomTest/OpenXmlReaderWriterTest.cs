@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private ConstrReader partConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
-            y = OpenXmlReader.Create(x.MainDocumentPart.GetStream(), true);
+            y = OpenXmlReader.Create(x.MainDocumentPart, true);
             z = XmlReader.Create(x.MainDocumentPart.GetStream());
         };
 
