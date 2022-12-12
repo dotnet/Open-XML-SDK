@@ -14,6 +14,11 @@ namespace DocumentFormat.OpenXml.Features
 
         public FeatureContainer(int initialCapacity = 2)
         {
+            if (initialCapacity < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(initialCapacity));
+            }
+
             _initialCapacity = initialCapacity;
             _features = null;
             _containerRevision = 0;

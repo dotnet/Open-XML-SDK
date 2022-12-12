@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -116,34 +117,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="outerXml">The outer XML of the element.</param>
         /// <returns>A new OpenXmlUnknownElement class.</returns>
+        [Obsolete("Use extension method CreateUnknownElement off of a part container", error: true)]
         public static OpenXmlUnknownElement CreateOpenXmlUnknownElement(string outerXml)
-        {
-            if (string.IsNullOrEmpty(outerXml))
-            {
-                throw new ArgumentNullException(nameof(outerXml));
-            }
-
-            TextReader stringReader = new StringReader(outerXml);
-            using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, FeatureCollection.TypedOrDefault.GetNamespaceResolver(), OpenXmlElementContext.CreateDefaultXmlReaderSettings()))
-            {
-                // Skip the leading whitespace as OpenXmUnknownlElement ignores the Whitespace NodeType.
-                do
-                {
-                    if (xmlReader.Read() && xmlReader.NodeType == XmlNodeType.Element)
-                    {
-                        return new OpenXmlUnknownElement(xmlReader.Prefix, xmlReader.LocalName, xmlReader.NamespaceURI)
-                        {
-                            OuterXml = outerXml,
-                        };
-                    }
-                }
-                while (xmlReader.NodeType == XmlNodeType.Whitespace);
-
-                // This method always expects an Element NodeType is passed, and there may be one or more preceding Whitespace NodeTypes before the Element.
-                // If it's not the case, then throw an exception.
-                throw new ArgumentException(ExceptionMessages.InvalidOuterXml, nameof(outerXml));
-            }
-        }
+            => OpenXmlUnknownElementExtensions.CreateOpenXmlUnknownElement(FeatureCollection.TypedOrDefault, outerXml);
 
         /// <inheritdoc/>
         public override string LocalName => _tagName;
