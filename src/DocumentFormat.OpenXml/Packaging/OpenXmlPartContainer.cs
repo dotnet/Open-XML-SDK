@@ -1550,16 +1550,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Attaches the child to the package (create the relationship)
         /// </summary>
         /// <param name="part">The part to be attached.</param>
-        /// <returns>The relationship ID.</returns>
-        internal string AttachChild(OpenXmlPart part)
-        {
-            return AttachChild(part, null);
-        }
-
-        /// <summary>
-        /// Attaches the child to the package (create the relationship)
-        /// </summary>
-        /// <param name="part">The part to be attached.</param>
         /// <param name="rId">The desired relationship ID.</param>
         /// <returns>The relationship ID.</returns>
         internal string AttachChild(OpenXmlPart part, string? rId)
@@ -1895,8 +1885,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Test whether the object is already disposed.
         /// </summary>
         protected abstract void ThrowIfObjectDisposed();
-
-        internal abstract OpenXmlPart NewPart(string relationshipType, string contentType);
 
         internal abstract void DeleteRelationship(string id);
 
