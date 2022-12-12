@@ -2387,7 +2387,7 @@ namespace DocumentFormat.OpenXml
             {
                 var result = Features.Get<IOpenXmlNamespaceResolver>()?.LookupPrefix(AlternateContent.MarkupCompatibilityNamespace);
 
-                return string.IsNullOrEmpty(result) ? "mc" : result;
+                return result.IsNullOrEmpty() ? "mc" : result!;
             }
         }
 
