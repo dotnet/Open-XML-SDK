@@ -74,44 +74,6 @@ namespace DocumentFormat.OpenXml.Packaging
             LoadReferencedPartsAndRelationships(_openXmlPackage, this, relationshipCollection, loadedParts);
         }
 
-        // cannot use generic, at it will emit error
-        // Compiler Error CS0310
-        // The type 'typename' must have a public parameterless constructor in order to use it as parameter 'parameter' in the generic type or method 'generic'
-        internal sealed override OpenXmlPart NewPart(string relationshipType, string contentType)
-        {
-            ThrowIfObjectDisposed();
-
-            if (contentType is null)
-            {
-                throw new ArgumentNullException(nameof(contentType));
-            }
-
-            if (Features.GetRequired<IPartConstraintFeature>().TryGetRule(relationshipType, out var partConstraintRule))
-            {
-                if (!partConstraintRule.MaxOccursGreatThanOne)
-                {
-                    if (GetSubPart(relationshipType) is not null)
-                    {
-                        // already have one, can not add new one.
-                        throw new InvalidOperationException(ExceptionMessages.OnlyOnePartAllowed);
-                    }
-                }
-
-                OpenXmlPart child = CreateOpenXmlPart(relationshipType);
-
-                child.CreateInternal(OpenXmlPackage, this, contentType, (string?)null);
-
-                // add it and get the id
-                string relationshipId = AttachChild(child);
-
-                ChildrenRelationshipParts.Add(relationshipId, child);
-
-                return child;
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
-        }
-
         internal void CreateInternal(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, string contentType, string? targetExt)
         {
             SetPackage(openXmlPackage, parent);
