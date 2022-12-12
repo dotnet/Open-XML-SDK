@@ -856,7 +856,7 @@ namespace DocumentFormat.OpenXml.Tests
                 memStream.Flush();
                 memStream.Seek(0, SeekOrigin.Begin);
 
-                using (var reader = new OpenXmlPartReader(memStream))
+                using (var reader = new TypedOpenXmlPartReader(memStream))
                 {
                     // <w:document>
                     reader.Read();

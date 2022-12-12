@@ -354,7 +354,7 @@ namespace DocumentFormat.OpenXml.Tests
             Stream stream = new MemoryStream(utf8Encoding.GetBytes(partText), false);
 
             // ======== new test with a new reader ========
-            OpenXmlReader reader = OpenXmlReader.Create(stream, true); // read misc nodes
+            OpenXmlReader reader = new TypedOpenXmlPartReader(stream, new() { ReadMiscellaneousNodes = true }); // read misc nodes
             Assert.False(reader.EOF);
 
             bool moved = reader.Read();
@@ -401,7 +401,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             using var stream = new MemoryStream(Encoding.UTF8.GetBytes(PartText), false);
 
-            using var reader = OpenXmlReader.Create(stream, false, ignoreWhitespace);
+            using var reader = new TypedOpenXmlPartReader(stream, new() { ReadMiscellaneousNodes = false, IgnoreWhitespace = ignoreWhitespace });
             Assert.False(reader.EOF);
 
             reader.Read();
@@ -444,7 +444,7 @@ namespace DocumentFormat.OpenXml.Tests
     </w:document>";
 
             using var stream = new MemoryStream(Encoding.UTF8.GetBytes(PartText), false);
-            using var reader = OpenXmlReader.Create(stream, false, ignoreWhitespace);
+            using var reader = new TypedOpenXmlPartReader(stream, new() { ReadMiscellaneousNodes = false, IgnoreWhitespace = ignoreWhitespace });
             Assert.True(reader.Read());
             Assert.False(reader.EOF);
             Assert.Equal(typeof(Document), reader.ElementType);
@@ -499,7 +499,7 @@ namespace DocumentFormat.OpenXml.Tests
     </w:document> ";
 
             using var stream = new MemoryStream(Encoding.UTF8.GetBytes(PartText), false);
-            using var reader = OpenXmlReader.Create(stream, false, ignoreWhitespace);
+            using var reader = new TypedOpenXmlPartReader(stream, new() { ReadMiscellaneousNodes = false, IgnoreWhitespace = ignoreWhitespace });
             Assert.True(reader.Read());
             Assert.False(reader.EOF);
             Assert.Equal(typeof(Document), reader.ElementType);
@@ -540,7 +540,7 @@ namespace DocumentFormat.OpenXml.Tests
     </w:document> <!--Your comment-->";
 
             using var stream = new MemoryStream(Encoding.UTF8.GetBytes(PartText), true);
-            using var reader = OpenXmlReader.Create(stream);
+            using var reader = new TypedOpenXmlPartReader(stream);
             Assert.True(reader.Read());
             Assert.False(reader.EOF);
             Assert.Equal(typeof(Document), reader.ElementType);
@@ -584,7 +584,7 @@ namespace DocumentFormat.OpenXml.Tests
             UTF8Encoding utf8Encoding = new UTF8Encoding();
             Stream stream = new MemoryStream(utf8Encoding.GetBytes(partText), false);
 
-            OpenXmlReader targetReader = OpenXmlReader.Create(stream);
+            OpenXmlReader targetReader = new TypedOpenXmlPartReader(stream);
             targetReader.Read();
 
             Assert.False(targetReader.EOF);

@@ -3,7 +3,6 @@
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
@@ -40,18 +39,28 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="openXmlPart">The OpenXmlPart to read.</param>
         public OpenXmlPartReader(OpenXmlPart openXmlPart)
-            : base()
+            : this(openXmlPart, options: default)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OpenXmlPartReader"/> class.
+        /// </summary>
+        /// <param name="openXmlPart">The <see cref="OpenXmlPart"/> ro read.</param>
+        /// <param name="options">Options on how to read the part.</param>
+        public OpenXmlPartReader(OpenXmlPart openXmlPart, OpenXmlPartReaderOptions options)
+            : this(GetPartStream(openXmlPart), openXmlPart.Features, options.UpdateForPart(openXmlPart))
+        {
+        }
+
+        private static Stream GetPartStream(OpenXmlPart? openXmlPart)
         {
             if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            var features = openXmlPart.Features;
-
-            _resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
-            _factory = features.GetRequired<IRootElementFactory>();
-            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: true, out _standalone, out _encoding);
+            return openXmlPart.GetStream(FileMode.Open);
         }
 
         /// <summary>
@@ -60,18 +69,8 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlPart">The OpenXmlPart to read.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         public OpenXmlPartReader(OpenXmlPart openXmlPart, bool readMiscNodes)
-            : base(readMiscNodes)
+            : this(openXmlPart, new OpenXmlPartReaderOptions() { ReadMiscellaneousNodes = readMiscNodes })
         {
-            if (openXmlPart is null)
-            {
-                throw new ArgumentNullException(nameof(openXmlPart));
-            }
-
-            var features = openXmlPart.Features;
-
-            _resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
-            _factory = features.GetRequired<IRootElementFactory>();
-            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: true, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -81,35 +80,18 @@ namespace DocumentFormat.OpenXml
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes.</param>
         /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space.</param>
         public OpenXmlPartReader(OpenXmlPart openXmlPart, bool readMiscNodes, bool ignoreWhitespace)
-            : base(readMiscNodes)
+            : this(openXmlPart, new OpenXmlPartReaderOptions { ReadMiscellaneousNodes = readMiscNodes, IgnoreWhitespace = ignoreWhitespace })
         {
-            if (openXmlPart is null)
-            {
-                throw new ArgumentNullException(nameof(openXmlPart));
-            }
-
-            var features = openXmlPart.Features;
-
-            _resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
-            _factory = features.GetRequired<IRootElementFactory>();
-            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace, out _standalone, out _encoding);
         }
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartReader class using the supplied stream.
         /// </summary>
         /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
+        [Obsolete(TypedOpenXmlPartReader.ObsoleteMessage, error: true)]
         public OpenXmlPartReader(Stream partStream)
-            : base()
+            : this(partStream, TypedFeatures.Shared, default)
         {
-            if (partStream is null)
-            {
-                throw new ArgumentNullException(nameof(partStream));
-            }
-
-            _resolver = GetDefaultResolver();
-            _factory = GetDefaultFactory();
-            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace: true, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -117,17 +99,10 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
+        [Obsolete(TypedOpenXmlPartReader.ObsoleteMessage, error: true)]
         public OpenXmlPartReader(Stream partStream, bool readMiscNodes)
-            : base(readMiscNodes)
+            : this(partStream, TypedFeatures.Shared, new() { IgnoreWhitespace = true, ReadMiscellaneousNodes = readMiscNodes })
         {
-            if (partStream is null)
-            {
-                throw new ArgumentNullException(nameof(partStream));
-            }
-
-            _resolver = GetDefaultResolver();
-            _factory = GetDefaultFactory();
-            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace: true, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -136,22 +111,30 @@ namespace DocumentFormat.OpenXml
         /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes.</param>
         /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space.</param>
+        [Obsolete(TypedOpenXmlPartReader.ObsoleteMessage, error: true)]
         public OpenXmlPartReader(Stream partStream, bool readMiscNodes, bool ignoreWhitespace)
-            : base(readMiscNodes)
+            : this(partStream, TypedFeatures.Shared, new() { IgnoreWhitespace = ignoreWhitespace, ReadMiscellaneousNodes = readMiscNodes })
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OpenXmlPartReader"/> class.
+        /// </summary>
+        /// <param name="partStream">The stream for the part data.</param>
+        /// <param name="features">A feature collection used to identify what parts and elements to create.</param>
+        /// <param name="options">Options for how to read the <paramref name="partStream"/>.</param>
+        public OpenXmlPartReader(Stream partStream, IFeatureCollection features, OpenXmlPartReaderOptions options)
+            : base(options.ReadMiscellaneousNodes)
         {
             if (partStream is null)
             {
                 throw new ArgumentNullException(nameof(partStream));
             }
 
-            _resolver = GetDefaultResolver();
-            _factory = GetDefaultFactory();
-            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace, out _standalone, out _encoding);
+            _resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
+            _factory = features.GetRequired<IRootElementFactory>();
+            _xmlReader = CreateReader(partStream, options.CloseStream, options.MaxCharactersInPart, ignoreWhitespace: options.IgnoreWhitespace, out _standalone, out _encoding);
         }
-
-        private static IRootElementFactory GetDefaultFactory() => FeatureCollection.TypedOrDefault.GetRequired<IRootElementFactory>();
-
-        private static IOpenXmlNamespaceResolver GetDefaultResolver() => FeatureCollection.TypedOrDefault.GetRequired<IOpenXmlNamespaceResolver>();
 
         /// <summary>
         /// Gets the encoding of the XML file.
