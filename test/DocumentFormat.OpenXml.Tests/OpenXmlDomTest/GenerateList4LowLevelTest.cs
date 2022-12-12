@@ -159,19 +159,6 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
-        public void TwiceCallsToLoadAttributeOnUnknown()
-        {
-            var rawxml = @"<dgm14:cNvPr xmlns:dgm14=""http://schemas.microsoft.com/officeart/2007/7/20/diagram"" id=""0"" name="""" />";
-            var ele = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(rawxml);
-            Log.VerifyTrue(ele.GetAttributes().Count == 2, "ele.GetAttributes().Count"); // The count should be 2 as now namespace declaration is not considered as attribute.
-            Log.VerifyTrue(ele.OuterXml == rawxml, "ele.OuterXml");
-
-            var clone = ele.Clone() as OpenXmlUnknownElement;
-            Log.VerifyTrue(clone.GetAttributes().Count == 2, "clone.GetAttributes().Count");
-            Log.VerifyTrue(clone.OuterXml == rawxml, "clone.OuterXml");
-        }
-
-        [Fact]
         public void ExceptionForDuplicatedNsDeclarionWhenClosePackage()
         {
             using (var stream = GetStream(TestDataStorage.V2FxTestFiles.ForTestCase.Bug571679_Brownbag, true))

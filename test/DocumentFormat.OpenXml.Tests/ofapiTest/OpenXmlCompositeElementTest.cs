@@ -118,45 +118,6 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Test the Clone on OpenXmlUnknownElement.
-        /// </summary>
-        [Fact]
-        public void CloneUnknownElementTest()
-        {
-            string outerXml = "<a:txBody xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:p><a:r><a:t>Text in &lt;drawing&gt;.</a:t></a:r></a:p></a:txBody>";
-
-            OpenXmlUnknownElement unknownElement = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(outerXml);
-
-            Assert.IsType<OpenXmlUnknownElement>(unknownElement.FirstChild);
-            Assert.IsType<OpenXmlUnknownElement>(unknownElement.FirstChild.FirstChild);
-            Assert.IsType<OpenXmlUnknownElement>(unknownElement.FirstChild.FirstChild.FirstChild);
-            Assert.Equal("Text in <drawing>.", (unknownElement.FirstChild.FirstChild.FirstChild as OpenXmlUnknownElement).Text);
-
-            Assert.Equal(outerXml, unknownElement.OuterXml);
-
-            OpenXmlElement clonedElement = unknownElement.CloneNode(true);
-
-            Assert.Equal("txBody", clonedElement.LocalName);
-            Assert.Equal("a", clonedElement.Prefix);
-            Assert.Equal("http://schemas.openxmlformats.org/drawingml/2006/main", clonedElement.NamespaceUri);
-            Assert.IsType<OpenXmlUnknownElement>(clonedElement);
-
-            Assert.IsType<OpenXmlUnknownElement>(clonedElement.FirstChild);
-            Assert.IsType<OpenXmlUnknownElement>(clonedElement.FirstChild.FirstChild);
-            Assert.IsType<OpenXmlUnknownElement>(clonedElement.FirstChild.FirstChild.FirstChild);
-            Assert.Equal("Text in <drawing>.", (clonedElement.FirstChild.FirstChild.FirstChild as OpenXmlUnknownElement).Text);
-
-            Assert.Equal(outerXml, clonedElement.OuterXml);
-
-            clonedElement = unknownElement.CloneNode(false);
-
-            Assert.Equal("txBody", clonedElement.LocalName);
-            Assert.Equal("a", clonedElement.Prefix);
-            Assert.Equal("http://schemas.openxmlformats.org/drawingml/2006/main", clonedElement.NamespaceUri);
-            Assert.Null(clonedElement.FirstChild);
-        }
-
-        /// <summary>
         /// Test the exception case for OpenXmlCompositeElement.ReplaceChild().
         /// </summary>
         [Fact]

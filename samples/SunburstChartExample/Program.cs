@@ -1391,7 +1391,7 @@ namespace CreatePresentationDocument
 
             var nonVisualDrawingPropertiesExtension1 = new A.NonVisualDrawingPropertiesExtension() { Uri = "{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}" };
 
-            var openXmlUnknownElement1 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement("<a16:creationId xmlns:a16=\"http://schemas.microsoft.com/office/drawing/2014/main\" id=\"{B96E1E96-E2AE-4140-AF58-A89F56E09DD3}\" />");
+            var openXmlUnknownElement1 = slidePart1.CreateUnknownElement("<a16:creationId xmlns:a16=\"http://schemas.microsoft.com/office/drawing/2014/main\" id=\"{B96E1E96-E2AE-4140-AF58-A89F56E09DD3}\" />");
 
             nonVisualDrawingPropertiesExtension1.Append(openXmlUnknownElement1);
 
@@ -1453,7 +1453,7 @@ namespace CreatePresentationDocument
 
             var nonVisualDrawingPropertiesExtension2 = new A.NonVisualDrawingPropertiesExtension() { Uri = "{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}" };
 
-            var openXmlUnknownElement2 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement("<a16:creationId xmlns:a16=\"http://schemas.microsoft.com/office/drawing/2014/main\" id=\"{B96E1E96-E2AE-4140-AF58-A89F56E09DD3}\" />");
+            var openXmlUnknownElement2 = slidePart1.CreateUnknownElement("<a16:creationId xmlns:a16=\"http://schemas.microsoft.com/office/drawing/2014/main\" id=\"{B96E1E96-E2AE-4140-AF58-A89F56E09DD3}\" />");
 
             nonVisualDrawingPropertiesExtension2.Append(openXmlUnknownElement2);
 
