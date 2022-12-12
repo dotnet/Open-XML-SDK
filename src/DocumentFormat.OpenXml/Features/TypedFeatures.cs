@@ -28,10 +28,12 @@ internal partial class TypedFeatures : IFeatureCollection
 
     public int Revision => 0;
 
+#pragma warning disable CS0436 // Type conflicts with imported type
     [KnownFeature(typeof(IRootElementFactory), typeof(TypedRootElementFactory))]
     [KnownFeature(typeof(IOpenXmlNamespaceResolver), typeof(OpenXmlNamespaceResolver))]
     [DelegatedFeature(nameof(FeatureCollection.Default), typeof(FeatureCollection))]
     [ThreadSafe]
+#pragma warning restore CS0436 // Type conflicts with imported type
     public partial T? Get<T>();
 
     public void Set<TFeature>(TFeature? instance)

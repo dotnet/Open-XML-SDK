@@ -82,6 +82,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddNamedSheetView", "sample
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Generator.Models", "gen\DocumentFormat.OpenXml.Generator.Models\DocumentFormat.OpenXml.Generator.Models.csproj", "{C91489AB-FF14-4FAD-BA51-35371ADD7E1C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Framework", "src\DocumentFormat.OpenXml.Framework\DocumentFormat.OpenXml.Framework.csproj", "{BB5DF535-E849-42AC-852A-A6D4815347C0}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadedCommentExample", "samples\ThreadedCommentExample\ThreadedCommentExample.csproj", "{5241BCF2-331D-428E-A9C4-F8DF92C8F726}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerPointModernCommentSample", "samples\PowerPointModernCommentSample\PowerPointModernCommentSample.csproj", "{3ECC7570-3501-479D-9CD9-64799C2AD149}"
@@ -188,6 +190,10 @@ Global
 		{BADAC0CC-F3E6-440E-B322-DA2B97625F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BADAC0CC-F3E6-440E-B322-DA2B97625F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BADAC0CC-F3E6-440E-B322-DA2B97625F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB5DF535-E849-42AC-852A-A6D4815347C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5DF535-E849-42AC-852A-A6D4815347C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5DF535-E849-42AC-852A-A6D4815347C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5DF535-E849-42AC-852A-A6D4815347C0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8EE9F34E-EAA1-4F03-B388-8076CE44DD7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8EE9F34E-EAA1-4F03-B388-8076CE44DD7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EE9F34E-EAA1-4F03-B388-8076CE44DD7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -221,6 +227,7 @@ Global
 		{5241BCF2-331D-428E-A9C4-F8DF92C8F726} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 		{3ECC7570-3501-479D-9CD9-64799C2AD149} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 		{BADAC0CC-F3E6-440E-B322-DA2B97625F26} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
+		{BB5DF535-E849-42AC-852A-A6D4815347C0} = {A4DF60EB-3AA5-48F0-B4D2-3F94B8E62F03}
 		{8EE9F34E-EAA1-4F03-B388-8076CE44DD7B} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

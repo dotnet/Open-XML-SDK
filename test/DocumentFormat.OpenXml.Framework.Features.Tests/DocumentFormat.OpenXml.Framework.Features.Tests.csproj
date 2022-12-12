@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\src\DocumentFormat.OpenXml\SimpleTypes\HexStringFactory.cs" Link="HexStringFactory.cs" />
+    <Compile Include="..\..\src\DocumentFormat.OpenXml.Framework\SimpleTypes\HexStringFactory.cs" Link="HexStringFactory.cs" />
   </ItemGroup>
 
   <ItemGroup>

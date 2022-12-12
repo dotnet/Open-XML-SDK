@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\DocumentFormat.OpenXml\SimpleTypes\HexStringFactory.cs" Link="HexStringFactory.cs" />
+    <Compile Include="..\DocumentFormat.OpenXml.Framework\SimpleTypes\HexStringFactory.cs" Link="HexStringFactory.cs" />
   </ItemGroup>
 
   <ItemGroup>
