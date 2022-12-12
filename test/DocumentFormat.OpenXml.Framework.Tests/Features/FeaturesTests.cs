@@ -55,32 +55,6 @@ namespace DocumentFormat.OpenXml.Features.Tests
         }
 
         [Fact]
-        public void ReadOnlyIsCached()
-        {
-            var features1 = new FeatureCollection();
-            var features2 = features1.AsReadOnly();
-            var features3 = features1.AsReadOnly();
-
-            Assert.False(features1.IsReadOnly);
-            Assert.NotSame(features1, features2);
-            Assert.Same(features2, features3);
-            Assert.True(features2.IsReadOnly);
-        }
-
-        [Fact]
-        public void ReadOnlyConversion()
-        {
-            var features1 = new FeatureCollection();
-            var feature1 = new Feature();
-            features1.Set(feature1);
-
-            var features2 = features1.AsReadOnly();
-            Assert.Throws<NotSupportedException>(() => features2.Set(feature1));
-
-            Assert.Same(feature1, features2.Get<Feature>());
-        }
-
-        [Fact]
         public void DefaultIsReadOnly()
         {
             Assert.True(FeatureCollection.Default.IsReadOnly);
