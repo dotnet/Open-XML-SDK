@@ -66,8 +66,8 @@ namespace RichData
 
                 AddMetaDataPart(workbookPart);
 
-                // Close and save the spreadsheet
-                spreadsheetDocument.Close();
+                // Save the spreadsheet
+                spreadsheetDocument.Save();
             }
         }
 
