@@ -1209,7 +1209,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException);
             }
 
-            if (this.GetPartMetadata().PartConstraints.TryGetValue(newPart.RelationshipType, out var partConstraintRule))
+            if (Features.GetRequired<IPartConstraintFeature>().TryGetRule(newPart.RelationshipType, out var partConstraintRule))
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
@@ -1226,7 +1226,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     throw new ArgumentOutOfRangeException(nameof(newPart));
                 }
 
-                newPart.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, contentType, null);
+                newPart.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, contentType, targetExt: null);
 
                 var relationshipId = AttachChild(newPart, id);
 
@@ -1288,18 +1288,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            if (!this.GetPartMetadata().PartConstraints.TryGetValue(subPart.RelationshipType, out var partConstraintRule))
-            {
-                if (subPart is ExtendedPart)
-                {
-                    return AddSubPart(subPart, rId);
-                }
-                else
-                {
-                    throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
-                }
-            }
-            else
+            if (Features.GetRequired<IPartConstraintFeature>().TryGetRule(subPart.RelationshipType, out var partConstraintRule))
             {
                 if (partConstraintRule.PartContentType is not null && subPart.ContentType != partConstraintRule.PartContentType)
                 {
@@ -1322,6 +1311,17 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
 
                     return SetSubPart(subPart, rId);
+                }
+            }
+            else
+            {
+                if (subPart is ExtendedPart)
+                {
+                    return AddSubPart(subPart, rId);
+                }
+                else
+                {
+                    throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
                 }
             }
         }
@@ -1426,7 +1426,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 child = CreateOpenXmlPart(part.RelationshipType);
 
                 // try to keep the same name
-                child.CreateInternal2(InternalOpenXmlPackage, ThisOpenXmlPart, part.ContentType, part.Uri);
+                child.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, part.ContentType, part.Uri);
 
                 // if (keepIdAndUri)
                 // {
@@ -1545,16 +1545,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 #endif
-
-        /// <summary>
-        /// Attaches the child to the package (create the relationship)
-        /// </summary>
-        /// <param name="part">The part to be attached.</param>
-        /// <returns>The relationship ID.</returns>
-        internal string AttachChild(OpenXmlPart part)
-        {
-            return AttachChild(part, null);
-        }
 
         /// <summary>
         /// Attaches the child to the package (create the relationship)
@@ -1895,8 +1885,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Test whether the object is already disposed.
         /// </summary>
         protected abstract void ThrowIfObjectDisposed();
-
-        internal abstract OpenXmlPart NewPart(string relationshipType, string contentType);
 
         internal abstract void DeleteRelationship(string id);
 

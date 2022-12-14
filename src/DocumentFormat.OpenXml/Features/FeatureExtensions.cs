@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Packaging;
 using System;
 
 namespace DocumentFormat.OpenXml.Features
@@ -12,9 +10,6 @@ namespace DocumentFormat.OpenXml.Features
     /// </summary>
     public static class FeatureExtensions
     {
-        internal static OpenXmlPartData GetPartMetadata(this OpenXmlPartContainer part)
-            => part.Features.GetRequired<IPartMetadataFeature>().Parse(part);
-
         /// <summary>
         /// Gets a required feature from the supplied collection.
         /// </summary>

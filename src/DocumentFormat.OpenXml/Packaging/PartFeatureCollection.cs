@@ -2,30 +2,37 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
-using System;
+using DocumentFormat.OpenXml.Framework;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
 public abstract partial class OpenXmlPart
 {
-    private protected partial class PartFeatureCollection : IFeatureCollection, IContainerFeature<OpenXmlPart>, ITargetFeature
+    private protected partial class PartFeatureCollection :
+        IFeatureCollection,
+        IContainerFeature<OpenXmlPart>,
+        ITargetFeature,
+        IPartConstraintFeature,
+        IKnownDataPartFeature
     {
+        private readonly OpenXmlPart _part;
+
         private FeatureContainer _container;
 
         public PartFeatureCollection(OpenXmlPart part)
         {
-            Part = part;
+            _part = part;
         }
-
-        protected OpenXmlPart Part { get; }
 
         public bool IsReadOnly => false;
 
         public int Revision => _container.Revision + (Parent?.Revision ?? 0);
 
-        OpenXmlPart IContainerFeature<OpenXmlPart>.Value => Part;
+        OpenXmlPart IContainerFeature<OpenXmlPart>.Value => _part;
 
-        private IFeatureCollection? Parent => Part._openXmlPackage?.Features;
+        private IFeatureCollection? Parent => _part?._openXmlPackage?.Features;
 
         string ITargetFeature.Path => ".";
 
@@ -63,5 +70,15 @@ public abstract partial class OpenXmlPart
 
         public void Set<TFeature>(TFeature? instance)
             => _container.Set(instance);
+
+        IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => Enumerable.Empty<PartConstraintRule>();
+
+        bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule)
+        {
+            rule = default;
+            return false;
+        }
+
+        bool IKnownDataPartFeature.IsKnown(string relationshipId) => false;
     }
 }

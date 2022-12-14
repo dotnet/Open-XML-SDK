@@ -15,40 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorkbookPart
     /// </summary>
-    [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(CustomXmlPart), false, true)]
-    [PartConstraint(typeof(CalculationChainPart), false, false)]
-    [PartConstraint(typeof(CellMetadataPart), false, false)]
-    [PartConstraint(typeof(ConnectionsPart), false, false)]
-    [PartConstraint(typeof(CustomXmlMappingsPart), false, false)]
-    [PartConstraint(typeof(SharedStringTablePart), false, false)]
-    [PartConstraint(typeof(WorkbookRevisionHeaderPart), false, false)]
-    [PartConstraint(typeof(WorkbookUserDataPart), false, false)]
-    [PartConstraint(typeof(WorkbookStylesPart), false, false)]
-    [PartConstraint(typeof(ThemePart), false, false)]
-    [PartConstraint(typeof(ThumbnailPart), false, false)]
-    [PartConstraint(typeof(VolatileDependenciesPart), false, false)]
-    [PartConstraint(typeof(ChartsheetPart), false, true)]
-    [PartConstraint(typeof(DialogsheetPart), false, true)]
-    [PartConstraint(typeof(ExternalWorkbookPart), false, true)]
-    [PartConstraint(typeof(PivotTableCacheDefinitionPart), false, true)]
-    [PartConstraint(typeof(WorksheetPart), false, true)]
-    [PartConstraint(typeof(ExcelAttachedToolbarsPart), false, false)]
-    [PartConstraint(typeof(VbaProjectPart), false, false)]
-    [PartConstraint(typeof(MacroSheetPart), false, true)]
-    [PartConstraint(typeof(InternationalMacroSheetPart), false, true)]
-    [PartConstraint(typeof(CustomDataPropertiesPart), false, true)]
-    [PartConstraint(typeof(SlicerCachePart), false, true)]
-    [PartConstraint(typeof(TimeLineCachePart), false, true)]
-    [PartConstraint(typeof(WorkbookPersonPart), false, true)]
-    [PartConstraint(typeof(RdRichValuePart), false, true)]
-    [PartConstraint(typeof(RdRichValueStructurePart), false, true)]
-    [PartConstraint(typeof(RdArrayPart), false, true)]
-    [PartConstraint(typeof(RichStylesPart), false, true)]
-    [PartConstraint(typeof(RdSupportingPropertyBagPart), false, true)]
-    [PartConstraint(typeof(RdSupportingPropertyBagStructurePart), false, true)]
-    [PartConstraint(typeof(RdRichValueTypesPart), false, true)]
-    [PartConstraint(typeof(RdRichValueWebImagePart), false, false)]
     public partial class WorkbookPart : TypedOpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
@@ -377,11 +343,49 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
         
-        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        private sealed class GeneratedFeatures : TypedPartFeatureCollection, ITargetFeature, IPartConstraintFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
             string ITargetFeature.Name => "workbook";
             string ITargetFeature.Path => "xl";
+            private static readonly PartConstraints _partConstraints = new ()
+            {
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", "CustomXmlPart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain", "CalculationChainPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.calcChain+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sheetMetadata", "CellMetadataPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheetMetadata+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/connections", "ConnectionsPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.connections+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/xmlMaps", "CustomXmlMappingsPart", "application/xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings", "SharedStringTablePart", "application/vnd.openxmlformats-officedocument.spreadsheetml.sharedStrings+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionHeaders", "WorkbookRevisionHeaderPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionHeaders+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/usernames", "WorkbookUserDataPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.userNames+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles", "WorkbookStylesPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", "ThemePart", "application/vnd.openxmlformats-officedocument.theme+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", "ThumbnailPart", null, false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/volatileDependencies", "VolatileDependenciesPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.volatileDependencies+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet", "ChartsheetPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet", "DialogsheetPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLink", "ExternalWorkbookPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.externalLink+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition", "PivotTableCacheDefinitionPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet", "WorksheetPart", "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/attachedToolbars", "ExcelAttachedToolbarsPart", "application/vnd.ms-excel.attachedToolbars", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/vbaProject", "VbaProjectPart", "application/vnd.ms-office.vbaProject", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet", "MacroSheetPart", "application/vnd.ms-excel.macrosheet+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/xlIntlMacrosheet", "InternationalMacroSheetPart", "application/vnd.ms-excel.intlmacrosheet+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2007/relationships/customDataProps", "CustomDataPropertiesPart", "application/vnd.ms-excel.customDataProperties+xml", false, true, FileFormatVersions.Office2010 },
+                { "http://schemas.microsoft.com/office/2007/relationships/slicerCache", "SlicerCachePart", "application/vnd.ms-excel.slicerCache+xml", false, true, FileFormatVersions.Office2010 },
+                { "http://schemas.microsoft.com/office/2011/relationships/timelineCache", "TimeLineCachePart", "application/vnd.ms-excel.timelineCache+xml", false, true, FileFormatVersions.Office2013 },
+                { "http://schemas.microsoft.com/office/2017/10/relationships/person", "WorkbookPersonPart", "application/vnd.ms-excel.person+xml", false, true, FileFormatVersions.Office2019 },
+                { "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValue", "RdRichValuePart", "application/vnd.ms-excel.rdrichvalue+xml", false, true, FileFormatVersions.Office2019 },
+                { "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueStructure", "RdRichValueStructurePart", "application/vnd.ms-excel.rdrichvaluestructure+xml", false, true, FileFormatVersions.Office2019 },
+                { "http://schemas.microsoft.com/office/2017/06/relationships/rdArray", "RdArrayPart", "application/vnd.ms-excel.rdarray+xml", false, true, FileFormatVersions.Office2019 },
+                { "http://schemas.microsoft.com/office/2017/06/relationships/richStyles", "RichStylesPart", "application/vnd.ms-excel.richstyles+xml", false, true, FileFormatVersions.Office2019 },
+                { "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBag", "RdSupportingPropertyBagPart", "application/vnd.ms-excel.rdsupportingpropertybag+xml", false, true, FileFormatVersions.Office2019 },
+                { "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBagStructure", "RdSupportingPropertyBagStructurePart", "application/vnd.ms-excel.rdsupportingpropertybagstructure+xml", false, true, FileFormatVersions.Office2019 },
+                { "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueTypes", "RdRichValueTypesPart", "application/vnd.ms-excel.rdrichvaluetypes+xml", false, true, FileFormatVersions.Office2019 },
+                { "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage", "RdRichValueWebImagePart", "application/vnd.ms-excel.rdrichvaluewebimage+xml", false, false, FileFormatVersions.Office2021 },
+            };
+            bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
+            IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;
         }
     
     }

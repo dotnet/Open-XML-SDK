@@ -37,7 +37,7 @@ public class PartGenerator : IIncrementalGenerator
         var sw = new StringWriter(sb);
         var writer = new IndentedTextWriter(sw);
 
-        foreach (var part in openXml.Context.Parts)
+        foreach (var part in openXml.Context.Parts.Concat(openXml.Context.Packages))
         {
             sb.Clear();
 

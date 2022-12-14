@@ -15,23 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the PresentationPart
     /// </summary>
-    [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(CustomXmlPart), false, true)]
-    [PartConstraint(typeof(FontPart), false, true)]
-    [PartConstraint(typeof(PresentationPropertiesPart), false, false)]
-    [PartConstraint(typeof(TableStylesPart), false, false)]
-    [PartConstraint(typeof(ThemePart), false, false)]
-    [PartConstraint(typeof(ViewPropertiesPart), false, false)]
-    [PartConstraint(typeof(NotesMasterPart), false, false)]
-    [PartConstraint(typeof(SlidePart), false, true)]
-    [PartConstraint(typeof(SlideMasterPart), true, true)]
-    [PartConstraint(typeof(UserDefinedTagsPart), false, false)]
-    [PartConstraint(typeof(CommentAuthorsPart), false, false)]
-    [PartConstraint(typeof(HandoutMasterPart), false, false)]
-    [PartConstraint(typeof(LegacyDiagramTextInfoPart), false, false)]
-    [PartConstraint(typeof(VbaProjectPart), false, false)]
-    [PartConstraint(typeof(PowerPointCommentPart), false, true)]
-    [PartConstraint(typeof(PowerPointAuthorsPart), false, false)]
     public partial class PresentationPart : TypedOpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
@@ -275,11 +258,32 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);
         
-        private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature
+        private sealed class GeneratedFeatures : TypedPartFeatureCollection, ITargetFeature, IPartConstraintFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
             string ITargetFeature.Name => "presentation";
             string ITargetFeature.Path => "ppt";
+            private static readonly PartConstraints _partConstraints = new ()
+            {
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", "CustomXmlPart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font", "FontPart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps", "PresentationPropertiesPart", "application/vnd.openxmlformats-officedocument.presentationml.presProps+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles", "TableStylesPart", "application/vnd.openxmlformats-officedocument.presentationml.tableStyles+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", "ThemePart", "application/vnd.openxmlformats-officedocument.theme+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps", "ViewPropertiesPart", "application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster", "NotesMasterPart", "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", "SlidePart", "application/vnd.openxmlformats-officedocument.presentationml.slide+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster", "SlideMasterPart", "application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml", true, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", "UserDefinedTagsPart", "application/vnd.openxmlformats-officedocument.presentationml.tags+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors", "CommentAuthorsPart", "application/vnd.openxmlformats-officedocument.presentationml.commentAuthors+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster", "HandoutMasterPart", "application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/legacyDocTextInfo", "LegacyDiagramTextInfoPart", "application/vnd.ms-office.legacyDocTextInfo", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/vbaProject", "VbaProjectPart", "application/vnd.ms-office.vbaProject", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2018/10/relationships/comments", "PowerPointCommentPart", "application/vnd.ms-powerpoint.comments+xml", false, true, FileFormatVersions.Office2021 },
+                { "http://schemas.microsoft.com/office/2018/10/relationships/authors", "PowerPointAuthorsPart", "application/vnd.ms-powerpoint.authors+xml", false, false, FileFormatVersions.Office2021 },
+            };
+            bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
+            IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;
         }
     
     }

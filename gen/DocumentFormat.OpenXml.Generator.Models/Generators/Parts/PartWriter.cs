@@ -46,12 +46,14 @@ public static class PartWriter
         using (writer.AddBlock(_options with { AddNewLineBeforeClosing = true }))
         {
             writer.WriteDocumentationComment($"Defines the {type.Name}");
-            writer.WriteClassAttributes(type);
             writer.Write("public partial class ");
             writer.Write(type.Name);
-            writer.Write(" : ");
 
-            writer.Write(type.Base);
+            if (!type.IsPackage)
+            {
+                writer.Write(" : ");
+                writer.Write(type.Base);
+            }
 
             if (type.HasFixedContent)
             {
@@ -61,40 +63,95 @@ public static class PartWriter
             writer.WriteLine();
             using (writer.AddBlock(_options with { AddNewLineBeforeClosing = true }))
             {
-                var newLine = false;
-
-                foreach (var member in GetMembers(services, type))
+                if (!type.IsPackage)
                 {
-                    if (newLine)
+                    var newLine = false;
+
+                    foreach (var member in GetMembers(services, type))
                     {
-                        if (member.Type != ItemType.Field)
+                        if (newLine)
                         {
-                            writer.WriteDoubleLines();
+                            if (member.Type != ItemType.Field)
+                            {
+                                writer.WriteDoubleLines();
+                            }
+                            else
+                            {
+                                writer.WriteLine();
+                            }
                         }
-                        else
-                        {
-                            writer.WriteLine();
-                        }
+
+                        member.Action(writer);
+
+                        newLine = true;
                     }
 
-                    member.Action(writer);
+                    writer.WriteLine();
+                    writer.WriteLine();
 
-                    newLine = true;
+                    writer.WriteLine("/// <inheritdoc/>");
+                    writer.WriteLine("public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);");
+                    writer.WriteLine();
+                }
+
+                var impls = new List<(string, Action<IndentedTextWriter, OpenXmlGeneratorServices, Part>)>();
+
+                if (type.IsPackage)
+                {
+                    writer.Write("private partial class ");
+                    writer.Write(type.Name);
+                    writer.Write("Features");
+                }
+                else
+                {
+                    impls.Add(("TypedPartFeatureCollection", (writer, _, _) => writer.WriteLine("public GeneratedFeatures(OpenXmlPart part) : base(part) { }")));
+                    writer.Write("private sealed class GeneratedFeatures");
+                }
+
+                if (!type.IsPackage)
+                {
+                    impls.Add(("ITargetFeature", WriteTargetPaths));
+                }
+
+                if (type.GetPartConstraints().Any())
+                {
+                    impls.Add(("IPartConstraintFeature", WritePartConstraints));
+                }
+
+                if (type.GetDataPartConstraints().Any())
+                {
+                    impls.Add(("IKnownDataPartFeature", WriteDataPartConstraints));
+                }
+
+                var count = 0;
+                foreach (var (interfaceName, _) in impls)
+                {
+                    if (count == 0)
+                    {
+                        writer.Write(" : ");
+                    }
+                    else
+                    {
+                        writer.Write(", ");
+                    }
+
+                    writer.Write(interfaceName);
+
+                    count++;
                 }
 
                 writer.WriteLine();
-                writer.WriteLine();
-
-                writer.WriteLine("/// <inheritdoc/>");
-                writer.WriteLine("public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);");
-                writer.WriteLine();
-
-                writer.WriteLine("private sealed class GeneratedFeatures : PartFeatureCollection, ITargetFeature");
 
                 using (writer.AddBlock())
                 {
-                    writer.WriteLine("public GeneratedFeatures(OpenXmlPart part) : base(part) { }");
-                    WriteTargetPaths(writer, type);
+                    if (!type.IsPackage)
+                    {
+                    }
+
+                    foreach (var (_, a) in impls)
+                    {
+                        a(writer, services, type);
+                    }
                 }
             }
         }
@@ -102,43 +159,56 @@ public static class PartWriter
         writer.WriteLine();
     }
 
-    private static void WriteClassAttributes(this IndentedTextWriter writer, Part type)
+    private static void WriteDataPartConstraints(this IndentedTextWriter writer, OpenXmlGeneratorServices services, Part part)
     {
-        if (type.Version != OfficeVersion.Office2007)
+        writer.Write("bool IKnownDataPartFeature.IsKnown(string relationshipId) => relationshipId is ");
+
+        var hit = false;
+        foreach (var p in part.GetDataPartConstraints())
         {
-            writer.Write("[OfficeAvailability(FileFormatVersions.");
-            writer.Write(type.Version);
-            writer.WriteLine(")]");
+            if (hit)
+            {
+                writer.Write(" or ");
+            }
+
+            hit = true;
+
+            writer.Write(p.Name);
+            writer.Write(".RelationshipTypeConst");
         }
 
-        if (type.HasFixedContent)
+        writer.WriteLine(";");
+    }
+
+    private static void WritePartConstraints(this IndentedTextWriter writer, OpenXmlGeneratorServices services, Part type)
+    {
+        writer.WriteLine("private static readonly PartConstraints _partConstraints = new ()");
+
+        using (writer.AddBlock(new BlockOptions() { IncludeSemiColon = true }))
         {
-            writer.WriteLine("[ContentType(ContentTypeConstant)]");
+            foreach (var c in type.GetPartConstraints())
+            {
+                var p = services.GetPart(c.Name);
+
+                writer.Write("{ ");
+                writer.WriteString(p.RelationshipType);
+                writer.Write(", ");
+                writer.WriteString(p.Name);
+                writer.Write(", ");
+                writer.WriteString(p.ContentType);
+                writer.Write(", ");
+                writer.WriteBool(c.MinOccursIsNonZero);
+                writer.Write(", ");
+                writer.WriteBool(c.MaxOccursGreatThanOne);
+                writer.Write(", ");
+                writer.WriteEnum("FileFormatVersions", p.Version);
+                writer.WriteLine(" },");
+            }
         }
 
-        writer.WriteLine("[RelationshipTypeAttribute(RelationshipTypeConstant)]");
+        writer.WriteLine("bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);");
 
-        foreach (var constraint in type.GetPartConstraints())
-        {
-            writer.Write("[PartConstraint(");
-            writer.WriteItem(new TypeOf(constraint.Name));
-            writer.Write(", ");
-            writer.WriteItem(constraint.MinOccursIsNonZero);
-            writer.Write(", ");
-            writer.WriteItem(constraint.MaxOccursGreatThanOne);
-            writer.WriteLine(")]");
-        }
-
-        foreach (var constraint in type.GetDataPartConstraints())
-        {
-            writer.Write("[DataPartConstraint(");
-            writer.WriteItem(new TypeOf(constraint.Name));
-            writer.Write(", ");
-            writer.WriteItem(constraint.MinOccursIsNonZero);
-            writer.Write(", ");
-            writer.WriteItem(constraint.MaxOccursGreatThanOne);
-            writer.WriteLine(")]");
-        }
+        writer.WriteLine("IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;");
     }
 
     private static IEnumerable<Item> GetMembers(OpenXmlGeneratorServices services, Part type)
@@ -182,7 +252,7 @@ public static class PartWriter
         }
     }
 
-    private static void WriteTargetPaths(IndentedTextWriter writer, Part type)
+    private static void WriteTargetPaths(IndentedTextWriter writer, OpenXmlGeneratorServices services, Part type)
     {
         if (type.Extension is not null)
         {
@@ -586,6 +656,4 @@ public static class PartWriter
             }
         }
     }
-
-    private static string GetConstantName(string name) => $"{name}Constant";
 }

@@ -2262,7 +2262,7 @@ namespace DocumentFormat.OpenXml
 
             if (mcPrefix.IsNullOrEmpty())
             {
-                mcPrefix = MarkupCompatibilityAttributes.MCPrefix;
+                mcPrefix = MCPrefix;
             }
 
             if (MCAttributes is null)
@@ -2311,7 +2311,7 @@ namespace DocumentFormat.OpenXml
             var mcPrefix = LookupPrefix(AlternateContent.MarkupCompatibilityNamespace);
             if (mcPrefix.IsNullOrEmpty())
             {
-                mcPrefix = MarkupCompatibilityAttributes.MCPrefix;
+                mcPrefix = MCPrefix;
             }
 
             if (string.Equals(localName, MCConsts.Ignorable, StringComparison.Ordinal))
@@ -2352,7 +2352,7 @@ namespace DocumentFormat.OpenXml
             var mcPrefix = xmlWriter.LookupPrefix(AlternateContent.MarkupCompatibilityNamespace);
             if (string.IsNullOrEmpty(mcPrefix))
             {
-                mcPrefix = MarkupCompatibilityAttributes.MCPrefix;
+                mcPrefix = MCPrefix;
             }
 
             if (MCAttributes.Ignorable is not null)
@@ -2378,6 +2378,16 @@ namespace DocumentFormat.OpenXml
             if (MCAttributes.MustUnderstand is not null)
             {
                 xmlWriter.WriteAttributeString(mcPrefix, MCConsts.MustUnderstand, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.MustUnderstand);
+            }
+        }
+
+        private string MCPrefix
+        {
+            get
+            {
+                var result = Features.Get<IOpenXmlNamespaceResolver>()?.LookupPrefix(AlternateContent.MarkupCompatibilityNamespace);
+
+                return result.IsNullOrEmpty() ? "mc" : result!;
             }
         }
 

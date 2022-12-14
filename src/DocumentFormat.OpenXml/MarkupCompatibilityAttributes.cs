@@ -1,9 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Framework;
-
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
@@ -11,8 +8,6 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class MarkupCompatibilityAttributes
     {
-        internal static readonly string MCPrefix = FeatureCollection.TypedOrDefault.GetNamespaceResolver().LookupPrefix(AlternateContent.MarkupCompatibilityNamespace) ?? string.Empty;
-
         /// <summary>
         /// Gets or sets a whitespace-delimited list of prefixes, where each
         ///  prefix identifies an ignorable namespace.

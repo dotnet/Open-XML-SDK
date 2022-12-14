@@ -12,8 +12,6 @@ namespace DocumentFormat.OpenXml.Features
     {
         private readonly IFeatureCollection? _defaults;
 
-        private FeatureCollection? _readOnly;
-
         private FeatureContainer _container;
 
         /// <summary>
@@ -30,11 +28,6 @@ namespace DocumentFormat.OpenXml.Features
         /// <exception cref="System.ArgumentOutOfRangeException"><paramref name="initialCapacity"/> is less than 0</exception>
         public FeatureCollection(int initialCapacity)
         {
-            if (initialCapacity < 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(initialCapacity));
-            }
-
             _container = new FeatureContainer(initialCapacity);
         }
 
@@ -81,34 +74,8 @@ namespace DocumentFormat.OpenXml.Features
             _container.Set(instance);
         }
 
-        internal static IFeatureCollection Empty { get; } = new EmptyFeatures();
-
-        internal FeatureCollection AsReadOnly()
-        {
-            if (_readOnly is null)
-            {
-                _readOnly = new(this, true);
-            }
-
-            return _readOnly;
-        }
-
         internal static IFeatureCollection Default => DefaultFeatures.Shared;
 
         internal static IFeatureCollection TypedOrDefault => TypedFeatures.Shared;
-
-        private class EmptyFeatures : IFeatureCollection
-        {
-            public bool IsReadOnly => true;
-
-            public int Revision => 0;
-
-            public TFeature? Get<TFeature>() => default;
-
-            public void Set<TFeature>(TFeature? instance)
-            {
-                throw new NotSupportedException();
-            }
-        }
     }
 }

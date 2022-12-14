@@ -67,61 +67,29 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         public void ValidatePart(OpenXmlPart part)
         {
-            var data = GetConstraintData(part);
-
-            Assert.Same(part.GetPartMetadata().PartConstraints, part.GetPartMetadata().PartConstraints);
-            Assert.Same(part.GetPartMetadata().DataPartReferenceConstraints, part.GetPartMetadata().DataPartReferenceConstraints);
-
-            if (!part.GetPartMetadata().PartConstraints.Any())
-            {
-                Assert.Same(PartConstraintCollection.Instance, part.GetPartMetadata().PartConstraints);
-            }
-
-            if (!part.GetPartMetadata().DataPartReferenceConstraints.Any())
-            {
-                Assert.Same(PartConstraintCollection.Instance, part.GetPartMetadata().DataPartReferenceConstraints);
-            }
+            var expectedConstraints = GetConstraintData(part);
+            var constraints = part.Features.GetRequired<IPartConstraintFeature>();
 
             var targets = part.Features.GetRequired<ITargetFeature>();
 
-            Assert.Equal(data.IsContentTypeFixed, part.IsContentTypeFixed);
-            Assert.Equal(data.RelationshipType, part.RelationshipType);
-            Assert.Equal(data.TargetFileExtension, targets.Extension);
-            Assert.Equal(data.TargetName, targets.Name);
-            Assert.Equal(data.TargetPath, targets.Path);
+            Assert.Equal(expectedConstraints.IsContentTypeFixed, part.IsContentTypeFixed);
+            Assert.Equal(expectedConstraints.RelationshipType, part.RelationshipType);
+            Assert.Equal(expectedConstraints.TargetFileExtension, targets.Extension);
+            Assert.Equal(expectedConstraints.TargetName, targets.Name);
+            Assert.Equal(expectedConstraints.TargetPath, targets.Path);
 
             if (part.IsContentTypeFixed)
             {
-                Assert.Equal(data.ContentType, part.ContentType);
+                Assert.Equal(expectedConstraints.ContentType, part.ContentType);
             }
 
 #if DEBUG
-            _output.WriteObjectToTempFile("data part reference constraints", part.GetPartMetadata().DataPartReferenceConstraints);
+            _output.WriteObjectToTempFile("part constraints", constraints.Rules);
 #endif
 
-            AssertDictionary(data.DataParts, part.GetPartMetadata().DataPartReferenceConstraints);
-
-#if DEBUG
-            _output.WriteObjectToTempFile("data parts", data.Parts);
-            _output.WriteObjectToTempFile("part constraints", part.GetPartMetadata().PartConstraints);
-#endif
-
-            AssertDictionary(data.Parts, part.GetPartMetadata().PartConstraints);
-        }
-
-        [MemberData(nameof(GetOpenXmlParts))]
-        [Theory]
-        public void ValidateValid(OpenXmlPart part)
-        {
-            var availability = part.GetType().GetTypeInfo().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
-            var versions = Enum.GetValues(typeof(FileFormatVersions))
-                .Cast<FileFormatVersions>()
-                .Where(v => v != FileFormatVersions.None);
-
-            foreach (var version in versions)
-            {
-                Assert.Equal(version.AtLeast(availability), part.IsInVersion(version));
-            }
+            Assert.Equal(
+                expectedConstraints.Parts.OrderBy(p => p.RelationshipType),
+                constraints.Rules.OrderBy(p => p.RelationshipType).Select(p => new PartConstraintRule2(p)));
         }
 
         [Fact]
@@ -141,8 +109,7 @@ namespace DocumentFormat.OpenXml.Tests
                         TargetFileExtension = targets.Extension,
                         TargetName = targets.Name,
                         TargetPath = targets.Path,
-                        DataParts = t.GetPartMetadata().DataPartReferenceConstraints,
-                        Parts = t.GetPartMetadata().PartConstraints,
+                        Parts = t.Features.GetRequired<IPartConstraintFeature>().Rules,
                     };
                 })
                 .OrderBy(d => d.Name, StringComparer.Ordinal);
@@ -157,7 +124,6 @@ namespace DocumentFormat.OpenXml.Tests
             var appType = Substitute.For<IApplicationTypeFeature>();
             appType.Type.Returns(ApplicationType.None);
 
-            var metadata = new TypedFeatures().GetRequired<IPartMetadataFeature>();
             var parts = typeof(TypedFeatures)
                 .GetTypeInfo()
                 .Assembly
@@ -169,7 +135,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             foreach (var part in parts)
             {
-                part.Features.Set(metadata);
                 part.Features.Set(appType);
 
                 yield return part;
@@ -190,16 +155,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         });
 
-        private void AssertDictionary(IDictionary<string, PartConstraintRule2> expected, IReadOnlyDictionary<string, PartConstraintRule> actual)
-        {
-            Assert.Equal(expected.Count, actual.Count);
-
-            foreach (var key in expected.Keys)
-            {
-                Assert.Equal(expected[key], actual[key]);
-            }
-        }
-
 #pragma warning disable CA1812
         private class ConstraintData
         {
@@ -217,14 +172,14 @@ namespace DocumentFormat.OpenXml.Tests
 
             public string TargetPath { get; set; }
 
-            public IDictionary<string, PartConstraintRule2> DataParts { get; set; }
-
-            public IDictionary<string, PartConstraintRule2> Parts { get; set; }
+            public PartConstraintRule2[] Parts { get; set; }
         }
 #pragma warning restore CA1712
 
         private class PartConstraintRule2
         {
+            public string RelationshipType { get; set; }
+
             public string PartClassName { get; set; }
 
             public string PartContentType { get; set; }
@@ -235,18 +190,19 @@ namespace DocumentFormat.OpenXml.Tests
 
             public FileFormatVersions FileFormat { get; set; }
 
-            public static implicit operator PartConstraintRule2(PartConstraintRule rule)
+            public PartConstraintRule2()
             {
-                return new PartConstraintRule2
-                {
-                    FileFormat = rule.FileFormat,
-                    MaxOccursGreatThanOne = rule.MaxOccursGreatThanOne,
-                    MinOccursIsNonZero = rule.MinOccursIsNonZero,
+            }
+
+            public PartConstraintRule2(PartConstraintRule rule)
+            {
+                FileFormat = rule.FileFormat;
+                MaxOccursGreatThanOne = rule.MaxOccursGreatThanOne;
+                MinOccursIsNonZero = rule.MinOccursIsNonZero;
 #pragma warning disable CS0618 // Type or member is obsolete
-                    PartClassName = rule.PartClassName,
+                PartClassName = rule.PartClassName;
 #pragma warning restore CS0618 // Type or member is obsolete
-                    PartContentType = rule.PartContentType,
-                };
+                PartContentType = rule.PartContentType;
             }
 
             public override bool Equals(object obj)

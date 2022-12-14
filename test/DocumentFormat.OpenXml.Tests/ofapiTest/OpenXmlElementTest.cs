@@ -287,10 +287,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(paragraphOuterXml, p.OuterXml);
             Assert.Equal(paragraphInnerXml, p.InnerXml);
             Assert.Equal(run1Text + run2Text, p.InnerText);
-
-            var unknownElement = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(paragraphOuterXml);
-            Assert.Equal(paragraphOuterXml, unknownElement.OuterXml);
-            Assert.Equal(paragraphInnerXml, unknownElement.InnerXml);
         }
 
         /// <summary>
@@ -656,28 +652,6 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// A test for the OpenXmlUnknownElement.CreateOpenXmlUnknownElement with an outer xml.
-        /// </summary>
-        [Fact]
-        public void CreateOpenXmlUnknownElmenentTest()
-        {
-            // Valid outer xml
-            var validOuterXml = "<myElement  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></myElement>";
-            var unknown1 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(validOuterXml);
-            Assert.Equal(validOuterXml, unknown1.OuterXml);
-
-            // Valid outer xml but starting with whitespace.
-            var validOuterXmlWithWhitespaces = "   <myElement  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></myElement>";
-            var unknown2 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(validOuterXmlWithWhitespaces);
-            Assert.Equal(validOuterXmlWithWhitespaces, unknown2.OuterXml);
-
-            // Check bug #484153.
-            var outerXmlWithXmlDecl = "<?xml version=\"1.0\" encoding=\"utf-8\"?><customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
-            var ex1 = Assert.Throws<ArgumentException>(() => OpenXmlUnknownElement.CreateOpenXmlUnknownElement(outerXmlWithXmlDecl));
-            Assert.StartsWith(ExceptionMessages.InvalidOuterXml, ex1.Message);
-        }
-
-        /// <summary>
         /// A test for the OpenXmlElement.ChildElements{get;}.
         /// </summary>
         [Fact]
@@ -856,7 +830,7 @@ namespace DocumentFormat.OpenXml.Tests
                 memStream.Flush();
                 memStream.Seek(0, SeekOrigin.Begin);
 
-                using (var reader = new OpenXmlPartReader(memStream))
+                using (var reader = new TypedOpenXmlPartReader(memStream))
                 {
                     // <w:document>
                     reader.Read();

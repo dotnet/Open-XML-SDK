@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines StylesPart. The StylesPart served as the base class of StylesWithEffectsPart and StyleDefinitionsPart.
     /// </summary>
-    public abstract partial class StylesPart : OpenXmlPart
+    public abstract partial class StylesPart : TypedOpenXmlPart
     {
         private Wordprocessing.Styles? _rootEle;
 

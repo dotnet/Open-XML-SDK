@@ -206,7 +206,7 @@ namespace DocumentFormat.OpenXml.Tests.PivotClass
 
             WorkbookExtension workbookExtension2 = new WorkbookExtension() { Uri = "{69C81A23-63F3-4edf-8378-127667AE99B5}" };
 
-            OpenXmlUnknownElement openXmlUnknownElement1 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement("<x15:workbookPr15 chartTrackingRefBase=\"1\" xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main\" />");
+            OpenXmlUnknownElement openXmlUnknownElement1 = workbookPart1.CreateUnknownElement("<x15:workbookPr15 chartTrackingRefBase=\"1\" xmlns:x15=\"http://schemas.microsoft.com/office/spreadsheetml/2010/11/main\" />");
 
             workbookExtension2.Append(openXmlUnknownElement1);
 
