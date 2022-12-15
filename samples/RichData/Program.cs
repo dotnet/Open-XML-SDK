@@ -1,16 +1,15 @@
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Office2019.Excel.RichData;
 using DocumentFormat.OpenXml.Office2019.Excel.RichData2;
 using DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 using NumberingFormat = DocumentFormat.OpenXml.Spreadsheet.NumberingFormat;
 using Value = DocumentFormat.OpenXml.Office2019.Excel.RichData.Value;
 
@@ -73,14 +72,14 @@ namespace RichData
 
         private static void AddRdRichValueWebImagePart(WorkbookPart workbookPart)
         {
-            // Add the rdRichValueWebImage part
+            // Add the RdRichValueWebImagePart
             RdRichValueWebImagePart rdRichValueWebImagePart = workbookPart.RdRichValueWebImagePart ?? workbookPart.AddNewPart<RdRichValueWebImagePart>();
 
-            // Add the hyperlink relationships for rdRichValueWebImagePart
+            // Add the HyperlinkRelationship for RdRichValueWebImagePart
             HyperlinkRelationship hyperLinkRel1 = rdRichValueWebImagePart.AddHyperlinkRelationship(new Uri("https://www.bing.com/images/search?form=xlimg&amp;q=seattle"), true);
             HyperlinkRelationship hyperLinkRel2 = rdRichValueWebImagePart.AddHyperlinkRelationship(new Uri("https://www.bing.com/th?id=AMMS_348b88a346e44ffe38a8fd278b585309&amp;qlt=95"), true);
 
-            // add the elements for the rdRichValueWebImage part
+            // add the elements for the RdRichValueWebImagePart
             workbookPart.RdRichValueWebImagePart.WebImagesSupportingRichData = new WebImagesSupportingRichData();
             workbookPart.RdRichValueWebImagePart.WebImagesSupportingRichData.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             WebImageSupportingRichData webImageSupportingRichData = workbookPart.RdRichValueWebImagePart.WebImagesSupportingRichData.AppendChild(new WebImageSupportingRichData());
@@ -90,7 +89,7 @@ namespace RichData
 
         private static void AddRdRichValuePart(WorkbookPart workbookPart)
         {
-            // Add the rdrichvalue part
+            // Add the RdRichValuePart
             RdRichValuePart rdRichValuePart = workbookPart.AddNewPart<RdRichValuePart>();
 
             rdRichValuePart.RichValueData = new RichValueData(
@@ -198,7 +197,7 @@ namespace RichData
 
         private static void AddRdRichValueStructurePart(WorkbookPart workbookPart)
         {
-            // Add the rdrichvaluestructure part
+            // Add the RdRichValueStructurePart
             RdRichValueStructurePart rdRichValueStructurePart = workbookPart.AddNewPart<RdRichValueStructurePart>();
             rdRichValueStructurePart.RichValueStructures = new RichValueStructures(
                 new RichValueStructure(
