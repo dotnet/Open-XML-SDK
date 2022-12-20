@@ -1,0 +1,12 @@
+<Project>
+
+  <PropertyGroup>
+    <GenAPITargetPath>$(MSBuildProjectDirectory)..\..\DocumentFormat.OpenXml\TypeForwards.cs</GenAPITargetPath>
+    <GenAPIAdditionalParameters> -writer TypeForwards</GenAPIAdditionalParameters>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.DotNet.BuildTools.GenAPI" Version="3.0.0-preview4-06015-01" />
+  </ItemGroup>
+
+</Project>

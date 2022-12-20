@@ -24,5 +24,6 @@
     <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_NamespaceLookup" />
     <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_Parts" />
     <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_Schemas" />
+    <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_Factories" />
   </ItemGroup>
 </Project>

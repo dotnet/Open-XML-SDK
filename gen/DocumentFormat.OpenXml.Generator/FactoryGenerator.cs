@@ -15,12 +15,30 @@ public class FactoryGenerator : IIncrementalGenerator
     {
         var openXml = context.GetOpenXmlGeneratorContext()
             .GetOpenXmlServices();
+        var options = context.GetOpenXmlOptions().Select(static (o, _) => o.GenerateFactories);
+        var factories = openXml.Combine(options);
 
-        var packageFactories = openXml.GetPackageFactories();
+        var packageFactories = openXml.GetPackageFactories().Combine(options);
 
-        context.RegisterSourceOutput(packageFactories, GenerateDocumentSpecificPartFeature);
-        context.RegisterSourceOutput(openXml, (context, openXml) =>
+        context.RegisterSourceOutput(packageFactories, (context, factories) =>
         {
+            if (!factories.Right)
+            {
+                return;
+            }
+
+            GenerateDocumentSpecificPartFeature(context, factories.Left);
+        });
+
+        context.RegisterSourceOutput(factories, (context, factories) =>
+        {
+            if (!factories.Right)
+            {
+                return;
+            }
+
+            var openXml = factories.Left;
+
             GeneratePartFactory(context, openXml);
             GenerateRootActivator(context, openXml);
         });

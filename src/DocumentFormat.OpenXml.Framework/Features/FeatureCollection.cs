@@ -76,6 +76,6 @@ namespace DocumentFormat.OpenXml.Features
 
         internal static IFeatureCollection Default => DefaultFeatures.Shared;
 
-        internal static IFeatureCollection TypedOrDefault => TypedFeatures.Shared;
+        internal static IFeatureCollection TypedOrDefault => Default;
     }
 }

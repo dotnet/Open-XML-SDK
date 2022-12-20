@@ -3,17 +3,12 @@
   <PropertyGroup>
     <IsShipped>true</IsShipped>
     <NoWarn>$(NoWarn);3003</NoWarn>
-
-    <!-- For now, we have internal access to the framework assembly. That should be removed, and then we'll need to turn this on. -->
-    <IncludeFrameworkShims>false</IncludeFrameworkShims>
+    <IncludeFrameworkShims>true</IncludeFrameworkShims>
+    <IsNew>true</IsNew>
   </PropertyGroup>
 
   <PropertyGroup>
     <IncludeSourceGenerator>true</IncludeSourceGenerator>
-    <DocumentFormat_OpenXml_Generator_NamespaceLookup>true</DocumentFormat_OpenXml_Generator_NamespaceLookup>
-    <DocumentFormat_OpenXml_Generator_Parts>true</DocumentFormat_OpenXml_Generator_Parts>
-    <DocumentFormat_OpenXml_Generator_Schemas>true</DocumentFormat_OpenXml_Generator_Schemas>
-    <DocumentFormat_OpenXml_Generator_Factories>true</DocumentFormat_OpenXml_Generator_Factories>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -29,11 +24,8 @@
 - Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.
 - Document modification, such as removing tracked revisions or removing unacceptable content from documents.]]>
     </Description>
+    <RootNamespace>DocumentFormat.OpenXml</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="../DocumentFormat.OpenXml.Framework/DocumentFormat.OpenXml.Framework.csproj" />
-  </ItemGroup>
 
   <Choose>
     <When Condition=" '$(TargetFramework)' == 'net35'">
@@ -103,5 +95,32 @@
       </ItemGroup>
     </When>
   </Choose>
+
+  <ItemGroup>
+    <Compile Update="Resources\ExceptionMessages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ExceptionMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Validation\ValidationResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ValidationResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\ExceptionMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionMessages.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>DocumentFormat.OpenXml</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Validation\ValidationResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Import Condition=" '$(GenerateReferences)' == 'true' " Project="$(MSBuildThisFileDirectory)\GenerateReferences.targets" />
 
 </Project>

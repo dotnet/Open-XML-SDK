@@ -57,5 +57,17 @@ namespace DocumentFormat.OpenXml
         {
             return type.GetProperties(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance);
         }
+
+        public static PropertyInfo? GetRuntimeProperty(this Type type, string name)
+        {
+            return type.GetProperty(name);
+        }
+
+#if NET35 || NET40
+        public static object? GetValue(this PropertyInfo property, object? obj)
+        {
+            return property.GetValue(obj, index: null);
+        }
+#endif
     }
 }

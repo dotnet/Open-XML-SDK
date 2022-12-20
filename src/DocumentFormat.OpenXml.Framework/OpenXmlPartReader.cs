@@ -85,39 +85,6 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the OpenXmlPartReader class using the supplied stream.
-        /// </summary>
-        /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
-        [Obsolete(TypedOpenXmlPartReader.ObsoleteMessage, error: true)]
-        public OpenXmlPartReader(Stream partStream)
-            : this(partStream, TypedFeatures.Shared, default)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPartReader class using the supplied stream and Boolean values.
-        /// </summary>
-        /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
-        /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
-        [Obsolete(TypedOpenXmlPartReader.ObsoleteMessage, error: true)]
-        public OpenXmlPartReader(Stream partStream, bool readMiscNodes)
-            : this(partStream, TypedFeatures.Shared, new() { IgnoreWhitespace = true, ReadMiscellaneousNodes = readMiscNodes })
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPartReader class using the supplied stream and Boolean values.
-        /// </summary>
-        /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
-        /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes.</param>
-        /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space.</param>
-        [Obsolete(TypedOpenXmlPartReader.ObsoleteMessage, error: true)]
-        public OpenXmlPartReader(Stream partStream, bool readMiscNodes, bool ignoreWhitespace)
-            : this(partStream, TypedFeatures.Shared, new() { IgnoreWhitespace = ignoreWhitespace, ReadMiscellaneousNodes = readMiscNodes })
-        {
-        }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="OpenXmlPartReader"/> class.
         /// </summary>
         /// <param name="partStream">The stream for the part data.</param>
