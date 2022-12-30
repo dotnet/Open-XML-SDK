@@ -11,18 +11,13 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents an Open XML attribute.
     /// </summary>
-    public struct OpenXmlAttribute : IEquatable<OpenXmlAttribute>
+    public readonly struct OpenXmlAttribute : IEquatable<OpenXmlAttribute>
     {
-        private const string ObsoleteMessage = "OpenXmlAttribute is a struct so setters may not behave as you might expect. Mutable setters will be removed in a future version.";
-
-        private string? _value;
-        private string _prefix;
-
         internal OpenXmlAttribute(in OpenXmlQualifiedName qname, string prefix, string? value)
         {
             QName = qname;
-            _value = value;
-            _prefix = prefix;
+            Value = value;
+            Prefix = prefix;
         }
 
         /// <summary>
@@ -41,8 +36,8 @@ namespace DocumentFormat.OpenXml
             var parsed = PrefixName.Parse(qualifiedName);
 
             QName = new(namespaceUri, parsed.Name);
-            _prefix = parsed.Prefix;
-            _value = value;
+            Prefix = parsed.Prefix;
+            Value = value;
         }
 
         /// <summary>
@@ -60,49 +55,29 @@ namespace DocumentFormat.OpenXml
             }
 
             QName = new(namespaceUri, localName);
-            _prefix = prefix;
-            _value = value;
+            Prefix = prefix;
+            Value = value;
         }
 
         /// <summary>
-        /// Gets or sets the namespace URI of the current attribute.
+        /// Gets the namespace URI of the current attribute.
         /// </summary>
-        public string NamespaceUri
-        {
-            get => QName.Namespace.Uri;
-            [Obsolete(ObsoleteMessage)]
-            set => QName = new(value, LocalName);
-        }
+        public string NamespaceUri => QName.Namespace.Uri;
 
         /// <summary>
-        /// Gets or sets the local name of the attribute.
+        /// Gets the local name of the attribute.
         /// </summary>
-        public string LocalName
-        {
-            get => QName.Name;
-            [Obsolete(ObsoleteMessage)]
-            set => QName = new(QName.Namespace, value);
-        }
+        public string LocalName => QName.Name;
 
         /// <summary>
-        /// Gets or sets the namespace prefix of the current attribute.
+        /// Gets the namespace prefix of the current attribute.
         /// </summary>
-        public string Prefix
-        {
-            get => _prefix;
-            [Obsolete(ObsoleteMessage)]
-            set => _prefix = value;
-        }
+        public string Prefix { get; }
 
         /// <summary>
-        /// Gets or sets the text value of the attribute.
+        /// Gets the text value of the attribute.
         /// </summary>
-        public string? Value
-        {
-            get => _value;
-            [Obsolete(ObsoleteMessage)]
-            set => _value = value;
-        }
+        public string? Value { get; }
 
         /// <summary>
         /// Gets the qualified name of the attribute.
@@ -114,7 +89,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public XName XName => XName.Get(LocalName, QName.Namespace.Uri);
 
-        internal OpenXmlQualifiedName QName { get; private set; }
+        internal OpenXmlQualifiedName QName { get; }
 
         /// <summary>
         /// Determines if this instance of an OpenXmlAttribute structure is equal to the specified instance of an OpenXmlAttribute structure.
@@ -124,7 +99,7 @@ namespace DocumentFormat.OpenXml
         public bool Equals(OpenXmlAttribute other)
             => string.Equals(Value, other.Value, StringComparison.Ordinal)
             && QName.Equals(other.QName)
-            && string.Equals(_prefix, other._prefix, StringComparison.Ordinal);
+            && string.Equals(Prefix, other.Prefix, StringComparison.Ordinal);
 
         /// <summary>
         /// Determines if two instances of OpenXmlAttribute structures are equal.
@@ -162,7 +137,7 @@ namespace DocumentFormat.OpenXml
 
             hashcode.Add(Value, StringComparer.Ordinal);
             hashcode.Add(QName);
-            hashcode.Add(_prefix, StringComparer.Ordinal);
+            hashcode.Add(Prefix, StringComparer.Ordinal);
 
             return hashcode.ToHashCode();
         }
