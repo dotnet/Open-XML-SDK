@@ -433,7 +433,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OpenXmlAttributeTest()
         {
-#pragma warning disable CS0618 // Type or member is obsolete
             var target = new OpenXmlAttribute("test", "http://test", "test", "value");
             var other = new OpenXmlAttribute("test", "http://test", "test", "value");
 
@@ -444,28 +443,13 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(target.Equals((object)other));
             Assert.True(Equals(target, other));
             Assert.Equal(target.GetHashCode(), other.GetHashCode());
+        }
 
-            other.Value = "other";
-
-            Assert.NotEqual(target, other);
-            Assert.False(target == other);
-            Assert.True(target != other);
-            Assert.False(target.Equals(other));
-            Assert.False(target.Equals((object)other));
-            Assert.False(Equals(target, other));
-            Assert.NotEqual(target.GetHashCode(), other.GetHashCode());
-
-            other.Value = "value";
-
-            Assert.Equal(target, other);
-            Assert.True(target == other);
-            Assert.False(target != other);
-            Assert.True(target.Equals(other));
-            Assert.True(target.Equals((object)other));
-            Assert.True(Equals(target, other));
-            Assert.Equal(target.GetHashCode(), other.GetHashCode());
-
-            other.Prefix = "t";
+        [Fact]
+        public void OpenXmlAttributeTestDifferentValues()
+        {
+            var target = new OpenXmlAttribute("test", "http://test", "test", "value");
+            var other = new OpenXmlAttribute("test", "http://test", "test", "other");
 
             Assert.NotEqual(target, other);
             Assert.False(target == other);
@@ -474,7 +458,21 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(target.Equals((object)other));
             Assert.False(Equals(target, other));
             Assert.NotEqual(target.GetHashCode(), other.GetHashCode());
-#pragma warning restore CS0618 // Type or member is obsolete
+        }
+
+        [Fact]
+        public void OpenXmlAttributeTestDifferentPrefix()
+        {
+            var target = new OpenXmlAttribute("test", "http://test", "test", "value");
+            var other = new OpenXmlAttribute("t", "http://test", "test", "value");
+
+            Assert.NotEqual(target, other);
+            Assert.False(target == other);
+            Assert.True(target != other);
+            Assert.False(target.Equals(other));
+            Assert.False(target.Equals((object)other));
+            Assert.False(Equals(target, other));
+            Assert.NotEqual(target.GetHashCode(), other.GetHashCode());
         }
 
         /// <summary>
