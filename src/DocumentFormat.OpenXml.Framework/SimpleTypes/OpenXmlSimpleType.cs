@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml
         /// Gets or sets the internal raw text value.
         /// DO NOT use this property. Only for OpenXmlSimpleType.cs internal use.
         /// </summary>
-        protected string? TextValue { get; set; }
+        private protected string? TextValue { get; set; }
 
         /// <summary>
         /// Gets a value indicating whether the underneath text value is a valid value.
