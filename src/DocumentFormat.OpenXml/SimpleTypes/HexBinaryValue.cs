@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="hexBinary">The <see cref="string"/> value.</param>
         public HexBinaryValue(string? hexBinary)
         {
-            TextValue = hexBinary;
+            TextValueInternal = hexBinary;
         }
 
         /// <summary>
@@ -92,8 +92,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override string? Value
         {
-            get => TextValue;
-            set => TextValue = value;
+            get => TextValueInternal;
+            set => TextValueInternal = value;
         }
 
         /// <summary>

@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (!InnerValue.HasValue && ShouldParse(TextValue) && TryParse(TextValue, out var parsed))
+                if (!InnerValue.HasValue && ShouldParse(TextValueInternal) && TryParse(TextValueInternal, out var parsed))
                 {
                     InnerValue = parsed;
                 }
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml
                 ValidateSet(value);
 
                 InnerValue = value;
-                TextValue = null;
+                TextValueInternal = null;
             }
         }
 
@@ -86,17 +86,17 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (TextValue is null && InnerValue.HasValue)
+                if (TextValueInternal is null && InnerValue.HasValue)
                 {
-                    TextValue = GetText(InnerValue.Value);
+                    TextValueInternal = GetText(InnerValue.Value);
                 }
 
-                return TextValue;
+                return TextValueInternal;
             }
 
             set
             {
-                TextValue = value;
+                TextValueInternal = value;
                 InnerValue = null;
             }
         }

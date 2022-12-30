@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="value">The string value.</param>
         public StringValue(string? value)
         {
-            TextValue = value;
+            TextValueInternal = value;
         }
 
         /// <summary>
@@ -46,8 +46,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override string? Value
         {
-            get => TextValue;
-            set => TextValue = value;
+            get => TextValueInternal;
+            set => TextValueInternal = value;
         }
 
         /// <summary>
