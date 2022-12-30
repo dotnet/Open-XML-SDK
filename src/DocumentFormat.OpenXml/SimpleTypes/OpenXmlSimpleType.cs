@@ -28,19 +28,28 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(source));
             }
 
-            TextValue = source.TextValue;
+            TextValueInternal = source.TextValueInternal;
+        }
+
+        private protected string? TextValueInternal
+        {
+#pragma warning disable CS0618 // Type or member is obsolete
+            get => TextValue;
+            set => TextValue = value;
+#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         /// <summary>
         /// Gets or sets the internal raw text value.
         /// DO NOT use this property. Only for OpenXmlSimpleType.cs internal use.
         /// </summary>
+        [Obsolete("This property is not intended for public use and will be removed in the next release")]
         protected string? TextValue { get; set; }
 
         /// <summary>
         /// Gets a value indicating whether the underneath text value is a valid value.
         /// </summary>
-        public virtual bool HasValue => TextValue is not null;
+        public virtual bool HasValue => TextValueInternal is not null;
 
         internal abstract bool IsValid { get; }
 
@@ -49,9 +58,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public virtual string? InnerText
         {
-            get => TextValue;
+            get => TextValueInternal;
 
-            set => TextValue = value;
+            set => TextValueInternal = value;
         }
 
         internal virtual bool IsEnum => false;

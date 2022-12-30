@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml
         /// </param>
         public Base64BinaryValue(string? base64Binary)
         {
-            TextValue = base64Binary;
+            TextValueInternal = base64Binary;
         }
 
         /// <summary>
@@ -48,8 +48,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override string? Value
         {
-            get => TextValue;
-            set => TextValue = value;
+            get => TextValueInternal;
+            set => TextValueInternal = value;
         }
 
         /// <remarks>

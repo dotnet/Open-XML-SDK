@@ -89,7 +89,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (_list is null)
                 {
-                    if (!string.IsNullOrEmpty(TextValue))
+                    if (!string.IsNullOrEmpty(TextValueInternal))
                     {
                         TryParse();
                     }
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (_list is null)
                 {
-                    if (!string.IsNullOrEmpty(TextValue))
+                    if (!string.IsNullOrEmpty(TextValueInternal))
                     {
                         Parse();
                     }
@@ -139,10 +139,10 @@ namespace DocumentFormat.OpenXml
             _list = new ObservableCollection<T>();
             _list.CollectionChanged += CollectionChanged;
 
-            if (!string.IsNullOrEmpty(TextValue))
+            if (!string.IsNullOrEmpty(TextValueInternal))
             {
                 // split the string by white-space characters as the delimiters.
-                string[] items = TextValue!.Split((char[])null!, StringSplitOptions.RemoveEmptyEntries);
+                string[] items = TextValueInternal!.Split((char[])null!, StringSplitOptions.RemoveEmptyEntries);
 
                 foreach (var item in items)
                 {
@@ -161,10 +161,10 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         private bool TryParse()
         {
-            if (!string.IsNullOrEmpty(TextValue))
+            if (!string.IsNullOrEmpty(TextValueInternal))
             {
                 // split the string by white-space characters as the delimiters.
-                string[] items = TextValue!.Split((char[])null!, StringSplitOptions.RemoveEmptyEntries);
+                string[] items = TextValueInternal!.Split((char[])null!, StringSplitOptions.RemoveEmptyEntries);
 
                 var list = new ObservableCollection<T>();
 
@@ -192,7 +192,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (TextValue is null && _list is not null)
+                if (TextValueInternal is null && _list is not null)
                 {
                     var textString = new StringBuilder();
                     string separator = string.Empty;
@@ -207,15 +207,15 @@ namespace DocumentFormat.OpenXml
                         }
                     }
 
-                    TextValue = textString.ToString();
+                    TextValueInternal = textString.ToString();
                 }
 
-                return TextValue;
+                return TextValueInternal;
             }
 
             set
             {
-                TextValue = value;
+                TextValueInternal = value;
                 _list = null;
             }
         }
@@ -225,7 +225,7 @@ namespace DocumentFormat.OpenXml
         private void CollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
         {
             // clear the TextValue when the collection is changed.
-            TextValue = null;
+            TextValueInternal = null;
         }
 
         /// <inheritdoc/>
