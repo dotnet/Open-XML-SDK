@@ -4,7 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.19.0]
+## [3.0.0]
+
+### Breaking change
+- Core infrastructure is now contained in a new package DocumentFormat.OpenXml.Framework. Typed classes are still in DocumentFormat.OpenXml. This means that you may reference DocumentFormat.OpenXml and still compile the same types, but if you want a smaller package, you may rely on just the framework package. 
+
+## [2.20.0]
+
+### Changed
+- Marked all obsoleted APIs as compile as error. These will be removed in the next release
+
+## [2.19.0] - 2022-12-14
 
 ### Added
 - .NET 6 target with support for trimming (#1243, #1240)
