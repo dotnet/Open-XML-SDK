@@ -14,15 +14,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public partial class SpreadsheetDocument : TypedOpenXmlPackage
     {
-        /// <summary>
-        /// Creates a SpreadsheetDocument.
-        /// </summary>
-        [Obsolete(DoNotUseParameterlessConstructor)]
-        protected SpreadsheetDocument()
-            : base()
-        {
-        }
-
         private SpreadsheetDocument(Package package, OpenSettings settings)
             : base(package, settings)
         {

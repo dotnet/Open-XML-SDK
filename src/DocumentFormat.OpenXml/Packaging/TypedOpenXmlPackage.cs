@@ -16,11 +16,6 @@ namespace DocumentFormat.OpenXml.Packaging;
 [EditorBrowsable(EditorBrowsableState.Never)]
 public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
 {
-    [Obsolete(DoNotUseParameterlessConstructor)]
-    private protected TypedOpenXmlPackage()
-    {
-    }
-
     private protected TypedOpenXmlPackage(Package package, OpenSettings settings)
         : base(package, settings)
     {

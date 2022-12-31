@@ -11,8 +11,6 @@ namespace DocumentFormat.OpenXml;
 /// </summary>
 public sealed class TypedOpenXmlPartReader : OpenXmlPartReader
 {
-    internal const string ObsoleteMessage = "Use TypedOpenXmlPartReader instead.";
-
     /// <summary>
     /// Initializes a new instance of the <see cref="TypedOpenXmlPartReader"/> class.
     /// </summary>

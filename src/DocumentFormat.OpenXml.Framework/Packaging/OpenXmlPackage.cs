@@ -27,17 +27,6 @@ namespace DocumentFormat.OpenXml.Packaging
         private Package? _package;
 
         /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class.
-        /// </summary>
-        [Obsolete(DoNotUseParameterlessConstructor, error: true)]
-        protected OpenXmlPackage()
-            : base()
-        {
-            _package = null!;
-            OpenSettings = null!;
-        }
-
-        /// <summary>
         /// Create an <see cref="OpenXmlPackage"/>.
         /// </summary>
         /// <param name="package">Underlying package.</param>

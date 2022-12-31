@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed `OpenXmlSimpleType.TextValue`. This property was never meant to be used externally
 - Core infrastructure is now contained in a new package DocumentFormat.OpenXml.Framework. Typed classes are still in DocumentFormat.OpenXml. This means that you may reference DocumentFormat.OpenXml and still compile the same types, but if you want a smaller package, you may rely on just the framework package. 
 - Removed mutable properties on OpenXmlAttribute and marked as `readonly`
+- Removed obsoleted constructors from parts and packages
 
 ## [2.20.0]
 

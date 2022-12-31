@@ -942,21 +942,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        /// <summary>
-        /// Gets the count of all parts of type T.
-        /// </summary>
-        /// <typeparam name="T">The type of the part.</typeparam>
-        /// <returns>The number of parts of this type.</returns>
-        [Obsolete("Use GetPartsOfType<T>().Count() instead")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public int GetPartsCountOfType<T>()
-            where T : OpenXmlPart
-        {
-            ThrowIfObjectDisposed();
-
-            return GetPartsOfType<T>().Count();
-        }
-
         #endregion
 
         #region methods to operate annotation
@@ -1037,32 +1022,6 @@ namespace DocumentFormat.OpenXml.Packaging
             ThrowIfObjectDisposed();
 
             return ChildrenRelationshipParts.Values.OfType<T>();
-        }
-
-        /// <summary>
-        /// Gets all the children parts of the specified type <typeparamref name="T"/> into <paramref name="partCollection"/> of this part.
-        /// </summary>
-        /// <typeparam name="T">Derived class from OpenXmlPart.</typeparam>
-        /// <param name="partCollection">The part collection to be filled in.</param>
-        /// <exception cref="ArgumentNullException">Thrown when <paramref name="partCollection"/> is null.</exception>
-        [Obsolete("Use GetPartsOfType<T> to manually add to a collection")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public void GetPartsOfType<T>(ICollection<T> partCollection)
-            where T : OpenXmlPart
-        {
-            ThrowIfObjectDisposed();
-
-            if (partCollection is null)
-            {
-                throw new ArgumentNullException(nameof(partCollection));
-            }
-
-            partCollection.Clear();
-
-            foreach (var part in GetPartsOfType<T>())
-            {
-                partCollection.Add(part);
-            }
         }
 
         #region internal methods

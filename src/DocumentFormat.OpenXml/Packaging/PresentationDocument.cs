@@ -14,15 +14,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public partial class PresentationDocument : TypedOpenXmlPackage
     {
-        /// <summary>
-        /// Creates a PresentationDocument.
-        /// </summary>
-        [Obsolete(DoNotUseParameterlessConstructor)]
-        protected PresentationDocument()
-            : base()
-        {
-        }
-
         private PresentationDocument(Package package, OpenSettings settings)
             : base(package, settings)
         {

@@ -69,14 +69,6 @@ namespace DocumentFormat.OpenXml
         public static string MarkupCompatibilityNamespace => InternalQName.Namespace.Uri;
 
         /// <summary>
-        /// Gets a value that represents the markup compatibility
-        /// namespace ID.
-        /// </summary>
-        [Obsolete("NamespaceId will be removed in later releases.")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public static byte MarkupCompatibilityNamespaceId => 0;
-
-        /// <summary>
         /// Gets a value that represents the tag name of the
         /// AlternateContent element.
         /// </summary>

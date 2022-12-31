@@ -15,14 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public partial class WordprocessingDocument : TypedOpenXmlPackage
     {
-        /// <summary>
-        /// Creates a WordprocessingDocument.
-        /// </summary>
-        [Obsolete(DoNotUseParameterlessConstructor)]
-        protected WordprocessingDocument()
-        {
-        }
-
         private WordprocessingDocument(Package package, OpenSettings settings)
             : base(package, settings)
         {
