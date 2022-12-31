@@ -9,16 +9,12 @@ namespace DocumentFormat.OpenXml.Framework
     {
         public PartConstraintRule(
             string relationship,
-            string name,
             string? contentType,
             bool minOccursIsNonZero,
             bool maxOccursGreatThanOne,
             FileFormatVersions version)
         {
             RelationshipType = relationship;
-#pragma warning disable CS0618 // Type or member is obsolete
-            PartClassName = name;
-#pragma warning restore CS0618 // Type or member is obsolete
             PartContentType = contentType;
             MinOccursIsNonZero = minOccursIsNonZero;
             MaxOccursGreatThanOne = maxOccursGreatThanOne;
@@ -29,12 +25,6 @@ namespace DocumentFormat.OpenXml.Framework
         /// Gets the relationship type.
         /// </summary>
         public string RelationshipType { get; }
-
-        /// <summary>
-        /// Gets the class name for the relationship type.
-        /// </summary>
-        [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
-        public string PartClassName { get; }
 
         /// <summary>
         /// Gets the content type of the part. Some types with fixed content types have

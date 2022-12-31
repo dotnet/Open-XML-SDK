@@ -1,36 +1,16 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using System;
-using System.ComponentModel;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-    /// <summary>
-    /// Represents the Open XML package validation events.
-    /// </summary>
-    [Serializable]
-    [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
-    [EditorBrowsable(EditorBrowsableState.Never)]
-    public sealed class OpenXmlPackageValidationEventArgs : EventArgs
+    internal sealed class OpenXmlPackageValidationResult
     {
-        [NonSerialized]
-        private readonly object _sender;
-
         private string? _message;
-
-        [NonSerialized]
         private OpenXmlPart? _subPart;
-
-        [NonSerialized]
         private OpenXmlPart? _part;
-
-        internal OpenXmlPackageValidationEventArgs(object sender)
-        {
-            _sender = sender;
-        }
-
-        internal object Sender => _sender;
 
         /// <summary>
         /// Gets or sets the message string of the event.
@@ -56,12 +36,12 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets the class name of the part.
+        /// Gets or sets the class name of the part.
         /// </summary>
-        public string? PartClassName { get; internal set; }
+        public string? RelationshipType { get; set; }
 
         /// <summary>
-        /// Gets the part that caused the event.
+        /// Gets or sets the part that caused the event.
         /// </summary>
         public OpenXmlPart? SubPart
         {
@@ -70,7 +50,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets the part in which to process the validation.
+        /// Gets or sets the part in which to process the validation.
         /// </summary>
         public OpenXmlPart? Part
         {

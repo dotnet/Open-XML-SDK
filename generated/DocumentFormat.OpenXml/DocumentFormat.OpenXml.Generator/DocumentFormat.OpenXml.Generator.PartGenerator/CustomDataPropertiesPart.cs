@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Path => "customData";
             private static readonly PartConstraints _partConstraints = new ()
             {
-                { "http://schemas.microsoft.com/office/2007/relationships/customData", "CustomDataPart", "application/binary", false, false, FileFormatVersions.Office2010 },
+                { "http://schemas.microsoft.com/office/2007/relationships/customData", "application/binary", false, false, FileFormatVersions.Office2010 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
             IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;

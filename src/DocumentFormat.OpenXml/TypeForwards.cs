@@ -89,8 +89,6 @@
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Packaging.OpenXmlPackage))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Packaging.OpenXmlPackageException))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Packaging.OpenXmlPackageExtensions))]
-[assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Packaging.OpenXmlPackageValidationEventArgs))]
-[assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Packaging.OpenXmlPackageValidationSettings))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Packaging.OpenXmlPart))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Packaging.PartExtensionProvider))]

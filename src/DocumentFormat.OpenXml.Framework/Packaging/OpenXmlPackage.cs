@@ -370,60 +370,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #endregion
 
-        #region public virtual methods
-
-        /// <summary>
-        /// Validates the package. This method does not validate the XML content in each part.
-        /// </summary>
-        /// <param name="validationSettings">The OpenXmlPackageValidationSettings for validation events.</param>
-        /// <remarks>If validationSettings is null or no EventHandler is set, the default behavior is to throw an OpenXmlPackageException on the validation error. </remarks>
-        [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public void Validate(OpenXmlPackageValidationSettings validationSettings)
-        {
-            ThrowIfObjectDisposed();
-
-            void DefaultValidationEventHandler(object? sender, OpenXmlPackageValidationEventArgs e)
-            {
-                var exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
-
-                exception.Data.Add("OpenXmlPackageValidationEventArgs", e);
-
-                throw exception;
-            }
-
-            OpenXmlPackageValidationSettings ValidateSettings(OpenXmlPackageValidationSettings settings)
-            {
-                if (settings.GetEventHandler() is null)
-                {
-                    // use default DefaultValidationEventHandler( ) which throw an exception
-                    settings.EventHandler += DefaultValidationEventHandler;
-                }
-
-                if (!settings.FileFormat.Any())
-                {
-                    settings.FileFormat = FileFormatVersions.Office2007;
-                }
-
-                return settings;
-            }
-
-            new Validation.PackageValidator(this).Validate(ValidateSettings(validationSettings ?? new OpenXmlPackageValidationSettings()));
-        }
-
-        [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        internal void Validate(OpenXmlPackageValidationSettings validationSettings, FileFormatVersions fileFormatVersions)
-        {
-            Debug.Assert(fileFormatVersions.Any());
-
-            validationSettings.FileFormat = fileFormatVersions;
-
-            Validate(validationSettings);
-        }
-
-        #endregion
-
         #region dispose related methods
 
         /// <summary>
