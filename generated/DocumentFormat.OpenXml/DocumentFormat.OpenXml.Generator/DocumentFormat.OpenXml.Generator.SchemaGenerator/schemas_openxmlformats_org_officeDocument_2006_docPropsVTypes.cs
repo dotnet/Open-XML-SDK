@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -64,7 +62,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("vt:variant")]
     public partial class Variant : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -667,7 +664,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("vt:vector")]
     public partial class VTVector : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -705,7 +701,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Vector Base Type</para>
         /// <para>Represents the following attribute in the schema: baseType</para>
         /// </summary>
-        [SchemaAttr("baseType")]
         public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>? BaseType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>>();
@@ -716,7 +711,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Vector Size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public UInt32Value? Size
         {
             get => GetAttribute<UInt32Value>();
@@ -814,7 +808,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("vt:array")]
     public partial class VTArray : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -852,7 +845,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Array Lower Bounds Attribute</para>
         /// <para>Represents the following attribute in the schema: lBound</para>
         /// </summary>
-        [SchemaAttr("lBound")]
         public Int32Value? LowerBounds
         {
             get => GetAttribute<Int32Value>();
@@ -863,7 +855,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Array Upper Bounds Attribute</para>
         /// <para>Represents the following attribute in the schema: uBound</para>
         /// </summary>
-        [SchemaAttr("uBound")]
         public Int32Value? UpperBounds
         {
             get => GetAttribute<Int32Value>();
@@ -874,7 +865,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Array Base Type</para>
         /// <para>Represents the following attribute in the schema: baseType</para>
         /// </summary>
-        [SchemaAttr("baseType")]
         public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>? BaseType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>>();
@@ -946,7 +936,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:blob.</para>
     /// </summary>
-    [SchemaAttr("vt:blob")]
     public partial class VTBlob : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -985,7 +974,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:oblob.</para>
     /// </summary>
-    [SchemaAttr("vt:oblob")]
     public partial class VTOBlob : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1024,7 +1012,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:stream.</para>
     /// </summary>
-    [SchemaAttr("vt:stream")]
     public partial class VTStreamData : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1063,7 +1050,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ostream.</para>
     /// </summary>
-    [SchemaAttr("vt:ostream")]
     public partial class VTOStreamData : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1102,7 +1088,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:storage.</para>
     /// </summary>
-    [SchemaAttr("vt:storage")]
     public partial class VTStorage : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1141,7 +1126,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ostorage.</para>
     /// </summary>
-    [SchemaAttr("vt:ostorage")]
     public partial class VTOStorage : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1180,7 +1164,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:empty.</para>
     /// </summary>
-    [SchemaAttr("vt:empty")]
     public partial class VTEmpty : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1205,7 +1188,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:null.</para>
     /// </summary>
-    [SchemaAttr("vt:null")]
     public partial class VTNull : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1230,7 +1212,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i1.</para>
     /// </summary>
-    [SchemaAttr("vt:i1")]
     public partial class VTByte : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1269,7 +1250,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i2.</para>
     /// </summary>
-    [SchemaAttr("vt:i2")]
     public partial class VTShort : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1308,7 +1288,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i4.</para>
     /// </summary>
-    [SchemaAttr("vt:i4")]
     public partial class VTInt32 : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1347,7 +1326,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:int.</para>
     /// </summary>
-    [SchemaAttr("vt:int")]
     public partial class VTInteger : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1386,7 +1364,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i8.</para>
     /// </summary>
-    [SchemaAttr("vt:i8")]
     public partial class VTInt64 : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1425,7 +1402,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui1.</para>
     /// </summary>
-    [SchemaAttr("vt:ui1")]
     public partial class VTUnsignedByte : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1464,7 +1440,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui2.</para>
     /// </summary>
-    [SchemaAttr("vt:ui2")]
     public partial class VTUnsignedShort : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1503,7 +1478,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui4.</para>
     /// </summary>
-    [SchemaAttr("vt:ui4")]
     public partial class VTUnsignedInt32 : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1542,7 +1516,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:uint.</para>
     /// </summary>
-    [SchemaAttr("vt:uint")]
     public partial class VTUnsignedInteger : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1581,7 +1554,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui8.</para>
     /// </summary>
-    [SchemaAttr("vt:ui8")]
     public partial class VTUnsignedInt64 : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1620,7 +1592,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:r4.</para>
     /// </summary>
-    [SchemaAttr("vt:r4")]
     public partial class VTFloat : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1659,7 +1630,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:r8.</para>
     /// </summary>
-    [SchemaAttr("vt:r8")]
     public partial class VTDouble : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1698,7 +1668,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:decimal.</para>
     /// </summary>
-    [SchemaAttr("vt:decimal")]
     public partial class VTDecimal : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1737,7 +1706,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:lpstr.</para>
     /// </summary>
-    [SchemaAttr("vt:lpstr")]
     public partial class VTLPSTR : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1775,7 +1743,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:lpwstr.</para>
     /// </summary>
-    [SchemaAttr("vt:lpwstr")]
     public partial class VTLPWSTR : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1813,7 +1780,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:bstr.</para>
     /// </summary>
-    [SchemaAttr("vt:bstr")]
     public partial class VTBString : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1851,7 +1817,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:date.</para>
     /// </summary>
-    [SchemaAttr("vt:date")]
     public partial class VTDate : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1890,7 +1855,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:filetime.</para>
     /// </summary>
-    [SchemaAttr("vt:filetime")]
     public partial class VTFileTime : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1929,7 +1893,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:bool.</para>
     /// </summary>
-    [SchemaAttr("vt:bool")]
     public partial class VTBool : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1968,7 +1931,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:cy.</para>
     /// </summary>
-    [SchemaAttr("vt:cy")]
     public partial class VTCurrency : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2007,7 +1969,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:error.</para>
     /// </summary>
-    [SchemaAttr("vt:error")]
     public partial class VTError : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2046,7 +2007,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:vstream.</para>
     /// </summary>
-    [SchemaAttr("vt:vstream")]
     public partial class VTVStreamData : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2073,7 +2033,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>VSTREAM Version Attribute</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
-        [SchemaAttr("version")]
         public StringValue? Version
         {
             get => GetAttribute<StringValue>();
@@ -2102,7 +2061,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:clsid.</para>
     /// </summary>
-    [SchemaAttr("vt:clsid")]
     public partial class VTClassId : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2141,7 +2099,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:cf.</para>
     /// </summary>
-    [SchemaAttr("vt:cf")]
     public partial class VTClipboardData : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2168,7 +2125,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Format Attribute</para>
         /// <para>Represents the following attribute in the schema: format</para>
         /// </summary>
-        [SchemaAttr("format")]
         public Int32Value? Format
         {
             get => GetAttribute<Int32Value>();
@@ -2179,7 +2135,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public UInt32Value? Size
         {
             get => GetAttribute<UInt32Value>();

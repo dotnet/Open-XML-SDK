@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xprd:richInfo.</para>
     /// </summary>
-    [SchemaAttr("xprd:richInfo")]
     public partial class RichDataPivotCacheGuid : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37,7 +34,6 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData
         /// <para>pivotCacheGuid, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: pivotCacheGuid</para>
         /// </summary>
-        [SchemaAttr("pivotCacheGuid")]
         public StringValue? PivotCacheGuid
         {
             get => GetAttribute<StringValue>();

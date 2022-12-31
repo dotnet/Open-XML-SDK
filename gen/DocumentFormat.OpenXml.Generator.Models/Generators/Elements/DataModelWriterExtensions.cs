@@ -80,7 +80,6 @@ public static class DataModelWriterExtensions
     private static void WriteType(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaType element)
     {
         writer.WriteDocumentationComment(BuildTypeComments(services, element));
-        writer.WriteSchemaAttribute(element.Name.QName);
         writer.Write("public ");
 
         if (element.IsAbstract)
@@ -374,7 +373,6 @@ public static class DataModelWriterExtensions
             Remarks = remarks,
         });
 
-        writer.WriteSchemaAttribute(attribute.QName);
         writer.Write("public ");
         writer.Write(attribute.Type);
         writer.Write("? ");
@@ -521,16 +519,6 @@ public static class DataModelWriterExtensions
             writer.WriteLine(";");
 
             writer.WriteLine("internal set => OpenXmlPart = value;");
-        }
-    }
-
-    private static void WriteSchemaAttribute(this IndentedTextWriter writer, QName qname)
-    {
-        if (!qname.IsEmpty)
-        {
-            writer.Write("[SchemaAttr(");
-            writer.WriteItem(qname.ToString());
-            writer.WriteLine(")]");
         }
     }
 

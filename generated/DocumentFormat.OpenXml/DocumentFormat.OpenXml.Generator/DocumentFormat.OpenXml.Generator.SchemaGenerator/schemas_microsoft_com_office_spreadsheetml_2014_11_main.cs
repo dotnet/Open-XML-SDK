@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -29,7 +27,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping" /> <c>&lt;x16:modelTimeGrouping></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x16:modelTimeGroupings")]
     public partial class ModelTimeGroupings : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -90,7 +87,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn" /> <c>&lt;x16:calculatedTimeColumn></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x16:modelTimeGrouping")]
     public partial class ModelTimeGrouping : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -128,7 +124,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>tableName, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: tableName</para>
         /// </summary>
-        [SchemaAttr("tableName")]
         public StringValue? TableName
         {
             get => GetAttribute<StringValue>();
@@ -139,7 +134,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>columnName, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: columnName</para>
         /// </summary>
-        [SchemaAttr("columnName")]
         public StringValue? ColumnName
         {
             get => GetAttribute<StringValue>();
@@ -150,7 +144,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>columnId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: columnId</para>
         /// </summary>
-        [SchemaAttr("columnId")]
         public StringValue? ColumnId
         {
             get => GetAttribute<StringValue>();
@@ -191,7 +184,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x16:calculatedTimeColumn.</para>
     /// </summary>
-    [SchemaAttr("x16:calculatedTimeColumn")]
     public partial class CalculatedTimeColumn : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -205,7 +197,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>columnName, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: columnName</para>
         /// </summary>
-        [SchemaAttr("columnName")]
         public StringValue? ColumnName
         {
             get => GetAttribute<StringValue>();
@@ -216,7 +207,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>columnId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: columnId</para>
         /// </summary>
-        [SchemaAttr("columnId")]
         public StringValue? ColumnId
         {
             get => GetAttribute<StringValue>();
@@ -227,7 +217,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>contentType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: contentType</para>
         /// </summary>
-        [SchemaAttr("contentType")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType>? ContentType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType>>();
@@ -238,7 +227,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>isSelected, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: isSelected</para>
         /// </summary>
-        [SchemaAttr("isSelected")]
         public BooleanValue? IsSelected
         {
             get => GetAttribute<BooleanValue>();

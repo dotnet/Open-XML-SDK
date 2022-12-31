@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -31,7 +29,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty" /> <c>&lt;msink:property></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("msink:context")]
     public partial class ContextNode : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -69,7 +66,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -80,7 +76,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public StringValue? Type
         {
             get => GetAttribute<StringValue>();
@@ -91,7 +86,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>rotatedBoundingBox</para>
         /// <para>Represents the following attribute in the schema: rotatedBoundingBox</para>
         /// </summary>
-        [SchemaAttr("rotatedBoundingBox")]
         public ListValue<StringValue>? RotatedBoundingBox
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -102,7 +96,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>alignmentLevel</para>
         /// <para>Represents the following attribute in the schema: alignmentLevel</para>
         /// </summary>
-        [SchemaAttr("alignmentLevel")]
         public Int32Value? AlignmentLevel
         {
             get => GetAttribute<Int32Value>();
@@ -113,7 +106,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>contentType</para>
         /// <para>Represents the following attribute in the schema: contentType</para>
         /// </summary>
-        [SchemaAttr("contentType")]
         public Int32Value? ContentType
         {
             get => GetAttribute<Int32Value>();
@@ -124,7 +116,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>ascender</para>
         /// <para>Represents the following attribute in the schema: ascender</para>
         /// </summary>
-        [SchemaAttr("ascender")]
         public StringValue? Ascender
         {
             get => GetAttribute<StringValue>();
@@ -135,7 +126,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>descender</para>
         /// <para>Represents the following attribute in the schema: descender</para>
         /// </summary>
-        [SchemaAttr("descender")]
         public StringValue? Descender
         {
             get => GetAttribute<StringValue>();
@@ -146,7 +136,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>baseline</para>
         /// <para>Represents the following attribute in the schema: baseline</para>
         /// </summary>
-        [SchemaAttr("baseline")]
         public StringValue? Baseline
         {
             get => GetAttribute<StringValue>();
@@ -157,7 +146,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>midline</para>
         /// <para>Represents the following attribute in the schema: midline</para>
         /// </summary>
-        [SchemaAttr("midline")]
         public StringValue? Midline
         {
             get => GetAttribute<StringValue>();
@@ -168,7 +156,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>customRecognizerId</para>
         /// <para>Represents the following attribute in the schema: customRecognizerId</para>
         /// </summary>
-        [SchemaAttr("customRecognizerId")]
         public StringValue? CustomRecognizerId
         {
             get => GetAttribute<StringValue>();
@@ -179,7 +166,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>mathML</para>
         /// <para>Represents the following attribute in the schema: mathML</para>
         /// </summary>
-        [SchemaAttr("mathML")]
         public StringValue? MathML
         {
             get => GetAttribute<StringValue>();
@@ -190,7 +176,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>mathStruct</para>
         /// <para>Represents the following attribute in the schema: mathStruct</para>
         /// </summary>
-        [SchemaAttr("mathStruct")]
         public StringValue? MathStruct
         {
             get => GetAttribute<StringValue>();
@@ -201,7 +186,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>mathSymbol</para>
         /// <para>Represents the following attribute in the schema: mathSymbol</para>
         /// </summary>
-        [SchemaAttr("mathSymbol")]
         public StringValue? MathSymbol
         {
             get => GetAttribute<StringValue>();
@@ -212,7 +196,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>beginModifierType</para>
         /// <para>Represents the following attribute in the schema: beginModifierType</para>
         /// </summary>
-        [SchemaAttr("beginModifierType")]
         public StringValue? BeginModifierType
         {
             get => GetAttribute<StringValue>();
@@ -223,7 +206,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>endModifierType</para>
         /// <para>Represents the following attribute in the schema: endModifierType</para>
         /// </summary>
-        [SchemaAttr("endModifierType")]
         public StringValue? EndModifierType
         {
             get => GetAttribute<StringValue>();
@@ -234,7 +216,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>rotationAngle</para>
         /// <para>Represents the following attribute in the schema: rotationAngle</para>
         /// </summary>
-        [SchemaAttr("rotationAngle")]
         public Int32Value? RotationAngle
         {
             get => GetAttribute<Int32Value>();
@@ -245,7 +226,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>hotPoints</para>
         /// <para>Represents the following attribute in the schema: hotPoints</para>
         /// </summary>
-        [SchemaAttr("hotPoints")]
         public ListValue<StringValue>? HotPoints
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -256,7 +236,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>centroid</para>
         /// <para>Represents the following attribute in the schema: centroid</para>
         /// </summary>
-        [SchemaAttr("centroid")]
         public StringValue? Centroid
         {
             get => GetAttribute<StringValue>();
@@ -267,7 +246,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>semanticType</para>
         /// <para>Represents the following attribute in the schema: semanticType</para>
         /// </summary>
-        [SchemaAttr("semanticType")]
         public StringValue? SemanticType
         {
             get => GetAttribute<StringValue>();
@@ -278,7 +256,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>shapeName</para>
         /// <para>Represents the following attribute in the schema: shapeName</para>
         /// </summary>
-        [SchemaAttr("shapeName")]
         public StringValue? ShapeName
         {
             get => GetAttribute<StringValue>();
@@ -289,7 +266,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>shapeGeometry</para>
         /// <para>Represents the following attribute in the schema: shapeGeometry</para>
         /// </summary>
-        [SchemaAttr("shapeGeometry")]
         public ListValue<StringValue>? ShapeGeometry
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -403,7 +379,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:property.</para>
     /// </summary>
-    [SchemaAttr("msink:property")]
     public partial class ContextNodeProperty : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -430,7 +405,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public StringValue? Type
         {
             get => GetAttribute<StringValue>();
@@ -457,7 +431,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:sourceLink.</para>
     /// </summary>
-    [SchemaAttr("msink:sourceLink")]
     public partial class SourceLink : ContextLinkType
     {
         /// <summary>
@@ -482,7 +455,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:destinationLink.</para>
     /// </summary>
-    [SchemaAttr("msink:destinationLink")]
     public partial class DestinationLink : ContextLinkType
     {
         /// <summary>
@@ -520,7 +492,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>direction</para>
         /// <para>Represents the following attribute in the schema: direction</para>
         /// </summary>
-        [SchemaAttr("direction")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>>();
@@ -531,7 +502,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>ref</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Reference
         {
             get => GetAttribute<StringValue>();

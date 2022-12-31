@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -30,7 +28,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("aanim:animPr")]
     public partial class AnimationProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -68,7 +65,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>name, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -79,7 +75,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>length, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-        [SchemaAttr("length")]
         public StringValue? Length
         {
             get => GetAttribute<StringValue>();
@@ -90,7 +85,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public StringValue? Count
         {
             get => GetAttribute<StringValue>();
@@ -101,7 +95,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>auto, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: auto</para>
         /// </summary>
-        [SchemaAttr("auto")]
         public BooleanValue? Auto
         {
             get => GetAttribute<BooleanValue>();
@@ -112,7 +105,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>offset, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: offset</para>
         /// </summary>
-        [SchemaAttr("offset")]
         public StringValue? Offset
         {
             get => GetAttribute<StringValue>();
@@ -123,7 +115,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>st, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [SchemaAttr("st")]
         public StringValue? St
         {
             get => GetAttribute<StringValue>();
@@ -134,7 +125,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <para>end, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-        [SchemaAttr("end")]
         public StringValue? End
         {
             get => GetAttribute<StringValue>();
@@ -199,7 +189,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("aanim:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>

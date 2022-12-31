@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -31,7 +29,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person" /> <c>&lt;xltc:person></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xltc:personList")]
     public partial class PersonList : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -126,7 +123,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment" /> <c>&lt;xltc:threadedComment></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xltc:ThreadedComments")]
     public partial class ThreadedComments : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -220,7 +216,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xltc:person")]
     public partial class Person : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -258,7 +253,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>displayName, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: displayName</para>
         /// </summary>
-        [SchemaAttr("displayName")]
         public StringValue? DisplayName
         {
             get => GetAttribute<StringValue>();
@@ -269,7 +263,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>id, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -280,7 +273,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>userId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: userId</para>
         /// </summary>
-        [SchemaAttr("userId")]
         public StringValue? UserId
         {
             get => GetAttribute<StringValue>();
@@ -291,7 +283,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>providerId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: providerId</para>
         /// </summary>
-        [SchemaAttr("providerId")]
         public StringValue? ProviderId
         {
             get => GetAttribute<StringValue>();
@@ -350,7 +341,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xltc:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -419,7 +409,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions" /> <c>&lt;xltc:mentions></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xltc:threadedComment")]
     public partial class ThreadedComment : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -457,7 +446,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>ref, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Ref
         {
             get => GetAttribute<StringValue>();
@@ -468,7 +456,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>dT, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: dT</para>
         /// </summary>
-        [SchemaAttr("dT")]
         public DateTimeValue? DT
         {
             get => GetAttribute<DateTimeValue>();
@@ -479,7 +466,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>personId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: personId</para>
         /// </summary>
-        [SchemaAttr("personId")]
         public StringValue? PersonId
         {
             get => GetAttribute<StringValue>();
@@ -490,7 +476,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>id, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -501,7 +486,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>parentId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: parentId</para>
         /// </summary>
-        [SchemaAttr("parentId")]
         public StringValue? ParentId
         {
             get => GetAttribute<StringValue>();
@@ -512,7 +496,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>done, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: done</para>
         /// </summary>
-        [SchemaAttr("done")]
         public BooleanValue? Done
         {
             get => GetAttribute<BooleanValue>();
@@ -601,7 +584,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:text.</para>
     /// </summary>
-    [SchemaAttr("xltc:text")]
     public partial class ThreadedCommentText : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -646,7 +628,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention" /> <c>&lt;xltc:mention></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xltc:mentions")]
     public partial class ThreadedCommentMentions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -701,7 +682,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:mention.</para>
     /// </summary>
-    [SchemaAttr("xltc:mention")]
     public partial class Mention : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -715,7 +695,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>mentionpersonId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: mentionpersonId</para>
         /// </summary>
-        [SchemaAttr("mentionpersonId")]
         public StringValue? MentionpersonId
         {
             get => GetAttribute<StringValue>();
@@ -726,7 +705,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>mentionId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: mentionId</para>
         /// </summary>
-        [SchemaAttr("mentionId")]
         public StringValue? MentionId
         {
             get => GetAttribute<StringValue>();
@@ -737,7 +715,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>startIndex, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: startIndex</para>
         /// </summary>
-        [SchemaAttr("startIndex")]
         public UInt32Value? StartIndex
         {
             get => GetAttribute<UInt32Value>();
@@ -748,7 +725,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>length, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-        [SchemaAttr("length")]
         public UInt32Value? Length
         {
             get => GetAttribute<UInt32Value>();

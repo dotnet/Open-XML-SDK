@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -37,7 +35,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleVariation" /> <c>&lt;cs:variation></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:colorStyle")]
     public partial class ColorStyle : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -75,7 +72,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>meth, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: meth</para>
         /// </summary>
-        [SchemaAttr("meth")]
         public StringValue? Method
         {
             get => GetAttribute<StringValue>();
@@ -86,7 +82,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -213,7 +208,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall" /> <c>&lt;cs:wall></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:chartStyle")]
     public partial class ChartStyle : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -251,7 +245,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -823,7 +816,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HueModulation" /> <c>&lt;a:hueMod></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:variation")]
     public partial class ColorStyleVariation : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -944,7 +936,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1038,7 +1029,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HueModulation" /> <c>&lt;a:hueMod></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:styleClr")]
     public partial class StyleColor : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1076,7 +1066,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>val, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -1186,7 +1175,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:lnRef")]
     public partial class LineReference : StyleReference
     {
         /// <summary>
@@ -1264,7 +1252,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:fillRef")]
     public partial class FillReference : StyleReference
     {
         /// <summary>
@@ -1342,7 +1329,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:effectRef")]
     public partial class EffectReference : StyleReference
     {
         /// <summary>
@@ -1457,7 +1443,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>idx, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
@@ -1468,7 +1453,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>mods, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: mods</para>
         /// </summary>
-        [SchemaAttr("mods")]
         public ListValue<StringValue>? Modifiers
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -1499,7 +1483,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:lineWidthScale.</para>
     /// </summary>
-    [SchemaAttr("cs:lineWidthScale")]
     public partial class LineWidthScale : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1551,7 +1534,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:fontRef")]
     public partial class FontReference : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1589,7 +1571,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>idx, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>? Index
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>>();
@@ -1600,7 +1581,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>mods, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: mods</para>
         /// </summary>
-        [SchemaAttr("mods")]
         public ListValue<StringValue>? Modifiers
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -1673,7 +1653,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:spPr")]
     public partial class ShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1711,7 +1690,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -1830,7 +1808,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.UnderlineFollowsText" /> <c>&lt;a:uLnTx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:defRPr")]
     public partial class TextCharacterPropertiesType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1868,7 +1845,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>kumimoji</para>
         /// <para>Represents the following attribute in the schema: kumimoji</para>
         /// </summary>
-        [SchemaAttr("kumimoji")]
         public BooleanValue? Kumimoji
         {
             get => GetAttribute<BooleanValue>();
@@ -1879,7 +1855,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>lang</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr("lang")]
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -1890,7 +1865,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>altLang</para>
         /// <para>Represents the following attribute in the schema: altLang</para>
         /// </summary>
-        [SchemaAttr("altLang")]
         public StringValue? AlternativeLanguage
         {
             get => GetAttribute<StringValue>();
@@ -1901,7 +1875,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>sz</para>
         /// <para>Represents the following attribute in the schema: sz</para>
         /// </summary>
-        [SchemaAttr("sz")]
         public Int32Value? FontSize
         {
             get => GetAttribute<Int32Value>();
@@ -1912,7 +1885,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>b</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [SchemaAttr("b")]
         public BooleanValue? Bold
         {
             get => GetAttribute<BooleanValue>();
@@ -1923,7 +1895,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>i</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        [SchemaAttr("i")]
         public BooleanValue? Italic
         {
             get => GetAttribute<BooleanValue>();
@@ -1934,7 +1905,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>u</para>
         /// <para>Represents the following attribute in the schema: u</para>
         /// </summary>
-        [SchemaAttr("u")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues>? Underline
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues>>();
@@ -1945,7 +1915,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>strike</para>
         /// <para>Represents the following attribute in the schema: strike</para>
         /// </summary>
-        [SchemaAttr("strike")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues>? Strike
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues>>();
@@ -1956,7 +1925,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>kern</para>
         /// <para>Represents the following attribute in the schema: kern</para>
         /// </summary>
-        [SchemaAttr("kern")]
         public Int32Value? Kerning
         {
             get => GetAttribute<Int32Value>();
@@ -1967,7 +1935,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>cap</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
-        [SchemaAttr("cap")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues>? Capital
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues>>();
@@ -1978,7 +1945,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>spc</para>
         /// <para>Represents the following attribute in the schema: spc</para>
         /// </summary>
-        [SchemaAttr("spc")]
         public Int32Value? Spacing
         {
             get => GetAttribute<Int32Value>();
@@ -1989,7 +1955,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>normalizeH</para>
         /// <para>Represents the following attribute in the schema: normalizeH</para>
         /// </summary>
-        [SchemaAttr("normalizeH")]
         public BooleanValue? NormalizeHeight
         {
             get => GetAttribute<BooleanValue>();
@@ -2000,7 +1965,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>baseline</para>
         /// <para>Represents the following attribute in the schema: baseline</para>
         /// </summary>
-        [SchemaAttr("baseline")]
         public Int32Value? Baseline
         {
             get => GetAttribute<Int32Value>();
@@ -2011,7 +1975,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>noProof</para>
         /// <para>Represents the following attribute in the schema: noProof</para>
         /// </summary>
-        [SchemaAttr("noProof")]
         public BooleanValue? NoProof
         {
             get => GetAttribute<BooleanValue>();
@@ -2022,7 +1985,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>dirty</para>
         /// <para>Represents the following attribute in the schema: dirty</para>
         /// </summary>
-        [SchemaAttr("dirty")]
         public BooleanValue? Dirty
         {
             get => GetAttribute<BooleanValue>();
@@ -2033,7 +1995,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>err</para>
         /// <para>Represents the following attribute in the schema: err</para>
         /// </summary>
-        [SchemaAttr("err")]
         public BooleanValue? SpellingError
         {
             get => GetAttribute<BooleanValue>();
@@ -2044,7 +2005,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>smtClean</para>
         /// <para>Represents the following attribute in the schema: smtClean</para>
         /// </summary>
-        [SchemaAttr("smtClean")]
         public BooleanValue? SmartTagClean
         {
             get => GetAttribute<BooleanValue>();
@@ -2055,7 +2015,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>smtId</para>
         /// <para>Represents the following attribute in the schema: smtId</para>
         /// </summary>
-        [SchemaAttr("smtId")]
         public UInt32Value? SmartTagId
         {
             get => GetAttribute<UInt32Value>();
@@ -2066,7 +2025,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>bmk</para>
         /// <para>Represents the following attribute in the schema: bmk</para>
         /// </summary>
-        [SchemaAttr("bmk")]
         public StringValue? Bookmark
         {
             get => GetAttribute<StringValue>();
@@ -2224,7 +2182,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeAutoFit" /> <c>&lt;a:spAutoFit></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:bodyPr")]
     public partial class TextBodyProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2262,7 +2219,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr("rot")]
         public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -2273,7 +2229,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Paragraph Spacing</para>
         /// <para>Represents the following attribute in the schema: spcFirstLastPara</para>
         /// </summary>
-        [SchemaAttr("spcFirstLastPara")]
         public BooleanValue? UseParagraphSpacing
         {
             get => GetAttribute<BooleanValue>();
@@ -2284,7 +2239,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Text Vertical Overflow</para>
         /// <para>Represents the following attribute in the schema: vertOverflow</para>
         /// </summary>
-        [SchemaAttr("vertOverflow")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>? VerticalOverflow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>>();
@@ -2295,7 +2249,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Text Horizontal Overflow</para>
         /// <para>Represents the following attribute in the schema: horzOverflow</para>
         /// </summary>
-        [SchemaAttr("horzOverflow")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>? HorizontalOverflow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>();
@@ -2306,7 +2259,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Vertical Text</para>
         /// <para>Represents the following attribute in the schema: vert</para>
         /// </summary>
-        [SchemaAttr("vert")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>? Vertical
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>();
@@ -2317,7 +2269,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Text Wrapping Type</para>
         /// <para>Represents the following attribute in the schema: wrap</para>
         /// </summary>
-        [SchemaAttr("wrap")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>? Wrap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>>();
@@ -2328,7 +2279,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Left Inset</para>
         /// <para>Represents the following attribute in the schema: lIns</para>
         /// </summary>
-        [SchemaAttr("lIns")]
         public Int32Value? LeftInset
         {
             get => GetAttribute<Int32Value>();
@@ -2339,7 +2289,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Top Inset</para>
         /// <para>Represents the following attribute in the schema: tIns</para>
         /// </summary>
-        [SchemaAttr("tIns")]
         public Int32Value? TopInset
         {
             get => GetAttribute<Int32Value>();
@@ -2350,7 +2299,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Right Inset</para>
         /// <para>Represents the following attribute in the schema: rIns</para>
         /// </summary>
-        [SchemaAttr("rIns")]
         public Int32Value? RightInset
         {
             get => GetAttribute<Int32Value>();
@@ -2361,7 +2309,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Bottom Inset</para>
         /// <para>Represents the following attribute in the schema: bIns</para>
         /// </summary>
-        [SchemaAttr("bIns")]
         public Int32Value? BottomInset
         {
             get => GetAttribute<Int32Value>();
@@ -2372,7 +2319,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Number of Columns</para>
         /// <para>Represents the following attribute in the schema: numCol</para>
         /// </summary>
-        [SchemaAttr("numCol")]
         public Int32Value? ColumnCount
         {
             get => GetAttribute<Int32Value>();
@@ -2383,7 +2329,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Space Between Columns</para>
         /// <para>Represents the following attribute in the schema: spcCol</para>
         /// </summary>
-        [SchemaAttr("spcCol")]
         public Int32Value? ColumnSpacing
         {
             get => GetAttribute<Int32Value>();
@@ -2394,7 +2339,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Columns Right-To-Left</para>
         /// <para>Represents the following attribute in the schema: rtlCol</para>
         /// </summary>
-        [SchemaAttr("rtlCol")]
         public BooleanValue? RightToLeftColumns
         {
             get => GetAttribute<BooleanValue>();
@@ -2405,7 +2349,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>From WordArt</para>
         /// <para>Represents the following attribute in the schema: fromWordArt</para>
         /// </summary>
-        [SchemaAttr("fromWordArt")]
         public BooleanValue? FromWordArt
         {
             get => GetAttribute<BooleanValue>();
@@ -2416,7 +2359,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Anchor</para>
         /// <para>Represents the following attribute in the schema: anchor</para>
         /// </summary>
-        [SchemaAttr("anchor")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>? Anchor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>();
@@ -2427,7 +2369,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Anchor Center</para>
         /// <para>Represents the following attribute in the schema: anchorCtr</para>
         /// </summary>
-        [SchemaAttr("anchorCtr")]
         public BooleanValue? AnchorCenter
         {
             get => GetAttribute<BooleanValue>();
@@ -2438,7 +2379,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Force Anti-Alias</para>
         /// <para>Represents the following attribute in the schema: forceAA</para>
         /// </summary>
-        [SchemaAttr("forceAA")]
         public BooleanValue? ForceAntiAlias
         {
             get => GetAttribute<BooleanValue>();
@@ -2449,7 +2389,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Text Upright</para>
         /// <para>Represents the following attribute in the schema: upright</para>
         /// </summary>
-        [SchemaAttr("upright")]
         public BooleanValue? UpRight
         {
             get => GetAttribute<BooleanValue>();
@@ -2460,7 +2399,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Compatible Line Spacing</para>
         /// <para>Represents the following attribute in the schema: compatLnSpc</para>
         /// </summary>
-        [SchemaAttr("compatLnSpc")]
         public BooleanValue? CompatibleLineSpacing
         {
             get => GetAttribute<BooleanValue>();
@@ -2568,7 +2506,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:categoryAxis.</para>
     /// </summary>
-    [SchemaAttr("cs:categoryAxis")]
     public partial class CategoryAxisProperties : AxisProperties
     {
         /// <summary>
@@ -2594,7 +2531,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:seriesAxis.</para>
     /// </summary>
-    [SchemaAttr("cs:seriesAxis")]
     public partial class SeriesAxisProperties : AxisProperties
     {
         /// <summary>
@@ -2620,7 +2556,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:valueAxis.</para>
     /// </summary>
-    [SchemaAttr("cs:valueAxis")]
     public partial class ValueAxisProperties : AxisProperties
     {
         /// <summary>
@@ -2659,7 +2594,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>visible, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Visible
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -2670,7 +2604,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>majorTick, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: majorTick</para>
         /// </summary>
-        [SchemaAttr("majorTick")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>? MajorTick
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>>();
@@ -2681,7 +2614,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>minorTick, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: minorTick</para>
         /// </summary>
-        [SchemaAttr("minorTick")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>? MinorTickProp
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>>();
@@ -2692,7 +2624,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>labelPosition, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: labelPosition</para>
         /// </summary>
-        [SchemaAttr("labelPosition")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch>? LabelPosition
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch>>();
@@ -2703,7 +2634,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>majorGridlines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: majorGridlines</para>
         /// </summary>
-        [SchemaAttr("majorGridlines")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? MajorGridlines
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -2714,7 +2644,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>minorGridlines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: minorGridlines</para>
         /// </summary>
-        [SchemaAttr("minorGridlines")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? MinorGridlinesProp
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -2725,7 +2654,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>title, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? TitleProp
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -2772,7 +2700,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataSeries.</para>
     /// </summary>
-    [SchemaAttr("cs:dataSeries")]
     public partial class DataSeries : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2786,7 +2713,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>overlap, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: overlap</para>
         /// </summary>
-        [SchemaAttr("overlap")]
         public SByteValue? Overlap
         {
             get => GetAttribute<SByteValue>();
@@ -2797,7 +2723,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>gapWidth, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: gapWidth</para>
         /// </summary>
-        [SchemaAttr("gapWidth")]
         public UInt16Value? GapWidth
         {
             get => GetAttribute<UInt16Value>();
@@ -2808,7 +2733,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>gapDepth, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: gapDepth</para>
         /// </summary>
-        [SchemaAttr("gapDepth")]
         public UInt16Value? GapDepth
         {
             get => GetAttribute<UInt16Value>();
@@ -2819,7 +2743,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>doughnutHoleSize, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: doughnutHoleSize</para>
         /// </summary>
-        [SchemaAttr("doughnutHoleSize")]
         public ByteValue? DoughnutHoleSize
         {
             get => GetAttribute<ByteValue>();
@@ -2830,7 +2753,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>markerVisible, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: markerVisible</para>
         /// </summary>
-        [SchemaAttr("markerVisible")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? MarkerVisible
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -2841,7 +2763,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>hiloLines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: hiloLines</para>
         /// </summary>
-        [SchemaAttr("hiloLines")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? HiloLines
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -2852,7 +2773,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>dropLines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: dropLines</para>
         /// </summary>
-        [SchemaAttr("dropLines")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? DropLines
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -2863,7 +2783,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>seriesLines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: seriesLines</para>
         /// </summary>
-        [SchemaAttr("seriesLines")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? SeriesLines
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -2919,7 +2838,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataLabels.</para>
     /// </summary>
-    [SchemaAttr("cs:dataLabels")]
     public partial class DataLabels : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2933,7 +2851,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>position, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        [SchemaAttr("position")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition>? Position
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition>>();
@@ -2944,7 +2861,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>value, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [SchemaAttr("value")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Value
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -2955,7 +2871,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>seriesName, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: seriesName</para>
         /// </summary>
-        [SchemaAttr("seriesName")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? SeriesName
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -2966,7 +2881,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>categoryName, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: categoryName</para>
         /// </summary>
-        [SchemaAttr("categoryName")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? CategoryName
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -2977,7 +2891,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>legendKey, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: legendKey</para>
         /// </summary>
-        [SchemaAttr("legendKey")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? LegendKey
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -2988,7 +2901,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>percentage, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: percentage</para>
         /// </summary>
-        [SchemaAttr("percentage")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Percentage
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -3036,7 +2948,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataTable.</para>
     /// </summary>
-    [SchemaAttr("cs:dataTable")]
     public partial class DataTable : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3050,7 +2961,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>legendKeys, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: legendKeys</para>
         /// </summary>
-        [SchemaAttr("legendKeys")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? LegendKeys
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -3061,7 +2971,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>horizontalBorder, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: horizontalBorder</para>
         /// </summary>
-        [SchemaAttr("horizontalBorder")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? HorizontalBorder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -3072,7 +2981,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>verticalBorder, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: verticalBorder</para>
         /// </summary>
-        [SchemaAttr("verticalBorder")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? VerticalBorder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -3083,7 +2991,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>outlineBorder, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: outlineBorder</para>
         /// </summary>
-        [SchemaAttr("outlineBorder")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? OutlineBorder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -3123,7 +3030,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:legend.</para>
     /// </summary>
-    [SchemaAttr("cs:legend")]
     public partial class Legend : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3137,7 +3043,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>visible, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Visible
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -3148,7 +3053,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>includeInLayout, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: includeInLayout</para>
         /// </summary>
-        [SchemaAttr("includeInLayout")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? IncludeInLayout
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -3159,7 +3063,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>position, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        [SchemaAttr("position")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition>? Position
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition>>();
@@ -3195,7 +3098,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:title.</para>
     /// </summary>
-    [SchemaAttr("cs:title")]
     public partial class Title : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3209,7 +3111,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>position, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        [SchemaAttr("position")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition>? Position
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition>>();
@@ -3237,7 +3138,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:trendline.</para>
     /// </summary>
-    [SchemaAttr("cs:trendline")]
     public partial class Trendline : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3251,7 +3151,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>add, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: add</para>
         /// </summary>
-        [SchemaAttr("add")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Add
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -3262,7 +3161,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>equation, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: equation</para>
         /// </summary>
-        [SchemaAttr("equation")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Equation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -3273,7 +3171,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>rsquared, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rsquared</para>
         /// </summary>
-        [SchemaAttr("rsquared")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? RSquared
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -3309,7 +3206,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:view3D.</para>
     /// </summary>
-    [SchemaAttr("cs:view3D")]
     public partial class View3DProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3323,7 +3219,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>rotX, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rotX</para>
         /// </summary>
-        [SchemaAttr("rotX")]
         public SByteValue? RotX
         {
             get => GetAttribute<SByteValue>();
@@ -3334,7 +3229,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>rotY, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rotY</para>
         /// </summary>
-        [SchemaAttr("rotY")]
         public UInt16Value? RotY
         {
             get => GetAttribute<UInt16Value>();
@@ -3345,7 +3239,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>rAngAx, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rAngAx</para>
         /// </summary>
-        [SchemaAttr("rAngAx")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? RightAngleAxes
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
@@ -3356,7 +3249,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>perspective, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: perspective</para>
         /// </summary>
-        [SchemaAttr("perspective")]
         public ByteValue? Perspective
         {
             get => GetAttribute<ByteValue>();
@@ -3367,7 +3259,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>heightPercent, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: heightPercent</para>
         /// </summary>
-        [SchemaAttr("heightPercent")]
         public UInt16Value? HeightPercent
         {
             get => GetAttribute<UInt16Value>();
@@ -3378,7 +3269,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>depthPercent, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: depthPercent</para>
         /// </summary>
-        [SchemaAttr("depthPercent")]
         public UInt16Value? DepthPercent
         {
             get => GetAttribute<UInt16Value>();
@@ -3440,7 +3330,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:axisTitle")]
     public partial class AxisTitle : StyleEntry
     {
         /// <summary>
@@ -3516,7 +3405,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:categoryAxis")]
     public partial class CategoryAxis : StyleEntry
     {
         /// <summary>
@@ -3592,7 +3480,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:chartArea")]
     public partial class ChartArea : StyleEntry
     {
         /// <summary>
@@ -3668,7 +3555,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:dataLabel")]
     public partial class DataLabel : StyleEntry
     {
         /// <summary>
@@ -3744,7 +3630,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:dataLabelCallout")]
     public partial class DataLabelCallout : StyleEntry
     {
         /// <summary>
@@ -3820,7 +3705,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:dataPoint")]
     public partial class DataPoint : StyleEntry
     {
         /// <summary>
@@ -3896,7 +3780,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:dataPoint3D")]
     public partial class DataPoint3D : StyleEntry
     {
         /// <summary>
@@ -3972,7 +3855,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:dataPointLine")]
     public partial class DataPointLine : StyleEntry
     {
         /// <summary>
@@ -4048,7 +3930,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:dataPointMarker")]
     public partial class DataPointMarker : StyleEntry
     {
         /// <summary>
@@ -4124,7 +4005,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:dataPointWireframe")]
     public partial class DataPointWireframe : StyleEntry
     {
         /// <summary>
@@ -4200,7 +4080,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:dataTable")]
     public partial class DataTableStyle : StyleEntry
     {
         /// <summary>
@@ -4276,7 +4155,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:downBar")]
     public partial class DownBar : StyleEntry
     {
         /// <summary>
@@ -4352,7 +4230,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:dropLine")]
     public partial class DropLine : StyleEntry
     {
         /// <summary>
@@ -4428,7 +4305,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:errorBar")]
     public partial class ErrorBar : StyleEntry
     {
         /// <summary>
@@ -4504,7 +4380,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:floor")]
     public partial class Floor : StyleEntry
     {
         /// <summary>
@@ -4580,7 +4455,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:gridlineMajor")]
     public partial class GridlineMajor : StyleEntry
     {
         /// <summary>
@@ -4656,7 +4530,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:gridlineMinor")]
     public partial class GridlineMinor : StyleEntry
     {
         /// <summary>
@@ -4732,7 +4605,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:hiLoLine")]
     public partial class HiLoLine : StyleEntry
     {
         /// <summary>
@@ -4808,7 +4680,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:leaderLine")]
     public partial class LeaderLine : StyleEntry
     {
         /// <summary>
@@ -4884,7 +4755,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:legend")]
     public partial class LegendStyle : StyleEntry
     {
         /// <summary>
@@ -4960,7 +4830,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:plotArea")]
     public partial class PlotArea : StyleEntry
     {
         /// <summary>
@@ -5036,7 +4905,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:plotArea3D")]
     public partial class PlotArea3D : StyleEntry
     {
         /// <summary>
@@ -5112,7 +4980,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:seriesAxis")]
     public partial class SeriesAxis : StyleEntry
     {
         /// <summary>
@@ -5188,7 +5055,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:seriesLine")]
     public partial class SeriesLine : StyleEntry
     {
         /// <summary>
@@ -5264,7 +5130,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:title")]
     public partial class TitleStyle : StyleEntry
     {
         /// <summary>
@@ -5340,7 +5205,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:trendline")]
     public partial class TrendlineStyle : StyleEntry
     {
         /// <summary>
@@ -5416,7 +5280,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:trendlineLabel")]
     public partial class TrendlineLabel : StyleEntry
     {
         /// <summary>
@@ -5492,7 +5355,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:upBar")]
     public partial class UpBar : StyleEntry
     {
         /// <summary>
@@ -5568,7 +5430,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:valueAxis")]
     public partial class ValueAxis : StyleEntry
     {
         /// <summary>
@@ -5644,7 +5505,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cs:wall")]
     public partial class Wall : StyleEntry
     {
         /// <summary>
@@ -5757,7 +5617,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>mods, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: mods</para>
         /// </summary>
-        [SchemaAttr("mods")]
         public ListValue<StringValue>? Modifiers
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -5903,7 +5762,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPointMarkerLayout.</para>
     /// </summary>
-    [SchemaAttr("cs:dataPointMarkerLayout")]
     public partial class MarkerLayoutProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5917,7 +5775,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>symbol, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: symbol</para>
         /// </summary>
-        [SchemaAttr("symbol")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle>? Symbol
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle>>();
@@ -5928,7 +5785,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>size, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public ByteValue? Size
         {
             get => GetAttribute<ByteValue>();

@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -29,7 +27,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty" /> <c>&lt;ax:ocxPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ax:ocx")]
     public partial class ActiveXControlData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -70,7 +67,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        [SchemaAttr("ax:classid")]
         public StringValue? ActiveXControlClassId
         {
             get => GetAttribute<StringValue>();
@@ -84,7 +80,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        [SchemaAttr("ax:license")]
         public StringValue? License
         {
             get => GetAttribute<StringValue>();
@@ -98,7 +93,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -112,7 +106,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        [SchemaAttr("ax:persistence")]
         public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>? Persistence
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
@@ -157,7 +150,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture" /> <c>&lt;ax:picture></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ax:ocxPr")]
     public partial class ActiveXObjectProperty : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -198,7 +190,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        [SchemaAttr("ax:name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -212,7 +203,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        [SchemaAttr("ax:value")]
         public StringValue? Value
         {
             get => GetAttribute<StringValue>();
@@ -282,7 +272,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty" /> <c>&lt;ax:ocxPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ax:font")]
     public partial class SharedComFont : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -323,7 +312,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        [SchemaAttr("ax:persistence")]
         public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>? Persistence
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
@@ -337,7 +325,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -367,7 +354,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ax:picture.</para>
     /// </summary>
-    [SchemaAttr("ax:picture")]
     public partial class SharedComPicture : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -384,7 +370,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();

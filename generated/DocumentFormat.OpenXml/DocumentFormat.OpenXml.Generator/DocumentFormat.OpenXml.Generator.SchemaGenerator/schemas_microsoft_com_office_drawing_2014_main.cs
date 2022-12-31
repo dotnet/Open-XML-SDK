@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:creationId.</para>
     /// </summary>
-    [SchemaAttr("a16:creationId")]
     public partial class CreationId : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37,7 +34,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// <para>id, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -65,7 +61,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:predDERef.</para>
     /// </summary>
-    [SchemaAttr("a16:predDERef")]
     public partial class PredecessorDrawingElementReference : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -79,7 +74,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// <para>pred, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: pred</para>
         /// </summary>
-        [SchemaAttr("pred")]
         public StringValue? Pred
         {
             get => GetAttribute<StringValue>();
@@ -107,7 +101,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:cxnDERefs.</para>
     /// </summary>
-    [SchemaAttr("a16:cxnDERefs")]
     public partial class ConnectableReferences : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -121,7 +114,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// <para>st, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [SchemaAttr("st")]
         public StringValue? St
         {
             get => GetAttribute<StringValue>();
@@ -132,7 +124,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// <para>end, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-        [SchemaAttr("end")]
         public StringValue? End
         {
             get => GetAttribute<StringValue>();
@@ -164,7 +155,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:rowId.</para>
     /// </summary>
-    [SchemaAttr("a16:rowId")]
     public partial class RowIdIdentifier : OpenXmlIdentifierElement
     {
         /// <summary>
@@ -190,7 +180,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:colId.</para>
     /// </summary>
-    [SchemaAttr("a16:colId")]
     public partial class ColIdIdentifier : OpenXmlIdentifierElement
     {
         /// <summary>
@@ -229,7 +218,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// <para>val, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();

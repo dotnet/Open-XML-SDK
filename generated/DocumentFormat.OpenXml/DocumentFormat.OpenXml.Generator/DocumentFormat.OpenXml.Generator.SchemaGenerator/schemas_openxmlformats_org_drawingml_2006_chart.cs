@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.ChartDrawing;
@@ -29,7 +27,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:numFmt.</para>
     /// </summary>
-    [SchemaAttr("c:numFmt")]
     public partial class NumberingFormat : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -43,7 +40,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Format Code</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        [SchemaAttr("formatCode")]
         public StringValue? FormatCode
         {
             get => GetAttribute<StringValue>();
@@ -54,7 +50,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Linked to Source</para>
         /// <para>Represents the following attribute in the schema: sourceLinked</para>
         /// </summary>
-        [SchemaAttr("sourceLinked")]
         public BooleanValue? SourceLinked
         {
             get => GetAttribute<BooleanValue>();
@@ -101,7 +96,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:spPr")]
     public partial class ChartShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -139,7 +133,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -233,7 +226,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:txPr")]
     public partial class TextProperties : TextBodyType
     {
         /// <summary>
@@ -296,7 +288,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:rich")]
     public partial class RichText : TextBodyType
     {
         /// <summary>
@@ -432,7 +423,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dLblPos.</para>
     /// </summary>
-    [SchemaAttr("c:dLblPos")]
     public partial class DataLabelPosition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -446,7 +436,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Data Label Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues>>();
@@ -473,7 +462,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showLegendKey.</para>
     /// </summary>
-    [SchemaAttr("c:showLegendKey")]
     public partial class ShowLegendKey : BooleanType
     {
         /// <summary>
@@ -498,7 +486,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showVal.</para>
     /// </summary>
-    [SchemaAttr("c:showVal")]
     public partial class ShowValue : BooleanType
     {
         /// <summary>
@@ -523,7 +510,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showCatName.</para>
     /// </summary>
-    [SchemaAttr("c:showCatName")]
     public partial class ShowCategoryName : BooleanType
     {
         /// <summary>
@@ -548,7 +534,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showSerName.</para>
     /// </summary>
-    [SchemaAttr("c:showSerName")]
     public partial class ShowSeriesName : BooleanType
     {
         /// <summary>
@@ -573,7 +558,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showPercent.</para>
     /// </summary>
-    [SchemaAttr("c:showPercent")]
     public partial class ShowPercent : BooleanType
     {
         /// <summary>
@@ -598,7 +582,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showBubbleSize.</para>
     /// </summary>
-    [SchemaAttr("c:showBubbleSize")]
     public partial class ShowBubbleSize : BooleanType
     {
         /// <summary>
@@ -623,7 +606,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showLeaderLines.</para>
     /// </summary>
-    [SchemaAttr("c:showLeaderLines")]
     public partial class ShowLeaderLines : BooleanType
     {
         /// <summary>
@@ -648,7 +630,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:varyColors.</para>
     /// </summary>
-    [SchemaAttr("c:varyColors")]
     public partial class VaryColors : BooleanType
     {
         /// <summary>
@@ -673,7 +654,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:wireframe.</para>
     /// </summary>
-    [SchemaAttr("c:wireframe")]
     public partial class Wireframe : BooleanType
     {
         /// <summary>
@@ -698,7 +678,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:delete.</para>
     /// </summary>
-    [SchemaAttr("c:delete")]
     public partial class Delete : BooleanType
     {
         /// <summary>
@@ -723,7 +702,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:overlay.</para>
     /// </summary>
-    [SchemaAttr("c:overlay")]
     public partial class Overlay : BooleanType
     {
         /// <summary>
@@ -748,7 +726,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:rAngAx.</para>
     /// </summary>
-    [SchemaAttr("c:rAngAx")]
     public partial class RightAngleAxes : BooleanType
     {
         /// <summary>
@@ -773,7 +750,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showHorzBorder.</para>
     /// </summary>
-    [SchemaAttr("c:showHorzBorder")]
     public partial class ShowHorizontalBorder : BooleanType
     {
         /// <summary>
@@ -798,7 +774,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showVertBorder.</para>
     /// </summary>
-    [SchemaAttr("c:showVertBorder")]
     public partial class ShowVerticalBorder : BooleanType
     {
         /// <summary>
@@ -823,7 +798,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showOutline.</para>
     /// </summary>
-    [SchemaAttr("c:showOutline")]
     public partial class ShowOutlineBorder : BooleanType
     {
         /// <summary>
@@ -848,7 +822,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showKeys.</para>
     /// </summary>
-    [SchemaAttr("c:showKeys")]
     public partial class ShowKeys : BooleanType
     {
         /// <summary>
@@ -873,7 +846,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:invertIfNegative.</para>
     /// </summary>
-    [SchemaAttr("c:invertIfNegative")]
     public partial class InvertIfNegative : BooleanType
     {
         /// <summary>
@@ -898,7 +870,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:bubble3D.</para>
     /// </summary>
-    [SchemaAttr("c:bubble3D")]
     public partial class Bubble3D : BooleanType
     {
         /// <summary>
@@ -923,7 +894,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dispRSqr.</para>
     /// </summary>
-    [SchemaAttr("c:dispRSqr")]
     public partial class DisplayRSquaredValue : BooleanType
     {
         /// <summary>
@@ -948,7 +918,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dispEq.</para>
     /// </summary>
-    [SchemaAttr("c:dispEq")]
     public partial class DisplayEquation : BooleanType
     {
         /// <summary>
@@ -973,7 +942,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:noEndCap.</para>
     /// </summary>
-    [SchemaAttr("c:noEndCap")]
     public partial class NoEndCap : BooleanType
     {
         /// <summary>
@@ -998,7 +966,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:applyToFront.</para>
     /// </summary>
-    [SchemaAttr("c:applyToFront")]
     public partial class ApplyToFront : BooleanType
     {
         /// <summary>
@@ -1023,7 +990,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:applyToSides.</para>
     /// </summary>
-    [SchemaAttr("c:applyToSides")]
     public partial class ApplyToSides : BooleanType
     {
         /// <summary>
@@ -1048,7 +1014,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:applyToEnd.</para>
     /// </summary>
-    [SchemaAttr("c:applyToEnd")]
     public partial class ApplyToEnd : BooleanType
     {
         /// <summary>
@@ -1073,7 +1038,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:chartObject.</para>
     /// </summary>
-    [SchemaAttr("c:chartObject")]
     public partial class ChartObject : BooleanType
     {
         /// <summary>
@@ -1098,7 +1062,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:data.</para>
     /// </summary>
-    [SchemaAttr("c:data")]
     public partial class Data : BooleanType
     {
         /// <summary>
@@ -1123,7 +1086,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:formatting.</para>
     /// </summary>
-    [SchemaAttr("c:formatting")]
     public partial class Formatting : BooleanType
     {
         /// <summary>
@@ -1148,7 +1110,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:selection.</para>
     /// </summary>
-    [SchemaAttr("c:selection")]
     public partial class Selection : BooleanType
     {
         /// <summary>
@@ -1173,7 +1134,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:userInterface.</para>
     /// </summary>
-    [SchemaAttr("c:userInterface")]
     public partial class UserInterface : BooleanType
     {
         /// <summary>
@@ -1198,7 +1158,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:autoUpdate.</para>
     /// </summary>
-    [SchemaAttr("c:autoUpdate")]
     public partial class AutoUpdate : BooleanType
     {
         /// <summary>
@@ -1223,7 +1182,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:smooth.</para>
     /// </summary>
-    [SchemaAttr("c:smooth")]
     public partial class Smooth : BooleanType
     {
         /// <summary>
@@ -1248,7 +1206,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:marker.</para>
     /// </summary>
-    [SchemaAttr("c:marker")]
     public partial class ShowMarker : BooleanType
     {
         /// <summary>
@@ -1273,7 +1230,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showNegBubbles.</para>
     /// </summary>
-    [SchemaAttr("c:showNegBubbles")]
     public partial class ShowNegativeBubbles : BooleanType
     {
         /// <summary>
@@ -1298,7 +1254,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:auto.</para>
     /// </summary>
-    [SchemaAttr("c:auto")]
     public partial class AutoLabeled : BooleanType
     {
         /// <summary>
@@ -1323,7 +1278,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:noMultiLvlLbl.</para>
     /// </summary>
-    [SchemaAttr("c:noMultiLvlLbl")]
     public partial class NoMultiLevelLabels : BooleanType
     {
         /// <summary>
@@ -1348,7 +1302,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:date1904.</para>
     /// </summary>
-    [SchemaAttr("c:date1904")]
     public partial class Date1904 : BooleanType
     {
         /// <summary>
@@ -1373,7 +1326,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:roundedCorners.</para>
     /// </summary>
-    [SchemaAttr("c:roundedCorners")]
     public partial class RoundedCorners : BooleanType
     {
         /// <summary>
@@ -1398,7 +1350,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:autoTitleDeleted.</para>
     /// </summary>
-    [SchemaAttr("c:autoTitleDeleted")]
     public partial class AutoTitleDeleted : BooleanType
     {
         /// <summary>
@@ -1423,7 +1374,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:plotVisOnly.</para>
     /// </summary>
-    [SchemaAttr("c:plotVisOnly")]
     public partial class PlotVisibleOnly : BooleanType
     {
         /// <summary>
@@ -1448,7 +1398,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showDLblsOverMax.</para>
     /// </summary>
-    [SchemaAttr("c:showDLblsOverMax")]
     public partial class ShowDataLabelsOverMaximum : BooleanType
     {
         /// <summary>
@@ -1486,7 +1435,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Boolean Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -1506,7 +1454,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:separator.</para>
     /// </summary>
-    [SchemaAttr("c:separator")]
     public partial class Separator : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1544,7 +1491,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:name.</para>
     /// </summary>
-    [SchemaAttr("c:name")]
     public partial class TrendlineName : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1582,7 +1528,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:f.</para>
     /// </summary>
-    [SchemaAttr("c:f")]
     public partial class Formula : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1627,7 +1572,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ManualLayout" /> <c>&lt;c:manualLayout></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:layout")]
     public partial class Layout : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1717,7 +1661,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:tx")]
     public partial class ChartText : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1823,7 +1766,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:leaderLines")]
     public partial class LeaderLines : ChartLinesType
     {
         /// <summary>
@@ -1882,7 +1824,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:dropLines")]
     public partial class DropLines : ChartLinesType
     {
         /// <summary>
@@ -1941,7 +1882,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:majorGridlines")]
     public partial class MajorGridlines : ChartLinesType
     {
         /// <summary>
@@ -2000,7 +1940,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:minorGridlines")]
     public partial class MinorGridlines : ChartLinesType
     {
         /// <summary>
@@ -2059,7 +1998,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:serLines")]
     public partial class SeriesLines : ChartLinesType
     {
         /// <summary>
@@ -2118,7 +2056,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:hiLowLines")]
     public partial class HighLowLines : ChartLinesType
     {
         /// <summary>
@@ -2235,7 +2172,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:idx.</para>
     /// </summary>
-    [SchemaAttr("c:idx")]
     public partial class Index : UnsignedIntegerType
     {
         /// <summary>
@@ -2261,7 +2197,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:order.</para>
     /// </summary>
-    [SchemaAttr("c:order")]
     public partial class Order : UnsignedIntegerType
     {
         /// <summary>
@@ -2287,7 +2222,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:axId.</para>
     /// </summary>
-    [SchemaAttr("c:axId")]
     public partial class AxisId : UnsignedIntegerType
     {
         /// <summary>
@@ -2313,7 +2247,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:crossAx.</para>
     /// </summary>
-    [SchemaAttr("c:crossAx")]
     public partial class CrossingAxis : UnsignedIntegerType
     {
         /// <summary>
@@ -2339,7 +2272,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ptCount.</para>
     /// </summary>
-    [SchemaAttr("c:ptCount")]
     public partial class PointCount : UnsignedIntegerType
     {
         /// <summary>
@@ -2365,7 +2297,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:secondPiePt.</para>
     /// </summary>
-    [SchemaAttr("c:secondPiePt")]
     public partial class SecondPiePoint : UnsignedIntegerType
     {
         /// <summary>
@@ -2391,7 +2322,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:explosion.</para>
     /// </summary>
-    [SchemaAttr("c:explosion")]
     public partial class Explosion : UnsignedIntegerType
     {
         /// <summary>
@@ -2417,7 +2347,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:fmtId.</para>
     /// </summary>
-    [SchemaAttr("c:fmtId")]
     public partial class FormatId : UnsignedIntegerType
     {
         /// <summary>
@@ -2456,7 +2385,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Integer Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -2486,7 +2414,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericValue" /> <c>&lt;c:v></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:tx")]
     public partial class SeriesText : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2571,7 +2498,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:grouping.</para>
     /// </summary>
-    [SchemaAttr("c:grouping")]
     public partial class Grouping : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2585,7 +2511,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Grouping Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues>>();
@@ -2628,7 +2553,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ser")]
     public partial class LineChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2813,7 +2737,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:dLbls")]
     public partial class DataLabels : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2912,7 +2835,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:barDir.</para>
     /// </summary>
-    [SchemaAttr("c:barDir")]
     public partial class BarDirection : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2926,7 +2848,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Direction Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues>>();
@@ -2953,7 +2874,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:grouping.</para>
     /// </summary>
-    [SchemaAttr("c:grouping")]
     public partial class BarGrouping : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2967,7 +2887,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Grouping Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues>>();
@@ -3010,7 +2929,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ser")]
     public partial class BarChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3191,7 +3109,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ser")]
     public partial class AreaChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3354,7 +3271,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Explosion" /> <c>&lt;c:explosion></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ser")]
     public partial class PieChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3526,7 +3442,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ser")]
     public partial class SurfaceChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3725,7 +3640,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BandFormat" /> <c>&lt;c:bandFmt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:bandFmts")]
     public partial class BandFormats : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3789,7 +3703,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Orientation" /> <c>&lt;c:orientation></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:scaling")]
     public partial class Scaling : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3916,7 +3829,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:axPos.</para>
     /// </summary>
-    [SchemaAttr("c:axPos")]
     public partial class AxisPosition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3930,7 +3842,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues>>();
@@ -3968,7 +3879,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartText" /> <c>&lt;c:tx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:title")]
     public partial class Title : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4110,7 +4020,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:majorTickMark.</para>
     /// </summary>
-    [SchemaAttr("c:majorTickMark")]
     public partial class MajorTickMark : TickMarkType
     {
         /// <summary>
@@ -4135,7 +4044,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:minorTickMark.</para>
     /// </summary>
-    [SchemaAttr("c:minorTickMark")]
     public partial class MinorTickMark : TickMarkType
     {
         /// <summary>
@@ -4173,7 +4081,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Mark Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues>>();
@@ -4193,7 +4100,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:tickLblPos.</para>
     /// </summary>
-    [SchemaAttr("c:tickLblPos")]
     public partial class TickLabelPosition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4207,7 +4113,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Label Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues>>();
@@ -4231,7 +4136,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:crosses.</para>
     /// </summary>
-    [SchemaAttr("c:crosses")]
     public partial class Crosses : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4245,7 +4149,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Crosses Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues>>();
@@ -4272,7 +4175,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:crossesAt.</para>
     /// </summary>
-    [SchemaAttr("c:crossesAt")]
     public partial class CrossesAt : DoubleType
     {
         /// <summary>
@@ -4298,7 +4200,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:x.</para>
     /// </summary>
-    [SchemaAttr("c:x")]
     public partial class Left : DoubleType
     {
         /// <summary>
@@ -4323,7 +4224,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:y.</para>
     /// </summary>
-    [SchemaAttr("c:y")]
     public partial class Top : DoubleType
     {
         /// <summary>
@@ -4348,7 +4248,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:w.</para>
     /// </summary>
-    [SchemaAttr("c:w")]
     public partial class Width : DoubleType
     {
         /// <summary>
@@ -4373,7 +4272,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:h.</para>
     /// </summary>
-    [SchemaAttr("c:h")]
     public partial class Height : DoubleType
     {
         /// <summary>
@@ -4398,7 +4296,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:forward.</para>
     /// </summary>
-    [SchemaAttr("c:forward")]
     public partial class Forward : DoubleType
     {
         /// <summary>
@@ -4425,7 +4322,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:backward.</para>
     /// </summary>
-    [SchemaAttr("c:backward")]
     public partial class Backward : DoubleType
     {
         /// <summary>
@@ -4451,7 +4347,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:intercept.</para>
     /// </summary>
-    [SchemaAttr("c:intercept")]
     public partial class Intercept : DoubleType
     {
         /// <summary>
@@ -4476,7 +4371,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:val.</para>
     /// </summary>
-    [SchemaAttr("c:val")]
     public partial class ErrorBarValue : DoubleType
     {
         /// <summary>
@@ -4501,7 +4395,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:splitPos.</para>
     /// </summary>
-    [SchemaAttr("c:splitPos")]
     public partial class SplitPosition : DoubleType
     {
         /// <summary>
@@ -4527,7 +4420,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:custUnit.</para>
     /// </summary>
-    [SchemaAttr("c:custUnit")]
     public partial class CustomDisplayUnit : DoubleType
     {
         /// <summary>
@@ -4553,7 +4445,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:max.</para>
     /// </summary>
-    [SchemaAttr("c:max")]
     public partial class MaxAxisValue : DoubleType
     {
         /// <summary>
@@ -4578,7 +4469,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:min.</para>
     /// </summary>
-    [SchemaAttr("c:min")]
     public partial class MinAxisValue : DoubleType
     {
         /// <summary>
@@ -4616,7 +4506,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Floating Point Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
@@ -4659,7 +4548,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style" /> <c>&lt;c14:style></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:chartSpace")]
     public partial class ChartSpace : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -4821,7 +4709,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize" /> <c>&lt;cdr:relSizeAnchor></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:userShapes")]
     public partial class UserShapes : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -4914,7 +4801,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:chart.</para>
     /// </summary>
-    [SchemaAttr("c:chart")]
     public partial class ChartReference : RelationshipIdType
     {
         /// <summary>
@@ -4940,7 +4826,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:legacyDrawingHF.</para>
     /// </summary>
-    [SchemaAttr("c:legacyDrawingHF")]
     public partial class LegacyDrawingHeaderFooter : RelationshipIdType
     {
         /// <summary>
@@ -4965,7 +4850,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:userShapes.</para>
     /// </summary>
-    [SchemaAttr("c:userShapes")]
     public partial class UserShapesReference : RelationshipIdType
     {
         /// <summary>
@@ -5006,7 +4890,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -5029,7 +4912,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    [SchemaAttr("c:ext")]
     public partial class Extension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5067,7 +4949,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Uniform Resource Identifier</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -5098,7 +4979,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:v.</para>
     /// </summary>
-    [SchemaAttr("c:v")]
     public partial class NumericValue : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -5136,7 +5016,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:formatCode.</para>
     /// </summary>
-    [SchemaAttr("c:formatCode")]
     public partial class FormatCode : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -5174,7 +5053,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:oddHeader.</para>
     /// </summary>
-    [SchemaAttr("c:oddHeader")]
     public partial class OddHeader : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -5212,7 +5090,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:oddFooter.</para>
     /// </summary>
-    [SchemaAttr("c:oddFooter")]
     public partial class OddFooter : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -5250,7 +5127,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:evenHeader.</para>
     /// </summary>
-    [SchemaAttr("c:evenHeader")]
     public partial class EvenHeader : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -5288,7 +5164,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:evenFooter.</para>
     /// </summary>
-    [SchemaAttr("c:evenFooter")]
     public partial class EvenFooter : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -5326,7 +5201,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:firstHeader.</para>
     /// </summary>
-    [SchemaAttr("c:firstHeader")]
     public partial class FirstHeader : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -5364,7 +5238,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:firstFooter.</para>
     /// </summary>
-    [SchemaAttr("c:firstFooter")]
     public partial class FirstFooter : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -5402,7 +5275,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:name.</para>
     /// </summary>
-    [SchemaAttr("c:name")]
     public partial class PivotTableName : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -5446,7 +5318,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericValue" /> <c>&lt;c:v></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:pt")]
     public partial class NumericPoint : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5484,7 +5355,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
@@ -5495,7 +5365,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Format</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        [SchemaAttr("formatCode")]
         public StringValue? FormatCode
         {
             get => GetAttribute<StringValue>();
@@ -5549,7 +5418,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Extension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5611,7 +5479,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formula" /> <c>&lt;c:f></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:numRef")]
     public partial class NumberReference : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5717,7 +5584,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:numLit")]
     public partial class NumberLiteral : NumberDataType
     {
         /// <summary>
@@ -5782,7 +5648,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:numCache")]
     public partial class NumberingCache : NumberDataType
     {
         /// <summary>
@@ -5927,7 +5792,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringPoint" /> <c>&lt;c:pt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:lvl")]
     public partial class Level : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5989,7 +5853,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formula" /> <c>&lt;c:f></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:multiLvlStrRef")]
     public partial class MultiLevelStringReference : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6094,7 +5957,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formula" /> <c>&lt;c:f></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:strRef")]
     public partial class StringReference : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6199,7 +6061,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:strLit")]
     public partial class StringLiteral : StringDataType
     {
         /// <summary>
@@ -6262,7 +6123,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:strCache")]
     public partial class StringCache : StringDataType
     {
         /// <summary>
@@ -6385,7 +6245,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:layoutTarget.</para>
     /// </summary>
-    [SchemaAttr("c:layoutTarget")]
     public partial class LayoutTarget : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6399,7 +6258,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout Target Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues>>();
@@ -6423,7 +6281,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:xMode.</para>
     /// </summary>
-    [SchemaAttr("c:xMode")]
     public partial class LeftMode : LayoutModeType
     {
         /// <summary>
@@ -6448,7 +6305,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:yMode.</para>
     /// </summary>
-    [SchemaAttr("c:yMode")]
     public partial class TopMode : LayoutModeType
     {
         /// <summary>
@@ -6473,7 +6329,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:wMode.</para>
     /// </summary>
-    [SchemaAttr("c:wMode")]
     public partial class WidthMode : LayoutModeType
     {
         /// <summary>
@@ -6498,7 +6353,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:hMode.</para>
     /// </summary>
-    [SchemaAttr("c:hMode")]
     public partial class HeightMode : LayoutModeType
     {
         /// <summary>
@@ -6536,7 +6390,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout Mode Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues>>();
@@ -6571,7 +6424,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget" /> <c>&lt;c:layoutTarget></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:manualLayout")]
     public partial class ManualLayout : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6773,7 +6625,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:rotX.</para>
     /// </summary>
-    [SchemaAttr("c:rotX")]
     public partial class RotateX : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6787,7 +6638,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>X Rotation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public SByteValue? Val
         {
             get => GetAttribute<SByteValue>();
@@ -6814,7 +6664,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:hPercent.</para>
     /// </summary>
-    [SchemaAttr("c:hPercent")]
     public partial class HeightPercent : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6828,7 +6677,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Height Percent Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -6855,7 +6703,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:rotY.</para>
     /// </summary>
-    [SchemaAttr("c:rotY")]
     public partial class RotateY : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6869,7 +6716,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Y Rotation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -6896,7 +6742,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:depthPercent.</para>
     /// </summary>
-    [SchemaAttr("c:depthPercent")]
     public partial class DepthPercent : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6910,7 +6755,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Depth Percent Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -6937,7 +6781,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:perspective.</para>
     /// </summary>
-    [SchemaAttr("c:perspective")]
     public partial class Perspective : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6951,7 +6794,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Perspective Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
@@ -6978,7 +6820,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:symbol.</para>
     /// </summary>
-    [SchemaAttr("c:symbol")]
     public partial class Symbol : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6992,7 +6833,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues>>();
@@ -7019,7 +6859,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:size.</para>
     /// </summary>
-    [SchemaAttr("c:size")]
     public partial class Size : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7033,7 +6872,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
@@ -7069,7 +6907,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Symbol" /> <c>&lt;c:symbol></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:marker")]
     public partial class Marker : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7191,7 +7028,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit" /> <c>&lt;c:pictureStackUnit></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:pictureOptions")]
     public partial class PictureOptions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7318,7 +7154,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:trendlineType.</para>
     /// </summary>
-    [SchemaAttr("c:trendlineType")]
     public partial class TrendlineType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7332,7 +7167,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Trendline Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues>>();
@@ -7356,7 +7190,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:order.</para>
     /// </summary>
-    [SchemaAttr("c:order")]
     public partial class PolynomialOrder : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7370,7 +7203,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Order Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
@@ -7399,7 +7231,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:period.</para>
     /// </summary>
-    [SchemaAttr("c:period")]
     public partial class Period : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7413,7 +7244,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Period Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -7452,7 +7282,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartText" /> <c>&lt;c:tx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:trendlineLbl")]
     public partial class TrendlineLabel : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7594,7 +7423,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:errDir.</para>
     /// </summary>
-    [SchemaAttr("c:errDir")]
     public partial class ErrorDirection : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7608,7 +7436,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Direction Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues>>();
@@ -7635,7 +7462,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:errBarType.</para>
     /// </summary>
-    [SchemaAttr("c:errBarType")]
     public partial class ErrorBarType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7649,7 +7475,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues>>();
@@ -7676,7 +7501,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:errValType.</para>
     /// </summary>
-    [SchemaAttr("c:errValType")]
     public partial class ErrorBarValueType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7690,7 +7514,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues>>();
@@ -7724,7 +7547,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:plus")]
     public partial class Plus : NumberDataSourceType
     {
         /// <summary>
@@ -7788,7 +7610,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:minus")]
     public partial class Minus : NumberDataSourceType
     {
         /// <summary>
@@ -7852,7 +7673,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:val")]
     public partial class Values : NumberDataSourceType
     {
         /// <summary>
@@ -7916,7 +7736,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:yVal")]
     public partial class YValues : NumberDataSourceType
     {
         /// <summary>
@@ -7980,7 +7799,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:bubbleSize")]
     public partial class BubbleSize : NumberDataSourceType
     {
         /// <summary>
@@ -8116,7 +7934,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:gapWidth.</para>
     /// </summary>
-    [SchemaAttr("c:gapWidth")]
     public partial class GapWidth : GapAmountType
     {
         /// <summary>
@@ -8141,7 +7958,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:gapDepth.</para>
     /// </summary>
-    [SchemaAttr("c:gapDepth")]
     public partial class GapDepth : GapAmountType
     {
         /// <summary>
@@ -8179,7 +7995,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Gap Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -8208,7 +8023,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:upBars")]
     public partial class UpBars : UpDownBarType
     {
         /// <summary>
@@ -8267,7 +8081,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:downBars")]
     public partial class DownBars : UpDownBarType
     {
         /// <summary>
@@ -8384,7 +8197,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ofPieType.</para>
     /// </summary>
-    [SchemaAttr("c:ofPieType")]
     public partial class OfPieType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8398,7 +8210,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Pie of Pie or Bar of Pie Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues>>();
@@ -8425,7 +8236,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:splitType.</para>
     /// </summary>
-    [SchemaAttr("c:splitType")]
     public partial class SplitType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8439,7 +8249,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Split Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues>>();
@@ -8472,7 +8281,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint" /> <c>&lt;c:secondPiePt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:custSplit")]
     public partial class CustomSplit : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8526,7 +8334,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:secondPieSize.</para>
     /// </summary>
-    [SchemaAttr("c:secondPieSize")]
     public partial class SecondPieSize : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8540,7 +8347,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Second Pie Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -8574,7 +8380,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:bandFmt")]
     public partial class BandFormat : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8656,7 +8461,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pictureFormat.</para>
     /// </summary>
-    [SchemaAttr("c:pictureFormat")]
     public partial class PictureFormat : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8670,7 +8474,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Picture Format Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues>>();
@@ -8697,7 +8500,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pictureStackUnit.</para>
     /// </summary>
-    [SchemaAttr("c:pictureStackUnit")]
     public partial class PictureStackUnit : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8711,7 +8513,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Picture Stack Unit</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
@@ -8739,7 +8540,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:builtInUnit.</para>
     /// </summary>
-    [SchemaAttr("c:builtInUnit")]
     public partial class BuiltInUnit : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8753,7 +8553,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Built In Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues>>();
@@ -8786,7 +8585,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartText" /> <c>&lt;c:tx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:dispUnitsLbl")]
     public partial class DisplayUnitsLabel : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8898,7 +8696,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:logBase.</para>
     /// </summary>
-    [SchemaAttr("c:logBase")]
     public partial class LogBase : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8912,7 +8709,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Logarithmic Base Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
@@ -8940,7 +8736,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:orientation.</para>
     /// </summary>
-    [SchemaAttr("c:orientation")]
     public partial class Orientation : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8954,7 +8749,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Orientation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues>>();
@@ -8988,7 +8782,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:pivotFmt")]
     public partial class PivotFormat : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9115,7 +8908,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:legendPos.</para>
     /// </summary>
-    [SchemaAttr("c:legendPos")]
     public partial class LegendPosition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -9129,7 +8921,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Legend Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues>>();
@@ -9162,7 +8953,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:legendEntry")]
     public partial class LegendEntry : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9255,7 +9045,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FirstFooter" /> <c>&lt;c:firstFooter></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:headerFooter")]
     public partial class HeaderFooter : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9293,7 +9082,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Align With Margins</para>
         /// <para>Represents the following attribute in the schema: alignWithMargins</para>
         /// </summary>
-        [SchemaAttr("alignWithMargins")]
         public BooleanValue? AlignWithMargins
         {
             get => GetAttribute<BooleanValue>();
@@ -9304,7 +9092,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Different Odd Even</para>
         /// <para>Represents the following attribute in the schema: differentOddEven</para>
         /// </summary>
-        [SchemaAttr("differentOddEven")]
         public BooleanValue? DifferentOddEven
         {
             get => GetAttribute<BooleanValue>();
@@ -9315,7 +9102,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Different First</para>
         /// <para>Represents the following attribute in the schema: differentFirst</para>
         /// </summary>
-        [SchemaAttr("differentFirst")]
         public BooleanValue? DifferentFirst
         {
             get => GetAttribute<BooleanValue>();
@@ -9434,7 +9220,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pageMargins.</para>
     /// </summary>
-    [SchemaAttr("c:pageMargins")]
     public partial class PageMargins : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -9448,7 +9233,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Left</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        [SchemaAttr("l")]
         public DoubleValue? Left
         {
             get => GetAttribute<DoubleValue>();
@@ -9459,7 +9243,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Right</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr("r")]
         public DoubleValue? Right
         {
             get => GetAttribute<DoubleValue>();
@@ -9470,7 +9253,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Top</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public DoubleValue? Top
         {
             get => GetAttribute<DoubleValue>();
@@ -9481,7 +9263,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bottom</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [SchemaAttr("b")]
         public DoubleValue? Bottom
         {
             get => GetAttribute<DoubleValue>();
@@ -9492,7 +9273,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Header</para>
         /// <para>Represents the following attribute in the schema: header</para>
         /// </summary>
-        [SchemaAttr("header")]
         public DoubleValue? Header
         {
             get => GetAttribute<DoubleValue>();
@@ -9503,7 +9283,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Footer</para>
         /// <para>Represents the following attribute in the schema: footer</para>
         /// </summary>
-        [SchemaAttr("footer")]
         public DoubleValue? Footer
         {
             get => GetAttribute<DoubleValue>();
@@ -9556,7 +9335,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pageSetup.</para>
     /// </summary>
-    [SchemaAttr("c:pageSetup")]
     public partial class PageSetup : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -9570,7 +9348,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Page Size</para>
         /// <para>Represents the following attribute in the schema: paperSize</para>
         /// </summary>
-        [SchemaAttr("paperSize")]
         public UInt32Value? PaperSize
         {
             get => GetAttribute<UInt32Value>();
@@ -9581,7 +9358,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>First Page Number</para>
         /// <para>Represents the following attribute in the schema: firstPageNumber</para>
         /// </summary>
-        [SchemaAttr("firstPageNumber")]
         public Int32Value? FirstPageNumber
         {
             get => GetAttribute<Int32Value>();
@@ -9592,7 +9368,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Orientation</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        [SchemaAttr("orientation")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues>? Orientation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues>>();
@@ -9603,7 +9378,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Black and White</para>
         /// <para>Represents the following attribute in the schema: blackAndWhite</para>
         /// </summary>
-        [SchemaAttr("blackAndWhite")]
         public BooleanValue? BlackAndWhite
         {
             get => GetAttribute<BooleanValue>();
@@ -9614,7 +9388,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Draft</para>
         /// <para>Represents the following attribute in the schema: draft</para>
         /// </summary>
-        [SchemaAttr("draft")]
         public BooleanValue? Draft
         {
             get => GetAttribute<BooleanValue>();
@@ -9625,7 +9398,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Use First Page Number</para>
         /// <para>Represents the following attribute in the schema: useFirstPageNumber</para>
         /// </summary>
-        [SchemaAttr("useFirstPageNumber")]
         public BooleanValue? UseFirstPageNumber
         {
             get => GetAttribute<BooleanValue>();
@@ -9636,7 +9408,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Horizontal DPI</para>
         /// <para>Represents the following attribute in the schema: horizontalDpi</para>
         /// </summary>
-        [SchemaAttr("horizontalDpi")]
         public Int32Value? HorizontalDpi
         {
             get => GetAttribute<Int32Value>();
@@ -9647,7 +9418,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Vertical DPI</para>
         /// <para>Represents the following attribute in the schema: verticalDpi</para>
         /// </summary>
-        [SchemaAttr("verticalDpi")]
         public Int32Value? VerticalDpi
         {
             get => GetAttribute<Int32Value>();
@@ -9658,7 +9428,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Copies</para>
         /// <para>Represents the following attribute in the schema: copies</para>
         /// </summary>
-        [SchemaAttr("copies")]
         public UInt32Value? Copies
         {
             get => GetAttribute<UInt32Value>();
@@ -9712,7 +9481,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:spPr")]
     public partial class ShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9750,7 +9518,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -9862,7 +9629,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:dLbl")]
     public partial class DataLabel : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9986,7 +9752,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:areaChart")]
     public partial class AreaChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10097,7 +9862,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:area3DChart")]
     public partial class Area3DChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10213,7 +9977,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UpDownBars" /> <c>&lt;c:upDownBars></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:lineChart")]
     public partial class LineChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10332,7 +10095,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:line3DChart")]
     public partial class Line3DChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10444,7 +10206,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UpDownBars" /> <c>&lt;c:upDownBars></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:stockChart")]
     public partial class StockChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10521,7 +10282,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:radarChart")]
     public partial class RadarChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10622,7 +10382,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:scatterChart")]
     public partial class ScatterChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10722,7 +10481,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:pieChart")]
     public partial class PieChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10812,7 +10570,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:pie3DChart")]
     public partial class Pie3DChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10902,7 +10659,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:doughnutChart")]
     public partial class DoughnutChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -11000,7 +10756,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:barChart")]
     public partial class BarChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -11132,7 +10887,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:bar3DChart")]
     public partial class Bar3DChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -11265,7 +11019,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SplitType" /> <c>&lt;c:splitType></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ofPieChart")]
     public partial class OfPieChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -11381,7 +11134,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:surfaceChart")]
     public partial class SurfaceChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -11473,7 +11225,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:surface3DChart")]
     public partial class Surface3DChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -11577,7 +11328,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:bubbleChart")]
     public partial class BubbleChart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -11686,7 +11436,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ValAxExtensionList" /> <c>&lt;c:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:valAx")]
     public partial class ValueAxis : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -11999,7 +11748,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:catAx")]
     public partial class CategoryAxis : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -12317,7 +12065,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:dateAx")]
     public partial class DateAxis : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -12632,7 +12379,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:serAx")]
     public partial class SeriesAxis : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -12925,7 +12671,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:dTable")]
     public partial class DataTable : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13082,7 +12827,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:firstSliceAng.</para>
     /// </summary>
-    [SchemaAttr("c:firstSliceAng")]
     public partial class FirstSliceAngle : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -13096,7 +12840,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>First Slice Angle Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -13123,7 +12866,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:holeSize.</para>
     /// </summary>
-    [SchemaAttr("c:holeSize")]
     public partial class HoleSize : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -13137,7 +12879,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Hole Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
@@ -13171,7 +12912,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericValue" /> <c>&lt;c:v></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:pt")]
     public partial class StringPoint : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13209,7 +12949,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
@@ -13256,7 +12995,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:thickness.</para>
     /// </summary>
-    [SchemaAttr("c:thickness")]
     public partial class Thickness : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -13270,7 +13008,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
@@ -13303,7 +13040,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class StockChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13341,7 +13077,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -13381,7 +13116,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries" /> <c>&lt;c15:filteredPieSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class PieChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13419,7 +13153,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -13459,7 +13192,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries" /> <c>&lt;c15:filteredPieSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class Pie3DChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13497,7 +13229,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -13539,7 +13270,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class NumRefExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13577,7 +13307,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -13621,7 +13350,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories" /> <c>&lt;c15:autoCat></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class StrDataExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13659,7 +13387,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -13701,7 +13428,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class StrRefExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13739,7 +13465,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -13785,7 +13510,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class MultiLvlStrRefExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13823,7 +13547,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -13871,7 +13594,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable" /> <c>&lt;c15:dlblFieldTable></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class DLblExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13909,7 +13631,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -13963,7 +13684,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable" /> <c>&lt;c15:dlblFieldTable></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class DLblsExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14001,7 +13721,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -14056,7 +13775,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class LineSerExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14094,7 +13812,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -14143,7 +13860,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class ScatterSerExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14181,7 +13897,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -14230,7 +13945,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class RadarSerExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14268,7 +13982,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -14317,7 +14030,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class AreaSerExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14355,7 +14067,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -14404,7 +14115,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class PieSerExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14442,7 +14152,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -14490,7 +14199,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class SurfaceSerExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14528,7 +14236,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -14572,7 +14279,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class LineChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14610,7 +14316,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -14650,7 +14355,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class Line3DChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14688,7 +14392,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -14728,7 +14431,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries" /> <c>&lt;c15:filteredScatterSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class ScatterChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14766,7 +14468,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -14806,7 +14507,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries" /> <c>&lt;c15:filteredRadarSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class RadarChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14844,7 +14544,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -14884,7 +14583,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries" /> <c>&lt;c15:filteredBarSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class BarChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14922,7 +14620,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -14962,7 +14659,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries" /> <c>&lt;c15:filteredBarSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class Bar3DChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15000,7 +14696,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -15040,7 +14735,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries" /> <c>&lt;c15:filteredAreaSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class AreaChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15078,7 +14772,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -15118,7 +14811,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries" /> <c>&lt;c15:filteredAreaSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class Area3DChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15156,7 +14848,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -15196,7 +14887,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries" /> <c>&lt;c15:filteredBubbleSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class BubbleChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15234,7 +14924,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -15274,7 +14963,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries" /> <c>&lt;c15:filteredSurfaceSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class SurfaceChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15312,7 +15000,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -15352,7 +15039,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries" /> <c>&lt;c15:filteredSurfaceSeries></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class Surface3DChartExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15390,7 +15076,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -15430,7 +15115,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class CatAxExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15468,7 +15152,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -15508,7 +15191,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class DateAxExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15546,7 +15228,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -15586,7 +15267,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class SerAxExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15624,7 +15304,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -15664,7 +15343,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class ValAxExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15702,7 +15380,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -15745,7 +15422,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DownBars" /> <c>&lt;c:downBars></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:upDownBars")]
     public partial class UpDownBars : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15863,7 +15539,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class StockChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15923,7 +15598,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class PieChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15983,7 +15657,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class Pie3DChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -16043,7 +15716,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class NumRefExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -16103,7 +15775,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class StrDataExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -16163,7 +15834,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class StrRefExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -16225,7 +15895,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:multiLvlStrCache")]
     public partial class MultiLevelStringCache : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -16302,7 +15971,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class MultiLvlStrRefExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -16362,7 +16030,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DLblExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class DLblExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -16422,7 +16089,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class DLblsExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -16489,7 +16155,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Explosion" /> <c>&lt;c:explosion></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:dPt")]
     public partial class DataPoint : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -16678,7 +16343,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TrendlineName" /> <c>&lt;c:name></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:trendline")]
     public partial class Trendline : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -16924,7 +16588,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Minus" /> <c>&lt;c:minus></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:errBars")]
     public partial class ErrorBars : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -17121,7 +16784,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:cat")]
     public partial class CategoryAxisData : AxisDataSourceType
     {
         /// <summary>
@@ -17191,7 +16853,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:xVal")]
     public partial class XValues : AxisDataSourceType
     {
         /// <summary>
@@ -17381,7 +17042,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class LineSerExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -17441,7 +17101,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class ScatterSerExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -17501,7 +17160,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class RadarSerExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -17555,7 +17213,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:shape.</para>
     /// </summary>
-    [SchemaAttr("c:shape")]
     public partial class Shape : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -17569,7 +17226,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Shape Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>>();
@@ -17599,7 +17255,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class BarSerExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -17663,7 +17318,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class BarSerExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -17701,7 +17355,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -17749,7 +17402,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class AreaSerExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -17809,7 +17461,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class PieSerExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -17869,7 +17520,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class BubbleSerExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -17932,7 +17582,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class BubbleSerExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -17970,7 +17619,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -18016,7 +17664,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class SurfaceSerExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -18076,7 +17723,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class LineChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -18136,7 +17782,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class Line3DChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -18190,7 +17835,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:scatterStyle.</para>
     /// </summary>
-    [SchemaAttr("c:scatterStyle")]
     public partial class ScatterStyle : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -18204,7 +17848,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Scatter Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues>>();
@@ -18246,7 +17889,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ser")]
     public partial class ScatterChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -18401,7 +18043,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class ScatterChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -18455,7 +18096,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:radarStyle.</para>
     /// </summary>
-    [SchemaAttr("c:radarStyle")]
     public partial class RadarStyle : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -18469,7 +18109,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Radar Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues>>();
@@ -18512,7 +18151,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ser")]
     public partial class RadarChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -18676,7 +18314,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class RadarChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -18730,7 +18367,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:overlap.</para>
     /// </summary>
-    [SchemaAttr("c:overlap")]
     public partial class Overlap : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -18744,7 +18380,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Overlap Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public SByteValue? Val
         {
             get => GetAttribute<SByteValue>();
@@ -18777,7 +18412,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class BarChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -18837,7 +18471,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class Bar3DChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -18897,7 +18530,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class AreaChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -18957,7 +18589,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class Area3DChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19031,7 +18662,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ser")]
     public partial class BubbleChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19197,7 +18827,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:bubbleScale.</para>
     /// </summary>
-    [SchemaAttr("c:bubbleScale")]
     public partial class BubbleScale : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -19211,7 +18840,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bubble Scale Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -19238,7 +18866,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:sizeRepresents.</para>
     /// </summary>
-    [SchemaAttr("c:sizeRepresents")]
     public partial class SizeRepresents : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -19252,7 +18879,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Size Represents Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues>>();
@@ -19282,7 +18908,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class BubbleChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19342,7 +18967,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class SurfaceChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19402,7 +19026,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class Surface3DChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19456,7 +19079,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:lblAlgn.</para>
     /// </summary>
-    [SchemaAttr("c:lblAlgn")]
     public partial class LabelAlignment : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -19470,7 +19092,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Label Alignment Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues>>();
@@ -19497,7 +19118,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:lblOffset.</para>
     /// </summary>
-    [SchemaAttr("c:lblOffset")]
     public partial class LabelOffset : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -19511,7 +19131,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Label Offset Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -19538,7 +19157,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:tickLblSkip.</para>
     /// </summary>
-    [SchemaAttr("c:tickLblSkip")]
     public partial class TickLabelSkip : SkipType
     {
         /// <summary>
@@ -19563,7 +19181,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:tickMarkSkip.</para>
     /// </summary>
-    [SchemaAttr("c:tickMarkSkip")]
     public partial class TickMarkSkip : SkipType
     {
         /// <summary>
@@ -19601,7 +19218,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Skip Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -19631,7 +19247,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class CatAxExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19685,7 +19300,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:baseTimeUnit.</para>
     /// </summary>
-    [SchemaAttr("c:baseTimeUnit")]
     public partial class BaseTimeUnit : TimeUnitType
     {
         /// <summary>
@@ -19710,7 +19324,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:majorTimeUnit.</para>
     /// </summary>
-    [SchemaAttr("c:majorTimeUnit")]
     public partial class MajorTimeUnit : TimeUnitType
     {
         /// <summary>
@@ -19735,7 +19348,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:minorTimeUnit.</para>
     /// </summary>
-    [SchemaAttr("c:minorTimeUnit")]
     public partial class MinorTimeUnit : TimeUnitType
     {
         /// <summary>
@@ -19773,7 +19385,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Time Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues>>();
@@ -19793,7 +19404,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:majorUnit.</para>
     /// </summary>
-    [SchemaAttr("c:majorUnit")]
     public partial class MajorUnit : AxisUnitType
     {
         /// <summary>
@@ -19818,7 +19428,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:minorUnit.</para>
     /// </summary>
-    [SchemaAttr("c:minorUnit")]
     public partial class MinorUnit : AxisUnitType
     {
         /// <summary>
@@ -19856,7 +19465,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Major Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
@@ -19886,7 +19494,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class DateAxExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19946,7 +19553,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class SerAxExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -20000,7 +19606,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:crossBetween.</para>
     /// </summary>
-    [SchemaAttr("c:crossBetween")]
     public partial class CrossBetween : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -20014,7 +19619,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Cross Between Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues>>();
@@ -20050,7 +19654,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:dispUnits")]
     public partial class DisplayUnits : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -20119,7 +19722,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class ValAxExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -20173,7 +19775,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:lang.</para>
     /// </summary>
-    [SchemaAttr("c:lang")]
     public partial class EditingLanguage : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -20187,7 +19788,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Language Code</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -20214,7 +19814,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:style.</para>
     /// </summary>
-    [SchemaAttr("c:style")]
     public partial class Style : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -20228,7 +19827,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Style Type</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
@@ -20261,7 +19859,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:clrMapOvr")]
     public partial class ColorMapOverride : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -20299,7 +19896,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Background 1</para>
         /// <para>Represents the following attribute in the schema: bg1</para>
         /// </summary>
-        [SchemaAttr("bg1")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -20310,7 +19906,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Text 1</para>
         /// <para>Represents the following attribute in the schema: tx1</para>
         /// </summary>
-        [SchemaAttr("tx1")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -20321,7 +19916,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Background 2</para>
         /// <para>Represents the following attribute in the schema: bg2</para>
         /// </summary>
-        [SchemaAttr("bg2")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -20332,7 +19926,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Text 2</para>
         /// <para>Represents the following attribute in the schema: tx2</para>
         /// </summary>
-        [SchemaAttr("tx2")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -20343,7 +19936,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Accent 1</para>
         /// <para>Represents the following attribute in the schema: accent1</para>
         /// </summary>
-        [SchemaAttr("accent1")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -20354,7 +19946,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Accent 2</para>
         /// <para>Represents the following attribute in the schema: accent2</para>
         /// </summary>
-        [SchemaAttr("accent2")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -20365,7 +19956,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Accent 3</para>
         /// <para>Represents the following attribute in the schema: accent3</para>
         /// </summary>
-        [SchemaAttr("accent3")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent3
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -20376,7 +19966,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Accent 4</para>
         /// <para>Represents the following attribute in the schema: accent4</para>
         /// </summary>
-        [SchemaAttr("accent4")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent4
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -20387,7 +19976,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Accent 5</para>
         /// <para>Represents the following attribute in the schema: accent5</para>
         /// </summary>
-        [SchemaAttr("accent5")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent5
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -20398,7 +19986,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Accent 6</para>
         /// <para>Represents the following attribute in the schema: accent6</para>
         /// </summary>
-        [SchemaAttr("accent6")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent6
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -20409,7 +19996,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Hyperlink</para>
         /// <para>Represents the following attribute in the schema: hlink</para>
         /// </summary>
-        [SchemaAttr("hlink")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Hyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -20420,7 +20006,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Followed Hyperlink</para>
         /// <para>Represents the following attribute in the schema: folHlink</para>
         /// </summary>
-        [SchemaAttr("folHlink")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? FollowedHyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -20529,7 +20114,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotTableName" /> <c>&lt;c:name></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:pivotSource")]
     public partial class PivotSource : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -20636,7 +20220,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UserInterface" /> <c>&lt;c:userInterface></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:protection")]
     public partial class Protection : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -20781,7 +20364,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.View3D" /> <c>&lt;c:view3D></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:chart")]
     public partial class Chart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -21035,7 +20617,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate" /> <c>&lt;c:autoUpdate></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:externalData")]
     public partial class ExternalData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -21076,7 +20657,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -21131,7 +20711,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter" /> <c>&lt;c:legacyDrawingHF></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:printSettings")]
     public partial class PrintSettings : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -21249,7 +20828,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class ChartSpaceExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -21311,7 +20889,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions" /> <c>&lt;c14:sketchOptions></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class ChartSpaceExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -21349,7 +20926,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -21393,7 +20969,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse" /> <c>&lt;c16r3:dispNaAsBlank></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:ext")]
     public partial class DataDisplayOptions16 : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -21467,7 +21042,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotFormat" /> <c>&lt;c:pivotFmt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:pivotFmts")]
     public partial class PivotFormats : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -21533,7 +21107,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RotateY" /> <c>&lt;c:rotY></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:view3D")]
     public partial class View3D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -21699,7 +21272,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Thickness" /> <c>&lt;c:thickness></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:floor")]
     public partial class Floor : SurfaceType
     {
         /// <summary>
@@ -21764,7 +21336,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Thickness" /> <c>&lt;c:thickness></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:sideWall")]
     public partial class SideWall : SurfaceType
     {
         /// <summary>
@@ -21829,7 +21400,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Thickness" /> <c>&lt;c:thickness></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:backWall")]
     public partial class BackWall : SurfaceType
     {
         /// <summary>
@@ -22023,7 +21593,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ValueAxis" /> <c>&lt;c:valAx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:plotArea")]
     public partial class PlotArea : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -22154,7 +21723,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LegendPosition" /> <c>&lt;c:legendPos></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:legend")]
     public partial class Legend : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -22233,7 +21801,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dispBlanksAs.</para>
     /// </summary>
-    [SchemaAttr("c:dispBlanksAs")]
     public partial class DisplayBlanksAs : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -22247,7 +21814,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Display Blanks As Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues>>();
@@ -22277,7 +21843,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c:extLst")]
     public partial class ChartExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>

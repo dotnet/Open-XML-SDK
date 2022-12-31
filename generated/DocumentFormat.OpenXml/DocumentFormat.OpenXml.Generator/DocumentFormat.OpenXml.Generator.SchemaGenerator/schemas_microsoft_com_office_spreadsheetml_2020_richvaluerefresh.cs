@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -29,7 +27,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval" /> <c>&lt;xlrvr:refreshInterval></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrvr:refreshIntervals")]
     public partial class RichValueRefreshIntervals : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -84,7 +81,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrvr:refreshInterval.</para>
     /// </summary>
-    [SchemaAttr("xlrvr:refreshInterval")]
     public partial class RichValueRefreshInterval : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -98,7 +94,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
         /// <para>resourceIdInt, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: resourceIdInt</para>
         /// </summary>
-        [SchemaAttr("resourceIdInt")]
         public Int32Value? ResourceIdInt
         {
             get => GetAttribute<Int32Value>();
@@ -109,7 +104,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
         /// <para>resourceIdStr, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: resourceIdStr</para>
         /// </summary>
-        [SchemaAttr("resourceIdStr")]
         public StringValue? ResourceIdStr
         {
             get => GetAttribute<StringValue>();
@@ -120,7 +114,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
         /// <para>interval, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: interval</para>
         /// </summary>
-        [SchemaAttr("interval")]
         public Int32Value? Interval
         {
             get => GetAttribute<Int32Value>();

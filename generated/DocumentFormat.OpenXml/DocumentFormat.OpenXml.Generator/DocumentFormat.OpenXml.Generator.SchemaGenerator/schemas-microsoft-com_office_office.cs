@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -41,7 +39,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("o:shapedefaults")]
     public partial class ShapeDefaults : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -82,7 +79,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -93,7 +89,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shape ID Optional Storage</para>
         /// <para>Represents the following attribute in the schema: spidmax</para>
         /// </summary>
-        [SchemaAttr("spidmax")]
         public IntegerValue? MaxShapeId
         {
             get => GetAttribute<IntegerValue>();
@@ -104,7 +99,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>style</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr("style")]
         public StringValue? Style
         {
             get => GetAttribute<StringValue>();
@@ -115,7 +109,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: fill</para>
         /// </summary>
-        [SchemaAttr("fill")]
         public TrueFalseValue? BeFilled
         {
             get => GetAttribute<TrueFalseValue>();
@@ -126,7 +119,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Default Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        [SchemaAttr("fillcolor")]
         public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
@@ -137,7 +129,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shape Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: stroke</para>
         /// </summary>
-        [SchemaAttr("stroke")]
         public TrueFalseValue? IsStroke
         {
             get => GetAttribute<TrueFalseValue>();
@@ -148,7 +139,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shape Stroke Color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        [SchemaAttr("strokecolor")]
         public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
@@ -162,7 +152,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr("o:allowincell")]
         public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
@@ -176,7 +165,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr("o:allowoverlap")]
         public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
@@ -190,7 +178,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr("o:insetmode")]
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
@@ -399,7 +386,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Rules" /> <c>&lt;o:rules></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("o:shapelayout")]
     public partial class ShapeLayout : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -440,7 +426,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -512,7 +497,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:signatureline.</para>
     /// </summary>
-    [SchemaAttr("o:signatureline")]
     public partial class SignatureLine : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -529,7 +513,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -540,7 +523,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Signature Line Flag</para>
         /// <para>Represents the following attribute in the schema: issignatureline</para>
         /// </summary>
-        [SchemaAttr("issignatureline")]
         public TrueFalseValue? IsSignatureLine
         {
             get => GetAttribute<TrueFalseValue>();
@@ -551,7 +533,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Unique ID</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -562,7 +543,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Signature Provider ID</para>
         /// <para>Represents the following attribute in the schema: provid</para>
         /// </summary>
-        [SchemaAttr("provid")]
         public StringValue? ProviderId
         {
             get => GetAttribute<StringValue>();
@@ -573,7 +553,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Use Signing Instructions Flag</para>
         /// <para>Represents the following attribute in the schema: signinginstructionsset</para>
         /// </summary>
-        [SchemaAttr("signinginstructionsset")]
         public TrueFalseValue? SigningInstructionsSet
         {
             get => GetAttribute<TrueFalseValue>();
@@ -584,7 +563,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>User-specified Comments Flag</para>
         /// <para>Represents the following attribute in the schema: allowcomments</para>
         /// </summary>
-        [SchemaAttr("allowcomments")]
         public TrueFalseValue? AllowComments
         {
             get => GetAttribute<TrueFalseValue>();
@@ -595,7 +573,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Show Signed Date Flag</para>
         /// <para>Represents the following attribute in the schema: showsigndate</para>
         /// </summary>
-        [SchemaAttr("showsigndate")]
         public TrueFalseValue? ShowSignDate
         {
             get => GetAttribute<TrueFalseValue>();
@@ -609,7 +586,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr("o:suggestedsigner")]
         public StringValue? SuggestedSigner
         {
             get => GetAttribute<StringValue>();
@@ -623,7 +599,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr("o:suggestedsigner2")]
         public StringValue? SuggestedSigner2
         {
             get => GetAttribute<StringValue>();
@@ -637,7 +612,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr("o:suggestedsigneremail")]
         public StringValue? SuggestedSignerEmail
         {
             get => GetAttribute<StringValue>();
@@ -648,7 +622,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Instructions for Signing</para>
         /// <para>Represents the following attribute in the schema: signinginstructions</para>
         /// </summary>
-        [SchemaAttr("signinginstructions")]
         public StringValue? SigningInstructions
         {
             get => GetAttribute<StringValue>();
@@ -659,7 +632,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Additional Signature Information</para>
         /// <para>Represents the following attribute in the schema: addlxml</para>
         /// </summary>
-        [SchemaAttr("addlxml")]
         public StringValue? AdditionalXml
         {
             get => GetAttribute<StringValue>();
@@ -670,7 +642,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Signature Provider Download URL</para>
         /// <para>Represents the following attribute in the schema: sigprovurl</para>
         /// </summary>
-        [SchemaAttr("sigprovurl")]
         public StringValue? SignatureProviderUrl
         {
             get => GetAttribute<StringValue>();
@@ -713,7 +684,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:ink.</para>
     /// </summary>
-    [SchemaAttr("o:ink")]
     public partial class Ink : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -727,7 +697,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Ink Data</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        [SchemaAttr("i")]
         public Base64BinaryValue? InkData
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -738,7 +707,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Annotation Flag</para>
         /// <para>Represents the following attribute in the schema: annotation</para>
         /// </summary>
-        [SchemaAttr("annotation")]
         public TrueFalseValue? AnnotationFlag
         {
             get => GetAttribute<TrueFalseValue>();
@@ -769,7 +737,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.RelationTable" /> <c>&lt;o:relationtable></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("o:diagram")]
     public partial class Diagram : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -810,7 +777,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -821,7 +787,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diagram Style Options</para>
         /// <para>Represents the following attribute in the schema: dgmstyle</para>
         /// </summary>
-        [SchemaAttr("dgmstyle")]
         public IntegerValue? Style
         {
             get => GetAttribute<IntegerValue>();
@@ -832,7 +797,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diagram Automatic Format</para>
         /// <para>Represents the following attribute in the schema: autoformat</para>
         /// </summary>
-        [SchemaAttr("autoformat")]
         public TrueFalseValue? AutoFormat
         {
             get => GetAttribute<TrueFalseValue>();
@@ -843,7 +807,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diagram Reverse Direction</para>
         /// <para>Represents the following attribute in the schema: reverse</para>
         /// </summary>
-        [SchemaAttr("reverse")]
         public TrueFalseValue? Reverse
         {
             get => GetAttribute<TrueFalseValue>();
@@ -854,7 +817,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diagram Automatic Layout</para>
         /// <para>Represents the following attribute in the schema: autolayout</para>
         /// </summary>
-        [SchemaAttr("autolayout")]
         public TrueFalseValue? AutoLayout
         {
             get => GetAttribute<TrueFalseValue>();
@@ -865,7 +827,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diagram Layout X Scale</para>
         /// <para>Represents the following attribute in the schema: dgmscalex</para>
         /// </summary>
-        [SchemaAttr("dgmscalex")]
         public IntegerValue? ScaleX
         {
             get => GetAttribute<IntegerValue>();
@@ -876,7 +837,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diagram Layout Y Scale</para>
         /// <para>Represents the following attribute in the schema: dgmscaley</para>
         /// </summary>
-        [SchemaAttr("dgmscaley")]
         public IntegerValue? ScaleY
         {
             get => GetAttribute<IntegerValue>();
@@ -887,7 +847,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diagram Font Size</para>
         /// <para>Represents the following attribute in the schema: dgmfontsize</para>
         /// </summary>
-        [SchemaAttr("dgmfontsize")]
         public IntegerValue? FontSize
         {
             get => GetAttribute<IntegerValue>();
@@ -898,7 +857,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diagram Layout Extents</para>
         /// <para>Represents the following attribute in the schema: constrainbounds</para>
         /// </summary>
-        [SchemaAttr("constrainbounds")]
         public StringValue? ConstrainBounds
         {
             get => GetAttribute<StringValue>();
@@ -909,7 +867,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diagram Base Font Size</para>
         /// <para>Represents the following attribute in the schema: dgmbasetextscale</para>
         /// </summary>
-        [SchemaAttr("dgmbasetextscale")]
         public IntegerValue? BaseTextScale
         {
             get => GetAttribute<IntegerValue>();
@@ -960,7 +917,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:skew.</para>
     /// </summary>
-    [SchemaAttr("o:skew")]
     public partial class Skew : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -977,7 +933,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -988,7 +943,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Skew ID</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -999,7 +953,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Skew Toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-        [SchemaAttr("on")]
         public TrueFalseValue? On
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1010,7 +963,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Skew Offset</para>
         /// <para>Represents the following attribute in the schema: offset</para>
         /// </summary>
-        [SchemaAttr("offset")]
         public StringValue? Offset
         {
             get => GetAttribute<StringValue>();
@@ -1021,7 +973,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Skew Origin</para>
         /// <para>Represents the following attribute in the schema: origin</para>
         /// </summary>
-        [SchemaAttr("origin")]
         public StringValue? Origin
         {
             get => GetAttribute<StringValue>();
@@ -1032,7 +983,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Skew Perspective Matrix</para>
         /// <para>Represents the following attribute in the schema: matrix</para>
         /// </summary>
-        [SchemaAttr("matrix")]
         public StringValue? Matrix
         {
             get => GetAttribute<StringValue>();
@@ -1061,7 +1011,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:extrusion.</para>
     /// </summary>
-    [SchemaAttr("o:extrusion")]
     public partial class Extrusion : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1078,7 +1027,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -1089,7 +1037,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Extrusion Toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-        [SchemaAttr("on")]
         public TrueFalseValue? On
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1100,7 +1047,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Extrusion Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionValues>>();
@@ -1111,7 +1057,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Extrusion Render Mode</para>
         /// <para>Represents the following attribute in the schema: render</para>
         /// </summary>
-        [SchemaAttr("render")]
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues>? Render
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues>>();
@@ -1122,7 +1067,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Extrusion Viewpoint Origin</para>
         /// <para>Represents the following attribute in the schema: viewpointorigin</para>
         /// </summary>
-        [SchemaAttr("viewpointorigin")]
         public StringValue? ViewpointOrigin
         {
             get => GetAttribute<StringValue>();
@@ -1133,7 +1077,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Extrusion Viewpoint</para>
         /// <para>Represents the following attribute in the schema: viewpoint</para>
         /// </summary>
-        [SchemaAttr("viewpoint")]
         public StringValue? Viewpoint
         {
             get => GetAttribute<StringValue>();
@@ -1144,7 +1087,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Extrusion Skew Angle</para>
         /// <para>Represents the following attribute in the schema: skewangle</para>
         /// </summary>
-        [SchemaAttr("skewangle")]
         public SingleValue? SkewAngle
         {
             get => GetAttribute<SingleValue>();
@@ -1155,7 +1097,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Extrusion Skew</para>
         /// <para>Represents the following attribute in the schema: skewamt</para>
         /// </summary>
-        [SchemaAttr("skewamt")]
         public StringValue? SkewAmount
         {
             get => GetAttribute<StringValue>();
@@ -1166,7 +1107,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Forward Extrusion</para>
         /// <para>Represents the following attribute in the schema: foredepth</para>
         /// </summary>
-        [SchemaAttr("foredepth")]
         public StringValue? ForceDepth
         {
             get => GetAttribute<StringValue>();
@@ -1177,7 +1117,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Backward Extrusion Depth</para>
         /// <para>Represents the following attribute in the schema: backdepth</para>
         /// </summary>
-        [SchemaAttr("backdepth")]
         public StringValue? BackDepth
         {
             get => GetAttribute<StringValue>();
@@ -1188,7 +1127,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Rotation Axis</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        [SchemaAttr("orientation")]
         public StringValue? Orientation
         {
             get => GetAttribute<StringValue>();
@@ -1199,7 +1137,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Rotation Around Axis</para>
         /// <para>Represents the following attribute in the schema: orientationangle</para>
         /// </summary>
-        [SchemaAttr("orientationangle")]
         public SingleValue? OrientationAngle
         {
             get => GetAttribute<SingleValue>();
@@ -1210,7 +1147,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Rotation Toggle</para>
         /// <para>Represents the following attribute in the schema: lockrotationcenter</para>
         /// </summary>
-        [SchemaAttr("lockrotationcenter")]
         public TrueFalseValue? LockRotationCenter
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1221,7 +1157,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Center of Rotation Toggle</para>
         /// <para>Represents the following attribute in the schema: autorotationcenter</para>
         /// </summary>
-        [SchemaAttr("autorotationcenter")]
         public TrueFalseValue? AutoRotationCenter
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1232,7 +1167,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Rotation Center</para>
         /// <para>Represents the following attribute in the schema: rotationcenter</para>
         /// </summary>
-        [SchemaAttr("rotationcenter")]
         public StringValue? RotationCenter
         {
             get => GetAttribute<StringValue>();
@@ -1243,7 +1177,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>X-Y Rotation Angle</para>
         /// <para>Represents the following attribute in the schema: rotationangle</para>
         /// </summary>
-        [SchemaAttr("rotationangle")]
         public StringValue? RotationAngle
         {
             get => GetAttribute<StringValue>();
@@ -1254,7 +1187,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Extrusion Color</para>
         /// <para>Represents the following attribute in the schema: color</para>
         /// </summary>
-        [SchemaAttr("color")]
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -1265,7 +1197,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shininess</para>
         /// <para>Represents the following attribute in the schema: shininess</para>
         /// </summary>
-        [SchemaAttr("shininess")]
         public SingleValue? Shininess
         {
             get => GetAttribute<SingleValue>();
@@ -1276,7 +1207,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Specularity</para>
         /// <para>Represents the following attribute in the schema: specularity</para>
         /// </summary>
-        [SchemaAttr("specularity")]
         public StringValue? Specularity
         {
             get => GetAttribute<StringValue>();
@@ -1287,7 +1217,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diffuse Reflection</para>
         /// <para>Represents the following attribute in the schema: diffusity</para>
         /// </summary>
-        [SchemaAttr("diffusity")]
         public StringValue? Diffusity
         {
             get => GetAttribute<StringValue>();
@@ -1298,7 +1227,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Metallic Surface Toggle</para>
         /// <para>Represents the following attribute in the schema: metal</para>
         /// </summary>
-        [SchemaAttr("metal")]
         public TrueFalseValue? Metal
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1309,7 +1237,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Simulated Bevel</para>
         /// <para>Represents the following attribute in the schema: edge</para>
         /// </summary>
-        [SchemaAttr("edge")]
         public StringValue? Edge
         {
             get => GetAttribute<StringValue>();
@@ -1320,7 +1247,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Faceting Quality</para>
         /// <para>Represents the following attribute in the schema: facet</para>
         /// </summary>
-        [SchemaAttr("facet")]
         public StringValue? Facet
         {
             get => GetAttribute<StringValue>();
@@ -1331,7 +1257,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shape Face Lighting Toggle</para>
         /// <para>Represents the following attribute in the schema: lightface</para>
         /// </summary>
-        [SchemaAttr("lightface")]
         public TrueFalseValue? LightFace
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1342,7 +1267,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Brightness</para>
         /// <para>Represents the following attribute in the schema: brightness</para>
         /// </summary>
-        [SchemaAttr("brightness")]
         public StringValue? Brightness
         {
             get => GetAttribute<StringValue>();
@@ -1353,7 +1277,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Primary Light Position</para>
         /// <para>Represents the following attribute in the schema: lightposition</para>
         /// </summary>
-        [SchemaAttr("lightposition")]
         public StringValue? LightPosition
         {
             get => GetAttribute<StringValue>();
@@ -1364,7 +1287,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Primary Light Intensity</para>
         /// <para>Represents the following attribute in the schema: lightlevel</para>
         /// </summary>
-        [SchemaAttr("lightlevel")]
         public StringValue? LightLevel
         {
             get => GetAttribute<StringValue>();
@@ -1375,7 +1297,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Primary Light Harshness Toggle</para>
         /// <para>Represents the following attribute in the schema: lightharsh</para>
         /// </summary>
-        [SchemaAttr("lightharsh")]
         public TrueFalseValue? LightHarsh
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1386,7 +1307,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Secondary Light Position</para>
         /// <para>Represents the following attribute in the schema: lightposition2</para>
         /// </summary>
-        [SchemaAttr("lightposition2")]
         public StringValue? LightPosition2
         {
             get => GetAttribute<StringValue>();
@@ -1397,7 +1317,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Secondary Light Intensity</para>
         /// <para>Represents the following attribute in the schema: lightlevel2</para>
         /// </summary>
-        [SchemaAttr("lightlevel2")]
         public StringValue? LightLevel2
         {
             get => GetAttribute<StringValue>();
@@ -1408,7 +1327,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Secondary Light Harshness Toggle</para>
         /// <para>Represents the following attribute in the schema: lightharsh2</para>
         /// </summary>
-        [SchemaAttr("lightharsh2")]
         public TrueFalseValue? LightHarsh2
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1466,7 +1384,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:callout.</para>
     /// </summary>
-    [SchemaAttr("o:callout")]
     public partial class Callout : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1483,7 +1400,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -1494,7 +1410,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-        [SchemaAttr("on")]
         public TrueFalseValue? On
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1505,7 +1420,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public StringValue? Type
         {
             get => GetAttribute<StringValue>();
@@ -1516,7 +1430,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout gap</para>
         /// <para>Represents the following attribute in the schema: gap</para>
         /// </summary>
-        [SchemaAttr("gap")]
         public StringValue? Gap
         {
             get => GetAttribute<StringValue>();
@@ -1527,7 +1440,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout angle</para>
         /// <para>Represents the following attribute in the schema: angle</para>
         /// </summary>
-        [SchemaAttr("angle")]
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.AngleValues>? Angle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.AngleValues>>();
@@ -1538,7 +1450,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout automatic drop toggle</para>
         /// <para>Represents the following attribute in the schema: dropauto</para>
         /// </summary>
-        [SchemaAttr("dropauto")]
         public TrueFalseValue? DropAuto
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1549,7 +1460,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout drop position</para>
         /// <para>Represents the following attribute in the schema: drop</para>
         /// </summary>
-        [SchemaAttr("drop")]
         public StringValue? Drop
         {
             get => GetAttribute<StringValue>();
@@ -1560,7 +1470,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout drop distance</para>
         /// <para>Represents the following attribute in the schema: distance</para>
         /// </summary>
-        [SchemaAttr("distance")]
         public StringValue? Distance
         {
             get => GetAttribute<StringValue>();
@@ -1571,7 +1480,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout length toggle</para>
         /// <para>Represents the following attribute in the schema: lengthspecified</para>
         /// </summary>
-        [SchemaAttr("lengthspecified")]
         public TrueFalseValue? LengthSpecified
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1582,7 +1490,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout length</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-        [SchemaAttr("length")]
         public StringValue? Length
         {
             get => GetAttribute<StringValue>();
@@ -1593,7 +1500,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout accent bar toggle</para>
         /// <para>Represents the following attribute in the schema: accentbar</para>
         /// </summary>
-        [SchemaAttr("accentbar")]
         public TrueFalseValue? AccentBar
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1604,7 +1510,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout text border toggle</para>
         /// <para>Represents the following attribute in the schema: textborder</para>
         /// </summary>
-        [SchemaAttr("textborder")]
         public TrueFalseValue? TextBorder
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1615,7 +1520,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout flip x</para>
         /// <para>Represents the following attribute in the schema: minusx</para>
         /// </summary>
-        [SchemaAttr("minusx")]
         public TrueFalseValue? MinusX
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1626,7 +1530,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout flip y</para>
         /// <para>Represents the following attribute in the schema: minusy</para>
         /// </summary>
-        [SchemaAttr("minusy")]
         public TrueFalseValue? MinusY
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1664,7 +1567,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:lock.</para>
     /// </summary>
-    [SchemaAttr("o:lock")]
     public partial class Lock : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1681,7 +1583,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -1692,7 +1593,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Position Lock</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        [SchemaAttr("position")]
         public TrueFalseValue? Position
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1703,7 +1603,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Selection Lock</para>
         /// <para>Represents the following attribute in the schema: selection</para>
         /// </summary>
-        [SchemaAttr("selection")]
         public TrueFalseValue? Selection
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1714,7 +1613,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Grouping Lock</para>
         /// <para>Represents the following attribute in the schema: grouping</para>
         /// </summary>
-        [SchemaAttr("grouping")]
         public TrueFalseValue? Grouping
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1725,7 +1623,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Ungrouping Lock</para>
         /// <para>Represents the following attribute in the schema: ungrouping</para>
         /// </summary>
-        [SchemaAttr("ungrouping")]
         public TrueFalseValue? Ungrouping
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1736,7 +1633,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Rotation Lock</para>
         /// <para>Represents the following attribute in the schema: rotation</para>
         /// </summary>
-        [SchemaAttr("rotation")]
         public TrueFalseValue? Rotation
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1747,7 +1643,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Cropping Lock</para>
         /// <para>Represents the following attribute in the schema: cropping</para>
         /// </summary>
-        [SchemaAttr("cropping")]
         public TrueFalseValue? Cropping
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1758,7 +1653,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Vertices Lock</para>
         /// <para>Represents the following attribute in the schema: verticies</para>
         /// </summary>
-        [SchemaAttr("verticies")]
         public TrueFalseValue? Verticies
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1769,7 +1663,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Handles Lock</para>
         /// <para>Represents the following attribute in the schema: adjusthandles</para>
         /// </summary>
-        [SchemaAttr("adjusthandles")]
         public TrueFalseValue? AdjustHandles
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1780,7 +1673,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Text Lock</para>
         /// <para>Represents the following attribute in the schema: text</para>
         /// </summary>
-        [SchemaAttr("text")]
         public TrueFalseValue? TextLock
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1791,7 +1683,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Aspect Ratio Lock</para>
         /// <para>Represents the following attribute in the schema: aspectratio</para>
         /// </summary>
-        [SchemaAttr("aspectratio")]
         public TrueFalseValue? AspectRatio
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1802,7 +1693,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>AutoShape Type Lock</para>
         /// <para>Represents the following attribute in the schema: shapetype</para>
         /// </summary>
-        [SchemaAttr("shapetype")]
         public TrueFalseValue? ShapeType
         {
             get => GetAttribute<TrueFalseValue>();
@@ -1845,7 +1735,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.FieldCodes" /> <c>&lt;o:FieldCodes></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("o:OLEObject")]
     public partial class OleObject : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1883,7 +1772,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>OLE Object Type</para>
         /// <para>Represents the following attribute in the schema: Type</para>
         /// </summary>
-        [SchemaAttr("Type")]
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleValues>>();
@@ -1894,7 +1782,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>OLE Object Application</para>
         /// <para>Represents the following attribute in the schema: ProgID</para>
         /// </summary>
-        [SchemaAttr("ProgID")]
         public StringValue? ProgId
         {
             get => GetAttribute<StringValue>();
@@ -1905,7 +1792,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>OLE Object Shape</para>
         /// <para>Represents the following attribute in the schema: ShapeID</para>
         /// </summary>
-        [SchemaAttr("ShapeID")]
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -1916,7 +1802,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>OLE Object Representation</para>
         /// <para>Represents the following attribute in the schema: DrawAspect</para>
         /// </summary>
-        [SchemaAttr("DrawAspect")]
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues>? DrawAspect
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues>>();
@@ -1927,7 +1812,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>OLE Object Unique ID</para>
         /// <para>Represents the following attribute in the schema: ObjectID</para>
         /// </summary>
-        [SchemaAttr("ObjectID")]
         public StringValue? ObjectId
         {
             get => GetAttribute<StringValue>();
@@ -1941,7 +1825,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1952,7 +1835,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>OLE Update Mode</para>
         /// <para>Represents the following attribute in the schema: UpdateMode</para>
         /// </summary>
-        [SchemaAttr("UpdateMode")]
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues>? UpdateMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues>>();
@@ -2032,7 +1914,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:complex.</para>
     /// </summary>
-    [SchemaAttr("o:complex")]
     public partial class Complex : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2049,7 +1930,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2073,7 +1953,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:left.</para>
     /// </summary>
-    [SchemaAttr("o:left")]
     public partial class LeftStroke : StrokeChildType
     {
         /// <summary>
@@ -2098,7 +1977,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:top.</para>
     /// </summary>
-    [SchemaAttr("o:top")]
     public partial class TopStroke : StrokeChildType
     {
         /// <summary>
@@ -2123,7 +2001,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:right.</para>
     /// </summary>
-    [SchemaAttr("o:right")]
     public partial class RightStroke : StrokeChildType
     {
         /// <summary>
@@ -2148,7 +2025,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:bottom.</para>
     /// </summary>
-    [SchemaAttr("o:bottom")]
     public partial class BottomStroke : StrokeChildType
     {
         /// <summary>
@@ -2175,7 +2051,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:column.</para>
     /// </summary>
-    [SchemaAttr("o:column")]
     public partial class ColumnStroke : StrokeChildType
     {
         /// <summary>
@@ -2217,7 +2092,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2228,7 +2102,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-        [SchemaAttr("on")]
         public TrueFalseValue? On
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2239,7 +2112,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: weight</para>
         /// </summary>
-        [SchemaAttr("weight")]
         public StringValue? Weight
         {
             get => GetAttribute<StringValue>();
@@ -2250,7 +2122,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stroke Color</para>
         /// <para>Represents the following attribute in the schema: color</para>
         /// </summary>
-        [SchemaAttr("color")]
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -2261,7 +2132,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stroke Alternate Pattern Color</para>
         /// <para>Represents the following attribute in the schema: color2</para>
         /// </summary>
-        [SchemaAttr("color2")]
         public StringValue? Color2
         {
             get => GetAttribute<StringValue>();
@@ -2272,7 +2142,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stroke Opacity</para>
         /// <para>Represents the following attribute in the schema: opacity</para>
         /// </summary>
-        [SchemaAttr("opacity")]
         public StringValue? Opacity
         {
             get => GetAttribute<StringValue>();
@@ -2283,7 +2152,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stroke Line Style</para>
         /// <para>Represents the following attribute in the schema: linestyle</para>
         /// </summary>
-        [SchemaAttr("linestyle")]
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>? LineStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>>();
@@ -2294,7 +2162,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Miter Joint Limit</para>
         /// <para>Represents the following attribute in the schema: miterlimit</para>
         /// </summary>
-        [SchemaAttr("miterlimit")]
         public DecimalValue? MiterLimit
         {
             get => GetAttribute<DecimalValue>();
@@ -2305,7 +2172,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Line End Join Style)</para>
         /// <para>Represents the following attribute in the schema: joinstyle</para>
         /// </summary>
-        [SchemaAttr("joinstyle")]
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>? JoinStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>>();
@@ -2316,7 +2182,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Line End Cap</para>
         /// <para>Represents the following attribute in the schema: endcap</para>
         /// </summary>
-        [SchemaAttr("endcap")]
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>? EndCap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>>();
@@ -2327,7 +2192,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stroke Dash Pattern</para>
         /// <para>Represents the following attribute in the schema: dashstyle</para>
         /// </summary>
-        [SchemaAttr("dashstyle")]
         public StringValue? DashStyle
         {
             get => GetAttribute<StringValue>();
@@ -2338,7 +2202,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-        [SchemaAttr("insetpen")]
         public TrueFalseValue? InsetPen
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2349,7 +2212,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stroke Image Style</para>
         /// <para>Represents the following attribute in the schema: filltype</para>
         /// </summary>
-        [SchemaAttr("filltype")]
         public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>? FillType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>>();
@@ -2360,7 +2222,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stroke Image Location</para>
         /// <para>Represents the following attribute in the schema: src</para>
         /// </summary>
-        [SchemaAttr("src")]
         public StringValue? Source
         {
             get => GetAttribute<StringValue>();
@@ -2371,7 +2232,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stroke Image Aspect Ratio</para>
         /// <para>Represents the following attribute in the schema: imageaspect</para>
         /// </summary>
-        [SchemaAttr("imageaspect")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>? ImageAspect
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>>();
@@ -2382,7 +2242,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stroke Image Size</para>
         /// <para>Represents the following attribute in the schema: imagesize</para>
         /// </summary>
-        [SchemaAttr("imagesize")]
         public StringValue? ImageSize
         {
             get => GetAttribute<StringValue>();
@@ -2393,7 +2252,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stoke Image Alignment</para>
         /// <para>Represents the following attribute in the schema: imagealignshape</para>
         /// </summary>
-        [SchemaAttr("imagealignshape")]
         public TrueFalseValue? ImageAlignShape
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2404,7 +2262,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Line Start Arrowhead</para>
         /// <para>Represents the following attribute in the schema: startarrow</para>
         /// </summary>
-        [SchemaAttr("startarrow")]
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>? StartArrow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>();
@@ -2415,7 +2272,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Line Start Arrowhead Width</para>
         /// <para>Represents the following attribute in the schema: startarrowwidth</para>
         /// </summary>
-        [SchemaAttr("startarrowwidth")]
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>? StartArrowWidth
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>();
@@ -2426,7 +2282,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Line Start Arrowhead Length</para>
         /// <para>Represents the following attribute in the schema: startarrowlength</para>
         /// </summary>
-        [SchemaAttr("startarrowlength")]
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>? StartArrowLength
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>();
@@ -2437,7 +2292,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Line End Arrowhead</para>
         /// <para>Represents the following attribute in the schema: endarrow</para>
         /// </summary>
-        [SchemaAttr("endarrow")]
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>? EndArrow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>();
@@ -2448,7 +2302,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Line End Arrowhead Width</para>
         /// <para>Represents the following attribute in the schema: endarrowwidth</para>
         /// </summary>
-        [SchemaAttr("endarrowwidth")]
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>? EndArrowWidth
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>();
@@ -2459,7 +2312,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Line End Arrowhead Length</para>
         /// <para>Represents the following attribute in the schema: endarrowlength</para>
         /// </summary>
-        [SchemaAttr("endarrowlength")]
         public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>? EndArrowLength
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>();
@@ -2473,7 +2325,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr("o:href")]
         public StringValue? Href
         {
             get => GetAttribute<StringValue>();
@@ -2487,7 +2338,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr("o:althref")]
         public StringValue? AlternateImageReference
         {
             get => GetAttribute<StringValue>();
@@ -2501,7 +2351,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr("o:title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -2515,7 +2364,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr("o:forcedash")]
         public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2561,7 +2409,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:clippath.</para>
     /// </summary>
-    [SchemaAttr("o:clippath")]
     public partial class ClipPath : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2578,7 +2425,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr("o:v")]
         public StringValue? Value
         {
             get => GetAttribute<StringValue>();
@@ -2605,7 +2451,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:fill.</para>
     /// </summary>
-    [SchemaAttr("o:fill")]
     public partial class FillExtendedProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2622,7 +2467,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2633,7 +2477,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Fill Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.FillValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.FillValues>>();
@@ -2658,7 +2501,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:idmap.</para>
     /// </summary>
-    [SchemaAttr("o:idmap")]
     public partial class ShapeIdMap : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2675,7 +2517,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2686,7 +2527,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shape IDs</para>
         /// <para>Represents the following attribute in the schema: data</para>
         /// </summary>
-        [SchemaAttr("data")]
         public StringValue? Data
         {
             get => GetAttribute<StringValue>();
@@ -2717,7 +2557,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Entry" /> <c>&lt;o:entry></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("o:regrouptable")]
     public partial class RegroupTable : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2758,7 +2597,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2793,7 +2631,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Rule" /> <c>&lt;o:r></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("o:rules")]
     public partial class Rules : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2834,7 +2671,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2863,7 +2699,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:entry.</para>
     /// </summary>
-    [SchemaAttr("o:entry")]
     public partial class Entry : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2877,7 +2712,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>New Group ID</para>
         /// <para>Represents the following attribute in the schema: new</para>
         /// </summary>
-        [SchemaAttr("new")]
         public Int32Value? New
         {
             get => GetAttribute<Int32Value>();
@@ -2888,7 +2722,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Old Group ID</para>
         /// <para>Represents the following attribute in the schema: old</para>
         /// </summary>
-        [SchemaAttr("old")]
         public Int32Value? Old
         {
             get => GetAttribute<Int32Value>();
@@ -2919,7 +2752,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Proxy" /> <c>&lt;o:proxy></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("o:r")]
     public partial class Rule : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2957,7 +2789,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Rule ID</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2968,7 +2799,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Rule Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.RuleValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.RuleValues>>();
@@ -2979,7 +2809,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Alignment Rule Type</para>
         /// <para>Represents the following attribute in the schema: how</para>
         /// </summary>
-        [SchemaAttr("how")]
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.AlignmentValues>? How
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.AlignmentValues>>();
@@ -2990,7 +2819,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Rule Shape Reference</para>
         /// <para>Represents the following attribute in the schema: idref</para>
         /// </summary>
-        [SchemaAttr("idref")]
         public StringValue? ShapeReference
         {
             get => GetAttribute<StringValue>();
@@ -3034,7 +2862,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Relation" /> <c>&lt;o:rel></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("o:relationtable")]
     public partial class RelationTable : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3075,7 +2902,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -3104,7 +2930,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:rel.</para>
     /// </summary>
-    [SchemaAttr("o:rel")]
     public partial class Relation : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3121,7 +2946,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -3132,7 +2956,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diagram Relationship Source Shape</para>
         /// <para>Represents the following attribute in the schema: idsrc</para>
         /// </summary>
-        [SchemaAttr("idsrc")]
         public StringValue? SourceId
         {
             get => GetAttribute<StringValue>();
@@ -3143,7 +2966,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diagram Relationship Destination Shape</para>
         /// <para>Represents the following attribute in the schema: iddest</para>
         /// </summary>
-        [SchemaAttr("iddest")]
         public StringValue? DestinationId
         {
             get => GetAttribute<StringValue>();
@@ -3154,7 +2976,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diagram Relationship Center Shape</para>
         /// <para>Represents the following attribute in the schema: idcntr</para>
         /// </summary>
-        [SchemaAttr("idcntr")]
         public StringValue? CenterShapeId
         {
             get => GetAttribute<StringValue>();
@@ -3190,7 +3011,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:LinkType.</para>
     /// </summary>
-    [SchemaAttr("o:LinkType")]
     public partial class LinkType : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -3229,7 +3049,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:LockedField.</para>
     /// </summary>
-    [SchemaAttr("o:LockedField")]
     public partial class LockedField : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -3268,7 +3087,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:FieldCodes.</para>
     /// </summary>
-    [SchemaAttr("o:FieldCodes")]
     public partial class FieldCodes : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -3306,7 +3124,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:proxy.</para>
     /// </summary>
-    [SchemaAttr("o:proxy")]
     public partial class Proxy : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3320,7 +3137,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Start Point Connection Flag</para>
         /// <para>Represents the following attribute in the schema: start</para>
         /// </summary>
-        [SchemaAttr("start")]
         public TrueFalseBlankValue? Start
         {
             get => GetAttribute<TrueFalseBlankValue>();
@@ -3331,7 +3147,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>End Point Connection Flag</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-        [SchemaAttr("end")]
         public TrueFalseBlankValue? End
         {
             get => GetAttribute<TrueFalseBlankValue>();
@@ -3342,7 +3157,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Proxy Shape Reference</para>
         /// <para>Represents the following attribute in the schema: idref</para>
         /// </summary>
-        [SchemaAttr("idref")]
         public StringValue? ShapeReference
         {
             get => GetAttribute<StringValue>();
@@ -3353,7 +3167,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Connection Location</para>
         /// <para>Represents the following attribute in the schema: connectloc</para>
         /// </summary>
-        [SchemaAttr("connectloc")]
         public Int32Value? ConnectionLocation
         {
             get => GetAttribute<Int32Value>();
@@ -3387,7 +3200,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:colormru.</para>
     /// </summary>
-    [SchemaAttr("o:colormru")]
     public partial class ColorMostRecentlyUsed : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3404,7 +3216,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -3415,7 +3226,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Recent colors</para>
         /// <para>Represents the following attribute in the schema: colors</para>
         /// </summary>
-        [SchemaAttr("colors")]
         public StringValue? Colors
         {
             get => GetAttribute<StringValue>();
@@ -3440,7 +3250,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:colormenu.</para>
     /// </summary>
-    [SchemaAttr("o:colormenu")]
     public partial class ColorMenu : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3457,7 +3266,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        [SchemaAttr("v:ext")]
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -3468,7 +3276,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Default stroke color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        [SchemaAttr("strokecolor")]
         public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
@@ -3479,7 +3286,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Default fill color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        [SchemaAttr("fillcolor")]
         public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
@@ -3490,7 +3296,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Default shadow color</para>
         /// <para>Represents the following attribute in the schema: shadowcolor</para>
         /// </summary>
-        [SchemaAttr("shadowcolor")]
         public StringValue? ShadowColor
         {
             get => GetAttribute<StringValue>();
@@ -3501,7 +3306,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Default extrusion color</para>
         /// <para>Represents the following attribute in the schema: extrusioncolor</para>
         /// </summary>
-        [SchemaAttr("extrusioncolor")]
         public StringValue? ExtrusionColor
         {
             get => GetAttribute<StringValue>();

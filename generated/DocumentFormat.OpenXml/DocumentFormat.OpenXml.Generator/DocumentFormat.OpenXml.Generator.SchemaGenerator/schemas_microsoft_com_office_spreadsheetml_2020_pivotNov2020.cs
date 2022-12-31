@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxpim:implicitMeasureSupport.</para>
     /// </summary>
-    [SchemaAttr("xxpim:implicitMeasureSupport")]
     public partial class Xsdboolean : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -63,7 +60,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxpim:ignorableAfterVersion.</para>
     /// </summary>
-    [SchemaAttr("xxpim:ignorableAfterVersion")]
     public partial class Ignorable : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -77,7 +73,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
         /// <para>version, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
-        [SchemaAttr("version")]
         public ByteValue? Version
         {
             get => GetAttribute<ByteValue>();
@@ -105,7 +100,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxpim:dataFieldFutureData.</para>
     /// </summary>
-    [SchemaAttr("xxpim:dataFieldFutureData")]
     public partial class DataFieldFutureData : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -119,7 +113,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
         /// <para>version, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
-        [SchemaAttr("version")]
         public ByteValue? Version
         {
             get => GetAttribute<ByteValue>();
@@ -130,7 +123,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
         /// <para>sourceField, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: sourceField</para>
         /// </summary>
-        [SchemaAttr("sourceField")]
         public UInt32Value? SourceField
         {
             get => GetAttribute<UInt32Value>();

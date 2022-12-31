@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp15:webVideoPr.</para>
     /// </summary>
-    [SchemaAttr("wp15:webVideoPr")]
     public partial class WebVideoProperty : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37,7 +34,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         /// <para>embeddedHtml, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: embeddedHtml</para>
         /// </summary>
-        [SchemaAttr("embeddedHtml")]
         public StringValue? EmbeddedHtml
         {
             get => GetAttribute<StringValue>();
@@ -48,7 +44,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         /// <para>h, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: h</para>
         /// </summary>
-        [SchemaAttr("h")]
         public UInt32Value? Height
         {
             get => GetAttribute<UInt32Value>();
@@ -59,7 +54,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         /// <para>w, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        [SchemaAttr("w")]
         public UInt32Value? Width
         {
             get => GetAttribute<UInt32Value>();

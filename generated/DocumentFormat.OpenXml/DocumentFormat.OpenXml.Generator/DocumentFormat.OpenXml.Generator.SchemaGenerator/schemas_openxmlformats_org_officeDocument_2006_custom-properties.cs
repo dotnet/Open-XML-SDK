@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -31,7 +29,6 @@ namespace DocumentFormat.OpenXml.CustomProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomProperties.CustomDocumentProperty" /> <c>&lt;op:property></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("op:Properties")]
     public partial class Properties : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -155,7 +152,6 @@ namespace DocumentFormat.OpenXml.CustomProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("op:property")]
     public partial class CustomDocumentProperty : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -193,7 +189,6 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Format ID</para>
         /// <para>Represents the following attribute in the schema: fmtid</para>
         /// </summary>
-        [SchemaAttr("fmtid")]
         public StringValue? FormatId
         {
             get => GetAttribute<StringValue>();
@@ -204,7 +199,6 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Property ID</para>
         /// <para>Represents the following attribute in the schema: pid</para>
         /// </summary>
-        [SchemaAttr("pid")]
         public Int32Value? PropertyId
         {
             get => GetAttribute<Int32Value>();
@@ -215,7 +209,6 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Custom File Property Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -226,7 +219,6 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Bookmark Link Target</para>
         /// <para>Represents the following attribute in the schema: linkTarget</para>
         /// </summary>
-        [SchemaAttr("linkTarget")]
         public StringValue? LinkTarget
         {
             get => GetAttribute<StringValue>();

@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -29,7 +27,6 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Presentation.TrackList" /> <c>&lt;p173:trackLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p173:tracksInfo")]
     public partial class TracksInfo : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -67,7 +64,6 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         /// <para>displayLoc, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: displayLoc</para>
         /// </summary>
-        [SchemaAttr("displayLoc")]
         public EnumValue<DocumentFormat.OpenXml.Office2019.Presentation.DisplayLocation>? DisplayLoc
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Presentation.DisplayLocation>>();
@@ -113,7 +109,6 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p173:track.</para>
     /// </summary>
-    [SchemaAttr("p173:track")]
     public partial class Track : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -127,7 +122,6 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         /// <para>id, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -138,7 +132,6 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         /// <para>label, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -149,7 +142,6 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         /// <para>lang, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr("lang")]
         public StringValue? Lang
         {
             get => GetAttribute<StringValue>();
@@ -163,7 +155,6 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:embed")]
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -177,7 +168,6 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:link")]
         public StringValue? Link
         {
             get => GetAttribute<StringValue>();
@@ -219,7 +209,6 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Presentation.Track" /> <c>&lt;p173:track></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p173:trackLst")]
     public partial class TrackList : TypedOpenXmlCompositeElement
     {
         /// <summary>

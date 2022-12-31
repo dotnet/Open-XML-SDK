@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -35,7 +33,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p188:txBody")]
     public partial class TextBodyType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -126,7 +123,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p188:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -187,7 +183,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:unknownAnchor.</para>
     /// </summary>
-    [SchemaAttr("p188:unknownAnchor")]
     public partial class CommentUnknownAnchor : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -219,7 +214,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Author" /> <c>&lt;p188:author></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p188:authorLst")]
     public partial class AuthorList : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -311,7 +305,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Comment" /> <c>&lt;p188:cm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p188:cmLst")]
     public partial class CommentList : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -397,7 +390,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:commentRel.</para>
     /// </summary>
-    [SchemaAttr("p188:commentRel")]
     public partial class CommentRelationship : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -414,7 +406,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -448,7 +439,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList" /> <c>&lt;p188:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p188:author")]
     public partial class Author : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -486,7 +476,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -497,7 +486,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>name, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -508,7 +496,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>initials, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: initials</para>
         /// </summary>
-        [SchemaAttr("initials")]
         public StringValue? Initials
         {
             get => GetAttribute<StringValue>();
@@ -519,7 +506,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>userId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: userId</para>
         /// </summary>
-        [SchemaAttr("userId")]
         public StringValue? UserId
         {
             get => GetAttribute<StringValue>();
@@ -530,7 +516,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>providerId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: providerId</para>
         /// </summary>
-        [SchemaAttr("providerId")]
         public StringValue? ProviderId
         {
             get => GetAttribute<StringValue>();
@@ -597,7 +582,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList" /> <c>&lt;p188:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p188:reply")]
     public partial class CommentReply : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -635,7 +619,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -646,7 +629,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>authorId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: authorId</para>
         /// </summary>
-        [SchemaAttr("authorId")]
         public StringValue? AuthorId
         {
             get => GetAttribute<StringValue>();
@@ -657,7 +639,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>status, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: status</para>
         /// </summary>
-        [SchemaAttr("status")]
         public EnumValue<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentStatus>? Status
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentStatus>>();
@@ -668,7 +649,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>created, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: created</para>
         /// </summary>
-        [SchemaAttr("created")]
         public DateTimeValue? Created
         {
             get => GetAttribute<DateTimeValue>();
@@ -679,7 +659,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>tags, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: tags</para>
         /// </summary>
-        [SchemaAttr("tags")]
         public ListValue<StringValue>? Tags
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -690,7 +669,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>likes, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: likes</para>
         /// </summary>
-        [SchemaAttr("likes")]
         public ListValue<StringValue>? Likes
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -773,7 +751,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:pos.</para>
     /// </summary>
-    [SchemaAttr("p188:pos")]
     public partial class Point2DType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -787,7 +764,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>X-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [SchemaAttr("x")]
         public Int64Value? X
         {
             get => GetAttribute<Int64Value>();
@@ -798,7 +774,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>Y-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        [SchemaAttr("y")]
         public Int64Value? Y
         {
             get => GetAttribute<Int64Value>();
@@ -838,7 +813,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReply" /> <c>&lt;p188:reply></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p188:replyLst")]
     public partial class CommentReplyList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -912,7 +886,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList" /> <c>&lt;pc:sldMkLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p188:cm")]
     public partial class Comment : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -950,7 +923,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -961,7 +933,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>authorId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: authorId</para>
         /// </summary>
-        [SchemaAttr("authorId")]
         public StringValue? AuthorId
         {
             get => GetAttribute<StringValue>();
@@ -972,7 +943,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>status, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: status</para>
         /// </summary>
-        [SchemaAttr("status")]
         public EnumValue<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentStatus>? Status
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentStatus>>();
@@ -983,7 +953,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>created, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: created</para>
         /// </summary>
-        [SchemaAttr("created")]
         public DateTimeValue? Created
         {
             get => GetAttribute<DateTimeValue>();
@@ -994,7 +963,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>tags, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: tags</para>
         /// </summary>
-        [SchemaAttr("tags")]
         public ListValue<StringValue>? Tags
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -1005,7 +973,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>likes, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: likes</para>
         /// </summary>
-        [SchemaAttr("likes")]
         public ListValue<StringValue>? Likes
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -1016,7 +983,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>startDate, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: startDate</para>
         /// </summary>
-        [SchemaAttr("startDate")]
         public DateTimeValue? StartDate
         {
             get => GetAttribute<DateTimeValue>();
@@ -1027,7 +993,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>dueDate, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: dueDate</para>
         /// </summary>
-        [SchemaAttr("dueDate")]
         public DateTimeValue? DueDate
         {
             get => GetAttribute<DateTimeValue>();
@@ -1038,7 +1003,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>assignedTo, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: assignedTo</para>
         /// </summary>
-        [SchemaAttr("assignedTo")]
         public ListValue<StringValue>? AssignedTo
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -1049,7 +1013,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>complete, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: complete</para>
         /// </summary>
-        [SchemaAttr("complete")]
         public Int32Value? Complete
         {
             get => GetAttribute<Int32Value>();
@@ -1060,7 +1023,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>priority, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: priority</para>
         /// </summary>
-        [SchemaAttr("priority")]
         public UInt32Value? Priority
         {
             get => GetAttribute<UInt32Value>();
@@ -1071,7 +1033,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>title, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();

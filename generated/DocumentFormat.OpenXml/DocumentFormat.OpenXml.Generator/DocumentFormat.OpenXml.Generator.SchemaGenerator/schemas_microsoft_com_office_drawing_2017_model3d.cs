@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -44,7 +42,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.WindowViewport" /> <c>&lt;am3d:winViewport></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:model3d")]
     public partial class Model3D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -85,7 +82,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:embed")]
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -99,7 +95,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:link")]
         public StringValue? Link
         {
             get => GetAttribute<StringValue>();
@@ -238,7 +233,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:sx.</para>
     /// </summary>
-    [SchemaAttr("am3d:sx")]
     public partial class SxRatio : RatioType
     {
         /// <summary>
@@ -264,7 +258,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:sy.</para>
     /// </summary>
-    [SchemaAttr("am3d:sy")]
     public partial class SyRatio : RatioType
     {
         /// <summary>
@@ -290,7 +283,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:sz.</para>
     /// </summary>
-    [SchemaAttr("am3d:sz")]
     public partial class SzRatio : RatioType
     {
         /// <summary>
@@ -329,7 +321,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Numerator</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [SchemaAttr("n")]
         public Int32Value? Numerator
         {
             get => GetAttribute<Int32Value>();
@@ -340,7 +331,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Denominator</para>
         /// <para>Represents the following attribute in the schema: d</para>
         /// </summary>
-        [SchemaAttr("d")]
         public Int32Value? Denominator
         {
             get => GetAttribute<Int32Value>();
@@ -367,7 +357,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:meterPerModelUnit.</para>
     /// </summary>
-    [SchemaAttr("am3d:meterPerModelUnit")]
     public partial class MeterPerModelUnitPositiveRatio : OpenXmlPositiveRatioElement
     {
         /// <summary>
@@ -393,7 +382,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:sz.</para>
     /// </summary>
-    [SchemaAttr("am3d:sz")]
     public partial class SzPositiveRatio : OpenXmlPositiveRatioElement
     {
         /// <summary>
@@ -419,7 +407,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:illuminance.</para>
     /// </summary>
-    [SchemaAttr("am3d:illuminance")]
     public partial class IlluminancePositiveRatio : OpenXmlPositiveRatioElement
     {
         /// <summary>
@@ -445,7 +432,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:intensity.</para>
     /// </summary>
-    [SchemaAttr("am3d:intensity")]
     public partial class IntensityPositiveRatio : OpenXmlPositiveRatioElement
     {
         /// <summary>
@@ -484,7 +470,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>n, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [SchemaAttr("n")]
         public UInt64Value? N
         {
             get => GetAttribute<UInt64Value>();
@@ -495,7 +480,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>d, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: d</para>
         /// </summary>
-        [SchemaAttr("d")]
         public UInt64Value? D
         {
             get => GetAttribute<UInt64Value>();
@@ -522,7 +506,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:preTrans.</para>
     /// </summary>
-    [SchemaAttr("am3d:preTrans")]
     public partial class PreTransVector3D : Vector3DType
     {
         /// <summary>
@@ -548,7 +531,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:postTrans.</para>
     /// </summary>
-    [SchemaAttr("am3d:postTrans")]
     public partial class PostTransVector3D : Vector3DType
     {
         /// <summary>
@@ -574,7 +556,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:up.</para>
     /// </summary>
-    [SchemaAttr("am3d:up")]
     public partial class UpVector3D : Vector3DType
     {
         /// <summary>
@@ -613,7 +594,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Distance along X-axis in 3D</para>
         /// <para>Represents the following attribute in the schema: dx</para>
         /// </summary>
-        [SchemaAttr("dx")]
         public Int64Value? Dx
         {
             get => GetAttribute<Int64Value>();
@@ -624,7 +604,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Distance along Y-axis in 3D</para>
         /// <para>Represents the following attribute in the schema: dy</para>
         /// </summary>
-        [SchemaAttr("dy")]
         public Int64Value? Dy
         {
             get => GetAttribute<Int64Value>();
@@ -635,7 +614,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Distance along Z-axis in 3D</para>
         /// <para>Represents the following attribute in the schema: dz</para>
         /// </summary>
-        [SchemaAttr("dz")]
         public Int64Value? Dz
         {
             get => GetAttribute<Int64Value>();
@@ -677,7 +655,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio" /> <c>&lt;am3d:sz></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:scale")]
     public partial class Scale3D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -775,7 +752,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:rot.</para>
     /// </summary>
-    [SchemaAttr("am3d:rot")]
     public partial class Rotate3D : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -789,7 +765,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>ax, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: ax</para>
         /// </summary>
-        [SchemaAttr("ax")]
         public Int32Value? Ax
         {
             get => GetAttribute<Int32Value>();
@@ -800,7 +775,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>ay, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: ay</para>
         /// </summary>
-        [SchemaAttr("ay")]
         public Int32Value? Ay
         {
             get => GetAttribute<Int32Value>();
@@ -811,7 +785,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>az, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: az</para>
         /// </summary>
-        [SchemaAttr("az")]
         public Int32Value? Az
         {
             get => GetAttribute<Int32Value>();
@@ -844,7 +817,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -905,7 +877,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:pos.</para>
     /// </summary>
-    [SchemaAttr("am3d:pos")]
     public partial class PosPoint3D : OpenXmlPoint3DElement
     {
         /// <summary>
@@ -931,7 +902,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:lookAt.</para>
     /// </summary>
-    [SchemaAttr("am3d:lookAt")]
     public partial class LookAtPoint3D : OpenXmlPoint3DElement
     {
         /// <summary>
@@ -970,7 +940,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>X-Coordinate in 3D</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [SchemaAttr("x")]
         public Int64Value? X
         {
             get => GetAttribute<Int64Value>();
@@ -981,7 +950,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Y-Coordinate in 3D</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        [SchemaAttr("y")]
         public Int64Value? Y
         {
             get => GetAttribute<Int64Value>();
@@ -992,7 +960,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Z-Coordinate in 3D</para>
         /// <para>Represents the following attribute in the schema: z</para>
         /// </summary>
-        [SchemaAttr("z")]
         public Int64Value? Z
         {
             get => GetAttribute<Int64Value>();
@@ -1033,7 +1000,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio" /> <c>&lt;am3d:sz></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:orthographic")]
     public partial class OrthographicProjection : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1122,7 +1088,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:perspective")]
     public partial class PerspectiveProjection : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1160,7 +1125,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>fov, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: fov</para>
         /// </summary>
-        [SchemaAttr("fov")]
         public Int32Value? Fov
         {
             get => GetAttribute<Int32Value>();
@@ -1230,7 +1194,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TintEffect" /> <c>&lt;a:tint></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:blip")]
     public partial class Blip : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1271,7 +1234,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:embed")]
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -1285,7 +1247,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:link")]
         public StringValue? Link
         {
             get => GetAttribute<StringValue>();
@@ -1296,7 +1257,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Compression state for blips.</para>
         /// <para>Represents the following attribute in the schema: cstate</para>
         /// </summary>
-        [SchemaAttr("cstate")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>? CompressionState
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>>();
@@ -1379,7 +1339,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:clr")]
     public partial class ColorType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1535,7 +1494,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame" /> <c>&lt;a3danim:posterFrame></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:ext")]
     public partial class Model3DExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1573,7 +1531,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>URI, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -1630,7 +1587,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:spPr")]
     public partial class ShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1668,7 +1624,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -1771,7 +1726,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PerspectiveProjection" /> <c>&lt;am3d:perspective></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:camera")]
     public partial class Model3DCamera : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1889,7 +1843,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D" /> <c>&lt;am3d:scale></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:trans")]
     public partial class Model3DTransform : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2032,7 +1985,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:attrSrcUrl.</para>
     /// </summary>
-    [SchemaAttr("am3d:attrSrcUrl")]
     public partial class PictureAttributionSourceURL : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2049,7 +2001,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2083,7 +2034,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip" /> <c>&lt;am3d:blip></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:raster")]
     public partial class Model3DRaster : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2121,7 +2071,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>rName, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: rName</para>
         /// </summary>
-        [SchemaAttr("rName")]
         public StringValue? RName
         {
             get => GetAttribute<StringValue>();
@@ -2132,7 +2081,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>rVer, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: rVer</para>
         /// </summary>
-        [SchemaAttr("rVer")]
         public StringValue? RVer
         {
             get => GetAttribute<StringValue>();
@@ -2188,7 +2136,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension" /> <c>&lt;am3d:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:extLst")]
     public partial class Model3DExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2249,7 +2196,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:objViewport")]
     public partial class ObjectViewport : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2287,7 +2233,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>viewportSz, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: viewportSz</para>
         /// </summary>
-        [SchemaAttr("viewportSz")]
         public Int64Value? ViewportSz
         {
             get => GetAttribute<Int64Value>();
@@ -2340,7 +2285,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:winViewport")]
     public partial class WindowViewport : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2416,7 +2360,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio" /> <c>&lt;am3d:illuminance></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:ambientLight")]
     public partial class AmbientLight : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2454,7 +2397,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>enabled, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -2536,7 +2478,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio" /> <c>&lt;am3d:intensity></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:ptLight")]
     public partial class PointLight : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2574,7 +2515,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>enabled, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -2585,7 +2525,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>rad, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: rad</para>
         /// </summary>
-        [SchemaAttr("rad")]
         public Int64Value? Rad
         {
             get => GetAttribute<Int64Value>();
@@ -2688,7 +2627,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio" /> <c>&lt;am3d:intensity></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:spotLight")]
     public partial class SpotLight : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2726,7 +2664,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>enabled, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -2737,7 +2674,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>rad, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: rad</para>
         /// </summary>
-        [SchemaAttr("rad")]
         public Int64Value? Rad
         {
             get => GetAttribute<Int64Value>();
@@ -2748,7 +2684,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>spotAng, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: spotAng</para>
         /// </summary>
-        [SchemaAttr("spotAng")]
         public Int32Value? SpotAng
         {
             get => GetAttribute<Int32Value>();
@@ -2871,7 +2806,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio" /> <c>&lt;am3d:illuminance></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("am3d:dirLight")]
     public partial class DirectionalLight : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2909,7 +2843,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>enabled, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -2920,7 +2853,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>angularRad, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: angularRad</para>
         /// </summary>
-        [SchemaAttr("angularRad")]
         public Int32Value? AngularRad
         {
             get => GetAttribute<Int32Value>();
@@ -3028,7 +2960,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:unkLight.</para>
     /// </summary>
-    [SchemaAttr("am3d:unkLight")]
     public partial class UnknownLight : TypedOpenXmlLeafElement
     {
         /// <summary>

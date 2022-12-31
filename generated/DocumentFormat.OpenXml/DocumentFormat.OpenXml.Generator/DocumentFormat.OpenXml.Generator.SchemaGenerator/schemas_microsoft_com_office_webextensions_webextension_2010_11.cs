@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -36,7 +34,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList" /> <c>&lt;we:alternateReferences></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("we:webextension")]
     public partial class WebExtension : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -74,7 +71,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -85,7 +81,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>frozen, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: frozen</para>
         /// </summary>
-        [SchemaAttr("frozen")]
         public BooleanValue? Frozen
         {
             get => GetAttribute<BooleanValue>();
@@ -239,7 +234,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:webextensionref.</para>
     /// </summary>
-    [SchemaAttr("we:webextensionref")]
     public partial class WebExtensionReference : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -256,7 +250,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -284,7 +277,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:property.</para>
     /// </summary>
-    [SchemaAttr("we:property")]
     public partial class WebExtensionProperty : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -298,7 +290,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -309,7 +300,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>value, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [SchemaAttr("value")]
         public StringValue? Value
         {
             get => GetAttribute<StringValue>();
@@ -347,7 +337,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("we:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -414,7 +403,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList" /> <c>&lt;we:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("we:binding")]
     public partial class WebExtensionBinding : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -452,7 +440,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -463,7 +450,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>type, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public StringValue? Type
         {
             get => GetAttribute<StringValue>();
@@ -474,7 +460,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>appref, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: appref</para>
         /// </summary>
-        [SchemaAttr("appref")]
         public StringValue? AppReference
         {
             get => GetAttribute<StringValue>();
@@ -534,7 +519,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList" /> <c>&lt;we:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("we:reference")]
     public partial class WebExtensionStoreReference : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -572,7 +556,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -583,7 +566,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>version, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
-        [SchemaAttr("version")]
         public StringValue? Version
         {
             get => GetAttribute<StringValue>();
@@ -594,7 +576,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>store, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: store</para>
         /// </summary>
-        [SchemaAttr("store")]
         public StringValue? Store
         {
             get => GetAttribute<StringValue>();
@@ -605,7 +586,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>storeType, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: storeType</para>
         /// </summary>
-        [SchemaAttr("storeType")]
         public StringValue? StoreType
         {
             get => GetAttribute<StringValue>();
@@ -664,7 +644,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference" /> <c>&lt;we:reference></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("we:alternateReferences")]
     public partial class WebExtensionReferenceList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -725,7 +704,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty" /> <c>&lt;we:property></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("we:properties")]
     public partial class WebExtensionPropertyBag : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -786,7 +764,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding" /> <c>&lt;we:binding></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("we:bindings")]
     public partial class WebExtensionBindingList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -864,7 +841,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TintEffect" /> <c>&lt;a:tint></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("we:snapshot")]
     public partial class Snapshot : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -905,7 +881,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:embed")]
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -919,7 +894,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:link")]
         public StringValue? Link
         {
             get => GetAttribute<StringValue>();
@@ -930,7 +904,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>Compression state for blips.</para>
         /// <para>Represents the following attribute in the schema: cstate</para>
         /// </summary>
-        [SchemaAttr("cstate")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>? CompressionState
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>>();

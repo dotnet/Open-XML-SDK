@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -30,7 +28,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo" /> <c>&lt;dgm1611:autoBuNodeInfo></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm1611:autoBuNodeInfoLst")]
     public partial class NumberDiagramInfoList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -94,7 +91,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoBullet" /> <c>&lt;a:buNone></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm1611:buPr")]
     public partial class DiagramAutoBullet : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -132,7 +128,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <para>prefix, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: prefix</para>
         /// </summary>
-        [SchemaAttr("prefix")]
         public StringValue? AutoBulletPrefix
         {
             get => GetAttribute<StringValue>();
@@ -143,7 +138,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <para>leadZeros, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: leadZeros</para>
         /// </summary>
-        [SchemaAttr("leadZeros")]
         public BooleanValue? LeadZeros
         {
             get => GetAttribute<BooleanValue>();
@@ -241,7 +235,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet" /> <c>&lt;dgm1611:buPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm1611:autoBuNodeInfo")]
     public partial class NumberDiagramInfo : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -279,7 +272,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <para>lvl, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: lvl</para>
         /// </summary>
-        [SchemaAttr("lvl")]
         public UInt32Value? Lvl
         {
             get => GetAttribute<UInt32Value>();
@@ -290,7 +282,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <para>ptType, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
-        [SchemaAttr("ptType")]
         public EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.STorageType>? PtType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.STorageType>>();

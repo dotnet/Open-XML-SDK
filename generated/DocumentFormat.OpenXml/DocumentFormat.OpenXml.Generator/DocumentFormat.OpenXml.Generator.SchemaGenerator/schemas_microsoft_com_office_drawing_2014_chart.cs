@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Charts;
@@ -45,7 +43,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:spPr")]
     public partial class ShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -83,7 +80,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -175,7 +171,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:explosion.</para>
     /// </summary>
-    [SchemaAttr("c16:explosion")]
     public partial class UnsignedIntegerType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -189,7 +184,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Integer Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -217,7 +211,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:invertIfNegative.</para>
     /// </summary>
-    [SchemaAttr("c16:invertIfNegative")]
     public partial class InvertIfNegativeBoolean : BooleanType
     {
         /// <summary>
@@ -243,7 +236,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:bubble3D.</para>
     /// </summary>
-    [SchemaAttr("c16:bubble3D")]
     public partial class Bubble3DBoolean : BooleanType
     {
         /// <summary>
@@ -282,7 +274,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Boolean Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -311,7 +302,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Symbol" /> <c>&lt;c:symbol></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:marker")]
     public partial class Marker : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -445,7 +435,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:dLbl")]
     public partial class DLbl : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -564,7 +553,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterException" /> <c>&lt;c16:categoryFilterException></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:categoryFilterExceptions")]
     public partial class CategoryFilterExceptions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -625,7 +613,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse" /> <c>&lt;c16:showExpandCollapseFieldButtons></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:pivotOptions16")]
     public partial class PivotOptions16 : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -699,7 +686,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMapEntry" /> <c>&lt;c16:ptentry></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:datapointuniqueidmap")]
     public partial class ChartDataPointUniqueIDMap : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -754,7 +740,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:uniqueId.</para>
     /// </summary>
-    [SchemaAttr("c16:uniqueId")]
     public partial class UniqueIdChartUniqueID : UniqueIDChart
     {
         /// <summary>
@@ -780,7 +765,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:uniqueID.</para>
     /// </summary>
-    [SchemaAttr("c16:uniqueID")]
     public partial class UniqueID : UniqueIDChart
     {
         /// <summary>
@@ -819,7 +803,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>val, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -854,7 +837,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:categoryFilterException")]
     public partial class CategoryFilterException : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1021,7 +1003,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:numCache")]
     public partial class NumberDataType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1114,7 +1095,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType" /> <c>&lt;c16:numCache></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:filteredLitCache")]
     public partial class NumFilteredLiteralCache : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1190,7 +1170,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:strCache")]
     public partial class StringDataType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1268,7 +1247,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType" /> <c>&lt;c16:strCache></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:filteredLitCache")]
     public partial class StrFilteredLiteralCache : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1344,7 +1322,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:multiLvlStrCache")]
     public partial class MultiLvlStrData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1422,7 +1399,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData" /> <c>&lt;c16:multiLvlStrCache></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:filteredLitCache")]
     public partial class MultiLvlStrFilteredLiteralCache : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1490,7 +1466,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:literalDataChart.</para>
     /// </summary>
-    [SchemaAttr("c16:literalDataChart")]
     public partial class LiteralDataChart : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1504,7 +1479,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>val, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -1532,7 +1506,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:showExpandCollapseFieldButtons.</para>
     /// </summary>
-    [SchemaAttr("c16:showExpandCollapseFieldButtons")]
     public partial class BooleanFalse : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1546,7 +1519,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>val, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -1571,7 +1543,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:ptidx.</para>
     /// </summary>
-    [SchemaAttr("c16:ptidx")]
     public partial class XsdunsignedInt : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1618,7 +1589,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.XsdunsignedInt" /> <c>&lt;c16:ptidx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16:ptentry")]
     public partial class ChartDataPointUniqueIDMapEntry : TypedOpenXmlCompositeElement
     {
         /// <summary>

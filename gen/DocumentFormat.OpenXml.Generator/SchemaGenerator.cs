@@ -31,8 +31,6 @@ public class SchemaGenerator : IIncrementalGenerator
             var writer = new IndentedTextWriter(sw);
 
             writer.WriteFileHeader();
-            writer.WriteLine("#pragma warning disable CS0618 // Type or member is obsolete");
-            writer.WriteLine();
 
             if (writer.GetDataModelSyntax(openXml, data.Left.Left))
             {

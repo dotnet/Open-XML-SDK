@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is woe:oembed.</para>
     /// </summary>
-    [SchemaAttr("woe:oembed")]
     public partial class OEmbed : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37,7 +34,6 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed
         /// <para>oEmbedUrl, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: oEmbedUrl</para>
         /// </summary>
-        [SchemaAttr("oEmbedUrl")]
         public StringValue? OEmbedUrl
         {
             get => GetAttribute<StringValue>();
@@ -48,7 +44,6 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed
         /// <para>mediaType, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: mediaType</para>
         /// </summary>
-        [SchemaAttr("mediaType")]
         public StringValue? MediaType
         {
             get => GetAttribute<StringValue>();
@@ -59,7 +54,6 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed
         /// <para>picLocksAutoForOEmbed, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: picLocksAutoForOEmbed</para>
         /// </summary>
-        [SchemaAttr("picLocksAutoForOEmbed")]
         public BooleanValue? PicLocksAutoForOEmbed
         {
             get => GetAttribute<BooleanValue>();

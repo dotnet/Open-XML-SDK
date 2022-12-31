@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -30,7 +28,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel" /> <c>&lt;clbl:label></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("clbl:labelList")]
     public partial class ClassificationLabelList : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -118,7 +115,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is clbl:ext.</para>
     /// </summary>
-    [SchemaAttr("clbl:ext")]
     public partial class ClassificationExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -156,7 +152,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         /// <para>uri, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -189,7 +184,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is clbl:label.</para>
     /// </summary>
-    [SchemaAttr("clbl:label")]
     public partial class ClassificationLabel : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -203,7 +197,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -214,7 +207,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         /// <para>enabled, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -225,7 +217,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         /// <para>setDate, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: setDate</para>
         /// </summary>
-        [SchemaAttr("setDate")]
         public StringValue? SetDate
         {
             get => GetAttribute<StringValue>();
@@ -236,7 +227,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         /// <para>method, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: method</para>
         /// </summary>
-        [SchemaAttr("method")]
         public StringValue? Method
         {
             get => GetAttribute<StringValue>();
@@ -247,7 +237,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         /// <para>name, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -258,7 +247,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         /// <para>siteId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: siteId</para>
         /// </summary>
-        [SchemaAttr("siteId")]
         public StringValue? SiteId
         {
             get => GetAttribute<StringValue>();
@@ -269,7 +257,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         /// <para>actionId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: actionId</para>
         /// </summary>
-        [SchemaAttr("actionId")]
         public StringValue? ActionId
         {
             get => GetAttribute<StringValue>();
@@ -280,7 +267,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         /// <para>contentBits, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: contentBits</para>
         /// </summary>
-        [SchemaAttr("contentBits")]
         public UInt32Value? ContentBits
         {
             get => GetAttribute<UInt32Value>();
@@ -291,7 +277,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         /// <para>removed, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: removed</para>
         /// </summary>
-        [SchemaAttr("removed")]
         public BooleanValue? Removed
         {
             get => GetAttribute<BooleanValue>();
@@ -346,7 +331,6 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension" /> <c>&lt;clbl:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("clbl:extLst")]
     public partial class ClassificationExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>

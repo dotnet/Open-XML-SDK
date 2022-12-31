@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -30,7 +28,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList" /> <c>&lt;xda:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xda:dynamicArrayProperties")]
     public partial class DynamicArrayProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -68,7 +65,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         /// <para>fDynamic, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: fDynamic</para>
         /// </summary>
-        [SchemaAttr("fDynamic")]
         public BooleanValue? FDynamic
         {
             get => GetAttribute<BooleanValue>();
@@ -79,7 +75,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         /// <para>fCollapsed, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: fCollapsed</para>
         /// </summary>
-        [SchemaAttr("fCollapsed")]
         public BooleanValue? FCollapsed
         {
             get => GetAttribute<BooleanValue>();
@@ -129,7 +124,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xda:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>

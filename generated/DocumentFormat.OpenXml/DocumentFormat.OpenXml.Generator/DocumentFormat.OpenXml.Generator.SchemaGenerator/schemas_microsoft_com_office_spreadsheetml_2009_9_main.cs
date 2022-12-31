@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -32,7 +30,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormatting" /> <c>&lt;x14:conditionalFormatting></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:conditionalFormattings")]
     public partial class ConditionalFormattings : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -93,7 +90,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataValidation" /> <c>&lt;x14:dataValidation></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:dataValidations")]
     public partial class DataValidations : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -131,7 +127,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>disablePrompts, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: disablePrompts</para>
         /// </summary>
-        [SchemaAttr("disablePrompts")]
         public BooleanValue? DisablePrompts
         {
             get => GetAttribute<BooleanValue>();
@@ -142,7 +137,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>xWindow, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: xWindow</para>
         /// </summary>
-        [SchemaAttr("xWindow")]
         public UInt32Value? XWindow
         {
             get => GetAttribute<UInt32Value>();
@@ -153,7 +147,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>yWindow, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: yWindow</para>
         /// </summary>
-        [SchemaAttr("yWindow")]
         public UInt32Value? YWindow
         {
             get => GetAttribute<UInt32Value>();
@@ -164,7 +157,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -205,7 +197,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup" /> <c>&lt;x14:sparklineGroup></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:sparklineGroups")]
     public partial class SparklineGroups : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -266,7 +257,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerRef" /> <c>&lt;x14:slicer></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:slicerList")]
     public partial class SlicerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -327,7 +317,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ProtectedRange" /> <c>&lt;x14:protectedRange></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:protectedRanges")]
     public partial class ProtectedRanges : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -389,7 +378,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IgnoredError" /> <c>&lt;x14:ignoredError></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:ignoredErrors")]
     public partial class IgnoredErrors : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -452,7 +440,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DefinedName" /> <c>&lt;x14:definedName></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:definedNames")]
     public partial class DefinedNames : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -513,7 +500,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:pivotCaches")]
     public partial class PivotCaches : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -574,7 +560,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCache" /> <c>&lt;x14:slicerCache></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:slicerCaches")]
     public partial class SlicerCaches : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -629,7 +614,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:workbookPr.</para>
     /// </summary>
-    [SchemaAttr("x14:workbookPr")]
     public partial class WorkbookProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -643,7 +627,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>defaultImageDpi, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: defaultImageDpi</para>
         /// </summary>
-        [SchemaAttr("defaultImageDpi")]
         public UInt32Value? DefaultImageDpi
         {
             get => GetAttribute<UInt32Value>();
@@ -654,7 +637,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>discardImageEditData, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: discardImageEditData</para>
         /// </summary>
-        [SchemaAttr("discardImageEditData")]
         public BooleanValue? DiscardImageEditData
         {
             get => GetAttribute<BooleanValue>();
@@ -665,7 +647,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>accuracyVersion, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: accuracyVersion</para>
         /// </summary>
-        [SchemaAttr("accuracyVersion")]
         public UInt32Value? AccuracyVersion
         {
             get => GetAttribute<UInt32Value>();
@@ -699,7 +680,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSet" /> <c>&lt;x14:tupleSet></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:calculatedMember")]
     public partial class CalculatedMember : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -737,7 +717,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>displayFolder, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: displayFolder</para>
         /// </summary>
-        [SchemaAttr("displayFolder")]
         public StringValue? DisplayFolder
         {
             get => GetAttribute<StringValue>();
@@ -748,7 +727,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>flattenHierarchies, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: flattenHierarchies</para>
         /// </summary>
-        [SchemaAttr("flattenHierarchies")]
         public BooleanValue? FlattenHierarchies
         {
             get => GetAttribute<BooleanValue>();
@@ -759,7 +737,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>dynamicSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dynamicSet</para>
         /// </summary>
-        [SchemaAttr("dynamicSet")]
         public BooleanValue? DynamicSet
         {
             get => GetAttribute<BooleanValue>();
@@ -770,7 +747,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>hierarchizeDistinct, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: hierarchizeDistinct</para>
         /// </summary>
-        [SchemaAttr("hierarchizeDistinct")]
         public BooleanValue? HierarchizeDistinct
         {
             get => GetAttribute<BooleanValue>();
@@ -781,7 +757,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>mdxLong, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: mdxLong</para>
         /// </summary>
-        [SchemaAttr("mdxLong")]
         public StringValue? MdxLong
         {
             get => GetAttribute<StringValue>();
@@ -836,7 +811,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SetLevels" /> <c>&lt;x14:setLevels></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:cacheHierarchy")]
     public partial class CacheHierarchy : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -874,7 +848,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>flattenHierarchies, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: flattenHierarchies</para>
         /// </summary>
-        [SchemaAttr("flattenHierarchies")]
         public BooleanValue? FlattenHierarchies
         {
             get => GetAttribute<BooleanValue>();
@@ -885,7 +858,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>measuresSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: measuresSet</para>
         /// </summary>
-        [SchemaAttr("measuresSet")]
         public BooleanValue? MeasuresSet
         {
             get => GetAttribute<BooleanValue>();
@@ -896,7 +868,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>hierarchizeDistinct, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: hierarchizeDistinct</para>
         /// </summary>
-        [SchemaAttr("hierarchizeDistinct")]
         public BooleanValue? HierarchizeDistinct
         {
             get => GetAttribute<BooleanValue>();
@@ -907,7 +878,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ignore, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: ignore</para>
         /// </summary>
-        [SchemaAttr("ignore")]
         public BooleanValue? Ignore
         {
             get => GetAttribute<BooleanValue>();
@@ -956,7 +926,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dataField.</para>
     /// </summary>
-    [SchemaAttr("x14:dataField")]
     public partial class DataField : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -970,7 +939,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>pivotShowAs, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pivotShowAs</para>
         /// </summary>
-        [SchemaAttr("pivotShowAs")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotShowAsValues>? PivotShowAs
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotShowAsValues>>();
@@ -981,7 +949,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>sourceField, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sourceField</para>
         /// </summary>
-        [SchemaAttr("sourceField")]
         public UInt32Value? SourceField
         {
             get => GetAttribute<UInt32Value>();
@@ -992,7 +959,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>uniqueName, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        [SchemaAttr("uniqueName")]
         public StringValue? UniqueName
         {
             get => GetAttribute<StringValue>();
@@ -1021,7 +987,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotField.</para>
     /// </summary>
-    [SchemaAttr("x14:pivotField")]
     public partial class PivotField : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1035,7 +1000,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>fillDownLabels, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: fillDownLabels</para>
         /// </summary>
-        [SchemaAttr("fillDownLabels")]
         public BooleanValue? FillDownLabels
         {
             get => GetAttribute<BooleanValue>();
@@ -1046,7 +1010,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ignore, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: ignore</para>
         /// </summary>
-        [SchemaAttr("ignore")]
         public BooleanValue? Ignore
         {
             get => GetAttribute<BooleanValue>();
@@ -1080,7 +1043,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEdits" /> <c>&lt;x14:pivotEdits></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:pivotTableDefinition")]
     public partial class PivotTableDefinition : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1118,7 +1080,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>fillDownLabelsDefault, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: fillDownLabelsDefault</para>
         /// </summary>
-        [SchemaAttr("fillDownLabelsDefault")]
         public BooleanValue? FillDownLabelsDefault
         {
             get => GetAttribute<BooleanValue>();
@@ -1129,7 +1090,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>visualTotalsForSets, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visualTotalsForSets</para>
         /// </summary>
-        [SchemaAttr("visualTotalsForSets")]
         public BooleanValue? VisualTotalsForSets
         {
             get => GetAttribute<BooleanValue>();
@@ -1140,7 +1100,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>calculatedMembersInFilters, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: calculatedMembersInFilters</para>
         /// </summary>
-        [SchemaAttr("calculatedMembersInFilters")]
         public BooleanValue? CalculatedMembersInFilters
         {
             get => GetAttribute<BooleanValue>();
@@ -1151,7 +1110,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>altText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: altText</para>
         /// </summary>
-        [SchemaAttr("altText")]
         public StringValue? AltText
         {
             get => GetAttribute<StringValue>();
@@ -1162,7 +1120,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>altTextSummary, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: altTextSummary</para>
         /// </summary>
-        [SchemaAttr("altTextSummary")]
         public StringValue? AltTextSummary
         {
             get => GetAttribute<StringValue>();
@@ -1173,7 +1130,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>enableEdit, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enableEdit</para>
         /// </summary>
-        [SchemaAttr("enableEdit")]
         public BooleanValue? EnableEdit
         {
             get => GetAttribute<BooleanValue>();
@@ -1184,7 +1140,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>autoApply, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: autoApply</para>
         /// </summary>
-        [SchemaAttr("autoApply")]
         public BooleanValue? AutoApply
         {
             get => GetAttribute<BooleanValue>();
@@ -1195,7 +1150,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>allocationMethod, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: allocationMethod</para>
         /// </summary>
-        [SchemaAttr("allocationMethod")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues>? AllocationMethod
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues>>();
@@ -1206,7 +1160,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>weightExpression, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: weightExpression</para>
         /// </summary>
-        [SchemaAttr("weightExpression")]
         public StringValue? WeightExpression
         {
             get => GetAttribute<StringValue>();
@@ -1217,7 +1170,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>hideValuesRow, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: hideValuesRow</para>
         /// </summary>
-        [SchemaAttr("hideValuesRow")]
         public BooleanValue? HideValuesRow
         {
             get => GetAttribute<BooleanValue>();
@@ -1302,7 +1254,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotCacheDefinition.</para>
     /// </summary>
-    [SchemaAttr("x14:pivotCacheDefinition")]
     public partial class PivotCacheDefinition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1316,7 +1267,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>slicerData, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: slicerData</para>
         /// </summary>
-        [SchemaAttr("slicerData")]
         public BooleanValue? SlicerData
         {
             get => GetAttribute<BooleanValue>();
@@ -1327,7 +1277,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>pivotCacheId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pivotCacheId</para>
         /// </summary>
-        [SchemaAttr("pivotCacheId")]
         public UInt32Value? PivotCacheId
         {
             get => GetAttribute<UInt32Value>();
@@ -1338,7 +1287,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>supportSubqueryNonVisual, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supportSubqueryNonVisual</para>
         /// </summary>
-        [SchemaAttr("supportSubqueryNonVisual")]
         public BooleanValue? SupportSubqueryNonVisual
         {
             get => GetAttribute<BooleanValue>();
@@ -1349,7 +1297,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>supportSubqueryCalcMem, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supportSubqueryCalcMem</para>
         /// </summary>
-        [SchemaAttr("supportSubqueryCalcMem")]
         public BooleanValue? SupportSubqueryCalcMem
         {
             get => GetAttribute<BooleanValue>();
@@ -1360,7 +1307,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>supportAddCalcMems, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supportAddCalcMems</para>
         /// </summary>
-        [SchemaAttr("supportAddCalcMems")]
         public BooleanValue? SupportAddCalcMems
         {
             get => GetAttribute<BooleanValue>();
@@ -1395,7 +1341,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers" /> <c>&lt;x14:calculatedMembers></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:connection")]
     public partial class Connection : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1433,7 +1378,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>culture, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: culture</para>
         /// </summary>
-        [SchemaAttr("culture")]
         public StringValue? Culture
         {
             get => GetAttribute<StringValue>();
@@ -1444,7 +1388,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>embeddedDataId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: embeddedDataId</para>
         /// </summary>
-        [SchemaAttr("embeddedDataId")]
         public StringValue? EmbeddedDataId
         {
             get => GetAttribute<StringValue>();
@@ -1490,7 +1433,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:table.</para>
     /// </summary>
-    [SchemaAttr("x14:table")]
     public partial class Table : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1504,7 +1446,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>altText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: altText</para>
         /// </summary>
-        [SchemaAttr("altText")]
         public StringValue? AltText
         {
             get => GetAttribute<StringValue>();
@@ -1515,7 +1456,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>altTextSummary, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: altTextSummary</para>
         /// </summary>
-        [SchemaAttr("altTextSummary")]
         public StringValue? AltTextSummary
         {
             get => GetAttribute<StringValue>();
@@ -1549,7 +1489,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyle" /> <c>&lt;x14:slicerStyle></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:slicerStyles")]
     public partial class SlicerStyles : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1587,7 +1526,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>defaultSlicerStyle, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: defaultSlicerStyle</para>
         /// </summary>
-        [SchemaAttr("defaultSlicerStyle")]
         public StringValue? DefaultSlicerStyle
         {
             get => GetAttribute<StringValue>();
@@ -1627,7 +1565,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:dxfs")]
     public partial class DifferentialFormats : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1665,7 +1602,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Format Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -1701,7 +1637,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DdeValues" /> <c>&lt;x14:values></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:oleItem")]
     public partial class OleItem : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1739,7 +1674,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -1750,7 +1684,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>icon, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: icon</para>
         /// </summary>
-        [SchemaAttr("icon")]
         public BooleanValue? Icon
         {
             get => GetAttribute<BooleanValue>();
@@ -1761,7 +1694,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>advise, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: advise</para>
         /// </summary>
-        [SchemaAttr("advise")]
         public BooleanValue? Advise
         {
             get => GetAttribute<BooleanValue>();
@@ -1772,7 +1704,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>preferPic, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: preferPic</para>
         /// </summary>
-        [SchemaAttr("preferPic")]
         public BooleanValue? PreferPicture
         {
             get => GetAttribute<BooleanValue>();
@@ -1821,7 +1752,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotHierarchy.</para>
     /// </summary>
-    [SchemaAttr("x14:pivotHierarchy")]
     public partial class PivotHierarchy : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1835,7 +1765,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ignore, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: ignore</para>
         /// </summary>
-        [SchemaAttr("ignore")]
         public BooleanValue? Ignore
         {
             get => GetAttribute<BooleanValue>();
@@ -1860,7 +1789,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cacheField.</para>
     /// </summary>
-    [SchemaAttr("x14:cacheField")]
     public partial class CacheField : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1874,7 +1802,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ignore, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: ignore</para>
         /// </summary>
-        [SchemaAttr("ignore")]
         public BooleanValue? Ignore
         {
             get => GetAttribute<BooleanValue>();
@@ -1899,7 +1826,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:id.</para>
     /// </summary>
-    [SchemaAttr("x14:id")]
     public partial class Id : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1939,7 +1865,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:iconFilter.</para>
     /// </summary>
-    [SchemaAttr("x14:iconFilter")]
     public partial class IconFilter : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1953,7 +1878,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>iconSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        [SchemaAttr("iconSet")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
@@ -1964,7 +1888,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>iconId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
-        [SchemaAttr("iconId")]
         public UInt32Value? IconId
         {
             get => GetAttribute<UInt32Value>();
@@ -1996,7 +1919,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:filter.</para>
     /// </summary>
-    [SchemaAttr("x14:filter")]
     public partial class Filter : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2010,7 +1932,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -2041,7 +1962,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CustomFilter" /> <c>&lt;x14:customFilter></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:customFilters")]
     public partial class CustomFilters : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2079,7 +1999,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>and, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: and</para>
         /// </summary>
-        [SchemaAttr("and")]
         public BooleanValue? And
         {
             get => GetAttribute<BooleanValue>();
@@ -2109,7 +2028,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sortCondition.</para>
     /// </summary>
-    [SchemaAttr("x14:sortCondition")]
     public partial class SortCondition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2123,7 +2041,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>descending, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: descending</para>
         /// </summary>
-        [SchemaAttr("descending")]
         public BooleanValue? Descending
         {
             get => GetAttribute<BooleanValue>();
@@ -2134,7 +2051,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>sortBy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
-        [SchemaAttr("sortBy")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>? SortBy
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
@@ -2145,7 +2061,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ref, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
@@ -2156,7 +2071,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>customList, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: customList</para>
         /// </summary>
-        [SchemaAttr("customList")]
         public StringValue? CustomList
         {
             get => GetAttribute<StringValue>();
@@ -2167,7 +2081,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>dxfId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        [SchemaAttr("dxfId")]
         public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
@@ -2178,7 +2091,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>iconSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        [SchemaAttr("iconSet")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
@@ -2189,7 +2101,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>iconId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
-        [SchemaAttr("iconId")]
         public UInt32Value? IconId
         {
             get => GetAttribute<UInt32Value>();
@@ -2226,7 +2137,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sourceConnection.</para>
     /// </summary>
-    [SchemaAttr("x14:sourceConnection")]
     public partial class SourceConnection : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2240,7 +2150,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -2274,7 +2183,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:datastoreItem")]
     public partial class DatastoreItem : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -2312,7 +2220,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2397,7 +2304,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ListItems" /> <c>&lt;x14:itemLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:formControlPr")]
     public partial class FormControlProperties : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -2435,7 +2341,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>objectType, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: objectType</para>
         /// </summary>
-        [SchemaAttr("objectType")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ObjectTypeValues>? ObjectType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ObjectTypeValues>>();
@@ -2446,7 +2351,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>checked, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: checked</para>
         /// </summary>
-        [SchemaAttr("checked")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.CheckedValues>? Checked
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.CheckedValues>>();
@@ -2457,7 +2361,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>colored, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: colored</para>
         /// </summary>
-        [SchemaAttr("colored")]
         public BooleanValue? Colored
         {
             get => GetAttribute<BooleanValue>();
@@ -2468,7 +2371,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>dropLines, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dropLines</para>
         /// </summary>
-        [SchemaAttr("dropLines")]
         public UInt32Value? DropLines
         {
             get => GetAttribute<UInt32Value>();
@@ -2479,7 +2381,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>dropStyle, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dropStyle</para>
         /// </summary>
-        [SchemaAttr("dropStyle")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DropStyleValues>? DropStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DropStyleValues>>();
@@ -2490,7 +2391,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>dx, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dx</para>
         /// </summary>
-        [SchemaAttr("dx")]
         public UInt32Value? ScrollBarWidth
         {
             get => GetAttribute<UInt32Value>();
@@ -2501,7 +2401,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>firstButton, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: firstButton</para>
         /// </summary>
-        [SchemaAttr("firstButton")]
         public BooleanValue? FirstButton
         {
             get => GetAttribute<BooleanValue>();
@@ -2512,7 +2411,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>fmlaGroup, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: fmlaGroup</para>
         /// </summary>
-        [SchemaAttr("fmlaGroup")]
         public StringValue? FmlaGroup
         {
             get => GetAttribute<StringValue>();
@@ -2523,7 +2421,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>fmlaLink, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: fmlaLink</para>
         /// </summary>
-        [SchemaAttr("fmlaLink")]
         public StringValue? FmlaLink
         {
             get => GetAttribute<StringValue>();
@@ -2534,7 +2431,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>fmlaRange, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: fmlaRange</para>
         /// </summary>
-        [SchemaAttr("fmlaRange")]
         public StringValue? FmlaRange
         {
             get => GetAttribute<StringValue>();
@@ -2545,7 +2441,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>fmlaTxbx, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: fmlaTxbx</para>
         /// </summary>
-        [SchemaAttr("fmlaTxbx")]
         public StringValue? FmlaTextbox
         {
             get => GetAttribute<StringValue>();
@@ -2556,7 +2451,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>horiz, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: horiz</para>
         /// </summary>
-        [SchemaAttr("horiz")]
         public BooleanValue? Horizontal
         {
             get => GetAttribute<BooleanValue>();
@@ -2567,7 +2461,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>inc, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: inc</para>
         /// </summary>
-        [SchemaAttr("inc")]
         public UInt32Value? Incremental
         {
             get => GetAttribute<UInt32Value>();
@@ -2578,7 +2471,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>justLastX, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: justLastX</para>
         /// </summary>
-        [SchemaAttr("justLastX")]
         public BooleanValue? JustLastX
         {
             get => GetAttribute<BooleanValue>();
@@ -2589,7 +2481,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>lockText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: lockText</para>
         /// </summary>
-        [SchemaAttr("lockText")]
         public BooleanValue? LockText
         {
             get => GetAttribute<BooleanValue>();
@@ -2600,7 +2491,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>max, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
-        [SchemaAttr("max")]
         public UInt32Value? Max
         {
             get => GetAttribute<UInt32Value>();
@@ -2611,7 +2501,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>min, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: min</para>
         /// </summary>
-        [SchemaAttr("min")]
         public UInt32Value? Min
         {
             get => GetAttribute<UInt32Value>();
@@ -2622,7 +2511,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>multiSel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: multiSel</para>
         /// </summary>
-        [SchemaAttr("multiSel")]
         public StringValue? MultipleSelection
         {
             get => GetAttribute<StringValue>();
@@ -2633,7 +2521,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>noThreeD, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: noThreeD</para>
         /// </summary>
-        [SchemaAttr("noThreeD")]
         public BooleanValue? NoThreeD
         {
             get => GetAttribute<BooleanValue>();
@@ -2644,7 +2531,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>noThreeD2, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: noThreeD2</para>
         /// </summary>
-        [SchemaAttr("noThreeD2")]
         public BooleanValue? NoThreeD2
         {
             get => GetAttribute<BooleanValue>();
@@ -2655,7 +2541,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>page, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: page</para>
         /// </summary>
-        [SchemaAttr("page")]
         public UInt32Value? Page
         {
             get => GetAttribute<UInt32Value>();
@@ -2666,7 +2551,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>sel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sel</para>
         /// </summary>
-        [SchemaAttr("sel")]
         public UInt32Value? Selected
         {
             get => GetAttribute<UInt32Value>();
@@ -2677,7 +2561,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>seltype, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: seltype</para>
         /// </summary>
-        [SchemaAttr("seltype")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SelectionTypeValues>? SelectionType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SelectionTypeValues>>();
@@ -2688,7 +2571,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>textHAlign, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: textHAlign</para>
         /// </summary>
-        [SchemaAttr("textHAlign")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextHorizontalAlignmentValues>? TextHorizontalAlign
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextHorizontalAlignmentValues>>();
@@ -2699,7 +2581,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>textVAlign, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: textVAlign</para>
         /// </summary>
-        [SchemaAttr("textVAlign")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextVerticalAlignmentValues>? TextVerticalAlign
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextVerticalAlignmentValues>>();
@@ -2710,7 +2591,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -2721,7 +2601,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>widthMin, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: widthMin</para>
         /// </summary>
-        [SchemaAttr("widthMin")]
         public UInt32Value? MinimumWidth
         {
             get => GetAttribute<UInt32Value>();
@@ -2732,7 +2611,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>editVal, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: editVal</para>
         /// </summary>
-        [SchemaAttr("editVal")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.EditValidationValues>? EditVal
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.EditValidationValues>>();
@@ -2743,7 +2621,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>multiLine, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: multiLine</para>
         /// </summary>
-        [SchemaAttr("multiLine")]
         public BooleanValue? MultipleLines
         {
             get => GetAttribute<BooleanValue>();
@@ -2754,7 +2631,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>verticalBar, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: verticalBar</para>
         /// </summary>
-        [SchemaAttr("verticalBar")]
         public BooleanValue? VerticalBar
         {
             get => GetAttribute<BooleanValue>();
@@ -2765,7 +2641,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>passwordEdit, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: passwordEdit</para>
         /// </summary>
-        [SchemaAttr("passwordEdit")]
         public BooleanValue? PasswordEdit
         {
             get => GetAttribute<BooleanValue>();
@@ -2910,7 +2785,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Slicer" /> <c>&lt;x14:slicer></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:slicers")]
     public partial class Slicers : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -3004,7 +2878,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables" /> <c>&lt;x14:pivotTables></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:slicerCacheDefinition")]
     public partial class SlicerCacheDefinition : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -3042,7 +2915,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -3053,7 +2925,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>sourceName, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sourceName</para>
         /// </summary>
-        [SchemaAttr("sourceName")]
         public StringValue? SourceName
         {
             get => GetAttribute<StringValue>();
@@ -3172,7 +3043,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:conditionalFormatting")]
     public partial class ConditionalFormatting : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3210,7 +3080,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>pivot, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pivot</para>
         /// </summary>
-        [SchemaAttr("pivot")]
         public BooleanValue? Pivot
         {
             get => GetAttribute<BooleanValue>();
@@ -3255,7 +3124,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconSet" /> <c>&lt;x14:iconSet></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:cfRule")]
     public partial class ConditionalFormattingRule : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3293,7 +3161,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>type, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues>>();
@@ -3304,7 +3171,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>priority, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: priority</para>
         /// </summary>
-        [SchemaAttr("priority")]
         public Int32Value? Priority
         {
             get => GetAttribute<Int32Value>();
@@ -3315,7 +3181,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>stopIfTrue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: stopIfTrue</para>
         /// </summary>
-        [SchemaAttr("stopIfTrue")]
         public BooleanValue? StopIfTrue
         {
             get => GetAttribute<BooleanValue>();
@@ -3326,7 +3191,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>aboveAverage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: aboveAverage</para>
         /// </summary>
-        [SchemaAttr("aboveAverage")]
         public BooleanValue? AboveAverage
         {
             get => GetAttribute<BooleanValue>();
@@ -3337,7 +3201,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>percent, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: percent</para>
         /// </summary>
-        [SchemaAttr("percent")]
         public BooleanValue? Percent
         {
             get => GetAttribute<BooleanValue>();
@@ -3348,7 +3211,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>bottom, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: bottom</para>
         /// </summary>
-        [SchemaAttr("bottom")]
         public BooleanValue? Bottom
         {
             get => GetAttribute<BooleanValue>();
@@ -3359,7 +3221,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>operator, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        [SchemaAttr("operator")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues>? Operator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues>>();
@@ -3370,7 +3231,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>text, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: text</para>
         /// </summary>
-        [SchemaAttr("text")]
         public StringValue? Text
         {
             get => GetAttribute<StringValue>();
@@ -3381,7 +3241,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>timePeriod, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: timePeriod</para>
         /// </summary>
-        [SchemaAttr("timePeriod")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues>? TimePeriod
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues>>();
@@ -3392,7 +3251,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>rank, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: rank</para>
         /// </summary>
-        [SchemaAttr("rank")]
         public UInt32Value? Rank
         {
             get => GetAttribute<UInt32Value>();
@@ -3403,7 +3261,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>stdDev, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: stdDev</para>
         /// </summary>
-        [SchemaAttr("stdDev")]
         public Int32Value? StandardDeviation
         {
             get => GetAttribute<Int32Value>();
@@ -3414,7 +3271,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>equalAverage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: equalAverage</para>
         /// </summary>
-        [SchemaAttr("equalAverage")]
         public BooleanValue? EqualAverage
         {
             get => GetAttribute<BooleanValue>();
@@ -3425,7 +3281,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>activePresent, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: activePresent</para>
         /// </summary>
-        [SchemaAttr("activePresent")]
         public BooleanValue? ActivePresent
         {
             get => GetAttribute<BooleanValue>();
@@ -3436,7 +3291,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -3507,7 +3361,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3576,7 +3429,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:dataValidation")]
     public partial class DataValidation : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3614,7 +3466,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>type, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>>();
@@ -3625,7 +3476,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>errorStyle, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: errorStyle</para>
         /// </summary>
-        [SchemaAttr("errorStyle")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>? ErrorStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>>();
@@ -3636,7 +3486,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>imeMode, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imeMode</para>
         /// </summary>
-        [SchemaAttr("imeMode")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>? ImeMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>>();
@@ -3647,7 +3496,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>operator, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        [SchemaAttr("operator")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>? Operator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>>();
@@ -3658,7 +3506,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>allowBlank, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: allowBlank</para>
         /// </summary>
-        [SchemaAttr("allowBlank")]
         public BooleanValue? AllowBlank
         {
             get => GetAttribute<BooleanValue>();
@@ -3669,7 +3516,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>showDropDown, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showDropDown</para>
         /// </summary>
-        [SchemaAttr("showDropDown")]
         public BooleanValue? ShowDropDown
         {
             get => GetAttribute<BooleanValue>();
@@ -3680,7 +3526,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>showInputMessage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showInputMessage</para>
         /// </summary>
-        [SchemaAttr("showInputMessage")]
         public BooleanValue? ShowInputMessage
         {
             get => GetAttribute<BooleanValue>();
@@ -3691,7 +3536,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>showErrorMessage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showErrorMessage</para>
         /// </summary>
-        [SchemaAttr("showErrorMessage")]
         public BooleanValue? ShowErrorMessage
         {
             get => GetAttribute<BooleanValue>();
@@ -3702,7 +3546,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>errorTitle, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: errorTitle</para>
         /// </summary>
-        [SchemaAttr("errorTitle")]
         public StringValue? ErrorTitle
         {
             get => GetAttribute<StringValue>();
@@ -3713,7 +3556,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>error, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: error</para>
         /// </summary>
-        [SchemaAttr("error")]
         public StringValue? Error
         {
             get => GetAttribute<StringValue>();
@@ -3724,7 +3566,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>promptTitle, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: promptTitle</para>
         /// </summary>
-        [SchemaAttr("promptTitle")]
         public StringValue? PromptTitle
         {
             get => GetAttribute<StringValue>();
@@ -3735,7 +3576,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>prompt, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: prompt</para>
         /// </summary>
-        [SchemaAttr("prompt")]
         public StringValue? Prompt
         {
             get => GetAttribute<StringValue>();
@@ -3828,7 +3668,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:formula1")]
     public partial class DataValidationForumla1 : DataValidationFormulaType
     {
         /// <summary>
@@ -3888,7 +3727,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:formula2")]
     public partial class DataValidationForumla2 : DataValidationFormulaType
     {
         /// <summary>
@@ -4021,7 +3859,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Sparklines" /> <c>&lt;x14:sparklines></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:sparklineGroup")]
     public partial class SparklineGroup : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4059,7 +3896,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>manualMax, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: manualMax</para>
         /// </summary>
-        [SchemaAttr("manualMax")]
         public DoubleValue? ManualMax
         {
             get => GetAttribute<DoubleValue>();
@@ -4070,7 +3906,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>manualMin, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: manualMin</para>
         /// </summary>
-        [SchemaAttr("manualMin")]
         public DoubleValue? ManualMin
         {
             get => GetAttribute<DoubleValue>();
@@ -4081,7 +3916,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>lineWeight, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: lineWeight</para>
         /// </summary>
-        [SchemaAttr("lineWeight")]
         public DoubleValue? LineWeight
         {
             get => GetAttribute<DoubleValue>();
@@ -4092,7 +3926,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>type, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues>>();
@@ -4103,7 +3936,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>dateAxis, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dateAxis</para>
         /// </summary>
-        [SchemaAttr("dateAxis")]
         public BooleanValue? DateAxis
         {
             get => GetAttribute<BooleanValue>();
@@ -4114,7 +3946,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>displayEmptyCellsAs, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: displayEmptyCellsAs</para>
         /// </summary>
-        [SchemaAttr("displayEmptyCellsAs")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues>? DisplayEmptyCellsAs
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues>>();
@@ -4125,7 +3956,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>markers, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: markers</para>
         /// </summary>
-        [SchemaAttr("markers")]
         public BooleanValue? Markers
         {
             get => GetAttribute<BooleanValue>();
@@ -4136,7 +3966,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>high, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: high</para>
         /// </summary>
-        [SchemaAttr("high")]
         public BooleanValue? High
         {
             get => GetAttribute<BooleanValue>();
@@ -4147,7 +3976,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>low, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: low</para>
         /// </summary>
-        [SchemaAttr("low")]
         public BooleanValue? Low
         {
             get => GetAttribute<BooleanValue>();
@@ -4158,7 +3986,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>first, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: first</para>
         /// </summary>
-        [SchemaAttr("first")]
         public BooleanValue? First
         {
             get => GetAttribute<BooleanValue>();
@@ -4169,7 +3996,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>last, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: last</para>
         /// </summary>
-        [SchemaAttr("last")]
         public BooleanValue? Last
         {
             get => GetAttribute<BooleanValue>();
@@ -4180,7 +4006,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>negative, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: negative</para>
         /// </summary>
-        [SchemaAttr("negative")]
         public BooleanValue? Negative
         {
             get => GetAttribute<BooleanValue>();
@@ -4191,7 +4016,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>displayXAxis, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: displayXAxis</para>
         /// </summary>
-        [SchemaAttr("displayXAxis")]
         public BooleanValue? DisplayXAxis
         {
             get => GetAttribute<BooleanValue>();
@@ -4202,7 +4026,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>displayHidden, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: displayHidden</para>
         /// </summary>
-        [SchemaAttr("displayHidden")]
         public BooleanValue? DisplayHidden
         {
             get => GetAttribute<BooleanValue>();
@@ -4213,7 +4036,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>minAxisType, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: minAxisType</para>
         /// </summary>
-        [SchemaAttr("minAxisType")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>? MinAxisType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>>();
@@ -4224,7 +4046,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>maxAxisType, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: maxAxisType</para>
         /// </summary>
-        [SchemaAttr("maxAxisType")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>? MaxAxisType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>>();
@@ -4235,7 +4056,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>rightToLeft, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: rightToLeft</para>
         /// </summary>
-        [SchemaAttr("rightToLeft")]
         public BooleanValue? RightToLeft
         {
             get => GetAttribute<BooleanValue>();
@@ -4431,7 +4251,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorSeries.</para>
     /// </summary>
-    [SchemaAttr("x14:colorSeries")]
     public partial class SeriesColor : ColorType
     {
         /// <summary>
@@ -4458,7 +4277,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorNegative.</para>
     /// </summary>
-    [SchemaAttr("x14:colorNegative")]
     public partial class NegativeColor : ColorType
     {
         /// <summary>
@@ -4485,7 +4303,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorAxis.</para>
     /// </summary>
-    [SchemaAttr("x14:colorAxis")]
     public partial class AxisColor : ColorType
     {
         /// <summary>
@@ -4512,7 +4329,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorMarkers.</para>
     /// </summary>
-    [SchemaAttr("x14:colorMarkers")]
     public partial class MarkersColor : ColorType
     {
         /// <summary>
@@ -4539,7 +4355,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorFirst.</para>
     /// </summary>
-    [SchemaAttr("x14:colorFirst")]
     public partial class FirstMarkerColor : ColorType
     {
         /// <summary>
@@ -4566,7 +4381,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorLast.</para>
     /// </summary>
-    [SchemaAttr("x14:colorLast")]
     public partial class LastMarkerColor : ColorType
     {
         /// <summary>
@@ -4593,7 +4407,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorHigh.</para>
     /// </summary>
-    [SchemaAttr("x14:colorHigh")]
     public partial class HighMarkerColor : ColorType
     {
         /// <summary>
@@ -4620,7 +4433,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorLow.</para>
     /// </summary>
-    [SchemaAttr("x14:colorLow")]
     public partial class LowMarkerColor : ColorType
     {
         /// <summary>
@@ -4646,7 +4458,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:color.</para>
     /// </summary>
-    [SchemaAttr("x14:color")]
     public partial class Color : ColorType
     {
         /// <summary>
@@ -4672,7 +4483,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:fillColor.</para>
     /// </summary>
-    [SchemaAttr("x14:fillColor")]
     public partial class FillColor : ColorType
     {
         /// <summary>
@@ -4698,7 +4508,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:borderColor.</para>
     /// </summary>
-    [SchemaAttr("x14:borderColor")]
     public partial class BorderColor : ColorType
     {
         /// <summary>
@@ -4724,7 +4533,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:negativeFillColor.</para>
     /// </summary>
-    [SchemaAttr("x14:negativeFillColor")]
     public partial class NegativeFillColor : ColorType
     {
         /// <summary>
@@ -4750,7 +4558,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:negativeBorderColor.</para>
     /// </summary>
-    [SchemaAttr("x14:negativeBorderColor")]
     public partial class NegativeBorderColor : ColorType
     {
         /// <summary>
@@ -4776,7 +4583,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:axisColor.</para>
     /// </summary>
-    [SchemaAttr("x14:axisColor")]
     public partial class BarAxisColor : ColorType
     {
         /// <summary>
@@ -4815,7 +4621,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Automatic</para>
         /// <para>Represents the following attribute in the schema: auto</para>
         /// </summary>
-        [SchemaAttr("auto")]
         public BooleanValue? Auto
         {
             get => GetAttribute<BooleanValue>();
@@ -4826,7 +4631,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: indexed</para>
         /// </summary>
-        [SchemaAttr("indexed")]
         public UInt32Value? Indexed
         {
             get => GetAttribute<UInt32Value>();
@@ -4837,7 +4641,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Alpha Red Green Blue Color Value</para>
         /// <para>Represents the following attribute in the schema: rgb</para>
         /// </summary>
-        [SchemaAttr("rgb")]
         public HexBinaryValue? Rgb
         {
             get => GetAttribute<HexBinaryValue>();
@@ -4848,7 +4651,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Theme Color</para>
         /// <para>Represents the following attribute in the schema: theme</para>
         /// </summary>
-        [SchemaAttr("theme")]
         public UInt32Value? Theme
         {
             get => GetAttribute<UInt32Value>();
@@ -4859,7 +4661,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Tint</para>
         /// <para>Represents the following attribute in the schema: tint</para>
         /// </summary>
-        [SchemaAttr("tint")]
         public DoubleValue? Tint
         {
             get => GetAttribute<DoubleValue>();
@@ -4892,7 +4693,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Sparkline" /> <c>&lt;x14:sparkline></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:sparklines")]
     public partial class Sparklines : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4954,7 +4754,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:sparkline")]
     public partial class Sparkline : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5037,7 +4836,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicer.</para>
     /// </summary>
-    [SchemaAttr("x14:slicer")]
     public partial class SlicerRef : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5054,7 +4852,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -5087,7 +4884,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerCache.</para>
     /// </summary>
-    [SchemaAttr("x14:slicerCache")]
     public partial class SlicerCache : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5104,7 +4900,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -5139,7 +4934,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions" /> <c>&lt;x14:argumentDescriptions></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:definedName")]
     public partial class DefinedName : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5177,7 +4971,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -5230,7 +5023,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescription" /> <c>&lt;x14:argumentDescription></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:argumentDescriptions")]
     public partial class ArgumentDescriptions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5268,7 +5060,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -5298,7 +5089,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:argumentDescription.</para>
     /// </summary>
-    [SchemaAttr("x14:argumentDescription")]
     public partial class ArgumentDescription : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -5325,7 +5115,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>index, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: index</para>
         /// </summary>
-        [SchemaAttr("index")]
         public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
@@ -5361,7 +5150,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows" /> <c>&lt;x14:rows></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:tupleSet")]
     public partial class TupleSet : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5399,7 +5187,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>rowCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: rowCount</para>
         /// </summary>
-        [SchemaAttr("rowCount")]
         public UInt32Value? RowCount
         {
             get => GetAttribute<UInt32Value>();
@@ -5410,7 +5197,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>columnCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: columnCount</para>
         /// </summary>
-        [SchemaAttr("columnCount")]
         public UInt32Value? ColumnCount
         {
             get => GetAttribute<UInt32Value>();
@@ -5475,7 +5261,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeader" /> <c>&lt;x14:header></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:headers")]
     public partial class TupleSetHeaders : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5536,7 +5321,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetRow" /> <c>&lt;x14:row></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:rows")]
     public partial class TupleSetRows : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5591,7 +5375,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:header.</para>
     /// </summary>
-    [SchemaAttr("x14:header")]
     public partial class TupleSetHeader : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5605,7 +5388,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>uniqueName, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        [SchemaAttr("uniqueName")]
         public StringValue? UniqueName
         {
             get => GetAttribute<StringValue>();
@@ -5616,7 +5398,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>hierarchyName, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: hierarchyName</para>
         /// </summary>
-        [SchemaAttr("hierarchyName")]
         public StringValue? HierarchyName
         {
             get => GetAttribute<StringValue>();
@@ -5650,7 +5431,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetRowItem" /> <c>&lt;x14:rowItem></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:row")]
     public partial class TupleSetRow : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5705,7 +5485,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:rowItem.</para>
     /// </summary>
-    [SchemaAttr("x14:rowItem")]
     public partial class TupleSetRowItem : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5719,7 +5498,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>u, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: u</para>
         /// </summary>
-        [SchemaAttr("u")]
         public StringValue? UniqueName
         {
             get => GetAttribute<StringValue>();
@@ -5730,7 +5508,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>d, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: d</para>
         /// </summary>
-        [SchemaAttr("d")]
         public StringValue? DisplayName
         {
             get => GetAttribute<StringValue>();
@@ -5758,7 +5535,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:setLevel.</para>
     /// </summary>
-    [SchemaAttr("x14:setLevel")]
     public partial class SetLevel : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5772,7 +5548,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>hierarchy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: hierarchy</para>
         /// </summary>
-        [SchemaAttr("hierarchy")]
         public Int32Value? Hierarchy
         {
             get => GetAttribute<Int32Value>();
@@ -5807,7 +5582,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SetLevel" /> <c>&lt;x14:setLevel></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:setLevels")]
     public partial class SetLevels : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5845,7 +5619,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -5882,7 +5655,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject" /> <c>&lt;x14:cfvo></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:colorScale")]
     public partial class ColorScale : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5950,7 +5722,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject" /> <c>&lt;x14:cfvo></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:dataBar")]
     public partial class DataBar : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5988,7 +5759,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>minLength, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: minLength</para>
         /// </summary>
-        [SchemaAttr("minLength")]
         public UInt32Value? MinLength
         {
             get => GetAttribute<UInt32Value>();
@@ -5999,7 +5769,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>maxLength, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        [SchemaAttr("maxLength")]
         public UInt32Value? MaxLength
         {
             get => GetAttribute<UInt32Value>();
@@ -6010,7 +5779,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>showValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showValue</para>
         /// </summary>
-        [SchemaAttr("showValue")]
         public BooleanValue? ShowValue
         {
             get => GetAttribute<BooleanValue>();
@@ -6021,7 +5789,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>border, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: border</para>
         /// </summary>
-        [SchemaAttr("border")]
         public BooleanValue? Border
         {
             get => GetAttribute<BooleanValue>();
@@ -6032,7 +5799,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>gradient, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: gradient</para>
         /// </summary>
-        [SchemaAttr("gradient")]
         public BooleanValue? Gradient
         {
             get => GetAttribute<BooleanValue>();
@@ -6043,7 +5809,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>direction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: direction</para>
         /// </summary>
-        [SchemaAttr("direction")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarDirectionValues>>();
@@ -6054,7 +5819,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>negativeBarColorSameAsPositive, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: negativeBarColorSameAsPositive</para>
         /// </summary>
-        [SchemaAttr("negativeBarColorSameAsPositive")]
         public BooleanValue? NegativeBarColorSameAsPositive
         {
             get => GetAttribute<BooleanValue>();
@@ -6065,7 +5829,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>negativeBarBorderColorSameAsPositive, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: negativeBarBorderColorSameAsPositive</para>
         /// </summary>
-        [SchemaAttr("negativeBarBorderColorSameAsPositive")]
         public BooleanValue? NegativeBarBorderColorSameAsPositive
         {
             get => GetAttribute<BooleanValue>();
@@ -6076,7 +5839,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>axisPosition, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: axisPosition</para>
         /// </summary>
-        [SchemaAttr("axisPosition")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarAxisPositionValues>? AxisPosition
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarAxisPositionValues>>();
@@ -6133,7 +5895,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject" /> <c>&lt;x14:cfvo></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:iconSet")]
     public partial class IconSet : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6171,7 +5932,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>iconSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        [SchemaAttr("iconSet")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSetTypes
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
@@ -6182,7 +5942,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>showValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showValue</para>
         /// </summary>
-        [SchemaAttr("showValue")]
         public BooleanValue? ShowValue
         {
             get => GetAttribute<BooleanValue>();
@@ -6193,7 +5952,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>percent, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: percent</para>
         /// </summary>
-        [SchemaAttr("percent")]
         public BooleanValue? Percent
         {
             get => GetAttribute<BooleanValue>();
@@ -6204,7 +5962,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>reverse, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: reverse</para>
         /// </summary>
-        [SchemaAttr("reverse")]
         public BooleanValue? Reverse
         {
             get => GetAttribute<BooleanValue>();
@@ -6215,7 +5972,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>custom, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: custom</para>
         /// </summary>
-        [SchemaAttr("custom")]
         public BooleanValue? Custom
         {
             get => GetAttribute<BooleanValue>();
@@ -6263,7 +6019,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:dxf")]
     public partial class DifferentialType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6428,7 +6183,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:cfvo")]
     public partial class ConditionalFormattingValueObject : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6466,7 +6220,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>type, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObjectTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObjectTypeValues>>();
@@ -6477,7 +6230,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>gte, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: gte</para>
         /// </summary>
-        [SchemaAttr("gte")]
         public BooleanValue? GreaterThanOrEqual
         {
             get => GetAttribute<BooleanValue>();
@@ -6539,7 +6291,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cfIcon.</para>
     /// </summary>
-    [SchemaAttr("x14:cfIcon")]
     public partial class ConditionalFormattingIcon : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6553,7 +6304,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>iconSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        [SchemaAttr("iconSet")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
@@ -6564,7 +6314,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>iconId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
-        [SchemaAttr("iconId")]
         public UInt32Value? IconId
         {
             get => GetAttribute<UInt32Value>();
@@ -6602,7 +6351,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEdit" /> <c>&lt;x14:pivotEdit></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:pivotEdits")]
     public partial class PivotEdits : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6663,7 +6411,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotChange" /> <c>&lt;x14:pivotChange></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:pivotChanges")]
     public partial class PivotChanges : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6724,7 +6471,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormat" /> <c>&lt;x14:conditionalFormat></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:conditionalFormats")]
     public partial class ConditionalFormats : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6762,7 +6508,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -6798,7 +6543,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMember" /> <c>&lt;x:calculatedMember></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:calculatedMembers")]
     public partial class CalculatedMembers : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6836,7 +6580,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Calculated Members Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -6875,7 +6618,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleItems" /> <c>&lt;x14:tupleItems></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:pivotEdit")]
     public partial class PivotEdit : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6995,7 +6737,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue" /> <c>&lt;x14:editValue></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:userEdit")]
     public partial class PivotUserEdit : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7084,7 +6825,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Xstring" /> <c>&lt;x14:tupleItem></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:tupleItems")]
     public partial class TupleItems : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7146,7 +6886,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences" /> <c>&lt;x:references></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:pivotArea")]
     public partial class PivotArea : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7184,7 +6923,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Field Index</para>
         /// <para>Represents the following attribute in the schema: field</para>
         /// </summary>
-        [SchemaAttr("field")]
         public Int32Value? Field
         {
             get => GetAttribute<Int32Value>();
@@ -7195,7 +6933,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Rule Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues>>();
@@ -7206,7 +6943,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Data Only</para>
         /// <para>Represents the following attribute in the schema: dataOnly</para>
         /// </summary>
-        [SchemaAttr("dataOnly")]
         public BooleanValue? DataOnly
         {
             get => GetAttribute<BooleanValue>();
@@ -7217,7 +6953,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Labels Only</para>
         /// <para>Represents the following attribute in the schema: labelOnly</para>
         /// </summary>
-        [SchemaAttr("labelOnly")]
         public BooleanValue? LabelOnly
         {
             get => GetAttribute<BooleanValue>();
@@ -7228,7 +6963,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Include Row Grand Total</para>
         /// <para>Represents the following attribute in the schema: grandRow</para>
         /// </summary>
-        [SchemaAttr("grandRow")]
         public BooleanValue? GrandRow
         {
             get => GetAttribute<BooleanValue>();
@@ -7239,7 +6973,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Include Column Grand Total</para>
         /// <para>Represents the following attribute in the schema: grandCol</para>
         /// </summary>
-        [SchemaAttr("grandCol")]
         public BooleanValue? GrandColumn
         {
             get => GetAttribute<BooleanValue>();
@@ -7250,7 +6983,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Cache Index</para>
         /// <para>Represents the following attribute in the schema: cacheIndex</para>
         /// </summary>
-        [SchemaAttr("cacheIndex")]
         public BooleanValue? CacheIndex
         {
             get => GetAttribute<BooleanValue>();
@@ -7261,7 +6993,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Outline</para>
         /// <para>Represents the following attribute in the schema: outline</para>
         /// </summary>
-        [SchemaAttr("outline")]
         public BooleanValue? Outline
         {
             get => GetAttribute<BooleanValue>();
@@ -7272,7 +7003,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Offset Reference</para>
         /// <para>Represents the following attribute in the schema: offset</para>
         /// </summary>
-        [SchemaAttr("offset")]
         public StringValue? Offset
         {
             get => GetAttribute<StringValue>();
@@ -7283,7 +7013,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Collapsed Levels Are Subtotals</para>
         /// <para>Represents the following attribute in the schema: collapsedLevelsAreSubtotals</para>
         /// </summary>
-        [SchemaAttr("collapsedLevelsAreSubtotals")]
         public BooleanValue? CollapsedLevelsAreSubtotals
         {
             get => GetAttribute<BooleanValue>();
@@ -7294,7 +7023,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Axis</para>
         /// <para>Represents the following attribute in the schema: axis</para>
         /// </summary>
-        [SchemaAttr("axis")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>? Axis
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>();
@@ -7305,7 +7033,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Field Position</para>
         /// <para>Represents the following attribute in the schema: fieldPosition</para>
         /// </summary>
-        [SchemaAttr("fieldPosition")]
         public UInt32Value? FieldPosition
         {
             get => GetAttribute<UInt32Value>();
@@ -7382,7 +7109,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleItems" /> <c>&lt;x14:tupleItems></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:pivotChange")]
     public partial class PivotChange : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7420,7 +7146,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>allocationMethod, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: allocationMethod</para>
         /// </summary>
-        [SchemaAttr("allocationMethod")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues>? AllocationMethod
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues>>();
@@ -7431,7 +7156,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>weightExpression, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: weightExpression</para>
         /// </summary>
-        [SchemaAttr("weightExpression")]
         public StringValue? WeightExpression
         {
             get => GetAttribute<StringValue>();
@@ -7506,7 +7230,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:editValue.</para>
     /// </summary>
-    [SchemaAttr("x14:editValue")]
     public partial class PivotEditValue : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -7533,7 +7256,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>valueType, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: valueType</para>
         /// </summary>
-        [SchemaAttr("valueType")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValueTypeValues>? ValueType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValueTypeValues>>();
@@ -7562,7 +7284,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:tupleItem.</para>
     /// </summary>
-    [SchemaAttr("x14:tupleItem")]
     public partial class Xstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -7607,7 +7328,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElement" /> <c>&lt;x14:slicerStyleElement></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:slicerStyleElements")]
     public partial class SlicerStyleElements : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7668,7 +7388,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Value" /> <c>&lt;x:value></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:values")]
     public partial class DdeValues : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7706,7 +7425,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Rows</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
-        [SchemaAttr("rows")]
         public UInt32Value? Rows
         {
             get => GetAttribute<UInt32Value>();
@@ -7717,7 +7435,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Columns</para>
         /// <para>Represents the following attribute in the schema: cols</para>
         /// </summary>
-        [SchemaAttr("cols")]
         public UInt32Value? Columns
         {
             get => GetAttribute<UInt32Value>();
@@ -7755,7 +7472,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotAreas" /> <c>&lt;x14:pivotAreas></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:conditionalFormat")]
     public partial class ConditionalFormat : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7793,7 +7509,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>scope, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: scope</para>
         /// </summary>
-        [SchemaAttr("scope")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues>? Scope
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues>>();
@@ -7804,7 +7519,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>type, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues>>();
@@ -7815,7 +7529,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>priority, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: priority</para>
         /// </summary>
-        [SchemaAttr("priority")]
         public UInt32Value? Priority
         {
             get => GetAttribute<UInt32Value>();
@@ -7826,7 +7539,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -7900,7 +7612,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:pivotAreas")]
     public partial class PivotAreas : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7938,7 +7649,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Pivot Area Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -7974,7 +7684,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements" /> <c>&lt;x14:slicerStyleElements></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:slicerStyle")]
     public partial class SlicerStyle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8012,7 +7721,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -8061,7 +7769,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerStyleElement.</para>
     /// </summary>
-    [SchemaAttr("x14:slicerStyleElement")]
     public partial class SlicerStyleElement : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8075,7 +7782,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>type, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleTypeValues>>();
@@ -8086,7 +7792,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>dxfId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        [SchemaAttr("dxfId")]
         public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
@@ -8123,7 +7828,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:ignoredError")]
     public partial class IgnoredError : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8161,7 +7865,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>evalError, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: evalError</para>
         /// </summary>
-        [SchemaAttr("evalError")]
         public BooleanValue? EvalError
         {
             get => GetAttribute<BooleanValue>();
@@ -8172,7 +7875,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>twoDigitTextYear, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: twoDigitTextYear</para>
         /// </summary>
-        [SchemaAttr("twoDigitTextYear")]
         public BooleanValue? TwoDigitTextYear
         {
             get => GetAttribute<BooleanValue>();
@@ -8183,7 +7885,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>numberStoredAsText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: numberStoredAsText</para>
         /// </summary>
-        [SchemaAttr("numberStoredAsText")]
         public BooleanValue? NumberStoredAsText
         {
             get => GetAttribute<BooleanValue>();
@@ -8194,7 +7895,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>formula, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: formula</para>
         /// </summary>
-        [SchemaAttr("formula")]
         public BooleanValue? Formula
         {
             get => GetAttribute<BooleanValue>();
@@ -8205,7 +7905,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>formulaRange, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: formulaRange</para>
         /// </summary>
-        [SchemaAttr("formulaRange")]
         public BooleanValue? FormulaRange
         {
             get => GetAttribute<BooleanValue>();
@@ -8216,7 +7915,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>unlockedFormula, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: unlockedFormula</para>
         /// </summary>
-        [SchemaAttr("unlockedFormula")]
         public BooleanValue? UnlockedFormula
         {
             get => GetAttribute<BooleanValue>();
@@ -8227,7 +7925,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>emptyCellReference, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: emptyCellReference</para>
         /// </summary>
-        [SchemaAttr("emptyCellReference")]
         public BooleanValue? EmptyCellReference
         {
             get => GetAttribute<BooleanValue>();
@@ -8238,7 +7935,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>listDataValidation, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: listDataValidation</para>
         /// </summary>
-        [SchemaAttr("listDataValidation")]
         public BooleanValue? ListDataValidation
         {
             get => GetAttribute<BooleanValue>();
@@ -8249,7 +7945,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>calculatedColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: calculatedColumn</para>
         /// </summary>
-        [SchemaAttr("calculatedColumn")]
         public BooleanValue? CalculatedColumn
         {
             get => GetAttribute<BooleanValue>();
@@ -8306,7 +8001,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:protectedRange")]
     public partial class ProtectedRange : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8344,7 +8038,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>password, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: password</para>
         /// </summary>
-        [SchemaAttr("password")]
         public HexBinaryValue? Password
         {
             get => GetAttribute<HexBinaryValue>();
@@ -8355,7 +8048,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>algorithmName, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: algorithmName</para>
         /// </summary>
-        [SchemaAttr("algorithmName")]
         public StringValue? AlgorithmName
         {
             get => GetAttribute<StringValue>();
@@ -8366,7 +8058,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>hashValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: hashValue</para>
         /// </summary>
-        [SchemaAttr("hashValue")]
         public Base64BinaryValue? HashValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -8377,7 +8068,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>saltValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: saltValue</para>
         /// </summary>
-        [SchemaAttr("saltValue")]
         public Base64BinaryValue? SaltValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -8388,7 +8078,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>spinCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: spinCount</para>
         /// </summary>
-        [SchemaAttr("spinCount")]
         public UInt32Value? SpinCount
         {
             get => GetAttribute<UInt32Value>();
@@ -8399,7 +8088,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -8410,7 +8098,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>securityDescriptor, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: securityDescriptor</para>
         /// </summary>
-        [SchemaAttr("securityDescriptor")]
         public StringValue? SecurityDescriptor
         {
             get => GetAttribute<StringValue>();
@@ -8468,7 +8155,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:customFilter.</para>
     /// </summary>
-    [SchemaAttr("x14:customFilter")]
     public partial class CustomFilter : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8482,7 +8168,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>operator, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        [SchemaAttr("operator")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>? Operator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>>();
@@ -8493,7 +8178,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -8519,7 +8203,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:item.</para>
     /// </summary>
-    [SchemaAttr("x14:item")]
     public partial class ListItem : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8533,7 +8216,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -8568,7 +8250,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ListItem" /> <c>&lt;x14:item></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:itemLst")]
     public partial class ListItems : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8631,7 +8312,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:slicer")]
     public partial class Slicer : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8669,7 +8349,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -8680,7 +8359,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>cache, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: cache</para>
         /// </summary>
-        [SchemaAttr("cache")]
         public StringValue? Cache
         {
             get => GetAttribute<StringValue>();
@@ -8691,7 +8369,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>caption, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: caption</para>
         /// </summary>
-        [SchemaAttr("caption")]
         public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
@@ -8702,7 +8379,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>startItem, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: startItem</para>
         /// </summary>
-        [SchemaAttr("startItem")]
         public UInt32Value? StartItem
         {
             get => GetAttribute<UInt32Value>();
@@ -8713,7 +8389,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>columnCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: columnCount</para>
         /// </summary>
-        [SchemaAttr("columnCount")]
         public UInt32Value? ColumnCount
         {
             get => GetAttribute<UInt32Value>();
@@ -8724,7 +8399,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>showCaption, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showCaption</para>
         /// </summary>
-        [SchemaAttr("showCaption")]
         public BooleanValue? ShowCaption
         {
             get => GetAttribute<BooleanValue>();
@@ -8735,7 +8409,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>level, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: level</para>
         /// </summary>
-        [SchemaAttr("level")]
         public UInt32Value? Level
         {
             get => GetAttribute<UInt32Value>();
@@ -8746,7 +8419,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>style, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr("style")]
         public StringValue? Style
         {
             get => GetAttribute<StringValue>();
@@ -8757,7 +8429,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>lockedPosition, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: lockedPosition</para>
         /// </summary>
-        [SchemaAttr("lockedPosition")]
         public BooleanValue? LockedPosition
         {
             get => GetAttribute<BooleanValue>();
@@ -8768,7 +8439,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>rowHeight, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: rowHeight</para>
         /// </summary>
-        [SchemaAttr("rowHeight")]
         public UInt32Value? RowHeight
         {
             get => GetAttribute<UInt32Value>();
@@ -8842,7 +8512,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections" /> <c>&lt;x14:selections></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:olap")]
     public partial class OlapSlicerCache : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8880,7 +8549,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>pivotCacheId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pivotCacheId</para>
         /// </summary>
-        [SchemaAttr("pivotCacheId")]
         public UInt32Value? PivotCacheId
         {
             get => GetAttribute<UInt32Value>();
@@ -8963,7 +8631,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems" /> <c>&lt;x14:items></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:tabular")]
     public partial class TabularSlicerCache : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9001,7 +8668,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>pivotCacheId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pivotCacheId</para>
         /// </summary>
-        [SchemaAttr("pivotCacheId")]
         public UInt32Value? PivotCacheId
         {
             get => GetAttribute<UInt32Value>();
@@ -9012,7 +8678,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>sortOrder, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortOrder</para>
         /// </summary>
-        [SchemaAttr("sortOrder")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues>? SortOrder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues>>();
@@ -9023,7 +8688,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>customListSort, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: customListSort</para>
         /// </summary>
-        [SchemaAttr("customListSort")]
         public BooleanValue? CustomListSort
         {
             get => GetAttribute<BooleanValue>();
@@ -9034,7 +8698,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>showMissing, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showMissing</para>
         /// </summary>
-        [SchemaAttr("showMissing")]
         public BooleanValue? ShowMissing
         {
             get => GetAttribute<BooleanValue>();
@@ -9045,7 +8708,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>crossFilter, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: crossFilter</para>
         /// </summary>
-        [SchemaAttr("crossFilter")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>? CrossFilter
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>>();
@@ -9110,7 +8772,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotTable.</para>
     /// </summary>
-    [SchemaAttr("x14:pivotTable")]
     public partial class SlicerCachePivotTable : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -9124,7 +8785,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>tabId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tabId</para>
         /// </summary>
-        [SchemaAttr("tabId")]
         public UInt32Value? TabId
         {
             get => GetAttribute<UInt32Value>();
@@ -9135,7 +8795,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -9168,7 +8827,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:p.</para>
     /// </summary>
-    [SchemaAttr("x14:p")]
     public partial class OlapSlicerCacheItemParent : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -9182,7 +8840,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>n, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [SchemaAttr("n")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -9216,7 +8873,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent" /> <c>&lt;x14:p></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:i")]
     public partial class OlapSlicerCacheItem : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9254,7 +8910,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>n, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [SchemaAttr("n")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -9265,7 +8920,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>c, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
-        [SchemaAttr("c")]
         public StringValue? DisplayName
         {
             get => GetAttribute<StringValue>();
@@ -9276,7 +8930,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>nd, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: nd</para>
         /// </summary>
-        [SchemaAttr("nd")]
         public BooleanValue? NonDisplay
         {
             get => GetAttribute<BooleanValue>();
@@ -9318,7 +8971,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItem" /> <c>&lt;x14:i></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:range")]
     public partial class OlapSlicerCacheRange : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9356,7 +9008,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>startItem, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: startItem</para>
         /// </summary>
-        [SchemaAttr("startItem")]
         public UInt32Value? StartItem
         {
             get => GetAttribute<UInt32Value>();
@@ -9396,7 +9047,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRange" /> <c>&lt;x14:range></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:ranges")]
     public partial class OlapSlicerCacheRanges : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9457,7 +9107,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges" /> <c>&lt;x14:ranges></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:level")]
     public partial class OlapSlicerCacheLevelData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9495,7 +9144,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>uniqueName, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        [SchemaAttr("uniqueName")]
         public StringValue? UniqueName
         {
             get => GetAttribute<StringValue>();
@@ -9506,7 +9154,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>sourceCaption, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sourceCaption</para>
         /// </summary>
-        [SchemaAttr("sourceCaption")]
         public StringValue? SourceCaption
         {
             get => GetAttribute<StringValue>();
@@ -9517,7 +9164,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -9528,7 +9174,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>sortOrder, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortOrder</para>
         /// </summary>
-        [SchemaAttr("sortOrder")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSortOrderValues>? SortOrder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSortOrderValues>>();
@@ -9539,7 +9184,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>crossFilter, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: crossFilter</para>
         /// </summary>
-        [SchemaAttr("crossFilter")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>? CrossFilter
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>>();
@@ -9599,7 +9243,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelData" /> <c>&lt;x14:level></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:levels")]
     public partial class OlapSlicerCacheLevelsData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9637,7 +9280,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -9673,7 +9315,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelection" /> <c>&lt;x14:selection></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:selections")]
     public partial class OlapSlicerCacheSelections : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9711,7 +9352,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -9747,7 +9387,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent" /> <c>&lt;x14:p></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:selection")]
     public partial class OlapSlicerCacheSelection : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9785,7 +9424,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>n, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [SchemaAttr("n")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -9824,7 +9462,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItem" /> <c>&lt;x14:i></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:items")]
     public partial class TabularSlicerCacheItems : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9862,7 +9499,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -9892,7 +9528,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:i.</para>
     /// </summary>
-    [SchemaAttr("x14:i")]
     public partial class TabularSlicerCacheItem : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -9906,7 +9541,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>x, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [SchemaAttr("x")]
         public UInt32Value? Atom
         {
             get => GetAttribute<UInt32Value>();
@@ -9917,7 +9551,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>s, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        [SchemaAttr("s")]
         public BooleanValue? IsSelected
         {
             get => GetAttribute<BooleanValue>();
@@ -9928,7 +9561,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>nd, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: nd</para>
         /// </summary>
-        [SchemaAttr("nd")]
         public BooleanValue? NonDisplay
         {
             get => GetAttribute<BooleanValue>();
@@ -9965,7 +9597,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable" /> <c>&lt;x14:pivotTable></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:pivotTables")]
     public partial class SlicerCachePivotTables : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10027,7 +9658,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache" /> <c>&lt;x14:tabular></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:data")]
     public partial class SlicerCacheData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10116,7 +9746,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x14:extLst")]
     public partial class SlicerCacheDefinitionExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>

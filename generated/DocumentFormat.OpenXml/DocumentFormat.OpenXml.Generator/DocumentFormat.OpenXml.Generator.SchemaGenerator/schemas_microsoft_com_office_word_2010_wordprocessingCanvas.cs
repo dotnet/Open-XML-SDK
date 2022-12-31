@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Pictures;
@@ -41,7 +39,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape" /> <c>&lt;wps:wsp></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpc:wpc")]
     public partial class WordprocessingCanvas : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -152,7 +149,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpc:bg")]
     public partial class BackgroundFormatting : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -241,7 +237,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpc:whole")]
     public partial class WholeFormatting : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -329,7 +324,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D" /> <c>&lt;wpg:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpc:graphicFrame")]
     public partial class GraphicFrameType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -463,7 +457,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpc:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
