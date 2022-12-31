@@ -1,68 +1,54 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Features;
-using System;
+namespace DocumentFormat.OpenXml.Packaging;
 
-namespace DocumentFormat.OpenXml.Packaging
+internal sealed class OpenXmlPackageValidationResult
 {
-    internal sealed class OpenXmlPackageValidationResult
+    private string? _message;
+
+    /// <summary>
+    /// Gets or sets the message string of the event.
+    /// </summary>
+    public string Message
     {
-        private string? _message;
-        private OpenXmlPart? _subPart;
-        private OpenXmlPart? _part;
-
-        /// <summary>
-        /// Gets or sets the message string of the event.
-        /// </summary>
-        public string Message
+        get
         {
-            get
+            if (_message is null && MessageId is not null)
             {
-                if (_message is null && MessageId is not null)
-                {
-                    return ExceptionMessages.ResourceManager.GetString(MessageId) ?? string.Empty;
-                }
-                else
-                {
-                    return _message ?? string.Empty;
-                }
+                return ExceptionMessages.ResourceManager.GetString(MessageId) ?? string.Empty;
             }
-
-            set
+            else
             {
-                _message = value;
+                return _message ?? string.Empty;
             }
         }
 
-        /// <summary>
-        /// Gets or sets the class name of the part.
-        /// </summary>
-        public string? RelationshipType { get; set; }
-
-        /// <summary>
-        /// Gets or sets the part that caused the event.
-        /// </summary>
-        public OpenXmlPart? SubPart
+        set
         {
-            get { return _subPart; }
-            internal set { _subPart = value; }
+            _message = value;
         }
-
-        /// <summary>
-        /// Gets or sets the part in which to process the validation.
-        /// </summary>
-        public OpenXmlPart? Part
-        {
-            get { return _part; }
-            internal set { _part = value; }
-        }
-
-        internal string? MessageId { get; set; }
-
-        /// <summary>
-        /// Gets or sets the DataPartReferenceRelationship that caused the event.
-        /// </summary>
-        internal DataPartReferenceRelationship? DataPartReferenceRelationship { get; set; }
     }
+
+    /// <summary>
+    /// Gets or sets the class name of the part.
+    /// </summary>
+    public string? RelationshipType { get; set; }
+
+    /// <summary>
+    /// Gets or sets the part that caused the event.
+    /// </summary>
+    public OpenXmlPart? SubPart { get; internal set; }
+
+    /// <summary>
+    /// Gets or sets the part in which to process the validation.
+    /// </summary>
+    public OpenXmlPart? Part { get; internal set; }
+
+    internal string? MessageId { get; set; }
+
+    /// <summary>
+    /// Gets or sets the DataPartReferenceRelationship that caused the event.
+    /// </summary>
+    internal DataPartReferenceRelationship? DataPartReferenceRelationship { get; set; }
 }

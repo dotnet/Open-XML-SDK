@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Framework
             FileFormatVersions version)
         {
             RelationshipType = relationship;
-            PartContentType = contentType;
+            ContentType = contentType;
             MinOccursIsNonZero = minOccursIsNonZero;
             MaxOccursGreatThanOne = maxOccursGreatThanOne;
             FileFormat = version;
@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Framework
         /// same relationship type but different content type.
         /// </summary>
         /// <remarks>This value is null for non-fixed content type.</remarks>
-        public string? PartContentType { get; }
+        public string? ContentType { get; }
 
         /// <summary>
         /// Gets a value indicating whether the min occurs > 0, (i.e. is required).

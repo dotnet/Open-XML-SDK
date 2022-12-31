@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "Name": "DocumentFormat.OpenXml.Packaging.AlternativeFormatImportPart",
     "ContentType": null,
@@ -50,24 +50,21 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -85,48 +82,42 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes",
-        "PartClassName": "ChartDrawingPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride",
-        "PartClassName": "ThemeOverridePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.themeOverride+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.themeOverride+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/chartStyle",
-        "PartClassName": "ChartStylePart",
-        "PartContentType": "application/vnd.ms-office.chartstyle+xml",
+        "ContentType": "application/vnd.ms-office.chartstyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle",
-        "PartClassName": "ChartColorStylePart",
-        "PartContentType": "application/vnd.ms-office.chartcolorstyle+xml",
+        "ContentType": "application/vnd.ms-office.chartcolorstyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
@@ -154,32 +145,28 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-        "PartClassName": "SpreadsheetPrinterSettingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing",
-        "PartClassName": "DrawingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawing+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-        "PartClassName": "VmlDrawingPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
+        "ContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -247,8 +234,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/customData",
-        "PartClassName": "CustomDataPart",
-        "PartContentType": "application/binary",
+        "ContentType": "application/binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2010"
@@ -296,8 +282,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps",
-        "PartClassName": "CustomXmlPropertiesPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.customXmlProperties+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.customXmlProperties+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
@@ -325,8 +310,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/attachedToolbars",
-        "PartClassName": "WordAttachedToolbarsPart",
-        "PartContentType": "application/vnd.ms-word.attachedToolbars",
+        "ContentType": "application/vnd.ms-word.attachedToolbars",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
@@ -354,24 +338,21 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-        "PartClassName": "SlidePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet",
-        "PartClassName": "WorksheetPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -389,8 +370,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -408,8 +388,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -437,32 +416,28 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-        "PartClassName": "SpreadsheetPrinterSettingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing",
-        "PartClassName": "DrawingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawing+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-        "PartClassName": "VmlDrawingPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
+        "ContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -480,8 +455,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature",
-        "PartClassName": "XmlSignaturePart",
-        "PartContentType": "application/vnd.openxmlformats-package.digital-signature-xmlsignature+xml",
+        "ContentType": "application/vnd.openxmlformats-package.digital-signature-xmlsignature+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -499,16 +473,14 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData",
-        "PartClassName": "MailMergeRecipientDataPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -536,80 +508,70 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-        "PartClassName": "CustomXmlPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/webextension",
-        "PartClassName": "WebExtensionPart",
-        "PartContentType": "application/vnd.ms-office.webextension+xml",
+        "ContentType": "application/vnd.ms-office.webextension+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
@@ -637,8 +599,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
-        "PartClassName": "EmbeddedControlPersistenceBinaryDataPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -676,104 +637,91 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk",
-        "PartClassName": "AlternativeFormatImportPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-        "PartClassName": "EmbeddedControlPersistencePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
@@ -801,48 +749,42 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes",
-        "PartClassName": "ChartDrawingPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride",
-        "PartClassName": "ThemeOverridePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.themeOverride+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.themeOverride+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/chartStyle",
-        "PartClassName": "ChartStylePart",
-        "PartContentType": "application/vnd.ms-office.chartstyle+xml",
+        "ContentType": "application/vnd.ms-office.chartstyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle",
-        "PartClassName": "ChartColorStylePart",
-        "PartContentType": "application/vnd.ms-office.chartcolorstyle+xml",
+        "ContentType": "application/vnd.ms-office.chartcolorstyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
@@ -890,8 +832,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font",
-        "PartClassName": "FontPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -909,104 +850,91 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk",
-        "PartClassName": "AlternativeFormatImportPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-        "PartClassName": "EmbeddedControlPersistencePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
@@ -1024,104 +952,91 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk",
-        "PartClassName": "AlternativeFormatImportPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-        "PartClassName": "EmbeddedControlPersistencePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
@@ -1139,256 +1054,224 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
-        "PartClassName": "WordprocessingCommentsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings",
-        "PartClassName": "DocumentSettingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes",
-        "PartClassName": "EndnotesPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.endnotes+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.endnotes+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable",
-        "PartClassName": "FontTablePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes",
-        "PartClassName": "FootnotesPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering",
-        "PartClassName": "NumberingDefinitionsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles",
-        "PartClassName": "StyleDefinitionsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/stylesWithEffects",
-        "PartClassName": "StylesWithEffectsPart",
-        "PartContentType": "application/vnd.ms-word.stylesWithEffects+xml",
+        "ContentType": "application/vnd.ms-word.stylesWithEffects+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2010"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings",
-        "PartClassName": "WebSettingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.webSettings+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.webSettings+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer",
-        "PartClassName": "FooterPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header",
-        "PartClassName": "HeaderPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-        "PartClassName": "WordprocessingPrinterSettingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.printerSettings",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.printerSettings",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations",
-        "PartClassName": "CustomizationPart",
-        "PartContentType": "application/vnd.ms-word.keyMapCustomizations+xml",
+        "ContentType": "application/vnd.ms-word.keyMapCustomizations+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
-        "PartClassName": "VbaProjectPart",
-        "PartContentType": "application/vnd.ms-office.vbaProject",
+        "ContentType": "application/vnd.ms-office.vbaProject",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/commentsExtended",
-        "PartClassName": "WordprocessingCommentsExPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtended+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtended+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2013"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/people",
-        "PartClassName": "WordprocessingPeoplePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.people+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.people+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2013"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2016/09/relationships/commentsIds",
-        "PartClassName": "WordprocessingCommentsIdsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsIds+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsIds+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2019/05/relationships/documenttasks",
-        "PartClassName": "DocumentTasksPart",
-        "PartContentType": "application/vnd.ms-office.documenttasks+xml",
+        "ContentType": "application/vnd.ms-office.documenttasks+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2021"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2018/08/relationships/commentsExtensible",
-        "PartClassName": "WordCommentsExtensiblePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2021"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk",
-        "PartClassName": "AlternativeFormatImportPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-        "PartClassName": "EmbeddedControlPersistencePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
@@ -1406,136 +1289,119 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-        "PartClassName": "CustomXmlPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-        "PartClassName": "VmlDrawingPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
+        "ContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
-        "PartClassName": "EmbeddedControlPersistenceBinaryDataPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
-        "PartClassName": "ThemePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.theme+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.theme+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
-        "PartClassName": "UserDefinedTagsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-        "PartClassName": "SlidePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
@@ -1553,104 +1419,91 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk",
-        "PartClassName": "AlternativeFormatImportPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-        "PartClassName": "EmbeddedControlPersistencePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
@@ -1678,64 +1531,56 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-        "PartClassName": "SpreadsheetPrinterSettingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing",
-        "PartClassName": "DrawingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawing+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-        "PartClassName": "VmlDrawingPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
+        "ContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
-        "PartClassName": "WorksheetCommentsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty",
-        "PartClassName": "CustomPropertyPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -1783,64 +1628,56 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-        "PartClassName": "SpreadsheetPrinterSettingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing",
-        "PartClassName": "DrawingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawing+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-        "PartClassName": "VmlDrawingPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
+        "ContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
-        "PartClassName": "WorksheetCommentsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty",
-        "PartClassName": "CustomPropertyPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -1868,288 +1705,252 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-        "PartClassName": "CustomXmlPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/glossaryDocument",
-        "PartClassName": "GlossaryDocumentPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document.glossary+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document.glossary+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
-        "PartClassName": "ThemePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.theme+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.theme+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail",
-        "PartClassName": "ThumbnailPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
-        "PartClassName": "WordprocessingCommentsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings",
-        "PartClassName": "DocumentSettingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes",
-        "PartClassName": "EndnotesPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.endnotes+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.endnotes+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable",
-        "PartClassName": "FontTablePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes",
-        "PartClassName": "FootnotesPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering",
-        "PartClassName": "NumberingDefinitionsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles",
-        "PartClassName": "StyleDefinitionsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/stylesWithEffects",
-        "PartClassName": "StylesWithEffectsPart",
-        "PartContentType": "application/vnd.ms-word.stylesWithEffects+xml",
+        "ContentType": "application/vnd.ms-word.stylesWithEffects+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2010"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings",
-        "PartClassName": "WebSettingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.webSettings+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.webSettings+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer",
-        "PartClassName": "FooterPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header",
-        "PartClassName": "HeaderPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-        "PartClassName": "WordprocessingPrinterSettingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.printerSettings",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.printerSettings",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations",
-        "PartClassName": "CustomizationPart",
-        "PartContentType": "application/vnd.ms-word.keyMapCustomizations+xml",
+        "ContentType": "application/vnd.ms-word.keyMapCustomizations+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
-        "PartClassName": "VbaProjectPart",
-        "PartContentType": "application/vnd.ms-office.vbaProject",
+        "ContentType": "application/vnd.ms-office.vbaProject",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/commentsExtended",
-        "PartClassName": "WordprocessingCommentsExPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtended+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtended+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2013"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/people",
-        "PartClassName": "WordprocessingPeoplePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.people+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.people+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2013"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2016/09/relationships/commentsIds",
-        "PartClassName": "WordprocessingCommentsIdsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsIds+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsIds+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2019/05/relationships/documenttasks",
-        "PartClassName": "DocumentTasksPart",
-        "PartContentType": "application/vnd.ms-office.documenttasks+xml",
+        "ContentType": "application/vnd.ms-office.documenttasks+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2021"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2018/08/relationships/commentsExtensible",
-        "PartClassName": "WordCommentsExtensiblePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2021"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk",
-        "PartClassName": "AlternativeFormatImportPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-        "PartClassName": "EmbeddedControlPersistencePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
@@ -2187,136 +1988,119 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-        "PartClassName": "CustomXmlPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-        "PartClassName": "VmlDrawingPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
+        "ContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
-        "PartClassName": "EmbeddedControlPersistenceBinaryDataPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
-        "PartClassName": "ThemePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.theme+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.theme+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
-        "PartClassName": "UserDefinedTagsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-        "PartClassName": "SlidePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
@@ -2334,144 +2118,126 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-        "PartClassName": "CustomXmlPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-        "PartClassName": "VmlDrawingPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
+        "ContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
-        "PartClassName": "EmbeddedControlPersistenceBinaryDataPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster",
-        "PartClassName": "NotesMasterPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride",
-        "PartClassName": "ThemeOverridePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.themeOverride+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.themeOverride+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-        "PartClassName": "SlidePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
-        "PartClassName": "UserDefinedTagsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -2489,8 +2255,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -2508,8 +2273,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheRecords",
-        "PartClassName": "PivotTableCacheRecordsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheRecords+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheRecords+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
@@ -2537,8 +2301,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition",
-        "PartClassName": "PivotTableCacheDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition+xml",
         "MinOccursIsNonZero": true,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
@@ -2576,128 +2339,112 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-        "PartClassName": "CustomXmlPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font",
-        "PartClassName": "FontPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps",
-        "PartClassName": "PresentationPropertiesPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.presProps+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.presProps+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles",
-        "PartClassName": "TableStylesPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.tableStyles+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.tableStyles+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
-        "PartClassName": "ThemePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.theme+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.theme+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps",
-        "PartClassName": "ViewPropertiesPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster",
-        "PartClassName": "NotesMasterPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-        "PartClassName": "SlidePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster",
-        "PartClassName": "SlideMasterPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml",
         "MinOccursIsNonZero": true,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
-        "PartClassName": "UserDefinedTagsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors",
-        "PartClassName": "CommentAuthorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.commentAuthors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.commentAuthors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster",
-        "PartClassName": "HandoutMasterPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/legacyDocTextInfo",
-        "PartClassName": "LegacyDiagramTextInfoPart",
-        "PartContentType": "application/vnd.ms-office.legacyDocTextInfo",
+        "ContentType": "application/vnd.ms-office.legacyDocTextInfo",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
-        "PartClassName": "VbaProjectPart",
-        "PartContentType": "application/vnd.ms-office.vbaProject",
+        "ContentType": "application/vnd.ms-office.vbaProject",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2018/10/relationships/comments",
-        "PartClassName": "PowerPointCommentPart",
-        "PartContentType": "application/vnd.ms-powerpoint.comments+xml",
+        "ContentType": "application/vnd.ms-powerpoint.comments+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2021"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2018/10/relationships/authors",
-        "PartClassName": "PowerPointAuthorsPart",
-        "PartContentType": "application/vnd.ms-powerpoint.authors+xml",
+        "ContentType": "application/vnd.ms-powerpoint.authors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2021"
@@ -2815,8 +2562,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -2834,8 +2580,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -2913,152 +2658,133 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-        "PartClassName": "CustomXmlPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-        "PartClassName": "VmlDrawingPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
+        "ContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
-        "PartClassName": "EmbeddedControlPersistenceBinaryDataPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-        "PartClassName": "SlidePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster",
-        "PartClassName": "SlideMasterPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride",
-        "PartClassName": "ThemeOverridePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.themeOverride+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.themeOverride+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
-        "PartClassName": "UserDefinedTagsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-        "PartClassName": "EmbeddedControlPersistencePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -3076,152 +2802,133 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-        "PartClassName": "CustomXmlPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-        "PartClassName": "VmlDrawingPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
+        "ContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
-        "PartClassName": "EmbeddedControlPersistenceBinaryDataPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
-        "PartClassName": "ThemePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.theme+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.theme+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-        "PartClassName": "SlidePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout",
-        "PartClassName": "SlideLayoutPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-        "PartClassName": "EmbeddedControlPersistencePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
-        "PartClassName": "UserDefinedTagsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -3239,192 +2946,168 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-        "PartClassName": "CustomXmlPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-        "PartClassName": "VmlDrawingPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
+        "ContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
-        "PartClassName": "EmbeddedControlPersistenceBinaryDataPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
-        "PartClassName": "SlideCommentsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.comments+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.comments+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide",
-        "PartClassName": "NotesSlidePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.notesSlide+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.notesSlide+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride",
-        "PartClassName": "ThemeOverridePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.themeOverride+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.themeOverride+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout",
-        "PartClassName": "SlideLayoutPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideUpdateInfo",
-        "PartClassName": "SlideSyncDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slideUpdateInfo+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slideUpdateInfo+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
-        "PartClassName": "UserDefinedTagsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-        "PartClassName": "SlidePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-        "PartClassName": "EmbeddedControlPersistencePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/webextension",
-        "PartClassName": "WebExtensionPart",
-        "PartContentType": "application/vnd.ms-office.webextension+xml",
+        "ContentType": "application/vnd.ms-office.webextension+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2018/10/relationships/comments",
-        "PartClassName": "PowerPointCommentPart",
-        "PartContentType": "application/vnd.ms-powerpoint.comments+xml",
+        "ContentType": "application/vnd.ms-powerpoint.comments+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2021"
@@ -3482,8 +3165,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable",
-        "PartClassName": "QueryTablePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.queryTable+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.queryTable+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -3511,8 +3193,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -3530,8 +3211,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -3599,8 +3279,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/wordVbaData",
-        "PartClassName": "VbaDataPart",
-        "PartContentType": "application/vnd.ms-word.vbaData+xml",
+        "ContentType": "application/vnd.ms-word.vbaData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
@@ -3618,8 +3297,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-        "PartClassName": "SlidePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.slide+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -3637,16 +3315,14 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText",
-        "PartClassName": "LegacyDiagramTextPart",
-        "PartContentType": "application/vnd.ms-office.legacyDiagramText",
+        "ContentType": "application/vnd.ms-office.legacyDiagramText",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -3674,8 +3350,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/webextension",
-        "PartClassName": "WebExtensionPart",
-        "PartContentType": "application/vnd.ms-office.webextension+xml",
+        "ContentType": "application/vnd.ms-office.webextension+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
@@ -3693,8 +3368,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -3742,104 +3416,91 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk",
-        "PartClassName": "AlternativeFormatImportPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-        "PartClassName": "EmbeddedControlPersistencePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
@@ -3857,104 +3518,91 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk",
-        "PartClassName": "AlternativeFormatImportPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-        "PartClassName": "EmbeddedControlPersistencePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
@@ -3972,104 +3620,91 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk",
-        "PartClassName": "AlternativeFormatImportPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-        "PartClassName": "ChartPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-        "PartClassName": "ExtendedChartPart",
-        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "ContentType": "application/vnd.ms-office.chartex+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-        "PartClassName": "DiagramColorsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-        "PartClassName": "DiagramDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-        "PartClassName": "DiagramPersistLayoutPart",
-        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "ContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-        "PartClassName": "DiagramLayoutDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-        "PartClassName": "DiagramStylePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-        "PartClassName": "EmbeddedControlPersistencePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
@@ -4107,264 +3742,231 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-        "PartClassName": "CustomXmlPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain",
-        "PartClassName": "CalculationChainPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.calcChain+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.calcChain+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sheetMetadata",
-        "PartClassName": "CellMetadataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheetMetadata+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheetMetadata+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/connections",
-        "PartClassName": "ConnectionsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.connections+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.connections+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/xmlMaps",
-        "PartClassName": "CustomXmlMappingsPart",
-        "PartContentType": "application/xml",
+        "ContentType": "application/xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings",
-        "PartClassName": "SharedStringTablePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sharedStrings+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sharedStrings+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionHeaders",
-        "PartClassName": "WorkbookRevisionHeaderPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionHeaders+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionHeaders+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/usernames",
-        "PartClassName": "WorkbookUserDataPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.userNames+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.userNames+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles",
-        "PartClassName": "WorkbookStylesPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
-        "PartClassName": "ThemePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.theme+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.theme+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail",
-        "PartClassName": "ThumbnailPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/volatileDependencies",
-        "PartClassName": "VolatileDependenciesPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.volatileDependencies+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.volatileDependencies+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet",
-        "PartClassName": "ChartsheetPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet",
-        "PartClassName": "DialogsheetPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLink",
-        "PartClassName": "ExternalWorkbookPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.externalLink+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.externalLink+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition",
-        "PartClassName": "PivotTableCacheDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet",
-        "PartClassName": "WorksheetPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/attachedToolbars",
-        "PartClassName": "ExcelAttachedToolbarsPart",
-        "PartContentType": "application/vnd.ms-excel.attachedToolbars",
+        "ContentType": "application/vnd.ms-excel.attachedToolbars",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
-        "PartClassName": "VbaProjectPart",
-        "PartContentType": "application/vnd.ms-office.vbaProject",
+        "ContentType": "application/vnd.ms-office.vbaProject",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet",
-        "PartClassName": "MacroSheetPart",
-        "PartContentType": "application/vnd.ms-excel.macrosheet+xml",
+        "ContentType": "application/vnd.ms-excel.macrosheet+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/xlIntlMacrosheet",
-        "PartClassName": "InternationalMacroSheetPart",
-        "PartContentType": "application/vnd.ms-excel.intlmacrosheet+xml",
+        "ContentType": "application/vnd.ms-excel.intlmacrosheet+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/customDataProps",
-        "PartClassName": "CustomDataPropertiesPart",
-        "PartContentType": "application/vnd.ms-excel.customDataProperties+xml",
+        "ContentType": "application/vnd.ms-excel.customDataProperties+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2010"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/slicerCache",
-        "PartClassName": "SlicerCachePart",
-        "PartContentType": "application/vnd.ms-excel.slicerCache+xml",
+        "ContentType": "application/vnd.ms-excel.slicerCache+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2010"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/timelineCache",
-        "PartClassName": "TimeLineCachePart",
-        "PartContentType": "application/vnd.ms-excel.timelineCache+xml",
+        "ContentType": "application/vnd.ms-excel.timelineCache+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/10/relationships/person",
-        "PartClassName": "WorkbookPersonPart",
-        "PartContentType": "application/vnd.ms-excel.person+xml",
+        "ContentType": "application/vnd.ms-excel.person+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValue",
-        "PartClassName": "RdRichValuePart",
-        "PartContentType": "application/vnd.ms-excel.rdrichvalue+xml",
+        "ContentType": "application/vnd.ms-excel.rdrichvalue+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueStructure",
-        "PartClassName": "RdRichValueStructurePart",
-        "PartContentType": "application/vnd.ms-excel.rdrichvaluestructure+xml",
+        "ContentType": "application/vnd.ms-excel.rdrichvaluestructure+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdArray",
-        "PartClassName": "RdArrayPart",
-        "PartContentType": "application/vnd.ms-excel.rdarray+xml",
+        "ContentType": "application/vnd.ms-excel.rdarray+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/richStyles",
-        "PartClassName": "RichStylesPart",
-        "PartContentType": "application/vnd.ms-excel.richstyles+xml",
+        "ContentType": "application/vnd.ms-excel.richstyles+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBag",
-        "PartClassName": "RdSupportingPropertyBagPart",
-        "PartContentType": "application/vnd.ms-excel.rdsupportingpropertybag+xml",
+        "ContentType": "application/vnd.ms-excel.rdsupportingpropertybag+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBagStructure",
-        "PartClassName": "RdSupportingPropertyBagStructurePart",
-        "PartContentType": "application/vnd.ms-excel.rdsupportingpropertybagstructure+xml",
+        "ContentType": "application/vnd.ms-excel.rdsupportingpropertybagstructure+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueTypes",
-        "PartClassName": "RdRichValueTypesPart",
-        "PartContentType": "application/vnd.ms-excel.rdrichvaluetypes+xml",
+        "ContentType": "application/vnd.ms-excel.rdrichvaluetypes+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage",
-        "PartClassName": "RdRichValueWebImagePart",
-        "PartContentType": "application/vnd.ms-excel.rdrichvaluewebimage+xml",
+        "ContentType": "application/vnd.ms-excel.rdrichvaluewebimage+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2021"
@@ -4392,8 +3994,7 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionLog",
-        "PartClassName": "WorkbookRevisionLogPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionLog+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionLog+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
@@ -4451,168 +4052,147 @@
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-        "PartClassName": "SpreadsheetPrinterSettingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing",
-        "PartClassName": "DrawingsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.drawing+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.drawing+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-        "PartClassName": "VmlDrawingPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
+        "ContentType": "application/vnd.openxmlformats-officedocument.vmlDrawing",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
-        "PartClassName": "WorksheetCommentsPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable",
-        "PartClassName": "PivotTablePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotTable+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotTable+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableSingleCells",
-        "PartClassName": "SingleCellTablePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.tableSingleCells+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.tableSingleCells+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table",
-        "PartClassName": "TableDefinitionPart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.table+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.table+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-        "PartClassName": "EmbeddedControlPersistencePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp",
-        "PartClassName": "ControlPropertiesPart",
-        "PartContentType": "application/vnd.ms-excel.controlproperties+xml",
+        "ContentType": "application/vnd.ms-excel.controlproperties+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2010"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-        "PartClassName": "EmbeddedObjectPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-        "PartClassName": "EmbeddedPackagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-        "PartClassName": "ImagePart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty",
-        "PartClassName": "CustomPropertyPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/wsSortMap",
-        "PartClassName": "WorksheetSortMapPart",
-        "PartContentType": "application/vnd.ms-excel.wsSortMap+xml",
+        "ContentType": "application/vnd.ms-excel.wsSortMap+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable",
-        "PartClassName": "QueryTablePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.queryTable+xml",
+        "ContentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.queryTable+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
-        "PartClassName": "EmbeddedControlPersistenceBinaryDataPart",
-        "PartContentType": null,
+        "ContentType": null,
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2007/relationships/slicer",
-        "PartClassName": "SlicersPart",
-        "PartContentType": "application/vnd.ms-excel.slicer+xml",
+        "ContentType": "application/vnd.ms-excel.slicer+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2010"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/timeline",
-        "PartClassName": "TimeLinePart",
-        "PartContentType": "application/vnd.ms-excel.timeline+xml",
+        "ContentType": "application/vnd.ms-excel.timeline+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment",
-        "PartClassName": "WorksheetThreadedCommentsPart",
-        "PartContentType": "application/vnd.ms-excel.threadedcomments+xml",
+        "ContentType": "application/vnd.ms-excel.threadedcomments+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
-        "PartClassName": "Model3DReferenceRelationshipPart",
-        "PartContentType": "model/gltf-binary",
+        "ContentType": "model/gltf-binary",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
       {
         "RelationshipType": "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView",
-        "PartClassName": "NamedSheetViewsPart",
-        "PartContentType": "application/vnd.ms-excel.namedsheetviews+xml",
+        "ContentType": "application/vnd.ms-excel.namedsheetviews+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2021"

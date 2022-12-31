@@ -133,9 +133,9 @@ namespace DocumentFormat.OpenXml.Validation
                             if (version.AtLeast(rule.FileFormat))
                             {
                                 // validate content type
-                                if (rule.PartContentType is not null && part.ContentType != rule.PartContentType)
+                                if (rule.ContentType is not null && part.ContentType != rule.ContentType)
                                 {
-                                    var message = SR.Format(ExceptionMessages.InvalidContentTypePart, rule.PartContentType);
+                                    var message = SR.Format(ExceptionMessages.InvalidContentTypePart, rule.ContentType);
 
                                     yield return new OpenXmlPackageValidationResult
                                     {
