@@ -6,8 +6,6 @@ using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 
-#pragma warning disable 0618 // CS0618: A class member was marked with the Obsolete attribute, such that a warning will be issued when the class member is referenced.
-
 namespace DocumentFormat.OpenXml.Validation
 {
     /// <summary>
