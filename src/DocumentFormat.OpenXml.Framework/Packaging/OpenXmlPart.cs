@@ -8,12 +8,6 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
-using System.Xml;
-
-#if FEATURE_XML_SCHEMA
-using System.ComponentModel;
-using System.Xml.Schema;
-#endif
 
 namespace DocumentFormat.OpenXml.Packaging
 {
