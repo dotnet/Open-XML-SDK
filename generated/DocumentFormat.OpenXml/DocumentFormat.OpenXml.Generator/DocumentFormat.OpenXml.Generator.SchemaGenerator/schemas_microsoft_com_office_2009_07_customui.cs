@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -24,7 +22,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:control.</para>
     /// </summary>
-    [SchemaAttr("mso14:control")]
     public partial class ControlCloneRegular : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -38,7 +35,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -49,7 +45,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -60,7 +55,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -71,7 +65,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -82,7 +75,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -93,7 +85,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -104,7 +95,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -115,7 +105,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -126,7 +115,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -137,7 +125,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -148,7 +135,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -159,7 +145,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -170,7 +155,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -181,7 +165,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -192,7 +175,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -203,7 +185,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -214,7 +195,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -225,7 +205,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -236,7 +215,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -247,7 +225,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -258,7 +235,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -269,7 +245,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -280,7 +255,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -291,7 +265,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -302,7 +275,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -313,7 +285,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -430,7 +401,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr("mso14:button")]
     public partial class ButtonRegular : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -444,7 +414,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -455,7 +424,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -466,7 +434,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -477,7 +444,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -488,7 +454,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -499,7 +464,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -510,7 +474,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -521,7 +484,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -532,7 +494,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -543,7 +504,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -554,7 +514,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -565,7 +524,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -576,7 +534,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -587,7 +544,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -598,7 +554,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -609,7 +564,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -620,7 +574,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -631,7 +584,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -642,7 +594,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -653,7 +604,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -664,7 +614,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -675,7 +624,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -686,7 +634,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -697,7 +644,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -708,7 +654,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -719,7 +664,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -730,7 +674,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -741,7 +684,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -752,7 +694,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -763,7 +704,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -897,7 +837,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:checkBox.</para>
     /// </summary>
-    [SchemaAttr("mso14:checkBox")]
     public partial class CheckBox : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -911,7 +850,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getPressed, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [SchemaAttr("getPressed")]
         public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -922,7 +860,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -933,7 +870,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -944,7 +880,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -955,7 +890,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -966,7 +900,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -977,7 +910,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -988,7 +920,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -999,7 +930,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -1010,7 +940,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -1021,7 +950,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -1032,7 +960,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -1043,7 +970,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -1054,7 +980,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -1065,7 +990,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -1076,7 +1000,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -1087,7 +1010,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -1098,7 +1020,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -1109,7 +1030,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -1120,7 +1040,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -1131,7 +1050,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -1142,7 +1060,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -1153,7 +1070,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -1164,7 +1080,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -1285,7 +1200,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:gallery")]
     public partial class GalleryRegular : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1323,7 +1237,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -1334,7 +1247,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -1345,7 +1257,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>invalidateContentOnDrop, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr("invalidateContentOnDrop")]
         public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -1356,7 +1267,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>columns, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
-        [SchemaAttr("columns")]
         public IntegerValue? Columns
         {
             get => GetAttribute<IntegerValue>();
@@ -1367,7 +1277,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>rows, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
-        [SchemaAttr("rows")]
         public IntegerValue? Rows
         {
             get => GetAttribute<IntegerValue>();
@@ -1378,7 +1287,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>itemWidth, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
-        [SchemaAttr("itemWidth")]
         public IntegerValue? ItemWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -1389,7 +1297,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>itemHeight, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
-        [SchemaAttr("itemHeight")]
         public IntegerValue? ItemHeight
         {
             get => GetAttribute<IntegerValue>();
@@ -1400,7 +1307,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemWidth, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
-        [SchemaAttr("getItemWidth")]
         public StringValue? GetItemWidth
         {
             get => GetAttribute<StringValue>();
@@ -1411,7 +1317,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemHeight, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
-        [SchemaAttr("getItemHeight")]
         public StringValue? GetItemHeight
         {
             get => GetAttribute<StringValue>();
@@ -1422,7 +1327,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showItemLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        [SchemaAttr("showItemLabel")]
         public BooleanValue? ShowItemLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -1433,7 +1337,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showInRibbon, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showInRibbon</para>
         /// </summary>
-        [SchemaAttr("showInRibbon")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>? ShowInRibbon
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>>();
@@ -1444,7 +1347,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -1455,7 +1357,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -1466,7 +1367,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -1477,7 +1377,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -1488,7 +1387,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -1499,7 +1397,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -1510,7 +1407,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showItemImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        [SchemaAttr("showItemImage")]
         public BooleanValue? ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
@@ -1521,7 +1417,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [SchemaAttr("getItemCount")]
         public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -1532,7 +1427,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [SchemaAttr("getItemLabel")]
         public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -1543,7 +1437,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        [SchemaAttr("getItemScreentip")]
         public StringValue? GetItemScreentip
         {
             get => GetAttribute<StringValue>();
@@ -1554,7 +1447,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        [SchemaAttr("getItemSupertip")]
         public StringValue? GetItemSupertip
         {
             get => GetAttribute<StringValue>();
@@ -1565,7 +1457,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        [SchemaAttr("getItemImage")]
         public StringValue? GetItemImage
         {
             get => GetAttribute<StringValue>();
@@ -1576,7 +1467,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemID, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [SchemaAttr("getItemID")]
         public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -1587,7 +1477,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>sizeString, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [SchemaAttr("sizeString")]
         public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
@@ -1598,7 +1487,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSelectedItemID, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemID")]
         public StringValue? GetSelectedItemID
         {
             get => GetAttribute<StringValue>();
@@ -1609,7 +1497,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSelectedItemIndex, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemIndex")]
         public StringValue? GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
@@ -1620,7 +1507,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1631,7 +1517,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -1642,7 +1527,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -1653,7 +1537,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -1664,7 +1547,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -1675,7 +1557,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -1686,7 +1567,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -1697,7 +1577,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -1708,7 +1587,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -1719,7 +1597,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -1730,7 +1607,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -1741,7 +1617,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -1752,7 +1627,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -1763,7 +1637,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -1774,7 +1647,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -1785,7 +1657,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -1796,7 +1667,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -1807,7 +1677,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -1818,7 +1687,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -1829,7 +1697,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -1840,7 +1707,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -1851,7 +1717,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -2060,7 +1925,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
-    [SchemaAttr("mso14:toggleButton")]
     public partial class ToggleButtonRegular : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2074,7 +1938,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getPressed, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [SchemaAttr("getPressed")]
         public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -2085,7 +1948,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -2096,7 +1958,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -2107,7 +1968,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -2118,7 +1978,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -2129,7 +1988,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -2140,7 +1998,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -2151,7 +2008,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -2162,7 +2018,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -2173,7 +2028,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2184,7 +2038,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2195,7 +2048,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -2206,7 +2058,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -2217,7 +2068,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -2228,7 +2078,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -2239,7 +2088,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -2250,7 +2098,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -2261,7 +2108,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -2272,7 +2118,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -2283,7 +2128,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -2294,7 +2138,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -2305,7 +2148,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2316,7 +2158,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2327,7 +2168,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -2338,7 +2178,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -2349,7 +2188,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -2360,7 +2198,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -2371,7 +2208,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -2382,7 +2218,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -2393,7 +2228,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -2404,7 +2238,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -2540,7 +2373,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menuSeparator.</para>
     /// </summary>
-    [SchemaAttr("mso14:menuSeparator")]
     public partial class MenuSeparator : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2554,7 +2386,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2565,7 +2396,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2576,7 +2406,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -2587,7 +2416,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -2598,7 +2426,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -2609,7 +2436,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2620,7 +2446,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2631,7 +2456,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>title, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -2642,7 +2466,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getTitle, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        [SchemaAttr("getTitle")]
         public StringValue? GetTitle
         {
             get => GetAttribute<StringValue>();
@@ -2710,7 +2533,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:splitButton")]
     public partial class SplitButtonRegular : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2748,7 +2570,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -2759,7 +2580,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -2770,7 +2590,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2781,7 +2600,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2792,7 +2610,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -2803,7 +2620,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -2814,7 +2630,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -2825,7 +2640,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -2836,7 +2650,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2847,7 +2660,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2858,7 +2670,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -2869,7 +2680,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -2880,7 +2690,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -2891,7 +2700,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -2902,7 +2710,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -2913,7 +2720,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -3021,7 +2827,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:menu")]
     public partial class MenuRegular : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3059,7 +2864,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>itemSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        [SchemaAttr("itemSize")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
@@ -3070,7 +2874,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -3081,7 +2884,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -3092,7 +2894,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -3103,7 +2904,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3114,7 +2914,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -3125,7 +2924,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -3136,7 +2934,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -3147,7 +2944,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -3158,7 +2954,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -3169,7 +2964,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -3180,7 +2974,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -3191,7 +2984,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -3202,7 +2994,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -3213,7 +3004,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -3224,7 +3014,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -3235,7 +3024,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -3246,7 +3034,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -3257,7 +3044,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -3268,7 +3054,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -3279,7 +3064,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3290,7 +3074,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3301,7 +3084,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -3312,7 +3094,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -3323,7 +3104,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -3334,7 +3114,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -3345,7 +3124,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -3356,7 +3134,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -3367,7 +3144,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -3378,7 +3154,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -3546,7 +3321,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:dynamicMenu.</para>
     /// </summary>
-    [SchemaAttr("mso14:dynamicMenu")]
     public partial class DynamicMenuRegular : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3560,7 +3334,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -3571,7 +3344,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -3582,7 +3354,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -3593,7 +3364,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3604,7 +3374,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -3615,7 +3384,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -3626,7 +3394,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getContent, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
-        [SchemaAttr("getContent")]
         public StringValue? GetContent
         {
             get => GetAttribute<StringValue>();
@@ -3637,7 +3404,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>invalidateContentOnDrop, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr("invalidateContentOnDrop")]
         public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -3648,7 +3414,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -3659,7 +3424,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -3670,7 +3434,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -3681,7 +3444,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -3692,7 +3454,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -3703,7 +3464,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -3714,7 +3474,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -3725,7 +3484,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -3736,7 +3494,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -3747,7 +3504,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -3758,7 +3514,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -3769,7 +3524,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -3780,7 +3534,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -3791,7 +3544,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3802,7 +3554,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3813,7 +3564,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -3824,7 +3574,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -3835,7 +3584,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -3846,7 +3594,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -3857,7 +3604,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -3868,7 +3614,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -3879,7 +3624,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -3890,7 +3634,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -4032,7 +3775,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:splitButton")]
     public partial class SplitButtonWithTitle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4070,7 +3812,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -4081,7 +3822,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -4092,7 +3832,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -4103,7 +3842,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4114,7 +3852,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -4125,7 +3862,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -4136,7 +3872,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -4147,7 +3882,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -4158,7 +3892,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4169,7 +3902,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4180,7 +3912,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -4191,7 +3922,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -4202,7 +3932,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -4213,7 +3942,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -4224,7 +3952,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -4235,7 +3962,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -4343,7 +4069,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:menu")]
     public partial class MenuWithTitle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4381,7 +4106,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -4392,7 +4116,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4403,7 +4126,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -4414,7 +4136,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -4425,7 +4146,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>itemSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        [SchemaAttr("itemSize")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
@@ -4436,7 +4156,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>title, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -4447,7 +4166,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getTitle, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        [SchemaAttr("getTitle")]
         public StringValue? GetTitle
         {
             get => GetAttribute<StringValue>();
@@ -4458,7 +4176,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -4469,7 +4186,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -4480,7 +4196,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -4491,7 +4206,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -4502,7 +4216,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -4513,7 +4226,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -4524,7 +4236,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -4535,7 +4246,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -4546,7 +4256,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -4557,7 +4266,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -4568,7 +4276,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -4579,7 +4286,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -4590,7 +4296,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -4601,7 +4306,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4612,7 +4316,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4623,7 +4326,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -4634,7 +4336,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -4645,7 +4346,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -4656,7 +4356,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -4667,7 +4366,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -4678,7 +4376,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -4689,7 +4386,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -4700,7 +4396,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -4868,7 +4563,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menuSeparator.</para>
     /// </summary>
-    [SchemaAttr("mso14:menuSeparator")]
     public partial class MenuSeparatorNoTitle : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4882,7 +4576,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -4893,7 +4586,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4904,7 +4596,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -4915,7 +4606,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -4926,7 +4616,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -4937,7 +4626,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4948,7 +4636,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5000,7 +4687,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:control.</para>
     /// </summary>
-    [SchemaAttr("mso14:control")]
     public partial class ControlClone : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5014,7 +4700,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -5025,7 +4710,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -5036,7 +4720,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -5047,7 +4730,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -5058,7 +4740,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -5069,7 +4750,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -5080,7 +4760,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -5091,7 +4770,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -5102,7 +4780,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -5113,7 +4790,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5124,7 +4800,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -5135,7 +4810,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -5146,7 +4820,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -5157,7 +4830,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -5168,7 +4840,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -5179,7 +4850,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -5190,7 +4860,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -5201,7 +4870,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -5212,7 +4880,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -5223,7 +4890,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -5234,7 +4900,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5245,7 +4910,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5256,7 +4920,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -5267,7 +4930,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -5278,7 +4940,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -5289,7 +4950,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -5300,7 +4960,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -5311,7 +4970,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -5322,7 +4980,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -5333,7 +4990,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -5463,7 +5119,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:labelControl.</para>
     /// </summary>
-    [SchemaAttr("mso14:labelControl")]
     public partial class LabelControl : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5477,7 +5132,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -5488,7 +5142,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5499,7 +5152,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -5510,7 +5162,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -5521,7 +5172,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -5532,7 +5182,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -5543,7 +5192,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -5554,7 +5202,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -5565,7 +5212,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -5576,7 +5222,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -5587,7 +5232,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -5598,7 +5242,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -5609,7 +5252,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -5620,7 +5262,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -5631,7 +5272,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5642,7 +5282,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5653,7 +5292,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -5664,7 +5302,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -5675,7 +5312,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -5686,7 +5322,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -5781,7 +5416,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr("mso14:button")]
     public partial class Button : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5795,7 +5429,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -5806,7 +5439,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -5817,7 +5449,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -5828,7 +5459,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -5839,7 +5469,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -5850,7 +5479,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -5861,7 +5489,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -5872,7 +5499,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -5883,7 +5509,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -5894,7 +5519,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -5905,7 +5529,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -5916,7 +5539,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5927,7 +5549,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -5938,7 +5559,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -5949,7 +5569,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -5960,7 +5579,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -5971,7 +5589,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -5982,7 +5599,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -5993,7 +5609,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -6004,7 +5619,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -6015,7 +5629,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -6026,7 +5639,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -6037,7 +5649,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -6048,7 +5659,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -6059,7 +5669,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -6070,7 +5679,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -6081,7 +5689,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -6092,7 +5699,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -6103,7 +5709,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -6114,7 +5719,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -6125,7 +5729,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -6136,7 +5739,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -6275,7 +5877,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
-    [SchemaAttr("mso14:toggleButton")]
     public partial class ToggleButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6289,7 +5890,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -6300,7 +5900,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -6311,7 +5910,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getPressed, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [SchemaAttr("getPressed")]
         public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -6322,7 +5920,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -6333,7 +5930,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -6344,7 +5940,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -6355,7 +5950,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -6366,7 +5960,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -6377,7 +5970,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -6388,7 +5980,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -6399,7 +5990,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -6410,7 +6000,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -6421,7 +6010,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -6432,7 +6020,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -6443,7 +6030,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -6454,7 +6040,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -6465,7 +6050,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -6476,7 +6060,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -6487,7 +6070,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -6498,7 +6080,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -6509,7 +6090,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -6520,7 +6100,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -6531,7 +6110,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -6542,7 +6120,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -6553,7 +6130,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -6564,7 +6140,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -6575,7 +6150,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -6586,7 +6160,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -6597,7 +6170,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -6608,7 +6180,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -6619,7 +6190,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -6630,7 +6200,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -6641,7 +6210,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -6782,7 +6350,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:editBox.</para>
     /// </summary>
-    [SchemaAttr("mso14:editBox")]
     public partial class EditBox : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6796,7 +6363,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -6807,7 +6373,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -6818,7 +6383,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -6829,7 +6393,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -6840,7 +6403,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -6851,7 +6413,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>maxLength, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        [SchemaAttr("maxLength")]
         public IntegerValue? MaxLength
         {
             get => GetAttribute<IntegerValue>();
@@ -6862,7 +6423,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        [SchemaAttr("getText")]
         public StringValue? GetText
         {
             get => GetAttribute<StringValue>();
@@ -6873,7 +6433,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onChange, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        [SchemaAttr("onChange")]
         public StringValue? OnChange
         {
             get => GetAttribute<StringValue>();
@@ -6884,7 +6443,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>sizeString, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [SchemaAttr("sizeString")]
         public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
@@ -6895,7 +6453,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -6906,7 +6463,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -6917,7 +6473,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -6928,7 +6483,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -6939,7 +6493,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -6950,7 +6503,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -6961,7 +6513,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -6972,7 +6523,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -6983,7 +6533,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -6994,7 +6543,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -7005,7 +6553,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -7016,7 +6563,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -7027,7 +6573,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -7038,7 +6583,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -7049,7 +6593,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -7060,7 +6603,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -7071,7 +6613,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -7082,7 +6623,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -7093,7 +6633,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -7104,7 +6643,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -7115,7 +6653,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -7126,7 +6663,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -7268,7 +6804,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:comboBox")]
     public partial class ComboBox : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7306,7 +6841,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showItemImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        [SchemaAttr("showItemImage")]
         public BooleanValue? ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
@@ -7317,7 +6851,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [SchemaAttr("getItemCount")]
         public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -7328,7 +6861,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [SchemaAttr("getItemLabel")]
         public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -7339,7 +6871,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        [SchemaAttr("getItemScreentip")]
         public StringValue? GetItemScreentip
         {
             get => GetAttribute<StringValue>();
@@ -7350,7 +6881,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        [SchemaAttr("getItemSupertip")]
         public StringValue? GetItemSupertip
         {
             get => GetAttribute<StringValue>();
@@ -7361,7 +6891,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        [SchemaAttr("getItemImage")]
         public StringValue? GetItemImage
         {
             get => GetAttribute<StringValue>();
@@ -7372,7 +6901,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemID, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [SchemaAttr("getItemID")]
         public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -7383,7 +6911,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>sizeString, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [SchemaAttr("sizeString")]
         public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
@@ -7394,7 +6921,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>invalidateContentOnDrop, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr("invalidateContentOnDrop")]
         public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -7405,7 +6931,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -7416,7 +6941,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -7427,7 +6951,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -7438,7 +6961,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -7449,7 +6971,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -7460,7 +6981,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>maxLength, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        [SchemaAttr("maxLength")]
         public IntegerValue? MaxLength
         {
             get => GetAttribute<IntegerValue>();
@@ -7471,7 +6991,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        [SchemaAttr("getText")]
         public StringValue? GetText
         {
             get => GetAttribute<StringValue>();
@@ -7482,7 +7001,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onChange, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        [SchemaAttr("onChange")]
         public StringValue? OnChange
         {
             get => GetAttribute<StringValue>();
@@ -7493,7 +7011,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -7504,7 +7021,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -7515,7 +7031,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -7526,7 +7041,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -7537,7 +7051,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -7548,7 +7061,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -7559,7 +7071,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -7570,7 +7081,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -7581,7 +7091,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -7592,7 +7101,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -7603,7 +7111,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -7614,7 +7121,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -7625,7 +7131,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -7636,7 +7141,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -7647,7 +7151,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -7658,7 +7161,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -7669,7 +7171,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -7680,7 +7181,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -7691,7 +7191,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -7702,7 +7201,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -7713,7 +7211,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -7724,7 +7221,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -7901,7 +7397,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:dropDown")]
     public partial class DropDownRegular : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7939,7 +7434,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -7950,7 +7444,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -7961,7 +7454,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -7972,7 +7464,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -7983,7 +7474,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -7994,7 +7484,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -8005,7 +7494,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showItemImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        [SchemaAttr("showItemImage")]
         public BooleanValue? ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
@@ -8016,7 +7504,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [SchemaAttr("getItemCount")]
         public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -8027,7 +7514,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [SchemaAttr("getItemLabel")]
         public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -8038,7 +7524,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        [SchemaAttr("getItemScreentip")]
         public StringValue? GetItemScreentip
         {
             get => GetAttribute<StringValue>();
@@ -8049,7 +7534,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        [SchemaAttr("getItemSupertip")]
         public StringValue? GetItemSupertip
         {
             get => GetAttribute<StringValue>();
@@ -8060,7 +7544,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        [SchemaAttr("getItemImage")]
         public StringValue? GetItemImage
         {
             get => GetAttribute<StringValue>();
@@ -8071,7 +7554,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemID, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [SchemaAttr("getItemID")]
         public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -8082,7 +7564,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>sizeString, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [SchemaAttr("sizeString")]
         public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
@@ -8093,7 +7574,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSelectedItemID, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemID")]
         public StringValue? GetSelectedItemID
         {
             get => GetAttribute<StringValue>();
@@ -8104,7 +7584,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSelectedItemIndex, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemIndex")]
         public StringValue? GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
@@ -8115,7 +7594,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showItemLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        [SchemaAttr("showItemLabel")]
         public BooleanValue? ShowItemLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -8126,7 +7604,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -8137,7 +7614,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -8148,7 +7624,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -8159,7 +7634,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -8170,7 +7644,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -8181,7 +7654,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -8192,7 +7664,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -8203,7 +7674,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -8214,7 +7684,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -8225,7 +7694,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -8236,7 +7704,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -8247,7 +7714,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -8258,7 +7724,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -8269,7 +7734,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -8280,7 +7744,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -8291,7 +7754,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -8302,7 +7764,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -8313,7 +7774,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -8324,7 +7784,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -8335,7 +7794,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -8346,7 +7804,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -8357,7 +7814,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -8536,7 +7992,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:gallery")]
     public partial class Gallery : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8574,7 +8029,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -8585,7 +8039,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -8596,7 +8049,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -8607,7 +8059,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -8618,7 +8069,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>invalidateContentOnDrop, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr("invalidateContentOnDrop")]
         public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -8629,7 +8079,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>columns, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
-        [SchemaAttr("columns")]
         public IntegerValue? Columns
         {
             get => GetAttribute<IntegerValue>();
@@ -8640,7 +8089,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>rows, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
-        [SchemaAttr("rows")]
         public IntegerValue? Rows
         {
             get => GetAttribute<IntegerValue>();
@@ -8651,7 +8099,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>itemWidth, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
-        [SchemaAttr("itemWidth")]
         public IntegerValue? ItemWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -8662,7 +8109,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>itemHeight, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
-        [SchemaAttr("itemHeight")]
         public IntegerValue? ItemHeight
         {
             get => GetAttribute<IntegerValue>();
@@ -8673,7 +8119,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemWidth, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
-        [SchemaAttr("getItemWidth")]
         public StringValue? GetItemWidth
         {
             get => GetAttribute<StringValue>();
@@ -8684,7 +8129,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemHeight, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
-        [SchemaAttr("getItemHeight")]
         public StringValue? GetItemHeight
         {
             get => GetAttribute<StringValue>();
@@ -8695,7 +8139,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showItemLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        [SchemaAttr("showItemLabel")]
         public BooleanValue? ShowItemLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -8706,7 +8149,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showInRibbon, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showInRibbon</para>
         /// </summary>
-        [SchemaAttr("showInRibbon")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>? ShowInRibbon
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>>();
@@ -8717,7 +8159,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -8728,7 +8169,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -8739,7 +8179,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -8750,7 +8189,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -8761,7 +8199,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -8772,7 +8209,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -8783,7 +8219,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showItemImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        [SchemaAttr("showItemImage")]
         public BooleanValue? ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
@@ -8794,7 +8229,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [SchemaAttr("getItemCount")]
         public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -8805,7 +8239,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [SchemaAttr("getItemLabel")]
         public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -8816,7 +8249,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        [SchemaAttr("getItemScreentip")]
         public StringValue? GetItemScreentip
         {
             get => GetAttribute<StringValue>();
@@ -8827,7 +8259,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        [SchemaAttr("getItemSupertip")]
         public StringValue? GetItemSupertip
         {
             get => GetAttribute<StringValue>();
@@ -8838,7 +8269,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        [SchemaAttr("getItemImage")]
         public StringValue? GetItemImage
         {
             get => GetAttribute<StringValue>();
@@ -8849,7 +8279,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemID, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [SchemaAttr("getItemID")]
         public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -8860,7 +8289,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>sizeString, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [SchemaAttr("sizeString")]
         public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
@@ -8871,7 +8299,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSelectedItemID, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemID")]
         public StringValue? GetSelectedItemID
         {
             get => GetAttribute<StringValue>();
@@ -8882,7 +8309,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSelectedItemIndex, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemIndex")]
         public StringValue? GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
@@ -8893,7 +8319,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -8904,7 +8329,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -8915,7 +8339,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -8926,7 +8349,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -8937,7 +8359,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -8948,7 +8369,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -8959,7 +8379,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -8970,7 +8389,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -8981,7 +8399,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -8992,7 +8409,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -9003,7 +8419,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -9014,7 +8429,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -9025,7 +8439,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9036,7 +8449,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9047,7 +8459,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -9058,7 +8469,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -9069,7 +8479,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -9080,7 +8489,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -9091,7 +8499,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -9102,7 +8509,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -9113,7 +8519,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -9124,7 +8529,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -9355,7 +8759,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:menu")]
     public partial class Menu : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9393,7 +8796,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -9404,7 +8806,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -9415,7 +8816,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>itemSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        [SchemaAttr("itemSize")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
@@ -9426,7 +8826,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -9437,7 +8836,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -9448,7 +8846,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -9459,7 +8856,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9470,7 +8866,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -9481,7 +8876,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -9492,7 +8886,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -9503,7 +8896,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -9514,7 +8906,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -9525,7 +8916,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -9536,7 +8926,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -9547,7 +8936,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -9558,7 +8946,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -9569,7 +8956,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -9580,7 +8966,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -9591,7 +8976,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -9602,7 +8986,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -9613,7 +8996,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -9624,7 +9006,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -9635,7 +9016,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9646,7 +9026,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9657,7 +9036,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -9668,7 +9046,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -9679,7 +9056,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -9690,7 +9066,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -9701,7 +9076,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -9712,7 +9086,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -9723,7 +9096,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -9734,7 +9106,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -9910,7 +9281,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:dynamicMenu.</para>
     /// </summary>
-    [SchemaAttr("mso14:dynamicMenu")]
     public partial class DynamicMenu : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -9924,7 +9294,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -9935,7 +9304,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -9946,7 +9314,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -9957,7 +9324,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -9968,7 +9334,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -9979,7 +9344,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9990,7 +9354,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -10001,7 +9364,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -10012,7 +9374,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getContent, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
-        [SchemaAttr("getContent")]
         public StringValue? GetContent
         {
             get => GetAttribute<StringValue>();
@@ -10023,7 +9384,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>invalidateContentOnDrop, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr("invalidateContentOnDrop")]
         public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -10034,7 +9394,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -10045,7 +9404,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -10056,7 +9414,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -10067,7 +9424,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -10078,7 +9434,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -10089,7 +9444,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -10100,7 +9454,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -10111,7 +9464,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -10122,7 +9474,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -10133,7 +9484,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -10144,7 +9494,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -10155,7 +9504,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -10166,7 +9514,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -10177,7 +9524,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10188,7 +9534,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10199,7 +9544,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -10210,7 +9554,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -10221,7 +9564,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -10232,7 +9574,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -10243,7 +9584,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -10254,7 +9594,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -10265,7 +9604,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -10276,7 +9614,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -10423,7 +9760,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:splitButton")]
     public partial class SplitButton : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10461,7 +9797,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -10472,7 +9807,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -10483,7 +9817,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -10494,7 +9827,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -10505,7 +9837,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -10516,7 +9847,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10527,7 +9857,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -10538,7 +9867,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -10549,7 +9877,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -10560,7 +9887,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -10571,7 +9897,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10582,7 +9907,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10593,7 +9917,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -10604,7 +9927,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -10615,7 +9937,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -10626,7 +9947,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -10637,7 +9957,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -10648,7 +9967,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -10769,7 +10087,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:box")]
     public partial class Box : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10807,7 +10124,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -10818,7 +10134,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10829,7 +10144,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -10840,7 +10154,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -10851,7 +10164,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -10862,7 +10174,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -10873,7 +10184,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -10884,7 +10194,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10895,7 +10204,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10906,7 +10214,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>boxStyle, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: boxStyle</para>
         /// </summary>
-        [SchemaAttr("boxStyle")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues>? BoxStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues>>();
@@ -11011,7 +10318,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:buttonGroup")]
     public partial class ButtonGroup : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -11049,7 +10355,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -11060,7 +10365,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -11071,7 +10375,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -11082,7 +10385,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -11093,7 +10395,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -11104,7 +10405,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -11115,7 +10415,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -11126,7 +10425,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -11137,7 +10435,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -11216,7 +10513,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr("mso14:button")]
     public partial class BackstageMenuButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -11230,7 +10526,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -11241,7 +10536,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -11252,7 +10546,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -11263,7 +10556,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -11274,7 +10566,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -11285,7 +10576,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -11296,7 +10586,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>isDefinitive, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
-        [SchemaAttr("isDefinitive")]
         public BooleanValue? IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
@@ -11307,7 +10596,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -11318,7 +10606,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -11329,7 +10616,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -11340,7 +10626,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -11351,7 +10636,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -11362,7 +10646,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -11373,7 +10656,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -11384,7 +10666,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -11395,7 +10676,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -11406,7 +10686,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -11417,7 +10696,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -11506,7 +10784,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:checkBox.</para>
     /// </summary>
-    [SchemaAttr("mso14:checkBox")]
     public partial class BackstageMenuCheckBox : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -11520,7 +10797,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -11531,7 +10807,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -11542,7 +10817,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -11553,7 +10827,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -11564,7 +10837,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -11575,7 +10847,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -11586,7 +10857,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getPressed, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [SchemaAttr("getPressed")]
         public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -11597,7 +10867,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -11608,7 +10877,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -11619,7 +10887,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -11630,7 +10897,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -11641,7 +10907,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -11652,7 +10917,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -11663,7 +10927,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -11674,7 +10937,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -11758,7 +11020,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup" /> <c>&lt;mso14:menuGroup></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:menu")]
     public partial class BackstageSubMenu : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -11796,7 +11057,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -11807,7 +11067,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -11818,7 +11077,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -11829,7 +11087,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -11840,7 +11097,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -11851,7 +11107,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -11862,7 +11117,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -11873,7 +11127,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -11884,7 +11137,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -11895,7 +11147,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -11906,7 +11157,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -11917,7 +11167,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -11928,7 +11177,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -11939,7 +11187,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -11950,7 +11197,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -11961,7 +11207,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -12054,7 +11299,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
-    [SchemaAttr("mso14:toggleButton")]
     public partial class BackstageMenuToggleButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -12068,7 +11312,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -12079,7 +11322,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -12090,7 +11332,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -12101,7 +11342,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -12112,7 +11352,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -12123,7 +11362,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -12134,7 +11372,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -12145,7 +11382,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -12156,7 +11392,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -12167,7 +11402,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getPressed, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [SchemaAttr("getPressed")]
         public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -12178,7 +11412,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -12189,7 +11422,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -12200,7 +11432,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -12211,7 +11442,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -12222,7 +11452,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -12233,7 +11462,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -12244,7 +11472,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -12255,7 +11482,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -12345,7 +11571,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr("mso14:button")]
     public partial class BackstageGroupButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -12359,7 +11584,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>expand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        [SchemaAttr("expand")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -12370,7 +11594,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>style, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr("style")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values>? Style
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values>>();
@@ -12381,7 +11604,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -12392,7 +11614,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -12403,7 +11624,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -12414,7 +11634,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -12425,7 +11644,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -12436,7 +11654,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -12447,7 +11664,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -12458,7 +11674,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -12469,7 +11684,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>isDefinitive, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
-        [SchemaAttr("isDefinitive")]
         public BooleanValue? IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
@@ -12480,7 +11694,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -12491,7 +11704,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -12502,7 +11714,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -12513,7 +11724,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -12524,7 +11734,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -12535,7 +11744,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -12546,7 +11754,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -12557,7 +11764,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -12568,7 +11774,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -12579,7 +11784,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -12590,7 +11794,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -12689,7 +11892,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:checkBox.</para>
     /// </summary>
-    [SchemaAttr("mso14:checkBox")]
     public partial class BackstageCheckBox : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -12703,7 +11905,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>expand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        [SchemaAttr("expand")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -12714,7 +11915,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -12725,7 +11925,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -12736,7 +11935,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -12747,7 +11945,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -12758,7 +11955,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -12769,7 +11965,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -12780,7 +11975,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -12791,7 +11985,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -12802,7 +11995,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -12813,7 +12005,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -12824,7 +12015,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getPressed, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [SchemaAttr("getPressed")]
         public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -12835,7 +12025,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -12846,7 +12035,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -12857,7 +12045,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -12868,7 +12055,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -12879,7 +12065,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -12890,7 +12075,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -12901,7 +12085,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -12912,7 +12095,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -13007,7 +12189,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:editBox.</para>
     /// </summary>
-    [SchemaAttr("mso14:editBox")]
     public partial class BackstageEditBox : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -13021,7 +12202,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -13032,7 +12212,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -13043,7 +12222,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -13054,7 +12232,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>alignLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
-        [SchemaAttr("alignLabel")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -13065,7 +12242,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>expand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        [SchemaAttr("expand")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -13076,7 +12252,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -13087,7 +12262,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -13098,7 +12272,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -13109,7 +12282,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -13120,7 +12292,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -13131,7 +12302,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -13142,7 +12312,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -13153,7 +12322,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -13164,7 +12332,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        [SchemaAttr("getText")]
         public StringValue? GetText
         {
             get => GetAttribute<StringValue>();
@@ -13175,7 +12342,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onChange, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        [SchemaAttr("onChange")]
         public StringValue? OnChange
         {
             get => GetAttribute<StringValue>();
@@ -13186,7 +12352,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>maxLength, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        [SchemaAttr("maxLength")]
         public IntegerValue? MaxLength
         {
             get => GetAttribute<IntegerValue>();
@@ -13197,7 +12362,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>sizeString, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [SchemaAttr("sizeString")]
         public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
@@ -13283,7 +12447,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:dropDown")]
     public partial class BackstageDropDown : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13321,7 +12484,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -13332,7 +12494,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -13343,7 +12504,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -13354,7 +12514,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>alignLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
-        [SchemaAttr("alignLabel")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -13365,7 +12524,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>expand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        [SchemaAttr("expand")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -13376,7 +12534,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -13387,7 +12544,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -13398,7 +12554,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -13409,7 +12564,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -13420,7 +12574,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -13431,7 +12584,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -13442,7 +12594,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -13453,7 +12604,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -13464,7 +12614,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -13475,7 +12624,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -13486,7 +12634,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -13497,7 +12644,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -13508,7 +12654,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -13519,7 +12664,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSelectedItemIndex, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemIndex")]
         public StringValue? GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
@@ -13530,7 +12674,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>sizeString, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [SchemaAttr("sizeString")]
         public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
@@ -13541,7 +12684,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [SchemaAttr("getItemCount")]
         public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -13552,7 +12694,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [SchemaAttr("getItemLabel")]
         public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -13563,7 +12704,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemID, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [SchemaAttr("getItemID")]
         public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -13678,7 +12818,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioButtonBackstageItem" /> <c>&lt;mso14:radioButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:radioGroup")]
     public partial class RadioGroup : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13716,7 +12855,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -13727,7 +12865,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -13738,7 +12875,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -13749,7 +12885,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>alignLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
-        [SchemaAttr("alignLabel")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -13760,7 +12895,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>expand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        [SchemaAttr("expand")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -13771,7 +12905,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -13782,7 +12915,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -13793,7 +12925,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -13804,7 +12935,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -13815,7 +12945,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -13826,7 +12955,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -13837,7 +12965,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -13848,7 +12975,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -13859,7 +12985,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -13870,7 +12995,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSelectedItemIndex, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemIndex")]
         public StringValue? GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
@@ -13881,7 +13005,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [SchemaAttr("getItemCount")]
         public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -13892,7 +13015,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [SchemaAttr("getItemLabel")]
         public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -13903,7 +13025,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemID, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [SchemaAttr("getItemID")]
         public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -13998,7 +13119,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:comboBox")]
     public partial class BackstageComboBox : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14036,7 +13156,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -14047,7 +13166,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -14058,7 +13176,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -14069,7 +13186,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>alignLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
-        [SchemaAttr("alignLabel")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -14080,7 +13196,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>expand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        [SchemaAttr("expand")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -14091,7 +13206,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -14102,7 +13216,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -14113,7 +13226,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -14124,7 +13236,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -14135,7 +13246,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -14146,7 +13256,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -14157,7 +13266,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -14168,7 +13276,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -14179,7 +13286,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        [SchemaAttr("getText")]
         public StringValue? GetText
         {
             get => GetAttribute<StringValue>();
@@ -14190,7 +13296,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onChange, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        [SchemaAttr("onChange")]
         public StringValue? OnChange
         {
             get => GetAttribute<StringValue>();
@@ -14201,7 +13306,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>sizeString, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [SchemaAttr("sizeString")]
         public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
@@ -14212,7 +13316,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [SchemaAttr("getItemCount")]
         public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -14223,7 +13326,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [SchemaAttr("getItemLabel")]
         public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -14234,7 +13336,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getItemID, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [SchemaAttr("getItemID")]
         public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -14327,7 +13428,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:hyperlink.</para>
     /// </summary>
-    [SchemaAttr("mso14:hyperlink")]
     public partial class Hyperlink : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -14341,7 +13441,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -14352,7 +13451,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -14363,7 +13461,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -14374,7 +13471,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>alignLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
-        [SchemaAttr("alignLabel")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -14385,7 +13481,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>expand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        [SchemaAttr("expand")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -14396,7 +13491,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -14407,7 +13501,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -14418,7 +13511,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -14429,7 +13521,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -14440,7 +13531,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -14451,7 +13541,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -14462,7 +13551,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -14473,7 +13561,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -14484,7 +13571,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -14495,7 +13581,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -14506,7 +13591,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -14517,7 +13601,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -14528,7 +13611,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -14539,7 +13621,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -14550,7 +13631,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -14561,7 +13641,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -14572,7 +13651,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>target, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr("target")]
         public StringValue? Target
         {
             get => GetAttribute<StringValue>();
@@ -14583,7 +13661,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getTarget, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getTarget</para>
         /// </summary>
-        [SchemaAttr("getTarget")]
         public StringValue? GetTarget
         {
             get => GetAttribute<StringValue>();
@@ -14687,7 +13764,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:labelControl.</para>
     /// </summary>
-    [SchemaAttr("mso14:labelControl")]
     public partial class BackstageLabelControl : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -14701,7 +13777,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -14712,7 +13787,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -14723,7 +13797,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -14734,7 +13807,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>alignLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
-        [SchemaAttr("alignLabel")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -14745,7 +13817,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>expand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        [SchemaAttr("expand")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -14756,7 +13827,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -14767,7 +13837,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -14778,7 +13847,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -14789,7 +13857,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -14800,7 +13867,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -14811,7 +13877,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -14822,7 +13887,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>noWrap, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: noWrap</para>
         /// </summary>
-        [SchemaAttr("noWrap")]
         public BooleanValue? NoWrap
         {
             get => GetAttribute<BooleanValue>();
@@ -14895,7 +13959,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:groupBox")]
     public partial class GroupBox : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14933,7 +13996,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -14944,7 +14006,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -14955,7 +14016,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -14966,7 +14026,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>expand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        [SchemaAttr("expand")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -14977,7 +14036,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -14988,7 +14046,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -15080,7 +14137,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:layoutContainer")]
     public partial class LayoutContainer : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15118,7 +14174,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -15129,7 +14184,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -15140,7 +14194,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -15151,7 +14204,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>align, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: align</para>
         /// </summary>
-        [SchemaAttr("align")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Align
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -15162,7 +14214,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>expand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        [SchemaAttr("expand")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -15173,7 +14224,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>layoutChildren, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: layoutChildren</para>
         /// </summary>
-        [SchemaAttr("layoutChildren")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues>? LayoutChildren
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues>>();
@@ -15243,7 +14293,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:imageControl.</para>
     /// </summary>
-    [SchemaAttr("mso14:imageControl")]
     public partial class ImageControl : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -15257,7 +14306,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -15268,7 +14316,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -15279,7 +14326,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -15290,7 +14336,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -15301,7 +14346,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -15312,7 +14356,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -15323,7 +14366,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -15334,7 +14376,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -15345,7 +14386,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -15356,7 +14396,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -15367,7 +14406,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>altText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: altText</para>
         /// </summary>
-        [SchemaAttr("altText")]
         public StringValue? AltText
         {
             get => GetAttribute<StringValue>();
@@ -15378,7 +14416,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getAltText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getAltText</para>
         /// </summary>
-        [SchemaAttr("getAltText")]
         public StringValue? GetAltText
         {
             get => GetAttribute<StringValue>();
@@ -15452,7 +14489,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem" /> <c>&lt;mso14:primaryItem></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:group")]
     public partial class BackstageGroup : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15490,7 +14526,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -15501,7 +14536,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -15512,7 +14546,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -15523,7 +14556,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -15534,7 +14566,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -15545,7 +14576,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -15556,7 +14586,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -15567,7 +14596,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -15578,7 +14606,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -15589,7 +14616,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -15600,7 +14626,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -15611,7 +14636,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -15622,7 +14646,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>style, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr("style")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues>? Style
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues>>();
@@ -15633,7 +14656,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getStyle, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getStyle</para>
         /// </summary>
-        [SchemaAttr("getStyle")]
         public StringValue? GetStyle
         {
             get => GetAttribute<StringValue>();
@@ -15644,7 +14666,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>helperText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: helperText</para>
         /// </summary>
-        [SchemaAttr("helperText")]
         public StringValue? HelperText
         {
             get => GetAttribute<StringValue>();
@@ -15655,7 +14676,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getHelperText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getHelperText</para>
         /// </summary>
-        [SchemaAttr("getHelperText")]
         public StringValue? GetHelperText
         {
             get => GetAttribute<StringValue>();
@@ -15666,7 +14686,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -15677,7 +14696,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -15782,7 +14800,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupCategory" /> <c>&lt;mso14:category></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:taskGroup")]
     public partial class TaskGroup : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15820,7 +14837,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -15831,7 +14847,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -15842,7 +14857,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -15853,7 +14867,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -15864,7 +14877,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -15875,7 +14887,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -15886,7 +14897,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -15897,7 +14907,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -15908,7 +14917,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -15919,7 +14927,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -15930,7 +14937,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -15941,7 +14947,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -15952,7 +14957,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>helperText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: helperText</para>
         /// </summary>
-        [SchemaAttr("helperText")]
         public StringValue? HelperText
         {
             get => GetAttribute<StringValue>();
@@ -15963,7 +14967,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getHelperText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getHelperText</para>
         /// </summary>
-        [SchemaAttr("getHelperText")]
         public StringValue? GetHelperText
         {
             get => GetAttribute<StringValue>();
@@ -15974,7 +14977,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -15985,7 +14987,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -15996,7 +14997,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>allowedTaskSizes, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: allowedTaskSizes</para>
         /// </summary>
-        [SchemaAttr("allowedTaskSizes")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>? AllowedTaskSizes
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>>();
@@ -16098,7 +15098,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:menu")]
     public partial class MenuRoot : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -16136,7 +15135,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>title, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -16147,7 +15145,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getTitle, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        [SchemaAttr("getTitle")]
         public StringValue? GetTitle
         {
             get => GetAttribute<StringValue>();
@@ -16158,7 +15155,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>itemSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        [SchemaAttr("itemSize")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
@@ -16236,7 +15232,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon" /> <c>&lt;mso14:ribbon></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:customUI")]
     public partial class CustomUI : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -16274,7 +15269,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onLoad, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onLoad</para>
         /// </summary>
-        [SchemaAttr("onLoad")]
         public StringValue? OnLoad
         {
             get => GetAttribute<StringValue>();
@@ -16285,7 +15279,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>loadImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: loadImage</para>
         /// </summary>
-        [SchemaAttr("loadImage")]
         public StringValue? LoadImage
         {
             get => GetAttribute<StringValue>();
@@ -16411,7 +15404,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:item.</para>
     /// </summary>
-    [SchemaAttr("mso14:item")]
     public partial class Item : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -16425,7 +15417,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -16436,7 +15427,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -16447,7 +15437,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -16458,7 +15447,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -16469,7 +15457,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -16480,7 +15467,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -16528,7 +15514,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr("mso14:button")]
     public partial class VisibleButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -16542,7 +15527,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -16553,7 +15537,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -16564,7 +15547,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -16575,7 +15557,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -16586,7 +15567,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -16597,7 +15577,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -16608,7 +15587,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -16619,7 +15597,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -16630,7 +15607,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -16641,7 +15617,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -16652,7 +15627,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -16663,7 +15637,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -16674,7 +15647,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -16685,7 +15657,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -16696,7 +15667,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -16707,7 +15677,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -16718,7 +15687,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -16729,7 +15697,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -16740,7 +15707,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -16751,7 +15717,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -16762,7 +15727,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -16773,7 +15737,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -16784,7 +15747,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -16795,7 +15757,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -16806,7 +15767,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -16817,7 +15777,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -16828,7 +15787,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -16839,7 +15797,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -16968,7 +15925,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
-    [SchemaAttr("mso14:toggleButton")]
     public partial class VisibleToggleButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -16982,7 +15938,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getPressed, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [SchemaAttr("getPressed")]
         public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -16993,7 +15948,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -17004,7 +15958,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -17015,7 +15968,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -17026,7 +15978,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -17037,7 +15988,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -17048,7 +15998,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -17059,7 +16008,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -17070,7 +16018,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -17081,7 +16028,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -17092,7 +16038,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17103,7 +16048,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -17114,7 +16058,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -17125,7 +16068,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -17136,7 +16078,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -17147,7 +16088,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -17158,7 +16098,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -17169,7 +16108,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -17180,7 +16118,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -17191,7 +16128,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -17202,7 +16138,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -17213,7 +16148,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17224,7 +16158,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17235,7 +16168,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -17246,7 +16178,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -17257,7 +16188,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -17268,7 +16198,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -17279,7 +16208,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -17290,7 +16218,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -17421,7 +16348,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:separator.</para>
     /// </summary>
-    [SchemaAttr("mso14:separator")]
     public partial class Separator : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -17435,7 +16361,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -17446,7 +16371,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17457,7 +16381,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -17468,7 +16391,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -17479,7 +16401,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -17490,7 +16411,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -17501,7 +16421,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -17512,7 +16431,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17523,7 +16441,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17586,7 +16503,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:dialogBoxLauncher")]
     public partial class DialogBoxLauncher : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -17675,7 +16591,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:group")]
     public partial class Group : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -17713,7 +16628,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -17724,7 +16638,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17735,7 +16648,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -17746,7 +16658,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -17757,7 +16668,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -17768,7 +16678,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -17779,7 +16688,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -17790,7 +16698,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -17801,7 +16708,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -17812,7 +16718,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -17823,7 +16728,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -17834,7 +16738,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17845,7 +16748,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17856,7 +16758,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -17867,7 +16768,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -17878,7 +16778,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -17889,7 +16788,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -17900,7 +16798,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -17911,7 +16808,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -17922,7 +16818,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -17933,7 +16828,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -17944,7 +16838,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>autoScale, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: autoScale</para>
         /// </summary>
-        [SchemaAttr("autoScale")]
         public BooleanValue? AutoScale
         {
             get => GetAttribute<BooleanValue>();
@@ -17955,7 +16848,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>centerVertically, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: centerVertically</para>
         /// </summary>
-        [SchemaAttr("centerVertically")]
         public BooleanValue? CenterVertically
         {
             get => GetAttribute<BooleanValue>();
@@ -18109,7 +17001,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:control.</para>
     /// </summary>
-    [SchemaAttr("mso14:control")]
     public partial class ControlCloneQat : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -18123,7 +17014,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -18134,7 +17024,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -18145,7 +17034,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -18156,7 +17044,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -18167,7 +17054,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -18178,7 +17064,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -18189,7 +17074,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -18200,7 +17084,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -18211,7 +17094,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -18222,7 +17104,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -18233,7 +17114,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -18244,7 +17124,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -18255,7 +17134,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -18266,7 +17144,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -18277,7 +17154,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -18288,7 +17164,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -18299,7 +17174,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -18310,7 +17184,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -18321,7 +17194,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -18332,7 +17204,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -18343,7 +17214,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -18354,7 +17224,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -18365,7 +17234,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -18376,7 +17244,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -18387,7 +17254,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -18398,7 +17264,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -18409,7 +17274,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -18420,7 +17284,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -18431,7 +17294,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -18442,7 +17304,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -18580,7 +17441,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Separator" /> <c>&lt;mso14:separator></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:sharedControls")]
     public partial class SharedControlsQatItems : QatItemsType
     {
         /// <summary>
@@ -18647,7 +17507,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Separator" /> <c>&lt;mso14:separator></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:documentControls")]
     public partial class DocumentControlsQatItems : QatItemsType
     {
         /// <summary>
@@ -18767,7 +17626,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Group" /> <c>&lt;mso14:group></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:tab")]
     public partial class Tab : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -18805,7 +17663,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -18816,7 +17673,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -18827,7 +17683,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -18838,7 +17693,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -18849,7 +17703,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -18860,7 +17713,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -18871,7 +17723,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -18882,7 +17733,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -18893,7 +17743,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -18904,7 +17753,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -18915,7 +17763,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -18926,7 +17773,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -18937,7 +17783,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -18948,7 +17793,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -19039,7 +17883,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Tab" /> <c>&lt;mso14:tab></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:tabSet")]
     public partial class TabSet : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19077,7 +17920,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -19088,7 +17930,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -19099,7 +17940,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -19138,7 +17978,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:command.</para>
     /// </summary>
-    [SchemaAttr("mso14:command")]
     public partial class Command : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -19152,7 +17991,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -19163,7 +18001,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -19174,7 +18011,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -19185,7 +18021,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -19229,7 +18064,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems" /> <c>&lt;mso14:documentControls></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:qat")]
     public partial class QuickAccessToolbar : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19318,7 +18152,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Tab" /> <c>&lt;mso14:tab></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:tabs")]
     public partial class Tabs : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19379,7 +18212,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TabSet" /> <c>&lt;mso14:tabSet></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:contextualTabs")]
     public partial class ContextualTabs : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19448,7 +18280,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:contextMenu")]
     public partial class ContextMenu : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19486,7 +18317,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -19544,7 +18374,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:item.</para>
     /// </summary>
-    [SchemaAttr("mso14:item")]
     public partial class ItemBackstageItem : BackstageItemType
     {
         /// <summary>
@@ -19570,7 +18399,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:radioButton.</para>
     /// </summary>
-    [SchemaAttr("mso14:radioButton")]
     public partial class RadioButtonBackstageItem : BackstageItemType
     {
         /// <summary>
@@ -19609,7 +18437,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -19620,7 +18447,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -19631,7 +18457,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -19662,7 +18487,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr("mso14:button")]
     public partial class BackstageRegularButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -19676,7 +18500,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -19687,7 +18510,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -19698,7 +18520,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -19709,7 +18530,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -19720,7 +18540,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -19731,7 +18550,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -19742,7 +18560,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -19753,7 +18570,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -19764,7 +18580,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>isDefinitive, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
-        [SchemaAttr("isDefinitive")]
         public BooleanValue? IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
@@ -19775,7 +18590,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -19786,7 +18600,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -19797,7 +18610,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -19808,7 +18620,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -19819,7 +18630,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -19830,7 +18640,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -19841,7 +18650,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -19852,7 +18660,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -19863,7 +18670,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -19874,7 +18680,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -19885,7 +18690,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -19988,7 +18792,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup" /> <c>&lt;mso14:menuGroup></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:menu")]
     public partial class BackstagePrimaryMenu : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -20026,7 +18829,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -20037,7 +18839,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -20048,7 +18849,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -20059,7 +18859,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -20070,7 +18869,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -20081,7 +18879,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20092,7 +18889,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -20103,7 +18899,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -20114,7 +18909,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -20125,7 +18919,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -20136,7 +18929,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -20147,7 +18939,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -20158,7 +18949,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -20169,7 +18959,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -20180,7 +18969,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -20191,7 +18979,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -20202,7 +18989,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -20213,7 +18999,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -20323,7 +19108,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageSubMenu" /> <c>&lt;mso14:menu></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:menuGroup")]
     public partial class BackstageMenuGroup : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -20361,7 +19145,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -20372,7 +19155,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20383,7 +19165,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -20394,7 +19175,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -20405,7 +19185,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -20416,7 +19195,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>itemSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        [SchemaAttr("itemSize")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
@@ -20488,7 +19266,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton" /> <c>&lt;mso14:button></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:primaryItem")]
     public partial class PrimaryItem : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -20587,7 +19364,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:topItems")]
     public partial class TopItemsGroupControls : GroupControlsType
     {
         /// <summary>
@@ -20673,7 +19449,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:bottomItems")]
     public partial class BottomItemsGroupControls : GroupControlsType
     {
         /// <summary>
@@ -20820,7 +19595,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupTask" /> <c>&lt;mso14:task></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:category")]
     public partial class TaskGroupCategory : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -20858,7 +19632,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -20869,7 +19642,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20880,7 +19652,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -20891,7 +19662,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -20902,7 +19672,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -20913,7 +19682,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -20924,7 +19692,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20935,7 +19702,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20946,7 +19712,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -20957,7 +19722,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -20968,7 +19732,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -20979,7 +19742,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -21053,7 +19815,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:task.</para>
     /// </summary>
-    [SchemaAttr("mso14:task")]
     public partial class TaskGroupTask : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -21067,7 +19828,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -21078,7 +19838,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21089,7 +19848,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -21100,7 +19858,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -21111,7 +19868,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -21122,7 +19878,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -21133,7 +19888,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21144,7 +19898,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21155,7 +19908,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -21166,7 +19918,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>isDefinitive, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
-        [SchemaAttr("isDefinitive")]
         public BooleanValue? IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
@@ -21177,7 +19928,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -21188,7 +19938,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -21199,7 +19948,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -21210,7 +19958,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -21221,7 +19968,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -21232,7 +19978,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -21243,7 +19988,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -21254,7 +19998,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -21265,7 +20008,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -21276,7 +20018,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -21287,7 +20028,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -21298,7 +20038,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -21309,7 +20048,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -21422,7 +20160,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupTask" /> <c>&lt;mso14:task></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:category")]
     public partial class TaskFormGroupCategory : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -21460,7 +20197,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -21471,7 +20207,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21482,7 +20217,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -21493,7 +20227,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -21504,7 +20237,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -21515,7 +20247,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -21526,7 +20257,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21537,7 +20267,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21548,7 +20277,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -21559,7 +20287,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -21570,7 +20297,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -21581,7 +20307,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -21661,7 +20386,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup" /> <c>&lt;mso14:group></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:task")]
     public partial class TaskFormGroupTask : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -21699,7 +20423,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -21710,7 +20433,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21721,7 +20443,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -21732,7 +20453,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -21743,7 +20463,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -21754,7 +20473,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -21765,7 +20483,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21776,7 +20493,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21787,7 +20503,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -21798,7 +20513,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -21809,7 +20523,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -21820,7 +20533,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -21831,7 +20543,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -21842,7 +20553,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -21853,7 +20563,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -21864,7 +20573,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -21875,7 +20583,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -21886,7 +20593,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -21897,7 +20603,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getDescription, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -21908,7 +20613,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -21919,7 +20623,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -22032,7 +20735,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupCategory" /> <c>&lt;mso14:category></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:taskFormGroup")]
     public partial class TaskFormGroup : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -22070,7 +20772,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -22081,7 +20782,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -22092,7 +20792,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -22103,7 +20802,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -22114,7 +20812,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -22125,7 +20822,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -22136,7 +20832,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -22147,7 +20842,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -22158,7 +20852,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>helperText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: helperText</para>
         /// </summary>
-        [SchemaAttr("helperText")]
         public StringValue? HelperText
         {
             get => GetAttribute<StringValue>();
@@ -22169,7 +20862,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getHelperText, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getHelperText</para>
         /// </summary>
-        [SchemaAttr("getHelperText")]
         public StringValue? GetHelperText
         {
             get => GetAttribute<StringValue>();
@@ -22180,7 +20872,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -22191,7 +20882,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -22202,7 +20892,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>allowedTaskSizes, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: allowedTaskSizes</para>
         /// </summary>
-        [SchemaAttr("allowedTaskSizes")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>? AllowedTaskSizes
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>>();
@@ -22282,7 +20971,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup" /> <c>&lt;mso14:taskGroup></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:firstColumn")]
     public partial class BackstageGroups : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -22360,7 +21048,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup" /> <c>&lt;mso14:taskGroup></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:secondColumn")]
     public partial class SimpleGroups : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -22430,7 +21117,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups" /> <c>&lt;mso14:secondColumn></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:tab")]
     public partial class BackstageTab : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -22468,7 +21154,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -22479,7 +21164,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -22490,7 +21174,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -22501,7 +21184,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -22512,7 +21194,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -22523,7 +21204,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -22534,7 +21214,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -22545,7 +21224,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -22556,7 +21234,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -22567,7 +21244,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -22578,7 +21254,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -22589,7 +21264,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -22600,7 +21274,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -22611,7 +21284,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -22622,7 +21294,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -22633,7 +21304,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -22644,7 +21314,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>title, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -22655,7 +21324,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getTitle, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        [SchemaAttr("getTitle")]
         public StringValue? GetTitle
         {
             get => GetAttribute<StringValue>();
@@ -22666,7 +21334,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>columnWidthPercent, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: columnWidthPercent</para>
         /// </summary>
-        [SchemaAttr("columnWidthPercent")]
         public IntegerValue? ColumnWidthPercent
         {
             get => GetAttribute<IntegerValue>();
@@ -22677,7 +21344,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>firstColumnMinWidth, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: firstColumnMinWidth</para>
         /// </summary>
-        [SchemaAttr("firstColumnMinWidth")]
         public IntegerValue? FirstColumnMinWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -22688,7 +21354,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>firstColumnMaxWidth, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: firstColumnMaxWidth</para>
         /// </summary>
-        [SchemaAttr("firstColumnMaxWidth")]
         public IntegerValue? FirstColumnMaxWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -22699,7 +21364,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>secondColumnMinWidth, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: secondColumnMinWidth</para>
         /// </summary>
-        [SchemaAttr("secondColumnMinWidth")]
         public IntegerValue? SecondColumnMinWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -22710,7 +21374,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>secondColumnMaxWidth, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: secondColumnMaxWidth</para>
         /// </summary>
-        [SchemaAttr("secondColumnMaxWidth")]
         public IntegerValue? SecondColumnMaxWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -22853,7 +21516,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    [SchemaAttr("mso14:button")]
     public partial class BackstageFastCommandButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -22867,7 +21529,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -22878,7 +21539,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -22889,7 +21549,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -22900,7 +21559,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -22911,7 +21569,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -22922,7 +21579,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -22933,7 +21589,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -22944,7 +21599,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -22955,7 +21609,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -22966,7 +21619,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>isDefinitive, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
-        [SchemaAttr("isDefinitive")]
         public BooleanValue? IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
@@ -22977,7 +21629,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -22988,7 +21639,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -22999,7 +21649,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -23010,7 +21659,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -23021,7 +21669,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -23032,7 +21679,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -23043,7 +21689,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -23054,7 +21699,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -23065,7 +21709,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -23076,7 +21719,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -23087,7 +21729,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -23194,7 +21835,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Command" /> <c>&lt;mso14:command></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:commands")]
     public partial class Commands : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -23257,7 +21897,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Tabs" /> <c>&lt;mso14:tabs></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:ribbon")]
     public partial class Ribbon : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -23295,7 +21934,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>startFromScratch, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: startFromScratch</para>
         /// </summary>
-        [SchemaAttr("startFromScratch")]
         public BooleanValue? StartFromScratch
         {
             get => GetAttribute<BooleanValue>();
@@ -23375,7 +22013,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab" /> <c>&lt;mso14:tab></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:backstage")]
     public partial class Backstage : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -23413,7 +22050,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onShow, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onShow</para>
         /// </summary>
-        [SchemaAttr("onShow")]
         public StringValue? OnShow
         {
             get => GetAttribute<StringValue>();
@@ -23424,7 +22060,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onHide, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: onHide</para>
         /// </summary>
-        [SchemaAttr("onHide")]
         public StringValue? OnHide
         {
             get => GetAttribute<StringValue>();
@@ -23472,7 +22107,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenu" /> <c>&lt;mso14:contextMenu></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso14:contextMenus")]
     public partial class ContextMenus : TypedOpenXmlCompositeElement
     {
         /// <summary>

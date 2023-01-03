@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a15:backgroundPr.</para>
     /// </summary>
-    [SchemaAttr("a15:backgroundPr")]
     public partial class BackgroundProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37,7 +34,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>bwMode, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? Mode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -48,7 +44,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>bwPure, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: bwPure</para>
         /// </summary>
-        [SchemaAttr("bwPure")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? Pure
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -59,7 +54,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>bwNormal, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: bwNormal</para>
         /// </summary>
-        [SchemaAttr("bwNormal")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? Normal
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -70,7 +64,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>targetScreenSize, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: targetScreenSize</para>
         /// </summary>
-        [SchemaAttr("targetScreenSize")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>? TargetScreenSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>>();
@@ -110,7 +103,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a15:nonVisualGroupProps.</para>
     /// </summary>
-    [SchemaAttr("a15:nonVisualGroupProps")]
     public partial class NonVisualGroupProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -124,7 +116,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>isLegacyGroup, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: isLegacyGroup</para>
         /// </summary>
-        [SchemaAttr("isLegacyGroup")]
         public BooleanValue? IsLegacyGroup
         {
             get => GetAttribute<BooleanValue>();
@@ -149,7 +140,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a15:objectPr.</para>
     /// </summary>
-    [SchemaAttr("a15:objectPr")]
     public partial class ObjectProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -163,7 +153,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>objectId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: objectId</para>
         /// </summary>
-        [SchemaAttr("objectId")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -174,7 +163,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>isActiveX, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: isActiveX</para>
         /// </summary>
-        [SchemaAttr("isActiveX")]
         public BooleanValue? IsActiveX
         {
             get => GetAttribute<BooleanValue>();
@@ -185,7 +173,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>linkType, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: linkType</para>
         /// </summary>
-        [SchemaAttr("linkType")]
         public StringValue? LinkType
         {
             get => GetAttribute<StringValue>();
@@ -212,7 +199,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a15:signatureLine.</para>
     /// </summary>
-    [SchemaAttr("a15:signatureLine")]
     public partial class SignatureLine : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -226,7 +212,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>isSignatureLine, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: isSignatureLine</para>
         /// </summary>
-        [SchemaAttr("isSignatureLine")]
         public BooleanValue? IsSignatureLine
         {
             get => GetAttribute<BooleanValue>();
@@ -237,7 +222,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -248,7 +232,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>provId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: provId</para>
         /// </summary>
-        [SchemaAttr("provId")]
         public StringValue? ProviderId
         {
             get => GetAttribute<StringValue>();
@@ -259,7 +242,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>signingInstructionsSet, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: signingInstructionsSet</para>
         /// </summary>
-        [SchemaAttr("signingInstructionsSet")]
         public BooleanValue? SigningInstructionsSet
         {
             get => GetAttribute<BooleanValue>();
@@ -270,7 +252,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>allowComments, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: allowComments</para>
         /// </summary>
-        [SchemaAttr("allowComments")]
         public BooleanValue? AllowComments
         {
             get => GetAttribute<BooleanValue>();
@@ -281,7 +262,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>showSignDate, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: showSignDate</para>
         /// </summary>
-        [SchemaAttr("showSignDate")]
         public BooleanValue? ShowSignDate
         {
             get => GetAttribute<BooleanValue>();
@@ -292,7 +272,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>suggestedSigner, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: suggestedSigner</para>
         /// </summary>
-        [SchemaAttr("suggestedSigner")]
         public StringValue? SuggestedSigner
         {
             get => GetAttribute<StringValue>();
@@ -303,7 +282,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>suggestedSigner2, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: suggestedSigner2</para>
         /// </summary>
-        [SchemaAttr("suggestedSigner2")]
         public StringValue? SuggestedSigner2
         {
             get => GetAttribute<StringValue>();
@@ -314,7 +292,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>suggestedSignerEmail, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: suggestedSignerEmail</para>
         /// </summary>
-        [SchemaAttr("suggestedSignerEmail")]
         public StringValue? SuggestedSignerEmail
         {
             get => GetAttribute<StringValue>();
@@ -325,7 +302,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>signingInstructions, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: signingInstructions</para>
         /// </summary>
-        [SchemaAttr("signingInstructions")]
         public StringValue? SigningInstructions
         {
             get => GetAttribute<StringValue>();
@@ -336,7 +312,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>addlXml, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: addlXml</para>
         /// </summary>
-        [SchemaAttr("addlXml")]
         public StringValue? AdditionalXml
         {
             get => GetAttribute<StringValue>();
@@ -347,7 +322,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>sigProvUrl, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: sigProvUrl</para>
         /// </summary>
-        [SchemaAttr("sigProvUrl")]
         public StringValue? SignatureProviderUrl
         {
             get => GetAttribute<StringValue>();

@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -31,7 +29,6 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker" /> <c>&lt;pc2:cmMK></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("pc2:cmMkLst")]
     public partial class CommentV2MonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -121,7 +118,6 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2MonikerList" /> <c>&lt;pc2:cmMkLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("pc2:cmRplyMkLst")]
     public partial class CommentReplyV2MonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -204,7 +200,6 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc2:cmMK.</para>
     /// </summary>
-    [SchemaAttr("pc2:cmMK")]
     public partial class CommentV2Moniker : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -218,7 +213,6 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
         /// <para>id, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -247,7 +241,6 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc2:cmRplyMk.</para>
     /// </summary>
-    [SchemaAttr("pc2:cmRplyMk")]
     public partial class CommentReplyV2Moniker : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -261,7 +254,6 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
         /// <para>id, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();

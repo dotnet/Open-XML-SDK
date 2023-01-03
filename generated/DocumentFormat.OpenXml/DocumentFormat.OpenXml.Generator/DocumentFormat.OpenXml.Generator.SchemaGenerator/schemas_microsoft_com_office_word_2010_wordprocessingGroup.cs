@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Pictures;
@@ -41,7 +39,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape" /> <c>&lt;wps:wsp></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpg:wgp")]
     public partial class WordprocessingGroup : WordprocessingGroupType
     {
         /// <summary>
@@ -120,7 +117,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape" /> <c>&lt;wps:wsp></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpg:grpSp")]
     public partial class GroupShape : WordprocessingGroupType
     {
         /// <summary>
@@ -299,7 +295,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpg:cNvPr")]
     public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -337,7 +332,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <para>Application defined unique identifier.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -348,7 +342,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <para>Name compatible with Object Model (non-unique).</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -359,7 +352,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <para>Description of the drawing element.</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr("descr")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -370,7 +362,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <para>Flag determining to show or hide this element.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -381,7 +372,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -471,7 +461,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpg:cNvFrPr")]
     public partial class NonVisualGraphicFrameProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -561,7 +550,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpg:xfrm")]
     public partial class Transform2D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -599,7 +587,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr("rot")]
         public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -610,7 +597,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr("flipH")]
         public BooleanValue? HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -621,7 +607,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr("flipV")]
         public BooleanValue? VerticalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -687,7 +672,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpg:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -755,7 +739,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpg:cNvGrpSpPr")]
     public partial class NonVisualGroupDrawingShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -854,7 +837,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpg:grpSpPr")]
     public partial class GroupShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -892,7 +874,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -980,7 +961,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D" /> <c>&lt;wpg:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wpg:graphicFrame")]
     public partial class GraphicFrame : TypedOpenXmlCompositeElement
     {
         /// <summary>

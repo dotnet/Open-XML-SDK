@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -29,7 +27,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Source" /> <c>&lt;b:Source></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Sources")]
     public partial class Sources : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -67,7 +64,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Selected Style</para>
         /// <para>Represents the following attribute in the schema: SelectedStyle</para>
         /// </summary>
-        [SchemaAttr("SelectedStyle")]
         public StringValue? SelectedStyle
         {
             get => GetAttribute<StringValue>();
@@ -78,7 +74,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Documentation Style Name</para>
         /// <para>Represents the following attribute in the schema: StyleName</para>
         /// </summary>
-        [SchemaAttr("StyleName")]
         public StringValue? StyleName
         {
             get => GetAttribute<StringValue>();
@@ -89,7 +84,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Uniform Resource Identifier</para>
         /// <para>Represents the following attribute in the schema: URI</para>
         /// </summary>
-        [SchemaAttr("URI")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -137,7 +131,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Middle" /> <c>&lt;b:Middle></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Person")]
     public partial class Person : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -195,7 +188,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Last.</para>
     /// </summary>
-    [SchemaAttr("b:Last")]
     public partial class Last : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -234,7 +226,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:First.</para>
     /// </summary>
-    [SchemaAttr("b:First")]
     public partial class First : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -273,7 +264,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Middle.</para>
     /// </summary>
-    [SchemaAttr("b:Middle")]
     public partial class Middle : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -312,7 +302,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Corporate.</para>
     /// </summary>
-    [SchemaAttr("b:Corporate")]
     public partial class Corporate : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -351,7 +340,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:AbbreviatedCaseNumber.</para>
     /// </summary>
-    [SchemaAttr("b:AbbreviatedCaseNumber")]
     public partial class AbbreviatedCaseNumber : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -390,7 +378,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:AlbumTitle.</para>
     /// </summary>
-    [SchemaAttr("b:AlbumTitle")]
     public partial class AlbumTitle : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -429,7 +416,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:BookTitle.</para>
     /// </summary>
-    [SchemaAttr("b:BookTitle")]
     public partial class BookTitle : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -468,7 +454,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Broadcaster.</para>
     /// </summary>
-    [SchemaAttr("b:Broadcaster")]
     public partial class Broadcaster : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -507,7 +492,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:BroadcastTitle.</para>
     /// </summary>
-    [SchemaAttr("b:BroadcastTitle")]
     public partial class BroadcastTitle : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -546,7 +530,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:CaseNumber.</para>
     /// </summary>
-    [SchemaAttr("b:CaseNumber")]
     public partial class CaseNumber : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -585,7 +568,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ChapterNumber.</para>
     /// </summary>
-    [SchemaAttr("b:ChapterNumber")]
     public partial class ChapterNumber : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -624,7 +606,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:City.</para>
     /// </summary>
-    [SchemaAttr("b:City")]
     public partial class City : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -663,7 +644,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Comments.</para>
     /// </summary>
-    [SchemaAttr("b:Comments")]
     public partial class Comments : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -702,7 +682,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ConferenceName.</para>
     /// </summary>
-    [SchemaAttr("b:ConferenceName")]
     public partial class ConferenceName : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -741,7 +720,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:CountryRegion.</para>
     /// </summary>
-    [SchemaAttr("b:CountryRegion")]
     public partial class CountryRegion : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -780,7 +758,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Court.</para>
     /// </summary>
-    [SchemaAttr("b:Court")]
     public partial class Court : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -819,7 +796,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Day.</para>
     /// </summary>
-    [SchemaAttr("b:Day")]
     public partial class Day : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -858,7 +834,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:DayAccessed.</para>
     /// </summary>
-    [SchemaAttr("b:DayAccessed")]
     public partial class DayAccessed : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -897,7 +872,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Department.</para>
     /// </summary>
-    [SchemaAttr("b:Department")]
     public partial class Department : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -936,7 +910,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Distributor.</para>
     /// </summary>
-    [SchemaAttr("b:Distributor")]
     public partial class Distributor : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -975,7 +948,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Edition.</para>
     /// </summary>
-    [SchemaAttr("b:Edition")]
     public partial class Edition : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1014,7 +986,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Guid.</para>
     /// </summary>
-    [SchemaAttr("b:Guid")]
     public partial class GuidString : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1053,7 +1024,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Institution.</para>
     /// </summary>
-    [SchemaAttr("b:Institution")]
     public partial class Institution : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1092,7 +1062,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:InternetSiteTitle.</para>
     /// </summary>
-    [SchemaAttr("b:InternetSiteTitle")]
     public partial class InternetSiteTitle : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1131,7 +1100,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Issue.</para>
     /// </summary>
-    [SchemaAttr("b:Issue")]
     public partial class Issue : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1170,7 +1138,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:JournalName.</para>
     /// </summary>
-    [SchemaAttr("b:JournalName")]
     public partial class JournalName : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1209,7 +1176,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:LCID.</para>
     /// </summary>
-    [SchemaAttr("b:LCID")]
     public partial class LcId : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1248,7 +1214,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Medium.</para>
     /// </summary>
-    [SchemaAttr("b:Medium")]
     public partial class Medium : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1287,7 +1252,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Month.</para>
     /// </summary>
-    [SchemaAttr("b:Month")]
     public partial class Month : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1326,7 +1290,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:MonthAccessed.</para>
     /// </summary>
-    [SchemaAttr("b:MonthAccessed")]
     public partial class MonthAccessed : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1365,7 +1328,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:NumberVolumes.</para>
     /// </summary>
-    [SchemaAttr("b:NumberVolumes")]
     public partial class NumberVolumes : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1404,7 +1366,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Pages.</para>
     /// </summary>
-    [SchemaAttr("b:Pages")]
     public partial class Pages : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1443,7 +1404,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:PatentNumber.</para>
     /// </summary>
-    [SchemaAttr("b:PatentNumber")]
     public partial class PatentNumber : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1482,7 +1442,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:PeriodicalTitle.</para>
     /// </summary>
-    [SchemaAttr("b:PeriodicalTitle")]
     public partial class PeriodicalTitle : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1521,7 +1480,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ProductionCompany.</para>
     /// </summary>
-    [SchemaAttr("b:ProductionCompany")]
     public partial class ProductionCompany : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1560,7 +1518,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:PublicationTitle.</para>
     /// </summary>
-    [SchemaAttr("b:PublicationTitle")]
     public partial class PublicationTitle : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1599,7 +1556,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Publisher.</para>
     /// </summary>
-    [SchemaAttr("b:Publisher")]
     public partial class Publisher : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1638,7 +1594,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:RecordingNumber.</para>
     /// </summary>
-    [SchemaAttr("b:RecordingNumber")]
     public partial class RecordingNumber : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1677,7 +1632,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:RefOrder.</para>
     /// </summary>
-    [SchemaAttr("b:RefOrder")]
     public partial class ReferenceOrder : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1716,7 +1670,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Reporter.</para>
     /// </summary>
-    [SchemaAttr("b:Reporter")]
     public partial class Reporter : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1755,7 +1708,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ShortTitle.</para>
     /// </summary>
-    [SchemaAttr("b:ShortTitle")]
     public partial class ShortTitle : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1794,7 +1746,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:StandardNumber.</para>
     /// </summary>
-    [SchemaAttr("b:StandardNumber")]
     public partial class StandardNumber : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1833,7 +1784,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:StateProvince.</para>
     /// </summary>
-    [SchemaAttr("b:StateProvince")]
     public partial class StateProvince : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1872,7 +1822,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Station.</para>
     /// </summary>
-    [SchemaAttr("b:Station")]
     public partial class Station : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1911,7 +1860,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Tag.</para>
     /// </summary>
-    [SchemaAttr("b:Tag")]
     public partial class Tag : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1950,7 +1898,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Theater.</para>
     /// </summary>
-    [SchemaAttr("b:Theater")]
     public partial class Theater : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1989,7 +1936,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ThesisType.</para>
     /// </summary>
-    [SchemaAttr("b:ThesisType")]
     public partial class ThesisType : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2028,7 +1974,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Title.</para>
     /// </summary>
-    [SchemaAttr("b:Title")]
     public partial class Title : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2067,7 +2012,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Type.</para>
     /// </summary>
-    [SchemaAttr("b:Type")]
     public partial class PatentType : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2106,7 +2050,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:URL.</para>
     /// </summary>
-    [SchemaAttr("b:URL")]
     public partial class UrlString : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2145,7 +2088,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Version.</para>
     /// </summary>
-    [SchemaAttr("b:Version")]
     public partial class Version : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2184,7 +2126,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Volume.</para>
     /// </summary>
-    [SchemaAttr("b:Volume")]
     public partial class Volume : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2223,7 +2164,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Year.</para>
     /// </summary>
-    [SchemaAttr("b:Year")]
     public partial class Year : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2262,7 +2202,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:YearAccessed.</para>
     /// </summary>
-    [SchemaAttr("b:YearAccessed")]
     public partial class YearAccessed : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2307,7 +2246,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Person" /> <c>&lt;b:Person></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:NameList")]
     public partial class NameList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2367,7 +2305,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Artist")]
     public partial class Artist : NameType
     {
         /// <summary>
@@ -2426,7 +2363,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:BookAuthor")]
     public partial class BookAuthor : NameType
     {
         /// <summary>
@@ -2485,7 +2421,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Compiler")]
     public partial class Compiler : NameType
     {
         /// <summary>
@@ -2544,7 +2479,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Composer")]
     public partial class Composer : NameType
     {
         /// <summary>
@@ -2603,7 +2537,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Conductor")]
     public partial class Conductor : NameType
     {
         /// <summary>
@@ -2662,7 +2595,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Counsel")]
     public partial class Counsel : NameType
     {
         /// <summary>
@@ -2721,7 +2653,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Director")]
     public partial class Director : NameType
     {
         /// <summary>
@@ -2780,7 +2711,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Editor")]
     public partial class Editor : NameType
     {
         /// <summary>
@@ -2839,7 +2769,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Interviewee")]
     public partial class Interviewee : NameType
     {
         /// <summary>
@@ -2898,7 +2827,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Interviewer")]
     public partial class Interviewer : NameType
     {
         /// <summary>
@@ -2957,7 +2885,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Inventor")]
     public partial class Inventor : NameType
     {
         /// <summary>
@@ -3016,7 +2943,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:ProducerName")]
     public partial class ProducerName : NameType
     {
         /// <summary>
@@ -3075,7 +3001,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Translator")]
     public partial class Translator : NameType
     {
         /// <summary>
@@ -3134,7 +3059,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Writer")]
     public partial class Writer : NameType
     {
         /// <summary>
@@ -3258,7 +3182,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Author")]
     public partial class Author : NameOrCorporateType
     {
         /// <summary>
@@ -3322,7 +3245,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Performer")]
     public partial class Performer : NameOrCorporateType
     {
         /// <summary>
@@ -3479,7 +3401,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Writer" /> <c>&lt;b:Writer></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Author")]
     public partial class AuthorList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3774,7 +3695,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:SourceType.</para>
     /// </summary>
-    [SchemaAttr("b:SourceType")]
     public partial class SourceType : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -3870,7 +3790,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.YearAccessed" /> <c>&lt;b:YearAccessed></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("b:Source")]
     public partial class Source : TypedOpenXmlCompositeElement
     {
         /// <summary>

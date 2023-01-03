@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -30,7 +28,6 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring" /> <c>&lt;xxpvi:lastRefreshFeature></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xxpvi:cacheVersionInfo")]
     public partial class CacheVersionInfo : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -94,7 +91,6 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring" /> <c>&lt;xxpvi:lastUpdateFeature></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xxpvi:pivotVersionInfo")]
     public partial class PivotVersionInfo : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -151,7 +147,6 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxpvi:requiredFeature.</para>
     /// </summary>
-    [SchemaAttr("xxpvi:requiredFeature")]
     public partial class RequiredFeatureXsdstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -190,7 +185,6 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxpvi:lastRefreshFeature.</para>
     /// </summary>
-    [SchemaAttr("xxpvi:lastRefreshFeature")]
     public partial class LastRefreshFeatureXsdstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -229,7 +223,6 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxpvi:lastUpdateFeature.</para>
     /// </summary>
-    [SchemaAttr("xxpvi:lastUpdateFeature")]
     public partial class LastUpdateFeatureXsdstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>

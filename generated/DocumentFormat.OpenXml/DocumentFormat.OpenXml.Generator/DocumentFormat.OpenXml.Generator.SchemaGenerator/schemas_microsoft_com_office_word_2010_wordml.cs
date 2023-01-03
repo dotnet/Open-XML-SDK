@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -89,7 +87,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:conflictIns")]
     public partial class RunConflictInsertion : RunTrackChangeType
     {
         /// <summary>
@@ -340,7 +337,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:conflictDel")]
     public partial class RunConflictDeletion : RunTrackChangeType
     {
         /// <summary>
@@ -631,7 +627,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -645,7 +640,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -659,7 +653,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -749,7 +742,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:conflictIns.</para>
     /// </summary>
-    [SchemaAttr("w14:conflictIns")]
     public partial class ConflictInsertion : TrackChangeType
     {
         /// <summary>
@@ -775,7 +767,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:conflictDel.</para>
     /// </summary>
-    [SchemaAttr("w14:conflictDel")]
     public partial class ConflictDeletion : TrackChangeType
     {
         /// <summary>
@@ -801,7 +792,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:customXmlConflictInsRangeStart.</para>
     /// </summary>
-    [SchemaAttr("w14:customXmlConflictInsRangeStart")]
     public partial class CustomXmlConflictInsertionRangeStart : TrackChangeType
     {
         /// <summary>
@@ -827,7 +817,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:customXmlConflictDelRangeStart.</para>
     /// </summary>
-    [SchemaAttr("w14:customXmlConflictDelRangeStart")]
     public partial class CustomXmlConflictDeletionRangeStart : TrackChangeType
     {
         /// <summary>
@@ -869,7 +858,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -883,7 +871,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -897,7 +884,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -931,7 +917,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:tint.</para>
     /// </summary>
-    [SchemaAttr("w14:tint")]
     public partial class Tint : PositiveFixedPercentageType
     {
         /// <summary>
@@ -957,7 +942,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:shade.</para>
     /// </summary>
-    [SchemaAttr("w14:shade")]
     public partial class Shade : PositiveFixedPercentageType
     {
         /// <summary>
@@ -983,7 +967,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:alpha.</para>
     /// </summary>
-    [SchemaAttr("w14:alpha")]
     public partial class Alpha : PositiveFixedPercentageType
     {
         /// <summary>
@@ -1025,7 +1008,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -1050,7 +1032,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:hueMod.</para>
     /// </summary>
-    [SchemaAttr("w14:hueMod")]
     public partial class HueModulation : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1067,7 +1048,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -1097,7 +1077,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:sat.</para>
     /// </summary>
-    [SchemaAttr("w14:sat")]
     public partial class Saturation : PercentageType
     {
         /// <summary>
@@ -1123,7 +1102,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:satOff.</para>
     /// </summary>
-    [SchemaAttr("w14:satOff")]
     public partial class SaturationOffset : PercentageType
     {
         /// <summary>
@@ -1149,7 +1127,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:satMod.</para>
     /// </summary>
-    [SchemaAttr("w14:satMod")]
     public partial class SaturationModulation : PercentageType
     {
         /// <summary>
@@ -1175,7 +1152,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lum.</para>
     /// </summary>
-    [SchemaAttr("w14:lum")]
     public partial class Luminance : PercentageType
     {
         /// <summary>
@@ -1201,7 +1177,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lumOff.</para>
     /// </summary>
-    [SchemaAttr("w14:lumOff")]
     public partial class LuminanceOffset : PercentageType
     {
         /// <summary>
@@ -1227,7 +1202,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lumMod.</para>
     /// </summary>
-    [SchemaAttr("w14:lumMod")]
     public partial class LuminanceModulation : PercentageType
     {
         /// <summary>
@@ -1269,7 +1243,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -1308,7 +1281,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.HueModulation" /> <c>&lt;w14:hueMod></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:srgbClr")]
     public partial class RgbColorModelHex : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1349,7 +1321,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -1423,7 +1394,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.HueModulation" /> <c>&lt;w14:hueMod></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:schemeClr")]
     public partial class SchemeColor : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1464,7 +1434,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues>>();
@@ -1522,7 +1491,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lin.</para>
     /// </summary>
-    [SchemaAttr("w14:lin")]
     public partial class LinearShadeProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1539,7 +1507,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:ang")]
         public Int32Value? Angle
         {
             get => GetAttribute<Int32Value>();
@@ -1553,7 +1520,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:scaled")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>? Scaled
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>();
@@ -1592,7 +1558,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.FillToRectangle" /> <c>&lt;w14:fillToRect></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:path")]
     public partial class PathShadeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1633,7 +1598,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:path")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues>? Path
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues>>();
@@ -1679,7 +1643,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:noFill.</para>
     /// </summary>
-    [SchemaAttr("w14:noFill")]
     public partial class NoFillEmpty : EmptyType
     {
         /// <summary>
@@ -1705,7 +1668,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:round.</para>
     /// </summary>
-    [SchemaAttr("w14:round")]
     public partial class RoundEmpty : EmptyType
     {
         /// <summary>
@@ -1731,7 +1693,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:bevel.</para>
     /// </summary>
-    [SchemaAttr("w14:bevel")]
     public partial class BevelEmpty : EmptyType
     {
         /// <summary>
@@ -1757,7 +1718,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:entityPicker.</para>
     /// </summary>
-    [SchemaAttr("w14:entityPicker")]
     public partial class EntityPickerEmpty : EmptyType
     {
         /// <summary>
@@ -1810,7 +1770,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:solidFill")]
     public partial class SolidColorFillProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1907,7 +1866,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.PathShadeProperties" /> <c>&lt;w14:path></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:gradFill")]
     public partial class GradientFillProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1985,7 +1943,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:prstDash.</para>
     /// </summary>
-    [SchemaAttr("w14:prstDash")]
     public partial class PresetLineDashProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2002,7 +1959,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues>>();
@@ -2030,7 +1986,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:miter.</para>
     /// </summary>
-    [SchemaAttr("w14:miter")]
     public partial class LineJoinMiterProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2047,7 +2002,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:lim")]
         public Int32Value? Limit
         {
             get => GetAttribute<Int32Value>();
@@ -2083,7 +2037,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:glow")]
     public partial class Glow : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2124,7 +2077,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:rad")]
         public Int64Value? GlowRadius
         {
             get => GetAttribute<Int64Value>();
@@ -2199,7 +2151,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:shadow")]
     public partial class Shadow : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2240,7 +2191,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:blurRad")]
         public Int64Value? BlurRadius
         {
             get => GetAttribute<Int64Value>();
@@ -2254,7 +2204,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:dist")]
         public Int64Value? DistanceFromText
         {
             get => GetAttribute<Int64Value>();
@@ -2268,7 +2217,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:dir")]
         public Int32Value? DirectionAngle
         {
             get => GetAttribute<Int32Value>();
@@ -2282,7 +2230,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:sx")]
         public Int32Value? HorizontalScalingFactor
         {
             get => GetAttribute<Int32Value>();
@@ -2296,7 +2243,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:sy")]
         public Int32Value? VerticalScalingFactor
         {
             get => GetAttribute<Int32Value>();
@@ -2310,7 +2256,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:kx")]
         public Int32Value? HorizontalSkewAngle
         {
             get => GetAttribute<Int32Value>();
@@ -2324,7 +2269,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:ky")]
         public Int32Value? VerticalSkewAngle
         {
             get => GetAttribute<Int32Value>();
@@ -2338,7 +2282,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:algn")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>? Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>();
@@ -2438,7 +2381,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:reflection.</para>
     /// </summary>
-    [SchemaAttr("w14:reflection")]
     public partial class Reflection : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2455,7 +2397,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:blurRad")]
         public Int64Value? BlurRadius
         {
             get => GetAttribute<Int64Value>();
@@ -2469,7 +2410,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:stA")]
         public Int32Value? StartingOpacity
         {
             get => GetAttribute<Int32Value>();
@@ -2483,7 +2423,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:stPos")]
         public Int32Value? StartPosition
         {
             get => GetAttribute<Int32Value>();
@@ -2497,7 +2436,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:endA")]
         public Int32Value? EndingOpacity
         {
             get => GetAttribute<Int32Value>();
@@ -2511,7 +2449,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:endPos")]
         public Int32Value? EndPosition
         {
             get => GetAttribute<Int32Value>();
@@ -2525,7 +2462,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:dist")]
         public Int64Value? DistanceFromText
         {
             get => GetAttribute<Int64Value>();
@@ -2539,7 +2475,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:dir")]
         public Int32Value? DirectionAngle
         {
             get => GetAttribute<Int32Value>();
@@ -2553,7 +2488,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:fadeDir")]
         public Int32Value? FadeDirection
         {
             get => GetAttribute<Int32Value>();
@@ -2567,7 +2501,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:sx")]
         public Int32Value? HorizontalScalingFactor
         {
             get => GetAttribute<Int32Value>();
@@ -2581,7 +2514,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:sy")]
         public Int32Value? VerticalScalingFactor
         {
             get => GetAttribute<Int32Value>();
@@ -2595,7 +2527,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:kx")]
         public Int32Value? HorizontalSkewAngle
         {
             get => GetAttribute<Int32Value>();
@@ -2609,7 +2540,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:ky")]
         public Int32Value? VerticalSkewAngle
         {
             get => GetAttribute<Int32Value>();
@@ -2623,7 +2553,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:algn")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>? Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>();
@@ -2721,7 +2650,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties" /> <c>&lt;w14:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:textOutline")]
     public partial class TextOutlineEffect : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2762,7 +2690,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:w")]
         public Int32Value? LineWidth
         {
             get => GetAttribute<Int32Value>();
@@ -2776,7 +2703,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:cap")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues>? CapType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues>>();
@@ -2790,7 +2716,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:cmpd")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues>? Compound
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues>>();
@@ -2804,7 +2729,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:algn")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues>? Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues>>();
@@ -2888,7 +2812,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties" /> <c>&lt;w14:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:textFill")]
     public partial class FillTextEffect : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2999,7 +2922,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.LightRig" /> <c>&lt;w14:lightRig></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:scene3d")]
     public partial class Scene3D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3091,7 +3013,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ContourColor" /> <c>&lt;w14:contourClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:props3d")]
     public partial class Properties3D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3132,7 +3053,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:extrusionH")]
         public Int64Value? ExtrusionHeight
         {
             get => GetAttribute<Int64Value>();
@@ -3146,7 +3066,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:contourW")]
         public Int64Value? ContourWidth
         {
             get => GetAttribute<Int64Value>();
@@ -3160,7 +3079,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:prstMaterial")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues>? PresetMaterialType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues>>();
@@ -3262,7 +3180,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:ligatures.</para>
     /// </summary>
-    [SchemaAttr("w14:ligatures")]
     public partial class Ligatures : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3279,7 +3196,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues>>();
@@ -3308,7 +3224,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:numForm.</para>
     /// </summary>
-    [SchemaAttr("w14:numForm")]
     public partial class NumberingFormat : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3325,7 +3240,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues>>();
@@ -3354,7 +3268,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:numSpacing.</para>
     /// </summary>
-    [SchemaAttr("w14:numSpacing")]
     public partial class NumberSpacing : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3371,7 +3284,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues>>();
@@ -3406,7 +3318,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.StyleSet" /> <c>&lt;w14:styleSet></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:stylisticSets")]
     public partial class StylisticSets : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3461,7 +3372,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:cntxtAlts.</para>
     /// </summary>
-    [SchemaAttr("w14:cntxtAlts")]
     public partial class ContextualAlternatives : OnOffType
     {
         /// <summary>
@@ -3487,7 +3397,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:conflictMode.</para>
     /// </summary>
-    [SchemaAttr("w14:conflictMode")]
     public partial class ConflictMode : OnOffType
     {
         /// <summary>
@@ -3513,7 +3422,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:discardImageEditingData.</para>
     /// </summary>
-    [SchemaAttr("w14:discardImageEditingData")]
     public partial class DiscardImageEditingData : OnOffType
     {
         /// <summary>
@@ -3539,7 +3447,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:checked.</para>
     /// </summary>
-    [SchemaAttr("w14:checked")]
     public partial class Checked : OnOffType
     {
         /// <summary>
@@ -3581,7 +3488,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>();
@@ -3612,7 +3518,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties" /> <c>&lt;w14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:contentPart")]
     public partial class ContentPart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3653,7 +3558,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -3667,7 +3571,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
@@ -3748,7 +3651,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:docId.</para>
     /// </summary>
-    [SchemaAttr("w14:docId")]
     public partial class DocumentId : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3765,7 +3667,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -3796,7 +3697,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:customXmlConflictInsRangeEnd.</para>
     /// </summary>
-    [SchemaAttr("w14:customXmlConflictInsRangeEnd")]
     public partial class CustomXmlConflictInsertionRangeEnd : MarkupType
     {
         /// <summary>
@@ -3822,7 +3722,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:customXmlConflictDelRangeEnd.</para>
     /// </summary>
-    [SchemaAttr("w14:customXmlConflictDelRangeEnd")]
     public partial class CustomXmlConflictDeletionRangeEnd : MarkupType
     {
         /// <summary>
@@ -3864,7 +3763,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -3892,7 +3790,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:defaultImageDpi.</para>
     /// </summary>
-    [SchemaAttr("w14:defaultImageDpi")]
     public partial class DefaultImageDpi : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3909,7 +3806,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -3946,7 +3842,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.UncheckedState" /> <c>&lt;w14:uncheckedState></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:checkbox")]
     public partial class SdtContentCheckBox : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4051,7 +3946,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:gs")]
     public partial class GradientStop : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4092,7 +3986,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:pos")]
         public Int32Value? StopPosition
         {
             get => GetAttribute<Int32Value>();
@@ -4161,7 +4054,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:fillToRect.</para>
     /// </summary>
-    [SchemaAttr("w14:fillToRect")]
     public partial class FillToRectangle : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4178,7 +4070,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:l")]
         public Int32Value? Left
         {
             get => GetAttribute<Int32Value>();
@@ -4192,7 +4083,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:t")]
         public Int32Value? Top
         {
             get => GetAttribute<Int32Value>();
@@ -4206,7 +4096,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:r")]
         public Int32Value? Right
         {
             get => GetAttribute<Int32Value>();
@@ -4220,7 +4109,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:b")]
         public Int32Value? Bottom
         {
             get => GetAttribute<Int32Value>();
@@ -4266,7 +4154,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.GradientStop" /> <c>&lt;w14:gs></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:gsLst")]
     public partial class GradientStopList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4321,7 +4208,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:rot.</para>
     /// </summary>
-    [SchemaAttr("w14:rot")]
     public partial class SphereCoordinates : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4338,7 +4224,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:lat")]
         public Int32Value? Lattitude
         {
             get => GetAttribute<Int32Value>();
@@ -4352,7 +4237,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:lon")]
         public Int32Value? Longitude
         {
             get => GetAttribute<Int32Value>();
@@ -4366,7 +4250,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:rev")]
         public Int32Value? Revolution
         {
             get => GetAttribute<Int32Value>();
@@ -4408,7 +4291,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:camera.</para>
     /// </summary>
-    [SchemaAttr("w14:camera")]
     public partial class Camera : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4425,7 +4307,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:prst")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues>? PresetCameraType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues>>();
@@ -4461,7 +4342,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SphereCoordinates" /> <c>&lt;w14:rot></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:lightRig")]
     public partial class LightRig : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4502,7 +4382,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:rig")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues>? LightRigType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues>>();
@@ -4516,7 +4395,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:dir")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues>? LightDirectionType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues>>();
@@ -4570,7 +4448,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:bevelT.</para>
     /// </summary>
-    [SchemaAttr("w14:bevelT")]
     public partial class BevelTop : BevelType
     {
         /// <summary>
@@ -4596,7 +4473,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:bevelB.</para>
     /// </summary>
-    [SchemaAttr("w14:bevelB")]
     public partial class BevelBottom : BevelType
     {
         /// <summary>
@@ -4638,7 +4514,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:w")]
         public Int64Value? Width
         {
             get => GetAttribute<Int64Value>();
@@ -4652,7 +4527,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:h")]
         public Int64Value? Height
         {
             get => GetAttribute<Int64Value>();
@@ -4666,7 +4540,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:prst")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues>? PresetProfileType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues>>();
@@ -4707,7 +4580,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:extrusionClr")]
     public partial class ExtrusionColor : ColorType
     {
         /// <summary>
@@ -4775,7 +4647,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:contourClr")]
     public partial class ContourColor : ColorType
     {
         /// <summary>
@@ -4915,7 +4786,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:styleSet.</para>
     /// </summary>
-    [SchemaAttr("w14:styleSet")]
     public partial class StyleSet : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4932,7 +4802,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -4946,7 +4815,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>();
@@ -4980,7 +4848,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:checkedState.</para>
     /// </summary>
-    [SchemaAttr("w14:checkedState")]
     public partial class CheckedState : CheckBoxSymbolType
     {
         /// <summary>
@@ -5006,7 +4873,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:uncheckedState.</para>
     /// </summary>
-    [SchemaAttr("w14:uncheckedState")]
     public partial class UncheckedState : CheckBoxSymbolType
     {
         /// <summary>
@@ -5048,7 +4914,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:font")]
         public StringValue? Font
         {
             get => GetAttribute<StringValue>();
@@ -5062,7 +4927,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:val")]
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -5098,7 +4962,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:cNvPr")]
     public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5136,7 +4999,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>Application defined unique identifier.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -5147,7 +5009,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>Name compatible with Object Model (non-unique).</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -5158,7 +5019,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>Description of the drawing element.</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr("descr")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -5169,7 +5029,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>Flag determining to show or hide this element.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -5180,7 +5039,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -5270,7 +5128,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:cNvContentPartPr")]
     public partial class NonVisualInkContentPartProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5308,7 +5165,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>isComment, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
-        [SchemaAttr("isComment")]
         public BooleanValue? IsComment
         {
             get => GetAttribute<BooleanValue>();
@@ -5373,7 +5229,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties" /> <c>&lt;w14:cNvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:nvContentPartPr")]
     public partial class WordNonVisualContentPartShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5463,7 +5318,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:xfrm")]
     public partial class Transform2D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5501,7 +5355,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr("rot")]
         public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -5512,7 +5365,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr("flipH")]
         public BooleanValue? HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -5523,7 +5375,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr("flipV")]
         public BooleanValue? VerticalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -5589,7 +5440,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w14:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>

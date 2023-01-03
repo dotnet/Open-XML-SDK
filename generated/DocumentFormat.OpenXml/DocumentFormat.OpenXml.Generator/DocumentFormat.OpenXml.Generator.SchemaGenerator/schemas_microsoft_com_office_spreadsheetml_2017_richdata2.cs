@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -34,7 +32,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10" /> <c>&lt;xlrd2:top10></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:filterColumn")]
     public partial class RichFilterColumn : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -162,7 +159,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:richSortCondition.</para>
     /// </summary>
-    [SchemaAttr("xlrd2:richSortCondition")]
     public partial class RichSortCondition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -176,7 +172,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>richSortKey, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: richSortKey</para>
         /// </summary>
-        [SchemaAttr("richSortKey")]
         public StringValue? RichSortKey
         {
             get => GetAttribute<StringValue>();
@@ -187,7 +182,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>descending, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: descending</para>
         /// </summary>
-        [SchemaAttr("descending")]
         public BooleanValue? Descending
         {
             get => GetAttribute<BooleanValue>();
@@ -198,7 +192,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>sortBy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
-        [SchemaAttr("sortBy")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>? SortBy
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
@@ -209,7 +202,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>ref, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
@@ -220,7 +212,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>customList, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: customList</para>
         /// </summary>
-        [SchemaAttr("customList")]
         public StringValue? CustomList
         {
             get => GetAttribute<StringValue>();
@@ -231,7 +222,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>dxfId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        [SchemaAttr("dxfId")]
         public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
@@ -242,7 +232,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>iconSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        [SchemaAttr("iconSet")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
@@ -253,7 +242,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>iconId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
-        [SchemaAttr("iconId")]
         public UInt32Value? IconId
         {
             get => GetAttribute<UInt32Value>();
@@ -295,7 +283,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData" /> <c>&lt;xlrd2:spbData></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:supportingPropertyBags")]
     public partial class SupportingPropertyBags : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -416,7 +403,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure" /> <c>&lt;xlrd2:s></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:spbStructures")]
     public partial class SupportingPropertyBagStructures : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -454,7 +440,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -527,7 +512,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array" /> <c>&lt;xlrd2:a></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:arrayData")]
     public partial class ArrayData : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -565,7 +549,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -640,7 +623,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles" /> <c>&lt;xlrd2:richStyles></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:richStyleSheet")]
     public partial class RichStylesheet : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -792,7 +774,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes" /> <c>&lt;xlrd2:types></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:rvTypesInfo")]
     public partial class RichValueTypesInfo : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -929,7 +910,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilter" /> <c>&lt;xlrd2:filter></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:filters")]
     public partial class RichFilters : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -988,7 +968,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:top10.</para>
     /// </summary>
-    [SchemaAttr("xlrd2:top10")]
     public partial class RichTop10 : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1002,7 +981,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>key, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: key</para>
         /// </summary>
-        [SchemaAttr("key")]
         public StringValue? Key
         {
             get => GetAttribute<StringValue>();
@@ -1013,7 +991,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Top</para>
         /// <para>Represents the following attribute in the schema: top</para>
         /// </summary>
-        [SchemaAttr("top")]
         public BooleanValue? Top
         {
             get => GetAttribute<BooleanValue>();
@@ -1024,7 +1001,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Filter by Percent</para>
         /// <para>Represents the following attribute in the schema: percent</para>
         /// </summary>
-        [SchemaAttr("percent")]
         public BooleanValue? Percent
         {
             get => GetAttribute<BooleanValue>();
@@ -1035,7 +1011,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Top or Bottom Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
@@ -1046,7 +1021,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Filter Value</para>
         /// <para>Represents the following attribute in the schema: filterVal</para>
         /// </summary>
-        [SchemaAttr("filterVal")]
         public DoubleValue? FilterValue
         {
             get => GetAttribute<DoubleValue>();
@@ -1085,7 +1059,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilter" /> <c>&lt;xlrd2:customFilter></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:customFilters")]
     public partial class CustomRichFilters : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1123,7 +1096,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>and, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: and</para>
         /// </summary>
-        [SchemaAttr("and")]
         public BooleanValue? And
         {
             get => GetAttribute<BooleanValue>();
@@ -1158,7 +1130,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:dynamicFilter.</para>
     /// </summary>
-    [SchemaAttr("xlrd2:dynamicFilter")]
     public partial class DynamicRichFilter : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1172,7 +1143,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>key, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: key</para>
         /// </summary>
-        [SchemaAttr("key")]
         public StringValue? Key
         {
             get => GetAttribute<StringValue>();
@@ -1183,7 +1153,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Dynamic filter type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues>>();
@@ -1194,7 +1163,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
@@ -1205,7 +1173,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Max Value</para>
         /// <para>Represents the following attribute in the schema: maxVal</para>
         /// </summary>
-        [SchemaAttr("maxVal")]
         public DoubleValue? MaxVal
         {
             get => GetAttribute<DoubleValue>();
@@ -1216,7 +1183,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>valIso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: valIso</para>
         /// </summary>
-        [SchemaAttr("valIso")]
         public DateTimeValue? ValIso
         {
             get => GetAttribute<DateTimeValue>();
@@ -1227,7 +1193,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>maxValIso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: maxValIso</para>
         /// </summary>
-        [SchemaAttr("maxValIso")]
         public DateTimeValue? MaxValIso
         {
             get => GetAttribute<DateTimeValue>();
@@ -1272,7 +1237,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1333,7 +1297,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:filter.</para>
     /// </summary>
-    [SchemaAttr("xlrd2:filter")]
     public partial class RichFilter : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1347,7 +1310,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>key, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: key</para>
         /// </summary>
-        [SchemaAttr("key")]
         public StringValue? Key
         {
             get => GetAttribute<StringValue>();
@@ -1358,7 +1320,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>val, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -1369,7 +1330,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>blank, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: blank</para>
         /// </summary>
-        [SchemaAttr("blank")]
         public BooleanValue? Blank
         {
             get => GetAttribute<BooleanValue>();
@@ -1380,7 +1340,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>nodata, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: nodata</para>
         /// </summary>
-        [SchemaAttr("nodata")]
         public BooleanValue? Nodata
         {
             get => GetAttribute<BooleanValue>();
@@ -1408,7 +1367,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:dateGroupItem.</para>
     /// </summary>
-    [SchemaAttr("xlrd2:dateGroupItem")]
     public partial class RichDateGroupItem : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1422,7 +1380,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>key, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: key</para>
         /// </summary>
-        [SchemaAttr("key")]
         public StringValue? Key
         {
             get => GetAttribute<StringValue>();
@@ -1433,7 +1390,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Year</para>
         /// <para>Represents the following attribute in the schema: year</para>
         /// </summary>
-        [SchemaAttr("year")]
         public UInt16Value? Year
         {
             get => GetAttribute<UInt16Value>();
@@ -1444,7 +1400,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Month</para>
         /// <para>Represents the following attribute in the schema: month</para>
         /// </summary>
-        [SchemaAttr("month")]
         public UInt16Value? Month
         {
             get => GetAttribute<UInt16Value>();
@@ -1455,7 +1410,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Day</para>
         /// <para>Represents the following attribute in the schema: day</para>
         /// </summary>
-        [SchemaAttr("day")]
         public UInt16Value? Day
         {
             get => GetAttribute<UInt16Value>();
@@ -1466,7 +1420,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Hour</para>
         /// <para>Represents the following attribute in the schema: hour</para>
         /// </summary>
-        [SchemaAttr("hour")]
         public UInt16Value? Hour
         {
             get => GetAttribute<UInt16Value>();
@@ -1477,7 +1430,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Minute</para>
         /// <para>Represents the following attribute in the schema: minute</para>
         /// </summary>
-        [SchemaAttr("minute")]
         public UInt16Value? Minute
         {
             get => GetAttribute<UInt16Value>();
@@ -1488,7 +1440,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Second</para>
         /// <para>Represents the following attribute in the schema: second</para>
         /// </summary>
-        [SchemaAttr("second")]
         public UInt16Value? Second
         {
             get => GetAttribute<UInt16Value>();
@@ -1499,7 +1450,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Date Time Grouping</para>
         /// <para>Represents the following attribute in the schema: dateTimeGrouping</para>
         /// </summary>
-        [SchemaAttr("dateTimeGrouping")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues>? DateTimeGrouping
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues>>();
@@ -1537,7 +1487,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:customFilter.</para>
     /// </summary>
-    [SchemaAttr("xlrd2:customFilter")]
     public partial class CustomRichFilter : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1551,7 +1500,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>key, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: key</para>
         /// </summary>
-        [SchemaAttr("key")]
         public StringValue? Key
         {
             get => GetAttribute<StringValue>();
@@ -1562,7 +1510,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Filter Comparison Operator</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        [SchemaAttr("operator")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>? Operator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>>();
@@ -1573,7 +1520,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Top or Bottom Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -1607,7 +1553,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray" /> <c>&lt;xlrd2:a></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:spbArrays")]
     public partial class SupportingPropertyBagArrayData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1645,7 +1590,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -1687,7 +1631,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag" /> <c>&lt;xlrd2:spb></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:spbData")]
     public partial class SupportingPropertyBagData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1725,7 +1668,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -1766,7 +1708,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValue" /> <c>&lt;xlrd2:v></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:spb")]
     public partial class SupportingPropertyBag : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1804,7 +1745,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>s, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        [SchemaAttr("s")]
         public UInt32Value? S
         {
             get => GetAttribute<UInt32Value>();
@@ -1837,7 +1777,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:v.</para>
     /// </summary>
-    [SchemaAttr("xlrd2:v")]
     public partial class SupportingPropertyBagValue : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1882,7 +1821,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagKey" /> <c>&lt;xlrd2:k></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:s")]
     public partial class SupportingPropertyBagStructure : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1937,7 +1875,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:k.</para>
     /// </summary>
-    [SchemaAttr("xlrd2:k")]
     public partial class SupportingPropertyBagKey : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1951,7 +1888,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>n, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [SchemaAttr("n")]
         public StringValue? N
         {
             get => GetAttribute<StringValue>();
@@ -1962,7 +1898,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValueType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValueType>>();
@@ -1997,7 +1932,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValue" /> <c>&lt;xlrd2:v></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:a")]
     public partial class SupportingPropertyBagArray : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2035,7 +1969,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -2068,7 +2001,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:v.</para>
     /// </summary>
-    [SchemaAttr("xlrd2:v")]
     public partial class SupportingPropertyBagArrayValue : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2095,7 +2027,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValueType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValueType>>();
@@ -2126,7 +2057,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValue" /> <c>&lt;xlrd2:v></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:a")]
     public partial class Array : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2164,7 +2094,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>r, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr("r")]
         public UInt32Value? R
         {
             get => GetAttribute<UInt32Value>();
@@ -2175,7 +2104,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>c, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
-        [SchemaAttr("c")]
         public UInt32Value? C
         {
             get => GetAttribute<UInt32Value>();
@@ -2209,7 +2137,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:v.</para>
     /// </summary>
-    [SchemaAttr("xlrd2:v")]
     public partial class ArrayValue : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2236,7 +2163,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValueType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValueType>>();
@@ -2267,7 +2193,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:dxfs")]
     public partial class Dxfs : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2305,7 +2230,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>Format Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -2341,7 +2265,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperty" /> <c>&lt;xlrd2:rPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:richProperties")]
     public partial class RichFormatProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2402,7 +2325,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyle" /> <c>&lt;xlrd2:rSty></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:richStyles")]
     public partial class RichStyles : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2457,7 +2379,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:rPr.</para>
     /// </summary>
-    [SchemaAttr("xlrd2:rPr")]
     public partial class RichFormatProperty : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2471,7 +2392,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>n, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [SchemaAttr("n")]
         public StringValue? N
         {
             get => GetAttribute<StringValue>();
@@ -2482,7 +2402,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatPropertyType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatPropertyType>>();
@@ -2520,7 +2439,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylePropertyValue" /> <c>&lt;xlrd2:rpv></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:rSty")]
     public partial class RichStyle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2558,7 +2476,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>dxfid, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: dxfid</para>
         /// </summary>
-        [SchemaAttr("dxfid")]
         public UInt32Value? Dxfid
         {
             get => GetAttribute<UInt32Value>();
@@ -2588,7 +2505,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:rpv.</para>
     /// </summary>
-    [SchemaAttr("xlrd2:rpv")]
     public partial class RichStylePropertyValue : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2615,7 +2531,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>i, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        [SchemaAttr("i")]
         public UInt32Value? I
         {
             get => GetAttribute<UInt32Value>();
@@ -2650,7 +2565,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags" /> <c>&lt;xlrd2:keyFlags></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:global")]
     public partial class RichValueGlobalType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2739,7 +2653,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueType" /> <c>&lt;xlrd2:type></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:types")]
     public partial class RichValueTypes : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2801,7 +2714,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags" /> <c>&lt;xlrd2:keyFlags></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:type")]
     public partial class RichValueType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2839,7 +2751,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>name, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -2906,7 +2817,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKey" /> <c>&lt;xlrd2:key></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:keyFlags")]
     public partial class RichValueTypeKeyFlags : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2967,7 +2877,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKeyFlag" /> <c>&lt;xlrd2:flag></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd2:key")]
     public partial class RichValueTypeReservedKey : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3005,7 +2914,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>name, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -3038,7 +2946,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:flag.</para>
     /// </summary>
-    [SchemaAttr("xlrd2:flag")]
     public partial class RichValueTypeReservedKeyFlag : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3052,7 +2959,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>name, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -3063,7 +2969,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>value, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [SchemaAttr("value")]
         public BooleanValue? Value
         {
             get => GetAttribute<BooleanValue>();

@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.EMMA;
 using DocumentFormat.OpenXml.Framework;
@@ -37,7 +35,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:ink")]
     public partial class Ink : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -75,7 +72,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>documentID</para>
         /// <para>Represents the following attribute in the schema: documentID</para>
         /// </summary>
-        [SchemaAttr("documentID")]
         public StringValue? DocumentId
         {
             get => GetAttribute<StringValue>();
@@ -119,7 +115,6 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:bind.</para>
     /// </summary>
-    [SchemaAttr("inkml:bind")]
     public partial class Bind : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -133,7 +128,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>source</para>
         /// <para>Represents the following attribute in the schema: source</para>
         /// </summary>
-        [SchemaAttr("source")]
         public StringValue? Source
         {
             get => GetAttribute<StringValue>();
@@ -144,7 +138,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr("target")]
         public StringValue? Target
         {
             get => GetAttribute<StringValue>();
@@ -155,7 +148,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>column</para>
         /// <para>Represents the following attribute in the schema: column</para>
         /// </summary>
-        [SchemaAttr("column")]
         public StringValue? Column
         {
             get => GetAttribute<StringValue>();
@@ -166,7 +158,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>variable</para>
         /// <para>Represents the following attribute in the schema: variable</para>
         /// </summary>
-        [SchemaAttr("variable")]
         public StringValue? Variable
         {
             get => GetAttribute<StringValue>();
@@ -193,7 +184,6 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:table.</para>
     /// </summary>
-    [SchemaAttr("inkml:table")]
     public partial class Table : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -223,7 +213,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -234,7 +223,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>apply</para>
         /// <para>Represents the following attribute in the schema: apply</para>
         /// </summary>
-        [SchemaAttr("apply")]
         public EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>? Apply
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>>();
@@ -245,7 +233,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>interpolation</para>
         /// <para>Represents the following attribute in the schema: interpolation</para>
         /// </summary>
-        [SchemaAttr("interpolation")]
         public EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>? Interpolation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>>();
@@ -271,7 +258,6 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:matrix.</para>
     /// </summary>
-    [SchemaAttr("inkml:matrix")]
     public partial class Matrix : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -301,7 +287,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -334,7 +319,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Table" /> <c>&lt;inkml:table></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:mapping")]
     public partial class Mapping : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -375,7 +359,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -386,7 +369,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>>();
@@ -397,7 +379,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>mappingRef</para>
         /// <para>Represents the following attribute in the schema: mappingRef</para>
         /// </summary>
-        [SchemaAttr("mappingRef")]
         public StringValue? MappingRef
         {
             get => GetAttribute<StringValue>();
@@ -452,7 +433,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:channel")]
     public partial class Channel : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -493,7 +473,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -504,7 +483,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -515,7 +493,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues>>();
@@ -526,7 +503,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>default</para>
         /// <para>Represents the following attribute in the schema: default</para>
         /// </summary>
-        [SchemaAttr("default")]
         public StringValue? Default
         {
             get => GetAttribute<StringValue>();
@@ -537,7 +513,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>min</para>
         /// <para>Represents the following attribute in the schema: min</para>
         /// </summary>
-        [SchemaAttr("min")]
         public DecimalValue? Min
         {
             get => GetAttribute<DecimalValue>();
@@ -548,7 +523,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>max</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
-        [SchemaAttr("max")]
         public DecimalValue? Max
         {
             get => GetAttribute<DecimalValue>();
@@ -559,7 +533,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>orientation</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        [SchemaAttr("orientation")]
         public EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues>? Orientation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues>>();
@@ -570,7 +543,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>respectTo</para>
         /// <para>Represents the following attribute in the schema: respectTo</para>
         /// </summary>
-        [SchemaAttr("respectTo")]
         public StringValue? RespectTo
         {
             get => GetAttribute<StringValue>();
@@ -581,7 +553,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        [SchemaAttr("units")]
         public StringValue? Units
         {
             get => GetAttribute<StringValue>();
@@ -659,7 +630,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Channel" /> <c>&lt;inkml:channel></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:intermittentChannels")]
     public partial class IntermittentChannels : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -713,7 +683,6 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:channelProperty.</para>
     /// </summary>
-    [SchemaAttr("inkml:channelProperty")]
     public partial class ChannelProperty : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -727,7 +696,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>channel</para>
         /// <para>Represents the following attribute in the schema: channel</para>
         /// </summary>
-        [SchemaAttr("channel")]
         public StringValue? Channel
         {
             get => GetAttribute<StringValue>();
@@ -738,7 +706,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -749,7 +716,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [SchemaAttr("value")]
         public DecimalValue? Value
         {
             get => GetAttribute<DecimalValue>();
@@ -760,7 +726,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        [SchemaAttr("units")]
         public StringValue? Units
         {
             get => GetAttribute<StringValue>();
@@ -830,7 +795,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.IntermittentChannels" /> <c>&lt;inkml:intermittentChannels></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:traceFormat")]
     public partial class TraceFormat : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -871,7 +835,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -902,7 +865,6 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:sampleRate.</para>
     /// </summary>
-    [SchemaAttr("inkml:sampleRate")]
     public partial class SampleRate : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -916,7 +878,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>uniform</para>
         /// <para>Represents the following attribute in the schema: uniform</para>
         /// </summary>
-        [SchemaAttr("uniform")]
         public BooleanValue? Uniform
         {
             get => GetAttribute<BooleanValue>();
@@ -927,7 +888,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [SchemaAttr("value")]
         public DecimalValue? Value
         {
             get => GetAttribute<DecimalValue>();
@@ -955,7 +915,6 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:latency.</para>
     /// </summary>
-    [SchemaAttr("inkml:latency")]
     public partial class Latency : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -969,7 +928,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [SchemaAttr("value")]
         public DecimalValue? Value
         {
             get => GetAttribute<DecimalValue>();
@@ -996,7 +954,6 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:activeArea.</para>
     /// </summary>
-    [SchemaAttr("inkml:activeArea")]
     public partial class ActiveArea : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1010,7 +967,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public StringValue? Size
         {
             get => GetAttribute<StringValue>();
@@ -1021,7 +977,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>height</para>
         /// <para>Represents the following attribute in the schema: height</para>
         /// </summary>
-        [SchemaAttr("height")]
         public DecimalValue? Height
         {
             get => GetAttribute<DecimalValue>();
@@ -1032,7 +987,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>width</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-        [SchemaAttr("width")]
         public DecimalValue? Width
         {
             get => GetAttribute<DecimalValue>();
@@ -1043,7 +997,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        [SchemaAttr("units")]
         public StringValue? Units
         {
             get => GetAttribute<StringValue>();
@@ -1087,7 +1040,6 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:srcProperty.</para>
     /// </summary>
-    [SchemaAttr("inkml:srcProperty")]
     public partial class SourceProperty : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1101,7 +1053,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -1112,7 +1063,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [SchemaAttr("value")]
         public DecimalValue? Value
         {
             get => GetAttribute<DecimalValue>();
@@ -1123,7 +1073,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        [SchemaAttr("units")]
         public StringValue? Units
         {
             get => GetAttribute<StringValue>();
@@ -1178,7 +1127,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.ChannelProperty" /> <c>&lt;inkml:channelProperty></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:channelProperties")]
     public partial class ChannelProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1232,7 +1180,6 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:annotation.</para>
     /// </summary>
-    [SchemaAttr("inkml:annotation")]
     public partial class Annotation : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1259,7 +1206,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public StringValue? Type
         {
             get => GetAttribute<StringValue>();
@@ -1270,7 +1216,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>encoding</para>
         /// <para>Represents the following attribute in the schema: encoding</para>
         /// </summary>
-        [SchemaAttr("encoding")]
         public StringValue? Encoding
         {
             get => GetAttribute<StringValue>();
@@ -1301,7 +1246,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Emma" /> <c>&lt;emma:emma></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:annotationXML")]
     public partial class AnnotationXml : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1339,7 +1283,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public StringValue? Type
         {
             get => GetAttribute<StringValue>();
@@ -1350,7 +1293,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>encoding</para>
         /// <para>Represents the following attribute in the schema: encoding</para>
         /// </summary>
-        [SchemaAttr("encoding")]
         public StringValue? Encoding
         {
             get => GetAttribute<StringValue>();
@@ -1361,7 +1303,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>href</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        [SchemaAttr("href")]
         public StringValue? Href
         {
             get => GetAttribute<StringValue>();
@@ -1415,7 +1356,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:brushProperty")]
     public partial class BrushProperty : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1453,7 +1393,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -1464,7 +1403,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [SchemaAttr("value")]
         public StringValue? Value
         {
             get => GetAttribute<StringValue>();
@@ -1475,7 +1413,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        [SchemaAttr("units")]
         public StringValue? Units
         {
             get => GetAttribute<StringValue>();
@@ -1550,7 +1487,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:canvas")]
     public partial class Canvas : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1591,7 +1527,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1602,7 +1537,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>traceFormatRef</para>
         /// <para>Represents the following attribute in the schema: traceFormatRef</para>
         /// </summary>
-        [SchemaAttr("traceFormatRef")]
         public StringValue? TraceFormatRef
         {
             get => GetAttribute<StringValue>();
@@ -1654,7 +1588,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:canvasTransform")]
     public partial class CanvasTransform : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1695,7 +1628,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1706,7 +1638,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>invertible</para>
         /// <para>Represents the following attribute in the schema: invertible</para>
         /// </summary>
-        [SchemaAttr("invertible")]
         public BooleanValue? Invertible
         {
             get => GetAttribute<BooleanValue>();
@@ -1747,7 +1678,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:inkSource")]
     public partial class InkSource : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1788,7 +1718,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1799,7 +1728,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>manufacturer</para>
         /// <para>Represents the following attribute in the schema: manufacturer</para>
         /// </summary>
-        [SchemaAttr("manufacturer")]
         public StringValue? Manufacturer
         {
             get => GetAttribute<StringValue>();
@@ -1810,7 +1738,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>model</para>
         /// <para>Represents the following attribute in the schema: model</para>
         /// </summary>
-        [SchemaAttr("model")]
         public StringValue? Model
         {
             get => GetAttribute<StringValue>();
@@ -1821,7 +1748,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>serialNo</para>
         /// <para>Represents the following attribute in the schema: serialNo</para>
         /// </summary>
-        [SchemaAttr("serialNo")]
         public StringValue? SerialNo
         {
             get => GetAttribute<StringValue>();
@@ -1832,7 +1758,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>specificationRef</para>
         /// <para>Represents the following attribute in the schema: specificationRef</para>
         /// </summary>
-        [SchemaAttr("specificationRef")]
         public StringValue? SpecificationRef
         {
             get => GetAttribute<StringValue>();
@@ -1843,7 +1768,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -1953,7 +1877,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.BrushProperty" /> <c>&lt;inkml:brushProperty></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:brush")]
     public partial class Brush : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1994,7 +1917,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2005,7 +1927,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        [SchemaAttr("brushRef")]
         public StringValue? BrushRef
         {
             get => GetAttribute<StringValue>();
@@ -2042,7 +1963,6 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:timestamp.</para>
     /// </summary>
-    [SchemaAttr("inkml:timestamp")]
     public partial class Timestamp : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2059,7 +1979,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2070,7 +1989,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>time</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        [SchemaAttr("time")]
         public DecimalValue? Time
         {
             get => GetAttribute<DecimalValue>();
@@ -2081,7 +1999,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>timestampRef</para>
         /// <para>Represents the following attribute in the schema: timestampRef</para>
         /// </summary>
-        [SchemaAttr("timestampRef")]
         public StringValue? TimestampRef
         {
             get => GetAttribute<StringValue>();
@@ -2092,7 +2009,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>timeString</para>
         /// <para>Represents the following attribute in the schema: timeString</para>
         /// </summary>
-        [SchemaAttr("timeString")]
         public DateTimeValue? TimeString
         {
             get => GetAttribute<DateTimeValue>();
@@ -2103,7 +2019,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>timeOffset</para>
         /// <para>Represents the following attribute in the schema: timeOffset</para>
         /// </summary>
-        [SchemaAttr("timeOffset")]
         public DecimalValue? TimeOffset
         {
             get => GetAttribute<DecimalValue>();
@@ -2137,7 +2052,6 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:trace.</para>
     /// </summary>
-    [SchemaAttr("inkml:trace")]
     public partial class Trace : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2167,7 +2081,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2178,7 +2091,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues>>();
@@ -2189,7 +2101,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>continuation</para>
         /// <para>Represents the following attribute in the schema: continuation</para>
         /// </summary>
-        [SchemaAttr("continuation")]
         public EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues>? Continuation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues>>();
@@ -2200,7 +2111,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>priorRef</para>
         /// <para>Represents the following attribute in the schema: priorRef</para>
         /// </summary>
-        [SchemaAttr("priorRef")]
         public StringValue? PriorRef
         {
             get => GetAttribute<StringValue>();
@@ -2211,7 +2121,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        [SchemaAttr("contextRef")]
         public StringValue? ContextRef
         {
             get => GetAttribute<StringValue>();
@@ -2222,7 +2131,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        [SchemaAttr("brushRef")]
         public StringValue? BrushRef
         {
             get => GetAttribute<StringValue>();
@@ -2233,7 +2141,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>duration</para>
         /// <para>Represents the following attribute in the schema: duration</para>
         /// </summary>
-        [SchemaAttr("duration")]
         public DecimalValue? Duration
         {
             get => GetAttribute<DecimalValue>();
@@ -2244,7 +2151,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>timeOffset</para>
         /// <para>Represents the following attribute in the schema: timeOffset</para>
         /// </summary>
-        [SchemaAttr("timeOffset")]
         public DecimalValue? TimeOffset
         {
             get => GetAttribute<DecimalValue>();
@@ -2293,7 +2199,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:traceGroup")]
     public partial class TraceGroup : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2334,7 +2239,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2345,7 +2249,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        [SchemaAttr("contextRef")]
         public StringValue? ContextRef
         {
             get => GetAttribute<StringValue>();
@@ -2356,7 +2259,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        [SchemaAttr("brushRef")]
         public StringValue? BrushRef
         {
             get => GetAttribute<StringValue>();
@@ -2407,7 +2309,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:traceView")]
     public partial class TraceView : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2448,7 +2349,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2459,7 +2359,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        [SchemaAttr("contextRef")]
         public StringValue? ContextRef
         {
             get => GetAttribute<StringValue>();
@@ -2470,7 +2369,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>traceDataRef</para>
         /// <para>Represents the following attribute in the schema: traceDataRef</para>
         /// </summary>
-        [SchemaAttr("traceDataRef")]
         public StringValue? TraceDataRef
         {
             get => GetAttribute<StringValue>();
@@ -2481,7 +2379,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>from</para>
         /// <para>Represents the following attribute in the schema: from</para>
         /// </summary>
-        [SchemaAttr("from")]
         public StringValue? From
         {
             get => GetAttribute<StringValue>();
@@ -2492,7 +2389,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>to</para>
         /// <para>Represents the following attribute in the schema: to</para>
         /// </summary>
-        [SchemaAttr("to")]
         public StringValue? To
         {
             get => GetAttribute<StringValue>();
@@ -2546,7 +2442,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:context")]
     public partial class Context : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2587,7 +2482,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2598,7 +2492,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        [SchemaAttr("contextRef")]
         public StringValue? ContextRef
         {
             get => GetAttribute<StringValue>();
@@ -2609,7 +2502,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>canvasRef</para>
         /// <para>Represents the following attribute in the schema: canvasRef</para>
         /// </summary>
-        [SchemaAttr("canvasRef")]
         public StringValue? CanvasRef
         {
             get => GetAttribute<StringValue>();
@@ -2620,7 +2512,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>canvasTransformRef</para>
         /// <para>Represents the following attribute in the schema: canvasTransformRef</para>
         /// </summary>
-        [SchemaAttr("canvasTransformRef")]
         public StringValue? CanvasTransformRef
         {
             get => GetAttribute<StringValue>();
@@ -2631,7 +2522,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>traceFormatRef</para>
         /// <para>Represents the following attribute in the schema: traceFormatRef</para>
         /// </summary>
-        [SchemaAttr("traceFormatRef")]
         public StringValue? TraceFromatRef
         {
             get => GetAttribute<StringValue>();
@@ -2642,7 +2532,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>inkSourceRef</para>
         /// <para>Represents the following attribute in the schema: inkSourceRef</para>
         /// </summary>
-        [SchemaAttr("inkSourceRef")]
         public StringValue? InkSourceRef
         {
             get => GetAttribute<StringValue>();
@@ -2653,7 +2542,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        [SchemaAttr("brushRef")]
         public StringValue? BrushRef
         {
             get => GetAttribute<StringValue>();
@@ -2664,7 +2552,6 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>timestampRef</para>
         /// <para>Represents the following attribute in the schema: timestampRef</para>
         /// </summary>
-        [SchemaAttr("timestampRef")]
         public StringValue? TimestampRef
         {
             get => GetAttribute<StringValue>();
@@ -2825,7 +2712,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("inkml:definitions")]
     public partial class Definitions : TypedOpenXmlCompositeElement
     {
         /// <summary>

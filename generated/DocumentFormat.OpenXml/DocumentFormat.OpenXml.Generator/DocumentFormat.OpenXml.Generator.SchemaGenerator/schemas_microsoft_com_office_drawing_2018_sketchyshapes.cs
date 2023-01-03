@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -24,7 +22,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:lineSketchNone.</para>
     /// </summary>
-    [SchemaAttr("ask:lineSketchNone")]
     public partial class LineSketchNoneEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -50,7 +47,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:lineSketchCurved.</para>
     /// </summary>
-    [SchemaAttr("ask:lineSketchCurved")]
     public partial class LineSketchCurvedEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -76,7 +72,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:lineSketchFreehand.</para>
     /// </summary>
-    [SchemaAttr("ask:lineSketchFreehand")]
     public partial class LineSketchFreehandEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -102,7 +97,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:lineSketchScribble.</para>
     /// </summary>
-    [SchemaAttr("ask:lineSketchScribble")]
     public partial class LineSketchScribbleEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -158,7 +152,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchSeed" /> <c>&lt;ask:seed></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ask:lineSketchStyleProps")]
     public partial class LineSketchStyleProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -196,7 +189,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <para>sd, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: sd</para>
         /// </summary>
-        [SchemaAttr("sd")]
         public UInt32Value? Sd
         {
             get => GetAttribute<UInt32Value>();
@@ -249,7 +241,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty" /> <c>&lt;ask:lineSketchScribble></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ask:type")]
     public partial class LineSketchTypeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -368,7 +359,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:seed.</para>
     /// </summary>
-    [SchemaAttr("ask:seed")]
     public partial class LineSketchSeed : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -414,7 +404,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ask:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>

@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -39,7 +37,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBoxInfo2" /> <c>&lt;wps:txbx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wps:wsp")]
     public partial class WordprocessingShape : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -77,7 +74,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>normalEastAsianFlow, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: normalEastAsianFlow</para>
         /// </summary>
-        [SchemaAttr("normalEastAsianFlow")]
         public BooleanValue? NormalEastAsianFlow
         {
             get => GetAttribute<BooleanValue>();
@@ -148,7 +144,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wps:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -217,7 +212,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wps:cNvPr")]
     public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -255,7 +249,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Application defined unique identifier.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -266,7 +259,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Name compatible with Object Model (non-unique).</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -277,7 +269,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Description of the drawing element.</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr("descr")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -288,7 +279,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Flag determining to show or hide this element.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -299,7 +289,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -389,7 +378,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wps:cNvSpPr")]
     public partial class NonVisualDrawingShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -427,7 +415,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Text Box</para>
         /// <para>Represents the following attribute in the schema: txBox</para>
         /// </summary>
-        [SchemaAttr("txBox")]
         public BooleanValue? TextBox
         {
             get => GetAttribute<BooleanValue>();
@@ -494,7 +481,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wps:cNvCnPr")]
     public partial class NonVisualConnectorProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -627,7 +613,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wps:spPr")]
     public partial class ShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -665,7 +650,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -766,7 +750,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wps:style")]
     public partial class ShapeStyle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -886,7 +869,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextBoxContent" /> <c>&lt;w:txbxContent></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wps:txbx")]
     public partial class TextBoxInfo2 : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -924,7 +906,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt16Value? Id
         {
             get => GetAttribute<UInt16Value>();
@@ -988,7 +969,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList" /> <c>&lt;wps:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wps:linkedTxbx")]
     public partial class LinkedTextBox : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1026,7 +1006,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt16Value? Id
         {
             get => GetAttribute<UInt16Value>();
@@ -1037,7 +1016,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>seq, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: seq</para>
         /// </summary>
-        [SchemaAttr("seq")]
         public UInt16Value? Sequence
         {
             get => GetAttribute<UInt16Value>();
@@ -1100,7 +1078,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeAutoFit" /> <c>&lt;a:spAutoFit></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wps:bodyPr")]
     public partial class TextBodyProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1138,7 +1115,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr("rot")]
         public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -1149,7 +1125,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Paragraph Spacing</para>
         /// <para>Represents the following attribute in the schema: spcFirstLastPara</para>
         /// </summary>
-        [SchemaAttr("spcFirstLastPara")]
         public BooleanValue? UseParagraphSpacing
         {
             get => GetAttribute<BooleanValue>();
@@ -1160,7 +1135,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Text Vertical Overflow</para>
         /// <para>Represents the following attribute in the schema: vertOverflow</para>
         /// </summary>
-        [SchemaAttr("vertOverflow")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>? VerticalOverflow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>>();
@@ -1171,7 +1145,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Text Horizontal Overflow</para>
         /// <para>Represents the following attribute in the schema: horzOverflow</para>
         /// </summary>
-        [SchemaAttr("horzOverflow")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>? HorizontalOverflow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>();
@@ -1182,7 +1155,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Vertical Text</para>
         /// <para>Represents the following attribute in the schema: vert</para>
         /// </summary>
-        [SchemaAttr("vert")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>? Vertical
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>();
@@ -1193,7 +1165,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Text Wrapping Type</para>
         /// <para>Represents the following attribute in the schema: wrap</para>
         /// </summary>
-        [SchemaAttr("wrap")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>? Wrap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>>();
@@ -1204,7 +1175,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Left Inset</para>
         /// <para>Represents the following attribute in the schema: lIns</para>
         /// </summary>
-        [SchemaAttr("lIns")]
         public Int32Value? LeftInset
         {
             get => GetAttribute<Int32Value>();
@@ -1215,7 +1185,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Top Inset</para>
         /// <para>Represents the following attribute in the schema: tIns</para>
         /// </summary>
-        [SchemaAttr("tIns")]
         public Int32Value? TopInset
         {
             get => GetAttribute<Int32Value>();
@@ -1226,7 +1195,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Right Inset</para>
         /// <para>Represents the following attribute in the schema: rIns</para>
         /// </summary>
-        [SchemaAttr("rIns")]
         public Int32Value? RightInset
         {
             get => GetAttribute<Int32Value>();
@@ -1237,7 +1205,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Bottom Inset</para>
         /// <para>Represents the following attribute in the schema: bIns</para>
         /// </summary>
-        [SchemaAttr("bIns")]
         public Int32Value? BottomInset
         {
             get => GetAttribute<Int32Value>();
@@ -1248,7 +1215,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Number of Columns</para>
         /// <para>Represents the following attribute in the schema: numCol</para>
         /// </summary>
-        [SchemaAttr("numCol")]
         public Int32Value? ColumnCount
         {
             get => GetAttribute<Int32Value>();
@@ -1259,7 +1225,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Space Between Columns</para>
         /// <para>Represents the following attribute in the schema: spcCol</para>
         /// </summary>
-        [SchemaAttr("spcCol")]
         public Int32Value? ColumnSpacing
         {
             get => GetAttribute<Int32Value>();
@@ -1270,7 +1235,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Columns Right-To-Left</para>
         /// <para>Represents the following attribute in the schema: rtlCol</para>
         /// </summary>
-        [SchemaAttr("rtlCol")]
         public BooleanValue? RightToLeftColumns
         {
             get => GetAttribute<BooleanValue>();
@@ -1281,7 +1245,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>From WordArt</para>
         /// <para>Represents the following attribute in the schema: fromWordArt</para>
         /// </summary>
-        [SchemaAttr("fromWordArt")]
         public BooleanValue? FromWordArt
         {
             get => GetAttribute<BooleanValue>();
@@ -1292,7 +1255,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Anchor</para>
         /// <para>Represents the following attribute in the schema: anchor</para>
         /// </summary>
-        [SchemaAttr("anchor")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>? Anchor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>();
@@ -1303,7 +1265,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Anchor Center</para>
         /// <para>Represents the following attribute in the schema: anchorCtr</para>
         /// </summary>
-        [SchemaAttr("anchorCtr")]
         public BooleanValue? AnchorCenter
         {
             get => GetAttribute<BooleanValue>();
@@ -1314,7 +1275,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Force Anti-Alias</para>
         /// <para>Represents the following attribute in the schema: forceAA</para>
         /// </summary>
-        [SchemaAttr("forceAA")]
         public BooleanValue? ForceAntiAlias
         {
             get => GetAttribute<BooleanValue>();
@@ -1325,7 +1285,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Text Upright</para>
         /// <para>Represents the following attribute in the schema: upright</para>
         /// </summary>
-        [SchemaAttr("upright")]
         public BooleanValue? UpRight
         {
             get => GetAttribute<BooleanValue>();
@@ -1336,7 +1295,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>Compatible Line Spacing</para>
         /// <para>Represents the following attribute in the schema: compatLnSpc</para>
         /// </summary>
-        [SchemaAttr("compatLnSpc")]
         public BooleanValue? CompatibleLineSpacing
         {
             get => GetAttribute<BooleanValue>();

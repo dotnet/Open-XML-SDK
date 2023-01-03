@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -31,7 +29,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("thm15:themeFamily")]
     public partial class ThemeFamily : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -69,7 +66,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -80,7 +76,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -91,7 +86,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>vid, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: vid</para>
         /// </summary>
-        [SchemaAttr("vid")]
         public StringValue? Vid
         {
             get => GetAttribute<StringValue>();
@@ -154,7 +148,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("thm15:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -221,7 +214,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("thm15:themeVariant")]
     public partial class ThemeVariant : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -259,7 +251,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -270,7 +261,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>vid, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: vid</para>
         /// </summary>
-        [SchemaAttr("vid")]
         public StringValue? Vid
         {
             get => GetAttribute<StringValue>();
@@ -281,7 +271,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>cx, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        [SchemaAttr("cx")]
         public Int64Value? X
         {
             get => GetAttribute<Int64Value>();
@@ -292,7 +281,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>cy, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        [SchemaAttr("cy")]
         public Int64Value? Y
         {
             get => GetAttribute<Int64Value>();
@@ -306,7 +294,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -377,7 +364,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant" /> <c>&lt;thm15:themeVariant></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("thm15:themeVariantLst")]
     public partial class ThemeVariantList : TypedOpenXmlCompositeElement
     {
         /// <summary>

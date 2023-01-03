@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -56,7 +54,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xne:macrosheet")]
     public partial class Macrosheet : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -252,7 +249,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.RowSortMap" /> <c>&lt;xne:rowSortMap></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xne:worksheetSortMap")]
     public partial class WorksheetSortMap : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -365,7 +361,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:sqref.</para>
     /// </summary>
-    [SchemaAttr("xne:sqref")]
     public partial class ReferenceSequence : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -405,7 +400,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:f.</para>
     /// </summary>
-    [SchemaAttr("xne:f")]
     public partial class Formula : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -450,7 +444,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.RowSortMapItem" /> <c>&lt;xne:row></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xne:rowSortMap")]
     public partial class RowSortMap : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -488,7 +481,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Ref
         {
             get => GetAttribute<StringValue>();
@@ -499,7 +491,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -541,7 +532,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem" /> <c>&lt;xne:col></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xne:colSortMap")]
     public partial class ColumnSortMap : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -579,7 +569,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Ref
         {
             get => GetAttribute<StringValue>();
@@ -590,7 +579,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -626,7 +614,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:row.</para>
     /// </summary>
-    [SchemaAttr("xne:row")]
     public partial class RowSortMapItem : SortMapItemType
     {
         /// <summary>
@@ -651,7 +638,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:col.</para>
     /// </summary>
-    [SchemaAttr("xne:col")]
     public partial class ColumnSortMapItem : SortMapItemType
     {
         /// <summary>
@@ -689,7 +675,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>New Value</para>
         /// <para>Represents the following attribute in the schema: newVal</para>
         /// </summary>
-        [SchemaAttr("newVal")]
         public UInt32Value? NewVal
         {
             get => GetAttribute<UInt32Value>();
@@ -700,7 +685,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Old Value</para>
         /// <para>Represents the following attribute in the schema: oldVal</para>
         /// </summary>
-        [SchemaAttr("oldVal")]
         public UInt32Value? OldVal
         {
             get => GetAttribute<UInt32Value>();

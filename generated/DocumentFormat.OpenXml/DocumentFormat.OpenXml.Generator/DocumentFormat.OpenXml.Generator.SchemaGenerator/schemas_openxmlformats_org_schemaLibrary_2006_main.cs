@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -30,7 +28,6 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema" /> <c>&lt;sl:schema></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("sl:schemaLibrary")]
     public partial class SchemaLibrary : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -84,7 +81,6 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is sl:schema.</para>
     /// </summary>
-    [SchemaAttr("sl:schema")]
     public partial class Schema : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -101,7 +97,6 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
-        [SchemaAttr("sl:uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -115,7 +110,6 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
-        [SchemaAttr("sl:manifestLocation")]
         public StringValue? ManifestLocation
         {
             get => GetAttribute<StringValue>();
@@ -129,7 +123,6 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
-        [SchemaAttr("sl:schemaLocation")]
         public StringValue? SchemaLocation
         {
             get => GetAttribute<StringValue>();

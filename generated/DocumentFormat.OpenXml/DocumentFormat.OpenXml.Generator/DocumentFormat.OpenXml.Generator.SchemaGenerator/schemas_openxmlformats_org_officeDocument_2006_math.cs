@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -24,7 +22,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:scr.</para>
     /// </summary>
-    [SchemaAttr("m:scr")]
     public partial class Script : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -41,7 +38,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>>();
@@ -68,7 +64,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sty.</para>
     /// </summary>
-    [SchemaAttr("m:sty")]
     public partial class Style : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -85,7 +80,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public EnumValue<DocumentFormat.OpenXml.Math.StyleValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.StyleValues>>();
@@ -152,7 +146,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode" /> <c>&lt;w:delInstrText></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:r")]
     public partial class Run : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -322,7 +315,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:acc")]
     public partial class Accent : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -411,7 +403,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:bar")]
     public partial class Bar : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -500,7 +491,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:box")]
     public partial class Box : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -589,7 +579,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:borderBox")]
     public partial class BorderBox : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -678,7 +667,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:d")]
     public partial class Delimiter : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -754,7 +742,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:eqArr")]
     public partial class EquationArray : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -831,7 +818,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Denominator" /> <c>&lt;m:den></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:f")]
     public partial class Fraction : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -936,7 +922,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:func")]
     public partial class MathFunction : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1040,7 +1025,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:groupChr")]
     public partial class GroupChar : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1130,7 +1114,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Limit" /> <c>&lt;m:lim></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:limLow")]
     public partial class LimitLower : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1235,7 +1218,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Limit" /> <c>&lt;m:lim></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:limUpp")]
     public partial class LimitUpper : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1339,7 +1321,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixRow" /> <c>&lt;m:mr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:m")]
     public partial class Matrix : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1417,7 +1398,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:nary")]
     public partial class Nary : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1536,7 +1516,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.PhantomProperties" /> <c>&lt;m:phantPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:phant")]
     public partial class Phantom : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1626,7 +1605,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.RadicalProperties" /> <c>&lt;m:radPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:rad")]
     public partial class Radical : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1732,7 +1710,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.PreSubSuperProperties" /> <c>&lt;m:sPrePr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:sPre")]
     public partial class PreSubSuper : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1852,7 +1829,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubscriptProperties" /> <c>&lt;m:sSubPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:sSub")]
     public partial class Subscript : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1958,7 +1934,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubSuperscriptProperties" /> <c>&lt;m:sSubSupPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:sSubSup")]
     public partial class SubSuperscript : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2078,7 +2053,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SuperscriptProperties" /> <c>&lt;m:sSupPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:sSup")]
     public partial class Superscript : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2214,7 +2188,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:oMathPara")]
     public partial class Paragraph : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2465,7 +2438,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:oMath")]
     public partial class OfficeMath : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2766,7 +2738,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.WrapIndent" /> <c>&lt;m:wrapIndent></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:mathPr")]
     public partial class MathProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3009,7 +2980,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:lit.</para>
     /// </summary>
-    [SchemaAttr("m:lit")]
     public partial class Literal : OnOffType
     {
         /// <summary>
@@ -3034,7 +3004,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:nor.</para>
     /// </summary>
-    [SchemaAttr("m:nor")]
     public partial class NormalText : OnOffType
     {
         /// <summary>
@@ -3059,7 +3028,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:aln.</para>
     /// </summary>
-    [SchemaAttr("m:aln")]
     public partial class Alignment : OnOffType
     {
         /// <summary>
@@ -3084,7 +3052,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:opEmu.</para>
     /// </summary>
-    [SchemaAttr("m:opEmu")]
     public partial class OperatorEmulator : OnOffType
     {
         /// <summary>
@@ -3109,7 +3076,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:noBreak.</para>
     /// </summary>
-    [SchemaAttr("m:noBreak")]
     public partial class NoBreak : OnOffType
     {
         /// <summary>
@@ -3134,7 +3100,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:diff.</para>
     /// </summary>
-    [SchemaAttr("m:diff")]
     public partial class Differential : OnOffType
     {
         /// <summary>
@@ -3159,7 +3124,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideTop.</para>
     /// </summary>
-    [SchemaAttr("m:hideTop")]
     public partial class HideTop : OnOffType
     {
         /// <summary>
@@ -3184,7 +3148,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideBot.</para>
     /// </summary>
-    [SchemaAttr("m:hideBot")]
     public partial class HideBottom : OnOffType
     {
         /// <summary>
@@ -3209,7 +3172,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideLeft.</para>
     /// </summary>
-    [SchemaAttr("m:hideLeft")]
     public partial class HideLeft : OnOffType
     {
         /// <summary>
@@ -3234,7 +3196,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideRight.</para>
     /// </summary>
-    [SchemaAttr("m:hideRight")]
     public partial class HideRight : OnOffType
     {
         /// <summary>
@@ -3259,7 +3220,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeH.</para>
     /// </summary>
-    [SchemaAttr("m:strikeH")]
     public partial class StrikeHorizontal : OnOffType
     {
         /// <summary>
@@ -3284,7 +3244,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeV.</para>
     /// </summary>
-    [SchemaAttr("m:strikeV")]
     public partial class StrikeVertical : OnOffType
     {
         /// <summary>
@@ -3309,7 +3268,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeBLTR.</para>
     /// </summary>
-    [SchemaAttr("m:strikeBLTR")]
     public partial class StrikeBottomLeftToTopRight : OnOffType
     {
         /// <summary>
@@ -3334,7 +3292,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeTLBR.</para>
     /// </summary>
-    [SchemaAttr("m:strikeTLBR")]
     public partial class StrikeTopLeftToBottomRight : OnOffType
     {
         /// <summary>
@@ -3359,7 +3316,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:grow.</para>
     /// </summary>
-    [SchemaAttr("m:grow")]
     public partial class GrowOperators : OnOffType
     {
         /// <summary>
@@ -3384,7 +3340,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:maxDist.</para>
     /// </summary>
-    [SchemaAttr("m:maxDist")]
     public partial class MaxDistribution : OnOffType
     {
         /// <summary>
@@ -3409,7 +3364,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:objDist.</para>
     /// </summary>
-    [SchemaAttr("m:objDist")]
     public partial class ObjectDistribution : OnOffType
     {
         /// <summary>
@@ -3434,7 +3388,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:plcHide.</para>
     /// </summary>
-    [SchemaAttr("m:plcHide")]
     public partial class HidePlaceholder : OnOffType
     {
         /// <summary>
@@ -3459,7 +3412,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:subHide.</para>
     /// </summary>
-    [SchemaAttr("m:subHide")]
     public partial class HideSubArgument : OnOffType
     {
         /// <summary>
@@ -3484,7 +3436,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:supHide.</para>
     /// </summary>
-    [SchemaAttr("m:supHide")]
     public partial class HideSuperArgument : OnOffType
     {
         /// <summary>
@@ -3509,7 +3460,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:show.</para>
     /// </summary>
-    [SchemaAttr("m:show")]
     public partial class ShowPhantom : OnOffType
     {
         /// <summary>
@@ -3534,7 +3484,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroWid.</para>
     /// </summary>
-    [SchemaAttr("m:zeroWid")]
     public partial class ZeroWidth : OnOffType
     {
         /// <summary>
@@ -3559,7 +3508,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroAsc.</para>
     /// </summary>
-    [SchemaAttr("m:zeroAsc")]
     public partial class ZeroAscent : OnOffType
     {
         /// <summary>
@@ -3584,7 +3532,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroDesc.</para>
     /// </summary>
-    [SchemaAttr("m:zeroDesc")]
     public partial class ZeroDescent : OnOffType
     {
         /// <summary>
@@ -3609,7 +3556,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:transp.</para>
     /// </summary>
-    [SchemaAttr("m:transp")]
     public partial class Transparent : OnOffType
     {
         /// <summary>
@@ -3634,7 +3580,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:degHide.</para>
     /// </summary>
-    [SchemaAttr("m:degHide")]
     public partial class HideDegree : OnOffType
     {
         /// <summary>
@@ -3659,7 +3604,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:alnScr.</para>
     /// </summary>
-    [SchemaAttr("m:alnScr")]
     public partial class AlignScripts : OnOffType
     {
         /// <summary>
@@ -3684,7 +3628,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:smallFrac.</para>
     /// </summary>
-    [SchemaAttr("m:smallFrac")]
     public partial class SmallFraction : OnOffType
     {
         /// <summary>
@@ -3709,7 +3652,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:dispDef.</para>
     /// </summary>
-    [SchemaAttr("m:dispDef")]
     public partial class DisplayDefaults : OnOffType
     {
         /// <summary>
@@ -3734,7 +3676,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:wrapRight.</para>
     /// </summary>
-    [SchemaAttr("m:wrapRight")]
     public partial class WrapRight : OnOffType
     {
         /// <summary>
@@ -3775,7 +3716,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>>();
@@ -3795,7 +3735,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brk.</para>
     /// </summary>
-    [SchemaAttr("m:brk")]
     public partial class Break : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3812,7 +3751,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:alnAt")]
         public IntegerValue? AlignAt
         {
             get => GetAttribute<IntegerValue>();
@@ -3826,7 +3764,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -3868,7 +3805,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Style" /> <c>&lt;m:sty></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:rPr")]
     public partial class RunProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3957,7 +3893,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:t.</para>
     /// </summary>
-    [SchemaAttr("m:t")]
     public partial class Text : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -3987,7 +3922,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:space")]
         public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
@@ -4011,7 +3945,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:chr.</para>
     /// </summary>
-    [SchemaAttr("m:chr")]
     public partial class AccentChar : CharType
     {
         /// <summary>
@@ -4036,7 +3969,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:begChr.</para>
     /// </summary>
-    [SchemaAttr("m:begChr")]
     public partial class BeginChar : CharType
     {
         /// <summary>
@@ -4061,7 +3993,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sepChr.</para>
     /// </summary>
-    [SchemaAttr("m:sepChr")]
     public partial class SeparatorChar : CharType
     {
         /// <summary>
@@ -4086,7 +4017,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:endChr.</para>
     /// </summary>
-    [SchemaAttr("m:endChr")]
     public partial class EndChar : CharType
     {
         /// <summary>
@@ -4127,7 +4057,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -4161,7 +4090,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:ctrlPr")]
     public partial class ControlProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4254,7 +4182,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:accPr")]
     public partial class AccentProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4399,7 +4326,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:e")]
     public partial class Base : OfficeMathArgumentType
     {
         /// <summary>
@@ -4688,7 +4614,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:num")]
     public partial class Numerator : OfficeMathArgumentType
     {
         /// <summary>
@@ -4977,7 +4902,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:den")]
     public partial class Denominator : OfficeMathArgumentType
     {
         /// <summary>
@@ -5266,7 +5190,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:fName")]
     public partial class FunctionName : OfficeMathArgumentType
     {
         /// <summary>
@@ -5555,7 +5478,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:lim")]
     public partial class Limit : OfficeMathArgumentType
     {
         /// <summary>
@@ -5844,7 +5766,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:sub")]
     public partial class SubArgument : OfficeMathArgumentType
     {
         /// <summary>
@@ -6133,7 +6054,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:sup")]
     public partial class SuperArgument : OfficeMathArgumentType
     {
         /// <summary>
@@ -6422,7 +6342,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:deg")]
     public partial class Degree : OfficeMathArgumentType
     {
         /// <summary>
@@ -6826,7 +6745,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:pos.</para>
     /// </summary>
-    [SchemaAttr("m:pos")]
     public partial class Position : TopBottomType
     {
         /// <summary>
@@ -6851,7 +6769,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:vertJc.</para>
     /// </summary>
-    [SchemaAttr("m:vertJc")]
     public partial class VerticalJustification : TopBottomType
     {
         /// <summary>
@@ -6892,7 +6809,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>>();
@@ -6922,7 +6838,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Position" /> <c>&lt;m:pos></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:barPr")]
     public partial class BarProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7015,7 +6930,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Alignment" /> <c>&lt;m:aln></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:boxPr")]
     public partial class BoxProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7171,7 +7085,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight" /> <c>&lt;m:strikeTLBR></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:borderBoxPr")]
     public partial class BorderBoxProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7358,7 +7271,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:shp.</para>
     /// </summary>
-    [SchemaAttr("m:shp")]
     public partial class Shape : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7375,7 +7287,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>>();
@@ -7413,7 +7324,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Shape" /> <c>&lt;m:shp></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:dPr")]
     public partial class DelimiterProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7555,7 +7465,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:baseJc.</para>
     /// </summary>
-    [SchemaAttr("m:baseJc")]
     public partial class BaseJustification : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7572,7 +7481,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>>();
@@ -7599,7 +7507,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rSpRule.</para>
     /// </summary>
-    [SchemaAttr("m:rSpRule")]
     public partial class RowSpacingRule : SpacingRuleType
     {
         /// <summary>
@@ -7624,7 +7531,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cGpRule.</para>
     /// </summary>
-    [SchemaAttr("m:cGpRule")]
     public partial class ColumnGapRule : SpacingRuleType
     {
         /// <summary>
@@ -7665,7 +7571,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -7689,7 +7594,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rSp.</para>
     /// </summary>
-    [SchemaAttr("m:rSp")]
     public partial class RowSpacing : UnsignedShortType
     {
         /// <summary>
@@ -7714,7 +7618,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cGp.</para>
     /// </summary>
-    [SchemaAttr("m:cGp")]
     public partial class ColumnGap : UnsignedShortType
     {
         /// <summary>
@@ -7755,7 +7658,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -7789,7 +7691,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BaseJustification" /> <c>&lt;m:baseJc></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:eqArrPr")]
     public partial class EquationArrayProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7931,7 +7832,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:type.</para>
     /// </summary>
-    [SchemaAttr("m:type")]
     public partial class FractionType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7948,7 +7848,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>>();
@@ -7982,7 +7881,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.FractionType" /> <c>&lt;m:type></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:fPr")]
     public partial class FractionProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8070,7 +7968,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:funcPr")]
     public partial class FunctionProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8146,7 +8043,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.VerticalJustification" /> <c>&lt;m:vertJc></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:groupChrPr")]
     public partial class GroupCharProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8264,7 +8160,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:limLowPr")]
     public partial class LimitLowerProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8337,7 +8232,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:limUppPr")]
     public partial class LimitUpperProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8404,7 +8298,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:count.</para>
     /// </summary>
-    [SchemaAttr("m:count")]
     public partial class MatrixColumnCount : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8421,7 +8314,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -8449,7 +8341,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mcJc.</para>
     /// </summary>
-    [SchemaAttr("m:mcJc")]
     public partial class MatrixColumnJustification : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8466,7 +8357,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>>();
@@ -8500,7 +8390,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixColumnJustification" /> <c>&lt;m:mcJc></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:mcPr")]
     public partial class MatrixColumnProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8588,7 +8477,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixColumnProperties" /> <c>&lt;m:mcPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:mc")]
     public partial class MatrixColumn : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8655,7 +8543,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cSp.</para>
     /// </summary>
-    [SchemaAttr("m:cSp")]
     public partial class ColumnSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8680,7 +8567,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:lMargin.</para>
     /// </summary>
-    [SchemaAttr("m:lMargin")]
     public partial class LeftMargin : TwipsMeasureType
     {
         /// <summary>
@@ -8705,7 +8591,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rMargin.</para>
     /// </summary>
-    [SchemaAttr("m:rMargin")]
     public partial class RightMargin : TwipsMeasureType
     {
         /// <summary>
@@ -8730,7 +8615,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:preSp.</para>
     /// </summary>
-    [SchemaAttr("m:preSp")]
     public partial class PreSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8755,7 +8639,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:postSp.</para>
     /// </summary>
-    [SchemaAttr("m:postSp")]
     public partial class PostSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8780,7 +8663,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:interSp.</para>
     /// </summary>
-    [SchemaAttr("m:interSp")]
     public partial class InterSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8805,7 +8687,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:intraSp.</para>
     /// </summary>
-    [SchemaAttr("m:intraSp")]
     public partial class IntraSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8830,7 +8711,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:wrapIndent.</para>
     /// </summary>
-    [SchemaAttr("m:wrapIndent")]
     public partial class WrapIndent : TwipsMeasureType
     {
         /// <summary>
@@ -8871,7 +8751,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -8901,7 +8780,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixColumn" /> <c>&lt;m:mc></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:mcs")]
     public partial class MatrixColumns : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8969,7 +8847,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BaseJustification" /> <c>&lt;m:baseJc></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:mPr")]
     public partial class MatrixProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9162,7 +9039,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:mr")]
     public partial class MatrixRow : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9216,7 +9092,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limLoc.</para>
     /// </summary>
-    [SchemaAttr("m:limLoc")]
     public partial class LimitLocation : LimitLocationType
     {
         /// <summary>
@@ -9241,7 +9116,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:intLim.</para>
     /// </summary>
-    [SchemaAttr("m:intLim")]
     public partial class IntegralLimitLocation : LimitLocationType
     {
         /// <summary>
@@ -9266,7 +9140,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:naryLim.</para>
     /// </summary>
-    [SchemaAttr("m:naryLim")]
     public partial class NaryLimitLocation : LimitLocationType
     {
         /// <summary>
@@ -9307,7 +9180,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>>();
@@ -9341,7 +9213,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.HideSuperArgument" /> <c>&lt;m:supHide></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:naryPr")]
     public partial class NaryProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9494,7 +9365,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Transparent" /> <c>&lt;m:transp></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:phantPr")]
     public partial class PhantomProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9643,7 +9513,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.HideDegree" /> <c>&lt;m:degHide></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:radPr")]
     public partial class RadicalProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9731,7 +9600,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:sPrePr")]
     public partial class PreSubSuperProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9804,7 +9672,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:sSubPr")]
     public partial class SubscriptProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9878,7 +9745,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.AlignScripts" /> <c>&lt;m:alnScr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:sSubSupPr")]
     public partial class SubSuperscriptProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9966,7 +9832,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:sSupPr")]
     public partial class SuperscriptProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10033,7 +9898,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:argSz.</para>
     /// </summary>
-    [SchemaAttr("m:argSz")]
     public partial class ArgumentSize : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -10050,7 +9914,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -10084,7 +9947,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ArgumentSize" /> <c>&lt;m:argSz></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:argPr")]
     public partial class ArgumentProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10151,7 +10013,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:jc.</para>
     /// </summary>
-    [SchemaAttr("m:jc")]
     public partial class Justification : OfficeMathJustificationType
     {
         /// <summary>
@@ -10176,7 +10037,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:defJc.</para>
     /// </summary>
-    [SchemaAttr("m:defJc")]
     public partial class DefaultJustification : OfficeMathJustificationType
     {
         /// <summary>
@@ -10217,7 +10077,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>>();
@@ -10240,7 +10099,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mathFont.</para>
     /// </summary>
-    [SchemaAttr("m:mathFont")]
     public partial class MathFont : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -10257,7 +10115,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -10285,7 +10142,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brkBin.</para>
     /// </summary>
-    [SchemaAttr("m:brkBin")]
     public partial class BreakBinary : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -10302,7 +10158,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>>();
@@ -10326,7 +10181,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brkBinSub.</para>
     /// </summary>
-    [SchemaAttr("m:brkBinSub")]
     public partial class BreakBinarySubtraction : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -10343,7 +10197,6 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr("m:val")]
         public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>>();
@@ -10377,7 +10230,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Justification" /> <c>&lt;m:jc></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("m:oMathParaPr")]
     public partial class ParagraphProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>

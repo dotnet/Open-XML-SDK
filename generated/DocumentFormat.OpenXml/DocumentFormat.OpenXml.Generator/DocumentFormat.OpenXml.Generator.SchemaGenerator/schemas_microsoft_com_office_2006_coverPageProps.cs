@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -34,7 +32,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress" /> <c>&lt;cppr:CompanyEmail></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cppr:CoverPageProperties")]
     public partial class CoverPageProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -176,7 +173,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:PublishDate.</para>
     /// </summary>
-    [SchemaAttr("cppr:PublishDate")]
     public partial class PublishDate : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -214,7 +210,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:Abstract.</para>
     /// </summary>
-    [SchemaAttr("cppr:Abstract")]
     public partial class DocumentAbstract : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -252,7 +247,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyAddress.</para>
     /// </summary>
-    [SchemaAttr("cppr:CompanyAddress")]
     public partial class CompanyAddress : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -290,7 +284,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyPhone.</para>
     /// </summary>
-    [SchemaAttr("cppr:CompanyPhone")]
     public partial class CompanyPhoneNumber : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -328,7 +321,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyFax.</para>
     /// </summary>
-    [SchemaAttr("cppr:CompanyFax")]
     public partial class CompanyFaxNumber : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -366,7 +358,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyEmail.</para>
     /// </summary>
-    [SchemaAttr("cppr:CompanyEmail")]
     public partial class CompanyEmailAddress : TypedOpenXmlLeafTextElement
     {
         /// <summary>

@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ahyp:hlinkClr.</para>
     /// </summary>
-    [SchemaAttr("ahyp:hlinkClr")]
     public partial class HyperlinkColor : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37,7 +34,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
         /// <para>val, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum>>();

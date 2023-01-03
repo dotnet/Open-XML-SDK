@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - When validation finds incrorect part, it will now raise the relationship type rather than a class name
 
 ### Breaking change
+- Removed unused `SchemaAttrAttribute`
+- Removed unused `ChildElementInfoAttribute`
 - Core infrastructure is now contained in a new package DocumentFormat.OpenXml.Framework. Typed classes are still in DocumentFormat.OpenXml. This means that you may reference DocumentFormat.OpenXml and still compile the same types, but if you want a smaller package, you may rely on just the framework package. 
 - Removed `OpenXmlSimpleType.TextValue`. This property was never meant to be used externally
 - Removed obsolete validation logic from v1 of the SDK

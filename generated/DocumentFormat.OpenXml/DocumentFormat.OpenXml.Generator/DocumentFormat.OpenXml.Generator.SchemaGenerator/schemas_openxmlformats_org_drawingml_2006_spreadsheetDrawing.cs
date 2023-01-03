@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -40,7 +38,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:twoCellAnchor")]
     public partial class TwoCellAnchor : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -78,7 +75,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Positioning and Resizing Behaviors</para>
         /// <para>Represents the following attribute in the schema: editAs</para>
         /// </summary>
-        [SchemaAttr("editAs")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Spreadsheet.EditAsValues>? EditAs
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Spreadsheet.EditAsValues>>();
@@ -175,7 +171,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:oneCellAnchor")]
     public partial class OneCellAnchor : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -294,7 +289,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:absoluteAnchor")]
     public partial class AbsoluteAnchor : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -408,7 +402,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties" /> <c>&lt;xdr:nvSpPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:sp")]
     public partial class Shape : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -446,7 +439,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Reference to Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        [SchemaAttr("macro")]
         public StringValue? Macro
         {
             get => GetAttribute<StringValue>();
@@ -457,7 +449,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Text Link</para>
         /// <para>Represents the following attribute in the schema: textlink</para>
         /// </summary>
-        [SchemaAttr("textlink")]
         public StringValue? TextLink
         {
             get => GetAttribute<StringValue>();
@@ -468,7 +459,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Lock Text Flag</para>
         /// <para>Represents the following attribute in the schema: fLocksText</para>
         /// </summary>
-        [SchemaAttr("fLocksText")]
         public BooleanValue? LockText
         {
             get => GetAttribute<BooleanValue>();
@@ -479,7 +469,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Publish to Server Flag</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
-        [SchemaAttr("fPublished")]
         public BooleanValue? Published
         {
             get => GetAttribute<BooleanValue>();
@@ -583,7 +572,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart" /> <c>&lt;xdr14:contentPart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:grpSp")]
     public partial class GroupShape : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -688,7 +676,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties" /> <c>&lt;xdr:nvGraphicFramePr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:graphicFrame")]
     public partial class GraphicFrame : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -726,7 +713,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Reference To Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        [SchemaAttr("macro")]
         public StringValue? Macro
         {
             get => GetAttribute<StringValue>();
@@ -737,7 +723,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Publish to Server Flag</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
-        [SchemaAttr("fPublished")]
         public BooleanValue? Published
         {
             get => GetAttribute<BooleanValue>();
@@ -819,7 +804,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties" /> <c>&lt;xdr:nvCxnSpPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:cxnSp")]
     public partial class ConnectionShape : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -857,7 +841,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Reference to Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        [SchemaAttr("macro")]
         public StringValue? Macro
         {
             get => GetAttribute<StringValue>();
@@ -868,7 +851,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Publish to Server Flag</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
-        [SchemaAttr("fPublished")]
         public BooleanValue? Published
         {
             get => GetAttribute<BooleanValue>();
@@ -951,7 +933,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties" /> <c>&lt;xdr:nvPicPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:pic")]
     public partial class Picture : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -989,7 +970,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Reference To Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        [SchemaAttr("macro")]
         public StringValue? Macro
         {
             get => GetAttribute<StringValue>();
@@ -1000,7 +980,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Publish to Server Flag</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
-        [SchemaAttr("fPublished")]
         public BooleanValue? Published
         {
             get => GetAttribute<BooleanValue>();
@@ -1097,7 +1076,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties" /> <c>&lt;xdr14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:contentPart")]
     public partial class ContentPart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1138,7 +1116,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
@@ -1149,7 +1126,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>bwMode, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -1252,7 +1228,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor" /> <c>&lt;xdr:twoCellAnchor></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:wsDr")]
     public partial class WorksheetDrawing : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -1354,7 +1329,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:nvSpPr")]
     public partial class NonVisualShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1456,7 +1430,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:spPr")]
     public partial class ShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1494,7 +1467,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -1594,7 +1566,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:style")]
     public partial class ShapeStyle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1714,7 +1685,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:txBody")]
     public partial class TextBody : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1805,7 +1775,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:nvCxnSpPr")]
     public partial class NonVisualConnectionShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1894,7 +1863,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:nvPicPr")]
     public partial class NonVisualPictureProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1985,7 +1953,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:blipFill")]
     public partial class BlipFill : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2023,7 +1990,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Rotate With Shape</para>
         /// <para>Represents the following attribute in the schema: rotWithShape</para>
         /// </summary>
-        [SchemaAttr("rotWithShape")]
         public BooleanValue? RotateWithShape
         {
             get => GetAttribute<BooleanValue>();
@@ -2097,7 +2063,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:nvGraphicFramePr")]
     public partial class NonVisualGraphicFrameProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2186,7 +2151,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:xfrm")]
     public partial class Transform : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2224,7 +2188,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr("rot")]
         public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -2235,7 +2198,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr("flipH")]
         public BooleanValue? HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -2246,7 +2208,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr("flipV")]
         public BooleanValue? VerticalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -2305,7 +2266,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:col.</para>
     /// </summary>
-    [SchemaAttr("xdr:col")]
     public partial class ColumnId : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2344,7 +2304,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:colOff.</para>
     /// </summary>
-    [SchemaAttr("xdr:colOff")]
     public partial class ColumnOffset : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2383,7 +2342,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:rowOff.</para>
     /// </summary>
-    [SchemaAttr("xdr:rowOff")]
     public partial class RowOffset : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2422,7 +2380,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:row.</para>
     /// </summary>
-    [SchemaAttr("xdr:row")]
     public partial class RowId : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2470,7 +2427,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:from")]
     public partial class FromMarker : MarkerType
     {
         /// <summary>
@@ -2535,7 +2491,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:to")]
     public partial class ToMarker : MarkerType
     {
         /// <summary>
@@ -2700,7 +2655,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:clientData.</para>
     /// </summary>
-    [SchemaAttr("xdr:clientData")]
     public partial class ClientData : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2714,7 +2668,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Locks With Sheet Flag</para>
         /// <para>Represents the following attribute in the schema: fLocksWithSheet</para>
         /// </summary>
-        [SchemaAttr("fLocksWithSheet")]
         public BooleanValue? LockWithSheet
         {
             get => GetAttribute<BooleanValue>();
@@ -2725,7 +2678,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Prints With Sheet Flag</para>
         /// <para>Represents the following attribute in the schema: fPrintsWithSheet</para>
         /// </summary>
-        [SchemaAttr("fPrintsWithSheet")]
         public BooleanValue? PrintWithSheet
         {
             get => GetAttribute<BooleanValue>();
@@ -2750,7 +2702,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:ext.</para>
     /// </summary>
-    [SchemaAttr("xdr:ext")]
     public partial class Extent : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2764,7 +2715,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Extent Length</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        [SchemaAttr("cx")]
         public Int64Value? Cx
         {
             get => GetAttribute<Int64Value>();
@@ -2775,7 +2725,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Extent Width</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        [SchemaAttr("cy")]
         public Int64Value? Cy
         {
             get => GetAttribute<Int64Value>();
@@ -2808,7 +2757,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:pos.</para>
     /// </summary>
-    [SchemaAttr("xdr:pos")]
     public partial class Position : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2822,7 +2770,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>X-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [SchemaAttr("x")]
         public Int64Value? X
         {
             get => GetAttribute<Int64Value>();
@@ -2833,7 +2780,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Y-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        [SchemaAttr("y")]
         public Int64Value? Y
         {
             get => GetAttribute<Int64Value>();
@@ -2874,7 +2820,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:cNvPr")]
     public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2912,7 +2857,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -2923,7 +2867,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -2934,7 +2877,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr("descr")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -2945,7 +2887,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -2956,7 +2897,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -3046,7 +2986,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:cNvSpPr")]
     public partial class NonVisualShapeDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3084,7 +3023,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Text Box</para>
         /// <para>Represents the following attribute in the schema: txBox</para>
         /// </summary>
-        [SchemaAttr("txBox")]
         public BooleanValue? TextBox
         {
             get => GetAttribute<BooleanValue>();
@@ -3150,7 +3088,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:cNvCxnSpPr")]
     public partial class NonVisualConnectorShapeDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3269,7 +3206,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:cNvPicPr")]
     public partial class NonVisualPictureDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3307,7 +3243,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>preferRelativeResize</para>
         /// <para>Represents the following attribute in the schema: preferRelativeResize</para>
         /// </summary>
-        [SchemaAttr("preferRelativeResize")]
         public BooleanValue? PreferRelativeResize
         {
             get => GetAttribute<BooleanValue>();
@@ -3371,7 +3306,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:cNvGraphicFramePr")]
     public partial class NonVisualGraphicFrameDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3460,7 +3394,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:cNvGrpSpPr")]
     public partial class NonVisualGroupShapeDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3549,7 +3482,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:nvGrpSpPr")]
     public partial class NonVisualGroupShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3647,7 +3579,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr:grpSpPr")]
     public partial class GroupShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3685,7 +3616,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();

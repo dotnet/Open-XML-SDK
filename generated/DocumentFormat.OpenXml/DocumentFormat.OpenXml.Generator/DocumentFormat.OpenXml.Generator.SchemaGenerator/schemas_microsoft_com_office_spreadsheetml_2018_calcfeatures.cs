@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -29,7 +27,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature" /> <c>&lt;xcalcf:feature></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xcalcf:calcFeatures")]
     public partial class CalcFeatures : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -84,7 +81,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xcalcf:feature.</para>
     /// </summary>
-    [SchemaAttr("xcalcf:feature")]
     public partial class CalcFeature : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -98,7 +94,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
         /// <para>name, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();

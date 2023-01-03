@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -30,7 +28,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("alf:Normal")]
     public partial class BackgroundNormalProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -104,7 +101,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("alf:Removed")]
     public partial class BackgroundRemovedProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -178,7 +174,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("alf:Blur")]
     public partial class BackgroundBlurProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -252,7 +247,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("alf:Custom")]
     public partial class BackgroundCustomProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -327,7 +321,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties" /> <c>&lt;alf:backgroundProps></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("alf:liveFeedProps")]
     public partial class LiveFeedProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -416,7 +409,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("alf:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -487,7 +479,6 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties" /> <c>&lt;alf:Removed></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("alf:backgroundProps")]
     public partial class LiveFeedBackgroundProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>

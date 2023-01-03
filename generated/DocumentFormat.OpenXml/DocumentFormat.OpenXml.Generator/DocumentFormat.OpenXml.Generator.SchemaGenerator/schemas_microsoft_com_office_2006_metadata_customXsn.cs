@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -32,7 +30,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.Scope" /> <c>&lt;ntns:xsnScope></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ntns:customXsn")]
     public partial class CustomXsn : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -144,7 +141,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnLocation.</para>
     /// </summary>
-    [SchemaAttr("ntns:xsnLocation")]
     public partial class XsnLocation : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -182,7 +178,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:cached.</para>
     /// </summary>
-    [SchemaAttr("ntns:cached")]
     public partial class CachedView : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -220,7 +215,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:openByDefault.</para>
     /// </summary>
-    [SchemaAttr("ntns:openByDefault")]
     public partial class OpenByDefault : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -258,7 +252,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnScope.</para>
     /// </summary>
-    [SchemaAttr("ntns:xsnScope")]
     public partial class Scope : TypedOpenXmlLeafTextElement
     {
         /// <summary>

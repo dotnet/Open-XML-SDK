@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ExternalLinks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxlnp:externalLinksPr.</para>
     /// </summary>
-    [SchemaAttr("xxlnp:externalLinksPr")]
     public partial class ExternalLinksPr : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37,7 +34,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ExternalLinks
         /// <para>autoRefresh, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: autoRefresh</para>
         /// </summary>
-        [SchemaAttr("autoRefresh")]
         public BooleanValue? AutoRefresh
         {
             get => GetAttribute<BooleanValue>();

@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -31,7 +29,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory" /> <c>&lt;p1912:history></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p1912:taskHistoryDetails")]
     public partial class TaskHistoryDetails : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -69,7 +66,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -131,7 +127,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:comment.</para>
     /// </summary>
-    [SchemaAttr("p1912:comment")]
     public partial class CommentAnchor : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -145,7 +140,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -180,7 +174,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p1912:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -241,7 +234,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:atrbtn.</para>
     /// </summary>
-    [SchemaAttr("p1912:atrbtn")]
     public partial class AtrbtnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
         /// <summary>
@@ -267,7 +259,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:asgn.</para>
     /// </summary>
-    [SchemaAttr("p1912:asgn")]
     public partial class AsgnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
         /// <summary>
@@ -293,7 +284,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:unAsgn.</para>
     /// </summary>
-    [SchemaAttr("p1912:unAsgn")]
     public partial class UnAsgnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
         /// <summary>
@@ -332,7 +322,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>authorId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: authorId</para>
         /// </summary>
-        [SchemaAttr("authorId")]
         public StringValue? AuthorId
         {
             get => GetAttribute<StringValue>();
@@ -363,7 +352,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor" /> <c>&lt;p1912:comment></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p1912:anchr")]
     public partial class TaskAnchor : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -446,7 +434,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:add.</para>
     /// </summary>
-    [SchemaAttr("p1912:add")]
     public partial class AddEmpty : EmptyType
     {
         /// <summary>
@@ -472,7 +459,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:unasgnAll.</para>
     /// </summary>
-    [SchemaAttr("p1912:unasgnAll")]
     public partial class UnasgnAllEmpty : EmptyType
     {
         /// <summary>
@@ -518,7 +504,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:title.</para>
     /// </summary>
-    [SchemaAttr("p1912:title")]
     public partial class TaskTitleEventInfo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -532,7 +517,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>val, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -560,7 +544,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:date.</para>
     /// </summary>
-    [SchemaAttr("p1912:date")]
     public partial class TaskScheduleEventInfo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -574,7 +557,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>stDt, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: stDt</para>
         /// </summary>
-        [SchemaAttr("stDt")]
         public DateTimeValue? StDt
         {
             get => GetAttribute<DateTimeValue>();
@@ -585,7 +567,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>endDt, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: endDt</para>
         /// </summary>
-        [SchemaAttr("endDt")]
         public DateTimeValue? EndDt
         {
             get => GetAttribute<DateTimeValue>();
@@ -611,7 +592,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:pcntCmplt.</para>
     /// </summary>
-    [SchemaAttr("p1912:pcntCmplt")]
     public partial class TaskProgressEventInfo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -625,7 +605,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>val, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -654,7 +633,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:pri.</para>
     /// </summary>
-    [SchemaAttr("p1912:pri")]
     public partial class TaskPriorityRecord : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -668,7 +646,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>val, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -697,7 +674,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:undo.</para>
     /// </summary>
-    [SchemaAttr("p1912:undo")]
     public partial class TaskUndo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -711,7 +687,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -740,7 +715,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:unknown.</para>
     /// </summary>
-    [SchemaAttr("p1912:unknown")]
     public partial class TaskUnknownRecord : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -784,7 +758,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUnknownRecord" /> <c>&lt;p1912:unknown></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p1912:event")]
     public partial class TaskHistoryEvent : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -822,7 +795,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>time, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        [SchemaAttr("time")]
         public DateTimeValue? Time
         {
             get => GetAttribute<DateTimeValue>();
@@ -833,7 +805,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -930,7 +901,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryEvent" /> <c>&lt;p1912:event></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p1912:history")]
     public partial class TaskHistory : TypedOpenXmlCompositeElement
     {
         /// <summary>

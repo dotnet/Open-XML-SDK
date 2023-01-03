@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:control.</para>
     /// </summary>
-    [SchemaAttr("mso:control")]
     public partial class UnsizedControlClone : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37,7 +34,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -48,7 +44,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -59,7 +54,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -70,7 +64,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -81,7 +74,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -92,7 +84,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -103,7 +94,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -114,7 +104,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -125,7 +114,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -136,7 +124,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -147,7 +134,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -158,7 +144,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -169,7 +154,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -180,7 +164,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -191,7 +174,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -202,7 +184,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -213,7 +194,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -224,7 +204,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -235,7 +214,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -246,7 +224,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -257,7 +234,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -268,7 +244,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -279,7 +254,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -290,7 +264,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -301,7 +274,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -312,7 +284,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -427,7 +398,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:button.</para>
     /// </summary>
-    [SchemaAttr("mso:button")]
     public partial class UnsizedButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -441,7 +411,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -452,7 +421,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -463,7 +431,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -474,7 +441,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -485,7 +451,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -496,7 +461,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -507,7 +471,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -518,7 +481,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -529,7 +491,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -540,7 +501,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -551,7 +511,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -562,7 +521,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -573,7 +531,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -584,7 +541,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -595,7 +551,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -606,7 +561,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -617,7 +571,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -628,7 +581,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -639,7 +591,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -650,7 +601,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -661,7 +611,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -672,7 +621,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -683,7 +631,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -694,7 +641,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -705,7 +651,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -716,7 +661,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -727,7 +671,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -738,7 +681,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -749,7 +691,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -760,7 +701,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -891,7 +831,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:checkBox.</para>
     /// </summary>
-    [SchemaAttr("mso:checkBox")]
     public partial class CheckBox : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -905,7 +844,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [SchemaAttr("getPressed")]
         public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -916,7 +854,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -927,7 +864,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -938,7 +874,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -949,7 +884,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -960,7 +894,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -971,7 +904,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -982,7 +914,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -993,7 +924,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -1004,7 +934,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -1015,7 +944,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -1026,7 +954,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -1037,7 +964,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -1048,7 +974,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -1059,7 +984,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -1070,7 +994,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -1081,7 +1004,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -1092,7 +1014,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -1103,7 +1024,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -1114,7 +1034,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -1125,7 +1044,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -1136,7 +1054,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -1147,7 +1064,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -1158,7 +1074,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -1278,7 +1193,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Item" /> <c>&lt;mso:item></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:gallery")]
     public partial class UnsizedGallery : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1316,7 +1230,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -1327,7 +1240,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -1338,7 +1250,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr("invalidateContentOnDrop")]
         public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -1349,7 +1260,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>columns</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
-        [SchemaAttr("columns")]
         public IntegerValue? Columns
         {
             get => GetAttribute<IntegerValue>();
@@ -1360,7 +1270,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>rows</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
-        [SchemaAttr("rows")]
         public IntegerValue? Rows
         {
             get => GetAttribute<IntegerValue>();
@@ -1371,7 +1280,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>itemWidth</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
-        [SchemaAttr("itemWidth")]
         public IntegerValue? ItemWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -1382,7 +1290,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>itemHeight</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
-        [SchemaAttr("itemHeight")]
         public IntegerValue? ItemHeight
         {
             get => GetAttribute<IntegerValue>();
@@ -1393,7 +1300,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemWidth</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
-        [SchemaAttr("getItemWidth")]
         public StringValue? GetItemWidth
         {
             get => GetAttribute<StringValue>();
@@ -1404,7 +1310,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemHeight</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
-        [SchemaAttr("getItemHeight")]
         public StringValue? GetItemHeight
         {
             get => GetAttribute<StringValue>();
@@ -1415,7 +1320,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showItemLabel</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        [SchemaAttr("showItemLabel")]
         public BooleanValue? ShowItemLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -1426,7 +1330,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -1437,7 +1340,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -1448,7 +1350,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -1459,7 +1360,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -1470,7 +1370,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -1481,7 +1380,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -1492,7 +1390,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        [SchemaAttr("showItemImage")]
         public BooleanValue? ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
@@ -1503,7 +1400,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [SchemaAttr("getItemCount")]
         public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -1514,7 +1410,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [SchemaAttr("getItemLabel")]
         public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -1525,7 +1420,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        [SchemaAttr("getItemScreentip")]
         public StringValue? GetItemScreentip
         {
             get => GetAttribute<StringValue>();
@@ -1536,7 +1430,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        [SchemaAttr("getItemSupertip")]
         public StringValue? GetItemSupertip
         {
             get => GetAttribute<StringValue>();
@@ -1547,7 +1440,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        [SchemaAttr("getItemImage")]
         public StringValue? GetItemImage
         {
             get => GetAttribute<StringValue>();
@@ -1558,7 +1450,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [SchemaAttr("getItemID")]
         public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -1569,7 +1460,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [SchemaAttr("sizeString")]
         public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
@@ -1580,7 +1470,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSelectedItemID</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemID")]
         public StringValue? GetSelectedItemID
         {
             get => GetAttribute<StringValue>();
@@ -1591,7 +1480,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemIndex")]
         public StringValue? GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
@@ -1602,7 +1490,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1613,7 +1500,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -1624,7 +1510,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -1635,7 +1520,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -1646,7 +1530,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -1657,7 +1540,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -1668,7 +1550,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -1679,7 +1560,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -1690,7 +1570,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -1701,7 +1580,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -1712,7 +1590,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -1723,7 +1600,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -1734,7 +1610,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -1745,7 +1620,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -1756,7 +1630,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -1767,7 +1640,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -1778,7 +1650,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -1789,7 +1660,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -1800,7 +1670,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -1811,7 +1680,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -1822,7 +1690,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -1833,7 +1700,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -2040,7 +1906,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:toggleButton.</para>
     /// </summary>
-    [SchemaAttr("mso:toggleButton")]
     public partial class UnsizedToggleButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2054,7 +1919,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [SchemaAttr("getPressed")]
         public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -2065,7 +1929,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -2076,7 +1939,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -2087,7 +1949,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -2098,7 +1959,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -2109,7 +1969,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -2120,7 +1979,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -2131,7 +1989,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -2142,7 +1999,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -2153,7 +2009,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2164,7 +2019,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -2175,7 +2029,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -2186,7 +2039,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -2197,7 +2049,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -2208,7 +2059,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -2219,7 +2069,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -2230,7 +2079,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -2241,7 +2089,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -2252,7 +2099,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -2263,7 +2109,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -2274,7 +2119,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -2285,7 +2129,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -2296,7 +2139,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -2307,7 +2149,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -2318,7 +2159,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -2329,7 +2169,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -2340,7 +2179,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -2351,7 +2189,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -2362,7 +2199,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -2373,7 +2209,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -2384,7 +2219,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -2519,7 +2353,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:menuSeparator.</para>
     /// </summary>
-    [SchemaAttr("mso:menuSeparator")]
     public partial class MenuSeparator : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2533,7 +2366,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2544,7 +2376,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -2555,7 +2386,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -2566,7 +2396,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -2577,7 +2406,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -2588,7 +2416,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -2599,7 +2426,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -2610,7 +2436,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getTitle</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        [SchemaAttr("getTitle")]
         public StringValue? GetTitle
         {
             get => GetAttribute<StringValue>();
@@ -2673,7 +2498,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:splitButton")]
     public partial class UnsizedSplitButton : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2711,7 +2535,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -2722,7 +2545,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -2733,7 +2555,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2744,7 +2565,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -2755,7 +2575,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -2766,7 +2585,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -2777,7 +2595,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -2788,7 +2605,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -2799,7 +2615,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -2810,7 +2625,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -2821,7 +2635,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -2832,7 +2645,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -2843,7 +2655,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -2854,7 +2665,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -2865,7 +2675,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -2876,7 +2685,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -2983,7 +2791,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:menu")]
     public partial class UnsizedMenu : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3021,7 +2828,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        [SchemaAttr("itemSize")]
         public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>();
@@ -3032,7 +2838,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -3043,7 +2848,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -3054,7 +2858,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -3065,7 +2868,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -3076,7 +2878,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -3087,7 +2888,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -3098,7 +2898,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -3109,7 +2908,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -3120,7 +2918,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -3131,7 +2928,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -3142,7 +2938,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -3153,7 +2948,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -3164,7 +2958,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -3175,7 +2968,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -3186,7 +2978,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -3197,7 +2988,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -3208,7 +2998,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -3219,7 +3008,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -3230,7 +3018,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -3241,7 +3028,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -3252,7 +3038,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -3263,7 +3048,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -3274,7 +3058,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -3285,7 +3068,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -3296,7 +3078,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -3307,7 +3088,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -3318,7 +3098,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -3329,7 +3108,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -3340,7 +3118,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -3507,7 +3284,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:dynamicMenu.</para>
     /// </summary>
-    [SchemaAttr("mso:dynamicMenu")]
     public partial class UnsizedDynamicMenu : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3521,7 +3297,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -3532,7 +3307,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -3543,7 +3317,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -3554,7 +3327,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -3565,7 +3337,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -3576,7 +3347,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -3587,7 +3357,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getContent</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
-        [SchemaAttr("getContent")]
         public StringValue? GetContent
         {
             get => GetAttribute<StringValue>();
@@ -3598,7 +3367,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr("invalidateContentOnDrop")]
         public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -3609,7 +3377,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -3620,7 +3387,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -3631,7 +3397,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -3642,7 +3407,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -3653,7 +3417,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -3664,7 +3427,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -3675,7 +3437,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -3686,7 +3447,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -3697,7 +3457,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -3708,7 +3467,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -3719,7 +3477,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -3730,7 +3487,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -3741,7 +3497,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -3752,7 +3507,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -3763,7 +3517,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -3774,7 +3527,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -3785,7 +3537,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -3796,7 +3547,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -3807,7 +3557,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -3818,7 +3567,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -3829,7 +3577,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -3840,7 +3587,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -3851,7 +3597,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -3992,7 +3737,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:splitButton")]
     public partial class SplitButtonWithTitle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4030,7 +3774,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -4041,7 +3784,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -4052,7 +3794,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -4063,7 +3804,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -4074,7 +3814,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -4085,7 +3824,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -4096,7 +3834,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -4107,7 +3844,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -4118,7 +3854,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -4129,7 +3864,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -4140,7 +3874,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -4151,7 +3884,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -4162,7 +3894,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -4173,7 +3904,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -4184,7 +3914,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -4195,7 +3924,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -4302,7 +4030,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:menu")]
     public partial class MenuWithTitle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4340,7 +4067,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -4351,7 +4077,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -4362,7 +4087,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -4373,7 +4097,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -4384,7 +4107,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        [SchemaAttr("itemSize")]
         public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>();
@@ -4395,7 +4117,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -4406,7 +4127,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getTitle</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        [SchemaAttr("getTitle")]
         public StringValue? GetTitle
         {
             get => GetAttribute<StringValue>();
@@ -4417,7 +4137,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -4428,7 +4147,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -4439,7 +4157,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -4450,7 +4167,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -4461,7 +4177,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -4472,7 +4187,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -4483,7 +4197,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -4494,7 +4207,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -4505,7 +4217,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -4516,7 +4227,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -4527,7 +4237,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -4538,7 +4247,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -4549,7 +4257,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -4560,7 +4267,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -4571,7 +4277,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -4582,7 +4287,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -4593,7 +4297,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -4604,7 +4307,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -4615,7 +4317,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -4626,7 +4327,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -4637,7 +4337,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -4648,7 +4347,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -4659,7 +4357,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -4826,7 +4523,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:control.</para>
     /// </summary>
-    [SchemaAttr("mso:control")]
     public partial class ControlClone : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4840,7 +4536,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
@@ -4851,7 +4546,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -4862,7 +4556,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -4873,7 +4566,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -4884,7 +4576,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -4895,7 +4586,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -4906,7 +4596,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -4917,7 +4606,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -4928,7 +4616,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -4939,7 +4626,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -4950,7 +4636,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -4961,7 +4646,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -4972,7 +4656,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -4983,7 +4666,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -4994,7 +4676,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -5005,7 +4686,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -5016,7 +4696,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -5027,7 +4706,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -5038,7 +4716,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -5049,7 +4726,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -5060,7 +4736,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -5071,7 +4746,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -5082,7 +4756,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -5093,7 +4766,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -5104,7 +4776,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -5115,7 +4786,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -5126,7 +4796,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -5137,7 +4806,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -5148,7 +4816,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -5159,7 +4826,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -5287,7 +4953,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:labelControl.</para>
     /// </summary>
-    [SchemaAttr("mso:labelControl")]
     public partial class TextLabel : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5301,7 +4966,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -5312,7 +4976,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -5323,7 +4986,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -5334,7 +4996,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -5345,7 +5006,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -5356,7 +5016,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -5367,7 +5026,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -5378,7 +5036,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -5389,7 +5046,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -5400,7 +5056,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -5411,7 +5066,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -5422,7 +5076,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -5433,7 +5086,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -5444,7 +5096,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -5455,7 +5106,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -5466,7 +5116,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -5477,7 +5126,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -5488,7 +5136,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -5499,7 +5146,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -5510,7 +5156,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -5604,7 +5249,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:button.</para>
     /// </summary>
-    [SchemaAttr("mso:button")]
     public partial class Button : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5618,7 +5262,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
@@ -5629,7 +5272,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -5640,7 +5282,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -5651,7 +5292,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -5662,7 +5302,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -5673,7 +5312,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -5684,7 +5322,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -5695,7 +5332,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -5706,7 +5342,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -5717,7 +5352,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -5728,7 +5362,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -5739,7 +5372,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -5750,7 +5382,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -5761,7 +5392,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -5772,7 +5402,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -5783,7 +5412,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -5794,7 +5422,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -5805,7 +5432,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -5816,7 +5442,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -5827,7 +5452,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -5838,7 +5462,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -5849,7 +5472,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -5860,7 +5482,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -5871,7 +5492,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -5882,7 +5502,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -5893,7 +5512,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -5904,7 +5522,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -5915,7 +5532,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -5926,7 +5542,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -5937,7 +5552,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -5948,7 +5562,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -5959,7 +5572,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -6095,7 +5707,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:toggleButton.</para>
     /// </summary>
-    [SchemaAttr("mso:toggleButton")]
     public partial class ToggleButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6109,7 +5720,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
@@ -6120,7 +5730,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -6131,7 +5740,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [SchemaAttr("getPressed")]
         public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -6142,7 +5750,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -6153,7 +5760,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -6164,7 +5770,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -6175,7 +5780,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -6186,7 +5790,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -6197,7 +5800,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -6208,7 +5810,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -6219,7 +5820,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -6230,7 +5830,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -6241,7 +5840,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -6252,7 +5850,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -6263,7 +5860,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -6274,7 +5870,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -6285,7 +5880,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -6296,7 +5890,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -6307,7 +5900,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -6318,7 +5910,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -6329,7 +5920,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -6340,7 +5930,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -6351,7 +5940,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -6362,7 +5950,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -6373,7 +5960,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -6384,7 +5970,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -6395,7 +5980,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -6406,7 +5990,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -6417,7 +6000,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -6428,7 +6010,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -6439,7 +6020,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -6450,7 +6030,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -6461,7 +6040,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -6601,7 +6179,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:editBox.</para>
     /// </summary>
-    [SchemaAttr("mso:editBox")]
     public partial class EditBox : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6615,7 +6192,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -6626,7 +6202,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -6637,7 +6212,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -6648,7 +6222,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -6659,7 +6232,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -6670,7 +6242,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>maxLength</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        [SchemaAttr("maxLength")]
         public IntegerValue? MaxLength
         {
             get => GetAttribute<IntegerValue>();
@@ -6681,7 +6252,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getText</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        [SchemaAttr("getText")]
         public StringValue? GetText
         {
             get => GetAttribute<StringValue>();
@@ -6692,7 +6262,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onChange</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        [SchemaAttr("onChange")]
         public StringValue? OnChange
         {
             get => GetAttribute<StringValue>();
@@ -6703,7 +6272,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [SchemaAttr("sizeString")]
         public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
@@ -6714,7 +6282,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -6725,7 +6292,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -6736,7 +6302,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -6747,7 +6312,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -6758,7 +6322,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -6769,7 +6332,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -6780,7 +6342,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -6791,7 +6352,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -6802,7 +6362,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -6813,7 +6372,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -6824,7 +6382,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -6835,7 +6392,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -6846,7 +6402,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -6857,7 +6412,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -6868,7 +6422,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -6879,7 +6432,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -6890,7 +6442,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -6901,7 +6452,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -6912,7 +6462,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -6923,7 +6472,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -6934,7 +6482,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -6945,7 +6492,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -7086,7 +6632,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Item" /> <c>&lt;mso:item></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:comboBox")]
     public partial class ComboBox : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7124,7 +6669,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        [SchemaAttr("showItemImage")]
         public BooleanValue? ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
@@ -7135,7 +6679,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [SchemaAttr("getItemCount")]
         public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -7146,7 +6689,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [SchemaAttr("getItemLabel")]
         public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -7157,7 +6699,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        [SchemaAttr("getItemScreentip")]
         public StringValue? GetItemScreentip
         {
             get => GetAttribute<StringValue>();
@@ -7168,7 +6709,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        [SchemaAttr("getItemSupertip")]
         public StringValue? GetItemSupertip
         {
             get => GetAttribute<StringValue>();
@@ -7179,7 +6719,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        [SchemaAttr("getItemImage")]
         public StringValue? GetItemImage
         {
             get => GetAttribute<StringValue>();
@@ -7190,7 +6729,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [SchemaAttr("getItemID")]
         public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -7201,7 +6739,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [SchemaAttr("sizeString")]
         public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
@@ -7212,7 +6749,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr("invalidateContentOnDrop")]
         public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -7223,7 +6759,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -7234,7 +6769,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -7245,7 +6779,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -7256,7 +6789,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -7267,7 +6799,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -7278,7 +6809,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>maxLength</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        [SchemaAttr("maxLength")]
         public IntegerValue? MaxLength
         {
             get => GetAttribute<IntegerValue>();
@@ -7289,7 +6819,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getText</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        [SchemaAttr("getText")]
         public StringValue? GetText
         {
             get => GetAttribute<StringValue>();
@@ -7300,7 +6829,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onChange</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        [SchemaAttr("onChange")]
         public StringValue? OnChange
         {
             get => GetAttribute<StringValue>();
@@ -7311,7 +6839,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -7322,7 +6849,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -7333,7 +6859,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -7344,7 +6869,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -7355,7 +6879,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -7366,7 +6889,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -7377,7 +6899,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -7388,7 +6909,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -7399,7 +6919,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -7410,7 +6929,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -7421,7 +6939,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -7432,7 +6949,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -7443,7 +6959,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -7454,7 +6969,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -7465,7 +6979,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -7476,7 +6989,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -7487,7 +6999,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -7498,7 +7009,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -7509,7 +7019,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -7520,7 +7029,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -7531,7 +7039,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -7542,7 +7049,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -7718,7 +7224,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Item" /> <c>&lt;mso:item></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:dropDown")]
     public partial class DropDown : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7756,7 +7261,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -7767,7 +7271,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -7778,7 +7281,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -7789,7 +7291,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -7800,7 +7301,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -7811,7 +7311,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -7822,7 +7321,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        [SchemaAttr("showItemImage")]
         public BooleanValue? ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
@@ -7833,7 +7331,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [SchemaAttr("getItemCount")]
         public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -7844,7 +7341,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [SchemaAttr("getItemLabel")]
         public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -7855,7 +7351,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        [SchemaAttr("getItemScreentip")]
         public StringValue? GetItemScreentip
         {
             get => GetAttribute<StringValue>();
@@ -7866,7 +7361,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        [SchemaAttr("getItemSupertip")]
         public StringValue? GetItemSupertip
         {
             get => GetAttribute<StringValue>();
@@ -7877,7 +7371,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        [SchemaAttr("getItemImage")]
         public StringValue? GetItemImage
         {
             get => GetAttribute<StringValue>();
@@ -7888,7 +7381,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [SchemaAttr("getItemID")]
         public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -7899,7 +7391,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [SchemaAttr("sizeString")]
         public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
@@ -7910,7 +7401,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSelectedItemID</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemID")]
         public StringValue? GetSelectedItemID
         {
             get => GetAttribute<StringValue>();
@@ -7921,7 +7411,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemIndex")]
         public StringValue? GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
@@ -7932,7 +7421,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showItemLabel</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        [SchemaAttr("showItemLabel")]
         public BooleanValue? ShowItemLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -7943,7 +7431,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -7954,7 +7441,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -7965,7 +7451,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -7976,7 +7461,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -7987,7 +7471,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -7998,7 +7481,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -8009,7 +7491,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -8020,7 +7501,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -8031,7 +7511,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -8042,7 +7521,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -8053,7 +7531,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -8064,7 +7541,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -8075,7 +7551,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -8086,7 +7561,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -8097,7 +7571,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -8108,7 +7581,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -8119,7 +7591,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -8130,7 +7601,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -8141,7 +7611,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -8152,7 +7621,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -8163,7 +7631,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -8174,7 +7641,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -8352,7 +7818,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Item" /> <c>&lt;mso:item></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:gallery")]
     public partial class Gallery : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8390,7 +7855,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
@@ -8401,7 +7865,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -8412,7 +7875,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -8423,7 +7885,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -8434,7 +7895,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr("invalidateContentOnDrop")]
         public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -8445,7 +7905,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>columns</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
-        [SchemaAttr("columns")]
         public IntegerValue? Columns
         {
             get => GetAttribute<IntegerValue>();
@@ -8456,7 +7915,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>rows</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
-        [SchemaAttr("rows")]
         public IntegerValue? Rows
         {
             get => GetAttribute<IntegerValue>();
@@ -8467,7 +7925,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>itemWidth</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
-        [SchemaAttr("itemWidth")]
         public IntegerValue? ItemWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -8478,7 +7935,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>itemHeight</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
-        [SchemaAttr("itemHeight")]
         public IntegerValue? ItemHeight
         {
             get => GetAttribute<IntegerValue>();
@@ -8489,7 +7945,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemWidth</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
-        [SchemaAttr("getItemWidth")]
         public StringValue? GetItemWidth
         {
             get => GetAttribute<StringValue>();
@@ -8500,7 +7955,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemHeight</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
-        [SchemaAttr("getItemHeight")]
         public StringValue? GetItemHeight
         {
             get => GetAttribute<StringValue>();
@@ -8511,7 +7965,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showItemLabel</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        [SchemaAttr("showItemLabel")]
         public BooleanValue? ShowItemLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -8522,7 +7975,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -8533,7 +7985,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -8544,7 +7995,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -8555,7 +8005,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -8566,7 +8015,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -8577,7 +8025,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -8588,7 +8035,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        [SchemaAttr("showItemImage")]
         public BooleanValue? ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
@@ -8599,7 +8045,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        [SchemaAttr("getItemCount")]
         public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -8610,7 +8055,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        [SchemaAttr("getItemLabel")]
         public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -8621,7 +8065,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        [SchemaAttr("getItemScreentip")]
         public StringValue? GetItemScreentip
         {
             get => GetAttribute<StringValue>();
@@ -8632,7 +8075,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        [SchemaAttr("getItemSupertip")]
         public StringValue? GetItemSupertip
         {
             get => GetAttribute<StringValue>();
@@ -8643,7 +8085,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        [SchemaAttr("getItemImage")]
         public StringValue? GetItemImage
         {
             get => GetAttribute<StringValue>();
@@ -8654,7 +8095,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        [SchemaAttr("getItemID")]
         public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -8665,7 +8105,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        [SchemaAttr("sizeString")]
         public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
@@ -8676,7 +8115,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSelectedItemID</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemID")]
         public StringValue? GetSelectedItemID
         {
             get => GetAttribute<StringValue>();
@@ -8687,7 +8125,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        [SchemaAttr("getSelectedItemIndex")]
         public StringValue? GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
@@ -8698,7 +8135,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -8709,7 +8145,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -8720,7 +8155,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -8731,7 +8165,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -8742,7 +8175,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -8753,7 +8185,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -8764,7 +8195,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -8775,7 +8205,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -8786,7 +8215,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -8797,7 +8225,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -8808,7 +8235,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -8819,7 +8245,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -8830,7 +8255,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -8841,7 +8265,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -8852,7 +8275,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -8863,7 +8285,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -8874,7 +8295,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -8885,7 +8305,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -8896,7 +8315,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -8907,7 +8325,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -8918,7 +8335,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -8929,7 +8345,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -9158,7 +8573,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:menu")]
     public partial class Menu : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9196,7 +8610,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
@@ -9207,7 +8620,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -9218,7 +8630,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        [SchemaAttr("itemSize")]
         public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>();
@@ -9229,7 +8640,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -9240,7 +8650,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -9251,7 +8660,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -9262,7 +8670,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -9273,7 +8680,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -9284,7 +8690,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -9295,7 +8700,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -9306,7 +8710,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -9317,7 +8720,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -9328,7 +8730,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -9339,7 +8740,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -9350,7 +8750,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -9361,7 +8760,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -9372,7 +8770,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -9383,7 +8780,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -9394,7 +8790,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -9405,7 +8800,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -9416,7 +8810,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -9427,7 +8820,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -9438,7 +8830,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -9449,7 +8840,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -9460,7 +8850,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -9471,7 +8860,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -9482,7 +8870,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -9493,7 +8880,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -9504,7 +8890,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -9515,7 +8900,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -9526,7 +8910,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -9537,7 +8920,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -9712,7 +9094,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:dynamicMenu.</para>
     /// </summary>
-    [SchemaAttr("mso:dynamicMenu")]
     public partial class DynamicMenu : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -9726,7 +9107,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
@@ -9737,7 +9117,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -9748,7 +9127,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -9759,7 +9137,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -9770,7 +9147,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -9781,7 +9157,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -9792,7 +9167,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -9803,7 +9177,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -9814,7 +9187,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getContent</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
-        [SchemaAttr("getContent")]
         public StringValue? GetContent
         {
             get => GetAttribute<StringValue>();
@@ -9825,7 +9197,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        [SchemaAttr("invalidateContentOnDrop")]
         public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -9836,7 +9207,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -9847,7 +9217,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -9858,7 +9227,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -9869,7 +9237,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -9880,7 +9247,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -9891,7 +9257,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -9902,7 +9267,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -9913,7 +9277,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -9924,7 +9287,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -9935,7 +9297,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -9946,7 +9307,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -9957,7 +9317,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -9968,7 +9327,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -9979,7 +9337,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -9990,7 +9347,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -10001,7 +9357,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -10012,7 +9367,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -10023,7 +9377,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -10034,7 +9387,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -10045,7 +9397,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -10056,7 +9407,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -10067,7 +9417,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -10078,7 +9427,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -10224,7 +9572,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:splitButton")]
     public partial class SplitButton : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10262,7 +9609,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
@@ -10273,7 +9619,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -10284,7 +9629,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -10295,7 +9639,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -10306,7 +9649,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -10317,7 +9659,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -10328,7 +9669,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -10339,7 +9679,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -10350,7 +9689,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -10361,7 +9699,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -10372,7 +9709,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -10383,7 +9719,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -10394,7 +9729,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -10405,7 +9739,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -10416,7 +9749,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -10427,7 +9759,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -10438,7 +9769,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -10449,7 +9779,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -10569,7 +9898,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.ToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:box")]
     public partial class Box : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10607,7 +9935,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -10618,7 +9945,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -10629,7 +9955,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -10640,7 +9965,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -10651,7 +9975,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -10662,7 +9985,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -10673,7 +9995,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -10684,7 +10005,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -10695,7 +10015,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>boxStyle</para>
         /// <para>Represents the following attribute in the schema: boxStyle</para>
         /// </summary>
-        [SchemaAttr("boxStyle")]
         public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues>? BoxStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues>>();
@@ -10794,7 +10113,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:buttonGroup")]
     public partial class ButtonGroup : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10832,7 +10150,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -10843,7 +10160,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -10854,7 +10170,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -10865,7 +10180,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -10876,7 +10190,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -10887,7 +10200,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -10898,7 +10210,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -10909,7 +10220,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -10995,7 +10305,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:menu")]
     public partial class MenuRoot : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -11033,7 +10342,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -11044,7 +10352,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getTitle</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        [SchemaAttr("getTitle")]
         public StringValue? GetTitle
         {
             get => GetAttribute<StringValue>();
@@ -11055,7 +10362,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        [SchemaAttr("itemSize")]
         public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>();
@@ -11130,7 +10436,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Ribbon" /> <c>&lt;mso:ribbon></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:customUI")]
     public partial class CustomUI : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -11168,7 +10473,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onLoad</para>
         /// <para>Represents the following attribute in the schema: onLoad</para>
         /// </summary>
-        [SchemaAttr("onLoad")]
         public StringValue? OnLoad
         {
             get => GetAttribute<StringValue>();
@@ -11179,7 +10483,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>loadImage</para>
         /// <para>Represents the following attribute in the schema: loadImage</para>
         /// </summary>
-        [SchemaAttr("loadImage")]
         public StringValue? LoadImage
         {
             get => GetAttribute<StringValue>();
@@ -11243,7 +10546,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:item.</para>
     /// </summary>
-    [SchemaAttr("mso:item")]
     public partial class Item : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -11257,7 +10559,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -11268,7 +10569,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -11279,7 +10579,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -11290,7 +10589,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -11301,7 +10599,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -11312,7 +10609,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -11359,7 +10655,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:button.</para>
     /// </summary>
-    [SchemaAttr("mso:button")]
     public partial class VisibleButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -11373,7 +10668,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -11384,7 +10678,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -11395,7 +10688,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -11406,7 +10698,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -11417,7 +10708,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -11428,7 +10718,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -11439,7 +10728,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -11450,7 +10738,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -11461,7 +10748,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -11472,7 +10758,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -11483,7 +10768,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -11494,7 +10778,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -11505,7 +10788,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -11516,7 +10798,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -11527,7 +10808,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -11538,7 +10818,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -11549,7 +10828,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -11560,7 +10838,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -11571,7 +10848,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -11582,7 +10858,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -11593,7 +10868,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -11604,7 +10878,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -11615,7 +10888,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -11626,7 +10898,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -11637,7 +10908,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -11648,7 +10918,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -11659,7 +10928,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -11670,7 +10938,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -11796,7 +11063,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:toggleButton.</para>
     /// </summary>
-    [SchemaAttr("mso:toggleButton")]
     public partial class VisibleToggleButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -11810,7 +11076,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        [SchemaAttr("getPressed")]
         public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -11821,7 +11086,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -11832,7 +11096,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -11843,7 +11106,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -11854,7 +11116,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -11865,7 +11126,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -11876,7 +11136,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -11887,7 +11146,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -11898,7 +11156,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -11909,7 +11166,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -11920,7 +11176,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -11931,7 +11186,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -11942,7 +11196,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -11953,7 +11206,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -11964,7 +11216,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -11975,7 +11226,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -11986,7 +11236,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -11997,7 +11246,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -12008,7 +11256,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -12019,7 +11266,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -12030,7 +11276,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -12041,7 +11286,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -12052,7 +11296,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -12063,7 +11306,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -12074,7 +11316,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -12085,7 +11326,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -12096,7 +11336,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -12107,7 +11346,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -12118,7 +11356,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -12248,7 +11485,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:separator.</para>
     /// </summary>
-    [SchemaAttr("mso:separator")]
     public partial class VerticalSeparator : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -12262,7 +11498,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -12273,7 +11508,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -12284,7 +11518,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -12295,7 +11528,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -12306,7 +11538,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -12317,7 +11548,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -12328,7 +11558,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -12339,7 +11568,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -12397,7 +11625,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton" /> <c>&lt;mso:button></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:dialogBoxLauncher")]
     public partial class DialogBoxLauncher : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -12485,7 +11712,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.ToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:group")]
     public partial class Group : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -12523,7 +11749,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -12534,7 +11759,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -12545,7 +11769,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -12556,7 +11779,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -12567,7 +11789,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -12578,7 +11799,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -12589,7 +11809,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -12600,7 +11819,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -12611,7 +11829,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -12622,7 +11839,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -12633,7 +11849,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -12644,7 +11859,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -12655,7 +11869,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -12666,7 +11879,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -12677,7 +11889,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -12688,7 +11899,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -12699,7 +11909,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -12710,7 +11919,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -12721,7 +11929,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -12732,7 +11939,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -12743,7 +11949,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -12894,7 +12099,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:control.</para>
     /// </summary>
-    [SchemaAttr("mso:control")]
     public partial class QuickAccessToolbarControlClone : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -12908,7 +12112,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -12919,7 +12122,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -12930,7 +12132,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -12941,7 +12142,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -12952,7 +12152,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        [SchemaAttr("getDescription")]
         public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -12963,7 +12162,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
@@ -12974,7 +12172,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        [SchemaAttr("getSize")]
         public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
@@ -12985,7 +12182,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        [SchemaAttr("image")]
         public StringValue? Image
         {
             get => GetAttribute<StringValue>();
@@ -12996,7 +12192,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        [SchemaAttr("imageMso")]
         public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -13007,7 +12202,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        [SchemaAttr("getImage")]
         public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
@@ -13018,7 +12212,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        [SchemaAttr("screentip")]
         public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
@@ -13029,7 +12222,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        [SchemaAttr("getScreentip")]
         public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -13040,7 +12232,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        [SchemaAttr("supertip")]
         public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
@@ -13051,7 +12242,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        [SchemaAttr("getSupertip")]
         public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -13062,7 +12252,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -13073,7 +12262,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -13084,7 +12272,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -13095,7 +12282,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -13106,7 +12292,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -13117,7 +12302,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -13128,7 +12312,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -13139,7 +12322,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -13150,7 +12332,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -13161,7 +12342,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -13172,7 +12352,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -13183,7 +12362,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -13194,7 +12372,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        [SchemaAttr("showLabel")]
         public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -13205,7 +12382,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        [SchemaAttr("getShowLabel")]
         public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -13216,7 +12392,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        [SchemaAttr("showImage")]
         public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -13227,7 +12402,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        [SchemaAttr("getShowImage")]
         public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -13363,7 +12537,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator" /> <c>&lt;mso:separator></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:sharedControls")]
     public partial class SharedQatControls : QatItemsType
     {
         /// <summary>
@@ -13429,7 +12602,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator" /> <c>&lt;mso:separator></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:documentControls")]
     public partial class DocumentSpecificQuickAccessToolbarControls : QatItemsType
     {
         /// <summary>
@@ -13548,7 +12720,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Group" /> <c>&lt;mso:group></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:tab")]
     public partial class Tab : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13586,7 +12757,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -13597,7 +12767,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        [SchemaAttr("idQ")]
         public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
@@ -13608,7 +12777,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -13619,7 +12787,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -13630,7 +12797,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        [SchemaAttr("label")]
         public StringValue? Label
         {
             get => GetAttribute<StringValue>();
@@ -13641,7 +12807,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        [SchemaAttr("getLabel")]
         public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -13652,7 +12817,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        [SchemaAttr("insertAfterMso")]
         public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -13663,7 +12827,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        [SchemaAttr("insertBeforeMso")]
         public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -13674,7 +12837,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        [SchemaAttr("insertAfterQ")]
         public StringValue? InsertAfterQ
         {
             get => GetAttribute<StringValue>();
@@ -13685,7 +12847,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        [SchemaAttr("insertBeforeQ")]
         public StringValue? InsertBeforeQ
         {
             get => GetAttribute<StringValue>();
@@ -13696,7 +12857,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -13707,7 +12867,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -13718,7 +12877,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        [SchemaAttr("keytip")]
         public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
@@ -13729,7 +12887,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        [SchemaAttr("getKeytip")]
         public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -13819,7 +12976,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Tab" /> <c>&lt;mso:tab></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:tabSet")]
     public partial class ContextualTabSet : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13857,7 +13013,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -13868,7 +13023,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -13879,7 +13033,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        [SchemaAttr("getVisible")]
         public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -13917,7 +13070,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:command.</para>
     /// </summary>
-    [SchemaAttr("mso:command")]
     public partial class RepurposedCommand : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -13931,7 +13083,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        [SchemaAttr("onAction")]
         public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
@@ -13942,7 +13093,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        [SchemaAttr("enabled")]
         public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -13953,7 +13103,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        [SchemaAttr("getEnabled")]
         public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -13964,7 +13113,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        [SchemaAttr("idMso")]
         public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
@@ -14014,7 +13162,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:officeMenu")]
     public partial class OfficeMenu : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14106,7 +13253,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls" /> <c>&lt;mso:documentControls></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:qat")]
     public partial class QuickAccessToolbar : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14194,7 +13340,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Tab" /> <c>&lt;mso:tab></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:tabs")]
     public partial class Tabs : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14254,7 +13399,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet" /> <c>&lt;mso:tabSet></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:contextualTabs")]
     public partial class ContextualTabSets : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14314,7 +13458,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommand" /> <c>&lt;mso:command></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:commands")]
     public partial class RepurposedCommands : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14377,7 +13520,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Tabs" /> <c>&lt;mso:tabs></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("mso:ribbon")]
     public partial class Ribbon : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14415,7 +13557,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>startFromScratch</para>
         /// <para>Represents the following attribute in the schema: startFromScratch</para>
         /// </summary>
-        [SchemaAttr("startFromScratch")]
         public BooleanValue? StartFromScratch
         {
             get => GetAttribute<BooleanValue>();

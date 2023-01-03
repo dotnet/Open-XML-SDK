@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -30,7 +28,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink.OfficeArtExtensionList" /> <c>&lt;asl:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("asl:scriptLink")]
     public partial class ScriptLink : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -68,7 +65,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
         /// <para>val, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -117,7 +113,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("asl:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>

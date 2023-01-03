@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Charts;
@@ -38,7 +36,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings" /> <c>&lt;cx:printSettings></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:chartSpace")]
     public partial class ChartSpace : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -242,7 +239,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:chart.</para>
     /// </summary>
-    [SchemaAttr("cx:chart")]
     public partial class RelId : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -259,7 +255,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -287,7 +282,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:binCount.</para>
     /// </summary>
-    [SchemaAttr("cx:binCount")]
     public partial class BinCountXsdunsignedInt : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -327,7 +321,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:ext.</para>
     /// </summary>
-    [SchemaAttr("cx:ext")]
     public partial class Extension2 : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -365,7 +358,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>uri, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -408,7 +400,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:minColor")]
     public partial class MinColorSolidColorFillProperties : OpenXmlSolidColorFillPropertiesElement
     {
         /// <summary>
@@ -484,7 +475,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:midColor")]
     public partial class MidColorSolidColorFillProperties : OpenXmlSolidColorFillPropertiesElement
     {
         /// <summary>
@@ -560,7 +550,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:maxColor")]
     public partial class MaxColorSolidColorFillProperties : OpenXmlSolidColorFillPropertiesElement
     {
         /// <summary>
@@ -764,7 +753,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:pt.</para>
     /// </summary>
-    [SchemaAttr("cx:pt")]
     public partial class ChartStringValue : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -791,7 +779,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>idx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
@@ -819,7 +806,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:f.</para>
     /// </summary>
-    [SchemaAttr("cx:f")]
     public partial class Formula : OpenXmlFormulaElement
     {
         /// <summary>
@@ -858,7 +844,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:nf.</para>
     /// </summary>
-    [SchemaAttr("cx:nf")]
     public partial class NfFormula : OpenXmlFormulaElement
     {
         /// <summary>
@@ -923,7 +908,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>dir, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [SchemaAttr("dir")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormulaDirection>? Dir
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormulaDirection>>();
@@ -949,7 +933,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartStringValue" /> <c>&lt;cx:pt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:lvl")]
     public partial class StringLevel : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -987,7 +970,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ptCount, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ptCount</para>
         /// </summary>
-        [SchemaAttr("ptCount")]
         public UInt32Value? PtCount
         {
             get => GetAttribute<UInt32Value>();
@@ -998,7 +980,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>name, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -1032,7 +1013,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:pt.</para>
     /// </summary>
-    [SchemaAttr("cx:pt")]
     public partial class NumericValue : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1059,7 +1039,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>idx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public UInt32Value? Idx
         {
             get => GetAttribute<UInt32Value>();
@@ -1093,7 +1072,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericValue" /> <c>&lt;cx:pt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:lvl")]
     public partial class NumericLevel : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1131,7 +1109,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ptCount, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ptCount</para>
         /// </summary>
-        [SchemaAttr("ptCount")]
         public UInt32Value? PtCount
         {
             get => GetAttribute<UInt32Value>();
@@ -1142,7 +1119,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>formatCode, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        [SchemaAttr("formatCode")]
         public StringValue? FormatCode
         {
             get => GetAttribute<StringValue>();
@@ -1153,7 +1129,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>name, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -1196,7 +1171,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericLevel" /> <c>&lt;cx:lvl></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:numDim")]
     public partial class NumericDimension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1234,7 +1208,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>type, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimensionType>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimensionType>>();
@@ -1283,7 +1256,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringLevel" /> <c>&lt;cx:lvl></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:strDim")]
     public partial class StringDimension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1321,7 +1293,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>type, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimensionType>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimensionType>>();
@@ -1368,7 +1339,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Extension2" /> <c>&lt;cx:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1423,7 +1393,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:externalData.</para>
     /// </summary>
-    [SchemaAttr("cx:externalData")]
     public partial class ExternalData : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1440,7 +1409,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1454,7 +1422,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx=http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        [SchemaAttr("cx:autoUpdate")]
         public BooleanValue? AutoUpdate
         {
             get => GetAttribute<BooleanValue>();
@@ -1494,7 +1461,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimension" /> <c>&lt;cx:strDim></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:data")]
     public partial class Data : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1532,7 +1498,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>id, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -1572,7 +1537,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:v.</para>
     /// </summary>
-    [SchemaAttr("cx:v")]
     public partial class VXsdstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1611,7 +1575,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:copyright.</para>
     /// </summary>
-    [SchemaAttr("cx:copyright")]
     public partial class CopyrightXsdstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1650,7 +1613,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:separator.</para>
     /// </summary>
-    [SchemaAttr("cx:separator")]
     public partial class SeparatorXsdstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1689,7 +1651,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:oddHeader.</para>
     /// </summary>
-    [SchemaAttr("cx:oddHeader")]
     public partial class OddHeaderXsdstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1728,7 +1689,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:oddFooter.</para>
     /// </summary>
-    [SchemaAttr("cx:oddFooter")]
     public partial class OddFooterXsdstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1767,7 +1727,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:evenHeader.</para>
     /// </summary>
-    [SchemaAttr("cx:evenHeader")]
     public partial class EvenHeaderXsdstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1806,7 +1765,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:evenFooter.</para>
     /// </summary>
-    [SchemaAttr("cx:evenFooter")]
     public partial class EvenFooterXsdstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1845,7 +1803,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:firstHeader.</para>
     /// </summary>
-    [SchemaAttr("cx:firstHeader")]
     public partial class FirstHeaderXsdstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1884,7 +1841,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:firstFooter.</para>
     /// </summary>
-    [SchemaAttr("cx:firstFooter")]
     public partial class FirstFooterXsdstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1930,7 +1886,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.VXsdstring" /> <c>&lt;cx:v></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:txData")]
     public partial class TextData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1999,7 +1954,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:rich")]
     public partial class RichTextBody : TextBodyType
     {
         /// <summary>
@@ -2063,7 +2017,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:txPr")]
     public partial class TxPrTextBody : TextBodyType
     {
         /// <summary>
@@ -2207,7 +2160,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TextData" /> <c>&lt;cx:txData></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:tx")]
     public partial class Text : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2313,7 +2265,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:spPr")]
     public partial class ShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2351,7 +2302,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -2452,7 +2402,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:unitsLabel")]
     public partial class AxisUnitsLabel : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2565,7 +2514,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:catScaling.</para>
     /// </summary>
-    [SchemaAttr("cx:catScaling")]
     public partial class CategoryAxisScaling : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2579,7 +2527,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>gapWidth, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: gapWidth</para>
         /// </summary>
-        [SchemaAttr("gapWidth")]
         public StringValue? GapWidth
         {
             get => GetAttribute<StringValue>();
@@ -2611,7 +2558,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:valScaling.</para>
     /// </summary>
-    [SchemaAttr("cx:valScaling")]
     public partial class ValueAxisScaling : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2625,7 +2571,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>max, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
-        [SchemaAttr("max")]
         public StringValue? Max
         {
             get => GetAttribute<StringValue>();
@@ -2636,7 +2581,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>min, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: min</para>
         /// </summary>
-        [SchemaAttr("min")]
         public StringValue? Min
         {
             get => GetAttribute<StringValue>();
@@ -2647,7 +2591,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>majorUnit, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: majorUnit</para>
         /// </summary>
-        [SchemaAttr("majorUnit")]
         public StringValue? MajorUnit
         {
             get => GetAttribute<StringValue>();
@@ -2658,7 +2601,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>minorUnit, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: minorUnit</para>
         /// </summary>
-        [SchemaAttr("minorUnit")]
         public StringValue? MinorUnit
         {
             get => GetAttribute<StringValue>();
@@ -2723,7 +2665,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:title")]
     public partial class AxisTitle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2843,7 +2784,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:units")]
     public partial class AxisUnits : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2881,7 +2821,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>unit, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: unit</para>
         /// </summary>
-        [SchemaAttr("unit")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnit>? Unit
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnit>>();
@@ -2946,7 +2885,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:majorGridlines")]
     public partial class MajorGridlinesGridlines : OpenXmlGridlinesElement
     {
         /// <summary>
@@ -3008,7 +2946,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:minorGridlines")]
     public partial class MinorGridlinesGridlines : OpenXmlGridlinesElement
     {
         /// <summary>
@@ -3148,7 +3085,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:majorTickMarks")]
     public partial class MajorTickMarksTickMarks : OpenXmlTickMarksElement
     {
         /// <summary>
@@ -3208,7 +3144,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:minorTickMarks")]
     public partial class MinorTickMarksTickMarks : OpenXmlTickMarksElement
     {
         /// <summary>
@@ -3305,7 +3240,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>type, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickMarksType>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickMarksType>>();
@@ -3345,7 +3279,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:tickLabels")]
     public partial class TickLabels : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3413,7 +3346,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:numFmt.</para>
     /// </summary>
-    [SchemaAttr("cx:numFmt")]
     public partial class NumberFormat : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3427,7 +3359,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>formatCode, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        [SchemaAttr("formatCode")]
         public StringValue? FormatCode
         {
             get => GetAttribute<StringValue>();
@@ -3438,7 +3369,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>sourceLinked, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sourceLinked</para>
         /// </summary>
-        [SchemaAttr("sourceLinked")]
         public BooleanValue? SourceLinked
         {
             get => GetAttribute<BooleanValue>();
@@ -3467,7 +3397,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:binSize.</para>
     /// </summary>
-    [SchemaAttr("cx:binSize")]
     public partial class Xsddouble : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -3507,7 +3436,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:address.</para>
     /// </summary>
-    [SchemaAttr("cx:address")]
     public partial class Address : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3521,7 +3449,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>address1, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: address1</para>
         /// </summary>
-        [SchemaAttr("address1")]
         public StringValue? Address1
         {
             get => GetAttribute<StringValue>();
@@ -3532,7 +3459,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>countryRegion, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: countryRegion</para>
         /// </summary>
-        [SchemaAttr("countryRegion")]
         public StringValue? CountryRegion
         {
             get => GetAttribute<StringValue>();
@@ -3543,7 +3469,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>adminDistrict1, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: adminDistrict1</para>
         /// </summary>
-        [SchemaAttr("adminDistrict1")]
         public StringValue? AdminDistrict1
         {
             get => GetAttribute<StringValue>();
@@ -3554,7 +3479,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>adminDistrict2, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: adminDistrict2</para>
         /// </summary>
-        [SchemaAttr("adminDistrict2")]
         public StringValue? AdminDistrict2
         {
             get => GetAttribute<StringValue>();
@@ -3565,7 +3489,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>postalCode, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: postalCode</para>
         /// </summary>
-        [SchemaAttr("postalCode")]
         public StringValue? PostalCode
         {
             get => GetAttribute<StringValue>();
@@ -3576,7 +3499,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>locality, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: locality</para>
         /// </summary>
-        [SchemaAttr("locality")]
         public StringValue? Locality
         {
             get => GetAttribute<StringValue>();
@@ -3587,7 +3509,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>isoCountryCode, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: isoCountryCode</para>
         /// </summary>
-        [SchemaAttr("isoCountryCode")]
         public StringValue? IsoCountryCode
         {
             get => GetAttribute<StringValue>();
@@ -3624,7 +3545,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Address" /> <c>&lt;cx:address></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoLocation")]
     public partial class GeoLocation : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3662,7 +3582,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>latitude, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: latitude</para>
         /// </summary>
-        [SchemaAttr("latitude")]
         public DoubleValue? Latitude
         {
             get => GetAttribute<DoubleValue>();
@@ -3673,7 +3592,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>longitude, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: longitude</para>
         /// </summary>
-        [SchemaAttr("longitude")]
         public DoubleValue? Longitude
         {
             get => GetAttribute<DoubleValue>();
@@ -3684,7 +3602,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityName, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityName</para>
         /// </summary>
-        [SchemaAttr("entityName")]
         public StringValue? EntityName
         {
             get => GetAttribute<StringValue>();
@@ -3695,7 +3612,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityType</para>
         /// </summary>
-        [SchemaAttr("entityType")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>? EntityType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>>();
@@ -3747,7 +3663,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoLocationQuery.</para>
     /// </summary>
-    [SchemaAttr("cx:geoLocationQuery")]
     public partial class GeoLocationQuery : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3761,7 +3676,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>countryRegion, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: countryRegion</para>
         /// </summary>
-        [SchemaAttr("countryRegion")]
         public StringValue? CountryRegion
         {
             get => GetAttribute<StringValue>();
@@ -3772,7 +3686,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>adminDistrict1, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: adminDistrict1</para>
         /// </summary>
-        [SchemaAttr("adminDistrict1")]
         public StringValue? AdminDistrict1
         {
             get => GetAttribute<StringValue>();
@@ -3783,7 +3696,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>adminDistrict2, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: adminDistrict2</para>
         /// </summary>
-        [SchemaAttr("adminDistrict2")]
         public StringValue? AdminDistrict2
         {
             get => GetAttribute<StringValue>();
@@ -3794,7 +3706,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>postalCode, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: postalCode</para>
         /// </summary>
-        [SchemaAttr("postalCode")]
         public StringValue? PostalCode
         {
             get => GetAttribute<StringValue>();
@@ -3805,7 +3716,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityType</para>
         /// </summary>
-        [SchemaAttr("entityType")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>? EntityType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>>();
@@ -3843,7 +3753,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocation" /> <c>&lt;cx:geoLocation></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoLocations")]
     public partial class GeoLocations : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3918,7 +3827,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocations" /> <c>&lt;cx:geoLocations></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoLocationQueryResult")]
     public partial class GeoLocationQueryResult : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4001,7 +3909,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoPolygon.</para>
     /// </summary>
-    [SchemaAttr("cx:geoPolygon")]
     public partial class GeoPolygon : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4015,7 +3922,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>polygonId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: polygonId</para>
         /// </summary>
-        [SchemaAttr("polygonId")]
         public StringValue? PolygonId
         {
             get => GetAttribute<StringValue>();
@@ -4026,7 +3932,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>numPoints, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: numPoints</para>
         /// </summary>
-        [SchemaAttr("numPoints")]
         public IntegerValue? NumPoints
         {
             get => GetAttribute<IntegerValue>();
@@ -4037,7 +3942,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>pcaRings, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: pcaRings</para>
         /// </summary>
-        [SchemaAttr("pcaRings")]
         public StringValue? PcaRings
         {
             get => GetAttribute<StringValue>();
@@ -4079,7 +3983,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygon" /> <c>&lt;cx:geoPolygon></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoPolygons")]
     public partial class GeoPolygons : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4140,7 +4043,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CopyrightXsdstring" /> <c>&lt;cx:copyright></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:copyrights")]
     public partial class Copyrights : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4195,7 +4097,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoDataEntityQuery.</para>
     /// </summary>
-    [SchemaAttr("cx:geoDataEntityQuery")]
     public partial class GeoDataEntityQuery : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4209,7 +4110,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityType</para>
         /// </summary>
-        [SchemaAttr("entityType")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>? EntityType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>>();
@@ -4220,7 +4120,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityId</para>
         /// </summary>
-        [SchemaAttr("entityId")]
         public StringValue? EntityId
         {
             get => GetAttribute<StringValue>();
@@ -4259,7 +4158,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygons" /> <c>&lt;cx:geoPolygons></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoData")]
     public partial class GeoData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4297,7 +4195,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityName, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityName</para>
         /// </summary>
-        [SchemaAttr("entityName")]
         public StringValue? EntityName
         {
             get => GetAttribute<StringValue>();
@@ -4308,7 +4205,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityId</para>
         /// </summary>
-        [SchemaAttr("entityId")]
         public StringValue? EntityId
         {
             get => GetAttribute<StringValue>();
@@ -4319,7 +4215,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>east, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: east</para>
         /// </summary>
-        [SchemaAttr("east")]
         public DoubleValue? East
         {
             get => GetAttribute<DoubleValue>();
@@ -4330,7 +4225,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>west, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: west</para>
         /// </summary>
-        [SchemaAttr("west")]
         public DoubleValue? West
         {
             get => GetAttribute<DoubleValue>();
@@ -4341,7 +4235,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>north, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: north</para>
         /// </summary>
-        [SchemaAttr("north")]
         public DoubleValue? North
         {
             get => GetAttribute<DoubleValue>();
@@ -4352,7 +4245,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>south, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: south</para>
         /// </summary>
-        [SchemaAttr("south")]
         public DoubleValue? South
         {
             get => GetAttribute<DoubleValue>();
@@ -4440,7 +4332,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQuery" /> <c>&lt;cx:geoDataEntityQuery></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoDataEntityQueryResult")]
     public partial class GeoDataEntityQueryResult : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4523,7 +4414,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoDataPointQuery.</para>
     /// </summary>
-    [SchemaAttr("cx:geoDataPointQuery")]
     public partial class GeoDataPointQuery : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4537,7 +4427,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityType</para>
         /// </summary>
-        [SchemaAttr("entityType")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>? EntityType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>>();
@@ -4548,7 +4437,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>latitude, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: latitude</para>
         /// </summary>
-        [SchemaAttr("latitude")]
         public DoubleValue? Latitude
         {
             get => GetAttribute<DoubleValue>();
@@ -4559,7 +4447,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>longitude, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: longitude</para>
         /// </summary>
-        [SchemaAttr("longitude")]
         public DoubleValue? Longitude
         {
             get => GetAttribute<DoubleValue>();
@@ -4595,7 +4482,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoDataPointToEntityQuery.</para>
     /// </summary>
-    [SchemaAttr("cx:geoDataPointToEntityQuery")]
     public partial class GeoDataPointToEntityQuery : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4609,7 +4495,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityType</para>
         /// </summary>
-        [SchemaAttr("entityType")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>? EntityType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>>();
@@ -4620,7 +4505,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityId</para>
         /// </summary>
-        [SchemaAttr("entityId")]
         public StringValue? EntityId
         {
             get => GetAttribute<StringValue>();
@@ -4659,7 +4543,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQuery" /> <c>&lt;cx:geoDataPointToEntityQuery></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoDataPointToEntityQueryResult")]
     public partial class GeoDataPointToEntityQueryResult : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4742,7 +4625,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:entityType.</para>
     /// </summary>
-    [SchemaAttr("cx:entityType")]
     public partial class EntityType : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -4788,7 +4670,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityType" /> <c>&lt;cx:entityType></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoChildTypes")]
     public partial class GeoChildTypes : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4843,7 +4724,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoHierarchyEntity.</para>
     /// </summary>
-    [SchemaAttr("cx:geoHierarchyEntity")]
     public partial class GeoHierarchyEntity : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4857,7 +4737,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityName, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityName</para>
         /// </summary>
-        [SchemaAttr("entityName")]
         public StringValue? EntityName
         {
             get => GetAttribute<StringValue>();
@@ -4868,7 +4747,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityId</para>
         /// </summary>
-        [SchemaAttr("entityId")]
         public StringValue? EntityId
         {
             get => GetAttribute<StringValue>();
@@ -4879,7 +4757,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityType</para>
         /// </summary>
-        [SchemaAttr("entityType")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>? EntityType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>>();
@@ -4921,7 +4798,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildTypes" /> <c>&lt;cx:geoChildTypes></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoChildEntitiesQuery")]
     public partial class GeoChildEntitiesQuery : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4959,7 +4835,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityId</para>
         /// </summary>
-        [SchemaAttr("entityId")]
         public StringValue? EntityId
         {
             get => GetAttribute<StringValue>();
@@ -5011,7 +4886,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoHierarchyEntity" /> <c>&lt;cx:geoHierarchyEntity></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoChildEntities")]
     public partial class GeoChildEntities : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5073,7 +4947,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQuery" /> <c>&lt;cx:geoChildEntitiesQuery></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoChildEntitiesQueryResult")]
     public partial class GeoChildEntitiesQueryResult : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5156,7 +5029,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoParentEntitiesQuery.</para>
     /// </summary>
-    [SchemaAttr("cx:geoParentEntitiesQuery")]
     public partial class GeoParentEntitiesQuery : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5170,7 +5042,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityId</para>
         /// </summary>
-        [SchemaAttr("entityId")]
         public StringValue? EntityId
         {
             get => GetAttribute<StringValue>();
@@ -5198,7 +5069,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoEntity.</para>
     /// </summary>
-    [SchemaAttr("cx:geoEntity")]
     public partial class GeoEntity : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5212,7 +5082,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityName, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityName</para>
         /// </summary>
-        [SchemaAttr("entityName")]
         public StringValue? EntityName
         {
             get => GetAttribute<StringValue>();
@@ -5223,7 +5092,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityType</para>
         /// </summary>
-        [SchemaAttr("entityType")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>? EntityType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum>>();
@@ -5255,7 +5123,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoParentEntity.</para>
     /// </summary>
-    [SchemaAttr("cx:geoParentEntity")]
     public partial class GeoParentEntity : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5269,7 +5136,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>entityId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: entityId</para>
         /// </summary>
-        [SchemaAttr("entityId")]
         public StringValue? EntityId
         {
             get => GetAttribute<StringValue>();
@@ -5305,7 +5171,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntity" /> <c>&lt;cx:geoParentEntity></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoParentEntitiesQueryResult")]
     public partial class GeoParentEntitiesQueryResult : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5409,7 +5274,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResult" /> <c>&lt;cx:geoLocationQueryResult></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoLocationQueryResults")]
     public partial class GeoLocationQueryResults : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5470,7 +5334,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResult" /> <c>&lt;cx:geoDataEntityQueryResult></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoDataEntityQueryResults")]
     public partial class GeoDataEntityQueryResults : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5531,7 +5394,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResult" /> <c>&lt;cx:geoDataPointToEntityQueryResult></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoDataPointToEntityQueryResults")]
     public partial class GeoDataPointToEntityQueryResults : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5592,7 +5454,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResult" /> <c>&lt;cx:geoChildEntitiesQueryResult></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoChildEntitiesQueryResults")]
     public partial class GeoChildEntitiesQueryResults : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5653,7 +5514,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResult" /> <c>&lt;cx:geoParentEntitiesQueryResult></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoParentEntitiesQueryResults")]
     public partial class GeoParentEntitiesQueryResults : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5708,7 +5568,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:binary.</para>
     /// </summary>
-    [SchemaAttr("cx:binary")]
     public partial class Xsdbase64Binary : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -5758,7 +5617,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResults" /> <c>&lt;cx:geoParentEntitiesQueryResults></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:clear")]
     public partial class Clear : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5893,7 +5751,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsdbase64Binary" /> <c>&lt;cx:binary></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geoCache")]
     public partial class GeoCache : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5931,7 +5788,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>provider, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: provider</para>
         /// </summary>
-        [SchemaAttr("provider")]
         public StringValue? Provider
         {
             get => GetAttribute<StringValue>();
@@ -5966,7 +5822,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:parentLabelLayout.</para>
     /// </summary>
-    [SchemaAttr("cx:parentLabelLayout")]
     public partial class ParentLabelLayout : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5980,7 +5835,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>val, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayoutVal>? ParentLabelLayoutVal
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayoutVal>>();
@@ -6008,7 +5862,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:regionLabelLayout.</para>
     /// </summary>
-    [SchemaAttr("cx:regionLabelLayout")]
     public partial class RegionLabelLayout : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6022,7 +5875,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>val, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RegionLabelLayoutEnum>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RegionLabelLayoutEnum>>();
@@ -6050,7 +5902,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:visibility.</para>
     /// </summary>
-    [SchemaAttr("cx:visibility")]
     public partial class SeriesElementVisibilities : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6064,7 +5915,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>connectorLines, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: connectorLines</para>
         /// </summary>
-        [SchemaAttr("connectorLines")]
         public BooleanValue? ConnectorLines
         {
             get => GetAttribute<BooleanValue>();
@@ -6075,7 +5925,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>meanLine, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: meanLine</para>
         /// </summary>
-        [SchemaAttr("meanLine")]
         public BooleanValue? MeanLine
         {
             get => GetAttribute<BooleanValue>();
@@ -6086,7 +5935,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>meanMarker, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: meanMarker</para>
         /// </summary>
-        [SchemaAttr("meanMarker")]
         public BooleanValue? MeanMarker
         {
             get => GetAttribute<BooleanValue>();
@@ -6097,7 +5945,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>nonoutliers, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: nonoutliers</para>
         /// </summary>
-        [SchemaAttr("nonoutliers")]
         public BooleanValue? Nonoutliers
         {
             get => GetAttribute<BooleanValue>();
@@ -6108,7 +5955,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>outliers, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: outliers</para>
         /// </summary>
-        [SchemaAttr("outliers")]
         public BooleanValue? Outliers
         {
             get => GetAttribute<BooleanValue>();
@@ -6137,7 +5983,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:aggregation.</para>
     /// </summary>
-    [SchemaAttr("cx:aggregation")]
     public partial class Aggregation : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6170,7 +6015,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt" /> <c>&lt;cx:binCount></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:binning")]
     public partial class Binning : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6208,7 +6052,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>intervalClosed, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: intervalClosed</para>
         /// </summary>
-        [SchemaAttr("intervalClosed")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IntervalClosedSide>? IntervalClosed
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IntervalClosedSide>>();
@@ -6219,7 +6062,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>underflow, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: underflow</para>
         /// </summary>
-        [SchemaAttr("underflow")]
         public StringValue? Underflow
         {
             get => GetAttribute<StringValue>();
@@ -6230,7 +6072,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>overflow, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: overflow</para>
         /// </summary>
-        [SchemaAttr("overflow")]
         public StringValue? Overflow
         {
             get => GetAttribute<StringValue>();
@@ -6310,7 +6151,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoCache" /> <c>&lt;cx:geoCache></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:geography")]
     public partial class Geography : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6348,7 +6188,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>projectionType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: projectionType</para>
         /// </summary>
-        [SchemaAttr("projectionType")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoProjectionType>? ProjectionType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoProjectionType>>();
@@ -6359,7 +6198,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>viewedRegionType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: viewedRegionType</para>
         /// </summary>
-        [SchemaAttr("viewedRegionType")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoMappingLevel>? ViewedRegionType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoMappingLevel>>();
@@ -6370,7 +6208,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>cultureLanguage, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: cultureLanguage</para>
         /// </summary>
-        [SchemaAttr("cultureLanguage")]
         public StringValue? CultureLanguage
         {
             get => GetAttribute<StringValue>();
@@ -6381,7 +6218,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>cultureRegion, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: cultureRegion</para>
         /// </summary>
-        [SchemaAttr("cultureRegion")]
         public StringValue? CultureRegion
         {
             get => GetAttribute<StringValue>();
@@ -6392,7 +6228,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>attribution, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: attribution</para>
         /// </summary>
-        [SchemaAttr("attribution")]
         public StringValue? Attribution
         {
             get => GetAttribute<StringValue>();
@@ -6449,7 +6284,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:statistics.</para>
     /// </summary>
-    [SchemaAttr("cx:statistics")]
     public partial class Statistics : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6463,7 +6297,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>quartileMethod, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: quartileMethod</para>
         /// </summary>
-        [SchemaAttr("quartileMethod")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.QuartileMethod>? QuartileMethod
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.QuartileMethod>>();
@@ -6494,7 +6327,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType" /> <c>&lt;cx:idx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:subtotals")]
     public partial class Subtotals : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6549,7 +6381,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:extremeValue.</para>
     /// </summary>
-    [SchemaAttr("cx:extremeValue")]
     public partial class ExtremeValueColorPosition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6575,7 +6406,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:number.</para>
     /// </summary>
-    [SchemaAttr("cx:number")]
     public partial class NumberColorPosition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6589,7 +6419,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>val, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
@@ -6617,7 +6446,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:percent.</para>
     /// </summary>
-    [SchemaAttr("cx:percent")]
     public partial class PercentageColorPosition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6631,7 +6459,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>val, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
@@ -6667,7 +6494,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition" /> <c>&lt;cx:percent></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:min")]
     public partial class MinValueColorEndPosition : OpenXmlValueColorEndPositionElement
     {
         /// <summary>
@@ -6731,7 +6557,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition" /> <c>&lt;cx:percent></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:max")]
     public partial class MaxValueColorEndPosition : OpenXmlValueColorEndPositionElement
     {
         /// <summary>
@@ -6888,7 +6713,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition" /> <c>&lt;cx:percent></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:mid")]
     public partial class ValueColorMiddlePosition : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6971,7 +6795,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:visibility.</para>
     /// </summary>
-    [SchemaAttr("cx:visibility")]
     public partial class DataLabelVisibilities : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6985,7 +6808,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>seriesName, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: seriesName</para>
         /// </summary>
-        [SchemaAttr("seriesName")]
         public BooleanValue? SeriesName
         {
             get => GetAttribute<BooleanValue>();
@@ -6996,7 +6818,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>categoryName, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: categoryName</para>
         /// </summary>
-        [SchemaAttr("categoryName")]
         public BooleanValue? CategoryName
         {
             get => GetAttribute<BooleanValue>();
@@ -7007,7 +6828,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>value, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [SchemaAttr("value")]
         public BooleanValue? Value
         {
             get => GetAttribute<BooleanValue>();
@@ -7045,7 +6865,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring" /> <c>&lt;cx:separator></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:dataLabel")]
     public partial class DataLabel : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7083,7 +6902,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>idx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public UInt32Value? Idx
         {
             get => GetAttribute<UInt32Value>();
@@ -7094,7 +6912,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>pos, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
-        [SchemaAttr("pos")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos>? Pos
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos>>();
@@ -7216,7 +7033,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:dataLabelHidden.</para>
     /// </summary>
-    [SchemaAttr("cx:dataLabelHidden")]
     public partial class DataLabelHidden : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7230,7 +7046,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>idx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public UInt32Value? Idx
         {
             get => GetAttribute<UInt32Value>();
@@ -7266,7 +7081,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxColorSolidColorFillProperties" /> <c>&lt;cx:maxColor></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:valueColors")]
     public partial class ValueColors : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7372,7 +7186,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorMiddlePosition" /> <c>&lt;cx:mid></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:valueColorPositions")]
     public partial class ValueColorPositions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7410,7 +7223,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>count, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public Int32Value? Count
         {
             get => GetAttribute<Int32Value>();
@@ -7493,7 +7305,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:dataPt")]
     public partial class DataPoint : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7531,7 +7342,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>idx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public UInt32Value? Idx
         {
             get => GetAttribute<UInt32Value>();
@@ -7605,7 +7415,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring" /> <c>&lt;cx:separator></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:dataLabels")]
     public partial class DataLabels : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7643,7 +7452,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>pos, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
-        [SchemaAttr("pos")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos>? Pos
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos>>();
@@ -7752,7 +7560,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:dataId.</para>
     /// </summary>
-    [SchemaAttr("cx:dataId")]
     public partial class DataId : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7766,7 +7573,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>val, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -7808,7 +7614,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Subtotals" /> <c>&lt;cx:subtotals></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:layoutPr")]
     public partial class SeriesLayoutProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7921,7 +7726,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:axisId.</para>
     /// </summary>
-    [SchemaAttr("cx:axisId")]
     public partial class AxisId : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -7968,7 +7772,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:plotSurface")]
     public partial class PlotSurface : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8066,7 +7869,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisId" /> <c>&lt;cx:axisId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:series")]
     public partial class Series : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8104,7 +7906,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>layoutId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: layoutId</para>
         /// </summary>
-        [SchemaAttr("layoutId")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayout>? LayoutId
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayout>>();
@@ -8115,7 +7916,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>hidden, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -8126,7 +7926,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ownerIdx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ownerIdx</para>
         /// </summary>
-        [SchemaAttr("ownerIdx")]
         public UInt32Value? OwnerIdx
         {
             get => GetAttribute<UInt32Value>();
@@ -8137,7 +7936,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>uniqueId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        [SchemaAttr("uniqueId")]
         public StringValue? UniqueId
         {
             get => GetAttribute<StringValue>();
@@ -8148,7 +7946,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>formatIdx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: formatIdx</para>
         /// </summary>
-        [SchemaAttr("formatIdx")]
         public UInt32Value? FormatIdx
         {
             get => GetAttribute<UInt32Value>();
@@ -8263,7 +8060,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Series" /> <c>&lt;cx:series></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:plotAreaRegion")]
     public partial class PlotAreaRegion : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8353,7 +8149,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueAxisScaling" /> <c>&lt;cx:valScaling></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:axis")]
     public partial class Axis : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8391,7 +8186,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>id, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -8402,7 +8196,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>hidden, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -8472,7 +8265,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:title")]
     public partial class ChartTitle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8510,7 +8302,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>pos, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
-        [SchemaAttr("pos")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos>? Pos
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos>>();
@@ -8521,7 +8312,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>align, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: align</para>
         /// </summary>
-        [SchemaAttr("align")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign>? Align
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign>>();
@@ -8532,7 +8322,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>overlay, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: overlay</para>
         /// </summary>
-        [SchemaAttr("overlay")]
         public BooleanValue? Overlay
         {
             get => GetAttribute<BooleanValue>();
@@ -8631,7 +8420,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion" /> <c>&lt;cx:plotAreaRegion></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:plotArea")]
     public partial class PlotArea : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8713,7 +8501,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:legend")]
     public partial class Legend : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8751,7 +8538,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>pos, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
-        [SchemaAttr("pos")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos>? Pos
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos>>();
@@ -8762,7 +8548,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>align, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: align</para>
         /// </summary>
-        [SchemaAttr("align")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign>? Align
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign>>();
@@ -8773,7 +8558,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>overlay, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: overlay</para>
         /// </summary>
-        [SchemaAttr("overlay")]
         public BooleanValue? Overlay
         {
             get => GetAttribute<BooleanValue>();
@@ -8855,7 +8639,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:fmtOvr")]
     public partial class FormatOverride : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8893,7 +8676,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>idx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public UInt32Value? Idx
         {
             get => GetAttribute<UInt32Value>();
@@ -8965,7 +8747,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring" /> <c>&lt;cx:firstFooter></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:headerFooter")]
     public partial class HeaderFooter : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9003,7 +8784,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>alignWithMargins, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: alignWithMargins</para>
         /// </summary>
-        [SchemaAttr("alignWithMargins")]
         public BooleanValue? AlignWithMargins
         {
             get => GetAttribute<BooleanValue>();
@@ -9014,7 +8794,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>differentOddEven, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: differentOddEven</para>
         /// </summary>
-        [SchemaAttr("differentOddEven")]
         public BooleanValue? DifferentOddEven
         {
             get => GetAttribute<BooleanValue>();
@@ -9025,7 +8804,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>differentFirst, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: differentFirst</para>
         /// </summary>
-        [SchemaAttr("differentFirst")]
         public BooleanValue? DifferentFirst
         {
             get => GetAttribute<BooleanValue>();
@@ -9145,7 +8923,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:pageMargins.</para>
     /// </summary>
-    [SchemaAttr("cx:pageMargins")]
     public partial class PageMargins : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -9159,7 +8936,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>l, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        [SchemaAttr("l")]
         public DoubleValue? L
         {
             get => GetAttribute<DoubleValue>();
@@ -9170,7 +8946,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>r, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr("r")]
         public DoubleValue? R
         {
             get => GetAttribute<DoubleValue>();
@@ -9181,7 +8956,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>t, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public DoubleValue? T
         {
             get => GetAttribute<DoubleValue>();
@@ -9192,7 +8966,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>b, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [SchemaAttr("b")]
         public DoubleValue? B
         {
             get => GetAttribute<DoubleValue>();
@@ -9203,7 +8976,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>header, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: header</para>
         /// </summary>
-        [SchemaAttr("header")]
         public DoubleValue? Header
         {
             get => GetAttribute<DoubleValue>();
@@ -9214,7 +8986,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>footer, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: footer</para>
         /// </summary>
-        [SchemaAttr("footer")]
         public DoubleValue? Footer
         {
             get => GetAttribute<DoubleValue>();
@@ -9262,7 +9033,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:pageSetup.</para>
     /// </summary>
-    [SchemaAttr("cx:pageSetup")]
     public partial class PageSetup : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -9276,7 +9046,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>paperSize, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: paperSize</para>
         /// </summary>
-        [SchemaAttr("paperSize")]
         public UInt32Value? PaperSize
         {
             get => GetAttribute<UInt32Value>();
@@ -9287,7 +9056,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>firstPageNumber, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: firstPageNumber</para>
         /// </summary>
-        [SchemaAttr("firstPageNumber")]
         public UInt32Value? FirstPageNumber
         {
             get => GetAttribute<UInt32Value>();
@@ -9298,7 +9066,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>orientation, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        [SchemaAttr("orientation")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageOrientation>? Orientation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageOrientation>>();
@@ -9309,7 +9076,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>blackAndWhite, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: blackAndWhite</para>
         /// </summary>
-        [SchemaAttr("blackAndWhite")]
         public BooleanValue? BlackAndWhite
         {
             get => GetAttribute<BooleanValue>();
@@ -9320,7 +9086,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>draft, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: draft</para>
         /// </summary>
-        [SchemaAttr("draft")]
         public BooleanValue? Draft
         {
             get => GetAttribute<BooleanValue>();
@@ -9331,7 +9096,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>useFirstPageNumber, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: useFirstPageNumber</para>
         /// </summary>
-        [SchemaAttr("useFirstPageNumber")]
         public BooleanValue? UseFirstPageNumber
         {
             get => GetAttribute<BooleanValue>();
@@ -9342,7 +9106,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>horizontalDpi, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: horizontalDpi</para>
         /// </summary>
-        [SchemaAttr("horizontalDpi")]
         public Int32Value? HorizontalDpi
         {
             get => GetAttribute<Int32Value>();
@@ -9353,7 +9116,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>verticalDpi, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: verticalDpi</para>
         /// </summary>
-        [SchemaAttr("verticalDpi")]
         public Int32Value? VerticalDpi
         {
             get => GetAttribute<Int32Value>();
@@ -9364,7 +9126,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>copies, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: copies</para>
         /// </summary>
-        [SchemaAttr("copies")]
         public UInt32Value? Copies
         {
             get => GetAttribute<UInt32Value>();
@@ -9405,7 +9166,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData" /> <c>&lt;cx:externalData></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:chartData")]
     public partial class ChartData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9486,7 +9246,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea" /> <c>&lt;cx:plotArea></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:chart")]
     public partial class Chart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9605,7 +9364,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:clrMapOvr")]
     public partial class ColorMappingType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9643,7 +9401,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Background 1</para>
         /// <para>Represents the following attribute in the schema: bg1</para>
         /// </summary>
-        [SchemaAttr("bg1")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -9654,7 +9411,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Text 1</para>
         /// <para>Represents the following attribute in the schema: tx1</para>
         /// </summary>
-        [SchemaAttr("tx1")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -9665,7 +9421,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Background 2</para>
         /// <para>Represents the following attribute in the schema: bg2</para>
         /// </summary>
-        [SchemaAttr("bg2")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -9676,7 +9431,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Text 2</para>
         /// <para>Represents the following attribute in the schema: tx2</para>
         /// </summary>
-        [SchemaAttr("tx2")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -9687,7 +9441,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Accent 1</para>
         /// <para>Represents the following attribute in the schema: accent1</para>
         /// </summary>
-        [SchemaAttr("accent1")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -9698,7 +9451,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Accent 2</para>
         /// <para>Represents the following attribute in the schema: accent2</para>
         /// </summary>
-        [SchemaAttr("accent2")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -9709,7 +9461,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Accent 3</para>
         /// <para>Represents the following attribute in the schema: accent3</para>
         /// </summary>
-        [SchemaAttr("accent3")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent3
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -9720,7 +9471,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Accent 4</para>
         /// <para>Represents the following attribute in the schema: accent4</para>
         /// </summary>
-        [SchemaAttr("accent4")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent4
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -9731,7 +9481,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Accent 5</para>
         /// <para>Represents the following attribute in the schema: accent5</para>
         /// </summary>
-        [SchemaAttr("accent5")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent5
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -9742,7 +9491,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Accent 6</para>
         /// <para>Represents the following attribute in the schema: accent6</para>
         /// </summary>
-        [SchemaAttr("accent6")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent6
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -9753,7 +9501,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Hyperlink</para>
         /// <para>Represents the following attribute in the schema: hlink</para>
         /// </summary>
-        [SchemaAttr("hlink")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Hyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -9764,7 +9511,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Followed Hyperlink</para>
         /// <para>Represents the following attribute in the schema: folHlink</para>
         /// </summary>
-        [SchemaAttr("folHlink")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? FollowedHyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
@@ -9872,7 +9618,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverride" /> <c>&lt;cx:fmtOvr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:fmtOvrs")]
     public partial class FormatOverrides : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9935,7 +9680,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageSetup" /> <c>&lt;cx:pageSetup></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("cx:printSettings")]
     public partial class PrintSettings : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10033,7 +9777,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:idx.</para>
     /// </summary>
-    [SchemaAttr("cx:idx")]
     public partial class UnsignedIntegerType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -10047,7 +9790,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Integer Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();

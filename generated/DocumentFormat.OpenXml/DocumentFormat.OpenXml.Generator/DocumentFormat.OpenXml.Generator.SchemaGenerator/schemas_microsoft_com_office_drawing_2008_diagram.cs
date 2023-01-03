@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -30,7 +28,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.ShapeTree" /> <c>&lt;dsp:spTree></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:drawing")]
     public partial class Drawing : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -129,7 +126,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:dataModelExt.</para>
     /// </summary>
-    [SchemaAttr("dsp:dataModelExt")]
     public partial class DataModelExtensionBlock : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -143,7 +139,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>relId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: relId</para>
         /// </summary>
-        [SchemaAttr("relId")]
         public StringValue? RelId
         {
             get => GetAttribute<StringValue>();
@@ -154,7 +149,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>minVer, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-        [SchemaAttr("minVer")]
         public StringValue? MinVer
         {
             get => GetAttribute<StringValue>();
@@ -191,7 +185,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:cNvPr")]
     public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -229,7 +222,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Application defined unique identifier.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -240,7 +232,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Name compatible with Object Model (non-unique).</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -251,7 +242,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Description of the drawing element.</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr("descr")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -262,7 +252,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Flag determining to show or hide this element.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -273,7 +262,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -363,7 +351,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:cNvSpPr")]
     public partial class NonVisualDrawingShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -401,7 +388,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Text Box</para>
         /// <para>Represents the following attribute in the schema: txBox</para>
         /// </summary>
-        [SchemaAttr("txBox")]
         public BooleanValue? TextBox
         {
             get => GetAttribute<BooleanValue>();
@@ -466,7 +452,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties" /> <c>&lt;dsp:cNvSpPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:nvSpPr")]
     public partial class ShapeNonVisualProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -569,7 +554,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:spPr")]
     public partial class ShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -607,7 +591,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -708,7 +691,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:style")]
     public partial class ShapeStyle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -829,7 +811,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:txBody")]
     public partial class TextBody : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -921,7 +902,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:txXfrm")]
     public partial class Transform2D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -959,7 +939,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr("rot")]
         public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -970,7 +949,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr("flipH")]
         public BooleanValue? HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -981,7 +959,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr("flipV")]
         public BooleanValue? VerticalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -1047,7 +1024,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1115,7 +1091,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:cNvGrpSpPr")]
     public partial class NonVisualGroupDrawingShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1205,7 +1180,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties" /> <c>&lt;dsp:cNvGrpSpPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:nvGrpSpPr")]
     public partial class GroupShapeNonVisualProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1304,7 +1278,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:grpSpPr")]
     public partial class GroupShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1342,7 +1315,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -1431,7 +1403,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties" /> <c>&lt;dsp:nvSpPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:sp")]
     public partial class Shape : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1469,7 +1440,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>modelId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: modelId</para>
         /// </summary>
-        [SchemaAttr("modelId")]
         public StringValue? ModelId
         {
             get => GetAttribute<StringValue>();
@@ -1605,7 +1575,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:grpSp")]
     public partial class GroupShape : GroupShapeType
     {
         /// <summary>
@@ -1676,7 +1645,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dsp:spTree")]
     public partial class ShapeTree : GroupShapeType
     {
         /// <summary>

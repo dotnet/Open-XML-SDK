@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w16se:symEx.</para>
     /// </summary>
-    [SchemaAttr("w16se:symEx")]
     public partial class SymEx : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -40,7 +37,6 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         /// <remark>
         /// xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
         /// </remark>
-        [SchemaAttr("w16se:font")]
         public StringValue? Font
         {
             get => GetAttribute<StringValue>();
@@ -54,7 +50,6 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         /// <remark>
         /// xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
         /// </remark>
-        [SchemaAttr("w16se:char")]
         public HexBinaryValue? Char
         {
             get => GetAttribute<HexBinaryValue>();

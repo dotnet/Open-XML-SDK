@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -26,7 +24,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapNone.</para>
     /// </summary>
-    [SchemaAttr("wp:wrapNone")]
     public partial class WrapNone : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -57,7 +54,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent" /> <c>&lt;wp:effectExtent></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wp:wrapSquare")]
     public partial class WrapSquare : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -95,7 +91,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Text Wrapping Location</para>
         /// <para>Represents the following attribute in the schema: wrapText</para>
         /// </summary>
-        [SchemaAttr("wrapText")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>? WrapText
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>();
@@ -106,7 +101,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text (Top)</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
-        [SchemaAttr("distT")]
         public UInt32Value? DistanceFromTop
         {
             get => GetAttribute<UInt32Value>();
@@ -117,7 +111,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
-        [SchemaAttr("distB")]
         public UInt32Value? DistanceFromBottom
         {
             get => GetAttribute<UInt32Value>();
@@ -128,7 +121,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        [SchemaAttr("distL")]
         public UInt32Value? DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
@@ -139,7 +131,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        [SchemaAttr("distR")]
         public UInt32Value? DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
@@ -195,7 +186,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon" /> <c>&lt;wp:wrapPolygon></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wp:wrapTight")]
     public partial class WrapTight : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -233,7 +223,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Text Wrapping Location</para>
         /// <para>Represents the following attribute in the schema: wrapText</para>
         /// </summary>
-        [SchemaAttr("wrapText")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>? WrapText
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>();
@@ -244,7 +233,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Test on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        [SchemaAttr("distL")]
         public UInt32Value? DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
@@ -255,7 +243,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        [SchemaAttr("distR")]
         public UInt32Value? DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
@@ -309,7 +296,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon" /> <c>&lt;wp:wrapPolygon></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wp:wrapThrough")]
     public partial class WrapThrough : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -347,7 +333,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Text Wrapping Location</para>
         /// <para>Represents the following attribute in the schema: wrapText</para>
         /// </summary>
-        [SchemaAttr("wrapText")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>? WrapText
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>();
@@ -358,7 +343,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        [SchemaAttr("distL")]
         public UInt32Value? DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
@@ -369,7 +353,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        [SchemaAttr("distR")]
         public UInt32Value? DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
@@ -423,7 +406,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent" /> <c>&lt;wp:effectExtent></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wp:wrapTopAndBottom")]
     public partial class WrapTopBottom : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -461,7 +443,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Top Edge</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
-        [SchemaAttr("distT")]
         public UInt32Value? DistanceFromTop
         {
             get => GetAttribute<UInt32Value>();
@@ -472,7 +453,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
-        [SchemaAttr("distB")]
         public UInt32Value? DistanceFromBottom
         {
             get => GetAttribute<UInt32Value>();
@@ -525,7 +505,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent" /> <c>&lt;wp:effectExtent></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wp:inline")]
     public partial class Inline : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -563,7 +542,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Top Edge</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
-        [SchemaAttr("distT")]
         public UInt32Value? DistanceFromTop
         {
             get => GetAttribute<UInt32Value>();
@@ -574,7 +552,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
-        [SchemaAttr("distB")]
         public UInt32Value? DistanceFromBottom
         {
             get => GetAttribute<UInt32Value>();
@@ -585,7 +562,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        [SchemaAttr("distL")]
         public UInt32Value? DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
@@ -596,7 +572,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        [SchemaAttr("distR")]
         public UInt32Value? DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
@@ -610,7 +585,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        [SchemaAttr("wp14:anchorId")]
         public HexBinaryValue? AnchorId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -624,7 +598,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        [SchemaAttr("wp14:editId")]
         public HexBinaryValue? EditId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -759,7 +732,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight" /> <c>&lt;wp14:sizeRelV></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wp:anchor")]
     public partial class Anchor : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -797,7 +769,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Top Edge</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
-        [SchemaAttr("distT")]
         public UInt32Value? DistanceFromTop
         {
             get => GetAttribute<UInt32Value>();
@@ -808,7 +779,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
-        [SchemaAttr("distB")]
         public UInt32Value? DistanceFromBottom
         {
             get => GetAttribute<UInt32Value>();
@@ -819,7 +789,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        [SchemaAttr("distL")]
         public UInt32Value? DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
@@ -830,7 +799,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        [SchemaAttr("distR")]
         public UInt32Value? DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
@@ -841,7 +809,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Page Positioning</para>
         /// <para>Represents the following attribute in the schema: simplePos</para>
         /// </summary>
-        [SchemaAttr("simplePos")]
         public BooleanValue? SimplePos
         {
             get => GetAttribute<BooleanValue>();
@@ -852,7 +819,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Relative Z-Ordering Position</para>
         /// <para>Represents the following attribute in the schema: relativeHeight</para>
         /// </summary>
-        [SchemaAttr("relativeHeight")]
         public UInt32Value? RelativeHeight
         {
             get => GetAttribute<UInt32Value>();
@@ -863,7 +829,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Display Behind Document Text</para>
         /// <para>Represents the following attribute in the schema: behindDoc</para>
         /// </summary>
-        [SchemaAttr("behindDoc")]
         public BooleanValue? BehindDoc
         {
             get => GetAttribute<BooleanValue>();
@@ -874,7 +839,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Lock Anchor</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
-        [SchemaAttr("locked")]
         public BooleanValue? Locked
         {
             get => GetAttribute<BooleanValue>();
@@ -885,7 +849,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Layout In Table Cell</para>
         /// <para>Represents the following attribute in the schema: layoutInCell</para>
         /// </summary>
-        [SchemaAttr("layoutInCell")]
         public BooleanValue? LayoutInCell
         {
             get => GetAttribute<BooleanValue>();
@@ -896,7 +859,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -907,7 +869,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Allow Objects to Overlap</para>
         /// <para>Represents the following attribute in the schema: allowOverlap</para>
         /// </summary>
-        [SchemaAttr("allowOverlap")]
         public BooleanValue? AllowOverlap
         {
             get => GetAttribute<BooleanValue>();
@@ -921,7 +882,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        [SchemaAttr("wp14:editId")]
         public HexBinaryValue? EditId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -935,7 +895,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        [SchemaAttr("wp14:anchorId")]
         public HexBinaryValue? AnchorId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -1101,7 +1060,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:start.</para>
     /// </summary>
-    [SchemaAttr("wp:start")]
     public partial class StartPoint : Point2DType
     {
         /// <summary>
@@ -1126,7 +1084,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:lineTo.</para>
     /// </summary>
-    [SchemaAttr("wp:lineTo")]
     public partial class LineTo : Point2DType
     {
         /// <summary>
@@ -1151,7 +1108,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:simplePos.</para>
     /// </summary>
-    [SchemaAttr("wp:simplePos")]
     public partial class SimplePosition : Point2DType
     {
         /// <summary>
@@ -1189,7 +1145,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>X-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [SchemaAttr("x")]
         public Int64Value? X
         {
             get => GetAttribute<Int64Value>();
@@ -1200,7 +1155,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Y-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        [SchemaAttr("y")]
         public Int64Value? Y
         {
             get => GetAttribute<Int64Value>();
@@ -1229,7 +1183,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:effectExtent.</para>
     /// </summary>
-    [SchemaAttr("wp:effectExtent")]
     public partial class EffectExtent : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1243,7 +1196,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Additional Extent on Left Edge</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        [SchemaAttr("l")]
         public Int64Value? LeftEdge
         {
             get => GetAttribute<Int64Value>();
@@ -1254,7 +1206,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Additional Extent on Top Edge</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public Int64Value? TopEdge
         {
             get => GetAttribute<Int64Value>();
@@ -1265,7 +1216,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Additional Extent on Right Edge</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr("r")]
         public Int64Value? RightEdge
         {
             get => GetAttribute<Int64Value>();
@@ -1276,7 +1226,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Additional Extent on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [SchemaAttr("b")]
         public Int64Value? BottomEdge
         {
             get => GetAttribute<Int64Value>();
@@ -1326,7 +1275,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.LineTo" /> <c>&lt;wp:lineTo></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wp:wrapPolygon")]
     public partial class WrapPolygon : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1364,7 +1312,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Wrapping Points Modified</para>
         /// <para>Represents the following attribute in the schema: edited</para>
         /// </summary>
-        [SchemaAttr("edited")]
         public BooleanValue? Edited
         {
             get => GetAttribute<BooleanValue>();
@@ -1416,7 +1363,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset" /> <c>&lt;wp:posOffset></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wp:positionH")]
     public partial class HorizontalPosition : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1454,7 +1400,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Horizontal Position Relative Base</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        [SchemaAttr("relativeFrom")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues>? RelativeFrom
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues>>();
@@ -1541,7 +1486,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset" /> <c>&lt;wp:posOffset></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wp:positionV")]
     public partial class VerticalPosition : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1579,7 +1523,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Vertical Position Relative Base</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        [SchemaAttr("relativeFrom")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues>? RelativeFrom
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues>>();
@@ -1658,7 +1601,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:extent.</para>
     /// </summary>
-    [SchemaAttr("wp:extent")]
     public partial class Extent : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1672,7 +1614,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Extent Length</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        [SchemaAttr("cx")]
         public Int64Value? Cx
         {
             get => GetAttribute<Int64Value>();
@@ -1683,7 +1624,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Extent Width</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        [SchemaAttr("cy")]
         public Int64Value? Cy
         {
             get => GetAttribute<Int64Value>();
@@ -1724,7 +1664,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wp:docPr")]
     public partial class DocProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1762,7 +1701,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Application defined unique identifier.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -1773,7 +1711,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Name compatible with Object Model (non-unique).</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -1784,7 +1721,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Description of the drawing element.</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr("descr")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -1795,7 +1731,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Flag determining to show or hide this element.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -1806,7 +1741,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -1896,7 +1830,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wp:cNvGraphicFramePr")]
     public partial class NonVisualGraphicFrameDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1978,7 +1911,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:align.</para>
     /// </summary>
-    [SchemaAttr("wp:align")]
     public partial class VerticalAlignment : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2018,7 +1950,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:posOffset.</para>
     /// </summary>
-    [SchemaAttr("wp:posOffset")]
     public partial class PositionOffset : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2057,7 +1988,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:align.</para>
     /// </summary>
-    [SchemaAttr("wp:align")]
     public partial class HorizontalAlignment : TypedOpenXmlLeafTextElement
     {
         /// <summary>

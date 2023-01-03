@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Office2021.OfficeExtLst
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oel:ext.</para>
     /// </summary>
-    [SchemaAttr("oel:ext")]
     public partial class Extension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -61,7 +58,6 @@ namespace DocumentFormat.OpenXml.Office2021.OfficeExtLst
         /// <para>uri, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();

@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -24,7 +22,6 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is comp:legacyDrawing.</para>
     /// </summary>
-    [SchemaAttr("comp:legacyDrawing")]
     public partial class LegacyDrawing : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -38,7 +35,6 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
         /// <para>Shape ID</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [SchemaAttr("spid")]
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
