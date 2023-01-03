@@ -83,11 +83,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Initialize a new created part
         /// </summary>
-        /// <typeparam name="T">The type of the part, must be derived from OpenXmlPart.</typeparam>
         /// <param name="newPart">The part to be initialized.</param>
         /// <param name="contentType">The content type of the part.</param>
         /// <param name="id">The relationship id.</param>
-        internal override void InitPart<T>(T newPart, string contentType, string? id)
+        internal override void InitPart(OpenXmlPart newPart, string contentType, string? id)
         {
             ThrowIfObjectDisposed();
 
