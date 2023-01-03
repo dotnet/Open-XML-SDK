@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:cmAuthorMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:cmAuthorMkLst")]
     public partial class CommentAuthorMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -77,7 +74,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:cmMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:cmMkLst")]
     public partial class CommentMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -131,7 +127,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:tagMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:tagMkLst")]
     public partial class StringTagMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -185,7 +180,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:custShowMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:custShowMkLst")]
     public partial class CustomShowMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -239,7 +233,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:docMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:docMkLst")]
     public partial class DocumentMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -293,7 +286,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sectionMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:sectionMkLst")]
     public partial class SectionMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -347,7 +339,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldBaseMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:sldBaseMkLst")]
     public partial class SlideBaseMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -401,7 +392,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldLayoutMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:sldLayoutMkLst")]
     public partial class SlideLayoutMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -455,7 +445,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldMasterMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:sldMasterMkLst")]
     public partial class MainMasterMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -516,7 +505,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker" /> <c>&lt;pc:sldMk></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("pc:sldMkLst")]
     public partial class SlideMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -600,7 +588,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldPosMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:sldPosMkLst")]
     public partial class SlidePosMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -654,7 +641,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:notesMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:notesMkLst")]
     public partial class NotesMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -708,7 +694,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:notesTxtMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:notesTxtMkLst")]
     public partial class NotesTextMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -762,7 +747,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:notesMasterMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:notesMasterMkLst")]
     public partial class NotesMasterMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -816,7 +800,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:handoutMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:handoutMkLst")]
     public partial class HandoutMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -870,7 +853,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:animEffectMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:animEffectMkLst")]
     public partial class AnimEffectMkLstAnimationEffectMonikerList : OpenXmlAnimationEffectMonikerListElement
     {
         /// <summary>
@@ -924,7 +906,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:animEffectParentMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:animEffectParentMkLst")]
     public partial class AnimEffectParentMkLstAnimationEffectMonikerList : OpenXmlAnimationEffectMonikerListElement
     {
         /// <summary>
@@ -1022,7 +1003,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:tkAppMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:tkAppMkLst")]
     public partial class OsfTaskPaneAppMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1076,7 +1056,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:tocMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:tocMkLst")]
     public partial class SummaryZoomMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1130,7 +1109,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sectionLnkObjMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:sectionLnkObjMkLst")]
     public partial class SectionLinkObjMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1184,7 +1162,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:designTagMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:designTagMkLst")]
     public partial class DesignerTagMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1238,7 +1215,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:cXmlMkLst.</para>
     /// </summary>
-    [SchemaAttr("pc:cXmlMkLst")]
     public partial class CustomXmlPartMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1292,7 +1268,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:docMk.</para>
     /// </summary>
-    [SchemaAttr("pc:docMk")]
     public partial class DocumentMoniker : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1318,7 +1293,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldMk.</para>
     /// </summary>
-    [SchemaAttr("pc:sldMk")]
     public partial class SlideMoniker : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1332,7 +1306,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         /// <para>cId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: cId</para>
         /// </summary>
-        [SchemaAttr("cId")]
         public UInt32Value? CId
         {
             get => GetAttribute<UInt32Value>();
@@ -1343,7 +1316,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         /// <para>sldId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sldId</para>
         /// </summary>
-        [SchemaAttr("sldId")]
         public UInt32Value? SldId
         {
             get => GetAttribute<UInt32Value>();

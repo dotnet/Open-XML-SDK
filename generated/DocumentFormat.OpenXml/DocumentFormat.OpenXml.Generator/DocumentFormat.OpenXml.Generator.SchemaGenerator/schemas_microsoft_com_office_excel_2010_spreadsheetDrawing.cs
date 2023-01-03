@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -34,7 +32,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties" /> <c>&lt;xdr14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr14:contentPart")]
     public partial class ContentPart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -75,7 +72,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
@@ -86,7 +82,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// <para>bwMode, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -189,7 +184,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr14:cNvPr")]
     public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -227,7 +221,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// <para>Application defined unique identifier.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -238,7 +231,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// <para>Name compatible with Object Model (non-unique).</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -249,7 +241,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// <para>Description of the drawing element.</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr("descr")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -260,7 +251,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// <para>Flag determining to show or hide this element.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -271,7 +261,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -361,7 +350,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr14:cNvContentPartPr")]
     public partial class NonVisualInkContentPartProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -399,7 +387,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// <para>isComment, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
-        [SchemaAttr("isComment")]
         public BooleanValue? IsComment
         {
             get => GetAttribute<BooleanValue>();
@@ -464,7 +451,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.NonVisualInkContentPartProperties" /> <c>&lt;xdr14:cNvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr14:nvContentPartPr")]
     public partial class ExcelNonVisualContentPartShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -547,7 +533,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr14:nvPr.</para>
     /// </summary>
-    [SchemaAttr("xdr14:nvPr")]
     public partial class ApplicationNonVisualDrawingProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -561,7 +546,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// <para>macro, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        [SchemaAttr("macro")]
         public StringValue? Macro
         {
             get => GetAttribute<StringValue>();
@@ -572,7 +556,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// <para>fPublished, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
-        [SchemaAttr("fPublished")]
         public BooleanValue? PublishedFlag
         {
             get => GetAttribute<BooleanValue>();
@@ -605,7 +588,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr14:xfrm")]
     public partial class Transform2D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -643,7 +625,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr("rot")]
         public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -654,7 +635,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr("flipH")]
         public BooleanValue? HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -665,7 +645,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr("flipV")]
         public BooleanValue? VerticalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -731,7 +710,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xdr14:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>

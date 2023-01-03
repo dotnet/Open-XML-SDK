@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -24,7 +22,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:spMk.</para>
     /// </summary>
-    [SchemaAttr("oac:spMk")]
     public partial class ShapeMoniker : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -38,7 +35,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>id, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -49,7 +45,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>creationId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: creationId</para>
         /// </summary>
-        [SchemaAttr("creationId")]
         public StringValue? CreationId
         {
             get => GetAttribute<StringValue>();
@@ -81,7 +76,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:grpSpMk.</para>
     /// </summary>
-    [SchemaAttr("oac:grpSpMk")]
     public partial class GroupShapeMoniker : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -95,7 +89,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>id, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -106,7 +99,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>creationId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: creationId</para>
         /// </summary>
-        [SchemaAttr("creationId")]
         public StringValue? CreationId
         {
             get => GetAttribute<StringValue>();
@@ -138,7 +130,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:graphicFrameMk.</para>
     /// </summary>
-    [SchemaAttr("oac:graphicFrameMk")]
     public partial class GraphicFrameMoniker : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -152,7 +143,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>id, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -163,7 +153,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>creationId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: creationId</para>
         /// </summary>
-        [SchemaAttr("creationId")]
         public StringValue? CreationId
         {
             get => GetAttribute<StringValue>();
@@ -195,7 +184,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cxnSpMk.</para>
     /// </summary>
-    [SchemaAttr("oac:cxnSpMk")]
     public partial class ConnectorMoniker : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -209,7 +197,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>id, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -220,7 +207,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>creationId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: creationId</para>
         /// </summary>
-        [SchemaAttr("creationId")]
         public StringValue? CreationId
         {
             get => GetAttribute<StringValue>();
@@ -252,7 +238,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:picMk.</para>
     /// </summary>
-    [SchemaAttr("oac:picMk")]
     public partial class PictureMoniker : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -266,7 +251,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>id, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -277,7 +261,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>creationId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: creationId</para>
         /// </summary>
-        [SchemaAttr("creationId")]
         public StringValue? CreationId
         {
             get => GetAttribute<StringValue>();
@@ -309,7 +292,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:inkMk.</para>
     /// </summary>
-    [SchemaAttr("oac:inkMk")]
     public partial class InkMoniker : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -323,7 +305,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>id, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -334,7 +315,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>creationId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: creationId</para>
         /// </summary>
-        [SchemaAttr("creationId")]
         public StringValue? CreationId
         {
             get => GetAttribute<StringValue>();
@@ -366,7 +346,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:dgMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:dgMkLst")]
     public partial class DrawingMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -427,7 +406,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:xfrm")]
     public partial class Transform2D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -465,7 +443,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr("rot")]
         public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -476,7 +453,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr("flipH")]
         public BooleanValue? HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -487,7 +463,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr("flipV")]
         public BooleanValue? VerticalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -547,7 +522,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:grpSpMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:grpSpMkLst")]
     public partial class GroupShapeMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -601,7 +575,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:dePkg.</para>
     /// </summary>
-    [SchemaAttr("oac:dePkg")]
     public partial class DrawingElementPackage : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -627,7 +600,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:deMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:deMkLst")]
     public partial class DeMkLstDrawingElementMonikerList : OpenXmlDrawingElementMonikerListElement
     {
         /// <summary>
@@ -681,7 +653,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:deMasterMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:deMasterMkLst")]
     public partial class DeMasterMkLstDrawingElementMonikerList : OpenXmlDrawingElementMonikerListElement
     {
         /// <summary>
@@ -735,7 +706,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:deSrcMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:deSrcMkLst")]
     public partial class DeSrcMkLstDrawingElementMonikerList : OpenXmlDrawingElementMonikerListElement
     {
         /// <summary>
@@ -789,7 +759,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:deTgtMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:deTgtMkLst")]
     public partial class DeTgtMkLstDrawingElementMonikerList : OpenXmlDrawingElementMonikerListElement
     {
         /// <summary>
@@ -887,7 +856,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:imgData.</para>
     /// </summary>
-    [SchemaAttr("oac:imgData")]
     public partial class ImgDataImgData : OpenXmlImgDataElement
     {
         /// <summary>
@@ -926,7 +894,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:origImgData.</para>
     /// </summary>
-    [SchemaAttr("oac:origImgData")]
     public partial class OrigImgDataImgData : OpenXmlImgDataElement
     {
         /// <summary>
@@ -965,7 +932,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:sndData.</para>
     /// </summary>
-    [SchemaAttr("oac:sndData")]
     public partial class SndDataImgData : OpenXmlImgDataElement
     {
         /// <summary>
@@ -1037,7 +1003,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:imgUrl.</para>
     /// </summary>
-    [SchemaAttr("oac:imgUrl")]
     public partial class ResourceUrl : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1051,7 +1016,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>src, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: src</para>
         /// </summary>
-        [SchemaAttr("src")]
         public StringValue? Src
         {
             get => GetAttribute<StringValue>();
@@ -1062,7 +1026,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>linkage, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: linkage</para>
         /// </summary>
-        [SchemaAttr("linkage")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.Command.ResourceLinkage>? Linkage
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.Command.ResourceLinkage>>();
@@ -1094,7 +1057,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:txBodyPkg.</para>
     /// </summary>
-    [SchemaAttr("oac:txBodyPkg")]
     public partial class TextBodyPackage : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1135,7 +1097,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.ShapeMoniker" /> <c>&lt;oac:spMk></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:grpCmd")]
     public partial class GroupCommand : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1173,7 +1134,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>verId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: verId</para>
         /// </summary>
-        [SchemaAttr("verId")]
         public UInt32Value? VerId
         {
             get => GetAttribute<UInt32Value>();
@@ -1184,7 +1144,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>preventRegroup, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: preventRegroup</para>
         /// </summary>
-        [SchemaAttr("preventRegroup")]
         public BooleanValue? PreventRegroup
         {
             get => GetAttribute<BooleanValue>();
@@ -1195,7 +1154,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>grpId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: grpId</para>
         /// </summary>
-        [SchemaAttr("grpId")]
         public UInt32Value? GrpId
         {
             get => GetAttribute<UInt32Value>();
@@ -1264,7 +1222,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:imgLink.</para>
     /// </summary>
-    [SchemaAttr("oac:imgLink")]
     public partial class ImgLink : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1278,7 +1235,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>tgt, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: tgt</para>
         /// </summary>
-        [SchemaAttr("tgt")]
         public StringValue? Tgt
         {
             get => GetAttribute<StringValue>();
@@ -1307,7 +1263,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:dcMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:dcMkLst")]
     public partial class DocumentContextMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1361,7 +1316,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:graphicParentMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:graphicParentMkLst")]
     public partial class GraphicParentMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1415,7 +1369,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:spMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:spMkLst")]
     public partial class ShapeMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1469,7 +1422,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:graphicFrameMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:graphicFrameMkLst")]
     public partial class GraphicFrameMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1523,7 +1475,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cxnSpMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:cxnSpMkLst")]
     public partial class ConnectorMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1577,7 +1528,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:picMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:picMkLst")]
     public partial class PictureMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1631,7 +1581,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:inkMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:inkMkLst")]
     public partial class InkMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1685,7 +1634,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:txBodyMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:txBodyMkLst")]
     public partial class TextBodyMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1739,7 +1687,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:txMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:txMkLst")]
     public partial class TextCharRangeMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1793,7 +1740,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:hlinkMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:hlinkMkLst")]
     public partial class HyperlinkMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1847,7 +1793,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:model3DMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:model3DMkLst")]
     public partial class Model3DMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1901,7 +1846,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:viewSelLst.</para>
     /// </summary>
-    [SchemaAttr("oac:viewSelLst")]
     public partial class ViewSelectionStgList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1955,7 +1899,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:editorSelLst.</para>
     /// </summary>
-    [SchemaAttr("oac:editorSelLst")]
     public partial class EditorSelectionStgList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2009,7 +1952,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:drSelLst.</para>
     /// </summary>
-    [SchemaAttr("oac:drSelLst")]
     public partial class DrawingSelectionStgList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2063,7 +2005,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:tblMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:tblMkLst")]
     public partial class TableMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2117,7 +2058,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:tcMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:tcMkLst")]
     public partial class TableCellMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2171,7 +2111,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:trMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:trMkLst")]
     public partial class TableRowMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2225,7 +2164,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:gridColMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:gridColMkLst")]
     public partial class TableColumnMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2279,7 +2217,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvPr.</para>
     /// </summary>
-    [SchemaAttr("oac:cNvPr")]
     public partial class ModifyNonVisualDrawingProps : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2293,7 +2230,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>name, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -2304,7 +2240,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>descr, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr("descr")]
         public StringValue? Descr
         {
             get => GetAttribute<StringValue>();
@@ -2315,7 +2250,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>hidden, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -2326,7 +2260,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>title, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -2337,7 +2270,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>decor, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: decor</para>
         /// </summary>
-        [SchemaAttr("decor")]
         public BooleanValue? Decor
         {
             get => GetAttribute<BooleanValue>();
@@ -2348,7 +2280,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>scriptLink, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: scriptLink</para>
         /// </summary>
-        [SchemaAttr("scriptLink")]
         public StringValue? ScriptLink
         {
             get => GetAttribute<StringValue>();
@@ -2378,7 +2309,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:xfrm.</para>
     /// </summary>
-    [SchemaAttr("oac:xfrm")]
     public partial class ModifyTransformProps : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2392,7 +2322,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>x, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [SchemaAttr("x")]
         public Int64Value? X
         {
             get => GetAttribute<Int64Value>();
@@ -2403,7 +2332,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>y, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        [SchemaAttr("y")]
         public Int64Value? Y
         {
             get => GetAttribute<Int64Value>();
@@ -2414,7 +2342,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>cx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        [SchemaAttr("cx")]
         public Int64Value? Cx
         {
             get => GetAttribute<Int64Value>();
@@ -2425,7 +2352,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>cy, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        [SchemaAttr("cy")]
         public Int64Value? Cy
         {
             get => GetAttribute<Int64Value>();
@@ -2436,7 +2362,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>rot, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr("rot")]
         public Int32Value? Rot
         {
             get => GetAttribute<Int32Value>();
@@ -2447,7 +2372,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>flipH, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr("flipH")]
         public BooleanValue? FlipH
         {
             get => GetAttribute<BooleanValue>();
@@ -2458,7 +2382,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>flipV, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr("flipV")]
         public BooleanValue? FlipV
         {
             get => GetAttribute<BooleanValue>();
@@ -2501,7 +2424,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:off.</para>
     /// </summary>
-    [SchemaAttr("oac:off")]
     public partial class Point2DType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2515,7 +2437,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>X-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [SchemaAttr("x")]
         public Int64Value? X
         {
             get => GetAttribute<Int64Value>();
@@ -2526,7 +2447,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Y-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        [SchemaAttr("y")]
         public Int64Value? Y
         {
             get => GetAttribute<Int64Value>();
@@ -2582,7 +2502,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TabStopList" /> <c>&lt;a:tabLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:pPr")]
     public partial class TextParagraphPropertiesType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2620,7 +2539,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Left Margin</para>
         /// <para>Represents the following attribute in the schema: marL</para>
         /// </summary>
-        [SchemaAttr("marL")]
         public Int32Value? LeftMargin
         {
             get => GetAttribute<Int32Value>();
@@ -2631,7 +2549,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Right Margin</para>
         /// <para>Represents the following attribute in the schema: marR</para>
         /// </summary>
-        [SchemaAttr("marR")]
         public Int32Value? RightMargin
         {
             get => GetAttribute<Int32Value>();
@@ -2642,7 +2559,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Level</para>
         /// <para>Represents the following attribute in the schema: lvl</para>
         /// </summary>
-        [SchemaAttr("lvl")]
         public Int32Value? Level
         {
             get => GetAttribute<Int32Value>();
@@ -2653,7 +2569,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Indent</para>
         /// <para>Represents the following attribute in the schema: indent</para>
         /// </summary>
-        [SchemaAttr("indent")]
         public Int32Value? Indent
         {
             get => GetAttribute<Int32Value>();
@@ -2664,7 +2579,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
-        [SchemaAttr("algn")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextAlignmentTypeValues>? Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAlignmentTypeValues>>();
@@ -2675,7 +2589,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Default Tab Size</para>
         /// <para>Represents the following attribute in the schema: defTabSz</para>
         /// </summary>
-        [SchemaAttr("defTabSz")]
         public Int32Value? DefaultTabSize
         {
             get => GetAttribute<Int32Value>();
@@ -2686,7 +2599,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Right To Left</para>
         /// <para>Represents the following attribute in the schema: rtl</para>
         /// </summary>
-        [SchemaAttr("rtl")]
         public BooleanValue? RightToLeft
         {
             get => GetAttribute<BooleanValue>();
@@ -2697,7 +2609,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>East Asian Line Break</para>
         /// <para>Represents the following attribute in the schema: eaLnBrk</para>
         /// </summary>
-        [SchemaAttr("eaLnBrk")]
         public BooleanValue? EastAsianLineBreak
         {
             get => GetAttribute<BooleanValue>();
@@ -2708,7 +2619,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Font Alignment</para>
         /// <para>Represents the following attribute in the schema: fontAlgn</para>
         /// </summary>
-        [SchemaAttr("fontAlgn")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextFontAlignmentValues>? FontAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextFontAlignmentValues>>();
@@ -2719,7 +2629,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Latin Line Break</para>
         /// <para>Represents the following attribute in the schema: latinLnBrk</para>
         /// </summary>
-        [SchemaAttr("latinLnBrk")]
         public BooleanValue? LatinLineBreak
         {
             get => GetAttribute<BooleanValue>();
@@ -2730,7 +2639,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Hanging Punctuation</para>
         /// <para>Represents the following attribute in the schema: hangingPunct</para>
         /// </summary>
-        [SchemaAttr("hangingPunct")]
         public BooleanValue? Height
         {
             get => GetAttribute<BooleanValue>();
@@ -2896,7 +2804,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeAutoFit" /> <c>&lt;a:spAutoFit></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:bodyPr")]
     public partial class TextBodyProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2934,7 +2841,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr("rot")]
         public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -2945,7 +2851,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Paragraph Spacing</para>
         /// <para>Represents the following attribute in the schema: spcFirstLastPara</para>
         /// </summary>
-        [SchemaAttr("spcFirstLastPara")]
         public BooleanValue? UseParagraphSpacing
         {
             get => GetAttribute<BooleanValue>();
@@ -2956,7 +2861,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Text Vertical Overflow</para>
         /// <para>Represents the following attribute in the schema: vertOverflow</para>
         /// </summary>
-        [SchemaAttr("vertOverflow")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>? VerticalOverflow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>>();
@@ -2967,7 +2871,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Text Horizontal Overflow</para>
         /// <para>Represents the following attribute in the schema: horzOverflow</para>
         /// </summary>
-        [SchemaAttr("horzOverflow")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>? HorizontalOverflow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>();
@@ -2978,7 +2881,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Vertical Text</para>
         /// <para>Represents the following attribute in the schema: vert</para>
         /// </summary>
-        [SchemaAttr("vert")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>? Vertical
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>();
@@ -2989,7 +2891,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Text Wrapping Type</para>
         /// <para>Represents the following attribute in the schema: wrap</para>
         /// </summary>
-        [SchemaAttr("wrap")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>? Wrap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>>();
@@ -3000,7 +2901,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Left Inset</para>
         /// <para>Represents the following attribute in the schema: lIns</para>
         /// </summary>
-        [SchemaAttr("lIns")]
         public Int32Value? LeftInset
         {
             get => GetAttribute<Int32Value>();
@@ -3011,7 +2911,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Top Inset</para>
         /// <para>Represents the following attribute in the schema: tIns</para>
         /// </summary>
-        [SchemaAttr("tIns")]
         public Int32Value? TopInset
         {
             get => GetAttribute<Int32Value>();
@@ -3022,7 +2921,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Right Inset</para>
         /// <para>Represents the following attribute in the schema: rIns</para>
         /// </summary>
-        [SchemaAttr("rIns")]
         public Int32Value? RightInset
         {
             get => GetAttribute<Int32Value>();
@@ -3033,7 +2931,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Bottom Inset</para>
         /// <para>Represents the following attribute in the schema: bIns</para>
         /// </summary>
-        [SchemaAttr("bIns")]
         public Int32Value? BottomInset
         {
             get => GetAttribute<Int32Value>();
@@ -3044,7 +2941,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Number of Columns</para>
         /// <para>Represents the following attribute in the schema: numCol</para>
         /// </summary>
-        [SchemaAttr("numCol")]
         public Int32Value? ColumnCount
         {
             get => GetAttribute<Int32Value>();
@@ -3055,7 +2951,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Space Between Columns</para>
         /// <para>Represents the following attribute in the schema: spcCol</para>
         /// </summary>
-        [SchemaAttr("spcCol")]
         public Int32Value? ColumnSpacing
         {
             get => GetAttribute<Int32Value>();
@@ -3066,7 +2961,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Columns Right-To-Left</para>
         /// <para>Represents the following attribute in the schema: rtlCol</para>
         /// </summary>
-        [SchemaAttr("rtlCol")]
         public BooleanValue? RightToLeftColumns
         {
             get => GetAttribute<BooleanValue>();
@@ -3077,7 +2971,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>From WordArt</para>
         /// <para>Represents the following attribute in the schema: fromWordArt</para>
         /// </summary>
-        [SchemaAttr("fromWordArt")]
         public BooleanValue? FromWordArt
         {
             get => GetAttribute<BooleanValue>();
@@ -3088,7 +2981,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Anchor</para>
         /// <para>Represents the following attribute in the schema: anchor</para>
         /// </summary>
-        [SchemaAttr("anchor")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>? Anchor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>();
@@ -3099,7 +2991,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Anchor Center</para>
         /// <para>Represents the following attribute in the schema: anchorCtr</para>
         /// </summary>
-        [SchemaAttr("anchorCtr")]
         public BooleanValue? AnchorCenter
         {
             get => GetAttribute<BooleanValue>();
@@ -3110,7 +3001,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Force Anti-Alias</para>
         /// <para>Represents the following attribute in the schema: forceAA</para>
         /// </summary>
-        [SchemaAttr("forceAA")]
         public BooleanValue? ForceAntiAlias
         {
             get => GetAttribute<BooleanValue>();
@@ -3121,7 +3011,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Text Upright</para>
         /// <para>Represents the following attribute in the schema: upright</para>
         /// </summary>
-        [SchemaAttr("upright")]
         public BooleanValue? UpRight
         {
             get => GetAttribute<BooleanValue>();
@@ -3132,7 +3021,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Compatible Line Spacing</para>
         /// <para>Represents the following attribute in the schema: compatLnSpc</para>
         /// </summary>
-        [SchemaAttr("compatLnSpc")]
         public BooleanValue? CompatibleLineSpacing
         {
             get => GetAttribute<BooleanValue>();
@@ -3240,7 +3128,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvSpPr.</para>
     /// </summary>
-    [SchemaAttr("oac:cNvSpPr")]
     public partial class ModifyNonVisualDrawingShapeProps : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3254,7 +3141,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noGrp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        [SchemaAttr("noGrp")]
         public BooleanValue? NoGrp
         {
             get => GetAttribute<BooleanValue>();
@@ -3265,7 +3151,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noSelect, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        [SchemaAttr("noSelect")]
         public BooleanValue? NoSelect
         {
             get => GetAttribute<BooleanValue>();
@@ -3276,7 +3161,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noRot, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
-        [SchemaAttr("noRot")]
         public BooleanValue? NoRot
         {
             get => GetAttribute<BooleanValue>();
@@ -3287,7 +3171,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeAspect, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        [SchemaAttr("noChangeAspect")]
         public BooleanValue? NoChangeAspect
         {
             get => GetAttribute<BooleanValue>();
@@ -3298,7 +3181,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noMove, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        [SchemaAttr("noMove")]
         public BooleanValue? NoMove
         {
             get => GetAttribute<BooleanValue>();
@@ -3309,7 +3191,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noResize, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        [SchemaAttr("noResize")]
         public BooleanValue? NoResize
         {
             get => GetAttribute<BooleanValue>();
@@ -3320,7 +3201,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noEditPoints, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noEditPoints</para>
         /// </summary>
-        [SchemaAttr("noEditPoints")]
         public BooleanValue? NoEditPoints
         {
             get => GetAttribute<BooleanValue>();
@@ -3331,7 +3211,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noAdjustHandles, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
         /// </summary>
-        [SchemaAttr("noAdjustHandles")]
         public BooleanValue? NoAdjustHandles
         {
             get => GetAttribute<BooleanValue>();
@@ -3342,7 +3221,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeArrowheads, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
         /// </summary>
-        [SchemaAttr("noChangeArrowheads")]
         public BooleanValue? NoChangeArrowheads
         {
             get => GetAttribute<BooleanValue>();
@@ -3353,7 +3231,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeShapeType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
         /// </summary>
-        [SchemaAttr("noChangeShapeType")]
         public BooleanValue? NoChangeShapeType
         {
             get => GetAttribute<BooleanValue>();
@@ -3364,7 +3241,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noTextEdit, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noTextEdit</para>
         /// </summary>
-        [SchemaAttr("noTextEdit")]
         public BooleanValue? NoTextEdit
         {
             get => GetAttribute<BooleanValue>();
@@ -3375,7 +3251,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>txBox, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: txBox</para>
         /// </summary>
-        [SchemaAttr("txBox")]
         public BooleanValue? TxBox
         {
             get => GetAttribute<BooleanValue>();
@@ -3411,7 +3286,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:spMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:spMkLst")]
     public partial class ShapePropsMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3485,7 +3359,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:spPr")]
     public partial class ShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3523,7 +3396,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -3615,7 +3487,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:xfrm.</para>
     /// </summary>
-    [SchemaAttr("oac:xfrm")]
     public partial class XfrmEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3641,7 +3512,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:geom.</para>
     /// </summary>
-    [SchemaAttr("oac:geom")]
     public partial class GeomEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3667,7 +3537,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:fill.</para>
     /// </summary>
-    [SchemaAttr("oac:fill")]
     public partial class FillEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3693,7 +3562,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:ln.</para>
     /// </summary>
-    [SchemaAttr("oac:ln")]
     public partial class LnEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3719,7 +3587,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:effect.</para>
     /// </summary>
-    [SchemaAttr("oac:effect")]
     public partial class EffectEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3745,7 +3612,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:scene3d.</para>
     /// </summary>
-    [SchemaAttr("oac:scene3d")]
     public partial class Scene3dEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3771,7 +3637,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:sp3d.</para>
     /// </summary>
-    [SchemaAttr("oac:sp3d")]
     public partial class Sp3dEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3797,7 +3662,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:extLst.</para>
     /// </summary>
-    [SchemaAttr("oac:extLst")]
     public partial class ExtLstEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3823,7 +3687,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:bwMode.</para>
     /// </summary>
-    [SchemaAttr("oac:bwMode")]
     public partial class BwModeEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3849,7 +3712,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:srcRect.</para>
     /// </summary>
-    [SchemaAttr("oac:srcRect")]
     public partial class SrcRectEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3875,7 +3737,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:fillMode.</para>
     /// </summary>
-    [SchemaAttr("oac:fillMode")]
     public partial class FillModeEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3901,7 +3762,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:dpi.</para>
     /// </summary>
-    [SchemaAttr("oac:dpi")]
     public partial class DpiEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3927,7 +3787,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:rotWithShape.</para>
     /// </summary>
-    [SchemaAttr("oac:rotWithShape")]
     public partial class RotWithShapeEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3953,7 +3812,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:stCxn.</para>
     /// </summary>
-    [SchemaAttr("oac:stCxn")]
     public partial class StCxnEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -3979,7 +3837,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:endCxn.</para>
     /// </summary>
-    [SchemaAttr("oac:endCxn")]
     public partial class EndCxnEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4005,7 +3862,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:noGrp.</para>
     /// </summary>
-    [SchemaAttr("oac:noGrp")]
     public partial class NoGrpEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4031,7 +3887,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:noSelect.</para>
     /// </summary>
-    [SchemaAttr("oac:noSelect")]
     public partial class NoSelectEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4057,7 +3912,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:noRot.</para>
     /// </summary>
-    [SchemaAttr("oac:noRot")]
     public partial class NoRotEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4083,7 +3937,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:noChangeAspect.</para>
     /// </summary>
-    [SchemaAttr("oac:noChangeAspect")]
     public partial class NoChangeAspectEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4109,7 +3962,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:noMove.</para>
     /// </summary>
-    [SchemaAttr("oac:noMove")]
     public partial class NoMoveEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4135,7 +3987,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:noResize.</para>
     /// </summary>
-    [SchemaAttr("oac:noResize")]
     public partial class NoResizeEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4161,7 +4012,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:noEditPoints.</para>
     /// </summary>
-    [SchemaAttr("oac:noEditPoints")]
     public partial class NoEditPointsEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4187,7 +4037,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:noAdjustHandles.</para>
     /// </summary>
-    [SchemaAttr("oac:noAdjustHandles")]
     public partial class NoAdjustHandlesEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4213,7 +4062,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:noChangeArrowheads.</para>
     /// </summary>
-    [SchemaAttr("oac:noChangeArrowheads")]
     public partial class NoChangeArrowheadsEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4239,7 +4087,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:noChangeShapeType.</para>
     /// </summary>
-    [SchemaAttr("oac:noChangeShapeType")]
     public partial class NoChangeShapeTypeEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4265,7 +4112,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:lfPr.</para>
     /// </summary>
-    [SchemaAttr("oac:lfPr")]
     public partial class LfPrEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4291,7 +4137,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:hlinkClick.</para>
     /// </summary>
-    [SchemaAttr("oac:hlinkClick")]
     public partial class HlinkClickEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4317,7 +4162,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:hlinkHover.</para>
     /// </summary>
-    [SchemaAttr("oac:hlinkHover")]
     public partial class HlinkHoverEmpty : OpenXmlEmptyElement
     {
         /// <summary>
@@ -4377,7 +4221,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty" /> <c>&lt;oac:bwMode></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:spPr")]
     public partial class ResetShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4576,7 +4419,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:lnRef")]
     public partial class LnRefStyleMatrixReference : StyleMatrixReferenceType
     {
         /// <summary>
@@ -4652,7 +4494,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:fillRef")]
     public partial class FillRefStyleMatrixReference : StyleMatrixReferenceType
     {
         /// <summary>
@@ -4728,7 +4569,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:effectRef")]
     public partial class EffectRefStyleMatrixReference : StyleMatrixReferenceType
     {
         /// <summary>
@@ -4841,7 +4681,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Style Matrix Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
@@ -4959,7 +4798,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:fontRef")]
     public partial class FontReference : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4997,7 +4835,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Identifier</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>? Index
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>>();
@@ -5134,7 +4971,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference" /> <c>&lt;oac:effectRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:style")]
     public partial class ModifyShapeStyleProps : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5247,7 +5083,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:reset.</para>
     /// </summary>
-    [SchemaAttr("oac:reset")]
     public partial class ResetXsdboolean : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -5287,7 +5122,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:useBounds.</para>
     /// </summary>
-    [SchemaAttr("oac:useBounds")]
     public partial class UseBoundsXsdboolean : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -5336,7 +5170,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:blipFill")]
     public partial class BlipFillProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5374,7 +5207,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>DPI Setting</para>
         /// <para>Represents the following attribute in the schema: dpi</para>
         /// </summary>
-        [SchemaAttr("dpi")]
         public UInt32Value? Dpi
         {
             get => GetAttribute<UInt32Value>();
@@ -5385,7 +5217,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Rotate With Shape</para>
         /// <para>Represents the following attribute in the schema: rotWithShape</para>
         /// </summary>
-        [SchemaAttr("rotWithShape")]
         public BooleanValue? RotateWithShape
         {
             get => GetAttribute<BooleanValue>();
@@ -5454,7 +5285,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:fillRect.</para>
     /// </summary>
-    [SchemaAttr("oac:fillRect")]
     public partial class FillRectRelativeRectProps : OpenXmlRelativeRectPropsElement
     {
         /// <summary>
@@ -5480,7 +5310,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:srcRect.</para>
     /// </summary>
-    [SchemaAttr("oac:srcRect")]
     public partial class SrcRectRelativeRectProps : OpenXmlRelativeRectPropsElement
     {
         /// <summary>
@@ -5519,7 +5348,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>l, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        [SchemaAttr("l")]
         public Int32Value? L
         {
             get => GetAttribute<Int32Value>();
@@ -5530,7 +5358,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>t, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public Int32Value? T
         {
             get => GetAttribute<Int32Value>();
@@ -5541,7 +5368,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>r, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr("r")]
         public Int32Value? R
         {
             get => GetAttribute<Int32Value>();
@@ -5552,7 +5378,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>b, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [SchemaAttr("b")]
         public Int32Value? B
         {
             get => GetAttribute<Int32Value>();
@@ -5584,7 +5409,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty" /> <c>&lt;oac:rotWithShape></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:blipFill")]
     public partial class ResetBlipFillProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5697,7 +5521,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvGrpSpPr.</para>
     /// </summary>
-    [SchemaAttr("oac:cNvGrpSpPr")]
     public partial class ModifyNonVisualGroupDrawingShapeProps : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5711,7 +5534,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noGrp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        [SchemaAttr("noGrp")]
         public BooleanValue? NoGrp
         {
             get => GetAttribute<BooleanValue>();
@@ -5722,7 +5544,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noUngrp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noUngrp</para>
         /// </summary>
-        [SchemaAttr("noUngrp")]
         public BooleanValue? NoUngrp
         {
             get => GetAttribute<BooleanValue>();
@@ -5733,7 +5554,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noSelect, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        [SchemaAttr("noSelect")]
         public BooleanValue? NoSelect
         {
             get => GetAttribute<BooleanValue>();
@@ -5744,7 +5564,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noRot, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
-        [SchemaAttr("noRot")]
         public BooleanValue? NoRot
         {
             get => GetAttribute<BooleanValue>();
@@ -5755,7 +5574,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeAspect, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        [SchemaAttr("noChangeAspect")]
         public BooleanValue? NoChangeAspect
         {
             get => GetAttribute<BooleanValue>();
@@ -5766,7 +5584,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noMove, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        [SchemaAttr("noMove")]
         public BooleanValue? NoMove
         {
             get => GetAttribute<BooleanValue>();
@@ -5777,7 +5594,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noResize, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        [SchemaAttr("noResize")]
         public BooleanValue? NoResize
         {
             get => GetAttribute<BooleanValue>();
@@ -5824,7 +5640,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:grpSpPr")]
     public partial class GroupShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5862,7 +5677,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -5951,7 +5765,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty" /> <c>&lt;oac:bwMode></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:grpSpPr")]
     public partial class ResetGroupShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6102,7 +5915,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:cNvPr")]
     public partial class NonVisualDrawingProps : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6140,7 +5952,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Application defined unique identifier.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -6151,7 +5962,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Name compatible with Object Model (non-unique).</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -6162,7 +5972,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Description of the drawing element.</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr("descr")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -6173,7 +5982,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Flag determining to show or hide this element.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -6184,7 +5992,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -6274,7 +6081,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:cNvGrpSpPr")]
     public partial class NonVisualGroupDrawingShapeProps : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6357,7 +6163,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvGraphicFramePr.</para>
     /// </summary>
-    [SchemaAttr("oac:cNvGraphicFramePr")]
     public partial class ModifyNonVisualGraphicFrameProps : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6371,7 +6176,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noGrp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        [SchemaAttr("noGrp")]
         public BooleanValue? NoGrp
         {
             get => GetAttribute<BooleanValue>();
@@ -6382,7 +6186,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noDrilldown, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noDrilldown</para>
         /// </summary>
-        [SchemaAttr("noDrilldown")]
         public BooleanValue? NoDrilldown
         {
             get => GetAttribute<BooleanValue>();
@@ -6393,7 +6196,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noSelect, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        [SchemaAttr("noSelect")]
         public BooleanValue? NoSelect
         {
             get => GetAttribute<BooleanValue>();
@@ -6404,7 +6206,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeAspect, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        [SchemaAttr("noChangeAspect")]
         public BooleanValue? NoChangeAspect
         {
             get => GetAttribute<BooleanValue>();
@@ -6415,7 +6216,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noMove, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        [SchemaAttr("noMove")]
         public BooleanValue? NoMove
         {
             get => GetAttribute<BooleanValue>();
@@ -6426,7 +6226,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noResize, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        [SchemaAttr("noResize")]
         public BooleanValue? NoResize
         {
             get => GetAttribute<BooleanValue>();
@@ -6456,7 +6255,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:stCxn.</para>
     /// </summary>
-    [SchemaAttr("oac:stCxn")]
     public partial class StCxnConnection : ConnectionType
     {
         /// <summary>
@@ -6482,7 +6280,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:endCxn.</para>
     /// </summary>
-    [SchemaAttr("oac:endCxn")]
     public partial class EndCxnConnection : ConnectionType
     {
         /// <summary>
@@ -6521,7 +6318,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -6532,7 +6328,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
@@ -6566,7 +6361,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection" /> <c>&lt;oac:endCxn></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:cNvCxnSpPr")]
     public partial class ModifyNonVisualConnectorProps : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6604,7 +6398,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noGrp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        [SchemaAttr("noGrp")]
         public BooleanValue? NoGrp
         {
             get => GetAttribute<BooleanValue>();
@@ -6615,7 +6408,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noSelect, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        [SchemaAttr("noSelect")]
         public BooleanValue? NoSelect
         {
             get => GetAttribute<BooleanValue>();
@@ -6626,7 +6418,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noRot, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
-        [SchemaAttr("noRot")]
         public BooleanValue? NoRot
         {
             get => GetAttribute<BooleanValue>();
@@ -6637,7 +6428,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeAspect, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        [SchemaAttr("noChangeAspect")]
         public BooleanValue? NoChangeAspect
         {
             get => GetAttribute<BooleanValue>();
@@ -6648,7 +6438,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noMove, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        [SchemaAttr("noMove")]
         public BooleanValue? NoMove
         {
             get => GetAttribute<BooleanValue>();
@@ -6659,7 +6448,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noResize, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        [SchemaAttr("noResize")]
         public BooleanValue? NoResize
         {
             get => GetAttribute<BooleanValue>();
@@ -6670,7 +6458,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noEditPoints, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noEditPoints</para>
         /// </summary>
-        [SchemaAttr("noEditPoints")]
         public BooleanValue? NoEditPoints
         {
             get => GetAttribute<BooleanValue>();
@@ -6681,7 +6468,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noAdjustHandles, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
         /// </summary>
-        [SchemaAttr("noAdjustHandles")]
         public BooleanValue? NoAdjustHandles
         {
             get => GetAttribute<BooleanValue>();
@@ -6692,7 +6478,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeArrowheads, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
         /// </summary>
-        [SchemaAttr("noChangeArrowheads")]
         public BooleanValue? NoChangeArrowheads
         {
             get => GetAttribute<BooleanValue>();
@@ -6703,7 +6488,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeShapeType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
         /// </summary>
-        [SchemaAttr("noChangeShapeType")]
         public BooleanValue? NoChangeShapeType
         {
             get => GetAttribute<BooleanValue>();
@@ -6787,7 +6571,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty" /> <c>&lt;oac:noChangeShapeType></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:cNvCxnSpPr")]
     public partial class ResetNonVisualConnectorProps : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7020,7 +6803,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:compressPicPr.</para>
     /// </summary>
-    [SchemaAttr("oac:compressPicPr")]
     public partial class CompressPictureProps : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7034,7 +6816,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>removeCrop, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: removeCrop</para>
         /// </summary>
-        [SchemaAttr("removeCrop")]
         public BooleanValue? RemoveCrop
         {
             get => GetAttribute<BooleanValue>();
@@ -7045,7 +6826,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>useLocalDpi, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: useLocalDpi</para>
         /// </summary>
-        [SchemaAttr("useLocalDpi")]
         public BooleanValue? UseLocalDpi
         {
             get => GetAttribute<BooleanValue>();
@@ -7056,7 +6836,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>cstate, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: cstate</para>
         /// </summary>
-        [SchemaAttr("cstate")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>? Cstate
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>>();
@@ -7086,7 +6865,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvPicPr.</para>
     /// </summary>
-    [SchemaAttr("oac:cNvPicPr")]
     public partial class ModifyNonVisualPictureProps : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7100,7 +6878,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noGrp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        [SchemaAttr("noGrp")]
         public BooleanValue? NoGrp
         {
             get => GetAttribute<BooleanValue>();
@@ -7111,7 +6888,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noSelect, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        [SchemaAttr("noSelect")]
         public BooleanValue? NoSelect
         {
             get => GetAttribute<BooleanValue>();
@@ -7122,7 +6898,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noRot, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
-        [SchemaAttr("noRot")]
         public BooleanValue? NoRot
         {
             get => GetAttribute<BooleanValue>();
@@ -7133,7 +6908,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeAspect, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        [SchemaAttr("noChangeAspect")]
         public BooleanValue? NoChangeAspect
         {
             get => GetAttribute<BooleanValue>();
@@ -7144,7 +6918,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noMove, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        [SchemaAttr("noMove")]
         public BooleanValue? NoMove
         {
             get => GetAttribute<BooleanValue>();
@@ -7155,7 +6928,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noResize, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        [SchemaAttr("noResize")]
         public BooleanValue? NoResize
         {
             get => GetAttribute<BooleanValue>();
@@ -7166,7 +6938,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noEditPoints, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noEditPoints</para>
         /// </summary>
-        [SchemaAttr("noEditPoints")]
         public BooleanValue? NoEditPoints
         {
             get => GetAttribute<BooleanValue>();
@@ -7177,7 +6948,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noAdjustHandles, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
         /// </summary>
-        [SchemaAttr("noAdjustHandles")]
         public BooleanValue? NoAdjustHandles
         {
             get => GetAttribute<BooleanValue>();
@@ -7188,7 +6958,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeArrowheads, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
         /// </summary>
-        [SchemaAttr("noChangeArrowheads")]
         public BooleanValue? NoChangeArrowheads
         {
             get => GetAttribute<BooleanValue>();
@@ -7199,7 +6968,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeShapeType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
         /// </summary>
-        [SchemaAttr("noChangeShapeType")]
         public BooleanValue? NoChangeShapeType
         {
             get => GetAttribute<BooleanValue>();
@@ -7210,7 +6978,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noCrop, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noCrop</para>
         /// </summary>
-        [SchemaAttr("noCrop")]
         public BooleanValue? NoCrop
         {
             get => GetAttribute<BooleanValue>();
@@ -7221,7 +6988,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>preferRelativeResize, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: preferRelativeResize</para>
         /// </summary>
-        [SchemaAttr("preferRelativeResize")]
         public BooleanValue? PreferRelativeResize
         {
             get => GetAttribute<BooleanValue>();
@@ -7263,7 +7029,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty" /> <c>&lt;oac:lfPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:cNvPicPr")]
     public partial class ResetNonVisualPictureProps : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7331,7 +7096,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:bounds.</para>
     /// </summary>
-    [SchemaAttr("oac:bounds")]
     public partial class BoundRect : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7345,7 +7109,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>l</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        [SchemaAttr("l")]
         public Int64Value? L
         {
             get => GetAttribute<Int64Value>();
@@ -7356,7 +7119,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>t</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public Int64Value? T
         {
             get => GetAttribute<Int64Value>();
@@ -7367,7 +7129,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>r</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr("r")]
         public Int64Value? R
         {
             get => GetAttribute<Int64Value>();
@@ -7378,7 +7139,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>b</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [SchemaAttr("b")]
         public Int64Value? B
         {
             get => GetAttribute<Int64Value>();
@@ -7422,7 +7182,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:svgBlipMkLst.</para>
     /// </summary>
-    [SchemaAttr("oac:svgBlipMkLst")]
     public partial class SVGBlipMonikerList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7493,7 +7252,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:lineProps")]
     public partial class LinePropertiesType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7531,7 +7289,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>line width</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        [SchemaAttr("w")]
         public Int32Value? Width
         {
             get => GetAttribute<Int32Value>();
@@ -7542,7 +7299,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>line cap</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
-        [SchemaAttr("cap")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues>? CapType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues>>();
@@ -7553,7 +7309,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>compound line type</para>
         /// <para>Represents the following attribute in the schema: cmpd</para>
         /// </summary>
-        [SchemaAttr("cmpd")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues>? CompoundLineType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues>>();
@@ -7564,7 +7319,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>pen alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
-        [SchemaAttr("algn")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues>? Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues>>();
@@ -7649,7 +7403,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvInkPr.</para>
     /// </summary>
-    [SchemaAttr("oac:cNvInkPr")]
     public partial class ModifyNonVisualInkProps : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7663,7 +7416,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noGrp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        [SchemaAttr("noGrp")]
         public BooleanValue? NoGrp
         {
             get => GetAttribute<BooleanValue>();
@@ -7674,7 +7426,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noSelect, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        [SchemaAttr("noSelect")]
         public BooleanValue? NoSelect
         {
             get => GetAttribute<BooleanValue>();
@@ -7685,7 +7436,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noRot, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
-        [SchemaAttr("noRot")]
         public BooleanValue? NoRot
         {
             get => GetAttribute<BooleanValue>();
@@ -7696,7 +7446,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeAspect, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        [SchemaAttr("noChangeAspect")]
         public BooleanValue? NoChangeAspect
         {
             get => GetAttribute<BooleanValue>();
@@ -7707,7 +7456,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noMove, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        [SchemaAttr("noMove")]
         public BooleanValue? NoMove
         {
             get => GetAttribute<BooleanValue>();
@@ -7718,7 +7466,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noResize, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        [SchemaAttr("noResize")]
         public BooleanValue? NoResize
         {
             get => GetAttribute<BooleanValue>();
@@ -7729,7 +7476,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noEditPoints, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noEditPoints</para>
         /// </summary>
-        [SchemaAttr("noEditPoints")]
         public BooleanValue? NoEditPoints
         {
             get => GetAttribute<BooleanValue>();
@@ -7740,7 +7486,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noAdjustHandles, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
         /// </summary>
-        [SchemaAttr("noAdjustHandles")]
         public BooleanValue? NoAdjustHandles
         {
             get => GetAttribute<BooleanValue>();
@@ -7751,7 +7496,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeArrowheads, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
         /// </summary>
-        [SchemaAttr("noChangeArrowheads")]
         public BooleanValue? NoChangeArrowheads
         {
             get => GetAttribute<BooleanValue>();
@@ -7762,7 +7506,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>noChangeShapeType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
         /// </summary>
-        [SchemaAttr("noChangeShapeType")]
         public BooleanValue? NoChangeShapeType
         {
             get => GetAttribute<BooleanValue>();
@@ -7773,7 +7516,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>isComment, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
-        [SchemaAttr("isComment")]
         public BooleanValue? IsComment
         {
             get => GetAttribute<BooleanValue>();
@@ -7814,7 +7556,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData" /> <c>&lt;oac:sndData></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:hlinkClick")]
     public partial class HlinkClickHyperlinkProps : OpenXmlHyperlinkPropsElement
     {
         /// <summary>
@@ -7874,7 +7615,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData" /> <c>&lt;oac:sndData></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:hlinkHover")]
     public partial class HlinkHoverHyperlinkProps : OpenXmlHyperlinkPropsElement
     {
         /// <summary>
@@ -7971,7 +7711,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>source, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: source</para>
         /// </summary>
-        [SchemaAttr("source")]
         public StringValue? Source
         {
             get => GetAttribute<StringValue>();
@@ -7982,7 +7721,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>action, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: action</para>
         /// </summary>
-        [SchemaAttr("action")]
         public StringValue? Action
         {
             get => GetAttribute<StringValue>();
@@ -7993,7 +7731,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>tgtFrame, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: tgtFrame</para>
         /// </summary>
-        [SchemaAttr("tgtFrame")]
         public StringValue? TgtFrame
         {
             get => GetAttribute<StringValue>();
@@ -8004,7 +7741,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>tooltip, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: tooltip</para>
         /// </summary>
-        [SchemaAttr("tooltip")]
         public StringValue? Tooltip
         {
             get => GetAttribute<StringValue>();
@@ -8015,7 +7751,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>highlightClick, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: highlightClick</para>
         /// </summary>
-        [SchemaAttr("highlightClick")]
         public BooleanValue? HighlightClick
         {
             get => GetAttribute<BooleanValue>();
@@ -8026,7 +7761,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>endSnd, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: endSnd</para>
         /// </summary>
-        [SchemaAttr("endSnd")]
         public BooleanValue? EndSnd
         {
             get => GetAttribute<BooleanValue>();
@@ -8037,7 +7771,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>sndName, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sndName</para>
         /// </summary>
-        [SchemaAttr("sndName")]
         public StringValue? SndName
         {
             get => GetAttribute<StringValue>();
@@ -8084,7 +7817,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps" /> <c>&lt;oac:hlinkHover></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:hlink")]
     public partial class ModifyHyperlinkProps : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8174,7 +7906,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty" /> <c>&lt;oac:hlinkHover></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("oac:hlink")]
     public partial class ResetHyperlinkProps : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8257,7 +7988,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:context.</para>
     /// </summary>
-    [SchemaAttr("oac:context")]
     public partial class TextCharRangeContext : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8271,7 +8001,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>len, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: len</para>
         /// </summary>
-        [SchemaAttr("len")]
         public UInt32Value? Len
         {
             get => GetAttribute<UInt32Value>();
@@ -8282,7 +8011,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>hash, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: hash</para>
         /// </summary>
-        [SchemaAttr("hash")]
         public UInt32Value? Hash
         {
             get => GetAttribute<UInt32Value>();

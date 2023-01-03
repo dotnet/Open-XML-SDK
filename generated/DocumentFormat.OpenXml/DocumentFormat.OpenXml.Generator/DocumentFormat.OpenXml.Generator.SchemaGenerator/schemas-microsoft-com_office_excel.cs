@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -96,7 +94,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject" /> <c>&lt;xvml:UIObj></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xvml:ClientData")]
     public partial class ClientData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -134,7 +131,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         /// <para>Object type</para>
         /// <para>Represents the following attribute in the schema: ObjectType</para>
         /// </summary>
-        [SchemaAttr("ObjectType")]
         public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>? ObjectType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>>();
@@ -300,7 +296,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MoveWithCells.</para>
     /// </summary>
-    [SchemaAttr("xvml:MoveWithCells")]
     public partial class MoveWithCells : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -339,7 +334,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:SizeWithCells.</para>
     /// </summary>
-    [SchemaAttr("xvml:SizeWithCells")]
     public partial class ResizeWithCells : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -378,7 +372,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Locked.</para>
     /// </summary>
-    [SchemaAttr("xvml:Locked")]
     public partial class Locked : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -417,7 +410,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DefaultSize.</para>
     /// </summary>
-    [SchemaAttr("xvml:DefaultSize")]
     public partial class DefaultSize : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -456,7 +448,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:PrintObject.</para>
     /// </summary>
-    [SchemaAttr("xvml:PrintObject")]
     public partial class PrintObject : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -495,7 +486,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Disabled.</para>
     /// </summary>
-    [SchemaAttr("xvml:Disabled")]
     public partial class Disabled : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -534,7 +524,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoFill.</para>
     /// </summary>
-    [SchemaAttr("xvml:AutoFill")]
     public partial class AutoFill : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -573,7 +562,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoLine.</para>
     /// </summary>
-    [SchemaAttr("xvml:AutoLine")]
     public partial class AutoLine : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -612,7 +600,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoPict.</para>
     /// </summary>
-    [SchemaAttr("xvml:AutoPict")]
     public partial class AutoSizePicture : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -651,7 +638,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:LockText.</para>
     /// </summary>
-    [SchemaAttr("xvml:LockText")]
     public partial class LockText : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -690,7 +676,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:JustLastX.</para>
     /// </summary>
-    [SchemaAttr("xvml:JustLastX")]
     public partial class JustifyLastLine : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -729,7 +714,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:SecretEdit.</para>
     /// </summary>
-    [SchemaAttr("xvml:SecretEdit")]
     public partial class SecretEdit : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -768,7 +752,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Default.</para>
     /// </summary>
-    [SchemaAttr("xvml:Default")]
     public partial class DefaultButton : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -807,7 +790,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Help.</para>
     /// </summary>
-    [SchemaAttr("xvml:Help")]
     public partial class HelpButton : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -846,7 +828,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Cancel.</para>
     /// </summary>
-    [SchemaAttr("xvml:Cancel")]
     public partial class CancelButton : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -885,7 +866,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Dismiss.</para>
     /// </summary>
-    [SchemaAttr("xvml:Dismiss")]
     public partial class DismissButton : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -924,7 +904,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Visible.</para>
     /// </summary>
-    [SchemaAttr("xvml:Visible")]
     public partial class Visible : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -963,7 +942,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:RowHidden.</para>
     /// </summary>
-    [SchemaAttr("xvml:RowHidden")]
     public partial class RowHidden : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1002,7 +980,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ColHidden.</para>
     /// </summary>
-    [SchemaAttr("xvml:ColHidden")]
     public partial class ColumnHidden : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1041,7 +1018,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MultiLine.</para>
     /// </summary>
-    [SchemaAttr("xvml:MultiLine")]
     public partial class MultiLine : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1080,7 +1056,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:VScroll.</para>
     /// </summary>
-    [SchemaAttr("xvml:VScroll")]
     public partial class VerticalScrollBar : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1119,7 +1094,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ValidIds.</para>
     /// </summary>
-    [SchemaAttr("xvml:ValidIds")]
     public partial class ValidIds : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1158,7 +1132,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:NoThreeD2.</para>
     /// </summary>
-    [SchemaAttr("xvml:NoThreeD2")]
     public partial class Disable3DForListBoxAndDropDown : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1197,7 +1170,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Colored.</para>
     /// </summary>
-    [SchemaAttr("xvml:Colored")]
     public partial class Colored : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1236,7 +1208,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:NoThreeD.</para>
     /// </summary>
-    [SchemaAttr("xvml:NoThreeD")]
     public partial class Disable3D : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1275,7 +1246,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FirstButton.</para>
     /// </summary>
-    [SchemaAttr("xvml:FirstButton")]
     public partial class FirstButton : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1314,7 +1284,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Horiz.</para>
     /// </summary>
-    [SchemaAttr("xvml:Horiz")]
     public partial class HorizontalScrollBar : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1353,7 +1322,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MapOCX.</para>
     /// </summary>
-    [SchemaAttr("xvml:MapOCX")]
     public partial class MapOcxControl : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1392,7 +1360,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Camera.</para>
     /// </summary>
-    [SchemaAttr("xvml:Camera")]
     public partial class CameraObject : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1431,7 +1398,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:RecalcAlways.</para>
     /// </summary>
-    [SchemaAttr("xvml:RecalcAlways")]
     public partial class RecalculateAlways : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1470,7 +1436,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:AutoScale.</para>
     /// </summary>
-    [SchemaAttr("xvml:AutoScale")]
     public partial class AutoScaleFont : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1509,7 +1474,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DDE.</para>
     /// </summary>
-    [SchemaAttr("xvml:DDE")]
     public partial class DdeObject : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1548,7 +1512,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:UIObj.</para>
     /// </summary>
-    [SchemaAttr("xvml:UIObj")]
     public partial class UIObject : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1587,7 +1550,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Anchor.</para>
     /// </summary>
-    [SchemaAttr("xvml:Anchor")]
     public partial class Anchor : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1625,7 +1587,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:TextHAlign.</para>
     /// </summary>
-    [SchemaAttr("xvml:TextHAlign")]
     public partial class HorizontalTextAlignment : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1663,7 +1624,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:TextVAlign.</para>
     /// </summary>
-    [SchemaAttr("xvml:TextVAlign")]
     public partial class VerticalTextAlignment : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1701,7 +1661,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaRange.</para>
     /// </summary>
-    [SchemaAttr("xvml:FmlaRange")]
     public partial class FormulaRange : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1739,7 +1698,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:SelType.</para>
     /// </summary>
-    [SchemaAttr("xvml:SelType")]
     public partial class SelectionType : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1777,7 +1735,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:MultiSel.</para>
     /// </summary>
-    [SchemaAttr("xvml:MultiSel")]
     public partial class MultiSelections : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1815,7 +1772,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:LCT.</para>
     /// </summary>
-    [SchemaAttr("xvml:LCT")]
     public partial class ListBoxCallbackType : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1853,7 +1809,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ListItem.</para>
     /// </summary>
-    [SchemaAttr("xvml:ListItem")]
     public partial class ListItem : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1891,7 +1846,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DropStyle.</para>
     /// </summary>
-    [SchemaAttr("xvml:DropStyle")]
     public partial class DropStyle : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1929,7 +1883,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaLink.</para>
     /// </summary>
-    [SchemaAttr("xvml:FmlaLink")]
     public partial class FormulaLink : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1967,7 +1920,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaPict.</para>
     /// </summary>
-    [SchemaAttr("xvml:FmlaPict")]
     public partial class FormulaPicture : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2005,7 +1957,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaGroup.</para>
     /// </summary>
-    [SchemaAttr("xvml:FmlaGroup")]
     public partial class FormulaGroup : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2043,7 +1994,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptText.</para>
     /// </summary>
-    [SchemaAttr("xvml:ScriptText")]
     public partial class ScriptText : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2081,7 +2031,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptExtended.</para>
     /// </summary>
-    [SchemaAttr("xvml:ScriptExtended")]
     public partial class ScriptExtended : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2119,7 +2068,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaTxbx.</para>
     /// </summary>
-    [SchemaAttr("xvml:FmlaTxbx")]
     public partial class FormulaTextBox : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2157,7 +2105,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:FmlaMacro.</para>
     /// </summary>
-    [SchemaAttr("xvml:FmlaMacro")]
     public partial class FormulaMacro : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2196,7 +2143,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Accel.</para>
     /// </summary>
-    [SchemaAttr("xvml:Accel")]
     public partial class AcceleratorPrimary : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2235,7 +2181,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Accel2.</para>
     /// </summary>
-    [SchemaAttr("xvml:Accel2")]
     public partial class AcceleratorSecondary : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2274,7 +2219,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Row.</para>
     /// </summary>
-    [SchemaAttr("xvml:Row")]
     public partial class CommentRowTarget : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2313,7 +2257,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Column.</para>
     /// </summary>
-    [SchemaAttr("xvml:Column")]
     public partial class CommentColumnTarget : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2352,7 +2295,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:VTEdit.</para>
     /// </summary>
-    [SchemaAttr("xvml:VTEdit")]
     public partial class InputValidationType : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2391,7 +2333,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:WidthMin.</para>
     /// </summary>
-    [SchemaAttr("xvml:WidthMin")]
     public partial class MinDropDownWidth : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2430,7 +2371,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Sel.</para>
     /// </summary>
-    [SchemaAttr("xvml:Sel")]
     public partial class SelectionEntry : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2469,7 +2409,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:DropLines.</para>
     /// </summary>
-    [SchemaAttr("xvml:DropLines")]
     public partial class DropLines : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2508,7 +2447,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Checked.</para>
     /// </summary>
-    [SchemaAttr("xvml:Checked")]
     public partial class Checked : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2547,7 +2485,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Val.</para>
     /// </summary>
-    [SchemaAttr("xvml:Val")]
     public partial class ScrollBarPosition : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2586,7 +2523,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Min.</para>
     /// </summary>
-    [SchemaAttr("xvml:Min")]
     public partial class ScrollBarMin : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2625,7 +2561,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Max.</para>
     /// </summary>
-    [SchemaAttr("xvml:Max")]
     public partial class ScrollBarMax : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2664,7 +2599,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Inc.</para>
     /// </summary>
-    [SchemaAttr("xvml:Inc")]
     public partial class ScrollBarIncrement : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2703,7 +2637,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Page.</para>
     /// </summary>
-    [SchemaAttr("xvml:Page")]
     public partial class ScrollBarPageIncrement : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2742,7 +2675,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:Dx.</para>
     /// </summary>
-    [SchemaAttr("xvml:Dx")]
     public partial class ScrollBarWidth : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2781,7 +2713,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:CF.</para>
     /// </summary>
-    [SchemaAttr("xvml:CF")]
     public partial class ClipboardFormat : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2820,7 +2751,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptLanguage.</para>
     /// </summary>
-    [SchemaAttr("xvml:ScriptLanguage")]
     public partial class ScriptLanguage : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2859,7 +2789,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ScriptLocation.</para>
     /// </summary>
-    [SchemaAttr("xvml:ScriptLocation")]
     public partial class ScriptLocation : TypedOpenXmlLeafTextElement
     {
         /// <summary>

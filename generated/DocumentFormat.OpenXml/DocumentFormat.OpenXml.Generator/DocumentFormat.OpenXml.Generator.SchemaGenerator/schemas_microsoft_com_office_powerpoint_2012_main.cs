@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -26,7 +24,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:prstTrans.</para>
     /// </summary>
-    [SchemaAttr("p15:prstTrans")]
     public partial class PresetTransition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -40,7 +37,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>prst, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: prst</para>
         /// </summary>
-        [SchemaAttr("prst")]
         public StringValue? Preset
         {
             get => GetAttribute<StringValue>();
@@ -51,7 +47,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>invX, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: invX</para>
         /// </summary>
-        [SchemaAttr("invX")]
         public BooleanValue? InvX
         {
             get => GetAttribute<BooleanValue>();
@@ -62,7 +57,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>invY, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: invY</para>
         /// </summary>
-        [SchemaAttr("invY")]
         public BooleanValue? InvY
         {
             get => GetAttribute<BooleanValue>();
@@ -89,7 +83,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:presenceInfo.</para>
     /// </summary>
-    [SchemaAttr("p15:presenceInfo")]
     public partial class PresenceInfo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -103,7 +96,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>userId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: userId</para>
         /// </summary>
-        [SchemaAttr("userId")]
         public StringValue? UserId
         {
             get => GetAttribute<StringValue>();
@@ -114,7 +106,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>providerId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: providerId</para>
         /// </summary>
-        [SchemaAttr("providerId")]
         public StringValue? ProviderId
         {
             get => GetAttribute<StringValue>();
@@ -154,7 +145,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier" /> <c>&lt;p15:parentCm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p15:threadingInfo")]
     public partial class ThreadingInfo : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -192,7 +182,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>timeZoneBias, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: timeZoneBias</para>
         /// </summary>
-        [SchemaAttr("timeZoneBias")]
         public Int32Value? TimeZoneBias
         {
             get => GetAttribute<Int32Value>();
@@ -242,7 +231,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p15:sldGuideLst")]
     public partial class SlideGuideList : ExtendedGuideList
     {
         /// <summary>
@@ -304,7 +292,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p15:notesGuideLst")]
     public partial class NotesGuideList : ExtendedGuideList
     {
         /// <summary>
@@ -412,7 +399,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:chartTrackingRefBased.</para>
     /// </summary>
-    [SchemaAttr("p15:chartTrackingRefBased")]
     public partial class ChartTrackingReferenceBased : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -426,7 +412,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>val, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -454,7 +439,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:parentCm.</para>
     /// </summary>
-    [SchemaAttr("p15:parentCm")]
     public partial class ParentCommentIdentifier : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -468,7 +452,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>authorId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: authorId</para>
         /// </summary>
-        [SchemaAttr("authorId")]
         public UInt32Value? AuthorId
         {
             get => GetAttribute<UInt32Value>();
@@ -479,7 +462,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>idx, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
@@ -516,7 +498,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p15:clr")]
     public partial class ColorType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -671,7 +652,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p15:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -739,7 +719,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p15:guide")]
     public partial class ExtendedGuide : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -777,7 +756,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -788,7 +766,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -799,7 +776,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>orient, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: orient</para>
         /// </summary>
-        [SchemaAttr("orient")]
         public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>? Orientation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>>();
@@ -810,7 +786,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>pos, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
-        [SchemaAttr("pos")]
         public Int32Value? Position
         {
             get => GetAttribute<Int32Value>();
@@ -821,7 +796,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <para>userDrawn, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: userDrawn</para>
         /// </summary>
-        [SchemaAttr("userDrawn")]
         public BooleanValue? IsUserDrawn
         {
             get => GetAttribute<BooleanValue>();

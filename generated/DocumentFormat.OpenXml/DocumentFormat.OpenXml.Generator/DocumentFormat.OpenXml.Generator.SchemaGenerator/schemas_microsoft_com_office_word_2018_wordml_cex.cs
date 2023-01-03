@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -31,7 +29,6 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w16cex:commentsExtensible")]
     public partial class CommentsExtensible : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -125,7 +122,6 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w16cex:commentExtensible")]
     public partial class CommentExtensible : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -166,7 +162,6 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         /// <remark>
         /// xmlns:w16cex=http://schemas.microsoft.com/office/word/2018/wordml/cex
         /// </remark>
-        [SchemaAttr("w16cex:durableId")]
         public HexBinaryValue? DurableId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -180,7 +175,6 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         /// <remark>
         /// xmlns:w16cex=http://schemas.microsoft.com/office/word/2018/wordml/cex
         /// </remark>
-        [SchemaAttr("w16cex:dateUtc")]
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -194,7 +188,6 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         /// <remark>
         /// xmlns:w16cex=http://schemas.microsoft.com/office/word/2018/wordml/cex
         /// </remark>
-        [SchemaAttr("w16cex:intelligentPlaceholder")]
         public OnOffValue? IntelligentPlaceholder
         {
             get => GetAttribute<OnOffValue>();
@@ -256,7 +249,6 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension" /> <c>&lt;w16cur:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w16cex:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>

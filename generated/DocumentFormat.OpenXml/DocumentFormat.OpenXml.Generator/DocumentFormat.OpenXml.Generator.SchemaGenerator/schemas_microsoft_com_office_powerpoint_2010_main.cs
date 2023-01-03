@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -35,7 +33,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties" /> <c>&lt;p14:nvPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:nvContentPartPr")]
     public partial class NonVisualContentPartProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -140,7 +137,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:xfrm")]
     public partial class Transform2D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -178,7 +174,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr("rot")]
         public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -189,7 +184,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr("flipH")]
         public BooleanValue? HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -200,7 +194,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr("flipV")]
         public BooleanValue? VerticalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -266,7 +259,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:extLst")]
     public partial class ExtensionListModify : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -304,7 +296,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Modify</para>
         /// <para>Represents the following attribute in the schema: mod</para>
         /// </summary>
-        [SchemaAttr("mod")]
         public BooleanValue? Modify
         {
             get => GetAttribute<BooleanValue>();
@@ -349,7 +340,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim" /> <c>&lt;p14:trim></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:media")]
     public partial class Media : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -390,7 +380,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:embed")]
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -404,7 +393,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:link")]
         public StringValue? Link
         {
             get => GetAttribute<StringValue>();
@@ -495,7 +483,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:vortex.</para>
     /// </summary>
-    [SchemaAttr("p14:vortex")]
     public partial class VortexTransition : SideDirectionTransitionType
     {
         /// <summary>
@@ -521,7 +508,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:pan.</para>
     /// </summary>
-    [SchemaAttr("p14:pan")]
     public partial class PanTransition : SideDirectionTransitionType
     {
         /// <summary>
@@ -560,7 +546,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [SchemaAttr("dir")]
         public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>();
@@ -583,7 +568,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:switch.</para>
     /// </summary>
-    [SchemaAttr("p14:switch")]
     public partial class SwitchTransition : LeftRightDirectionTransitionType
     {
         /// <summary>
@@ -609,7 +593,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:flip.</para>
     /// </summary>
-    [SchemaAttr("p14:flip")]
     public partial class FlipTransition : LeftRightDirectionTransitionType
     {
         /// <summary>
@@ -635,7 +618,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:ferris.</para>
     /// </summary>
-    [SchemaAttr("p14:ferris")]
     public partial class FerrisTransition : LeftRightDirectionTransitionType
     {
         /// <summary>
@@ -661,7 +643,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:gallery.</para>
     /// </summary>
-    [SchemaAttr("p14:gallery")]
     public partial class GalleryTransition : LeftRightDirectionTransitionType
     {
         /// <summary>
@@ -687,7 +668,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:conveyor.</para>
     /// </summary>
-    [SchemaAttr("p14:conveyor")]
     public partial class ConveyorTransition : LeftRightDirectionTransitionType
     {
         /// <summary>
@@ -726,7 +706,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [SchemaAttr("dir")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>>();
@@ -749,7 +728,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:ripple.</para>
     /// </summary>
-    [SchemaAttr("p14:ripple")]
     public partial class RippleTransition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -763,7 +741,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [SchemaAttr("dir")]
         public StringValue? Direction
         {
             get => GetAttribute<StringValue>();
@@ -795,7 +772,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:honeycomb.</para>
     /// </summary>
-    [SchemaAttr("p14:honeycomb")]
     public partial class HoneycombTransition : EmptyType
     {
         /// <summary>
@@ -821,7 +797,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:flash.</para>
     /// </summary>
-    [SchemaAttr("p14:flash")]
     public partial class FlashTransition : EmptyType
     {
         /// <summary>
@@ -867,7 +842,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:prism.</para>
     /// </summary>
-    [SchemaAttr("p14:prism")]
     public partial class PrismTransition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -881,7 +855,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [SchemaAttr("dir")]
         public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>();
@@ -892,7 +865,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>isContent, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isContent</para>
         /// </summary>
-        [SchemaAttr("isContent")]
         public BooleanValue? IsContent
         {
             get => GetAttribute<BooleanValue>();
@@ -903,7 +875,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>isInverted, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isInverted</para>
         /// </summary>
-        [SchemaAttr("isInverted")]
         public BooleanValue? IsInverted
         {
             get => GetAttribute<BooleanValue>();
@@ -933,7 +904,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:doors.</para>
     /// </summary>
-    [SchemaAttr("p14:doors")]
     public partial class DoorsTransition : OrientationTransitionType
     {
         /// <summary>
@@ -959,7 +929,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:window.</para>
     /// </summary>
-    [SchemaAttr("p14:window")]
     public partial class WindowTransition : OrientationTransitionType
     {
         /// <summary>
@@ -998,7 +967,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Transition Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [SchemaAttr("dir")]
         public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>>();
@@ -1021,7 +989,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:glitter.</para>
     /// </summary>
-    [SchemaAttr("p14:glitter")]
     public partial class GlitterTransition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1035,7 +1002,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [SchemaAttr("dir")]
         public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>();
@@ -1046,7 +1012,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>pattern, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pattern</para>
         /// </summary>
-        [SchemaAttr("pattern")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues>? Pattern
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues>>();
@@ -1078,7 +1043,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:warp.</para>
     /// </summary>
-    [SchemaAttr("p14:warp")]
     public partial class WarpTransition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1092,7 +1056,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [SchemaAttr("dir")]
         public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>();
@@ -1120,7 +1083,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:flythrough.</para>
     /// </summary>
-    [SchemaAttr("p14:flythrough")]
     public partial class FlythroughTransition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1134,7 +1096,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [SchemaAttr("dir")]
         public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>();
@@ -1145,7 +1106,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>hasBounce, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: hasBounce</para>
         /// </summary>
-        [SchemaAttr("hasBounce")]
         public BooleanValue? HasBounce
         {
             get => GetAttribute<BooleanValue>();
@@ -1174,7 +1134,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:shred.</para>
     /// </summary>
-    [SchemaAttr("p14:shred")]
     public partial class ShredTransition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1188,7 +1147,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>pattern, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pattern</para>
         /// </summary>
-        [SchemaAttr("pattern")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues>? Pattern
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues>>();
@@ -1199,7 +1157,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [SchemaAttr("dir")]
         public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>();
@@ -1231,7 +1188,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:reveal.</para>
     /// </summary>
-    [SchemaAttr("p14:reveal")]
     public partial class RevealTransition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1245,7 +1201,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>thruBlk, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: thruBlk</para>
         /// </summary>
-        [SchemaAttr("thruBlk")]
         public BooleanValue? ThroughBlack
         {
             get => GetAttribute<BooleanValue>();
@@ -1256,7 +1211,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        [SchemaAttr("dir")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>>();
@@ -1285,7 +1239,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:wheelReverse.</para>
     /// </summary>
-    [SchemaAttr("p14:wheelReverse")]
     public partial class WheelReverseTransition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1299,7 +1252,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Spokes</para>
         /// <para>Represents the following attribute in the schema: spokes</para>
         /// </summary>
-        [SchemaAttr("spokes")]
         public UInt32Value? Spokes
         {
             get => GetAttribute<UInt32Value>();
@@ -1324,7 +1276,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:bmkTgt.</para>
     /// </summary>
-    [SchemaAttr("p14:bmkTgt")]
     public partial class BookmarkTarget : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1338,7 +1289,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>spid, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [SchemaAttr("spid")]
         public UInt32Value? ShapeId
         {
             get => GetAttribute<UInt32Value>();
@@ -1349,7 +1299,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>bmkName, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: bmkName</para>
         /// </summary>
-        [SchemaAttr("bmkName")]
         public StringValue? BookmarkName
         {
             get => GetAttribute<StringValue>();
@@ -1387,7 +1336,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld" /> <c>&lt;p14:section></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:sectionPr")]
     public partial class SectionProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1448,7 +1396,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.Section" /> <c>&lt;p14:section></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:sectionLst")]
     public partial class SectionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1503,7 +1450,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:browseMode.</para>
     /// </summary>
-    [SchemaAttr("p14:browseMode")]
     public partial class BrowseMode : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1517,7 +1463,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>showStatus, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showStatus</para>
         /// </summary>
-        [SchemaAttr("showStatus")]
         public BooleanValue? ShowStatus
         {
             get => GetAttribute<BooleanValue>();
@@ -1553,7 +1498,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:laserClr")]
     public partial class LaserColor : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1702,7 +1646,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:defaultImageDpi.</para>
     /// </summary>
-    [SchemaAttr("p14:defaultImageDpi")]
     public partial class DefaultImageDpi : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1716,7 +1659,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -1744,7 +1686,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:discardImageEditData.</para>
     /// </summary>
-    [SchemaAttr("p14:discardImageEditData")]
     public partial class DiscardImageEditData : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1758,7 +1699,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -1786,7 +1726,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:showMediaCtrls.</para>
     /// </summary>
-    [SchemaAttr("p14:showMediaCtrls")]
     public partial class ShowMediaControls : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1800,7 +1739,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -1834,7 +1772,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList" /> <c>&lt;p14:tracePtLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:laserTraceLst")]
     public partial class LaserTraceList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1889,7 +1826,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:creationId.</para>
     /// </summary>
-    [SchemaAttr("p14:creationId")]
     public partial class CreationId : RandomIdType
     {
         /// <summary>
@@ -1915,7 +1851,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:modId.</para>
     /// </summary>
-    [SchemaAttr("p14:modId")]
     public partial class ModificationId : RandomIdType
     {
         /// <summary>
@@ -1954,7 +1889,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -1989,7 +1923,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord" /> <c>&lt;p14:triggerEvt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:showEvtLst")]
     public partial class ShowEventRecordList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2158,7 +2091,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:cNvPr")]
     public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2196,7 +2128,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Application defined unique identifier.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -2207,7 +2138,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Name compatible with Object Model (non-unique).</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -2218,7 +2148,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Description of the drawing element.</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr("descr")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -2229,7 +2158,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Flag determining to show or hide this element.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -2240,7 +2168,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -2330,7 +2257,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:cNvContentPartPr")]
     public partial class NonVisualInkContentPartProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2368,7 +2294,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>isComment, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
-        [SchemaAttr("isComment")]
         public BooleanValue? IsComment
         {
             get => GetAttribute<BooleanValue>();
@@ -2439,7 +2364,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PlaceholderShape" /> <c>&lt;p:ph></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:nvPr")]
     public partial class ApplicationNonVisualDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2477,7 +2401,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Is a Photo Album</para>
         /// <para>Represents the following attribute in the schema: isPhoto</para>
         /// </summary>
-        [SchemaAttr("isPhoto")]
         public BooleanValue? IsPhoto
         {
             get => GetAttribute<BooleanValue>();
@@ -2488,7 +2411,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Is User Drawn</para>
         /// <para>Represents the following attribute in the schema: userDrawn</para>
         /// </summary>
-        [SchemaAttr("userDrawn")]
         public BooleanValue? UserDrawn
         {
             get => GetAttribute<BooleanValue>();
@@ -2552,7 +2474,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:bmk.</para>
     /// </summary>
-    [SchemaAttr("p14:bmk")]
     public partial class MediaBookmark : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2566,7 +2487,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -2577,7 +2497,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>time, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        [SchemaAttr("time")]
         public StringValue? Time
         {
             get => GetAttribute<StringValue>();
@@ -2605,7 +2524,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:trim.</para>
     /// </summary>
-    [SchemaAttr("p14:trim")]
     public partial class MediaTrim : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2619,7 +2537,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>st, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [SchemaAttr("st")]
         public StringValue? Start
         {
             get => GetAttribute<StringValue>();
@@ -2630,7 +2547,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>end, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-        [SchemaAttr("end")]
         public StringValue? End
         {
             get => GetAttribute<StringValue>();
@@ -2656,7 +2572,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:fade.</para>
     /// </summary>
-    [SchemaAttr("p14:fade")]
     public partial class MediaFade : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2670,7 +2585,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>in, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: in</para>
         /// </summary>
-        [SchemaAttr("in")]
         public StringValue? InDuration
         {
             get => GetAttribute<StringValue>();
@@ -2681,7 +2595,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>out, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: out</para>
         /// </summary>
-        [SchemaAttr("out")]
         public StringValue? OutDuration
         {
             get => GetAttribute<StringValue>();
@@ -2713,7 +2626,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark" /> <c>&lt;p14:bmk></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:bmkLst")]
     public partial class MediaBookmarkList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2774,7 +2686,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2841,7 +2752,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList" /> <c>&lt;p14:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:section")]
     public partial class SectionOld : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2879,7 +2789,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -2890,7 +2799,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>slideIdLst, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: slideIdLst</para>
         /// </summary>
-        [SchemaAttr("slideIdLst")]
         public ListValue<UInt32Value>? SlideIdList
         {
             get => GetAttribute<ListValue<UInt32Value>>();
@@ -2901,7 +2809,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2952,7 +2859,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:sldId.</para>
     /// </summary>
-    [SchemaAttr("p14:sldId")]
     public partial class SectionSlideIdListEntry : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2966,7 +2872,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -3001,7 +2906,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry" /> <c>&lt;p14:sldId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:sldIdLst")]
     public partial class SectionSlideIdList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3063,7 +2967,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList" /> <c>&lt;p14:sldIdLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:section")]
     public partial class Section : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3101,7 +3004,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -3112,7 +3014,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -3174,7 +3075,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:tracePt.</para>
     /// </summary>
-    [SchemaAttr("p14:tracePt")]
     public partial class TracePoint : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3188,7 +3088,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>t, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public StringValue? Time
         {
             get => GetAttribute<StringValue>();
@@ -3199,7 +3098,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>x, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [SchemaAttr("x")]
         public Int64Value? XCoordinate
         {
             get => GetAttribute<Int64Value>();
@@ -3210,7 +3108,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>y, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        [SchemaAttr("y")]
         public Int64Value? YCoordinate
         {
             get => GetAttribute<Int64Value>();
@@ -3254,7 +3151,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint" /> <c>&lt;p14:tracePt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("p14:tracePtLst")]
     public partial class TracePointList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3309,7 +3205,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:triggerEvt.</para>
     /// </summary>
-    [SchemaAttr("p14:triggerEvt")]
     public partial class TriggerEventRecord : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3323,7 +3218,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>type, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues>>();
@@ -3334,7 +3228,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>time, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        [SchemaAttr("time")]
         public StringValue? Time
         {
             get => GetAttribute<StringValue>();
@@ -3345,7 +3238,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>objId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: objId</para>
         /// </summary>
-        [SchemaAttr("objId")]
         public UInt32Value? ObjectId
         {
             get => GetAttribute<UInt32Value>();
@@ -3382,7 +3274,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:playEvt.</para>
     /// </summary>
-    [SchemaAttr("p14:playEvt")]
     public partial class PlayEventRecord : MediaPlaybackEventRecordType
     {
         /// <summary>
@@ -3408,7 +3299,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:stopEvt.</para>
     /// </summary>
-    [SchemaAttr("p14:stopEvt")]
     public partial class StopEventRecord : MediaPlaybackEventRecordType
     {
         /// <summary>
@@ -3434,7 +3324,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:pauseEvt.</para>
     /// </summary>
-    [SchemaAttr("p14:pauseEvt")]
     public partial class PauseEventRecord : MediaPlaybackEventRecordType
     {
         /// <summary>
@@ -3460,7 +3349,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:resumeEvt.</para>
     /// </summary>
-    [SchemaAttr("p14:resumeEvt")]
     public partial class ResumeEventRecord : MediaPlaybackEventRecordType
     {
         /// <summary>
@@ -3499,7 +3387,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>time, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        [SchemaAttr("time")]
         public StringValue? Time
         {
             get => GetAttribute<StringValue>();
@@ -3510,7 +3397,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>objId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: objId</para>
         /// </summary>
-        [SchemaAttr("objId")]
         public UInt32Value? ObjectId
         {
             get => GetAttribute<UInt32Value>();
@@ -3537,7 +3423,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:seekEvt.</para>
     /// </summary>
-    [SchemaAttr("p14:seekEvt")]
     public partial class SeekEventRecord : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3551,7 +3436,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>time, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        [SchemaAttr("time")]
         public StringValue? Time
         {
             get => GetAttribute<StringValue>();
@@ -3562,7 +3446,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>objId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: objId</para>
         /// </summary>
-        [SchemaAttr("objId")]
         public UInt32Value? ObjectId
         {
             get => GetAttribute<UInt32Value>();
@@ -3573,7 +3456,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>seek, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: seek</para>
         /// </summary>
-        [SchemaAttr("seek")]
         public StringValue? Seek
         {
             get => GetAttribute<StringValue>();
@@ -3609,7 +3491,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:nullEvt.</para>
     /// </summary>
-    [SchemaAttr("p14:nullEvt")]
     public partial class NullEventRecord : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3623,7 +3504,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>time, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        [SchemaAttr("time")]
         public StringValue? Time
         {
             get => GetAttribute<StringValue>();
@@ -3634,7 +3514,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>objId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: objId</para>
         /// </summary>
-        [SchemaAttr("objId")]
         public UInt32Value? ObjectId
         {
             get => GetAttribute<UInt32Value>();

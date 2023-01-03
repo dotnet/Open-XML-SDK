@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -31,7 +29,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.Task" /> <c>&lt;t:Task></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("t:Tasks")]
     public partial class Tasks : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -127,7 +124,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory" /> <c>&lt;t:History></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("t:Task")]
     public partial class Task : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -165,7 +161,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -248,7 +243,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension" /> <c>&lt;oel:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("t:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -310,7 +304,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor" /> <c>&lt;t:Comment></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("t:Anchor")]
     public partial class TaskAnchor : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -399,7 +392,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistoryEvent" /> <c>&lt;t:Event></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("t:History")]
     public partial class TaskHistory : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -473,7 +465,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.UnassignTaskUser" /> <c>&lt;t:Unassign></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("t:Event")]
     public partial class TaskHistoryEvent : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -511,7 +502,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>time, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        [SchemaAttr("time")]
         public DateTimeValue? Time
         {
             get => GetAttribute<DateTimeValue>();
@@ -522,7 +512,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -615,7 +604,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Attribution.</para>
     /// </summary>
-    [SchemaAttr("t:Attribution")]
     public partial class AttributionTaskUser : OpenXmlTaskUserElement
     {
         /// <summary>
@@ -641,7 +629,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Assign.</para>
     /// </summary>
-    [SchemaAttr("t:Assign")]
     public partial class AssignTaskUser : OpenXmlTaskUserElement
     {
         /// <summary>
@@ -667,7 +654,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Unassign.</para>
     /// </summary>
-    [SchemaAttr("t:Unassign")]
     public partial class UnassignTaskUser : OpenXmlTaskUserElement
     {
         /// <summary>
@@ -706,7 +692,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>userId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: userId</para>
         /// </summary>
-        [SchemaAttr("userId")]
         public StringValue? UserId
         {
             get => GetAttribute<StringValue>();
@@ -717,7 +702,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>userName, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: userName</para>
         /// </summary>
-        [SchemaAttr("userName")]
         public StringValue? UserName
         {
             get => GetAttribute<StringValue>();
@@ -728,7 +712,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>userProvider, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: userProvider</para>
         /// </summary>
-        [SchemaAttr("userProvider")]
         public StringValue? UserProvider
         {
             get => GetAttribute<StringValue>();
@@ -759,7 +742,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Create.</para>
     /// </summary>
-    [SchemaAttr("t:Create")]
     public partial class TaskCreateEventInfo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -785,7 +767,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:SetTitle.</para>
     /// </summary>
-    [SchemaAttr("t:SetTitle")]
     public partial class TaskTitleEventInfo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -799,7 +780,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>title, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -827,7 +807,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Schedule.</para>
     /// </summary>
-    [SchemaAttr("t:Schedule")]
     public partial class TaskScheduleEventInfo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -841,7 +820,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>startDate, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: startDate</para>
         /// </summary>
-        [SchemaAttr("startDate")]
         public DateTimeValue? StartDate
         {
             get => GetAttribute<DateTimeValue>();
@@ -852,7 +830,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>dueDate, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: dueDate</para>
         /// </summary>
-        [SchemaAttr("dueDate")]
         public DateTimeValue? DueDate
         {
             get => GetAttribute<DateTimeValue>();
@@ -878,7 +855,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Progress.</para>
     /// </summary>
-    [SchemaAttr("t:Progress")]
     public partial class TaskProgressEventInfo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -892,7 +868,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>percentComplete, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: percentComplete</para>
         /// </summary>
-        [SchemaAttr("percentComplete")]
         public Int32Value? PercentComplete
         {
             get => GetAttribute<Int32Value>();
@@ -921,7 +896,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Priority.</para>
     /// </summary>
-    [SchemaAttr("t:Priority")]
     public partial class TaskPriorityEventInfo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -935,7 +909,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>value, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        [SchemaAttr("value")]
         public Int32Value? Value
         {
             get => GetAttribute<Int32Value>();
@@ -964,7 +937,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Delete.</para>
     /// </summary>
-    [SchemaAttr("t:Delete")]
     public partial class TaskDeleteEventInfo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -990,7 +962,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Undelete.</para>
     /// </summary>
-    [SchemaAttr("t:Undelete")]
     public partial class TaskUndeleteEventInfo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1016,7 +987,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:UnassignAll.</para>
     /// </summary>
-    [SchemaAttr("t:UnassignAll")]
     public partial class TaskUnassignAll : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1042,7 +1012,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Undo.</para>
     /// </summary>
-    [SchemaAttr("t:Undo")]
     public partial class TaskUndo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1056,7 +1025,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1085,7 +1053,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Comment.</para>
     /// </summary>
-    [SchemaAttr("t:Comment")]
     public partial class CommentAnchor : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1099,7 +1066,6 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();

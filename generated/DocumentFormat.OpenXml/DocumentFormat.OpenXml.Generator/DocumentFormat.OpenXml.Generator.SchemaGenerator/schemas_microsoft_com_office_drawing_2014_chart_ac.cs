@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Framework;
@@ -32,7 +30,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16ac:multiLvlStrLit")]
     public partial class MultiLvlStrData : TypedOpenXmlCompositeElement
     {
         /// <summary>

@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -36,7 +34,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformStyleLabel" /> <c>&lt;dgm:styleLbl></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:colorsDef")]
     public partial class ColorsDefinition : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -74,7 +71,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Unique ID</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        [SchemaAttr("uniqueId")]
         public StringValue? UniqueId
         {
             get => GetAttribute<StringValue>();
@@ -85,7 +81,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Minimum Version</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-        [SchemaAttr("minVer")]
         public StringValue? MinVersion
         {
             get => GetAttribute<StringValue>();
@@ -164,7 +159,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:colorsDefHdr")]
     public partial class ColorsDefinitionHeader : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -202,7 +196,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Unique ID</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        [SchemaAttr("uniqueId")]
         public StringValue? UniqueId
         {
             get => GetAttribute<StringValue>();
@@ -213,7 +206,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Minimum Version</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-        [SchemaAttr("minVer")]
         public StringValue? MinVersion
         {
             get => GetAttribute<StringValue>();
@@ -224,7 +216,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Resource ID</para>
         /// <para>Represents the following attribute in the schema: resId</para>
         /// </summary>
-        [SchemaAttr("resId")]
         public Int32Value? ResourceId
         {
             get => GetAttribute<Int32Value>();
@@ -270,7 +261,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeader" /> <c>&lt;dgm:colorsDefHdr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:colorsDefHdrLst")]
     public partial class ColorsDefinitionHeaderList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -334,7 +324,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PointList" /> <c>&lt;dgm:ptLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:dataModel")]
     public partial class DataModelRoot : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -505,7 +494,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorData" /> <c>&lt;dgm:clrData></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:layoutDef")]
     public partial class LayoutDefinition : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -543,7 +531,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>uniqueId</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        [SchemaAttr("uniqueId")]
         public StringValue? UniqueId
         {
             get => GetAttribute<StringValue>();
@@ -554,7 +541,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>minVer</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-        [SchemaAttr("minVer")]
         public StringValue? MinVersion
         {
             get => GetAttribute<StringValue>();
@@ -565,7 +551,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>defStyle</para>
         /// <para>Represents the following attribute in the schema: defStyle</para>
         /// </summary>
-        [SchemaAttr("defStyle")]
         public StringValue? DefaultStyle
         {
             get => GetAttribute<StringValue>();
@@ -650,7 +635,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Title" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:layoutDefHdr")]
     public partial class LayoutDefinitionHeader : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -688,7 +672,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        [SchemaAttr("uniqueId")]
         public StringValue? UniqueId
         {
             get => GetAttribute<StringValue>();
@@ -699,7 +682,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Minimum Version</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-        [SchemaAttr("minVer")]
         public StringValue? MinVersion
         {
             get => GetAttribute<StringValue>();
@@ -710,7 +692,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Default Style</para>
         /// <para>Represents the following attribute in the schema: defStyle</para>
         /// </summary>
-        [SchemaAttr("defStyle")]
         public StringValue? DefaultStyle
         {
             get => GetAttribute<StringValue>();
@@ -721,7 +702,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Resource Identifier</para>
         /// <para>Represents the following attribute in the schema: resId</para>
         /// </summary>
-        [SchemaAttr("resId")]
         public Int32Value? ResourceId
         {
             get => GetAttribute<Int32Value>();
@@ -768,7 +748,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeader" /> <c>&lt;dgm:layoutDefHdr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:layoutDefHdrLst")]
     public partial class LayoutDefinitionHeaderList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -822,7 +801,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:relIds.</para>
     /// </summary>
-    [SchemaAttr("dgm:relIds")]
     public partial class RelationshipIds : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -839,7 +817,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:dm")]
         public StringValue? DataPart
         {
             get => GetAttribute<StringValue>();
@@ -853,7 +830,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:lo")]
         public StringValue? LayoutPart
         {
             get => GetAttribute<StringValue>();
@@ -867,7 +843,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:qs")]
         public StringValue? StylePart
         {
             get => GetAttribute<StringValue>();
@@ -881,7 +856,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:cs")]
         public StringValue? ColorPart
         {
             get => GetAttribute<StringValue>();
@@ -936,7 +910,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabel" /> <c>&lt;dgm:styleLbl></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:styleDef")]
     public partial class StyleDefinition : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -974,7 +947,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Unique Style ID</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        [SchemaAttr("uniqueId")]
         public StringValue? UniqueId
         {
             get => GetAttribute<StringValue>();
@@ -985,7 +957,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Minimum Version</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-        [SchemaAttr("minVer")]
         public StringValue? MinVersion
         {
             get => GetAttribute<StringValue>();
@@ -1065,7 +1036,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:styleDefHdr")]
     public partial class StyleDefinitionHeader : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1103,7 +1073,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Unique Style ID</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        [SchemaAttr("uniqueId")]
         public StringValue? UniqueId
         {
             get => GetAttribute<StringValue>();
@@ -1114,7 +1083,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Minimum Version</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-        [SchemaAttr("minVer")]
         public StringValue? MinVersion
         {
             get => GetAttribute<StringValue>();
@@ -1125,7 +1093,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Resource ID</para>
         /// <para>Represents the following attribute in the schema: resId</para>
         /// </summary>
-        [SchemaAttr("resId")]
         public Int32Value? ResourceId
         {
             get => GetAttribute<Int32Value>();
@@ -1171,7 +1138,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader" /> <c>&lt;dgm:styleDefHdr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:styleDefHdrLst")]
     public partial class StyleDefinitionHeaderList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1225,7 +1191,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
     /// </summary>
-    [SchemaAttr("dgm:cat")]
     public partial class ColorTransformCategory : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1239,7 +1204,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Category Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public StringValue? Type
         {
             get => GetAttribute<StringValue>();
@@ -1250,7 +1214,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Priority</para>
         /// <para>Represents the following attribute in the schema: pri</para>
         /// </summary>
-        [SchemaAttr("pri")]
         public UInt32Value? Priority
         {
             get => GetAttribute<UInt32Value>();
@@ -1293,7 +1256,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:fillClrLst")]
     public partial class FillColorList : ColorsType
     {
         /// <summary>
@@ -1368,7 +1330,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:linClrLst")]
     public partial class LineColorList : ColorsType
     {
         /// <summary>
@@ -1443,7 +1404,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:effectClrLst")]
     public partial class EffectColorList : ColorsType
     {
         /// <summary>
@@ -1518,7 +1478,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:txLinClrLst")]
     public partial class TextLineColorList : ColorsType
     {
         /// <summary>
@@ -1593,7 +1552,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:txFillClrLst")]
     public partial class TextFillColorList : ColorsType
     {
         /// <summary>
@@ -1668,7 +1626,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:txEffectClrLst")]
     public partial class TextEffectColorList : ColorsType
     {
         /// <summary>
@@ -1780,7 +1737,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Color Application Method Type</para>
         /// <para>Represents the following attribute in the schema: meth</para>
         /// </summary>
-        [SchemaAttr("meth")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ColorApplicationMethodValues>? Method
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ColorApplicationMethodValues>>();
@@ -1791,7 +1747,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Hue Direction</para>
         /// <para>Represents the following attribute in the schema: hueDir</para>
         /// </summary>
-        [SchemaAttr("hueDir")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HueDirectionValues>? HueDirection
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HueDirectionValues>>();
@@ -1830,7 +1785,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1890,7 +1844,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    [SchemaAttr("dgm:title")]
     public partial class ColorDefinitionTitle : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1904,7 +1857,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Language</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr("lang")]
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -1915,7 +1867,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Description Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -1943,7 +1894,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
     /// </summary>
-    [SchemaAttr("dgm:desc")]
     public partial class ColorTransformDescription : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1957,7 +1907,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Language</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr("lang")]
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -1968,7 +1917,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Description Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -2002,7 +1950,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategory" /> <c>&lt;dgm:cat></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:catLst")]
     public partial class ColorTransformCategories : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2068,7 +2015,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextEffectColorList" /> <c>&lt;dgm:txEffectClrLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:styleLbl")]
     public partial class ColorTransformStyleLabel : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2106,7 +2052,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -2250,7 +2195,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PropertySet" /> <c>&lt;dgm:prSet></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:pt")]
     public partial class Point : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2288,7 +2232,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Model Identifier</para>
         /// <para>Represents the following attribute in the schema: modelId</para>
         /// </summary>
-        [SchemaAttr("modelId")]
         public StringValue? ModelId
         {
             get => GetAttribute<StringValue>();
@@ -2299,7 +2242,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Point Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PointValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PointValues>>();
@@ -2310,7 +2252,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Connection Identifier</para>
         /// <para>Represents the following attribute in the schema: cxnId</para>
         /// </summary>
-        [SchemaAttr("cxnId")]
         public StringValue? ConnectionId
         {
             get => GetAttribute<StringValue>();
@@ -2423,7 +2364,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:cxn")]
     public partial class Connection : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2461,7 +2401,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Model Identifier</para>
         /// <para>Represents the following attribute in the schema: modelId</para>
         /// </summary>
-        [SchemaAttr("modelId")]
         public StringValue? ModelId
         {
             get => GetAttribute<StringValue>();
@@ -2472,7 +2411,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Point Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionValues>>();
@@ -2483,7 +2421,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Source Identifier</para>
         /// <para>Represents the following attribute in the schema: srcId</para>
         /// </summary>
-        [SchemaAttr("srcId")]
         public StringValue? SourceId
         {
             get => GetAttribute<StringValue>();
@@ -2494,7 +2431,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Destination Identifier</para>
         /// <para>Represents the following attribute in the schema: destId</para>
         /// </summary>
-        [SchemaAttr("destId")]
         public StringValue? DestinationId
         {
             get => GetAttribute<StringValue>();
@@ -2505,7 +2441,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Source Position</para>
         /// <para>Represents the following attribute in the schema: srcOrd</para>
         /// </summary>
-        [SchemaAttr("srcOrd")]
         public UInt32Value? SourcePosition
         {
             get => GetAttribute<UInt32Value>();
@@ -2516,7 +2451,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Destination Position</para>
         /// <para>Represents the following attribute in the schema: destOrd</para>
         /// </summary>
-        [SchemaAttr("destOrd")]
         public UInt32Value? DestinationPosition
         {
             get => GetAttribute<UInt32Value>();
@@ -2527,7 +2461,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Parent Transition Identifier</para>
         /// <para>Represents the following attribute in the schema: parTransId</para>
         /// </summary>
-        [SchemaAttr("parTransId")]
         public StringValue? ParentTransitionId
         {
             get => GetAttribute<StringValue>();
@@ -2538,7 +2471,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Sibling Transition Identifier</para>
         /// <para>Represents the following attribute in the schema: sibTransId</para>
         /// </summary>
-        [SchemaAttr("sibTransId")]
         public StringValue? SiblingTransitionId
         {
             get => GetAttribute<StringValue>();
@@ -2549,7 +2481,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Presentation Identifier</para>
         /// <para>Represents the following attribute in the schema: presId</para>
         /// </summary>
-        [SchemaAttr("presId")]
         public StringValue? PresentationId
         {
             get => GetAttribute<StringValue>();
@@ -2654,7 +2585,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:constr")]
     public partial class Constraint : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2692,7 +2622,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Constraint Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues>>();
@@ -2703,7 +2632,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>For</para>
         /// <para>Represents the following attribute in the schema: for</para>
         /// </summary>
-        [SchemaAttr("for")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues>? For
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues>>();
@@ -2714,7 +2642,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>For Name</para>
         /// <para>Represents the following attribute in the schema: forName</para>
         /// </summary>
-        [SchemaAttr("forName")]
         public StringValue? ForName
         {
             get => GetAttribute<StringValue>();
@@ -2725,7 +2652,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Data Point Type</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
-        [SchemaAttr("ptType")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>? PointType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>();
@@ -2736,7 +2662,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Reference Type</para>
         /// <para>Represents the following attribute in the schema: refType</para>
         /// </summary>
-        [SchemaAttr("refType")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues>? ReferenceType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues>>();
@@ -2747,7 +2672,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Reference For</para>
         /// <para>Represents the following attribute in the schema: refFor</para>
         /// </summary>
-        [SchemaAttr("refFor")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues>? ReferenceFor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues>>();
@@ -2758,7 +2682,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Reference For Name</para>
         /// <para>Represents the following attribute in the schema: refForName</para>
         /// </summary>
-        [SchemaAttr("refForName")]
         public StringValue? ReferenceForName
         {
             get => GetAttribute<StringValue>();
@@ -2769,7 +2692,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Reference Point Type</para>
         /// <para>Represents the following attribute in the schema: refPtType</para>
         /// </summary>
-        [SchemaAttr("refPtType")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>? ReferencePointType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>();
@@ -2780,7 +2702,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Operator</para>
         /// <para>Represents the following attribute in the schema: op</para>
         /// </summary>
-        [SchemaAttr("op")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BoolOperatorValues>? Operator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BoolOperatorValues>>();
@@ -2791,7 +2712,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
@@ -2802,7 +2722,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Factor</para>
         /// <para>Represents the following attribute in the schema: fact</para>
         /// </summary>
-        [SchemaAttr("fact")]
         public DoubleValue? Fact
         {
             get => GetAttribute<DoubleValue>();
@@ -2882,7 +2801,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:rule")]
     public partial class Rule : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2920,7 +2838,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Constraint Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues>>();
@@ -2931,7 +2848,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>For</para>
         /// <para>Represents the following attribute in the schema: for</para>
         /// </summary>
-        [SchemaAttr("for")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues>? For
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues>>();
@@ -2942,7 +2858,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>For Name</para>
         /// <para>Represents the following attribute in the schema: forName</para>
         /// </summary>
-        [SchemaAttr("forName")]
         public StringValue? ForName
         {
             get => GetAttribute<StringValue>();
@@ -2953,7 +2868,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Data Point Type</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
-        [SchemaAttr("ptType")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>? PointType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>();
@@ -2964,7 +2878,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
@@ -2975,7 +2888,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Factor</para>
         /// <para>Represents the following attribute in the schema: fact</para>
         /// </summary>
-        [SchemaAttr("fact")]
         public DoubleValue? Fact
         {
             get => GetAttribute<DoubleValue>();
@@ -2986,7 +2898,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Max Value</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
-        [SchemaAttr("max")]
         public DoubleValue? Max
         {
             get => GetAttribute<DoubleValue>();
@@ -3044,7 +2955,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:adj.</para>
     /// </summary>
-    [SchemaAttr("dgm:adj")]
     public partial class Adjust : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3058,7 +2968,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Adjust Handle Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [SchemaAttr("idx")]
         public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
@@ -3069,7 +2978,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
@@ -3107,7 +3015,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Adjust" /> <c>&lt;dgm:adj></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:adjLst")]
     public partial class AdjustList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3161,7 +3068,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:param.</para>
     /// </summary>
-    [SchemaAttr("dgm:param")]
     public partial class Parameter : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3175,7 +3081,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Parameter Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ParameterIdValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ParameterIdValues>>();
@@ -3186,7 +3091,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -3263,7 +3167,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Parameter" /> <c>&lt;dgm:param></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:alg")]
     public partial class Algorithm : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3301,7 +3204,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Algorithm Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AlgorithmValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AlgorithmValues>>();
@@ -3312,7 +3214,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Revision Number</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt32Value? Revision
         {
             get => GetAttribute<UInt32Value>();
@@ -3355,7 +3256,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AdjustList" /> <c>&lt;dgm:adjLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:shape")]
     public partial class Shape : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3393,7 +3293,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr("rot")]
         public DoubleValue? Rotation
         {
             get => GetAttribute<DoubleValue>();
@@ -3404,7 +3303,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Shape Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public StringValue? Type
         {
             get => GetAttribute<StringValue>();
@@ -3418,7 +3316,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:blip")]
         public StringValue? Blip
         {
             get => GetAttribute<StringValue>();
@@ -3429,7 +3326,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Z-Order Offset</para>
         /// <para>Represents the following attribute in the schema: zOrderOff</para>
         /// </summary>
-        [SchemaAttr("zOrderOff")]
         public Int32Value? ZOrderOffset
         {
             get => GetAttribute<Int32Value>();
@@ -3440,7 +3336,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Hide Geometry</para>
         /// <para>Represents the following attribute in the schema: hideGeom</para>
         /// </summary>
-        [SchemaAttr("hideGeom")]
         public BooleanValue? HideGeometry
         {
             get => GetAttribute<BooleanValue>();
@@ -3451,7 +3346,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Prevent Text Editing</para>
         /// <para>Represents the following attribute in the schema: lkTxEntry</para>
         /// </summary>
-        [SchemaAttr("lkTxEntry")]
         public BooleanValue? LockedText
         {
             get => GetAttribute<BooleanValue>();
@@ -3462,7 +3356,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Image Placeholder</para>
         /// <para>Represents the following attribute in the schema: blipPhldr</para>
         /// </summary>
-        [SchemaAttr("blipPhldr")]
         public BooleanValue? BlipPlaceholder
         {
             get => GetAttribute<BooleanValue>();
@@ -3540,7 +3433,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:presOf")]
     public partial class PresentationOf : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3578,7 +3470,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Axis</para>
         /// <para>Represents the following attribute in the schema: axis</para>
         /// </summary>
-        [SchemaAttr("axis")]
         public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>>? Axis
         {
             get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>>>();
@@ -3589,7 +3480,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Data Point Type</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
-        [SchemaAttr("ptType")]
         public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>? PointType
         {
             get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>>();
@@ -3600,7 +3490,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Hide Last Transition</para>
         /// <para>Represents the following attribute in the schema: hideLastTrans</para>
         /// </summary>
-        [SchemaAttr("hideLastTrans")]
         public ListValue<BooleanValue>? HideLastTrans
         {
             get => GetAttribute<ListValue<BooleanValue>>();
@@ -3611,7 +3500,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Start</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [SchemaAttr("st")]
         public ListValue<Int32Value>? Start
         {
             get => GetAttribute<ListValue<Int32Value>>();
@@ -3622,7 +3510,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: cnt</para>
         /// </summary>
-        [SchemaAttr("cnt")]
         public ListValue<UInt32Value>? Count
         {
             get => GetAttribute<ListValue<UInt32Value>>();
@@ -3633,7 +3520,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Step</para>
         /// <para>Represents the following attribute in the schema: step</para>
         /// </summary>
-        [SchemaAttr("step")]
         public ListValue<Int32Value>? Step
         {
             get => GetAttribute<ListValue<Int32Value>>();
@@ -3686,7 +3572,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Constraint" /> <c>&lt;dgm:constr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:constrLst")]
     public partial class Constraints : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3746,7 +3631,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Rule" /> <c>&lt;dgm:rule></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:ruleLst")]
     public partial class RuleList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3814,7 +3698,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles" /> <c>&lt;dgm:resizeHandles></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:varLst")]
     public partial class VariableList : LayoutVariablePropertySetType
     {
         /// <summary>
@@ -3889,7 +3772,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles" /> <c>&lt;dgm:resizeHandles></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:presLayoutVars")]
     public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
     {
         /// <summary>
@@ -4148,7 +4030,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:forEach")]
     public partial class ForEach : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4186,7 +4067,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -4197,7 +4077,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
@@ -4208,7 +4087,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Axis</para>
         /// <para>Represents the following attribute in the schema: axis</para>
         /// </summary>
-        [SchemaAttr("axis")]
         public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>>? Axis
         {
             get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>>>();
@@ -4219,7 +4097,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Data Point Type</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
-        [SchemaAttr("ptType")]
         public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>? PointType
         {
             get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>>();
@@ -4230,7 +4107,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Hide Last Transition</para>
         /// <para>Represents the following attribute in the schema: hideLastTrans</para>
         /// </summary>
-        [SchemaAttr("hideLastTrans")]
         public ListValue<BooleanValue>? HideLastTrans
         {
             get => GetAttribute<ListValue<BooleanValue>>();
@@ -4241,7 +4117,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Start</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [SchemaAttr("st")]
         public ListValue<Int32Value>? Start
         {
             get => GetAttribute<ListValue<Int32Value>>();
@@ -4252,7 +4127,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: cnt</para>
         /// </summary>
-        [SchemaAttr("cnt")]
         public ListValue<UInt32Value>? Count
         {
             get => GetAttribute<ListValue<UInt32Value>>();
@@ -4263,7 +4137,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Step</para>
         /// <para>Represents the following attribute in the schema: step</para>
         /// </summary>
-        [SchemaAttr("step")]
         public ListValue<Int32Value>? Step
         {
             get => GetAttribute<ListValue<Int32Value>>();
@@ -4331,7 +4204,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:layoutNode")]
     public partial class LayoutNode : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4369,7 +4241,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -4380,7 +4251,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Style Label</para>
         /// <para>Represents the following attribute in the schema: styleLbl</para>
         /// </summary>
-        [SchemaAttr("styleLbl")]
         public StringValue? StyleLabel
         {
             get => GetAttribute<StringValue>();
@@ -4391,7 +4261,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Child Order</para>
         /// <para>Represents the following attribute in the schema: chOrder</para>
         /// </summary>
-        [SchemaAttr("chOrder")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildOrderValues>? ChildOrder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildOrderValues>>();
@@ -4402,7 +4271,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Move With</para>
         /// <para>Represents the following attribute in the schema: moveWith</para>
         /// </summary>
-        [SchemaAttr("moveWith")]
         public StringValue? MoveWith
         {
             get => GetAttribute<StringValue>();
@@ -4463,7 +4331,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseIf" /> <c>&lt;dgm:if></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:choose")]
     public partial class Choose : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4501,7 +4368,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -4547,7 +4413,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:if")]
     public partial class DiagramChooseIf : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4585,7 +4450,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -4596,7 +4460,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Axis</para>
         /// <para>Represents the following attribute in the schema: axis</para>
         /// </summary>
-        [SchemaAttr("axis")]
         public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>>? Axis
         {
             get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>>>();
@@ -4607,7 +4470,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Data Point Type</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
-        [SchemaAttr("ptType")]
         public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>? PointType
         {
             get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>>();
@@ -4618,7 +4480,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Hide Last Transition</para>
         /// <para>Represents the following attribute in the schema: hideLastTrans</para>
         /// </summary>
-        [SchemaAttr("hideLastTrans")]
         public ListValue<BooleanValue>? HideLastTrans
         {
             get => GetAttribute<ListValue<BooleanValue>>();
@@ -4629,7 +4490,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Start</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [SchemaAttr("st")]
         public ListValue<Int32Value>? Start
         {
             get => GetAttribute<ListValue<Int32Value>>();
@@ -4640,7 +4500,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: cnt</para>
         /// </summary>
-        [SchemaAttr("cnt")]
         public ListValue<UInt32Value>? Count
         {
             get => GetAttribute<ListValue<UInt32Value>>();
@@ -4651,7 +4510,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Step</para>
         /// <para>Represents the following attribute in the schema: step</para>
         /// </summary>
-        [SchemaAttr("step")]
         public ListValue<Int32Value>? Step
         {
             get => GetAttribute<ListValue<Int32Value>>();
@@ -4662,7 +4520,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Function</para>
         /// <para>Represents the following attribute in the schema: func</para>
         /// </summary>
-        [SchemaAttr("func")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionValues>? Function
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionValues>>();
@@ -4673,7 +4530,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Argument</para>
         /// <para>Represents the following attribute in the schema: arg</para>
         /// </summary>
-        [SchemaAttr("arg")]
         public StringValue? Argument
         {
             get => GetAttribute<StringValue>();
@@ -4684,7 +4540,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Operator</para>
         /// <para>Represents the following attribute in the schema: op</para>
         /// </summary>
-        [SchemaAttr("op")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionOperatorValues>? Operator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionOperatorValues>>();
@@ -4695,7 +4550,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -4792,7 +4646,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:else")]
     public partial class DiagramChooseElse : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4830,7 +4683,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -4886,7 +4738,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PointList" /> <c>&lt;dgm:ptLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:dataModel")]
     public partial class DataModel : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5013,7 +4864,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
     /// </summary>
-    [SchemaAttr("dgm:cat")]
     public partial class Category : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5027,7 +4877,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Category Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public StringValue? Type
         {
             get => GetAttribute<StringValue>();
@@ -5038,7 +4887,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Priority</para>
         /// <para>Represents the following attribute in the schema: pri</para>
         /// </summary>
-        [SchemaAttr("pri")]
         public UInt32Value? Priority
         {
             get => GetAttribute<UInt32Value>();
@@ -5070,7 +4918,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    [SchemaAttr("dgm:title")]
     public partial class Title : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5084,7 +4931,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Language</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr("lang")]
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -5095,7 +4941,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -5123,7 +4968,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
     /// </summary>
-    [SchemaAttr("dgm:desc")]
     public partial class Description : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5137,7 +4981,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Language</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr("lang")]
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -5148,7 +4991,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -5182,7 +5024,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Category" /> <c>&lt;dgm:cat></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:catLst")]
     public partial class CategoryList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5245,7 +5086,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:style")]
     public partial class Style : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5357,7 +5197,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:orgChart.</para>
     /// </summary>
-    [SchemaAttr("dgm:orgChart")]
     public partial class OrganizationChart : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5371,7 +5210,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Show Organization Chart User Interface Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -5395,7 +5233,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:chMax.</para>
     /// </summary>
-    [SchemaAttr("dgm:chMax")]
     public partial class MaxNumberOfChildren : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5409,7 +5246,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Maximum Children Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -5436,7 +5272,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:chPref.</para>
     /// </summary>
-    [SchemaAttr("dgm:chPref")]
     public partial class PreferredNumberOfChildren : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5450,7 +5285,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Preferred Number of CHildren Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -5477,7 +5311,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:bulletEnabled.</para>
     /// </summary>
-    [SchemaAttr("dgm:bulletEnabled")]
     public partial class BulletEnabled : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5491,7 +5324,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Show Insert Bullet Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -5515,7 +5347,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:dir.</para>
     /// </summary>
-    [SchemaAttr("dgm:dir")]
     public partial class Direction : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5529,7 +5360,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Diagram Direction Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues>>();
@@ -5556,7 +5386,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:hierBranch.</para>
     /// </summary>
-    [SchemaAttr("dgm:hierBranch")]
     public partial class HierarchyBranch : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5570,7 +5399,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Organization Chart Branch Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues>>();
@@ -5597,7 +5425,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:animOne.</para>
     /// </summary>
-    [SchemaAttr("dgm:animOne")]
     public partial class AnimateOneByOne : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5611,7 +5438,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>One By One Animation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues>>();
@@ -5638,7 +5464,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:animLvl.</para>
     /// </summary>
-    [SchemaAttr("dgm:animLvl")]
     public partial class AnimationLevel : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5652,7 +5477,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Level Animation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues>>();
@@ -5679,7 +5503,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:resizeHandles.</para>
     /// </summary>
-    [SchemaAttr("dgm:resizeHandles")]
     public partial class ResizeHandles : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5693,7 +5516,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Shape Resize Style Type</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues>>();
@@ -5720,7 +5542,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
     /// </summary>
-    [SchemaAttr("dgm:cat")]
     public partial class StyleDisplayCategory : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5734,7 +5555,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Category Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public StringValue? Type
         {
             get => GetAttribute<StringValue>();
@@ -5745,7 +5565,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Priority</para>
         /// <para>Represents the following attribute in the schema: pri</para>
         /// </summary>
-        [SchemaAttr("pri")]
         public UInt32Value? Priority
         {
             get => GetAttribute<UInt32Value>();
@@ -5786,7 +5605,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:scene3d")]
     public partial class Scene3D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5908,7 +5726,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:sp3d")]
     public partial class Shape3D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5946,7 +5763,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Shape Depth</para>
         /// <para>Represents the following attribute in the schema: z</para>
         /// </summary>
-        [SchemaAttr("z")]
         public Int64Value? Z
         {
             get => GetAttribute<Int64Value>();
@@ -5957,7 +5773,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Extrusion Height</para>
         /// <para>Represents the following attribute in the schema: extrusionH</para>
         /// </summary>
-        [SchemaAttr("extrusionH")]
         public Int64Value? ExtrusionHeight
         {
             get => GetAttribute<Int64Value>();
@@ -5968,7 +5783,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Contour Width</para>
         /// <para>Represents the following attribute in the schema: contourW</para>
         /// </summary>
-        [SchemaAttr("contourW")]
         public Int64Value? ContourWidth
         {
             get => GetAttribute<Int64Value>();
@@ -5979,7 +5793,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Preset Material Type</para>
         /// <para>Represents the following attribute in the schema: prstMaterial</para>
         /// </summary>
-        [SchemaAttr("prstMaterial")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>? PresetMaterial
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>();
@@ -6103,7 +5916,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:txPr")]
     public partial class TextProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6191,7 +6003,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    [SchemaAttr("dgm:title")]
     public partial class StyleDefinitionTitle : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6205,7 +6016,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Natural Language</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr("lang")]
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -6216,7 +6026,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Description Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -6244,7 +6053,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
     /// </summary>
-    [SchemaAttr("dgm:desc")]
     public partial class StyleLabelDescription : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6258,7 +6066,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Natural Language</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr("lang")]
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -6269,7 +6076,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Description Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -6303,7 +6109,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategory" /> <c>&lt;dgm:cat></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:catLst")]
     public partial class StyleDisplayCategories : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6367,7 +6172,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextProperties" /> <c>&lt;dgm:txPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:styleLbl")]
     public partial class StyleLabel : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6405,7 +6209,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Style Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -6516,7 +6319,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Point" /> <c>&lt;dgm:pt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:ptLst")]
     public partial class PointList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6576,7 +6378,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Connection" /> <c>&lt;dgm:cxn></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:cxnLst")]
     public partial class ConnectionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6643,7 +6444,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:bg")]
     public partial class Background : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6731,7 +6531,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:whole")]
     public partial class Whole : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6814,7 +6613,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.DataModelExtension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:extLst")]
     public partial class DataModelExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6875,7 +6673,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PresentationLayoutVariables" /> <c>&lt;dgm:presLayoutVars></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:prSet")]
     public partial class PropertySet : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6913,7 +6710,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Presentation Element Identifier</para>
         /// <para>Represents the following attribute in the schema: presAssocID</para>
         /// </summary>
-        [SchemaAttr("presAssocID")]
         public StringValue? PresentationElementId
         {
             get => GetAttribute<StringValue>();
@@ -6924,7 +6720,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Presentation Name</para>
         /// <para>Represents the following attribute in the schema: presName</para>
         /// </summary>
-        [SchemaAttr("presName")]
         public StringValue? PresentationName
         {
             get => GetAttribute<StringValue>();
@@ -6935,7 +6730,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Presentation Style Label</para>
         /// <para>Represents the following attribute in the schema: presStyleLbl</para>
         /// </summary>
-        [SchemaAttr("presStyleLbl")]
         public StringValue? PresentationStyleLabel
         {
             get => GetAttribute<StringValue>();
@@ -6946,7 +6740,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Presentation Style Index</para>
         /// <para>Represents the following attribute in the schema: presStyleIdx</para>
         /// </summary>
-        [SchemaAttr("presStyleIdx")]
         public Int32Value? PresentationStyleIndex
         {
             get => GetAttribute<Int32Value>();
@@ -6957,7 +6750,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Presentation Style Count</para>
         /// <para>Represents the following attribute in the schema: presStyleCnt</para>
         /// </summary>
-        [SchemaAttr("presStyleCnt")]
         public Int32Value? PresentationStyleCount
         {
             get => GetAttribute<Int32Value>();
@@ -6968,7 +6760,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Current Diagram Type</para>
         /// <para>Represents the following attribute in the schema: loTypeId</para>
         /// </summary>
-        [SchemaAttr("loTypeId")]
         public StringValue? LayoutTypeId
         {
             get => GetAttribute<StringValue>();
@@ -6979,7 +6770,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Current Diagram Category</para>
         /// <para>Represents the following attribute in the schema: loCatId</para>
         /// </summary>
-        [SchemaAttr("loCatId")]
         public StringValue? LayoutCategoryId
         {
             get => GetAttribute<StringValue>();
@@ -6990,7 +6780,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Current Style Type</para>
         /// <para>Represents the following attribute in the schema: qsTypeId</para>
         /// </summary>
-        [SchemaAttr("qsTypeId")]
         public StringValue? QuickStyleTypeId
         {
             get => GetAttribute<StringValue>();
@@ -7001,7 +6790,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Current Style Category</para>
         /// <para>Represents the following attribute in the schema: qsCatId</para>
         /// </summary>
-        [SchemaAttr("qsCatId")]
         public StringValue? QuickStyleCategoryId
         {
             get => GetAttribute<StringValue>();
@@ -7012,7 +6800,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Color Transform Type Identifier</para>
         /// <para>Represents the following attribute in the schema: csTypeId</para>
         /// </summary>
-        [SchemaAttr("csTypeId")]
         public StringValue? ColorType
         {
             get => GetAttribute<StringValue>();
@@ -7023,7 +6810,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Color Transform Category</para>
         /// <para>Represents the following attribute in the schema: csCatId</para>
         /// </summary>
-        [SchemaAttr("csCatId")]
         public StringValue? ColorCategoryId
         {
             get => GetAttribute<StringValue>();
@@ -7034,7 +6820,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Coherent 3D Behavior</para>
         /// <para>Represents the following attribute in the schema: coherent3DOff</para>
         /// </summary>
-        [SchemaAttr("coherent3DOff")]
         public BooleanValue? Coherent3D
         {
             get => GetAttribute<BooleanValue>();
@@ -7045,7 +6830,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Placeholder Text</para>
         /// <para>Represents the following attribute in the schema: phldrT</para>
         /// </summary>
-        [SchemaAttr("phldrT")]
         public StringValue? PlaceholderText
         {
             get => GetAttribute<StringValue>();
@@ -7056,7 +6840,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Placeholder</para>
         /// <para>Represents the following attribute in the schema: phldr</para>
         /// </summary>
-        [SchemaAttr("phldr")]
         public BooleanValue? Placeholder
         {
             get => GetAttribute<BooleanValue>();
@@ -7067,7 +6850,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Custom Rotation</para>
         /// <para>Represents the following attribute in the schema: custAng</para>
         /// </summary>
-        [SchemaAttr("custAng")]
         public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -7078,7 +6860,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Custom Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: custFlipVert</para>
         /// </summary>
-        [SchemaAttr("custFlipVert")]
         public BooleanValue? VerticalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -7089,7 +6870,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Custom Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: custFlipHor</para>
         /// </summary>
-        [SchemaAttr("custFlipHor")]
         public BooleanValue? HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -7100,7 +6880,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Fixed Width Override</para>
         /// <para>Represents the following attribute in the schema: custSzX</para>
         /// </summary>
-        [SchemaAttr("custSzX")]
         public Int32Value? FixedWidthOverride
         {
             get => GetAttribute<Int32Value>();
@@ -7111,7 +6890,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Fixed Height Override</para>
         /// <para>Represents the following attribute in the schema: custSzY</para>
         /// </summary>
-        [SchemaAttr("custSzY")]
         public Int32Value? FixedHeightOverride
         {
             get => GetAttribute<Int32Value>();
@@ -7122,7 +6900,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Width Scale</para>
         /// <para>Represents the following attribute in the schema: custScaleX</para>
         /// </summary>
-        [SchemaAttr("custScaleX")]
         public Int32Value? WidthScale
         {
             get => GetAttribute<Int32Value>();
@@ -7133,7 +6910,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Height Scale</para>
         /// <para>Represents the following attribute in the schema: custScaleY</para>
         /// </summary>
-        [SchemaAttr("custScaleY")]
         public Int32Value? HightScale
         {
             get => GetAttribute<Int32Value>();
@@ -7144,7 +6920,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Text Changed</para>
         /// <para>Represents the following attribute in the schema: custT</para>
         /// </summary>
-        [SchemaAttr("custT")]
         public BooleanValue? TextChanged
         {
             get => GetAttribute<BooleanValue>();
@@ -7155,7 +6930,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Custom Factor Width</para>
         /// <para>Represents the following attribute in the schema: custLinFactX</para>
         /// </summary>
-        [SchemaAttr("custLinFactX")]
         public Int32Value? FactorWidth
         {
             get => GetAttribute<Int32Value>();
@@ -7166,7 +6940,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Custom Factor Height</para>
         /// <para>Represents the following attribute in the schema: custLinFactY</para>
         /// </summary>
-        [SchemaAttr("custLinFactY")]
         public Int32Value? FactorHeight
         {
             get => GetAttribute<Int32Value>();
@@ -7177,7 +6950,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Neighbor Offset Width</para>
         /// <para>Represents the following attribute in the schema: custLinFactNeighborX</para>
         /// </summary>
-        [SchemaAttr("custLinFactNeighborX")]
         public Int32Value? NeighborOffsetWidth
         {
             get => GetAttribute<Int32Value>();
@@ -7188,7 +6960,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Neighbor Offset Height</para>
         /// <para>Represents the following attribute in the schema: custLinFactNeighborY</para>
         /// </summary>
-        [SchemaAttr("custLinFactNeighborY")]
         public Int32Value? NeighborOffsetHeight
         {
             get => GetAttribute<Int32Value>();
@@ -7199,7 +6970,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Radius Scale</para>
         /// <para>Represents the following attribute in the schema: custRadScaleRad</para>
         /// </summary>
-        [SchemaAttr("custRadScaleRad")]
         public Int32Value? RadiusScale
         {
             get => GetAttribute<Int32Value>();
@@ -7210,7 +6980,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Include Angle Scale</para>
         /// <para>Represents the following attribute in the schema: custRadScaleInc</para>
         /// </summary>
-        [SchemaAttr("custRadScaleInc")]
         public Int32Value? IncludeAngleScale
         {
             get => GetAttribute<Int32Value>();
@@ -7321,7 +7090,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:spPr")]
     public partial class ShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7359,7 +7127,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -7458,7 +7225,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:t")]
     public partial class TextBody : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7548,7 +7314,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PtExtension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:extLst")]
     public partial class PtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7609,7 +7374,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList" /> <c>&lt;dgm1611:autoBuNodeInfoLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:ext")]
     public partial class DiagramDefinitionExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7647,7 +7411,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [SchemaAttr("uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -7689,7 +7452,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModel" /> <c>&lt;dgm:dataModel></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:sampData")]
     public partial class SampleData : SampleDataType
     {
         /// <summary>
@@ -7748,7 +7510,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModel" /> <c>&lt;dgm:dataModel></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:styleData")]
     public partial class StyleData : SampleDataType
     {
         /// <summary>
@@ -7807,7 +7568,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModel" /> <c>&lt;dgm:dataModel></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:clrData")]
     public partial class ColorData : SampleDataType
     {
         /// <summary>
@@ -7903,7 +7663,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Use Default</para>
         /// <para>Represents the following attribute in the schema: useDef</para>
         /// </summary>
-        [SchemaAttr("useDef")]
         public BooleanValue? UseDefault
         {
             get => GetAttribute<BooleanValue>();
@@ -7943,7 +7702,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtension" /> <c>&lt;dgm:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("dgm:extLst")]
     public partial class DiagramDefinitionExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>

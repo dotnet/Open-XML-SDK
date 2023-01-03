@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -31,7 +29,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExHeader" /> <c>&lt;xr:hdr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:revHdrs")]
     public partial class RevExHeaders : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -69,7 +66,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>minRev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: minRev</para>
         /// </summary>
-        [SchemaAttr("minRev")]
         public UInt64Value? MinRev
         {
             get => GetAttribute<UInt64Value>();
@@ -80,7 +76,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>maxRev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: maxRev</para>
         /// </summary>
-        [SchemaAttr("maxRev")]
         public UInt64Value? MaxRev
         {
             get => GetAttribute<UInt64Value>();
@@ -91,7 +86,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>docId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: docId</para>
         /// </summary>
-        [SchemaAttr("docId")]
         public StringValue? DocId
         {
             get => GetAttribute<StringValue>();
@@ -102,7 +96,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>endpointId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: endpointId</para>
         /// </summary>
-        [SchemaAttr("endpointId")]
         public StringValue? EndpointId
         {
             get => GetAttribute<StringValue>();
@@ -166,7 +159,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw" /> <c>&lt;xr:xrrListExpR></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:revStream")]
     public partial class RevExStream : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -259,7 +251,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:dxf")]
     public partial class DifferentialFormatType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -417,7 +408,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:revisionPtr.</para>
     /// </summary>
-    [SchemaAttr("xr:revisionPtr")]
     public partial class RevisionPtr : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -431,7 +421,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>revIDLastSave, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: revIDLastSave</para>
         /// </summary>
-        [SchemaAttr("revIDLastSave")]
         public UInt64Value? RevIDLastSave
         {
             get => GetAttribute<UInt64Value>();
@@ -442,7 +431,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>documentId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: documentId</para>
         /// </summary>
-        [SchemaAttr("documentId")]
         public StringValue? DocumentId
         {
             get => GetAttribute<StringValue>();
@@ -485,7 +473,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup" /> <c>&lt;xr:sparklineGroup></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:objectState")]
     public partial class StateBasedObject : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -628,7 +615,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hdr.</para>
     /// </summary>
-    [SchemaAttr("xr:hdr")]
     public partial class RevExHeader : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -645,7 +631,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -656,7 +641,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>minRev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: minRev</para>
         /// </summary>
-        [SchemaAttr("minRev")]
         public UInt64Value? MinRev
         {
             get => GetAttribute<UInt64Value>();
@@ -667,7 +651,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>maxRev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: maxRev</para>
         /// </summary>
-        [SchemaAttr("maxRev")]
         public UInt64Value? MaxRev
         {
             get => GetAttribute<UInt64Value>();
@@ -678,7 +661,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>time, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        [SchemaAttr("time")]
         public DateTimeValue? Time
         {
             get => GetAttribute<DateTimeValue>();
@@ -718,7 +700,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExTest" /> <c>&lt;xr:xrrtest></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:xrrftr")]
     public partial class RevExFuture : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -756,7 +737,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -767,7 +747,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -778,7 +757,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -789,7 +767,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -800,7 +777,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -811,7 +787,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sti, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sti</para>
         /// </summary>
-        [SchemaAttr("sti")]
         public BooleanValue? Sti
         {
             get => GetAttribute<BooleanValue>();
@@ -860,7 +835,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrUspt.</para>
     /// </summary>
-    [SchemaAttr("xr:xrrUspt")]
     public partial class RevExUnsupported : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -874,7 +848,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -885,7 +858,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -896,7 +868,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -907,7 +878,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -918,7 +888,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -961,7 +930,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrTrim.</para>
     /// </summary>
-    [SchemaAttr("xr:xrrTrim")]
     public partial class RevExTrimmed : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -975,7 +943,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -986,7 +953,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -997,7 +963,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -1008,7 +973,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -1019,7 +983,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -1062,7 +1025,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrrc.</para>
     /// </summary>
-    [SchemaAttr("xr:xrrrc")]
     public partial class RevExRowColumn : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1076,7 +1038,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -1087,7 +1048,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -1098,7 +1058,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -1109,7 +1068,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -1120,7 +1078,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -1131,7 +1088,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>eol, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: eol</para>
         /// </summary>
-        [SchemaAttr("eol")]
         public BooleanValue? Eol
         {
             get => GetAttribute<BooleanValue>();
@@ -1142,7 +1098,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ref, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Ref
         {
             get => GetAttribute<StringValue>();
@@ -1153,7 +1108,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>action, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: action</para>
         /// </summary>
-        [SchemaAttr("action")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RwColAction>? Action
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RwColAction>>();
@@ -1205,7 +1159,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrm.</para>
     /// </summary>
-    [SchemaAttr("xr:xrrm")]
     public partial class RevExMove : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1219,7 +1172,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -1230,7 +1182,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -1241,7 +1192,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -1252,7 +1202,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -1263,7 +1212,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -1274,7 +1222,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>src, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: src</para>
         /// </summary>
-        [SchemaAttr("src")]
         public StringValue? Src
         {
             get => GetAttribute<StringValue>();
@@ -1285,7 +1232,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>dst, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: dst</para>
         /// </summary>
-        [SchemaAttr("dst")]
         public StringValue? Dst
         {
             get => GetAttribute<StringValue>();
@@ -1296,7 +1242,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>srcSh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: srcSh</para>
         /// </summary>
-        [SchemaAttr("srcSh")]
         public StringValue? SrcSh
         {
             get => GetAttribute<StringValue>();
@@ -1358,7 +1303,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevCell" /> <c>&lt;xr:c></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:xrrc")]
     public partial class RevExChangeCell : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1396,7 +1340,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>listUid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: listUid</para>
         /// </summary>
-        [SchemaAttr("listUid")]
         public StringValue? ListUid
         {
             get => GetAttribute<StringValue>();
@@ -1407,7 +1350,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -1418,7 +1360,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -1429,7 +1370,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -1440,7 +1380,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -1451,7 +1390,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -1462,7 +1400,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>r, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr("r")]
         public StringValue? R
         {
             get => GetAttribute<StringValue>();
@@ -1473,7 +1410,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>t, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>>();
@@ -1484,7 +1420,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>x, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [SchemaAttr("x")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>? X
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>>();
@@ -1495,7 +1430,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>w, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        [SchemaAttr("w")]
         public UInt32Value? W
         {
             get => GetAttribute<UInt32Value>();
@@ -1563,7 +1497,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.ExtensionList" /> <c>&lt;xr:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:xrrf")]
     public partial class RevExFormatting : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1601,7 +1534,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -1612,7 +1544,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -1623,7 +1554,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -1634,7 +1564,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -1645,7 +1574,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -1656,7 +1584,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>numFmtId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: numFmtId</para>
         /// </summary>
-        [SchemaAttr("numFmtId")]
         public UInt32Value? NumFmtId
         {
             get => GetAttribute<UInt32Value>();
@@ -1667,7 +1594,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>xfDxf, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: xfDxf</para>
         /// </summary>
-        [SchemaAttr("xfDxf")]
         public BooleanValue? XfDxf
         {
             get => GetAttribute<BooleanValue>();
@@ -1678,7 +1604,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>style, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr("style")]
         public BooleanValue? Style
         {
             get => GetAttribute<BooleanValue>();
@@ -1689,7 +1614,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sqref, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sqref</para>
         /// </summary>
-        [SchemaAttr("sqref")]
         public ListValue<StringValue>? Sqref
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -1700,7 +1624,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>start, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: start</para>
         /// </summary>
-        [SchemaAttr("start")]
         public UInt32Value? Start
         {
             get => GetAttribute<UInt32Value>();
@@ -1711,7 +1634,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>length, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-        [SchemaAttr("length")]
         public UInt32Value? Length
         {
             get => GetAttribute<UInt32Value>();
@@ -1722,7 +1644,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>styleUid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: styleUid</para>
         /// </summary>
-        [SchemaAttr("styleUid")]
         public StringValue? StyleUid
         {
             get => GetAttribute<StringValue>();
@@ -1733,7 +1654,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>fBlankCell, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: fBlankCell</para>
         /// </summary>
-        [SchemaAttr("fBlankCell")]
         public BooleanValue? FBlankCell
         {
             get => GetAttribute<BooleanValue>();
@@ -1744,7 +1664,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>applyNumberFormat, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: applyNumberFormat</para>
         /// </summary>
-        [SchemaAttr("applyNumberFormat")]
         public BooleanValue? ApplyNumberFormat
         {
             get => GetAttribute<BooleanValue>();
@@ -1755,7 +1674,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>applyFont, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: applyFont</para>
         /// </summary>
-        [SchemaAttr("applyFont")]
         public BooleanValue? ApplyFont
         {
             get => GetAttribute<BooleanValue>();
@@ -1766,7 +1684,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>applyFill, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: applyFill</para>
         /// </summary>
-        [SchemaAttr("applyFill")]
         public BooleanValue? ApplyFill
         {
             get => GetAttribute<BooleanValue>();
@@ -1777,7 +1694,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>applyBorder, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: applyBorder</para>
         /// </summary>
-        [SchemaAttr("applyBorder")]
         public BooleanValue? ApplyBorder
         {
             get => GetAttribute<BooleanValue>();
@@ -1788,7 +1704,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>applyAlignment, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: applyAlignment</para>
         /// </summary>
-        [SchemaAttr("applyAlignment")]
         public BooleanValue? ApplyAlignment
         {
             get => GetAttribute<BooleanValue>();
@@ -1799,7 +1714,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>applyProtection, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: applyProtection</para>
         /// </summary>
-        [SchemaAttr("applyProtection")]
         public BooleanValue? ApplyProtection
         {
             get => GetAttribute<BooleanValue>();
@@ -1902,7 +1816,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula" /> <c>&lt;xr:formula></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:xrrDefName")]
     public partial class RevExDefinedName : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1940,7 +1853,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -1951,7 +1863,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -1962,7 +1873,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -1973,7 +1883,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -1984,7 +1893,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -1995,7 +1903,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>customView, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: customView</para>
         /// </summary>
-        [SchemaAttr("customView")]
         public BooleanValue? CustomView
         {
             get => GetAttribute<BooleanValue>();
@@ -2006,7 +1913,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>name, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -2017,7 +1923,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>function, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: function</para>
         /// </summary>
-        [SchemaAttr("function")]
         public BooleanValue? Function
         {
             get => GetAttribute<BooleanValue>();
@@ -2028,7 +1933,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>functionGroupId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: functionGroupId</para>
         /// </summary>
-        [SchemaAttr("functionGroupId")]
         public ByteValue? FunctionGroupId
         {
             get => GetAttribute<ByteValue>();
@@ -2039,7 +1943,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>shortcutKey, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: shortcutKey</para>
         /// </summary>
-        [SchemaAttr("shortcutKey")]
         public ByteValue? ShortcutKey
         {
             get => GetAttribute<ByteValue>();
@@ -2050,7 +1953,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>hidden, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -2061,7 +1963,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>customMenu, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: customMenu</para>
         /// </summary>
-        [SchemaAttr("customMenu")]
         public StringValue? CustomMenu
         {
             get => GetAttribute<StringValue>();
@@ -2072,7 +1973,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>description, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -2083,7 +1983,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>help, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: help</para>
         /// </summary>
-        [SchemaAttr("help")]
         public StringValue? Help
         {
             get => GetAttribute<StringValue>();
@@ -2094,7 +1993,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>statusBar, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: statusBar</para>
         /// </summary>
-        [SchemaAttr("statusBar")]
         public StringValue? StatusBar
         {
             get => GetAttribute<StringValue>();
@@ -2105,7 +2003,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>comment, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: comment</para>
         /// </summary>
-        [SchemaAttr("comment")]
         public StringValue? Comment
         {
             get => GetAttribute<StringValue>();
@@ -2201,7 +2098,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader" /> <c>&lt;xr:hdr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:xrrdo")]
     public partial class RevExDelObj : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2239,7 +2135,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -2250,7 +2145,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -2261,7 +2155,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -2272,7 +2165,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -2283,7 +2175,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -2352,7 +2243,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader" /> <c>&lt;xr:hdr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:xrrco")]
     public partial class RevExChgObj : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2390,7 +2280,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -2401,7 +2290,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -2412,7 +2300,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -2423,7 +2310,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -2434,7 +2320,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -2502,7 +2387,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrSheet.</para>
     /// </summary>
-    [SchemaAttr("xr:xrrSheet")]
     public partial class RevExSheetOp : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2516,7 +2400,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -2527,7 +2410,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -2538,7 +2420,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -2549,7 +2430,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -2560,7 +2440,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -2571,7 +2450,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>op, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: op</para>
         /// </summary>
-        [SchemaAttr("op")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SheetOp>? Op
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SheetOp>>();
@@ -2582,7 +2460,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>name, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -2593,7 +2470,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>idOrig, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: idOrig</para>
         /// </summary>
-        [SchemaAttr("idOrig")]
         public UInt32Value? IdOrig
         {
             get => GetAttribute<UInt32Value>();
@@ -2604,7 +2480,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>idNew, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: idNew</para>
         /// </summary>
-        [SchemaAttr("idNew")]
         public UInt32Value? IdNew
         {
             get => GetAttribute<UInt32Value>();
@@ -2654,7 +2529,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrList.</para>
     /// </summary>
-    [SchemaAttr("xr:xrrList")]
     public partial class RevisionList : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2668,7 +2542,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -2679,7 +2552,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -2690,7 +2562,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -2701,7 +2572,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -2712,7 +2582,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -2723,7 +2592,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Data, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: Data</para>
         /// </summary>
-        [SchemaAttr("Data")]
         public BooleanValue? Data
         {
             get => GetAttribute<BooleanValue>();
@@ -2734,7 +2602,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Formatting, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: Formatting</para>
         /// </summary>
-        [SchemaAttr("Formatting")]
         public BooleanValue? Formatting
         {
             get => GetAttribute<BooleanValue>();
@@ -2745,7 +2612,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>RangeBased, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: RangeBased</para>
         /// </summary>
-        [SchemaAttr("RangeBased")]
         public BooleanValue? RangeBased
         {
             get => GetAttribute<BooleanValue>();
@@ -2756,7 +2622,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Fake, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: Fake</para>
         /// </summary>
-        [SchemaAttr("Fake")]
         public BooleanValue? Fake
         {
             get => GetAttribute<BooleanValue>();
@@ -2767,7 +2632,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ref, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Ref
         {
             get => GetAttribute<StringValue>();
@@ -2778,7 +2642,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Headers, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: Headers</para>
         /// </summary>
-        [SchemaAttr("Headers")]
         public BooleanValue? Headers
         {
             get => GetAttribute<BooleanValue>();
@@ -2789,7 +2652,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>InsDelHeaders, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: InsDelHeaders</para>
         /// </summary>
-        [SchemaAttr("InsDelHeaders")]
         public BooleanValue? InsDelHeaders
         {
             get => GetAttribute<BooleanValue>();
@@ -2800,7 +2662,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rId</para>
         /// </summary>
-        [SchemaAttr("rId")]
         public UInt32Value? RId
         {
             get => GetAttribute<UInt32Value>();
@@ -2857,7 +2718,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrListExpR.</para>
     /// </summary>
-    [SchemaAttr("xr:xrrListExpR")]
     public partial class RevListAutoExpandRw : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2871,7 +2731,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -2882,7 +2741,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -2893,7 +2751,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -2904,7 +2761,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -2915,7 +2771,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -2926,7 +2781,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>refAdded, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: refAdded</para>
         /// </summary>
-        [SchemaAttr("refAdded")]
         public StringValue? RefAdded
         {
             get => GetAttribute<StringValue>();
@@ -2937,7 +2791,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>listGuid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: listGuid</para>
         /// </summary>
-        [SchemaAttr("listGuid")]
         public StringValue? ListGuid
         {
             get => GetAttribute<StringValue>();
@@ -3007,7 +2860,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw" /> <c>&lt;xr:xrrListExpR></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:xrrg")]
     public partial class RevGroup : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3045,7 +2897,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rev, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr("rev")]
         public UInt64Value? Rev
         {
             get => GetAttribute<UInt64Value>();
@@ -3056,7 +2907,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -3067,7 +2917,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sh, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sh</para>
         /// </summary>
-        [SchemaAttr("sh")]
         public StringValue? Sh
         {
             get => GetAttribute<StringValue>();
@@ -3078,7 +2927,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidp, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidp</para>
         /// </summary>
-        [SchemaAttr("uidp")]
         public StringValue? Uidp
         {
             get => GetAttribute<StringValue>();
@@ -3089,7 +2937,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ctx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ctx</para>
         /// </summary>
-        [SchemaAttr("ctx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>? Ctx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>();
@@ -3161,7 +3008,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrtest.</para>
     /// </summary>
-    [SchemaAttr("xr:xrrtest")]
     public partial class RevExTest : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3195,7 +3041,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.Xstring" /> <c>&lt;xr:v></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:c")]
     public partial class RevCell : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3233,7 +3078,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>t, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>>();
@@ -3244,7 +3088,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>nop, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: nop</para>
         /// </summary>
-        [SchemaAttr("nop")]
         public BooleanValue? Nop
         {
             get => GetAttribute<BooleanValue>();
@@ -3255,7 +3098,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>tick, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: tick</para>
         /// </summary>
-        [SchemaAttr("tick")]
         public BooleanValue? Tick
         {
             get => GetAttribute<BooleanValue>();
@@ -3266,7 +3108,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rep, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: rep</para>
         /// </summary>
-        [SchemaAttr("rep")]
         public UInt32Value? Rep
         {
             get => GetAttribute<UInt32Value>();
@@ -3348,7 +3189,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevCell" /> <c>&lt;xr:c></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:ccse")]
     public partial class ChangeCellSubEdit : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3386,7 +3226,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>r, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr("r")]
         public StringValue? R
         {
             get => GetAttribute<StringValue>();
@@ -3397,7 +3236,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>t, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>>();
@@ -3408,7 +3246,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>x, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [SchemaAttr("x")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>? X
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>>();
@@ -3419,7 +3256,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>w, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        [SchemaAttr("w")]
         public UInt32Value? W
         {
             get => GetAttribute<UInt32Value>();
@@ -3461,7 +3297,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3522,7 +3357,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:formula.</para>
     /// </summary>
-    [SchemaAttr("xr:formula")]
     public partial class FormulaFormula : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -3561,7 +3395,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:f.</para>
     /// </summary>
-    [SchemaAttr("xr:f")]
     public partial class FFormula : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -3606,7 +3439,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RefMap" /> <c>&lt;xr:refmap></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:hdr")]
     public partial class StateBasedHeader : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3644,7 +3476,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -3655,7 +3486,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>eft, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: eft</para>
         /// </summary>
-        [SchemaAttr("eft")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FeatureType>? Eft
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FeatureType>>();
@@ -3666,7 +3496,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>eftx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: eftx</para>
         /// </summary>
-        [SchemaAttr("eftx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtFeatureType>? Eftx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtFeatureType>>();
@@ -3677,7 +3506,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>seft, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: seft</para>
         /// </summary>
-        [SchemaAttr("seft")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SubFeatureType>? Seft
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SubFeatureType>>();
@@ -3688,7 +3516,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>seftx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: seftx</para>
         /// </summary>
-        [SchemaAttr("seftx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtSubFeatureType>? Seftx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtSubFeatureType>>();
@@ -3742,7 +3569,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:link.</para>
     /// </summary>
-    [SchemaAttr("xr:link")]
     public partial class RevisionStateLink : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3759,7 +3585,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -3797,7 +3622,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings" /> <c>&lt;xr:showGridlinesHeadings></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:body")]
     public partial class RevisionState : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3935,7 +3759,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.SheetXluid" /> <c>&lt;xr:sheetUid></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:refmap")]
     public partial class RefMap : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3998,7 +3821,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:rowColVisualOps.</para>
     /// </summary>
-    [SchemaAttr("xr:rowColVisualOps")]
     public partial class RowColVisualOps : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4012,7 +3834,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>action, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: action</para>
         /// </summary>
-        [SchemaAttr("action")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOp>? Action
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOp>>();
@@ -4023,7 +3844,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>isRow, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: isRow</para>
         /// </summary>
-        [SchemaAttr("isRow")]
         public BooleanValue? IsRow
         {
             get => GetAttribute<BooleanValue>();
@@ -4034,7 +3854,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>size, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public UInt32Value? Size
         {
             get => GetAttribute<UInt32Value>();
@@ -4045,7 +3864,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>userSized, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: userSized</para>
         /// </summary>
-        [SchemaAttr("userSized")]
         public BooleanValue? UserSized
         {
             get => GetAttribute<BooleanValue>();
@@ -4079,7 +3897,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hideUnhideSheet.</para>
     /// </summary>
-    [SchemaAttr("xr:hideUnhideSheet")]
     public partial class HideUnhideSheet : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4093,7 +3910,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>hide, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: hide</para>
         /// </summary>
-        [SchemaAttr("hide")]
         public BooleanValue? Hide
         {
             get => GetAttribute<BooleanValue>();
@@ -4121,7 +3937,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:showGridlinesHeadings.</para>
     /// </summary>
-    [SchemaAttr("xr:showGridlinesHeadings")]
     public partial class ShowGridlinesHeadings : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4135,7 +3950,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showGridLines, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: showGridLines</para>
         /// </summary>
-        [SchemaAttr("showGridLines")]
         public BooleanValue? ShowGridLines
         {
             get => GetAttribute<BooleanValue>();
@@ -4146,7 +3960,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showRowCol, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: showRowCol</para>
         /// </summary>
-        [SchemaAttr("showRowCol")]
         public BooleanValue? ShowRowCol
         {
             get => GetAttribute<BooleanValue>();
@@ -4178,7 +3991,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:freezePanes.</para>
     /// </summary>
-    [SchemaAttr("xr:freezePanes")]
     public partial class FreezePanes : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4192,7 +4004,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sheetViewUid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: sheetViewUid</para>
         /// </summary>
-        [SchemaAttr("sheetViewUid")]
         public StringValue? SheetViewUid
         {
             get => GetAttribute<StringValue>();
@@ -4226,7 +4037,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.Outline" /> <c>&lt;xr:outline></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:outlines")]
     public partial class Outlines : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4264,7 +4074,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>isRow, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: isRow</para>
         /// </summary>
-        [SchemaAttr("isRow")]
         public BooleanValue? IsRow
         {
             get => GetAttribute<BooleanValue>();
@@ -4297,7 +4106,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:outline.</para>
     /// </summary>
-    [SchemaAttr("xr:outline")]
     public partial class Outline : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4311,7 +4119,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>isCollapsed, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: isCollapsed</para>
         /// </summary>
-        [SchemaAttr("isCollapsed")]
         public BooleanValue? IsCollapsed
         {
             get => GetAttribute<BooleanValue>();
@@ -4322,7 +4129,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>level, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: level</para>
         /// </summary>
-        [SchemaAttr("level")]
         public ByteValue? Level
         {
             get => GetAttribute<ByteValue>();
@@ -4354,7 +4160,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:v.</para>
     /// </summary>
-    [SchemaAttr("xr:v")]
     public partial class Xstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -4402,7 +4207,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:is")]
     public partial class RstType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4476,7 +4280,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:ref.</para>
     /// </summary>
-    [SchemaAttr("xr:ref")]
     public partial class RefCell : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4490,7 +4293,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>n, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [SchemaAttr("n")]
         public StringValue? N
         {
             get => GetAttribute<StringValue>();
@@ -4501,7 +4303,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ajt, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ajt</para>
         /// </summary>
-        [SchemaAttr("ajt")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>? Ajt
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>>();
@@ -4512,7 +4313,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ajtx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ajtx</para>
         /// </summary>
-        [SchemaAttr("ajtx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>? Ajtx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>>();
@@ -4523,7 +4323,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>homeRef, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: homeRef</para>
         /// </summary>
-        [SchemaAttr("homeRef")]
         public BooleanValue? HomeRef
         {
             get => GetAttribute<BooleanValue>();
@@ -4534,7 +4333,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>r, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr("r")]
         public ListValue<StringValue>? R
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -4545,7 +4343,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -4556,7 +4353,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uidLast, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uidLast</para>
         /// </summary>
-        [SchemaAttr("uidLast")]
         public StringValue? UidLast
         {
             get => GetAttribute<StringValue>();
@@ -4602,7 +4398,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:sheetUid.</para>
     /// </summary>
-    [SchemaAttr("xr:sheetUid")]
     public partial class SheetXluid : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4616,7 +4411,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>n, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [SchemaAttr("n")]
         public StringValue? N
         {
             get => GetAttribute<StringValue>();
@@ -4627,7 +4421,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ajt, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ajt</para>
         /// </summary>
-        [SchemaAttr("ajt")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>? Ajt
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>>();
@@ -4638,7 +4431,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ajtx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ajtx</para>
         /// </summary>
-        [SchemaAttr("ajtx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>? Ajtx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>>();
@@ -4649,7 +4441,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>homeRef, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: homeRef</para>
         /// </summary>
-        [SchemaAttr("homeRef")]
         public BooleanValue? HomeRef
         {
             get => GetAttribute<BooleanValue>();
@@ -4660,7 +4451,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>uid, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: uid</para>
         /// </summary>
-        [SchemaAttr("uid")]
         public StringValue? Uid
         {
             get => GetAttribute<StringValue>();
@@ -4699,7 +4489,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:oartAnchor.</para>
     /// </summary>
-    [SchemaAttr("xr:oartAnchor")]
     public partial class RefOartAnchor : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4713,7 +4502,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>n, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [SchemaAttr("n")]
         public StringValue? N
         {
             get => GetAttribute<StringValue>();
@@ -4724,7 +4512,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ajt, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ajt</para>
         /// </summary>
-        [SchemaAttr("ajt")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>? Ajt
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>>();
@@ -4735,7 +4522,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ajtx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ajtx</para>
         /// </summary>
-        [SchemaAttr("ajtx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>? Ajtx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>>();
@@ -4746,7 +4532,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>homeRef, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: homeRef</para>
         /// </summary>
-        [SchemaAttr("homeRef")]
         public BooleanValue? HomeRef
         {
             get => GetAttribute<BooleanValue>();
@@ -4757,7 +4542,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>r, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr("r")]
         public StringValue? R
         {
             get => GetAttribute<StringValue>();
@@ -4768,7 +4552,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>fromRowOff, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: fromRowOff</para>
         /// </summary>
-        [SchemaAttr("fromRowOff")]
         public Int64Value? FromRowOff
         {
             get => GetAttribute<Int64Value>();
@@ -4779,7 +4562,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>fromColOff, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: fromColOff</para>
         /// </summary>
-        [SchemaAttr("fromColOff")]
         public Int64Value? FromColOff
         {
             get => GetAttribute<Int64Value>();
@@ -4790,7 +4572,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>toRowOff, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: toRowOff</para>
         /// </summary>
-        [SchemaAttr("toRowOff")]
         public Int64Value? ToRowOff
         {
             get => GetAttribute<Int64Value>();
@@ -4801,7 +4582,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>toColOff, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: toColOff</para>
         /// </summary>
-        [SchemaAttr("toColOff")]
         public Int64Value? ToColOff
         {
             get => GetAttribute<Int64Value>();
@@ -4812,7 +4592,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>cx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        [SchemaAttr("cx")]
         public Int64Value? Cx
         {
             get => GetAttribute<Int64Value>();
@@ -4823,7 +4602,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>cy, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        [SchemaAttr("cy")]
         public Int64Value? Cy
         {
             get => GetAttribute<Int64Value>();
@@ -4834,7 +4612,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>x, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [SchemaAttr("x")]
         public Int64Value? X
         {
             get => GetAttribute<Int64Value>();
@@ -4845,7 +4622,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>y, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        [SchemaAttr("y")]
         public Int64Value? Y
         {
             get => GetAttribute<Int64Value>();
@@ -4856,7 +4632,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>oat, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: oat</para>
         /// </summary>
-        [SchemaAttr("oat")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.OartAnchorType>? Oat
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.OartAnchorType>>();
@@ -4927,7 +4702,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:future.</para>
     /// </summary>
-    [SchemaAttr("xr:future")]
     public partial class RefFuture : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4953,7 +4727,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:test.</para>
     /// </summary>
-    [SchemaAttr("xr:test")]
     public partial class RefTest : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4967,7 +4740,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>n, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [SchemaAttr("n")]
         public StringValue? N
         {
             get => GetAttribute<StringValue>();
@@ -4978,7 +4750,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ajt, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ajt</para>
         /// </summary>
-        [SchemaAttr("ajt")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>? Ajt
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>>();
@@ -4989,7 +4760,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ajtx, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: ajtx</para>
         /// </summary>
-        [SchemaAttr("ajtx")]
         public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>? Ajtx
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>>();
@@ -5000,7 +4770,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>homeRef, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: homeRef</para>
         /// </summary>
-        [SchemaAttr("homeRef")]
         public BooleanValue? HomeRef
         {
             get => GetAttribute<BooleanValue>();
@@ -5042,7 +4811,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.ExcelAc.List" /> <c>&lt;x12ac:list></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:dataValidation")]
     public partial class DataValidation : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5080,7 +4848,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>>();
@@ -5091,7 +4858,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>errorStyle</para>
         /// <para>Represents the following attribute in the schema: errorStyle</para>
         /// </summary>
-        [SchemaAttr("errorStyle")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>? ErrorStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>>();
@@ -5102,7 +4868,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>imeMode</para>
         /// <para>Represents the following attribute in the schema: imeMode</para>
         /// </summary>
-        [SchemaAttr("imeMode")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>? ImeMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>>();
@@ -5113,7 +4878,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>operator</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        [SchemaAttr("operator")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>? Operator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>>();
@@ -5124,7 +4888,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>allowBlank</para>
         /// <para>Represents the following attribute in the schema: allowBlank</para>
         /// </summary>
-        [SchemaAttr("allowBlank")]
         public BooleanValue? AllowBlank
         {
             get => GetAttribute<BooleanValue>();
@@ -5135,7 +4898,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showDropDown</para>
         /// <para>Represents the following attribute in the schema: showDropDown</para>
         /// </summary>
-        [SchemaAttr("showDropDown")]
         public BooleanValue? ShowDropDown
         {
             get => GetAttribute<BooleanValue>();
@@ -5146,7 +4908,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showInputMessage</para>
         /// <para>Represents the following attribute in the schema: showInputMessage</para>
         /// </summary>
-        [SchemaAttr("showInputMessage")]
         public BooleanValue? ShowInputMessage
         {
             get => GetAttribute<BooleanValue>();
@@ -5157,7 +4918,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showErrorMessage</para>
         /// <para>Represents the following attribute in the schema: showErrorMessage</para>
         /// </summary>
-        [SchemaAttr("showErrorMessage")]
         public BooleanValue? ShowErrorMessage
         {
             get => GetAttribute<BooleanValue>();
@@ -5168,7 +4928,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>errorTitle</para>
         /// <para>Represents the following attribute in the schema: errorTitle</para>
         /// </summary>
-        [SchemaAttr("errorTitle")]
         public StringValue? ErrorTitle
         {
             get => GetAttribute<StringValue>();
@@ -5179,7 +4938,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>error</para>
         /// <para>Represents the following attribute in the schema: error</para>
         /// </summary>
-        [SchemaAttr("error")]
         public StringValue? Error
         {
             get => GetAttribute<StringValue>();
@@ -5190,7 +4948,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>promptTitle</para>
         /// <para>Represents the following attribute in the schema: promptTitle</para>
         /// </summary>
-        [SchemaAttr("promptTitle")]
         public StringValue? PromptTitle
         {
             get => GetAttribute<StringValue>();
@@ -5201,7 +4958,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>prompt</para>
         /// <para>Represents the following attribute in the schema: prompt</para>
         /// </summary>
-        [SchemaAttr("prompt")]
         public StringValue? Prompt
         {
             get => GetAttribute<StringValue>();
@@ -5212,7 +4968,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>sqref</para>
         /// <para>Represents the following attribute in the schema: sqref</para>
         /// </summary>
-        [SchemaAttr("sqref")]
         public ListValue<StringValue>? SequenceOfReferences
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -5300,7 +5055,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hyperlink.</para>
     /// </summary>
-    [SchemaAttr("xr:hyperlink")]
     public partial class Hyperlink : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5314,7 +5068,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
@@ -5328,7 +5081,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -5339,7 +5091,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Location</para>
         /// <para>Represents the following attribute in the schema: location</para>
         /// </summary>
-        [SchemaAttr("location")]
         public StringValue? Location
         {
             get => GetAttribute<StringValue>();
@@ -5350,7 +5101,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Tool Tip</para>
         /// <para>Represents the following attribute in the schema: tooltip</para>
         /// </summary>
-        [SchemaAttr("tooltip")]
         public StringValue? Tooltip
         {
             get => GetAttribute<StringValue>();
@@ -5361,7 +5111,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Display String</para>
         /// <para>Represents the following attribute in the schema: display</para>
         /// </summary>
-        [SchemaAttr("display")]
         public StringValue? Display
         {
             get => GetAttribute<StringValue>();
@@ -5408,7 +5157,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Sparklines" /> <c>&lt;x14:sparklines></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:sparklineGroup")]
     public partial class SparklineGroup : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5446,7 +5194,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>manualMax, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: manualMax</para>
         /// </summary>
-        [SchemaAttr("manualMax")]
         public DoubleValue? ManualMax
         {
             get => GetAttribute<DoubleValue>();
@@ -5457,7 +5204,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>manualMin, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: manualMin</para>
         /// </summary>
-        [SchemaAttr("manualMin")]
         public DoubleValue? ManualMin
         {
             get => GetAttribute<DoubleValue>();
@@ -5468,7 +5214,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>lineWeight, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: lineWeight</para>
         /// </summary>
-        [SchemaAttr("lineWeight")]
         public DoubleValue? LineWeight
         {
             get => GetAttribute<DoubleValue>();
@@ -5479,7 +5224,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>type, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues>>();
@@ -5490,7 +5234,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>dateAxis, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dateAxis</para>
         /// </summary>
-        [SchemaAttr("dateAxis")]
         public BooleanValue? DateAxis
         {
             get => GetAttribute<BooleanValue>();
@@ -5501,7 +5244,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>displayEmptyCellsAs, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: displayEmptyCellsAs</para>
         /// </summary>
-        [SchemaAttr("displayEmptyCellsAs")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues>? DisplayEmptyCellsAs
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues>>();
@@ -5512,7 +5254,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>markers, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: markers</para>
         /// </summary>
-        [SchemaAttr("markers")]
         public BooleanValue? Markers
         {
             get => GetAttribute<BooleanValue>();
@@ -5523,7 +5264,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>high, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: high</para>
         /// </summary>
-        [SchemaAttr("high")]
         public BooleanValue? High
         {
             get => GetAttribute<BooleanValue>();
@@ -5534,7 +5274,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>low, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: low</para>
         /// </summary>
-        [SchemaAttr("low")]
         public BooleanValue? Low
         {
             get => GetAttribute<BooleanValue>();
@@ -5545,7 +5284,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>first, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: first</para>
         /// </summary>
-        [SchemaAttr("first")]
         public BooleanValue? First
         {
             get => GetAttribute<BooleanValue>();
@@ -5556,7 +5294,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>last, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: last</para>
         /// </summary>
-        [SchemaAttr("last")]
         public BooleanValue? Last
         {
             get => GetAttribute<BooleanValue>();
@@ -5567,7 +5304,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>negative, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: negative</para>
         /// </summary>
-        [SchemaAttr("negative")]
         public BooleanValue? Negative
         {
             get => GetAttribute<BooleanValue>();
@@ -5578,7 +5314,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>displayXAxis, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: displayXAxis</para>
         /// </summary>
-        [SchemaAttr("displayXAxis")]
         public BooleanValue? DisplayXAxis
         {
             get => GetAttribute<BooleanValue>();
@@ -5589,7 +5324,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>displayHidden, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: displayHidden</para>
         /// </summary>
-        [SchemaAttr("displayHidden")]
         public BooleanValue? DisplayHidden
         {
             get => GetAttribute<BooleanValue>();
@@ -5600,7 +5334,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>minAxisType, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: minAxisType</para>
         /// </summary>
-        [SchemaAttr("minAxisType")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>? MinAxisType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>>();
@@ -5611,7 +5344,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>maxAxisType, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: maxAxisType</para>
         /// </summary>
-        [SchemaAttr("maxAxisType")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>? MaxAxisType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>>();
@@ -5622,7 +5354,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rightToLeft, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: rightToLeft</para>
         /// </summary>
-        [SchemaAttr("rightToLeft")]
         public BooleanValue? RightToLeft
         {
             get => GetAttribute<BooleanValue>();
@@ -5824,7 +5555,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:comments")]
     public partial class Comments : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5930,7 +5660,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:autoFilter")]
     public partial class AutoFilter : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5968,7 +5697,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Cell or Range Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
@@ -6024,7 +5752,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItems" /> <c>&lt;x:rowItems></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xr:pivotTableDefinition")]
     public partial class pivotTableDefinition : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6062,7 +5789,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -6073,7 +5799,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>cacheId</para>
         /// <para>Represents the following attribute in the schema: cacheId</para>
         /// </summary>
-        [SchemaAttr("cacheId")]
         public UInt32Value? CacheId
         {
             get => GetAttribute<UInt32Value>();
@@ -6084,7 +5809,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>dataOnRows</para>
         /// <para>Represents the following attribute in the schema: dataOnRows</para>
         /// </summary>
-        [SchemaAttr("dataOnRows")]
         public BooleanValue? DataOnRows
         {
             get => GetAttribute<BooleanValue>();
@@ -6095,7 +5819,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>dataPosition</para>
         /// <para>Represents the following attribute in the schema: dataPosition</para>
         /// </summary>
-        [SchemaAttr("dataPosition")]
         public UInt32Value? DataPosition
         {
             get => GetAttribute<UInt32Value>();
@@ -6106,7 +5829,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Auto Format Id</para>
         /// <para>Represents the following attribute in the schema: autoFormatId</para>
         /// </summary>
-        [SchemaAttr("autoFormatId")]
         public UInt32Value? AutoFormatId
         {
             get => GetAttribute<UInt32Value>();
@@ -6117,7 +5839,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Apply Number Formats</para>
         /// <para>Represents the following attribute in the schema: applyNumberFormats</para>
         /// </summary>
-        [SchemaAttr("applyNumberFormats")]
         public BooleanValue? ApplyNumberFormats
         {
             get => GetAttribute<BooleanValue>();
@@ -6128,7 +5849,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Apply Border Formats</para>
         /// <para>Represents the following attribute in the schema: applyBorderFormats</para>
         /// </summary>
-        [SchemaAttr("applyBorderFormats")]
         public BooleanValue? ApplyBorderFormats
         {
             get => GetAttribute<BooleanValue>();
@@ -6139,7 +5859,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Apply Font Formats</para>
         /// <para>Represents the following attribute in the schema: applyFontFormats</para>
         /// </summary>
-        [SchemaAttr("applyFontFormats")]
         public BooleanValue? ApplyFontFormats
         {
             get => GetAttribute<BooleanValue>();
@@ -6150,7 +5869,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Apply Pattern Formats</para>
         /// <para>Represents the following attribute in the schema: applyPatternFormats</para>
         /// </summary>
-        [SchemaAttr("applyPatternFormats")]
         public BooleanValue? ApplyPatternFormats
         {
             get => GetAttribute<BooleanValue>();
@@ -6161,7 +5879,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Apply Alignment Formats</para>
         /// <para>Represents the following attribute in the schema: applyAlignmentFormats</para>
         /// </summary>
-        [SchemaAttr("applyAlignmentFormats")]
         public BooleanValue? ApplyAlignmentFormats
         {
             get => GetAttribute<BooleanValue>();
@@ -6172,7 +5889,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Apply Width / Height Formats</para>
         /// <para>Represents the following attribute in the schema: applyWidthHeightFormats</para>
         /// </summary>
-        [SchemaAttr("applyWidthHeightFormats")]
         public BooleanValue? ApplyWidthHeightFormats
         {
             get => GetAttribute<BooleanValue>();
@@ -6183,7 +5899,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>dataCaption</para>
         /// <para>Represents the following attribute in the schema: dataCaption</para>
         /// </summary>
-        [SchemaAttr("dataCaption")]
         public StringValue? DataCaption
         {
             get => GetAttribute<StringValue>();
@@ -6194,7 +5909,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>grandTotalCaption</para>
         /// <para>Represents the following attribute in the schema: grandTotalCaption</para>
         /// </summary>
-        [SchemaAttr("grandTotalCaption")]
         public StringValue? GrandTotalCaption
         {
             get => GetAttribute<StringValue>();
@@ -6205,7 +5919,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>errorCaption</para>
         /// <para>Represents the following attribute in the schema: errorCaption</para>
         /// </summary>
-        [SchemaAttr("errorCaption")]
         public StringValue? ErrorCaption
         {
             get => GetAttribute<StringValue>();
@@ -6216,7 +5929,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showError</para>
         /// <para>Represents the following attribute in the schema: showError</para>
         /// </summary>
-        [SchemaAttr("showError")]
         public BooleanValue? ShowError
         {
             get => GetAttribute<BooleanValue>();
@@ -6227,7 +5939,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>missingCaption</para>
         /// <para>Represents the following attribute in the schema: missingCaption</para>
         /// </summary>
-        [SchemaAttr("missingCaption")]
         public StringValue? MissingCaption
         {
             get => GetAttribute<StringValue>();
@@ -6238,7 +5949,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showMissing</para>
         /// <para>Represents the following attribute in the schema: showMissing</para>
         /// </summary>
-        [SchemaAttr("showMissing")]
         public BooleanValue? ShowMissing
         {
             get => GetAttribute<BooleanValue>();
@@ -6249,7 +5959,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>pageStyle</para>
         /// <para>Represents the following attribute in the schema: pageStyle</para>
         /// </summary>
-        [SchemaAttr("pageStyle")]
         public StringValue? PageStyle
         {
             get => GetAttribute<StringValue>();
@@ -6260,7 +5969,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>pivotTableStyle</para>
         /// <para>Represents the following attribute in the schema: pivotTableStyle</para>
         /// </summary>
-        [SchemaAttr("pivotTableStyle")]
         public StringValue? PivotTableStyleName
         {
             get => GetAttribute<StringValue>();
@@ -6271,7 +5979,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>vacatedStyle</para>
         /// <para>Represents the following attribute in the schema: vacatedStyle</para>
         /// </summary>
-        [SchemaAttr("vacatedStyle")]
         public StringValue? VacatedStyle
         {
             get => GetAttribute<StringValue>();
@@ -6282,7 +5989,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        [SchemaAttr("tag")]
         public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
@@ -6293,7 +5999,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>updatedVersion</para>
         /// <para>Represents the following attribute in the schema: updatedVersion</para>
         /// </summary>
-        [SchemaAttr("updatedVersion")]
         public ByteValue? UpdatedVersion
         {
             get => GetAttribute<ByteValue>();
@@ -6304,7 +6009,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>minRefreshableVersion</para>
         /// <para>Represents the following attribute in the schema: minRefreshableVersion</para>
         /// </summary>
-        [SchemaAttr("minRefreshableVersion")]
         public ByteValue? MinRefreshableVersion
         {
             get => GetAttribute<ByteValue>();
@@ -6315,7 +6019,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>asteriskTotals</para>
         /// <para>Represents the following attribute in the schema: asteriskTotals</para>
         /// </summary>
-        [SchemaAttr("asteriskTotals")]
         public BooleanValue? AsteriskTotals
         {
             get => GetAttribute<BooleanValue>();
@@ -6326,7 +6029,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showItems</para>
         /// <para>Represents the following attribute in the schema: showItems</para>
         /// </summary>
-        [SchemaAttr("showItems")]
         public BooleanValue? ShowItems
         {
             get => GetAttribute<BooleanValue>();
@@ -6337,7 +6039,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>editData</para>
         /// <para>Represents the following attribute in the schema: editData</para>
         /// </summary>
-        [SchemaAttr("editData")]
         public BooleanValue? EditData
         {
             get => GetAttribute<BooleanValue>();
@@ -6348,7 +6049,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>disableFieldList</para>
         /// <para>Represents the following attribute in the schema: disableFieldList</para>
         /// </summary>
-        [SchemaAttr("disableFieldList")]
         public BooleanValue? DisableFieldList
         {
             get => GetAttribute<BooleanValue>();
@@ -6359,7 +6059,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showCalcMbrs</para>
         /// <para>Represents the following attribute in the schema: showCalcMbrs</para>
         /// </summary>
-        [SchemaAttr("showCalcMbrs")]
         public BooleanValue? ShowCalculatedMembers
         {
             get => GetAttribute<BooleanValue>();
@@ -6370,7 +6069,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>visualTotals</para>
         /// <para>Represents the following attribute in the schema: visualTotals</para>
         /// </summary>
-        [SchemaAttr("visualTotals")]
         public BooleanValue? VisualTotals
         {
             get => GetAttribute<BooleanValue>();
@@ -6381,7 +6079,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showMultipleLabel</para>
         /// <para>Represents the following attribute in the schema: showMultipleLabel</para>
         /// </summary>
-        [SchemaAttr("showMultipleLabel")]
         public BooleanValue? ShowMultipleLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -6392,7 +6089,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showDataDropDown</para>
         /// <para>Represents the following attribute in the schema: showDataDropDown</para>
         /// </summary>
-        [SchemaAttr("showDataDropDown")]
         public BooleanValue? ShowDataDropDown
         {
             get => GetAttribute<BooleanValue>();
@@ -6403,7 +6099,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showDrill</para>
         /// <para>Represents the following attribute in the schema: showDrill</para>
         /// </summary>
-        [SchemaAttr("showDrill")]
         public BooleanValue? ShowDrill
         {
             get => GetAttribute<BooleanValue>();
@@ -6414,7 +6109,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>printDrill</para>
         /// <para>Represents the following attribute in the schema: printDrill</para>
         /// </summary>
-        [SchemaAttr("printDrill")]
         public BooleanValue? PrintDrill
         {
             get => GetAttribute<BooleanValue>();
@@ -6425,7 +6119,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showMemberPropertyTips</para>
         /// <para>Represents the following attribute in the schema: showMemberPropertyTips</para>
         /// </summary>
-        [SchemaAttr("showMemberPropertyTips")]
         public BooleanValue? ShowMemberPropertyTips
         {
             get => GetAttribute<BooleanValue>();
@@ -6436,7 +6129,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showDataTips</para>
         /// <para>Represents the following attribute in the schema: showDataTips</para>
         /// </summary>
-        [SchemaAttr("showDataTips")]
         public BooleanValue? ShowDataTips
         {
             get => GetAttribute<BooleanValue>();
@@ -6447,7 +6139,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>enableWizard</para>
         /// <para>Represents the following attribute in the schema: enableWizard</para>
         /// </summary>
-        [SchemaAttr("enableWizard")]
         public BooleanValue? EnableWizard
         {
             get => GetAttribute<BooleanValue>();
@@ -6458,7 +6149,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>enableDrill</para>
         /// <para>Represents the following attribute in the schema: enableDrill</para>
         /// </summary>
-        [SchemaAttr("enableDrill")]
         public BooleanValue? EnableDrill
         {
             get => GetAttribute<BooleanValue>();
@@ -6469,7 +6159,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>enableFieldProperties</para>
         /// <para>Represents the following attribute in the schema: enableFieldProperties</para>
         /// </summary>
-        [SchemaAttr("enableFieldProperties")]
         public BooleanValue? EnableFieldProperties
         {
             get => GetAttribute<BooleanValue>();
@@ -6480,7 +6169,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>preserveFormatting</para>
         /// <para>Represents the following attribute in the schema: preserveFormatting</para>
         /// </summary>
-        [SchemaAttr("preserveFormatting")]
         public BooleanValue? PreserveFormatting
         {
             get => GetAttribute<BooleanValue>();
@@ -6491,7 +6179,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>useAutoFormatting</para>
         /// <para>Represents the following attribute in the schema: useAutoFormatting</para>
         /// </summary>
-        [SchemaAttr("useAutoFormatting")]
         public BooleanValue? UseAutoFormatting
         {
             get => GetAttribute<BooleanValue>();
@@ -6502,7 +6189,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>pageWrap</para>
         /// <para>Represents the following attribute in the schema: pageWrap</para>
         /// </summary>
-        [SchemaAttr("pageWrap")]
         public UInt32Value? PageWrap
         {
             get => GetAttribute<UInt32Value>();
@@ -6513,7 +6199,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>pageOverThenDown</para>
         /// <para>Represents the following attribute in the schema: pageOverThenDown</para>
         /// </summary>
-        [SchemaAttr("pageOverThenDown")]
         public BooleanValue? PageOverThenDown
         {
             get => GetAttribute<BooleanValue>();
@@ -6524,7 +6209,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>subtotalHiddenItems</para>
         /// <para>Represents the following attribute in the schema: subtotalHiddenItems</para>
         /// </summary>
-        [SchemaAttr("subtotalHiddenItems")]
         public BooleanValue? SubtotalHiddenItems
         {
             get => GetAttribute<BooleanValue>();
@@ -6535,7 +6219,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rowGrandTotals</para>
         /// <para>Represents the following attribute in the schema: rowGrandTotals</para>
         /// </summary>
-        [SchemaAttr("rowGrandTotals")]
         public BooleanValue? RowGrandTotals
         {
             get => GetAttribute<BooleanValue>();
@@ -6546,7 +6229,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>colGrandTotals</para>
         /// <para>Represents the following attribute in the schema: colGrandTotals</para>
         /// </summary>
-        [SchemaAttr("colGrandTotals")]
         public BooleanValue? ColumnGrandTotals
         {
             get => GetAttribute<BooleanValue>();
@@ -6557,7 +6239,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>fieldPrintTitles</para>
         /// <para>Represents the following attribute in the schema: fieldPrintTitles</para>
         /// </summary>
-        [SchemaAttr("fieldPrintTitles")]
         public BooleanValue? FieldPrintTitles
         {
             get => GetAttribute<BooleanValue>();
@@ -6568,7 +6249,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>itemPrintTitles</para>
         /// <para>Represents the following attribute in the schema: itemPrintTitles</para>
         /// </summary>
-        [SchemaAttr("itemPrintTitles")]
         public BooleanValue? ItemPrintTitles
         {
             get => GetAttribute<BooleanValue>();
@@ -6579,7 +6259,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>mergeItem</para>
         /// <para>Represents the following attribute in the schema: mergeItem</para>
         /// </summary>
-        [SchemaAttr("mergeItem")]
         public BooleanValue? MergeItem
         {
             get => GetAttribute<BooleanValue>();
@@ -6590,7 +6269,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showDropZones</para>
         /// <para>Represents the following attribute in the schema: showDropZones</para>
         /// </summary>
-        [SchemaAttr("showDropZones")]
         public BooleanValue? ShowDropZones
         {
             get => GetAttribute<BooleanValue>();
@@ -6601,7 +6279,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>createdVersion</para>
         /// <para>Represents the following attribute in the schema: createdVersion</para>
         /// </summary>
-        [SchemaAttr("createdVersion")]
         public ByteValue? CreatedVersion
         {
             get => GetAttribute<ByteValue>();
@@ -6612,7 +6289,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>indent</para>
         /// <para>Represents the following attribute in the schema: indent</para>
         /// </summary>
-        [SchemaAttr("indent")]
         public UInt32Value? Indent
         {
             get => GetAttribute<UInt32Value>();
@@ -6623,7 +6299,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showEmptyRow</para>
         /// <para>Represents the following attribute in the schema: showEmptyRow</para>
         /// </summary>
-        [SchemaAttr("showEmptyRow")]
         public BooleanValue? ShowEmptyRow
         {
             get => GetAttribute<BooleanValue>();
@@ -6634,7 +6309,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showEmptyCol</para>
         /// <para>Represents the following attribute in the schema: showEmptyCol</para>
         /// </summary>
-        [SchemaAttr("showEmptyCol")]
         public BooleanValue? ShowEmptyColumn
         {
             get => GetAttribute<BooleanValue>();
@@ -6645,7 +6319,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>showHeaders</para>
         /// <para>Represents the following attribute in the schema: showHeaders</para>
         /// </summary>
-        [SchemaAttr("showHeaders")]
         public BooleanValue? ShowHeaders
         {
             get => GetAttribute<BooleanValue>();
@@ -6656,7 +6329,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>compact</para>
         /// <para>Represents the following attribute in the schema: compact</para>
         /// </summary>
-        [SchemaAttr("compact")]
         public BooleanValue? Compact
         {
             get => GetAttribute<BooleanValue>();
@@ -6667,7 +6339,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>outline</para>
         /// <para>Represents the following attribute in the schema: outline</para>
         /// </summary>
-        [SchemaAttr("outline")]
         public BooleanValue? Outline
         {
             get => GetAttribute<BooleanValue>();
@@ -6678,7 +6349,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>outlineData</para>
         /// <para>Represents the following attribute in the schema: outlineData</para>
         /// </summary>
-        [SchemaAttr("outlineData")]
         public BooleanValue? OutlineData
         {
             get => GetAttribute<BooleanValue>();
@@ -6689,7 +6359,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>compactData</para>
         /// <para>Represents the following attribute in the schema: compactData</para>
         /// </summary>
-        [SchemaAttr("compactData")]
         public BooleanValue? CompactData
         {
             get => GetAttribute<BooleanValue>();
@@ -6700,7 +6369,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>published</para>
         /// <para>Represents the following attribute in the schema: published</para>
         /// </summary>
-        [SchemaAttr("published")]
         public BooleanValue? Published
         {
             get => GetAttribute<BooleanValue>();
@@ -6711,7 +6379,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>gridDropZones</para>
         /// <para>Represents the following attribute in the schema: gridDropZones</para>
         /// </summary>
-        [SchemaAttr("gridDropZones")]
         public BooleanValue? GridDropZones
         {
             get => GetAttribute<BooleanValue>();
@@ -6722,7 +6389,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>immersive</para>
         /// <para>Represents the following attribute in the schema: immersive</para>
         /// </summary>
-        [SchemaAttr("immersive")]
         public BooleanValue? StopImmersiveUi
         {
             get => GetAttribute<BooleanValue>();
@@ -6733,7 +6399,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>multipleFieldFilters</para>
         /// <para>Represents the following attribute in the schema: multipleFieldFilters</para>
         /// </summary>
-        [SchemaAttr("multipleFieldFilters")]
         public BooleanValue? MultipleFieldFilters
         {
             get => GetAttribute<BooleanValue>();
@@ -6744,7 +6409,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>chartFormat</para>
         /// <para>Represents the following attribute in the schema: chartFormat</para>
         /// </summary>
-        [SchemaAttr("chartFormat")]
         public UInt32Value? ChartFormat
         {
             get => GetAttribute<UInt32Value>();
@@ -6755,7 +6419,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>rowHeaderCaption</para>
         /// <para>Represents the following attribute in the schema: rowHeaderCaption</para>
         /// </summary>
-        [SchemaAttr("rowHeaderCaption")]
         public StringValue? RowHeaderCaption
         {
             get => GetAttribute<StringValue>();
@@ -6766,7 +6429,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>colHeaderCaption</para>
         /// <para>Represents the following attribute in the schema: colHeaderCaption</para>
         /// </summary>
-        [SchemaAttr("colHeaderCaption")]
         public StringValue? ColumnHeaderCaption
         {
             get => GetAttribute<StringValue>();
@@ -6777,7 +6439,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>fieldListSortAscending</para>
         /// <para>Represents the following attribute in the schema: fieldListSortAscending</para>
         /// </summary>
-        [SchemaAttr("fieldListSortAscending")]
         public BooleanValue? FieldListSortAscending
         {
             get => GetAttribute<BooleanValue>();
@@ -6788,7 +6449,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>mdxSubqueries</para>
         /// <para>Represents the following attribute in the schema: mdxSubqueries</para>
         /// </summary>
-        [SchemaAttr("mdxSubqueries")]
         public BooleanValue? MdxSubqueries
         {
             get => GetAttribute<BooleanValue>();
@@ -6799,7 +6459,6 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>customListSort</para>
         /// <para>Represents the following attribute in the schema: customListSort</para>
         /// </summary>
-        [SchemaAttr("customListSort")]
         public BooleanValue? CustomListSort
         {
             get => GetAttribute<BooleanValue>();

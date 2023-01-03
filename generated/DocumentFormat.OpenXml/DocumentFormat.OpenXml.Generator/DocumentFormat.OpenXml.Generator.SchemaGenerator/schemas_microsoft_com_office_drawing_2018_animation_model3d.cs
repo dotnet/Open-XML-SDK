@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -32,7 +30,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties" /> <c>&lt;a3danim:animPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a3danim:embedAnim")]
     public partial class EmbeddedAnimation : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -70,7 +67,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>animId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: animId</para>
         /// </summary>
-        [SchemaAttr("animId")]
         public UInt32Value? AnimId
         {
             get => GetAttribute<UInt32Value>();
@@ -131,7 +127,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a3danim:posterFrame.</para>
     /// </summary>
-    [SchemaAttr("a3danim:posterFrame")]
     public partial class PosterFrame : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -145,7 +140,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>animId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: animId</para>
         /// </summary>
-        [SchemaAttr("animId")]
         public UInt32Value? AnimId
         {
             get => GetAttribute<UInt32Value>();
@@ -156,7 +150,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>frame, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: frame</para>
         /// </summary>
-        [SchemaAttr("frame")]
         public Int32Value? Frame
         {
             get => GetAttribute<Int32Value>();
@@ -194,7 +187,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a3danim:animPr")]
     public partial class AnimationProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -232,7 +224,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>name, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -243,7 +234,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>length, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-        [SchemaAttr("length")]
         public StringValue? Length
         {
             get => GetAttribute<StringValue>();
@@ -254,7 +244,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public StringValue? Count
         {
             get => GetAttribute<StringValue>();
@@ -265,7 +254,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>auto, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: auto</para>
         /// </summary>
-        [SchemaAttr("auto")]
         public BooleanValue? Auto
         {
             get => GetAttribute<BooleanValue>();
@@ -276,7 +264,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>offset, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: offset</para>
         /// </summary>
-        [SchemaAttr("offset")]
         public StringValue? Offset
         {
             get => GetAttribute<StringValue>();
@@ -287,7 +274,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>st, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [SchemaAttr("st")]
         public StringValue? St
         {
             get => GetAttribute<StringValue>();
@@ -298,7 +284,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>end, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-        [SchemaAttr("end")]
         public StringValue? End
         {
             get => GetAttribute<StringValue>();
@@ -363,7 +348,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a3danim:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>

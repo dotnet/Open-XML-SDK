@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -25,7 +23,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:cameraTool.</para>
     /// </summary>
-    [SchemaAttr("a14:cameraTool")]
     public partial class CameraTool : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -39,7 +36,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>cellRange, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: cellRange</para>
         /// </summary>
-        [SchemaAttr("cellRange")]
         public StringValue? CellRange
         {
             get => GetAttribute<StringValue>();
@@ -50,7 +46,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>spid, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [SchemaAttr("spid")]
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -77,7 +72,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:compatExt.</para>
     /// </summary>
-    [SchemaAttr("a14:compatExt")]
     public partial class CompatExtension : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -91,7 +85,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>spid, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [SchemaAttr("spid")]
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -117,7 +110,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:isCanvas.</para>
     /// </summary>
-    [SchemaAttr("a14:isCanvas")]
     public partial class IsCanvas : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -131,7 +123,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -167,7 +158,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties" /> <c>&lt;a14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:contentPart")]
     public partial class GvmlContentPart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -205,7 +195,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>bwMode, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -219,7 +208,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
@@ -299,7 +287,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:shadowObscured.</para>
     /// </summary>
-    [SchemaAttr("a14:shadowObscured")]
     public partial class ShadowObscured : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -313,7 +300,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -349,7 +335,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:hiddenFill")]
     public partial class HiddenFillProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -515,7 +500,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:hiddenLine")]
     public partial class HiddenLineProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -553,7 +537,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>line width</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        [SchemaAttr("w")]
         public Int32Value? Width
         {
             get => GetAttribute<Int32Value>();
@@ -564,7 +547,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>line cap</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
-        [SchemaAttr("cap")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues>? CapType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues>>();
@@ -575,7 +557,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>compound line type</para>
         /// <para>Represents the following attribute in the schema: cmpd</para>
         /// </summary>
-        [SchemaAttr("cmpd")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues>? CompoundLineType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues>>();
@@ -586,7 +567,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>pen alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
-        [SchemaAttr("algn")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues>? Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues>>();
@@ -678,7 +658,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:hiddenEffects")]
     public partial class HiddenEffectsProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -776,7 +755,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:hiddenScene3d")]
     public partial class HiddenScene3D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -899,7 +877,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:hiddenSp3d")]
     public partial class HiddenShape3D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -937,7 +914,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Shape Depth</para>
         /// <para>Represents the following attribute in the schema: z</para>
         /// </summary>
-        [SchemaAttr("z")]
         public Int64Value? Z
         {
             get => GetAttribute<Int64Value>();
@@ -948,7 +924,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Extrusion Height</para>
         /// <para>Represents the following attribute in the schema: extrusionH</para>
         /// </summary>
-        [SchemaAttr("extrusionH")]
         public Int64Value? ExtrusionHeight
         {
             get => GetAttribute<Int64Value>();
@@ -959,7 +934,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Contour Width</para>
         /// <para>Represents the following attribute in the schema: contourW</para>
         /// </summary>
-        [SchemaAttr("contourW")]
         public Int64Value? ContourWidth
         {
             get => GetAttribute<Int64Value>();
@@ -970,7 +944,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Preset Material Type</para>
         /// <para>Represents the following attribute in the schema: prstMaterial</para>
         /// </summary>
-        [SchemaAttr("prstMaterial")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>? PresetMaterial
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>();
@@ -1094,7 +1067,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer" /> <c>&lt;a14:imgLayer></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:imgProps")]
     public partial class ImageProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1162,7 +1134,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:useLocalDpi.</para>
     /// </summary>
-    [SchemaAttr("a14:useLocalDpi")]
     public partial class UseLocalDpi : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1176,7 +1147,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -1201,7 +1171,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:m.</para>
     /// </summary>
-    [SchemaAttr("a14:m")]
     public partial class TextMath : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1233,7 +1202,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:extLst")]
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1300,7 +1268,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:cpLocks")]
     public partial class ContentPartLocks : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1338,7 +1305,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Disallow Shape Grouping</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        [SchemaAttr("noGrp")]
         public BooleanValue? NoGrouping
         {
             get => GetAttribute<BooleanValue>();
@@ -1349,7 +1315,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Disallow Shape Selection</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        [SchemaAttr("noSelect")]
         public BooleanValue? NoSelection
         {
             get => GetAttribute<BooleanValue>();
@@ -1360,7 +1325,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Disallow Shape Rotation</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
-        [SchemaAttr("noRot")]
         public BooleanValue? NoRotation
         {
             get => GetAttribute<BooleanValue>();
@@ -1371,7 +1335,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Disallow Aspect Ratio Change</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        [SchemaAttr("noChangeAspect")]
         public BooleanValue? NoChangeAspect
         {
             get => GetAttribute<BooleanValue>();
@@ -1382,7 +1345,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Disallow Shape Movement</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        [SchemaAttr("noMove")]
         public BooleanValue? NoMove
         {
             get => GetAttribute<BooleanValue>();
@@ -1393,7 +1355,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Disallow Shape Resize</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        [SchemaAttr("noResize")]
         public BooleanValue? NoResize
         {
             get => GetAttribute<BooleanValue>();
@@ -1404,7 +1365,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Disallow Shape Point Editing</para>
         /// <para>Represents the following attribute in the schema: noEditPoints</para>
         /// </summary>
-        [SchemaAttr("noEditPoints")]
         public BooleanValue? NoEditPoints
         {
             get => GetAttribute<BooleanValue>();
@@ -1415,7 +1375,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Disallow Showing Adjust Handles</para>
         /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
         /// </summary>
-        [SchemaAttr("noAdjustHandles")]
         public BooleanValue? NoAdjustHandles
         {
             get => GetAttribute<BooleanValue>();
@@ -1426,7 +1385,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Disallow Arrowhead Changes</para>
         /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
         /// </summary>
-        [SchemaAttr("noChangeArrowheads")]
         public BooleanValue? NoChangeArrowheads
         {
             get => GetAttribute<BooleanValue>();
@@ -1437,7 +1395,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Disallow Shape Type Change</para>
         /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
         /// </summary>
-        [SchemaAttr("noChangeShapeType")]
         public BooleanValue? NoChangeShapeType
         {
             get => GetAttribute<BooleanValue>();
@@ -1489,7 +1446,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:foregroundMark.</para>
     /// </summary>
-    [SchemaAttr("a14:foregroundMark")]
     public partial class ForegroundMark : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1503,7 +1459,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>x1, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x1</para>
         /// </summary>
-        [SchemaAttr("x1")]
         public Int32Value? FirstXCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1514,7 +1469,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>y1, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: y1</para>
         /// </summary>
-        [SchemaAttr("y1")]
         public Int32Value? FirstYCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1525,7 +1479,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>x2, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x2</para>
         /// </summary>
-        [SchemaAttr("x2")]
         public Int32Value? SecondXCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1536,7 +1489,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>y2, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: y2</para>
         /// </summary>
-        [SchemaAttr("y2")]
         public Int32Value? SecondYCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1580,7 +1532,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:backgroundMark.</para>
     /// </summary>
-    [SchemaAttr("a14:backgroundMark")]
     public partial class BackgroundMark : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1594,7 +1545,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>x1, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x1</para>
         /// </summary>
-        [SchemaAttr("x1")]
         public Int32Value? FirstXCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1605,7 +1555,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>y1, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: y1</para>
         /// </summary>
-        [SchemaAttr("y1")]
         public Int32Value? FirstYCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1616,7 +1565,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>x2, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x2</para>
         /// </summary>
-        [SchemaAttr("x2")]
         public Int32Value? SecondXCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1627,7 +1575,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>y2, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: y2</para>
         /// </summary>
-        [SchemaAttr("y2")]
         public Int32Value? SecondYCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1671,7 +1618,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticBlur.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticBlur")]
     public partial class ArtisticBlur : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1685,7 +1631,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>radius, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: radius</para>
         /// </summary>
-        [SchemaAttr("radius")]
         public Int32Value? Radius
         {
             get => GetAttribute<Int32Value>();
@@ -1713,7 +1658,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticCement.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticCement")]
     public partial class ArtisticCement : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1727,7 +1671,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -1738,7 +1681,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>crackSpacing, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: crackSpacing</para>
         /// </summary>
-        [SchemaAttr("crackSpacing")]
         public Int32Value? CrackSpacing
         {
             get => GetAttribute<Int32Value>();
@@ -1770,7 +1712,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticChalkSketch.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticChalkSketch")]
     public partial class ArtisticChalkSketch : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1784,7 +1725,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -1795,7 +1735,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>pressure, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        [SchemaAttr("pressure")]
         public Int32Value? Pressure
         {
             get => GetAttribute<Int32Value>();
@@ -1827,7 +1766,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticCrisscrossEtching.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticCrisscrossEtching")]
     public partial class ArtisticCrisscrossEtching : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1841,7 +1779,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -1852,7 +1789,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>pressure, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        [SchemaAttr("pressure")]
         public Int32Value? Pressure
         {
             get => GetAttribute<Int32Value>();
@@ -1884,7 +1820,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticCutout.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticCutout")]
     public partial class ArtisticCutout : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1898,7 +1833,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -1909,7 +1843,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>numberOfShades, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: numberOfShades</para>
         /// </summary>
-        [SchemaAttr("numberOfShades")]
         public Int32Value? NumberOfShades
         {
             get => GetAttribute<Int32Value>();
@@ -1941,7 +1874,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticFilmGrain.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticFilmGrain")]
     public partial class ArtisticFilmGrain : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1955,7 +1887,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -1966,7 +1897,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>grainSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: grainSize</para>
         /// </summary>
-        [SchemaAttr("grainSize")]
         public Int32Value? GrainSize
         {
             get => GetAttribute<Int32Value>();
@@ -1998,7 +1928,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticGlass.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticGlass")]
     public partial class ArtisticGlass : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2012,7 +1941,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2023,7 +1951,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>scaling, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
-        [SchemaAttr("scaling")]
         public Int32Value? Scaling
         {
             get => GetAttribute<Int32Value>();
@@ -2055,7 +1982,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticGlowDiffused.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticGlowDiffused")]
     public partial class ArtisticGlowDiffused : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2069,7 +1995,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2080,7 +2005,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>intensity, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: intensity</para>
         /// </summary>
-        [SchemaAttr("intensity")]
         public Int32Value? Intensity
         {
             get => GetAttribute<Int32Value>();
@@ -2112,7 +2036,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticGlowEdges.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticGlowEdges")]
     public partial class ArtisticGlowEdges : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2126,7 +2049,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2137,7 +2059,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>smoothness, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: smoothness</para>
         /// </summary>
-        [SchemaAttr("smoothness")]
         public Int32Value? Smoothness
         {
             get => GetAttribute<Int32Value>();
@@ -2169,7 +2090,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticLightScreen.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticLightScreen")]
     public partial class ArtisticLightScreen : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2183,7 +2103,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2194,7 +2113,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>gridSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: gridSize</para>
         /// </summary>
-        [SchemaAttr("gridSize")]
         public Int32Value? GridSize
         {
             get => GetAttribute<Int32Value>();
@@ -2226,7 +2144,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticLineDrawing.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticLineDrawing")]
     public partial class ArtisticLineDrawing : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2240,7 +2157,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2251,7 +2167,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>pencilSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pencilSize</para>
         /// </summary>
-        [SchemaAttr("pencilSize")]
         public Int32Value? PencilSize
         {
             get => GetAttribute<Int32Value>();
@@ -2283,7 +2198,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticMarker.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticMarker")]
     public partial class ArtisticMarker : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2297,7 +2211,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2308,7 +2221,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>size, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr("size")]
         public Int32Value? Size
         {
             get => GetAttribute<Int32Value>();
@@ -2340,7 +2252,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticMosiaicBubbles.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticMosiaicBubbles")]
     public partial class ArtisticMosaicBubbles : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2354,7 +2265,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2365,7 +2275,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>pressure, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        [SchemaAttr("pressure")]
         public Int32Value? Pressure
         {
             get => GetAttribute<Int32Value>();
@@ -2397,7 +2306,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPaintStrokes.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticPaintStrokes")]
     public partial class ArtisticPaintStrokes : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2411,7 +2319,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2422,7 +2329,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>intensity, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: intensity</para>
         /// </summary>
-        [SchemaAttr("intensity")]
         public Int32Value? Intensity
         {
             get => GetAttribute<Int32Value>();
@@ -2454,7 +2360,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPaintBrush.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticPaintBrush")]
     public partial class ArtisticPaintBrush : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2468,7 +2373,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2479,7 +2383,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>brushSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: brushSize</para>
         /// </summary>
-        [SchemaAttr("brushSize")]
         public Int32Value? BrushSize
         {
             get => GetAttribute<Int32Value>();
@@ -2511,7 +2414,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPastelsSmooth.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticPastelsSmooth")]
     public partial class ArtisticPastelsSmooth : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2525,7 +2427,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2536,7 +2437,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>scaling, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
-        [SchemaAttr("scaling")]
         public Int32Value? BrushSize
         {
             get => GetAttribute<Int32Value>();
@@ -2568,7 +2468,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPencilGrayscale.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticPencilGrayscale")]
     public partial class ArtisticPencilGrayscale : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2582,7 +2481,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2593,7 +2491,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>pencilSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pencilSize</para>
         /// </summary>
-        [SchemaAttr("pencilSize")]
         public Int32Value? BrushSize
         {
             get => GetAttribute<Int32Value>();
@@ -2625,7 +2522,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPencilSketch.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticPencilSketch")]
     public partial class ArtisticPencilSketch : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2639,7 +2535,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2650,7 +2545,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>pressure, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        [SchemaAttr("pressure")]
         public Int32Value? Pressure
         {
             get => GetAttribute<Int32Value>();
@@ -2682,7 +2576,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPhotocopy.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticPhotocopy")]
     public partial class ArtisticPhotocopy : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2696,7 +2589,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2707,7 +2599,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>detail, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: detail</para>
         /// </summary>
-        [SchemaAttr("detail")]
         public Int32Value? Detail
         {
             get => GetAttribute<Int32Value>();
@@ -2739,7 +2630,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPlasticWrap.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticPlasticWrap")]
     public partial class ArtisticPlasticWrap : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2753,7 +2643,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2764,7 +2653,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>smoothness, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: smoothness</para>
         /// </summary>
-        [SchemaAttr("smoothness")]
         public Int32Value? Smoothness
         {
             get => GetAttribute<Int32Value>();
@@ -2796,7 +2684,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticTexturizer.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticTexturizer")]
     public partial class ArtisticTexturizer : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2810,7 +2697,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2821,7 +2707,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>scaling, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
-        [SchemaAttr("scaling")]
         public Int32Value? Scaling
         {
             get => GetAttribute<Int32Value>();
@@ -2853,7 +2738,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticWatercolorSponge.</para>
     /// </summary>
-    [SchemaAttr("a14:artisticWatercolorSponge")]
     public partial class ArtisticWatercolorSponge : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2867,7 +2751,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [SchemaAttr("trans")]
         public Int32Value? Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2878,7 +2761,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>brushSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: brushSize</para>
         /// </summary>
-        [SchemaAttr("brushSize")]
         public Int32Value? BrushSize
         {
             get => GetAttribute<Int32Value>();
@@ -2917,7 +2799,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark" /> <c>&lt;a14:foregroundMark></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:backgroundRemoval")]
     public partial class BackgroundRemoval : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2955,7 +2836,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>t, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public Int32Value? MarqueeTop
         {
             get => GetAttribute<Int32Value>();
@@ -2966,7 +2846,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>b, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [SchemaAttr("b")]
         public Int32Value? MarqueeBottom
         {
             get => GetAttribute<Int32Value>();
@@ -2977,7 +2856,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>l, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        [SchemaAttr("l")]
         public Int32Value? MarqueeLeft
         {
             get => GetAttribute<Int32Value>();
@@ -2988,7 +2866,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>r, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr("r")]
         public Int32Value? MarqueeRight
         {
             get => GetAttribute<Int32Value>();
@@ -3039,7 +2916,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:brightnessContrast.</para>
     /// </summary>
-    [SchemaAttr("a14:brightnessContrast")]
     public partial class BrightnessContrast : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3053,7 +2929,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>bright, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: bright</para>
         /// </summary>
-        [SchemaAttr("bright")]
         public Int32Value? Bright
         {
             get => GetAttribute<Int32Value>();
@@ -3064,7 +2939,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>contrast, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: contrast</para>
         /// </summary>
-        [SchemaAttr("contrast")]
         public Int32Value? Contrast
         {
             get => GetAttribute<Int32Value>();
@@ -3096,7 +2970,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:colorTemperature.</para>
     /// </summary>
-    [SchemaAttr("a14:colorTemperature")]
     public partial class ColorTemperature : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3110,7 +2983,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>colorTemp, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: colorTemp</para>
         /// </summary>
-        [SchemaAttr("colorTemp")]
         public Int32Value? ColorTemperatureValue
         {
             get => GetAttribute<Int32Value>();
@@ -3138,7 +3010,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:saturation.</para>
     /// </summary>
-    [SchemaAttr("a14:saturation")]
     public partial class Saturation : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3152,7 +3023,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>sat, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sat</para>
         /// </summary>
-        [SchemaAttr("sat")]
         public Int32Value? SaturationAmount
         {
             get => GetAttribute<Int32Value>();
@@ -3180,7 +3050,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:sharpenSoften.</para>
     /// </summary>
-    [SchemaAttr("a14:sharpenSoften")]
     public partial class SharpenSoften : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3194,7 +3063,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>amount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: amount</para>
         /// </summary>
-        [SchemaAttr("amount")]
         public Int32Value? Amount
         {
             get => GetAttribute<Int32Value>();
@@ -3254,7 +3122,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge" /> <c>&lt;a14:artisticWatercolorSponge></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:imgEffect")]
     public partial class ImageEffect : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3292,7 +3159,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr("visible")]
         public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -3731,7 +3597,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect" /> <c>&lt;a14:imgEffect></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:imgLayer")]
     public partial class ImageLayer : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3772,7 +3637,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:embed")]
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -3810,7 +3674,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:cNvPr")]
     public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3848,7 +3711,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Application defined unique identifier.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -3859,7 +3721,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Name compatible with Object Model (non-unique).</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -3870,7 +3731,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Description of the drawing element.</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr("descr")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -3881,7 +3741,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Flag determining to show or hide this element.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr("hidden")]
         public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -3892,7 +3751,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -3982,7 +3840,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:cNvContentPartPr")]
     public partial class NonVisualInkContentPartProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4020,7 +3877,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>isComment, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
-        [SchemaAttr("isComment")]
         public BooleanValue? IsComment
         {
             get => GetAttribute<BooleanValue>();
@@ -4085,7 +3941,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties" /> <c>&lt;a14:cNvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:nvContentPartPr")]
     public partial class NonVisualContentPartProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4175,7 +4030,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("a14:xfrm")]
     public partial class Transform2D : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4213,7 +4067,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr("rot")]
         public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -4224,7 +4077,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr("flipH")]
         public BooleanValue? HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -4235,7 +4087,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr("flipV")]
         public BooleanValue? VerticalFlip
         {
             get => GetAttribute<BooleanValue>();

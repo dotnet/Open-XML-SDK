@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -56,7 +54,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion" /> <c>&lt;ap:AppVersion></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ap:Properties")]
     public partial class Properties : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -544,7 +541,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Template.</para>
     /// </summary>
-    [SchemaAttr("ap:Template")]
     public partial class Template : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -582,7 +578,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Manager.</para>
     /// </summary>
-    [SchemaAttr("ap:Manager")]
     public partial class Manager : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -620,7 +615,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Company.</para>
     /// </summary>
-    [SchemaAttr("ap:Company")]
     public partial class Company : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -658,7 +652,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:PresentationFormat.</para>
     /// </summary>
-    [SchemaAttr("ap:PresentationFormat")]
     public partial class PresentationFormat : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -696,7 +689,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HyperlinkBase.</para>
     /// </summary>
-    [SchemaAttr("ap:HyperlinkBase")]
     public partial class HyperlinkBase : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -734,7 +726,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Application.</para>
     /// </summary>
-    [SchemaAttr("ap:Application")]
     public partial class Application : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -772,7 +763,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:AppVersion.</para>
     /// </summary>
-    [SchemaAttr("ap:AppVersion")]
     public partial class ApplicationVersion : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -810,7 +800,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Pages.</para>
     /// </summary>
-    [SchemaAttr("ap:Pages")]
     public partial class Pages : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -849,7 +838,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Words.</para>
     /// </summary>
-    [SchemaAttr("ap:Words")]
     public partial class Words : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -888,7 +876,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Characters.</para>
     /// </summary>
-    [SchemaAttr("ap:Characters")]
     public partial class Characters : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -927,7 +914,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Lines.</para>
     /// </summary>
-    [SchemaAttr("ap:Lines")]
     public partial class Lines : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -966,7 +952,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Paragraphs.</para>
     /// </summary>
-    [SchemaAttr("ap:Paragraphs")]
     public partial class Paragraphs : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1005,7 +990,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Slides.</para>
     /// </summary>
-    [SchemaAttr("ap:Slides")]
     public partial class Slides : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1044,7 +1028,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Notes.</para>
     /// </summary>
-    [SchemaAttr("ap:Notes")]
     public partial class Notes : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1083,7 +1066,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:TotalTime.</para>
     /// </summary>
-    [SchemaAttr("ap:TotalTime")]
     public partial class TotalTime : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1122,7 +1104,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HiddenSlides.</para>
     /// </summary>
-    [SchemaAttr("ap:HiddenSlides")]
     public partial class HiddenSlides : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1161,7 +1142,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:MMClips.</para>
     /// </summary>
-    [SchemaAttr("ap:MMClips")]
     public partial class MultimediaClips : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1200,7 +1180,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:CharactersWithSpaces.</para>
     /// </summary>
-    [SchemaAttr("ap:CharactersWithSpaces")]
     public partial class CharactersWithSpaces : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1239,7 +1218,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:DocSecurity.</para>
     /// </summary>
-    [SchemaAttr("ap:DocSecurity")]
     public partial class DocumentSecurity : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1278,7 +1256,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:ScaleCrop.</para>
     /// </summary>
-    [SchemaAttr("ap:ScaleCrop")]
     public partial class ScaleCrop : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1317,7 +1294,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:LinksUpToDate.</para>
     /// </summary>
-    [SchemaAttr("ap:LinksUpToDate")]
     public partial class LinksUpToDate : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1356,7 +1332,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:SharedDoc.</para>
     /// </summary>
-    [SchemaAttr("ap:SharedDoc")]
     public partial class SharedDocument : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1395,7 +1370,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HyperlinksChanged.</para>
     /// </summary>
-    [SchemaAttr("ap:HyperlinksChanged")]
     public partial class HyperlinksChanged : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -1440,7 +1414,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ap:HeadingPairs")]
     public partial class HeadingPairs : VectorVariantType
     {
         /// <summary>
@@ -1499,7 +1472,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ap:HLinks")]
     public partial class HyperlinkList : VectorVariantType
     {
         /// <summary>
@@ -1622,7 +1594,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ap:TitlesOfParts")]
     public partial class TitlesOfParts : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1695,7 +1666,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBlob" /> <c>&lt;vt:blob></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ap:DigSig")]
     public partial class DigitalSignature : TypedOpenXmlCompositeElement
     {
         /// <summary>

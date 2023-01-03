@@ -11,22 +11,11 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal partial class DefaultFeatures
 {
-    private global::DocumentFormat.OpenXml.Features.IOpenXmlNamespaceIdResolver? _OpenXmlNamespaceIdResolver;
     private global::DocumentFormat.OpenXml.Features.IOpenXmlNamespaceResolver? _NoDataNamespaceResolver;
     private global::DocumentFormat.OpenXml.Features.IElementMetadataFactoryFeature? _ElementMetadataFactoryFeature;
 
     public partial T? Get<T>()
     {
-        if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IOpenXmlNamespaceIdResolver))
-        {
-            if (_OpenXmlNamespaceIdResolver is null)
-            {
-                Interlocked.CompareExchange(ref _OpenXmlNamespaceIdResolver, new global::DocumentFormat.OpenXml.Features.OpenXmlNamespaceIdResolver(), null);
-            }
-
-            return (T)_OpenXmlNamespaceIdResolver;
-        }
-
         if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IOpenXmlNamespaceResolver))
         {
             if (_NoDataNamespaceResolver is null)

@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Charts;
@@ -33,7 +31,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotTableName" /> <c>&lt;c:name></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:pivotSource")]
     public partial class PivotSource : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -131,7 +128,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c15:numFmt.</para>
     /// </summary>
-    [SchemaAttr("c15:numFmt")]
     public partial class NumberingFormat : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -145,7 +141,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <para>Number Format Code</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        [SchemaAttr("formatCode")]
         public StringValue? FormatCode
         {
             get => GetAttribute<StringValue>();
@@ -156,7 +151,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <para>Linked to Source</para>
         /// <para>Represents the following attribute in the schema: sourceLinked</para>
         /// </summary>
-        [SchemaAttr("sourceLinked")]
         public BooleanValue? SourceLinked
         {
             get => GetAttribute<BooleanValue>();
@@ -205,7 +199,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:spPr")]
     public partial class ShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -243,7 +236,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -342,7 +334,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ManualLayout" /> <c>&lt;c:manualLayout></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:layout")]
     public partial class Layout : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -431,7 +422,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences" /> <c>&lt;c15:sqref></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:fullRef")]
     public partial class FullReference : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -505,7 +495,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences" /> <c>&lt;c15:sqref></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:levelRef")]
     public partial class LevelReference : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -579,7 +568,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences" /> <c>&lt;c15:sqref></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:formulaRef")]
     public partial class FormulaReference : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -653,7 +641,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText" /> <c>&lt;c15:tx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:filteredSeriesTitle")]
     public partial class FilteredSeriesTitle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -727,7 +714,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.AxisDataSourceType" /> <c>&lt;c15:cat></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:filteredCategoryTitle")]
     public partial class FilteredCategoryTitle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -801,7 +787,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.AreaChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:filteredAreaSeries")]
     public partial class FilteredAreaSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -875,7 +860,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.BarChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:filteredBarSeries")]
     public partial class FilteredBarSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -949,7 +933,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.BubbleChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:filteredBubbleSeries")]
     public partial class FilteredBubbleSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1023,7 +1006,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LineChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:filteredLineSeries")]
     public partial class FilteredLineSeriesExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1097,7 +1079,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.PieChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:filteredPieSeries")]
     public partial class FilteredPieSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1171,7 +1152,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.RadarChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:filteredRadarSeries")]
     public partial class FilteredRadarSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1245,7 +1225,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ScatterChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:filteredScatterSeries")]
     public partial class FilteredScatterSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1319,7 +1298,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.SurfaceChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:filteredSurfaceSeries")]
     public partial class FilteredSurfaceSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1394,7 +1372,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula" /> <c>&lt;c15:f></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:datalabelsRange")]
     public partial class DataLabelsRange : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1483,7 +1460,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterException" /> <c>&lt;c15:categoryFilterException></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:categoryFilterExceptions")]
     public partial class CategoryFilterExceptions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1544,7 +1520,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableEntry" /> <c>&lt;c15:dlblFTEntry></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:dlblFieldTable")]
     public partial class DataLabelFieldTable : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1599,7 +1574,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c15:xForSave.</para>
     /// </summary>
-    [SchemaAttr("c15:xForSave")]
     public partial class ExceptionForSave : BooleanType
     {
         /// <summary>
@@ -1625,7 +1599,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c15:showDataLabelsRange.</para>
     /// </summary>
-    [SchemaAttr("c15:showDataLabelsRange")]
     public partial class ShowDataLabelsRange : BooleanType
     {
         /// <summary>
@@ -1651,7 +1624,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c15:showLeaderLines.</para>
     /// </summary>
-    [SchemaAttr("c15:showLeaderLines")]
     public partial class ShowLeaderLines : BooleanType
     {
         /// <summary>
@@ -1677,7 +1649,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c15:autoCat.</para>
     /// </summary>
-    [SchemaAttr("c15:autoCat")]
     public partial class AutoGeneneratedCategories : BooleanType
     {
         /// <summary>
@@ -1703,7 +1674,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c15:invertIfNegative.</para>
     /// </summary>
-    [SchemaAttr("c15:invertIfNegative")]
     public partial class InvertIfNegativeBoolean : BooleanType
     {
         /// <summary>
@@ -1729,7 +1699,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c15:bubble3D.</para>
     /// </summary>
-    [SchemaAttr("c15:bubble3D")]
     public partial class Bubble3D : BooleanType
     {
         /// <summary>
@@ -1768,7 +1737,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <para>Boolean Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -1796,7 +1764,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:tx")]
     public partial class ChartText : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1903,7 +1870,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:leaderLines")]
     public partial class LeaderLines : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1971,7 +1937,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c15:sqref.</para>
     /// </summary>
-    [SchemaAttr("c15:sqref")]
     public partial class SequenceOfReferences : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2010,7 +1975,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c15:f.</para>
     /// </summary>
-    [SchemaAttr("c15:f")]
     public partial class Formula : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2049,7 +2013,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c15:txfldGUID.</para>
     /// </summary>
-    [SchemaAttr("c15:txfldGUID")]
     public partial class TextFieldGuid : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -2098,7 +2061,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:cat")]
     public partial class AxisDataSourceType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2248,7 +2210,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:ser")]
     public partial class BarChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2432,7 +2393,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:ser")]
     public partial class LineChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2615,7 +2575,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:ser")]
     public partial class ScatterChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2782,7 +2741,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:ser")]
     public partial class AreaChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2946,7 +2904,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Explosion" /> <c>&lt;c:explosion></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:ser")]
     public partial class PieChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3125,7 +3082,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:ser")]
     public partial class BubbleChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3308,7 +3264,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:ser")]
     public partial class RadarChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3481,7 +3436,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:ser")]
     public partial class SurfaceChartSeries : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3683,7 +3637,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:dlblRangeCache")]
     public partial class DataLabelsRangeChache : StringDataType
     {
         /// <summary>
@@ -3747,7 +3700,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:dlblFieldTableCache")]
     public partial class DataLabelFieldTableCache : StringDataType
     {
         /// <summary>
@@ -3871,7 +3823,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c15:explosion.</para>
     /// </summary>
-    [SchemaAttr("c15:explosion")]
     public partial class Explosion : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3885,7 +3836,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <para>Integer Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -3922,7 +3872,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Symbol" /> <c>&lt;c:symbol></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:marker")]
     public partial class Marker : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4056,7 +4005,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:dLbl")]
     public partial class DataLabel : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4181,7 +4129,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences" /> <c>&lt;c15:sqref></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:categoryFilterException")]
     public partial class CategoryFilterException : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4347,7 +4294,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula" /> <c>&lt;c15:f></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c15:dlblFTEntry")]
     public partial class DataLabelFieldTableEntry : TypedOpenXmlCompositeElement
     {
         /// <summary>

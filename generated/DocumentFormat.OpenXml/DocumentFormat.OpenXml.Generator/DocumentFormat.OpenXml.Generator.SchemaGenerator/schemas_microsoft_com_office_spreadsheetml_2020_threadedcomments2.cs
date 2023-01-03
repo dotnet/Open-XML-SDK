@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -24,7 +22,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc2:checksum.</para>
     /// </summary>
-    [SchemaAttr("xltc2:checksum")]
     public partial class XsdunsignedInt : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -70,7 +67,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList" /> <c>&lt;xltc2:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xltc2:hyperlink")]
     public partial class CommentHyperlink : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -108,7 +104,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         /// <para>startIndex, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: startIndex</para>
         /// </summary>
-        [SchemaAttr("startIndex")]
         public UInt32Value? StartIndex
         {
             get => GetAttribute<UInt32Value>();
@@ -119,7 +114,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         /// <para>length, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-        [SchemaAttr("length")]
         public UInt32Value? Length
         {
             get => GetAttribute<UInt32Value>();
@@ -130,7 +124,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         /// <para>url, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: url</para>
         /// </summary>
-        [SchemaAttr("url")]
         public StringValue? Url
         {
             get => GetAttribute<StringValue>();
@@ -190,7 +183,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xltc2:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>

@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -32,7 +30,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:pivotCaches")]
     public partial class PivotCaches : OpenXmlPivotCachesElement
     {
         /// <summary>
@@ -92,7 +89,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:timelineCachePivotCaches")]
     public partial class TimelineCachePivotCaches : OpenXmlPivotCachesElement
     {
         /// <summary>
@@ -203,7 +199,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableReference" /> <c>&lt;x15:pivotTableReference></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:pivotTableReferences")]
     public partial class PivotTableReferences : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -258,7 +253,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:queryTable.</para>
     /// </summary>
-    [SchemaAttr("x15:queryTable")]
     public partial class QueryTable : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -272,7 +266,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>clipped, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: clipped</para>
         /// </summary>
-        [SchemaAttr("clipped")]
         public BooleanValue? Clipped
         {
             get => GetAttribute<BooleanValue>();
@@ -283,7 +276,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>sourceDataName, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: sourceDataName</para>
         /// </summary>
-        [SchemaAttr("sourceDataName")]
         public StringValue? SourceDataName
         {
             get => GetAttribute<StringValue>();
@@ -294,7 +286,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>drillThrough, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: drillThrough</para>
         /// </summary>
-        [SchemaAttr("drillThrough")]
         public BooleanValue? DrillThrough
         {
             get => GetAttribute<BooleanValue>();
@@ -327,7 +318,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WebExtension" /> <c>&lt;x15:webExtension></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:webExtensions")]
     public partial class WebExtensions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -388,7 +378,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReference" /> <c>&lt;x15:timelineCacheRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:timelineCacheRefs")]
     public partial class TimelineCacheReferences : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -449,7 +438,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineReference" /> <c>&lt;x15:timelineRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:timelineRefs")]
     public partial class TimelineReferences : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -504,7 +492,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:workbookPr.</para>
     /// </summary>
-    [SchemaAttr("x15:workbookPr")]
     public partial class WorkbookProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -518,7 +505,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>chartTrackingRefBase, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: chartTrackingRefBase</para>
         /// </summary>
-        [SchemaAttr("chartTrackingRefBase")]
         public BooleanValue? ChartTrackingReferenceBase
         {
             get => GetAttribute<BooleanValue>();
@@ -549,7 +535,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyle" /> <c>&lt;x15:timelineStyle></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:timelineStyles")]
     public partial class TimelineStyles : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -587,7 +572,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>defaultTimelineStyle, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: defaultTimelineStyle</para>
         /// </summary>
-        [SchemaAttr("defaultTimelineStyle")]
         public StringValue? DefaultTimelineStyle
         {
             get => GetAttribute<StringValue>();
@@ -626,7 +610,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:dxfs")]
     public partial class DifferentialFormats : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -664,7 +647,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>Format Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -704,7 +686,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.RangeProperties" /> <c>&lt;x15:rangePr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:connection")]
     public partial class Connection : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -742,7 +723,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -753,7 +733,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>model, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: model</para>
         /// </summary>
-        [SchemaAttr("model")]
         public BooleanValue? Model
         {
             get => GetAttribute<BooleanValue>();
@@ -764,7 +743,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>excludeFromRefreshAll, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: excludeFromRefreshAll</para>
         /// </summary>
-        [SchemaAttr("excludeFromRefreshAll")]
         public BooleanValue? ExcludeFromRefreshAll
         {
             get => GetAttribute<BooleanValue>();
@@ -775,7 +753,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>autoDelete, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: autoDelete</para>
         /// </summary>
-        [SchemaAttr("autoDelete")]
         public BooleanValue? AutoDelete
         {
             get => GetAttribute<BooleanValue>();
@@ -786,7 +763,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>usedByAddin, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: usedByAddin</para>
         /// </summary>
-        [SchemaAttr("usedByAddin")]
         public BooleanValue? UsedByAddin
         {
             get => GetAttribute<BooleanValue>();
@@ -896,7 +872,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:calculatedMember.</para>
     /// </summary>
-    [SchemaAttr("x15:calculatedMember")]
     public partial class CalculatedMember : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -910,7 +885,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>measureGroup, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: measureGroup</para>
         /// </summary>
-        [SchemaAttr("measureGroup")]
         public StringValue? MeasureGroup
         {
             get => GetAttribute<StringValue>();
@@ -921,7 +895,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>numberFormat, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: numberFormat</para>
         /// </summary>
-        [SchemaAttr("numberFormat")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.CalculatedMemberNumberFormat>? NumberFormat
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.CalculatedMemberNumberFormat>>();
@@ -932,7 +905,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>measure, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: measure</para>
         /// </summary>
-        [SchemaAttr("measure")]
         public BooleanValue? Measure
         {
             get => GetAttribute<BooleanValue>();
@@ -966,7 +938,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.FieldListActiveTabTopLevelEntity" /> <c>&lt;x15:activeTabTopLevelEntity></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:pivotTableUISettings")]
     public partial class PivotTableUISettings : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1004,7 +975,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>sourceDataName, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: sourceDataName</para>
         /// </summary>
-        [SchemaAttr("sourceDataName")]
         public StringValue? SourceDataName
         {
             get => GetAttribute<StringValue>();
@@ -1015,7 +985,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>relNeededHidden, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: relNeededHidden</para>
         /// </summary>
-        [SchemaAttr("relNeededHidden")]
         public BooleanValue? RelNeededHidden
         {
             get => GetAttribute<BooleanValue>();
@@ -1048,7 +1017,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotFilter.</para>
     /// </summary>
-    [SchemaAttr("x15:pivotFilter")]
     public partial class PivotFilter : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1062,7 +1030,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>useWholeDay, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: useWholeDay</para>
         /// </summary>
-        [SchemaAttr("useWholeDay")]
         public BooleanValue? UseWholeDay
         {
             get => GetAttribute<BooleanValue>();
@@ -1096,7 +1063,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueName" /> <c>&lt;x15:cachedUniqueName></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:cachedUniqueNames")]
     public partial class CachedUniqueNames : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1151,7 +1117,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:cacheHierarchy.</para>
     /// </summary>
-    [SchemaAttr("x15:cacheHierarchy")]
     public partial class CacheHierarchy : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1165,7 +1130,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>aggregatedColumn, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: aggregatedColumn</para>
         /// </summary>
-        [SchemaAttr("aggregatedColumn")]
         public Int32Value? AggregatedColumn
         {
             get => GetAttribute<Int32Value>();
@@ -1193,7 +1157,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelinePivotCacheDefinition.</para>
     /// </summary>
-    [SchemaAttr("x15:timelinePivotCacheDefinition")]
     public partial class TimelinePivotCacheDefinition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1207,7 +1170,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>timelineData, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: timelineData</para>
         /// </summary>
-        [SchemaAttr("timelineData")]
         public BooleanValue? TimelineData
         {
             get => GetAttribute<BooleanValue>();
@@ -1232,7 +1194,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotCacheIdVersion.</para>
     /// </summary>
-    [SchemaAttr("x15:pivotCacheIdVersion")]
     public partial class PivotCacheIdVersion : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1246,7 +1207,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>cacheIdSupportedVersion, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: cacheIdSupportedVersion</para>
         /// </summary>
-        [SchemaAttr("cacheIdSupportedVersion")]
         public ByteValue? CacheIdSupportedVersion
         {
             get => GetAttribute<ByteValue>();
@@ -1257,7 +1217,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>cacheIdCreatedVersion, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: cacheIdCreatedVersion</para>
         /// </summary>
-        [SchemaAttr("cacheIdCreatedVersion")]
         public ByteValue? CacheIdCreatedVersion
         {
             get => GetAttribute<ByteValue>();
@@ -1297,7 +1256,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelTables" /> <c>&lt;x15:modelTables></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:dataModel")]
     public partial class DataModel : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1335,7 +1293,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>minVersionLoad, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: minVersionLoad</para>
         /// </summary>
-        [SchemaAttr("minVersionLoad")]
         public ByteValue? MinVersionLoad
         {
             get => GetAttribute<ByteValue>();
@@ -1414,7 +1371,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotRow" /> <c>&lt;x15:pivotRow></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:pivotTableData")]
     public partial class PivotTableData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1452,7 +1408,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>rowCount, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rowCount</para>
         /// </summary>
-        [SchemaAttr("rowCount")]
         public UInt32Value? RowCount
         {
             get => GetAttribute<UInt32Value>();
@@ -1463,7 +1418,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>columnCount, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: columnCount</para>
         /// </summary>
-        [SchemaAttr("columnCount")]
         public UInt32Value? ColumnCount
         {
             get => GetAttribute<UInt32Value>();
@@ -1474,7 +1428,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>cacheId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: cacheId</para>
         /// </summary>
-        [SchemaAttr("cacheId")]
         public UInt32Value? CacheId
         {
             get => GetAttribute<UInt32Value>();
@@ -1512,7 +1465,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotCacheDecoupled.</para>
     /// </summary>
-    [SchemaAttr("x15:pivotCacheDecoupled")]
     public partial class PivotCacheDecoupled : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1526,7 +1478,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>decoupled, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: decoupled</para>
         /// </summary>
-        [SchemaAttr("decoupled")]
         public BooleanValue? Decoupled
         {
             get => GetAttribute<BooleanValue>();
@@ -1551,7 +1502,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dataField.</para>
     /// </summary>
-    [SchemaAttr("x15:dataField")]
     public partial class DataField : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1565,7 +1515,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>isCountDistinct, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: isCountDistinct</para>
         /// </summary>
-        [SchemaAttr("isCountDistinct")]
         public BooleanValue? IsCountDistinct
         {
             get => GetAttribute<BooleanValue>();
@@ -1590,7 +1539,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:movingPeriodState.</para>
     /// </summary>
-    [SchemaAttr("x15:movingPeriodState")]
     public partial class MovingPeriodState : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1604,7 +1552,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>referenceDateBegin, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: referenceDateBegin</para>
         /// </summary>
-        [SchemaAttr("referenceDateBegin")]
         public DateTimeValue? ReferenceDateBegin
         {
             get => GetAttribute<DateTimeValue>();
@@ -1615,7 +1562,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>referencePeriod, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: referencePeriod</para>
         /// </summary>
-        [SchemaAttr("referencePeriod")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodStep>? ReferencePeriod
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodStep>>();
@@ -1626,7 +1572,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>referenceMultiple, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: referenceMultiple</para>
         /// </summary>
-        [SchemaAttr("referenceMultiple")]
         public UInt32Value? ReferenceMultiple
         {
             get => GetAttribute<UInt32Value>();
@@ -1637,7 +1582,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>movingPeriod, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: movingPeriod</para>
         /// </summary>
-        [SchemaAttr("movingPeriod")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodStep>? MovingPeriod
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodStep>>();
@@ -1648,7 +1592,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>movingMultiple, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: movingMultiple</para>
         /// </summary>
-        [SchemaAttr("movingMultiple")]
         public UInt32Value? MovingMultiple
         {
             get => GetAttribute<UInt32Value>();
@@ -1698,7 +1641,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCache" /> <c>&lt;x14:slicerCache></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:slicerCaches")]
     public partial class SlicerCaches : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1759,7 +1701,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:tableSlicerCache")]
     public partial class TableSlicerCache : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1797,7 +1738,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>tableId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: tableId</para>
         /// </summary>
-        [SchemaAttr("tableId")]
         public UInt32Value? TableId
         {
             get => GetAttribute<UInt32Value>();
@@ -1808,7 +1748,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>column, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: column</para>
         /// </summary>
-        [SchemaAttr("column")]
         public UInt32Value? Column
         {
             get => GetAttribute<UInt32Value>();
@@ -1819,7 +1758,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>sortOrder, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortOrder</para>
         /// </summary>
-        [SchemaAttr("sortOrder")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues>? SortOrder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues>>();
@@ -1830,7 +1768,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>customListSort, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: customListSort</para>
         /// </summary>
-        [SchemaAttr("customListSort")]
         public BooleanValue? CustomListSort
         {
             get => GetAttribute<BooleanValue>();
@@ -1841,7 +1778,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>crossFilter, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: crossFilter</para>
         /// </summary>
-        [SchemaAttr("crossFilter")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>? CrossFilter
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>>();
@@ -1900,7 +1836,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheOlapLevelName" /> <c>&lt;x15:slicerCacheOlapLevelName></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:slicerCacheHideItemsWithNoData")]
     public partial class SlicerCacheHideItemsWithNoData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1938,7 +1873,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>count, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -1974,7 +1908,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable" /> <c>&lt;x14:pivotTable></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:slicerCachePivotTables")]
     public partial class SlicerCachePivotTables : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2039,7 +1972,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions" /> <c>&lt;x15:questions></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:survey")]
     public partial class Survey : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2077,7 +2009,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
@@ -2088,7 +2019,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>guid, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: guid</para>
         /// </summary>
-        [SchemaAttr("guid")]
         public StringValue? Guid
         {
             get => GetAttribute<StringValue>();
@@ -2099,7 +2029,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>title, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr("title")]
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -2110,7 +2039,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>description, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr("description")]
         public StringValue? Description
         {
             get => GetAttribute<StringValue>();
@@ -2229,7 +2157,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.Timeline" /> <c>&lt;x15:timeline></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:timelines")]
     public partial class Timelines : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -2323,7 +2250,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineState" /> <c>&lt;x15:state></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:timelineCacheDefinition")]
     public partial class TimelineCacheDefinition : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -2361,7 +2287,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -2372,7 +2297,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>sourceName, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: sourceName</para>
         /// </summary>
-        [SchemaAttr("sourceName")]
         public StringValue? SourceName
         {
             get => GetAttribute<StringValue>();
@@ -2483,7 +2407,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTableReference.</para>
     /// </summary>
-    [SchemaAttr("x15:pivotTableReference")]
     public partial class PivotTableReference : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2500,7 +2423,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2534,7 +2456,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:webExtension")]
     public partial class WebExtension : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2572,7 +2493,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>appRef, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: appRef</para>
         /// </summary>
-        [SchemaAttr("appRef")]
         public StringValue? ApplicationReference
         {
             get => GetAttribute<StringValue>();
@@ -2618,7 +2538,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineCacheRef.</para>
     /// </summary>
-    [SchemaAttr("x15:timelineCacheRef")]
     public partial class TimelineCacheReference : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2635,7 +2554,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2663,7 +2581,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineRef.</para>
     /// </summary>
-    [SchemaAttr("x15:timelineRef")]
     public partial class TimelineReference : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2680,7 +2597,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2714,7 +2630,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements" /> <c>&lt;x15:timelineStyleElements></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:timelineStyle")]
     public partial class TimelineStyle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2752,7 +2667,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -2798,7 +2712,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineStyleElement.</para>
     /// </summary>
-    [SchemaAttr("x15:timelineStyleElement")]
     public partial class TimelineStyleElement : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2812,7 +2725,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>type, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleType>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleType>>();
@@ -2823,7 +2735,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>dxfId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        [SchemaAttr("dxfId")]
         public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
@@ -2858,7 +2769,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElement" /> <c>&lt;x15:timelineStyleElement></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:timelineStyleElements")]
     public partial class TimelineStyleElements : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -2913,7 +2823,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dbTable.</para>
     /// </summary>
-    [SchemaAttr("x15:dbTable")]
     public partial class DbTable : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -2927,7 +2836,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -2961,7 +2869,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbTable" /> <c>&lt;x15:dbTable></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:dbTables")]
     public partial class DbTables : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3016,7 +2923,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dbCommand.</para>
     /// </summary>
-    [SchemaAttr("x15:dbCommand")]
     public partial class DbCommand : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3030,7 +2936,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>text, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: text</para>
         /// </summary>
-        [SchemaAttr("text")]
         public StringValue? Text
         {
             get => GetAttribute<StringValue>();
@@ -3064,7 +2969,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TextFields" /> <c>&lt;x:textFields></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:textPr")]
     public partial class TextProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3102,7 +3006,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>prompt</para>
         /// <para>Represents the following attribute in the schema: prompt</para>
         /// </summary>
-        [SchemaAttr("prompt")]
         public BooleanValue? Prompt
         {
             get => GetAttribute<BooleanValue>();
@@ -3113,7 +3016,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>fileType</para>
         /// <para>Represents the following attribute in the schema: fileType</para>
         /// </summary>
-        [SchemaAttr("fileType")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FileTypeValues>? FileType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FileTypeValues>>();
@@ -3124,7 +3026,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>codePage</para>
         /// <para>Represents the following attribute in the schema: codePage</para>
         /// </summary>
-        [SchemaAttr("codePage")]
         public UInt32Value? CodePage
         {
             get => GetAttribute<UInt32Value>();
@@ -3135,7 +3036,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>characterSet</para>
         /// <para>Represents the following attribute in the schema: characterSet</para>
         /// </summary>
-        [SchemaAttr("characterSet")]
         public StringValue? TextCharacterSet
         {
             get => GetAttribute<StringValue>();
@@ -3146,7 +3046,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>firstRow</para>
         /// <para>Represents the following attribute in the schema: firstRow</para>
         /// </summary>
-        [SchemaAttr("firstRow")]
         public UInt32Value? FirstRow
         {
             get => GetAttribute<UInt32Value>();
@@ -3157,7 +3056,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>sourceFile</para>
         /// <para>Represents the following attribute in the schema: sourceFile</para>
         /// </summary>
-        [SchemaAttr("sourceFile")]
         public StringValue? SourceFile
         {
             get => GetAttribute<StringValue>();
@@ -3168,7 +3066,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>delimited</para>
         /// <para>Represents the following attribute in the schema: delimited</para>
         /// </summary>
-        [SchemaAttr("delimited")]
         public BooleanValue? Delimited
         {
             get => GetAttribute<BooleanValue>();
@@ -3179,7 +3076,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>decimal</para>
         /// <para>Represents the following attribute in the schema: decimal</para>
         /// </summary>
-        [SchemaAttr("decimal")]
         public StringValue? Decimal
         {
             get => GetAttribute<StringValue>();
@@ -3190,7 +3086,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>thousands</para>
         /// <para>Represents the following attribute in the schema: thousands</para>
         /// </summary>
-        [SchemaAttr("thousands")]
         public StringValue? Thousands
         {
             get => GetAttribute<StringValue>();
@@ -3201,7 +3096,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>tab</para>
         /// <para>Represents the following attribute in the schema: tab</para>
         /// </summary>
-        [SchemaAttr("tab")]
         public BooleanValue? TabAsDelimiter
         {
             get => GetAttribute<BooleanValue>();
@@ -3212,7 +3106,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>space</para>
         /// <para>Represents the following attribute in the schema: space</para>
         /// </summary>
-        [SchemaAttr("space")]
         public BooleanValue? Space
         {
             get => GetAttribute<BooleanValue>();
@@ -3223,7 +3116,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>comma</para>
         /// <para>Represents the following attribute in the schema: comma</para>
         /// </summary>
-        [SchemaAttr("comma")]
         public BooleanValue? Comma
         {
             get => GetAttribute<BooleanValue>();
@@ -3234,7 +3126,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>semicolon</para>
         /// <para>Represents the following attribute in the schema: semicolon</para>
         /// </summary>
-        [SchemaAttr("semicolon")]
         public BooleanValue? Semicolon
         {
             get => GetAttribute<BooleanValue>();
@@ -3245,7 +3136,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>consecutive</para>
         /// <para>Represents the following attribute in the schema: consecutive</para>
         /// </summary>
-        [SchemaAttr("consecutive")]
         public BooleanValue? Consecutive
         {
             get => GetAttribute<BooleanValue>();
@@ -3256,7 +3146,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>qualifier</para>
         /// <para>Represents the following attribute in the schema: qualifier</para>
         /// </summary>
-        [SchemaAttr("qualifier")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.QualifierValues>? Qualifier
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.QualifierValues>>();
@@ -3267,7 +3156,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>delimiter</para>
         /// <para>Represents the following attribute in the schema: delimiter</para>
         /// </summary>
-        [SchemaAttr("delimiter")]
         public StringValue? Delimiter
         {
             get => GetAttribute<StringValue>();
@@ -3325,7 +3213,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelTextPr.</para>
     /// </summary>
-    [SchemaAttr("x15:modelTextPr")]
     public partial class ModelTextProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3339,7 +3226,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>headers, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: headers</para>
         /// </summary>
-        [SchemaAttr("headers")]
         public BooleanValue? Headers
         {
             get => GetAttribute<BooleanValue>();
@@ -3364,7 +3250,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:rangePr.</para>
     /// </summary>
-    [SchemaAttr("x15:rangePr")]
     public partial class RangeProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3378,7 +3263,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>sourceName, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: sourceName</para>
         /// </summary>
-        [SchemaAttr("sourceName")]
         public StringValue? SourceName
         {
             get => GetAttribute<StringValue>();
@@ -3413,7 +3297,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbTables" /> <c>&lt;x15:dbTables></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:oledbPr")]
     public partial class OleDbPrpoperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3451,7 +3334,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>connection, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: connection</para>
         /// </summary>
-        [SchemaAttr("connection")]
         public StringValue? Connection
         {
             get => GetAttribute<StringValue>();
@@ -3515,7 +3397,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbTables" /> <c>&lt;x15:dbTables></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:dataFeedPr")]
     public partial class DataFeedProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3553,7 +3434,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>connection, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: connection</para>
         /// </summary>
-        [SchemaAttr("connection")]
         public StringValue? Connection
         {
             get => GetAttribute<StringValue>();
@@ -3599,7 +3479,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:activeTabTopLevelEntity.</para>
     /// </summary>
-    [SchemaAttr("x15:activeTabTopLevelEntity")]
     public partial class FieldListActiveTabTopLevelEntity : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3613,7 +3492,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -3624,7 +3502,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>type, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public UInt32Value? Type
         {
             get => GetAttribute<UInt32Value>();
@@ -3659,7 +3536,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -3720,7 +3596,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:cachedUniqueName.</para>
     /// </summary>
-    [SchemaAttr("x15:cachedUniqueName")]
     public partial class CachedUniqueName : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3734,7 +3609,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>index, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: index</para>
         /// </summary>
-        [SchemaAttr("index")]
         public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
@@ -3745,7 +3619,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -3777,7 +3650,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelTable.</para>
     /// </summary>
-    [SchemaAttr("x15:modelTable")]
     public partial class ModelTable : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3791,7 +3663,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -3802,7 +3673,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -3813,7 +3683,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>connection, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: connection</para>
         /// </summary>
-        [SchemaAttr("connection")]
         public StringValue? Connection
         {
             get => GetAttribute<StringValue>();
@@ -3849,7 +3718,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelRelationship.</para>
     /// </summary>
-    [SchemaAttr("x15:modelRelationship")]
     public partial class ModelRelationship : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -3863,7 +3731,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>fromTable, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: fromTable</para>
         /// </summary>
-        [SchemaAttr("fromTable")]
         public StringValue? FromTable
         {
             get => GetAttribute<StringValue>();
@@ -3874,7 +3741,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>fromColumn, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: fromColumn</para>
         /// </summary>
-        [SchemaAttr("fromColumn")]
         public StringValue? FromColumn
         {
             get => GetAttribute<StringValue>();
@@ -3885,7 +3751,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>toTable, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: toTable</para>
         /// </summary>
-        [SchemaAttr("toTable")]
         public StringValue? ToTable
         {
             get => GetAttribute<StringValue>();
@@ -3896,7 +3761,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>toColumn, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: toColumn</para>
         /// </summary>
-        [SchemaAttr("toColumn")]
         public StringValue? ToColumn
         {
             get => GetAttribute<StringValue>();
@@ -3942,7 +3806,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelTable" /> <c>&lt;x15:modelTable></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:modelTables")]
     public partial class ModelTables : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4003,7 +3866,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelRelationship" /> <c>&lt;x15:modelRelationship></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:modelRelationships")]
     public partial class ModelRelationships : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4065,7 +3927,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra" /> <c>&lt;x15:x></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:c")]
     public partial class PivotValueCell : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4103,7 +3964,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>i, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        [SchemaAttr("i")]
         public UInt32Value? Item
         {
             get => GetAttribute<UInt32Value>();
@@ -4114,7 +3974,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>t, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.SXVCellType>? Text
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.SXVCellType>>();
@@ -4173,7 +4032,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:v.</para>
     /// </summary>
-    [SchemaAttr("x15:v")]
     public partial class Xstring : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -4212,7 +4070,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:x.</para>
     /// </summary>
-    [SchemaAttr("x15:x")]
     public partial class PivotValueCellExtra : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4226,7 +4083,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>in, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: in</para>
         /// </summary>
-        [SchemaAttr("in")]
         public UInt32Value? FormatIndex
         {
             get => GetAttribute<UInt32Value>();
@@ -4237,7 +4093,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>bc, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: bc</para>
         /// </summary>
-        [SchemaAttr("bc")]
         public HexBinaryValue? BackgroundColor
         {
             get => GetAttribute<HexBinaryValue>();
@@ -4248,7 +4103,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>fc, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: fc</para>
         /// </summary>
-        [SchemaAttr("fc")]
         public HexBinaryValue? ForegroundColor
         {
             get => GetAttribute<HexBinaryValue>();
@@ -4259,7 +4113,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>i, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        [SchemaAttr("i")]
         public BooleanValue? Italic
         {
             get => GetAttribute<BooleanValue>();
@@ -4270,7 +4123,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>un, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: un</para>
         /// </summary>
-        [SchemaAttr("un")]
         public BooleanValue? Underline
         {
             get => GetAttribute<BooleanValue>();
@@ -4281,7 +4133,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>st, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [SchemaAttr("st")]
         public BooleanValue? Strikethrough
         {
             get => GetAttribute<BooleanValue>();
@@ -4292,7 +4143,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>b, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [SchemaAttr("b")]
         public BooleanValue? Bold
         {
             get => GetAttribute<BooleanValue>();
@@ -4335,7 +4185,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ServerFormat" /> <c>&lt;x15:serverFormat></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:pivotTableServerFormats")]
     public partial class PivotTableServerFormats : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -4373,7 +4222,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>count, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -4406,7 +4254,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:serverFormat.</para>
     /// </summary>
-    [SchemaAttr("x15:serverFormat")]
     public partial class ServerFormat : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4420,7 +4267,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>Culture</para>
         /// <para>Represents the following attribute in the schema: culture</para>
         /// </summary>
-        [SchemaAttr("culture")]
         public StringValue? Culture
         {
             get => GetAttribute<StringValue>();
@@ -4431,7 +4277,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>Format</para>
         /// <para>Represents the following attribute in the schema: format</para>
         /// </summary>
-        [SchemaAttr("format")]
         public StringValue? Format
         {
             get => GetAttribute<StringValue>();
@@ -4457,7 +4302,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:slicerCacheOlapLevelName.</para>
     /// </summary>
-    [SchemaAttr("x15:slicerCacheOlapLevelName")]
     public partial class SlicerCacheOlapLevelName : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -4471,7 +4315,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>uniqueName, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        [SchemaAttr("uniqueName")]
         public StringValue? UniqueName
         {
             get => GetAttribute<StringValue>();
@@ -4482,7 +4325,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>count, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -4520,7 +4362,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:surveyPr")]
     public partial class SurveyPrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -4580,7 +4421,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:titlePr")]
     public partial class TitlePrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -4640,7 +4480,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:descriptionPr")]
     public partial class DescriptionPrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -4700,7 +4539,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:questionsPr")]
     public partial class QuestionsPrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -4760,7 +4598,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:questionPr")]
     public partial class QuestionPrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -4857,7 +4694,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>cssClass, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: cssClass</para>
         /// </summary>
-        [SchemaAttr("cssClass")]
         public StringValue? CssClass
         {
             get => GetAttribute<StringValue>();
@@ -4868,7 +4704,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>bottom, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: bottom</para>
         /// </summary>
-        [SchemaAttr("bottom")]
         public Int32Value? Bottom
         {
             get => GetAttribute<Int32Value>();
@@ -4879,7 +4714,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>top, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: top</para>
         /// </summary>
-        [SchemaAttr("top")]
         public Int32Value? Top
         {
             get => GetAttribute<Int32Value>();
@@ -4890,7 +4724,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>left, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: left</para>
         /// </summary>
-        [SchemaAttr("left")]
         public Int32Value? Left
         {
             get => GetAttribute<Int32Value>();
@@ -4901,7 +4734,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>right, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: right</para>
         /// </summary>
-        [SchemaAttr("right")]
         public Int32Value? Right
         {
             get => GetAttribute<Int32Value>();
@@ -4912,7 +4744,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>width, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-        [SchemaAttr("width")]
         public UInt32Value? Width
         {
             get => GetAttribute<UInt32Value>();
@@ -4923,7 +4754,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>height, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: height</para>
         /// </summary>
-        [SchemaAttr("height")]
         public UInt32Value? Height
         {
             get => GetAttribute<UInt32Value>();
@@ -4934,7 +4764,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>position, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        [SchemaAttr("position")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.SurveyPosition>? Position
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.SurveyPosition>>();
@@ -4982,7 +4811,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestion" /> <c>&lt;x15:question></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:questions")]
     public partial class SurveyQuestions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5059,7 +4887,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr" /> <c>&lt;x15:questionPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:question")]
     public partial class SurveyQuestion : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5097,7 +4924,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>binding, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: binding</para>
         /// </summary>
-        [SchemaAttr("binding")]
         public UInt32Value? Binding
         {
             get => GetAttribute<UInt32Value>();
@@ -5108,7 +4934,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>text, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: text</para>
         /// </summary>
-        [SchemaAttr("text")]
         public StringValue? Text
         {
             get => GetAttribute<StringValue>();
@@ -5119,7 +4944,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>type, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr("type")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.QuestionType>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.QuestionType>>();
@@ -5130,7 +4954,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>format, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: format</para>
         /// </summary>
-        [SchemaAttr("format")]
         public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.QuestionFormat>? Format
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.QuestionFormat>>();
@@ -5141,7 +4964,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>helpText, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: helpText</para>
         /// </summary>
-        [SchemaAttr("helpText")]
         public StringValue? HelpText
         {
             get => GetAttribute<StringValue>();
@@ -5152,7 +4974,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>required, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: required</para>
         /// </summary>
-        [SchemaAttr("required")]
         public BooleanValue? Required
         {
             get => GetAttribute<BooleanValue>();
@@ -5163,7 +4984,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>defaultValue, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: defaultValue</para>
         /// </summary>
-        [SchemaAttr("defaultValue")]
         public StringValue? DefaultValue
         {
             get => GetAttribute<StringValue>();
@@ -5174,7 +4994,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>decimalPlaces, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: decimalPlaces</para>
         /// </summary>
-        [SchemaAttr("decimalPlaces")]
         public UInt32Value? DecimalPlaces
         {
             get => GetAttribute<UInt32Value>();
@@ -5185,7 +5004,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>rowSource, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rowSource</para>
         /// </summary>
-        [SchemaAttr("rowSource")]
         public StringValue? RowSource
         {
             get => GetAttribute<StringValue>();
@@ -5260,7 +5078,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:timeline")]
     public partial class Timeline : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5298,7 +5115,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -5309,7 +5125,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>cache, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: cache</para>
         /// </summary>
-        [SchemaAttr("cache")]
         public StringValue? Cache
         {
             get => GetAttribute<StringValue>();
@@ -5320,7 +5135,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>caption, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: caption</para>
         /// </summary>
-        [SchemaAttr("caption")]
         public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
@@ -5331,7 +5145,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>showHeader, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: showHeader</para>
         /// </summary>
-        [SchemaAttr("showHeader")]
         public BooleanValue? ShowHeader
         {
             get => GetAttribute<BooleanValue>();
@@ -5342,7 +5155,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>showSelectionLabel, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: showSelectionLabel</para>
         /// </summary>
-        [SchemaAttr("showSelectionLabel")]
         public BooleanValue? ShowSelectionLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -5353,7 +5165,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>showTimeLevel, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: showTimeLevel</para>
         /// </summary>
-        [SchemaAttr("showTimeLevel")]
         public BooleanValue? ShowTimeLevel
         {
             get => GetAttribute<BooleanValue>();
@@ -5364,7 +5175,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>showHorizontalScrollbar, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: showHorizontalScrollbar</para>
         /// </summary>
-        [SchemaAttr("showHorizontalScrollbar")]
         public BooleanValue? ShowHorizontalScrollbar
         {
             get => GetAttribute<BooleanValue>();
@@ -5375,7 +5185,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>level, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: level</para>
         /// </summary>
-        [SchemaAttr("level")]
         public UInt32Value? Level
         {
             get => GetAttribute<UInt32Value>();
@@ -5386,7 +5195,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>selectionLevel, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: selectionLevel</para>
         /// </summary>
-        [SchemaAttr("selectionLevel")]
         public UInt32Value? SelectionLevel
         {
             get => GetAttribute<UInt32Value>();
@@ -5397,7 +5205,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>scrollPosition, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: scrollPosition</para>
         /// </summary>
-        [SchemaAttr("scrollPosition")]
         public DateTimeValue? ScrollPosition
         {
             get => GetAttribute<DateTimeValue>();
@@ -5408,7 +5215,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>style, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr("style")]
         public StringValue? Style
         {
             get => GetAttribute<StringValue>();
@@ -5474,7 +5280,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTable.</para>
     /// </summary>
-    [SchemaAttr("x15:pivotTable")]
     public partial class TimelineCachePivotTable : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -5488,7 +5293,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>tabId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: tabId</para>
         /// </summary>
-        [SchemaAttr("tabId")]
         public UInt32Value? TabId
         {
             get => GetAttribute<UInt32Value>();
@@ -5499,7 +5303,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -5531,7 +5334,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:selection.</para>
     /// </summary>
-    [SchemaAttr("x15:selection")]
     public partial class SelectionTimelineRange : TimelineRange
     {
         /// <summary>
@@ -5557,7 +5359,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:bounds.</para>
     /// </summary>
-    [SchemaAttr("x15:bounds")]
     public partial class BoundsTimelineRange : TimelineRange
     {
         /// <summary>
@@ -5596,7 +5397,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>startDate, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: startDate</para>
         /// </summary>
-        [SchemaAttr("startDate")]
         public DateTimeValue? StartDate
         {
             get => GetAttribute<DateTimeValue>();
@@ -5607,7 +5407,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>endDate, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: endDate</para>
         /// </summary>
-        [SchemaAttr("endDate")]
         public DateTimeValue? EndDate
         {
             get => GetAttribute<DateTimeValue>();
@@ -5642,7 +5441,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:autoFilter")]
     public partial class AutoFilter : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5680,7 +5478,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>Cell or Range Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
@@ -5720,7 +5517,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTable" /> <c>&lt;x15:pivotTable></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:pivotTables")]
     public partial class TimelineCachePivotTables : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5784,7 +5580,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange" /> <c>&lt;x15:bounds></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:state")]
     public partial class TimelineState : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -5822,7 +5617,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>singleRangeFilterState, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: singleRangeFilterState</para>
         /// </summary>
-        [SchemaAttr("singleRangeFilterState")]
         public BooleanValue? SingleRangeFilterState
         {
             get => GetAttribute<BooleanValue>();
@@ -5833,7 +5627,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>minimalRefreshVersion, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: minimalRefreshVersion</para>
         /// </summary>
-        [SchemaAttr("minimalRefreshVersion")]
         public UInt32Value? MinimalRefreshVersion
         {
             get => GetAttribute<UInt32Value>();
@@ -5844,7 +5637,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>lastRefreshVersion, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: lastRefreshVersion</para>
         /// </summary>
-        [SchemaAttr("lastRefreshVersion")]
         public UInt32Value? LastRefreshVersion
         {
             get => GetAttribute<UInt32Value>();
@@ -5855,7 +5647,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>pivotCacheId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: pivotCacheId</para>
         /// </summary>
-        [SchemaAttr("pivotCacheId")]
         public UInt32Value? PivotCacheId
         {
             get => GetAttribute<UInt32Value>();
@@ -5866,7 +5657,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>filterType, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: filterType</para>
         /// </summary>
-        [SchemaAttr("filterType")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotFilterValues>? FilterType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotFilterValues>>();
@@ -5877,7 +5667,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>filterId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: filterId</para>
         /// </summary>
-        [SchemaAttr("filterId")]
         public UInt32Value? FilterId
         {
             get => GetAttribute<UInt32Value>();
@@ -5888,7 +5677,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>filterTabId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: filterTabId</para>
         /// </summary>
-        [SchemaAttr("filterTabId")]
         public UInt32Value? FilterTabId
         {
             get => GetAttribute<UInt32Value>();
@@ -5899,7 +5687,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>filterPivotName, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: filterPivotName</para>
         /// </summary>
-        [SchemaAttr("filterPivotName")]
         public StringValue? FilterPivotName
         {
             get => GetAttribute<StringValue>();
@@ -6012,7 +5799,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotValueCell" /> <c>&lt;x15:c></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("x15:pivotRow")]
     public partial class PivotRow : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6050,7 +5836,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>r, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr("r")]
         public UInt32Value? Reference
         {
             get => GetAttribute<UInt32Value>();
@@ -6061,7 +5846,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>count, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();

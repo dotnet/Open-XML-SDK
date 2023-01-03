@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -29,7 +27,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences" /> <c>&lt;ds:schemaRefs></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ds:datastoreItem")]
     public partial class DataStoreItem : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -70,7 +67,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-        [SchemaAttr("ds:itemID")]
         public StringValue? ItemId
         {
             get => GetAttribute<StringValue>();
@@ -147,7 +143,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:schemaRef.</para>
     /// </summary>
-    [SchemaAttr("ds:schemaRef")]
     public partial class SchemaReference : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -164,7 +159,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-        [SchemaAttr("ds:uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -197,7 +191,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference" /> <c>&lt;ds:schemaRef></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("ds:schemaRefs")]
     public partial class SchemaReferences : TypedOpenXmlCompositeElement
     {
         /// <summary>

@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -24,7 +22,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctPosHOffset.</para>
     /// </summary>
-    [SchemaAttr("wp14:pctPosHOffset")]
     public partial class PercentagePositionHeightOffset : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -64,7 +61,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctPosVOffset.</para>
     /// </summary>
-    [SchemaAttr("wp14:pctPosVOffset")]
     public partial class PercentagePositionVerticalOffset : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -110,7 +106,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth" /> <c>&lt;wp14:pctWidth></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wp14:sizeRelH")]
     public partial class RelativeWidth : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -148,7 +143,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <para>relativeFrom, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        [SchemaAttr("relativeFrom")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>? ObjectId
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>>();
@@ -201,7 +195,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight" /> <c>&lt;wp14:pctHeight></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("wp14:sizeRelV")]
     public partial class RelativeHeight : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -239,7 +232,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <para>relativeFrom, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        [SchemaAttr("relativeFrom")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>? RelativeFrom
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>>();
@@ -286,7 +278,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctWidth.</para>
     /// </summary>
-    [SchemaAttr("wp14:pctWidth")]
     public partial class PercentageWidth : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -326,7 +317,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctHeight.</para>
     /// </summary>
-    [SchemaAttr("wp14:pctHeight")]
     public partial class PercentageHeight : TypedOpenXmlLeafTextElement
     {
         /// <summary>

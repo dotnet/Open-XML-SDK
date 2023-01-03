@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -24,7 +22,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:rvb.</para>
     /// </summary>
-    [SchemaAttr("xlrd:rvb")]
     public partial class RichValueBlock : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -38,7 +35,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         /// <para>i, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        [SchemaAttr("i")]
         public UInt32Value? I
         {
             get => GetAttribute<UInt32Value>();
@@ -73,7 +69,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue" /> <c>&lt;xlrd:rv></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd:rvData")]
     public partial class RichValueData : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -111,7 +106,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -184,7 +178,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure" /> <c>&lt;xlrd:s></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd:rvStructures")]
     public partial class RichValueStructures : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -222,7 +215,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr("count")]
         public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
@@ -295,7 +287,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.Value" /> <c>&lt;xlrd:v></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd:rv")]
     public partial class RichValue : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -333,7 +324,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         /// <para>s, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        [SchemaAttr("s")]
         public UInt32Value? S
         {
             get => GetAttribute<UInt32Value>();
@@ -387,7 +377,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -448,7 +437,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:fb.</para>
     /// </summary>
-    [SchemaAttr("xlrd:fb")]
     public partial class RichValueFallback : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -475,7 +463,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallbackType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallbackType>>();
@@ -500,7 +487,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:v.</para>
     /// </summary>
-    [SchemaAttr("xlrd:v")]
     public partial class Value : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -545,7 +531,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.Key" /> <c>&lt;xlrd:k></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xlrd:s")]
     public partial class RichValueStructure : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -583,7 +568,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public StringValue? T
         {
             get => GetAttribute<StringValue>();
@@ -616,7 +600,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:k.</para>
     /// </summary>
-    [SchemaAttr("xlrd:k")]
     public partial class Key : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -630,7 +613,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         /// <para>n, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        [SchemaAttr("n")]
         public StringValue? N
         {
             get => GetAttribute<StringValue>();
@@ -641,7 +623,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr("t")]
         public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueValueType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueValueType>>();

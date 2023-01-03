@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xpdl:pivotTableDefinition16.</para>
     /// </summary>
-    [SchemaAttr("xpdl:pivotTableDefinition16")]
     public partial class PivotTableDefinition16 : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37,7 +34,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
         /// <para>EnabledSubtotalsDefault, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: EnabledSubtotalsDefault</para>
         /// </summary>
-        [SchemaAttr("EnabledSubtotalsDefault")]
         public BooleanValue? EnabledSubtotalsDefault
         {
             get => GetAttribute<BooleanValue>();
@@ -48,7 +44,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
         /// <para>SubtotalsOnTopDefault, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: SubtotalsOnTopDefault</para>
         /// </summary>
-        [SchemaAttr("SubtotalsOnTopDefault")]
         public BooleanValue? SubtotalsOnTopDefault
         {
             get => GetAttribute<BooleanValue>();
@@ -59,7 +54,6 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
         /// <para>InsertBlankRowDefault, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: InsertBlankRowDefault</para>
         /// </summary>
-        [SchemaAttr("InsertBlankRowDefault")]
         public BooleanValue? InsertBlankRowDefault
         {
             get => GetAttribute<BooleanValue>();

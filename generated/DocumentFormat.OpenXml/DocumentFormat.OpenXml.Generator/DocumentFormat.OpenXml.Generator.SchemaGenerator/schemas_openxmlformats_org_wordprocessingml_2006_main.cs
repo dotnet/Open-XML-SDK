@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.CustomXmlSchemaReferences;
 using DocumentFormat.OpenXml.Drawing.Wordprocessing;
@@ -31,7 +29,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cellIns.</para>
     /// </summary>
-    [SchemaAttr("w:cellIns")]
     public partial class CellInsertion : TrackChangeType
     {
         /// <summary>
@@ -57,7 +54,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cellDel.</para>
     /// </summary>
-    [SchemaAttr("w:cellDel")]
     public partial class CellDeletion : TrackChangeType
     {
         /// <summary>
@@ -83,7 +79,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlInsRangeStart.</para>
     /// </summary>
-    [SchemaAttr("w:customXmlInsRangeStart")]
     public partial class CustomXmlInsRangeStart : TrackChangeType
     {
         /// <summary>
@@ -109,7 +104,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlDelRangeStart.</para>
     /// </summary>
-    [SchemaAttr("w:customXmlDelRangeStart")]
     public partial class CustomXmlDelRangeStart : TrackChangeType
     {
         /// <summary>
@@ -135,7 +129,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlMoveFromRangeStart.</para>
     /// </summary>
-    [SchemaAttr("w:customXmlMoveFromRangeStart")]
     public partial class CustomXmlMoveFromRangeStart : TrackChangeType
     {
         /// <summary>
@@ -161,7 +154,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlMoveToRangeStart.</para>
     /// </summary>
-    [SchemaAttr("w:customXmlMoveToRangeStart")]
     public partial class CustomXmlMoveToRangeStart : TrackChangeType
     {
         /// <summary>
@@ -187,7 +179,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ins.</para>
     /// </summary>
-    [SchemaAttr("w:ins")]
     public partial class Inserted : TrackChangeType
     {
         /// <summary>
@@ -213,7 +204,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:del.</para>
     /// </summary>
-    [SchemaAttr("w:del")]
     public partial class Deleted : TrackChangeType
     {
         /// <summary>
@@ -239,7 +229,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveFrom.</para>
     /// </summary>
-    [SchemaAttr("w:moveFrom")]
     public partial class MoveFrom : TrackChangeType
     {
         /// <summary>
@@ -265,7 +254,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveTo.</para>
     /// </summary>
-    [SchemaAttr("w:moveTo")]
     public partial class MoveTo : TrackChangeType
     {
         /// <summary>
@@ -307,7 +295,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -321,7 +308,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -335,7 +321,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -369,7 +354,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cellMerge.</para>
     /// </summary>
-    [SchemaAttr("w:cellMerge")]
     public partial class CellMerge : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -386,7 +370,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:vMerge")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>? VerticalMerge
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>();
@@ -400,7 +383,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:vMergeOrig")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>? VerticalMergeOriginal
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>();
@@ -414,7 +396,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -428,7 +409,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -442,7 +422,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -483,7 +462,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bookmarkStart.</para>
     /// </summary>
-    [SchemaAttr("w:bookmarkStart")]
     public partial class BookmarkStart : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -500,7 +478,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -514,7 +491,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:colFirst")]
         public Int32Value? ColumnFirst
         {
             get => GetAttribute<Int32Value>();
@@ -528,7 +504,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:colLast")]
         public Int32Value? ColumnLast
         {
             get => GetAttribute<Int32Value>();
@@ -542,7 +517,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:displacedByCustomXml")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -556,7 +530,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -597,7 +570,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bookmarkEnd.</para>
     /// </summary>
-    [SchemaAttr("w:bookmarkEnd")]
     public partial class BookmarkEnd : MarkupRangeType
     {
         /// <summary>
@@ -623,7 +595,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:commentRangeStart.</para>
     /// </summary>
-    [SchemaAttr("w:commentRangeStart")]
     public partial class CommentRangeStart : MarkupRangeType
     {
         /// <summary>
@@ -650,7 +621,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:commentRangeEnd.</para>
     /// </summary>
-    [SchemaAttr("w:commentRangeEnd")]
     public partial class CommentRangeEnd : MarkupRangeType
     {
         /// <summary>
@@ -677,7 +647,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveFromRangeEnd.</para>
     /// </summary>
-    [SchemaAttr("w:moveFromRangeEnd")]
     public partial class MoveFromRangeEnd : MarkupRangeType
     {
         /// <summary>
@@ -703,7 +672,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveToRangeEnd.</para>
     /// </summary>
-    [SchemaAttr("w:moveToRangeEnd")]
     public partial class MoveToRangeEnd : MarkupRangeType
     {
         /// <summary>
@@ -745,7 +713,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:displacedByCustomXml")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -759,7 +726,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -788,7 +754,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveFromRangeStart.</para>
     /// </summary>
-    [SchemaAttr("w:moveFromRangeStart")]
     public partial class MoveFromRangeStart : MoveBookmarkType
     {
         /// <summary>
@@ -814,7 +779,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveToRangeStart.</para>
     /// </summary>
-    [SchemaAttr("w:moveToRangeStart")]
     public partial class MoveToRangeStart : MoveBookmarkType
     {
         /// <summary>
@@ -856,7 +820,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -870,7 +833,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -884,7 +846,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -898,7 +859,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:colFirst")]
         public Int32Value? ColumnFirst
         {
             get => GetAttribute<Int32Value>();
@@ -912,7 +872,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:colLast")]
         public Int32Value? ColumnLast
         {
             get => GetAttribute<Int32Value>();
@@ -926,7 +885,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:displacedByCustomXml")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -940,7 +898,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -984,7 +941,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlInsRangeEnd.</para>
     /// </summary>
-    [SchemaAttr("w:customXmlInsRangeEnd")]
     public partial class CustomXmlInsRangeEnd : MarkupType
     {
         /// <summary>
@@ -1010,7 +966,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlDelRangeEnd.</para>
     /// </summary>
-    [SchemaAttr("w:customXmlDelRangeEnd")]
     public partial class CustomXmlDelRangeEnd : MarkupType
     {
         /// <summary>
@@ -1036,7 +991,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlMoveFromRangeEnd.</para>
     /// </summary>
-    [SchemaAttr("w:customXmlMoveFromRangeEnd")]
     public partial class CustomXmlMoveFromRangeEnd : MarkupType
     {
         /// <summary>
@@ -1062,7 +1016,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlMoveToRangeEnd.</para>
     /// </summary>
-    [SchemaAttr("w:customXmlMoveToRangeEnd")]
     public partial class CustomXmlMoveToRangeEnd : MarkupType
     {
         /// <summary>
@@ -1087,7 +1040,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:commentReference.</para>
     /// </summary>
-    [SchemaAttr("w:commentReference")]
     public partial class CommentReference : MarkupType
     {
         /// <summary>
@@ -1130,7 +1082,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1158,7 +1109,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pStyle.</para>
     /// </summary>
-    [SchemaAttr("w:pStyle")]
     public partial class ParagraphStyleId : StringType
     {
         /// <summary>
@@ -1184,7 +1134,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dateFormat.</para>
     /// </summary>
-    [SchemaAttr("w:dateFormat")]
     public partial class DateFormat : StringType
     {
         /// <summary>
@@ -1209,7 +1158,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docPartGallery.</para>
     /// </summary>
-    [SchemaAttr("w:docPartGallery")]
     public partial class DocPartGallery : StringType
     {
         /// <summary>
@@ -1234,7 +1182,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docPartCategory.</para>
     /// </summary>
-    [SchemaAttr("w:docPartCategory")]
     public partial class DocPartCategory : StringType
     {
         /// <summary>
@@ -1259,7 +1206,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docPart.</para>
     /// </summary>
-    [SchemaAttr("w:docPart")]
     public partial class DocPartReference : StringType
     {
         /// <summary>
@@ -1284,7 +1230,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:placeholder.</para>
     /// </summary>
-    [SchemaAttr("w:placeholder")]
     public partial class CustomXmlPlaceholder : StringType
     {
         /// <summary>
@@ -1309,7 +1254,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblCaption.</para>
     /// </summary>
-    [SchemaAttr("w:tblCaption")]
     public partial class TableCaption : StringType
     {
         /// <summary>
@@ -1335,7 +1279,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblDescription.</para>
     /// </summary>
-    [SchemaAttr("w:tblDescription")]
     public partial class TableDescription : StringType
     {
         /// <summary>
@@ -1361,7 +1304,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-    [SchemaAttr("w:name")]
     public partial class Name : StringType
     {
         /// <summary>
@@ -1387,7 +1329,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mappedName.</para>
     /// </summary>
-    [SchemaAttr("w:mappedName")]
     public partial class MappedName : StringType
     {
         /// <summary>
@@ -1412,7 +1353,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:udl.</para>
     /// </summary>
-    [SchemaAttr("w:udl")]
     public partial class UdlConnectionString : StringType
     {
         /// <summary>
@@ -1437,7 +1377,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:table.</para>
     /// </summary>
-    [SchemaAttr("w:table")]
     public partial class DataSourceTableName : StringType
     {
         /// <summary>
@@ -1462,7 +1401,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:connectString.</para>
     /// </summary>
-    [SchemaAttr("w:connectString")]
     public partial class ConnectString : StringType
     {
         /// <summary>
@@ -1487,7 +1425,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:query.</para>
     /// </summary>
-    [SchemaAttr("w:query")]
     public partial class Query : StringType
     {
         /// <summary>
@@ -1512,7 +1449,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:addressFieldName.</para>
     /// </summary>
-    [SchemaAttr("w:addressFieldName")]
     public partial class AddressFieldName : StringType
     {
         /// <summary>
@@ -1537,7 +1473,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mailSubject.</para>
     /// </summary>
-    [SchemaAttr("w:mailSubject")]
     public partial class MailSubject : StringType
     {
         /// <summary>
@@ -1562,7 +1497,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sz.</para>
     /// </summary>
-    [SchemaAttr("w:sz")]
     public partial class FrameSize : StringType
     {
         /// <summary>
@@ -1587,7 +1521,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:style.</para>
     /// </summary>
-    [SchemaAttr("w:style")]
     public partial class StyleId : StringType
     {
         /// <summary>
@@ -1613,7 +1546,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:description.</para>
     /// </summary>
-    [SchemaAttr("w:description")]
     public partial class Description : StringType
     {
         /// <summary>
@@ -1638,7 +1570,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:alias.</para>
     /// </summary>
-    [SchemaAttr("w:alias")]
     public partial class SdtAlias : StringType
     {
         /// <summary>
@@ -1663,7 +1594,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tag.</para>
     /// </summary>
-    [SchemaAttr("w:tag")]
     public partial class Tag : StringType
     {
         /// <summary>
@@ -1688,7 +1618,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:attachedSchema.</para>
     /// </summary>
-    [SchemaAttr("w:attachedSchema")]
     public partial class AttachedSchema : StringType
     {
         /// <summary>
@@ -1713,7 +1642,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:decimalSymbol.</para>
     /// </summary>
-    [SchemaAttr("w:decimalSymbol")]
     public partial class DecimalSymbol : StringType
     {
         /// <summary>
@@ -1739,7 +1667,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:listSeparator.</para>
     /// </summary>
-    [SchemaAttr("w:listSeparator")]
     public partial class ListSeparator : StringType
     {
         /// <summary>
@@ -1765,7 +1692,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:encoding.</para>
     /// </summary>
-    [SchemaAttr("w:encoding")]
     public partial class WebPageEncoding : StringType
     {
         /// <summary>
@@ -1790,7 +1716,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:altName.</para>
     /// </summary>
-    [SchemaAttr("w:altName")]
     public partial class AltName : StringType
     {
         /// <summary>
@@ -1831,7 +1756,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -1854,7 +1778,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:keepNext.</para>
     /// </summary>
-    [SchemaAttr("w:keepNext")]
     public partial class KeepNext : OnOffType
     {
         /// <summary>
@@ -1879,7 +1802,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:keepLines.</para>
     /// </summary>
-    [SchemaAttr("w:keepLines")]
     public partial class KeepLines : OnOffType
     {
         /// <summary>
@@ -1904,7 +1826,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pageBreakBefore.</para>
     /// </summary>
-    [SchemaAttr("w:pageBreakBefore")]
     public partial class PageBreakBefore : OnOffType
     {
         /// <summary>
@@ -1929,7 +1850,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:widowControl.</para>
     /// </summary>
-    [SchemaAttr("w:widowControl")]
     public partial class WidowControl : OnOffType
     {
         /// <summary>
@@ -1954,7 +1874,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressLineNumbers.</para>
     /// </summary>
-    [SchemaAttr("w:suppressLineNumbers")]
     public partial class SuppressLineNumbers : OnOffType
     {
         /// <summary>
@@ -1979,7 +1898,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressAutoHyphens.</para>
     /// </summary>
-    [SchemaAttr("w:suppressAutoHyphens")]
     public partial class SuppressAutoHyphens : OnOffType
     {
         /// <summary>
@@ -2004,7 +1922,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:kinsoku.</para>
     /// </summary>
-    [SchemaAttr("w:kinsoku")]
     public partial class Kinsoku : OnOffType
     {
         /// <summary>
@@ -2029,7 +1946,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:wordWrap.</para>
     /// </summary>
-    [SchemaAttr("w:wordWrap")]
     public partial class WordWrap : OnOffType
     {
         /// <summary>
@@ -2054,7 +1970,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:overflowPunct.</para>
     /// </summary>
-    [SchemaAttr("w:overflowPunct")]
     public partial class OverflowPunctuation : OnOffType
     {
         /// <summary>
@@ -2079,7 +1994,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:topLinePunct.</para>
     /// </summary>
-    [SchemaAttr("w:topLinePunct")]
     public partial class TopLinePunctuation : OnOffType
     {
         /// <summary>
@@ -2104,7 +2018,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoSpaceDE.</para>
     /// </summary>
-    [SchemaAttr("w:autoSpaceDE")]
     public partial class AutoSpaceDE : OnOffType
     {
         /// <summary>
@@ -2129,7 +2042,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoSpaceDN.</para>
     /// </summary>
-    [SchemaAttr("w:autoSpaceDN")]
     public partial class AutoSpaceDN : OnOffType
     {
         /// <summary>
@@ -2154,7 +2066,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bidi.</para>
     /// </summary>
-    [SchemaAttr("w:bidi")]
     public partial class BiDi : OnOffType
     {
         /// <summary>
@@ -2179,7 +2090,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:adjustRightInd.</para>
     /// </summary>
-    [SchemaAttr("w:adjustRightInd")]
     public partial class AdjustRightIndent : OnOffType
     {
         /// <summary>
@@ -2204,7 +2114,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:snapToGrid.</para>
     /// </summary>
-    [SchemaAttr("w:snapToGrid")]
     public partial class SnapToGrid : OnOffType
     {
         /// <summary>
@@ -2229,7 +2138,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:contextualSpacing.</para>
     /// </summary>
-    [SchemaAttr("w:contextualSpacing")]
     public partial class ContextualSpacing : OnOffType
     {
         /// <summary>
@@ -2254,7 +2162,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mirrorIndents.</para>
     /// </summary>
-    [SchemaAttr("w:mirrorIndents")]
     public partial class MirrorIndents : OnOffType
     {
         /// <summary>
@@ -2279,7 +2186,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressOverlap.</para>
     /// </summary>
-    [SchemaAttr("w:suppressOverlap")]
     public partial class SuppressOverlap : OnOffType
     {
         /// <summary>
@@ -2304,7 +2210,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:b.</para>
     /// </summary>
-    [SchemaAttr("w:b")]
     public partial class Bold : OnOffType
     {
         /// <summary>
@@ -2329,7 +2234,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bCs.</para>
     /// </summary>
-    [SchemaAttr("w:bCs")]
     public partial class BoldComplexScript : OnOffType
     {
         /// <summary>
@@ -2354,7 +2258,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:i.</para>
     /// </summary>
-    [SchemaAttr("w:i")]
     public partial class Italic : OnOffType
     {
         /// <summary>
@@ -2379,7 +2282,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:iCs.</para>
     /// </summary>
-    [SchemaAttr("w:iCs")]
     public partial class ItalicComplexScript : OnOffType
     {
         /// <summary>
@@ -2404,7 +2306,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:caps.</para>
     /// </summary>
-    [SchemaAttr("w:caps")]
     public partial class Caps : OnOffType
     {
         /// <summary>
@@ -2429,7 +2330,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:smallCaps.</para>
     /// </summary>
-    [SchemaAttr("w:smallCaps")]
     public partial class SmallCaps : OnOffType
     {
         /// <summary>
@@ -2454,7 +2354,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:strike.</para>
     /// </summary>
-    [SchemaAttr("w:strike")]
     public partial class Strike : OnOffType
     {
         /// <summary>
@@ -2479,7 +2378,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dstrike.</para>
     /// </summary>
-    [SchemaAttr("w:dstrike")]
     public partial class DoubleStrike : OnOffType
     {
         /// <summary>
@@ -2504,7 +2402,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:outline.</para>
     /// </summary>
-    [SchemaAttr("w:outline")]
     public partial class Outline : OnOffType
     {
         /// <summary>
@@ -2529,7 +2426,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:shadow.</para>
     /// </summary>
-    [SchemaAttr("w:shadow")]
     public partial class Shadow : OnOffType
     {
         /// <summary>
@@ -2554,7 +2450,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:emboss.</para>
     /// </summary>
-    [SchemaAttr("w:emboss")]
     public partial class Emboss : OnOffType
     {
         /// <summary>
@@ -2579,7 +2474,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:imprint.</para>
     /// </summary>
-    [SchemaAttr("w:imprint")]
     public partial class Imprint : OnOffType
     {
         /// <summary>
@@ -2604,7 +2498,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noProof.</para>
     /// </summary>
-    [SchemaAttr("w:noProof")]
     public partial class NoProof : OnOffType
     {
         /// <summary>
@@ -2629,7 +2522,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vanish.</para>
     /// </summary>
-    [SchemaAttr("w:vanish")]
     public partial class Vanish : OnOffType
     {
         /// <summary>
@@ -2654,7 +2546,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:webHidden.</para>
     /// </summary>
-    [SchemaAttr("w:webHidden")]
     public partial class WebHidden : OnOffType
     {
         /// <summary>
@@ -2679,7 +2570,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rtl.</para>
     /// </summary>
-    [SchemaAttr("w:rtl")]
     public partial class RightToLeftText : OnOffType
     {
         /// <summary>
@@ -2704,7 +2594,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cs.</para>
     /// </summary>
-    [SchemaAttr("w:cs")]
     public partial class ComplexScript : OnOffType
     {
         /// <summary>
@@ -2729,7 +2618,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:specVanish.</para>
     /// </summary>
-    [SchemaAttr("w:specVanish")]
     public partial class SpecVanish : OnOffType
     {
         /// <summary>
@@ -2754,7 +2642,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:oMath.</para>
     /// </summary>
-    [SchemaAttr("w:oMath")]
     public partial class OfficeMath : OnOffType
     {
         /// <summary>
@@ -2779,7 +2666,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hidden.</para>
     /// </summary>
-    [SchemaAttr("w:hidden")]
     public partial class Hidden : OnOffType
     {
         /// <summary>
@@ -2804,7 +2690,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:formProt.</para>
     /// </summary>
-    [SchemaAttr("w:formProt")]
     public partial class FormProtection : OnOffType
     {
         /// <summary>
@@ -2829,7 +2714,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noEndnote.</para>
     /// </summary>
-    [SchemaAttr("w:noEndnote")]
     public partial class NoEndnote : OnOffType
     {
         /// <summary>
@@ -2854,7 +2738,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:titlePg.</para>
     /// </summary>
-    [SchemaAttr("w:titlePg")]
     public partial class TitlePage : OnOffType
     {
         /// <summary>
@@ -2879,7 +2762,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rtlGutter.</para>
     /// </summary>
-    [SchemaAttr("w:rtlGutter")]
     public partial class GutterOnRight : OnOffType
     {
         /// <summary>
@@ -2904,7 +2786,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:enabled.</para>
     /// </summary>
-    [SchemaAttr("w:enabled")]
     public partial class Enabled : OnOffType
     {
         /// <summary>
@@ -2929,7 +2810,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:calcOnExit.</para>
     /// </summary>
-    [SchemaAttr("w:calcOnExit")]
     public partial class CalculateOnExit : OnOffType
     {
         /// <summary>
@@ -2954,7 +2834,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sizeAuto.</para>
     /// </summary>
-    [SchemaAttr("w:sizeAuto")]
     public partial class AutomaticallySizeFormField : OnOffType
     {
         /// <summary>
@@ -2979,7 +2858,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:default.</para>
     /// </summary>
-    [SchemaAttr("w:default")]
     public partial class DefaultCheckBoxFormFieldState : OnOffType
     {
         /// <summary>
@@ -3004,7 +2882,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:checked.</para>
     /// </summary>
-    [SchemaAttr("w:checked")]
     public partial class Checked : OnOffType
     {
         /// <summary>
@@ -3029,7 +2906,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:matchSrc.</para>
     /// </summary>
-    [SchemaAttr("w:matchSrc")]
     public partial class MatchSource : OnOffType
     {
         /// <summary>
@@ -3054,7 +2930,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dirty.</para>
     /// </summary>
-    [SchemaAttr("w:dirty")]
     public partial class Dirty : OnOffType
     {
         /// <summary>
@@ -3079,7 +2954,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docPartUnique.</para>
     /// </summary>
-    [SchemaAttr("w:docPartUnique")]
     public partial class DocPartUnique : OnOffType
     {
         /// <summary>
@@ -3104,7 +2978,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:active.</para>
     /// </summary>
-    [SchemaAttr("w:active")]
     public partial class Active : OnOffType
     {
         /// <summary>
@@ -3129,7 +3002,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dynamicAddress.</para>
     /// </summary>
-    [SchemaAttr("w:dynamicAddress")]
     public partial class DynamicAddress : OnOffType
     {
         /// <summary>
@@ -3154,7 +3026,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:fHdr.</para>
     /// </summary>
-    [SchemaAttr("w:fHdr")]
     public partial class FirstRowHeader : OnOffType
     {
         /// <summary>
@@ -3179,7 +3050,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:linkToQuery.</para>
     /// </summary>
-    [SchemaAttr("w:linkToQuery")]
     public partial class LinkToQuery : OnOffType
     {
         /// <summary>
@@ -3204,7 +3074,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotSuppressBlankLines.</para>
     /// </summary>
-    [SchemaAttr("w:doNotSuppressBlankLines")]
     public partial class DoNotSuppressBlankLines : OnOffType
     {
         /// <summary>
@@ -3229,7 +3098,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mailAsAttachment.</para>
     /// </summary>
-    [SchemaAttr("w:mailAsAttachment")]
     public partial class MailAsAttachment : OnOffType
     {
         /// <summary>
@@ -3254,7 +3122,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:viewMergedData.</para>
     /// </summary>
-    [SchemaAttr("w:viewMergedData")]
     public partial class ViewMergedData : OnOffType
     {
         /// <summary>
@@ -3279,7 +3146,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:isLgl.</para>
     /// </summary>
-    [SchemaAttr("w:isLgl")]
     public partial class IsLegalNumberingStyle : OnOffType
     {
         /// <summary>
@@ -3304,7 +3170,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:blockQuote.</para>
     /// </summary>
-    [SchemaAttr("w:blockQuote")]
     public partial class BlockQuote : OnOffType
     {
         /// <summary>
@@ -3329,7 +3194,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bodyDiv.</para>
     /// </summary>
-    [SchemaAttr("w:bodyDiv")]
     public partial class BodyDiv : OnOffType
     {
         /// <summary>
@@ -3354,7 +3218,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useSingleBorderforContiguousCells.</para>
     /// </summary>
-    [SchemaAttr("w:useSingleBorderforContiguousCells")]
     public partial class UseSingleBorderForContiguousCells : OnOffType
     {
         /// <summary>
@@ -3379,7 +3242,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:wpJustification.</para>
     /// </summary>
-    [SchemaAttr("w:wpJustification")]
     public partial class WordPerfectJustification : OnOffType
     {
         /// <summary>
@@ -3404,7 +3266,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noTabHangInd.</para>
     /// </summary>
-    [SchemaAttr("w:noTabHangInd")]
     public partial class NoTabHangIndent : OnOffType
     {
         /// <summary>
@@ -3429,7 +3290,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noLeading.</para>
     /// </summary>
-    [SchemaAttr("w:noLeading")]
     public partial class NoLeading : OnOffType
     {
         /// <summary>
@@ -3454,7 +3314,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:spaceForUL.</para>
     /// </summary>
-    [SchemaAttr("w:spaceForUL")]
     public partial class SpaceForUnderline : OnOffType
     {
         /// <summary>
@@ -3479,7 +3338,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noColumnBalance.</para>
     /// </summary>
-    [SchemaAttr("w:noColumnBalance")]
     public partial class NoColumnBalance : OnOffType
     {
         /// <summary>
@@ -3504,7 +3362,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:balanceSingleByteDoubleByteWidth.</para>
     /// </summary>
-    [SchemaAttr("w:balanceSingleByteDoubleByteWidth")]
     public partial class BalanceSingleByteDoubleByteWidth : OnOffType
     {
         /// <summary>
@@ -3529,7 +3386,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noExtraLineSpacing.</para>
     /// </summary>
-    [SchemaAttr("w:noExtraLineSpacing")]
     public partial class NoExtraLineSpacing : OnOffType
     {
         /// <summary>
@@ -3554,7 +3410,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotLeaveBackslashAlone.</para>
     /// </summary>
-    [SchemaAttr("w:doNotLeaveBackslashAlone")]
     public partial class DoNotLeaveBackslashAlone : OnOffType
     {
         /// <summary>
@@ -3579,7 +3434,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ulTrailSpace.</para>
     /// </summary>
-    [SchemaAttr("w:ulTrailSpace")]
     public partial class UnderlineTrailingSpaces : OnOffType
     {
         /// <summary>
@@ -3604,7 +3458,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotExpandShiftReturn.</para>
     /// </summary>
-    [SchemaAttr("w:doNotExpandShiftReturn")]
     public partial class DoNotExpandShiftReturn : OnOffType
     {
         /// <summary>
@@ -3629,7 +3482,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:spacingInWholePoints.</para>
     /// </summary>
-    [SchemaAttr("w:spacingInWholePoints")]
     public partial class SpacingInWholePoints : OnOffType
     {
         /// <summary>
@@ -3654,7 +3506,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lineWrapLikeWord6.</para>
     /// </summary>
-    [SchemaAttr("w:lineWrapLikeWord6")]
     public partial class LineWrapLikeWord6 : OnOffType
     {
         /// <summary>
@@ -3679,7 +3530,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printBodyTextBeforeHeader.</para>
     /// </summary>
-    [SchemaAttr("w:printBodyTextBeforeHeader")]
     public partial class PrintBodyTextBeforeHeader : OnOffType
     {
         /// <summary>
@@ -3704,7 +3554,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printColBlack.</para>
     /// </summary>
-    [SchemaAttr("w:printColBlack")]
     public partial class PrintColorBlackWhite : OnOffType
     {
         /// <summary>
@@ -3729,7 +3578,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:wpSpaceWidth.</para>
     /// </summary>
-    [SchemaAttr("w:wpSpaceWidth")]
     public partial class WordPerfectSpaceWidth : OnOffType
     {
         /// <summary>
@@ -3754,7 +3602,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:showBreaksInFrames.</para>
     /// </summary>
-    [SchemaAttr("w:showBreaksInFrames")]
     public partial class ShowBreaksInFrames : OnOffType
     {
         /// <summary>
@@ -3779,7 +3626,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:subFontBySize.</para>
     /// </summary>
-    [SchemaAttr("w:subFontBySize")]
     public partial class SubFontBySize : OnOffType
     {
         /// <summary>
@@ -3804,7 +3650,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressBottomSpacing.</para>
     /// </summary>
-    [SchemaAttr("w:suppressBottomSpacing")]
     public partial class SuppressBottomSpacing : OnOffType
     {
         /// <summary>
@@ -3829,7 +3674,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressTopSpacing.</para>
     /// </summary>
-    [SchemaAttr("w:suppressTopSpacing")]
     public partial class SuppressTopSpacing : OnOffType
     {
         /// <summary>
@@ -3854,7 +3698,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressSpacingAtTopOfPage.</para>
     /// </summary>
-    [SchemaAttr("w:suppressSpacingAtTopOfPage")]
     public partial class SuppressSpacingAtTopOfPage : OnOffType
     {
         /// <summary>
@@ -3879,7 +3722,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressTopSpacingWP.</para>
     /// </summary>
-    [SchemaAttr("w:suppressTopSpacingWP")]
     public partial class SuppressTopSpacingWordPerfect : OnOffType
     {
         /// <summary>
@@ -3904,7 +3746,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suppressSpBfAfterPgBrk.</para>
     /// </summary>
-    [SchemaAttr("w:suppressSpBfAfterPgBrk")]
     public partial class SuppressSpacingBeforeAfterPageBreak : OnOffType
     {
         /// <summary>
@@ -3929,7 +3770,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:swapBordersFacingPages.</para>
     /// </summary>
-    [SchemaAttr("w:swapBordersFacingPages")]
     public partial class SwapBordersFacingPages : OnOffType
     {
         /// <summary>
@@ -3954,7 +3794,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:convMailMergeEsc.</para>
     /// </summary>
-    [SchemaAttr("w:convMailMergeEsc")]
     public partial class ConvertMailMergeEscape : OnOffType
     {
         /// <summary>
@@ -3979,7 +3818,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:truncateFontHeightsLikeWP6.</para>
     /// </summary>
-    [SchemaAttr("w:truncateFontHeightsLikeWP6")]
     public partial class TruncateFontHeightsLikeWordPerfect : OnOffType
     {
         /// <summary>
@@ -4004,7 +3842,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mwSmallCaps.</para>
     /// </summary>
-    [SchemaAttr("w:mwSmallCaps")]
     public partial class MacWordSmallCaps : OnOffType
     {
         /// <summary>
@@ -4029,7 +3866,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:usePrinterMetrics.</para>
     /// </summary>
-    [SchemaAttr("w:usePrinterMetrics")]
     public partial class UsePrinterMetrics : OnOffType
     {
         /// <summary>
@@ -4054,7 +3890,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotSuppressParagraphBorders.</para>
     /// </summary>
-    [SchemaAttr("w:doNotSuppressParagraphBorders")]
     public partial class DoNotSuppressParagraphBorders : OnOffType
     {
         /// <summary>
@@ -4079,7 +3914,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:wrapTrailSpaces.</para>
     /// </summary>
-    [SchemaAttr("w:wrapTrailSpaces")]
     public partial class WrapTrailSpaces : OnOffType
     {
         /// <summary>
@@ -4104,7 +3938,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footnoteLayoutLikeWW8.</para>
     /// </summary>
-    [SchemaAttr("w:footnoteLayoutLikeWW8")]
     public partial class FootnoteLayoutLikeWord8 : OnOffType
     {
         /// <summary>
@@ -4129,7 +3962,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:shapeLayoutLikeWW8.</para>
     /// </summary>
-    [SchemaAttr("w:shapeLayoutLikeWW8")]
     public partial class ShapeLayoutLikeWord8 : OnOffType
     {
         /// <summary>
@@ -4154,7 +3986,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:alignTablesRowByRow.</para>
     /// </summary>
-    [SchemaAttr("w:alignTablesRowByRow")]
     public partial class AlignTablesRowByRow : OnOffType
     {
         /// <summary>
@@ -4179,7 +4010,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:forgetLastTabAlignment.</para>
     /// </summary>
-    [SchemaAttr("w:forgetLastTabAlignment")]
     public partial class ForgetLastTabAlignment : OnOffType
     {
         /// <summary>
@@ -4204,7 +4034,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:adjustLineHeightInTable.</para>
     /// </summary>
-    [SchemaAttr("w:adjustLineHeightInTable")]
     public partial class AdjustLineHeightInTable : OnOffType
     {
         /// <summary>
@@ -4229,7 +4058,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoSpaceLikeWord95.</para>
     /// </summary>
-    [SchemaAttr("w:autoSpaceLikeWord95")]
     public partial class AutoSpaceLikeWord95 : OnOffType
     {
         /// <summary>
@@ -4254,7 +4082,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noSpaceRaiseLower.</para>
     /// </summary>
-    [SchemaAttr("w:noSpaceRaiseLower")]
     public partial class NoSpaceRaiseLower : OnOffType
     {
         /// <summary>
@@ -4279,7 +4106,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotUseHTMLParagraphAutoSpacing.</para>
     /// </summary>
-    [SchemaAttr("w:doNotUseHTMLParagraphAutoSpacing")]
     public partial class DoNotUseHTMLParagraphAutoSpacing : OnOffType
     {
         /// <summary>
@@ -4304,7 +4130,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:layoutRawTableWidth.</para>
     /// </summary>
-    [SchemaAttr("w:layoutRawTableWidth")]
     public partial class LayoutRawTableWidth : OnOffType
     {
         /// <summary>
@@ -4329,7 +4154,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:layoutTableRowsApart.</para>
     /// </summary>
-    [SchemaAttr("w:layoutTableRowsApart")]
     public partial class LayoutTableRowsApart : OnOffType
     {
         /// <summary>
@@ -4354,7 +4178,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useWord97LineBreakRules.</para>
     /// </summary>
-    [SchemaAttr("w:useWord97LineBreakRules")]
     public partial class UseWord97LineBreakRules : OnOffType
     {
         /// <summary>
@@ -4379,7 +4202,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotBreakWrappedTables.</para>
     /// </summary>
-    [SchemaAttr("w:doNotBreakWrappedTables")]
     public partial class DoNotBreakWrappedTables : OnOffType
     {
         /// <summary>
@@ -4404,7 +4226,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotSnapToGridInCell.</para>
     /// </summary>
-    [SchemaAttr("w:doNotSnapToGridInCell")]
     public partial class DoNotSnapToGridInCell : OnOffType
     {
         /// <summary>
@@ -4429,7 +4250,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:selectFldWithFirstOrLastChar.</para>
     /// </summary>
-    [SchemaAttr("w:selectFldWithFirstOrLastChar")]
     public partial class SelectFieldWithFirstOrLastChar : OnOffType
     {
         /// <summary>
@@ -4454,7 +4274,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:applyBreakingRules.</para>
     /// </summary>
-    [SchemaAttr("w:applyBreakingRules")]
     public partial class ApplyBreakingRules : OnOffType
     {
         /// <summary>
@@ -4479,7 +4298,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotWrapTextWithPunct.</para>
     /// </summary>
-    [SchemaAttr("w:doNotWrapTextWithPunct")]
     public partial class DoNotWrapTextWithPunctuation : OnOffType
     {
         /// <summary>
@@ -4504,7 +4322,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotUseEastAsianBreakRules.</para>
     /// </summary>
-    [SchemaAttr("w:doNotUseEastAsianBreakRules")]
     public partial class DoNotUseEastAsianBreakRules : OnOffType
     {
         /// <summary>
@@ -4529,7 +4346,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useWord2002TableStyleRules.</para>
     /// </summary>
-    [SchemaAttr("w:useWord2002TableStyleRules")]
     public partial class UseWord2002TableStyleRules : OnOffType
     {
         /// <summary>
@@ -4554,7 +4370,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:growAutofit.</para>
     /// </summary>
-    [SchemaAttr("w:growAutofit")]
     public partial class GrowAutofit : OnOffType
     {
         /// <summary>
@@ -4579,7 +4394,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useFELayout.</para>
     /// </summary>
-    [SchemaAttr("w:useFELayout")]
     public partial class UseFarEastLayout : OnOffType
     {
         /// <summary>
@@ -4604,7 +4418,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useNormalStyleForList.</para>
     /// </summary>
-    [SchemaAttr("w:useNormalStyleForList")]
     public partial class UseNormalStyleForList : OnOffType
     {
         /// <summary>
@@ -4629,7 +4442,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotUseIndentAsNumberingTabStop.</para>
     /// </summary>
-    [SchemaAttr("w:doNotUseIndentAsNumberingTabStop")]
     public partial class DoNotUseIndentAsNumberingTabStop : OnOffType
     {
         /// <summary>
@@ -4654,7 +4466,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useAltKinsokuLineBreakRules.</para>
     /// </summary>
-    [SchemaAttr("w:useAltKinsokuLineBreakRules")]
     public partial class UseAltKinsokuLineBreakRules : OnOffType
     {
         /// <summary>
@@ -4679,7 +4490,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:allowSpaceOfSameStyleInTable.</para>
     /// </summary>
-    [SchemaAttr("w:allowSpaceOfSameStyleInTable")]
     public partial class AllowSpaceOfSameStyleInTable : OnOffType
     {
         /// <summary>
@@ -4704,7 +4514,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotSuppressIndentation.</para>
     /// </summary>
-    [SchemaAttr("w:doNotSuppressIndentation")]
     public partial class DoNotSuppressIndentation : OnOffType
     {
         /// <summary>
@@ -4729,7 +4538,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotAutofitConstrainedTables.</para>
     /// </summary>
-    [SchemaAttr("w:doNotAutofitConstrainedTables")]
     public partial class DoNotAutofitConstrainedTables : OnOffType
     {
         /// <summary>
@@ -4754,7 +4562,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autofitToFirstFixedWidthCell.</para>
     /// </summary>
-    [SchemaAttr("w:autofitToFirstFixedWidthCell")]
     public partial class AutofitToFirstFixedWidthCell : OnOffType
     {
         /// <summary>
@@ -4779,7 +4586,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:underlineTabInNumList.</para>
     /// </summary>
-    [SchemaAttr("w:underlineTabInNumList")]
     public partial class UnderlineTabInNumberingList : OnOffType
     {
         /// <summary>
@@ -4804,7 +4610,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:displayHangulFixedWidth.</para>
     /// </summary>
-    [SchemaAttr("w:displayHangulFixedWidth")]
     public partial class DisplayHangulFixedWidth : OnOffType
     {
         /// <summary>
@@ -4829,7 +4634,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:splitPgBreakAndParaMark.</para>
     /// </summary>
-    [SchemaAttr("w:splitPgBreakAndParaMark")]
     public partial class SplitPageBreakAndParagraphMark : OnOffType
     {
         /// <summary>
@@ -4854,7 +4658,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotVertAlignCellWithSp.</para>
     /// </summary>
-    [SchemaAttr("w:doNotVertAlignCellWithSp")]
     public partial class DoNotVerticallyAlignCellWithShape : OnOffType
     {
         /// <summary>
@@ -4879,7 +4682,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotBreakConstrainedForcedTable.</para>
     /// </summary>
-    [SchemaAttr("w:doNotBreakConstrainedForcedTable")]
     public partial class DoNotBreakConstrainedForcedTable : OnOffType
     {
         /// <summary>
@@ -4904,7 +4706,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotVertAlignInTxbx.</para>
     /// </summary>
-    [SchemaAttr("w:doNotVertAlignInTxbx")]
     public partial class DoNotVerticallyAlignInTextBox : OnOffType
     {
         /// <summary>
@@ -4929,7 +4730,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useAnsiKerningPairs.</para>
     /// </summary>
-    [SchemaAttr("w:useAnsiKerningPairs")]
     public partial class UseAnsiKerningPairs : OnOffType
     {
         /// <summary>
@@ -4954,7 +4754,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cachedColBalance.</para>
     /// </summary>
-    [SchemaAttr("w:cachedColBalance")]
     public partial class CachedColumnBalance : OnOffType
     {
         /// <summary>
@@ -4979,7 +4778,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:showingPlcHdr.</para>
     /// </summary>
-    [SchemaAttr("w:showingPlcHdr")]
     public partial class ShowingPlaceholder : OnOffType
     {
         /// <summary>
@@ -5004,7 +4802,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:temporary.</para>
     /// </summary>
-    [SchemaAttr("w:temporary")]
     public partial class TemporarySdt : OnOffType
     {
         /// <summary>
@@ -5029,7 +4826,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:removePersonalInformation.</para>
     /// </summary>
-    [SchemaAttr("w:removePersonalInformation")]
     public partial class RemovePersonalInformation : OnOffType
     {
         /// <summary>
@@ -5054,7 +4850,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:removeDateAndTime.</para>
     /// </summary>
-    [SchemaAttr("w:removeDateAndTime")]
     public partial class RemoveDateAndTime : OnOffType
     {
         /// <summary>
@@ -5079,7 +4874,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotDisplayPageBoundaries.</para>
     /// </summary>
-    [SchemaAttr("w:doNotDisplayPageBoundaries")]
     public partial class DoNotDisplayPageBoundaries : OnOffType
     {
         /// <summary>
@@ -5104,7 +4898,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:displayBackgroundShape.</para>
     /// </summary>
-    [SchemaAttr("w:displayBackgroundShape")]
     public partial class DisplayBackgroundShape : OnOffType
     {
         /// <summary>
@@ -5129,7 +4922,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printPostScriptOverText.</para>
     /// </summary>
-    [SchemaAttr("w:printPostScriptOverText")]
     public partial class PrintPostScriptOverText : OnOffType
     {
         /// <summary>
@@ -5154,7 +4946,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printFractionalCharacterWidth.</para>
     /// </summary>
-    [SchemaAttr("w:printFractionalCharacterWidth")]
     public partial class PrintFractionalCharacterWidth : OnOffType
     {
         /// <summary>
@@ -5179,7 +4970,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printFormsData.</para>
     /// </summary>
-    [SchemaAttr("w:printFormsData")]
     public partial class PrintFormsData : OnOffType
     {
         /// <summary>
@@ -5204,7 +4994,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:embedTrueTypeFonts.</para>
     /// </summary>
-    [SchemaAttr("w:embedTrueTypeFonts")]
     public partial class EmbedTrueTypeFonts : OnOffType
     {
         /// <summary>
@@ -5229,7 +5018,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:embedSystemFonts.</para>
     /// </summary>
-    [SchemaAttr("w:embedSystemFonts")]
     public partial class EmbedSystemFonts : OnOffType
     {
         /// <summary>
@@ -5254,7 +5042,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:saveSubsetFonts.</para>
     /// </summary>
-    [SchemaAttr("w:saveSubsetFonts")]
     public partial class SaveSubsetFonts : OnOffType
     {
         /// <summary>
@@ -5279,7 +5066,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:saveFormsData.</para>
     /// </summary>
-    [SchemaAttr("w:saveFormsData")]
     public partial class SaveFormsData : OnOffType
     {
         /// <summary>
@@ -5304,7 +5090,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mirrorMargins.</para>
     /// </summary>
-    [SchemaAttr("w:mirrorMargins")]
     public partial class MirrorMargins : OnOffType
     {
         /// <summary>
@@ -5329,7 +5114,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:alignBordersAndEdges.</para>
     /// </summary>
-    [SchemaAttr("w:alignBordersAndEdges")]
     public partial class AlignBorderAndEdges : OnOffType
     {
         /// <summary>
@@ -5354,7 +5138,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bordersDoNotSurroundHeader.</para>
     /// </summary>
-    [SchemaAttr("w:bordersDoNotSurroundHeader")]
     public partial class BordersDoNotSurroundHeader : OnOffType
     {
         /// <summary>
@@ -5379,7 +5162,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bordersDoNotSurroundFooter.</para>
     /// </summary>
-    [SchemaAttr("w:bordersDoNotSurroundFooter")]
     public partial class BordersDoNotSurroundFooter : OnOffType
     {
         /// <summary>
@@ -5404,7 +5186,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gutterAtTop.</para>
     /// </summary>
-    [SchemaAttr("w:gutterAtTop")]
     public partial class GutterAtTop : OnOffType
     {
         /// <summary>
@@ -5429,7 +5210,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hideSpellingErrors.</para>
     /// </summary>
-    [SchemaAttr("w:hideSpellingErrors")]
     public partial class HideSpellingErrors : OnOffType
     {
         /// <summary>
@@ -5454,7 +5234,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hideGrammaticalErrors.</para>
     /// </summary>
-    [SchemaAttr("w:hideGrammaticalErrors")]
     public partial class HideGrammaticalErrors : OnOffType
     {
         /// <summary>
@@ -5479,7 +5258,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:formsDesign.</para>
     /// </summary>
-    [SchemaAttr("w:formsDesign")]
     public partial class FormsDesign : OnOffType
     {
         /// <summary>
@@ -5504,7 +5282,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:linkStyles.</para>
     /// </summary>
-    [SchemaAttr("w:linkStyles")]
     public partial class LinkStyles : OnOffType
     {
         /// <summary>
@@ -5529,7 +5306,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:trackRevisions.</para>
     /// </summary>
-    [SchemaAttr("w:trackRevisions")]
     public partial class TrackRevisions : OnOffType
     {
         /// <summary>
@@ -5554,7 +5330,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotTrackMoves.</para>
     /// </summary>
-    [SchemaAttr("w:doNotTrackMoves")]
     public partial class DoNotTrackMoves : OnOffType
     {
         /// <summary>
@@ -5579,7 +5354,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotTrackFormatting.</para>
     /// </summary>
-    [SchemaAttr("w:doNotTrackFormatting")]
     public partial class DoNotTrackFormatting : OnOffType
     {
         /// <summary>
@@ -5604,7 +5378,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoFormatOverride.</para>
     /// </summary>
-    [SchemaAttr("w:autoFormatOverride")]
     public partial class AutoFormatOverride : OnOffType
     {
         /// <summary>
@@ -5629,7 +5402,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:styleLockTheme.</para>
     /// </summary>
-    [SchemaAttr("w:styleLockTheme")]
     public partial class StyleLockThemesPart : OnOffType
     {
         /// <summary>
@@ -5654,7 +5426,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:styleLockQFSet.</para>
     /// </summary>
-    [SchemaAttr("w:styleLockQFSet")]
     public partial class StyleLockStylesPart : OnOffType
     {
         /// <summary>
@@ -5679,7 +5450,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoHyphenation.</para>
     /// </summary>
-    [SchemaAttr("w:autoHyphenation")]
     public partial class AutoHyphenation : OnOffType
     {
         /// <summary>
@@ -5704,7 +5474,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotHyphenateCaps.</para>
     /// </summary>
-    [SchemaAttr("w:doNotHyphenateCaps")]
     public partial class DoNotHyphenateCaps : OnOffType
     {
         /// <summary>
@@ -5729,7 +5498,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:showEnvelope.</para>
     /// </summary>
-    [SchemaAttr("w:showEnvelope")]
     public partial class ShowEnvelope : OnOffType
     {
         /// <summary>
@@ -5754,7 +5522,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:evenAndOddHeaders.</para>
     /// </summary>
-    [SchemaAttr("w:evenAndOddHeaders")]
     public partial class EvenAndOddHeaders : OnOffType
     {
         /// <summary>
@@ -5779,7 +5546,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bookFoldRevPrinting.</para>
     /// </summary>
-    [SchemaAttr("w:bookFoldRevPrinting")]
     public partial class BookFoldReversePrinting : OnOffType
     {
         /// <summary>
@@ -5804,7 +5570,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bookFoldPrinting.</para>
     /// </summary>
-    [SchemaAttr("w:bookFoldPrinting")]
     public partial class BookFoldPrinting : OnOffType
     {
         /// <summary>
@@ -5829,7 +5594,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotUseMarginsForDrawingGridOrigin.</para>
     /// </summary>
-    [SchemaAttr("w:doNotUseMarginsForDrawingGridOrigin")]
     public partial class DoNotUseMarginsForDrawingGridOrigin : OnOffType
     {
         /// <summary>
@@ -5854,7 +5618,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotShadeFormData.</para>
     /// </summary>
-    [SchemaAttr("w:doNotShadeFormData")]
     public partial class DoNotShadeFormData : OnOffType
     {
         /// <summary>
@@ -5879,7 +5642,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noPunctuationKerning.</para>
     /// </summary>
-    [SchemaAttr("w:noPunctuationKerning")]
     public partial class NoPunctuationKerning : OnOffType
     {
         /// <summary>
@@ -5904,7 +5666,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printTwoOnOne.</para>
     /// </summary>
-    [SchemaAttr("w:printTwoOnOne")]
     public partial class PrintTwoOnOne : OnOffType
     {
         /// <summary>
@@ -5929,7 +5690,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:strictFirstAndLastChars.</para>
     /// </summary>
-    [SchemaAttr("w:strictFirstAndLastChars")]
     public partial class StrictFirstAndLastChars : OnOffType
     {
         /// <summary>
@@ -5954,7 +5714,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:savePreviewPicture.</para>
     /// </summary>
-    [SchemaAttr("w:savePreviewPicture")]
     public partial class SavePreviewPicture : OnOffType
     {
         /// <summary>
@@ -5979,7 +5738,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotValidateAgainstSchema.</para>
     /// </summary>
-    [SchemaAttr("w:doNotValidateAgainstSchema")]
     public partial class DoNotValidateAgainstSchema : OnOffType
     {
         /// <summary>
@@ -6004,7 +5762,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:saveInvalidXml.</para>
     /// </summary>
-    [SchemaAttr("w:saveInvalidXml")]
     public partial class SaveInvalidXml : OnOffType
     {
         /// <summary>
@@ -6029,7 +5786,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ignoreMixedContent.</para>
     /// </summary>
-    [SchemaAttr("w:ignoreMixedContent")]
     public partial class IgnoreMixedContent : OnOffType
     {
         /// <summary>
@@ -6054,7 +5810,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:alwaysShowPlaceholderText.</para>
     /// </summary>
-    [SchemaAttr("w:alwaysShowPlaceholderText")]
     public partial class AlwaysShowPlaceholderText : OnOffType
     {
         /// <summary>
@@ -6079,7 +5834,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotDemarcateInvalidXml.</para>
     /// </summary>
-    [SchemaAttr("w:doNotDemarcateInvalidXml")]
     public partial class DoNotDemarcateInvalidXml : OnOffType
     {
         /// <summary>
@@ -6104,7 +5858,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:saveXmlDataOnly.</para>
     /// </summary>
-    [SchemaAttr("w:saveXmlDataOnly")]
     public partial class SaveXmlDataOnly : OnOffType
     {
         /// <summary>
@@ -6129,7 +5882,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:useXSLTWhenSaving.</para>
     /// </summary>
-    [SchemaAttr("w:useXSLTWhenSaving")]
     public partial class UseXsltWhenSaving : OnOffType
     {
         /// <summary>
@@ -6154,7 +5906,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:showXMLTags.</para>
     /// </summary>
-    [SchemaAttr("w:showXMLTags")]
     public partial class ShowXmlTags : OnOffType
     {
         /// <summary>
@@ -6179,7 +5930,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:alwaysMergeEmptyNamespace.</para>
     /// </summary>
-    [SchemaAttr("w:alwaysMergeEmptyNamespace")]
     public partial class AlwaysMergeEmptyNamespace : OnOffType
     {
         /// <summary>
@@ -6204,7 +5954,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:updateFields.</para>
     /// </summary>
-    [SchemaAttr("w:updateFields")]
     public partial class UpdateFieldsOnOpen : OnOffType
     {
         /// <summary>
@@ -6229,7 +5978,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:uiCompat97To2003.</para>
     /// </summary>
-    [SchemaAttr("w:uiCompat97To2003")]
     public partial class UICompatibleWith97To2003 : OnOffType
     {
         /// <summary>
@@ -6254,7 +6002,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotIncludeSubdocsInStats.</para>
     /// </summary>
-    [SchemaAttr("w:doNotIncludeSubdocsInStats")]
     public partial class DoNotIncludeSubdocsInStats : OnOffType
     {
         /// <summary>
@@ -6279,7 +6026,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotAutoCompressPictures.</para>
     /// </summary>
-    [SchemaAttr("w:doNotAutoCompressPictures")]
     public partial class DoNotAutoCompressPictures : OnOffType
     {
         /// <summary>
@@ -6304,7 +6050,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:optimizeForBrowser.</para>
     /// </summary>
-    [SchemaAttr("w:optimizeForBrowser")]
     public partial class OptimizeForBrowser : OnOffType
     {
         /// <summary>
@@ -6329,7 +6074,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:relyOnVML.</para>
     /// </summary>
-    [SchemaAttr("w:relyOnVML")]
     public partial class RelyOnVML : OnOffType
     {
         /// <summary>
@@ -6354,7 +6098,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:allowPNG.</para>
     /// </summary>
-    [SchemaAttr("w:allowPNG")]
     public partial class AllowPNG : OnOffType
     {
         /// <summary>
@@ -6379,7 +6122,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotRelyOnCSS.</para>
     /// </summary>
-    [SchemaAttr("w:doNotRelyOnCSS")]
     public partial class DoNotRelyOnCSS : OnOffType
     {
         /// <summary>
@@ -6404,7 +6146,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotSaveAsSingleFile.</para>
     /// </summary>
-    [SchemaAttr("w:doNotSaveAsSingleFile")]
     public partial class DoNotSaveAsSingleFile : OnOffType
     {
         /// <summary>
@@ -6429,7 +6170,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotOrganizeInFolder.</para>
     /// </summary>
-    [SchemaAttr("w:doNotOrganizeInFolder")]
     public partial class DoNotOrganizeInFolder : OnOffType
     {
         /// <summary>
@@ -6454,7 +6194,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:doNotUseLongFileNames.</para>
     /// </summary>
-    [SchemaAttr("w:doNotUseLongFileNames")]
     public partial class DoNotUseLongFileNames : OnOffType
     {
         /// <summary>
@@ -6479,7 +6218,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:notTrueType.</para>
     /// </summary>
-    [SchemaAttr("w:notTrueType")]
     public partial class NotTrueType : OnOffType
     {
         /// <summary>
@@ -6520,7 +6258,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public OnOffValue? Val
         {
             get => GetAttribute<OnOffValue>();
@@ -6540,7 +6277,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:framePr.</para>
     /// </summary>
-    [SchemaAttr("w:framePr")]
     public partial class FrameProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -6557,7 +6293,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:dropCap")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues>? DropCap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues>>();
@@ -6571,7 +6306,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lines")]
         public Int32Value? Lines
         {
             get => GetAttribute<Int32Value>();
@@ -6585,7 +6319,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:w")]
         public StringValue? Width
         {
             get => GetAttribute<StringValue>();
@@ -6599,7 +6332,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:h")]
         public UInt32Value? Height
         {
             get => GetAttribute<UInt32Value>();
@@ -6613,7 +6345,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:vSpace")]
         public StringValue? VerticalSpace
         {
             get => GetAttribute<StringValue>();
@@ -6627,7 +6358,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hSpace")]
         public StringValue? HorizontalSpace
         {
             get => GetAttribute<StringValue>();
@@ -6641,7 +6371,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:wrap")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues>? Wrap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues>>();
@@ -6655,7 +6384,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hAnchor")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>? HorizontalPosition
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>();
@@ -6669,7 +6397,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:vAnchor")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>? VerticalPosition
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>();
@@ -6683,7 +6410,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:x")]
         public StringValue? X
         {
             get => GetAttribute<StringValue>();
@@ -6697,7 +6423,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:xAlign")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>? XAlign
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>();
@@ -6711,7 +6436,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:y")]
         public StringValue? Y
         {
             get => GetAttribute<StringValue>();
@@ -6725,7 +6449,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:yAlign")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>? YAlign
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>();
@@ -6739,7 +6462,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hRule")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>? HeightType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>();
@@ -6753,7 +6475,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:anchorLock")]
         public OnOffValue? AnchorLock
         {
             get => GetAttribute<OnOffValue>();
@@ -6846,7 +6567,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingChange" /> <c>&lt;w:numberingChange></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:numPr")]
     public partial class NumberingProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -6969,7 +6689,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BarBorder" /> <c>&lt;w:bar></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:pBdr")]
     public partial class ParagraphBorders : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7111,7 +6830,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:shd.</para>
     /// </summary>
-    [SchemaAttr("w:shd")]
     public partial class Shading : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7128,7 +6846,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues>>();
@@ -7142,7 +6859,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:color")]
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -7156,7 +6872,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeColor")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -7170,7 +6885,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeTint")]
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -7184,7 +6898,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeShade")]
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -7198,7 +6911,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:fill")]
         public StringValue? Fill
         {
             get => GetAttribute<StringValue>();
@@ -7212,7 +6924,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeFill")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeFill
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -7226,7 +6937,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeFillTint")]
         public StringValue? ThemeFillTint
         {
             get => GetAttribute<StringValue>();
@@ -7240,7 +6950,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeFillShade")]
         public StringValue? ThemeFillShade
         {
             get => GetAttribute<StringValue>();
@@ -7307,7 +7016,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TabStop" /> <c>&lt;w:tab></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tabs")]
     public partial class Tabs : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -7361,7 +7069,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:spacing.</para>
     /// </summary>
-    [SchemaAttr("w:spacing")]
     public partial class SpacingBetweenLines : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7378,7 +7085,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:before")]
         public StringValue? Before
         {
             get => GetAttribute<StringValue>();
@@ -7392,7 +7098,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:beforeLines")]
         public Int32Value? BeforeLines
         {
             get => GetAttribute<Int32Value>();
@@ -7406,7 +7111,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:beforeAutospacing")]
         public OnOffValue? BeforeAutoSpacing
         {
             get => GetAttribute<OnOffValue>();
@@ -7420,7 +7124,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:after")]
         public StringValue? After
         {
             get => GetAttribute<StringValue>();
@@ -7434,7 +7137,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:afterLines")]
         public Int32Value? AfterLines
         {
             get => GetAttribute<Int32Value>();
@@ -7448,7 +7150,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:afterAutospacing")]
         public OnOffValue? AfterAutoSpacing
         {
             get => GetAttribute<OnOffValue>();
@@ -7462,7 +7163,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:line")]
         public StringValue? Line
         {
             get => GetAttribute<StringValue>();
@@ -7476,7 +7176,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lineRule")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues>? LineRule
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues>>();
@@ -7531,7 +7230,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ind.</para>
     /// </summary>
-    [SchemaAttr("w:ind")]
     public partial class Indentation : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7548,7 +7246,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:left")]
         public StringValue? Left
         {
             get => GetAttribute<StringValue>();
@@ -7562,7 +7259,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:start")]
         public StringValue? Start
         {
             get => GetAttribute<StringValue>();
@@ -7576,7 +7272,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:leftChars")]
         public Int32Value? LeftChars
         {
             get => GetAttribute<Int32Value>();
@@ -7590,7 +7285,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:startChars")]
         public Int32Value? StartCharacters
         {
             get => GetAttribute<Int32Value>();
@@ -7604,7 +7298,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:right")]
         public StringValue? Right
         {
             get => GetAttribute<StringValue>();
@@ -7618,7 +7311,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:end")]
         public StringValue? End
         {
             get => GetAttribute<StringValue>();
@@ -7632,7 +7324,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rightChars")]
         public Int32Value? RightChars
         {
             get => GetAttribute<Int32Value>();
@@ -7646,7 +7337,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:endChars")]
         public Int32Value? EndCharacters
         {
             get => GetAttribute<Int32Value>();
@@ -7660,7 +7350,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hanging")]
         public StringValue? Hanging
         {
             get => GetAttribute<StringValue>();
@@ -7674,7 +7363,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hangingChars")]
         public Int32Value? HangingChars
         {
             get => GetAttribute<Int32Value>();
@@ -7688,7 +7376,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:firstLine")]
         public StringValue? FirstLine
         {
             get => GetAttribute<StringValue>();
@@ -7702,7 +7389,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:firstLineChars")]
         public Int32Value? FirstLineChars
         {
             get => GetAttribute<Int32Value>();
@@ -7793,7 +7479,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:jc.</para>
     /// </summary>
-    [SchemaAttr("w:jc")]
     public partial class Justification : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7810,7 +7495,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues>>();
@@ -7837,7 +7521,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:textDirection.</para>
     /// </summary>
-    [SchemaAttr("w:textDirection")]
     public partial class TextDirection : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7854,7 +7537,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues>>();
@@ -7881,7 +7563,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:textAlignment.</para>
     /// </summary>
-    [SchemaAttr("w:textAlignment")]
     public partial class TextAlignment : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7898,7 +7579,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues>>();
@@ -7925,7 +7605,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:textboxTightWrap.</para>
     /// </summary>
-    [SchemaAttr("w:textboxTightWrap")]
     public partial class TextBoxTightWrap : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -7942,7 +7621,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues>>();
@@ -7969,7 +7647,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:outlineLvl.</para>
     /// </summary>
-    [SchemaAttr("w:outlineLvl")]
     public partial class OutlineLevel : DecimalNumberType
     {
         /// <summary>
@@ -7995,7 +7672,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gridSpan.</para>
     /// </summary>
-    [SchemaAttr("w:gridSpan")]
     public partial class GridSpan : DecimalNumberType
     {
         /// <summary>
@@ -8020,7 +7696,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gridBefore.</para>
     /// </summary>
-    [SchemaAttr("w:gridBefore")]
     public partial class GridBefore : DecimalNumberType
     {
         /// <summary>
@@ -8045,7 +7720,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gridAfter.</para>
     /// </summary>
-    [SchemaAttr("w:gridAfter")]
     public partial class GridAfter : DecimalNumberType
     {
         /// <summary>
@@ -8070,7 +7744,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:result.</para>
     /// </summary>
-    [SchemaAttr("w:result")]
     public partial class DropDownListSelection : DecimalNumberType
     {
         /// <summary>
@@ -8095,7 +7768,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:activeRecord.</para>
     /// </summary>
-    [SchemaAttr("w:activeRecord")]
     public partial class ActiveRecord : DecimalNumberType
     {
         /// <summary>
@@ -8120,7 +7792,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:checkErrors.</para>
     /// </summary>
-    [SchemaAttr("w:checkErrors")]
     public partial class CheckErrors : DecimalNumberType
     {
         /// <summary>
@@ -8145,7 +7816,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lvlRestart.</para>
     /// </summary>
-    [SchemaAttr("w:lvlRestart")]
     public partial class LevelRestart : DecimalNumberType
     {
         /// <summary>
@@ -8170,7 +7840,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lvlPicBulletId.</para>
     /// </summary>
-    [SchemaAttr("w:lvlPicBulletId")]
     public partial class LevelPictureBulletId : DecimalNumberType
     {
         /// <summary>
@@ -8195,7 +7864,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:startOverride.</para>
     /// </summary>
-    [SchemaAttr("w:startOverride")]
     public partial class StartOverrideNumberingValue : DecimalNumberType
     {
         /// <summary>
@@ -8220,7 +7888,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numIdMacAtCleanup.</para>
     /// </summary>
-    [SchemaAttr("w:numIdMacAtCleanup")]
     public partial class NumberingIdMacAtCleanup : DecimalNumberType
     {
         /// <summary>
@@ -8245,7 +7912,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:id.</para>
     /// </summary>
-    [SchemaAttr("w:id")]
     public partial class SdtId : DecimalNumberType
     {
         /// <summary>
@@ -8270,7 +7936,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pixelsPerInch.</para>
     /// </summary>
-    [SchemaAttr("w:pixelsPerInch")]
     public partial class PixelsPerInch : DecimalNumberType
     {
         /// <summary>
@@ -8311,7 +7976,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -8340,7 +8004,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended" /> <c>&lt;w:pPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:pPrChange")]
     public partial class ParagraphPropertiesChange : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -8381,7 +8044,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -8395,7 +8057,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -8409,7 +8070,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -8469,7 +8129,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:headerReference.</para>
     /// </summary>
-    [SchemaAttr("w:headerReference")]
     public partial class HeaderReference : HeaderFooterReferenceType
     {
         /// <summary>
@@ -8496,7 +8155,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footerReference.</para>
     /// </summary>
-    [SchemaAttr("w:footerReference")]
     public partial class FooterReference : HeaderFooterReferenceType
     {
         /// <summary>
@@ -8539,7 +8197,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:type")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues>>();
@@ -8553,7 +8210,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -8580,7 +8236,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:br.</para>
     /// </summary>
-    [SchemaAttr("w:br")]
     public partial class Break : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -8597,7 +8252,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:type")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues>>();
@@ -8611,7 +8265,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:clear")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues>? Clear
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues>>();
@@ -8636,7 +8289,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:t.</para>
     /// </summary>
-    [SchemaAttr("w:t")]
     public partial class Text : TextType
     {
         /// <summary>
@@ -8674,7 +8326,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:delText.</para>
     /// </summary>
-    [SchemaAttr("w:delText")]
     public partial class DeletedText : TextType
     {
         /// <summary>
@@ -8712,7 +8363,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:instrText.</para>
     /// </summary>
-    [SchemaAttr("w:instrText")]
     public partial class FieldCode : TextType
     {
         /// <summary>
@@ -8750,7 +8400,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:delInstrText.</para>
     /// </summary>
-    [SchemaAttr("w:delInstrText")]
     public partial class DeletedFieldCode : TextType
     {
         /// <summary>
@@ -8817,7 +8466,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr("xml:space")]
         public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
@@ -8837,7 +8485,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noBreakHyphen.</para>
     /// </summary>
-    [SchemaAttr("w:noBreakHyphen")]
     public partial class NoBreakHyphen : EmptyType
     {
         /// <summary>
@@ -8862,7 +8509,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:softHyphen.</para>
     /// </summary>
-    [SchemaAttr("w:softHyphen")]
     public partial class SoftHyphen : EmptyType
     {
         /// <summary>
@@ -8887,7 +8533,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dayShort.</para>
     /// </summary>
-    [SchemaAttr("w:dayShort")]
     public partial class DayShort : EmptyType
     {
         /// <summary>
@@ -8912,7 +8557,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:monthShort.</para>
     /// </summary>
-    [SchemaAttr("w:monthShort")]
     public partial class MonthShort : EmptyType
     {
         /// <summary>
@@ -8937,7 +8581,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:yearShort.</para>
     /// </summary>
-    [SchemaAttr("w:yearShort")]
     public partial class YearShort : EmptyType
     {
         /// <summary>
@@ -8962,7 +8605,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dayLong.</para>
     /// </summary>
-    [SchemaAttr("w:dayLong")]
     public partial class DayLong : EmptyType
     {
         /// <summary>
@@ -8987,7 +8629,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:monthLong.</para>
     /// </summary>
-    [SchemaAttr("w:monthLong")]
     public partial class MonthLong : EmptyType
     {
         /// <summary>
@@ -9012,7 +8653,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:yearLong.</para>
     /// </summary>
-    [SchemaAttr("w:yearLong")]
     public partial class YearLong : EmptyType
     {
         /// <summary>
@@ -9037,7 +8677,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:annotationRef.</para>
     /// </summary>
-    [SchemaAttr("w:annotationRef")]
     public partial class AnnotationReferenceMark : EmptyType
     {
         /// <summary>
@@ -9062,7 +8701,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footnoteRef.</para>
     /// </summary>
-    [SchemaAttr("w:footnoteRef")]
     public partial class FootnoteReferenceMark : EmptyType
     {
         /// <summary>
@@ -9087,7 +8725,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:endnoteRef.</para>
     /// </summary>
-    [SchemaAttr("w:endnoteRef")]
     public partial class EndnoteReferenceMark : EmptyType
     {
         /// <summary>
@@ -9112,7 +8749,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:separator.</para>
     /// </summary>
-    [SchemaAttr("w:separator")]
     public partial class SeparatorMark : EmptyType
     {
         /// <summary>
@@ -9137,7 +8773,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:continuationSeparator.</para>
     /// </summary>
-    [SchemaAttr("w:continuationSeparator")]
     public partial class ContinuationSeparatorMark : EmptyType
     {
         /// <summary>
@@ -9162,7 +8797,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pgNum.</para>
     /// </summary>
-    [SchemaAttr("w:pgNum")]
     public partial class PageNumber : EmptyType
     {
         /// <summary>
@@ -9187,7 +8821,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cr.</para>
     /// </summary>
-    [SchemaAttr("w:cr")]
     public partial class CarriageReturn : EmptyType
     {
         /// <summary>
@@ -9212,7 +8845,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tab.</para>
     /// </summary>
-    [SchemaAttr("w:tab")]
     public partial class TabChar : EmptyType
     {
         /// <summary>
@@ -9237,7 +8869,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lastRenderedPageBreak.</para>
     /// </summary>
-    [SchemaAttr("w:lastRenderedPageBreak")]
     public partial class LastRenderedPageBreak : EmptyType
     {
         /// <summary>
@@ -9262,7 +8893,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:equation.</para>
     /// </summary>
-    [SchemaAttr("w:equation")]
     public partial class SdtContentEquation : EmptyType
     {
         /// <summary>
@@ -9287,7 +8917,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:picture.</para>
     /// </summary>
-    [SchemaAttr("w:picture")]
     public partial class SdtContentPicture : EmptyType
     {
         /// <summary>
@@ -9312,7 +8941,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:richText.</para>
     /// </summary>
-    [SchemaAttr("w:richText")]
     public partial class SdtContentRichText : EmptyType
     {
         /// <summary>
@@ -9337,7 +8965,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:citation.</para>
     /// </summary>
-    [SchemaAttr("w:citation")]
     public partial class SdtContentCitation : EmptyType
     {
         /// <summary>
@@ -9362,7 +8989,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:group.</para>
     /// </summary>
-    [SchemaAttr("w:group")]
     public partial class SdtContentGroup : EmptyType
     {
         /// <summary>
@@ -9387,7 +9013,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bibliography.</para>
     /// </summary>
-    [SchemaAttr("w:bibliography")]
     public partial class SdtContentBibliography : EmptyType
     {
         /// <summary>
@@ -9412,7 +9037,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:forceUpgrade.</para>
     /// </summary>
-    [SchemaAttr("w:forceUpgrade")]
     public partial class ForceUpgrade : EmptyType
     {
         /// <summary>
@@ -9457,7 +9081,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sym.</para>
     /// </summary>
-    [SchemaAttr("w:sym")]
     public partial class SymbolChar : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -9474,7 +9097,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:font")]
         public StringValue? Font
         {
             get => GetAttribute<StringValue>();
@@ -9488,7 +9110,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:char")]
         public HexBinaryValue? Char
         {
             get => GetAttribute<HexBinaryValue>();
@@ -9540,7 +9161,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ObjectLink" /> <c>&lt;w:objectLink></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:object")]
     public partial class EmbeddedObject : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9581,7 +9201,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:dxaOrig")]
         public StringValue? DxaOriginal
         {
             get => GetAttribute<StringValue>();
@@ -9595,7 +9214,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:dyaOrig")]
         public StringValue? DyaOriginal
         {
             get => GetAttribute<StringValue>();
@@ -9609,7 +9227,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:anchorId")]
         public HexBinaryValue? AnchorId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -9708,7 +9325,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MovieReference" /> <c>&lt;w:movie></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:pict")]
     public partial class Picture : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9749,7 +9365,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:anchorId")]
         public HexBinaryValue? AnchorId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -9828,7 +9443,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingChange" /> <c>&lt;w:numberingChange></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:fldChar")]
     public partial class FieldChar : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -9869,7 +9483,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:fldCharType")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues>? FieldCharType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues>>();
@@ -9883,7 +9496,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:fldLock")]
         public OnOffValue? FieldLock
         {
             get => GetAttribute<OnOffValue>();
@@ -9897,7 +9509,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:dirty")]
         public OnOffValue? Dirty
         {
             get => GetAttribute<OnOffValue>();
@@ -9982,7 +9593,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RubyProperties" /> <c>&lt;w:rubyPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:ruby")]
     public partial class Ruby : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10079,7 +9689,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footnoteReference.</para>
     /// </summary>
-    [SchemaAttr("w:footnoteReference")]
     public partial class FootnoteReference : FootnoteEndnoteReferenceType
     {
         /// <summary>
@@ -10105,7 +9714,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:endnoteReference.</para>
     /// </summary>
-    [SchemaAttr("w:endnoteReference")]
     public partial class EndnoteReference : FootnoteEndnoteReferenceType
     {
         /// <summary>
@@ -10146,7 +9754,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:customMarkFollows")]
         public OnOffValue? CustomMarkFollows
         {
             get => GetAttribute<OnOffValue>();
@@ -10160,7 +9767,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public IntegerValue? Id
         {
             get => GetAttribute<IntegerValue>();
@@ -10192,7 +9798,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline" /> <c>&lt;wp:inline></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:drawing")]
     public partial class Drawing : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -10274,7 +9879,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ptab.</para>
     /// </summary>
-    [SchemaAttr("w:ptab")]
     public partial class PositionalTab : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -10291,7 +9895,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:alignment")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues>? Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues>>();
@@ -10305,7 +9908,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:relativeTo")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues>? RelativeTo
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues>>();
@@ -10319,7 +9921,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:leader")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues>? Leader
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues>>();
@@ -10354,7 +9955,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rStyle.</para>
     /// </summary>
-    [SchemaAttr("w:rStyle")]
     public partial class RunStyle : String253Type
     {
         /// <summary>
@@ -10379,7 +9979,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblStyle.</para>
     /// </summary>
-    [SchemaAttr("w:tblStyle")]
     public partial class TableStyle : String253Type
     {
         /// <summary>
@@ -10404,7 +10003,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pStyle.</para>
     /// </summary>
-    [SchemaAttr("w:pStyle")]
     public partial class ParagraphStyleIdInLevel : String253Type
     {
         /// <summary>
@@ -10430,7 +10028,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-    [SchemaAttr("w:name")]
     public partial class AbstractNumDefinitionName : String253Type
     {
         /// <summary>
@@ -10456,7 +10053,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:styleLink.</para>
     /// </summary>
-    [SchemaAttr("w:styleLink")]
     public partial class StyleLink : String253Type
     {
         /// <summary>
@@ -10481,7 +10077,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numStyleLink.</para>
     /// </summary>
-    [SchemaAttr("w:numStyleLink")]
     public partial class NumberingStyleLink : String253Type
     {
         /// <summary>
@@ -10506,7 +10101,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:aliases.</para>
     /// </summary>
-    [SchemaAttr("w:aliases")]
     public partial class Aliases : String253Type
     {
         /// <summary>
@@ -10531,7 +10125,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:basedOn.</para>
     /// </summary>
-    [SchemaAttr("w:basedOn")]
     public partial class BasedOn : String253Type
     {
         /// <summary>
@@ -10556,7 +10149,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:next.</para>
     /// </summary>
-    [SchemaAttr("w:next")]
     public partial class NextParagraphStyle : String253Type
     {
         /// <summary>
@@ -10581,7 +10173,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:link.</para>
     /// </summary>
-    [SchemaAttr("w:link")]
     public partial class LinkedStyle : String253Type
     {
         /// <summary>
@@ -10606,7 +10197,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:clickAndTypeStyle.</para>
     /// </summary>
-    [SchemaAttr("w:clickAndTypeStyle")]
     public partial class ClickAndTypeStyle : String253Type
     {
         /// <summary>
@@ -10631,7 +10221,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:defaultTableStyle.</para>
     /// </summary>
-    [SchemaAttr("w:defaultTableStyle")]
     public partial class DefaultTableStyle : String253Type
     {
         /// <summary>
@@ -10672,7 +10261,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -10696,7 +10284,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rFonts.</para>
     /// </summary>
-    [SchemaAttr("w:rFonts")]
     public partial class RunFonts : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -10713,7 +10300,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hint")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues>? Hint
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues>>();
@@ -10727,7 +10313,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:ascii")]
         public StringValue? Ascii
         {
             get => GetAttribute<StringValue>();
@@ -10741,7 +10326,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hAnsi")]
         public StringValue? HighAnsi
         {
             get => GetAttribute<StringValue>();
@@ -10755,7 +10339,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:eastAsia")]
         public StringValue? EastAsia
         {
             get => GetAttribute<StringValue>();
@@ -10769,7 +10352,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cs")]
         public StringValue? ComplexScript
         {
             get => GetAttribute<StringValue>();
@@ -10783,7 +10365,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:asciiTheme")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>? AsciiTheme
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
@@ -10797,7 +10378,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hAnsiTheme")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>? HighAnsiTheme
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
@@ -10811,7 +10391,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:eastAsiaTheme")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>? EastAsiaTheme
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
@@ -10825,7 +10404,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cstheme")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>? ComplexScriptTheme
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
@@ -10869,7 +10447,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:color.</para>
     /// </summary>
-    [SchemaAttr("w:color")]
     public partial class Color : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -10886,7 +10463,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -10900,7 +10476,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeColor")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -10914,7 +10489,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeTint")]
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -10928,7 +10502,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeShade")]
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -10969,7 +10542,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:spacing.</para>
     /// </summary>
-    [SchemaAttr("w:spacing")]
     public partial class Spacing : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -10986,7 +10558,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -11014,7 +10585,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:w.</para>
     /// </summary>
-    [SchemaAttr("w:w")]
     public partial class CharacterScale : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -11031,7 +10601,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -11058,7 +10627,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:kern.</para>
     /// </summary>
-    [SchemaAttr("w:kern")]
     public partial class Kern : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -11075,7 +10643,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -11103,7 +10670,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:position.</para>
     /// </summary>
-    [SchemaAttr("w:position")]
     public partial class Position : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -11120,7 +10686,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -11153,7 +10718,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sz.</para>
     /// </summary>
-    [SchemaAttr("w:sz")]
     public partial class FontSize : HpsMeasureType
     {
         /// <summary>
@@ -11178,7 +10742,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:szCs.</para>
     /// </summary>
-    [SchemaAttr("w:szCs")]
     public partial class FontSizeComplexScript : HpsMeasureType
     {
         /// <summary>
@@ -11203,7 +10766,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:size.</para>
     /// </summary>
-    [SchemaAttr("w:size")]
     public partial class FormFieldSize : HpsMeasureType
     {
         /// <summary>
@@ -11228,7 +10790,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hps.</para>
     /// </summary>
-    [SchemaAttr("w:hps")]
     public partial class PhoneticGuideTextFontSize : HpsMeasureType
     {
         /// <summary>
@@ -11253,7 +10814,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hpsBaseText.</para>
     /// </summary>
-    [SchemaAttr("w:hpsBaseText")]
     public partial class PhoneticGuideBaseTextSize : HpsMeasureType
     {
         /// <summary>
@@ -11294,7 +10854,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -11323,7 +10882,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:highlight.</para>
     /// </summary>
-    [SchemaAttr("w:highlight")]
     public partial class Highlight : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -11340,7 +10898,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues>>();
@@ -11367,7 +10924,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:u.</para>
     /// </summary>
-    [SchemaAttr("w:u")]
     public partial class Underline : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -11384,7 +10940,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues>>();
@@ -11398,7 +10953,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:color")]
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -11412,7 +10966,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeColor")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -11426,7 +10979,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeTint")]
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -11440,7 +10992,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeShade")]
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -11481,7 +11032,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:effect.</para>
     /// </summary>
-    [SchemaAttr("w:effect")]
     public partial class TextEffect : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -11498,7 +11048,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues>>();
@@ -11525,7 +11074,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bdr.</para>
     /// </summary>
-    [SchemaAttr("w:bdr")]
     public partial class Border : BorderType
     {
         /// <summary>
@@ -11550,7 +11098,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:top.</para>
     /// </summary>
-    [SchemaAttr("w:top")]
     public partial class TopBorder : BorderType
     {
         /// <summary>
@@ -11575,7 +11122,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:left.</para>
     /// </summary>
-    [SchemaAttr("w:left")]
     public partial class LeftBorder : BorderType
     {
         /// <summary>
@@ -11600,7 +11146,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bottom.</para>
     /// </summary>
-    [SchemaAttr("w:bottom")]
     public partial class BottomBorder : BorderType
     {
         /// <summary>
@@ -11627,7 +11172,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:right.</para>
     /// </summary>
-    [SchemaAttr("w:right")]
     public partial class RightBorder : BorderType
     {
         /// <summary>
@@ -11652,7 +11196,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:between.</para>
     /// </summary>
-    [SchemaAttr("w:between")]
     public partial class BetweenBorder : BorderType
     {
         /// <summary>
@@ -11677,7 +11220,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bar.</para>
     /// </summary>
-    [SchemaAttr("w:bar")]
     public partial class BarBorder : BorderType
     {
         /// <summary>
@@ -11702,7 +11244,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:start.</para>
     /// </summary>
-    [SchemaAttr("w:start")]
     public partial class StartBorder : BorderType
     {
         /// <summary>
@@ -11728,7 +11269,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:end.</para>
     /// </summary>
-    [SchemaAttr("w:end")]
     public partial class EndBorder : BorderType
     {
         /// <summary>
@@ -11754,7 +11294,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:insideH.</para>
     /// </summary>
-    [SchemaAttr("w:insideH")]
     public partial class InsideHorizontalBorder : BorderType
     {
         /// <summary>
@@ -11779,7 +11318,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:insideV.</para>
     /// </summary>
-    [SchemaAttr("w:insideV")]
     public partial class InsideVerticalBorder : BorderType
     {
         /// <summary>
@@ -11804,7 +11342,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tl2br.</para>
     /// </summary>
-    [SchemaAttr("w:tl2br")]
     public partial class TopLeftToBottomRightCellBorder : BorderType
     {
         /// <summary>
@@ -11829,7 +11366,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tr2bl.</para>
     /// </summary>
-    [SchemaAttr("w:tr2bl")]
     public partial class TopRightToBottomLeftCellBorder : BorderType
     {
         /// <summary>
@@ -11870,7 +11406,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues>>();
@@ -11884,7 +11419,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:color")]
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -11898,7 +11432,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeColor")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -11912,7 +11445,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeTint")]
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -11926,7 +11458,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeShade")]
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -11940,7 +11471,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:sz")]
         public UInt32Value? Size
         {
             get => GetAttribute<UInt32Value>();
@@ -11954,7 +11484,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:space")]
         public UInt32Value? Space
         {
             get => GetAttribute<UInt32Value>();
@@ -11968,7 +11497,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:shadow")]
         public OnOffValue? Shadow
         {
             get => GetAttribute<OnOffValue>();
@@ -11982,7 +11510,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:frame")]
         public OnOffValue? Frame
         {
             get => GetAttribute<OnOffValue>();
@@ -12029,7 +11556,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:fitText.</para>
     /// </summary>
-    [SchemaAttr("w:fitText")]
     public partial class FitText : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -12046,7 +11572,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -12060,7 +11585,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
@@ -12089,7 +11613,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vertAlign.</para>
     /// </summary>
-    [SchemaAttr("w:vertAlign")]
     public partial class VerticalTextAlignment : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -12106,7 +11629,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues>>();
@@ -12133,7 +11655,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:em.</para>
     /// </summary>
-    [SchemaAttr("w:em")]
     public partial class Emphasis : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -12150,7 +11671,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues>>();
@@ -12177,7 +11697,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lang.</para>
     /// </summary>
-    [SchemaAttr("w:lang")]
     public partial class Languages : LanguageType
     {
         /// <summary>
@@ -12202,7 +11721,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:themeFontLang.</para>
     /// </summary>
-    [SchemaAttr("w:themeFontLang")]
     public partial class ThemeFontLanguages : LanguageType
     {
         /// <summary>
@@ -12243,7 +11761,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -12257,7 +11774,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:eastAsia")]
         public StringValue? EastAsia
         {
             get => GetAttribute<StringValue>();
@@ -12271,7 +11787,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:bidi")]
         public StringValue? Bidi
         {
             get => GetAttribute<StringValue>();
@@ -12302,7 +11817,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:eastAsianLayout.</para>
     /// </summary>
-    [SchemaAttr("w:eastAsianLayout")]
     public partial class EastAsianLayout : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -12319,7 +11833,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
@@ -12333,7 +11846,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:combine")]
         public OnOffValue? Combine
         {
             get => GetAttribute<OnOffValue>();
@@ -12347,7 +11859,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:combineBrackets")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues>? CombineBrackets
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues>>();
@@ -12361,7 +11872,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:vert")]
         public OnOffValue? Vertical
         {
             get => GetAttribute<OnOffValue>();
@@ -12375,7 +11885,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:vertCompress")]
         public OnOffValue? VerticalCompress
         {
             get => GetAttribute<OnOffValue>();
@@ -12409,7 +11918,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rPrChange")]
     public partial class RunPropertiesChange : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -12450,7 +11958,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -12464,7 +11971,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -12478,7 +11984,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -12594,7 +12099,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rPr")]
     public partial class RunProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13484,7 +12988,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:ins")]
     public partial class InsertedMathControl : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13525,7 +13028,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -13539,7 +13041,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -13553,7 +13054,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -13620,7 +13120,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:del")]
     public partial class DeletedMathControl : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -13661,7 +13160,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -13675,7 +13173,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -13689,7 +13186,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -13750,7 +13246,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:moveFrom")]
     public partial class MoveFromMathControl : MathControlMoveType
     {
         /// <summary>
@@ -13835,7 +13330,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:moveTo")]
     public partial class MoveToMathControl : MathControlMoveType
     {
         /// <summary>
@@ -13960,7 +13454,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -13974,7 +13467,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -13988,7 +13480,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -14088,7 +13579,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:customXml")]
     public partial class CustomXmlRuby : CustomXmlElement
     {
         /// <summary>
@@ -14385,7 +13875,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:fldSimple")]
     public partial class SimpleFieldRuby : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14426,7 +13915,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:instr")]
         public StringValue? Instruction
         {
             get => GetAttribute<StringValue>();
@@ -14440,7 +13928,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:fldLock")]
         public OnOffValue? FieldLock
         {
             get => GetAttribute<OnOffValue>();
@@ -14454,7 +13941,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:dirty")]
         public OnOffValue? Dirty
         {
             get => GetAttribute<OnOffValue>();
@@ -14743,7 +14229,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:hyperlink")]
     public partial class HyperlinkRuby : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -14784,7 +14269,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:tgtFrame")]
         public StringValue? TargetFrame
         {
             get => GetAttribute<StringValue>();
@@ -14798,7 +14282,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:tooltip")]
         public StringValue? Tooltip
         {
             get => GetAttribute<StringValue>();
@@ -14812,7 +14295,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:docLocation")]
         public StringValue? DocLocation
         {
             get => GetAttribute<StringValue>();
@@ -14826,7 +14308,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:history")]
         public OnOffValue? History
         {
             get => GetAttribute<OnOffValue>();
@@ -14840,7 +14321,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:anchor")]
         public StringValue? Anchor
         {
             get => GetAttribute<StringValue>();
@@ -14854,7 +14334,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -15114,7 +14593,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode" /> <c>&lt;w:delInstrText></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:r")]
     public partial class Run : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -15155,7 +14633,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidRPr")]
         public HexBinaryValue? RsidRunProperties
         {
             get => GetAttribute<HexBinaryValue>();
@@ -15169,7 +14646,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidDel")]
         public HexBinaryValue? RsidRunDeletion
         {
             get => GetAttribute<HexBinaryValue>();
@@ -15183,7 +14659,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidR")]
         public HexBinaryValue? RsidRunAddition
         {
             get => GetAttribute<HexBinaryValue>();
@@ -15340,7 +14815,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sdt")]
     public partial class SdtRunRuby : SdtElement
     {
         /// <summary>
@@ -15469,7 +14943,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:proofErr.</para>
     /// </summary>
-    [SchemaAttr("w:proofErr")]
     public partial class ProofError : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -15486,7 +14959,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:type")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues>>();
@@ -15513,7 +14985,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:permStart.</para>
     /// </summary>
-    [SchemaAttr("w:permStart")]
     public partial class PermStart : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -15530,7 +15001,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:edGrp")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues>? EditorGroup
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues>>();
@@ -15544,7 +15014,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:ed")]
         public StringValue? Ed
         {
             get => GetAttribute<StringValue>();
@@ -15558,7 +15027,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:colFirst")]
         public Int32Value? ColumnFirst
         {
             get => GetAttribute<Int32Value>();
@@ -15572,7 +15040,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:colLast")]
         public Int32Value? ColumnLast
         {
             get => GetAttribute<Int32Value>();
@@ -15586,7 +15053,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
@@ -15600,7 +15066,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:displacedByCustomXml")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -15639,7 +15104,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:permEnd.</para>
     /// </summary>
-    [SchemaAttr("w:permEnd")]
     public partial class PermEnd : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -15656,7 +15120,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
@@ -15670,7 +15133,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:displacedByCustomXml")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -15760,7 +15222,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:ins")]
     public partial class InsertedRun : RunTrackChangeType
     {
         /// <summary>
@@ -16011,7 +15472,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:del")]
     public partial class DeletedRun : RunTrackChangeType
     {
         /// <summary>
@@ -16262,7 +15722,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:moveFrom")]
     public partial class MoveFromRun : RunTrackChangeType
     {
         /// <summary>
@@ -16513,7 +15972,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:moveTo")]
     public partial class MoveToRun : RunTrackChangeType
     {
         /// <summary>
@@ -16804,7 +16262,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -16818,7 +16275,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -16832,7 +16288,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -16922,7 +16377,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:contentPart.</para>
     /// </summary>
-    [SchemaAttr("w:contentPart")]
     public partial class ContentPart : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -16939,7 +16393,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -16995,7 +16448,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sdt")]
     public partial class SdtRun : SdtElement
     {
         /// <summary>
@@ -17164,7 +16616,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:customXml")]
     public partial class CustomXmlBlock : CustomXmlElement
     {
         /// <summary>
@@ -17362,7 +16813,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sdt")]
     public partial class SdtBlock : SdtElement
     {
         /// <summary>
@@ -17557,7 +17007,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:p")]
     public partial class Paragraph : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -17598,7 +17047,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidRPr")]
         public HexBinaryValue? RsidParagraphMarkRevision
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17612,7 +17060,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidR")]
         public HexBinaryValue? RsidParagraphAddition
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17626,7 +17073,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidDel")]
         public HexBinaryValue? RsidParagraphDeletion
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17640,7 +17086,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidP")]
         public HexBinaryValue? RsidParagraphProperties
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17654,7 +17099,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidRDefault")]
         public HexBinaryValue? RsidRunAdditionDefault
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17668,7 +17112,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:paraId")]
         public HexBinaryValue? ParagraphId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17682,7 +17125,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:textId")]
         public HexBinaryValue? TextId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17696,7 +17138,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:noSpellErr")]
         public OnOffValue? NoSpellError
         {
             get => GetAttribute<OnOffValue>();
@@ -18023,7 +17464,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tbl")]
     public partial class Table : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -18265,7 +17705,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tr")]
     public partial class TableRow : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -18306,7 +17745,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidRPr")]
         public HexBinaryValue? RsidTableRowMarkRevision
         {
             get => GetAttribute<HexBinaryValue>();
@@ -18320,7 +17758,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidR")]
         public HexBinaryValue? RsidTableRowAddition
         {
             get => GetAttribute<HexBinaryValue>();
@@ -18334,7 +17771,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidDel")]
         public HexBinaryValue? RsidTableRowDeletion
         {
             get => GetAttribute<HexBinaryValue>();
@@ -18348,7 +17784,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidTr")]
         public HexBinaryValue? RsidTableRowProperties
         {
             get => GetAttribute<HexBinaryValue>();
@@ -18362,7 +17797,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:paraId")]
         public HexBinaryValue? ParagraphId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -18376,7 +17810,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [SchemaAttr("w14:textId")]
         public HexBinaryValue? TextId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -18607,7 +18040,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:customXml")]
     public partial class CustomXmlRow : CustomXmlElement
     {
         /// <summary>
@@ -18797,7 +18229,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sdt")]
     public partial class SdtRow : SdtElement
     {
         /// <summary>
@@ -18967,7 +18398,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tc")]
     public partial class TableCell : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19209,7 +18639,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:customXml")]
     public partial class CustomXmlCell : CustomXmlElement
     {
         /// <summary>
@@ -19399,7 +18828,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sdt")]
     public partial class SdtCell : SdtElement
     {
         /// <summary>
@@ -19594,7 +19022,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:customXml")]
     public partial class CustomXmlRun : CustomXmlElement
     {
         /// <summary>
@@ -19924,7 +19351,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:fldSimple")]
     public partial class SimpleField : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -19965,7 +19391,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:instr")]
         public StringValue? Instruction
         {
             get => GetAttribute<StringValue>();
@@ -19979,7 +19404,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:fldLock")]
         public OnOffValue? FieldLock
         {
             get => GetAttribute<OnOffValue>();
@@ -19993,7 +19417,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:dirty")]
         public OnOffValue? Dirty
         {
             get => GetAttribute<OnOffValue>();
@@ -20315,7 +19738,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:hyperlink")]
     public partial class Hyperlink : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -20356,7 +19778,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:tgtFrame")]
         public StringValue? TargetFrame
         {
             get => GetAttribute<StringValue>();
@@ -20370,7 +19791,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:tooltip")]
         public StringValue? Tooltip
         {
             get => GetAttribute<StringValue>();
@@ -20384,7 +19804,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:docLocation")]
         public StringValue? DocLocation
         {
             get => GetAttribute<StringValue>();
@@ -20398,7 +19817,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:history")]
         public OnOffValue? History
         {
             get => GetAttribute<OnOffValue>();
@@ -20412,7 +19830,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:anchor")]
         public StringValue? Anchor
         {
             get => GetAttribute<StringValue>();
@@ -20426,7 +19843,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -20743,7 +20159,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:bdo")]
     public partial class BidirectionalOverride : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -20784,7 +20199,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>();
@@ -21084,7 +20498,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:dir")]
     public partial class BidirectionalEmbedding : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -21125,7 +20538,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>();
@@ -21360,7 +20772,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:subDoc.</para>
     /// </summary>
-    [SchemaAttr("w:subDoc")]
     public partial class SubDocumentReference : RelationshipType
     {
         /// <summary>
@@ -21386,7 +20797,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:printerSettings.</para>
     /// </summary>
-    [SchemaAttr("w:printerSettings")]
     public partial class PrinterSettingsReference : RelationshipType
     {
         /// <summary>
@@ -21412,7 +20822,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:src.</para>
     /// </summary>
-    [SchemaAttr("w:src")]
     public partial class SourceReference : RelationshipType
     {
         /// <summary>
@@ -21438,7 +20847,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:recipientData.</para>
     /// </summary>
-    [SchemaAttr("w:recipientData")]
     public partial class RecipientDataReference : RelationshipType
     {
         /// <summary>
@@ -21464,7 +20872,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dataSource.</para>
     /// </summary>
-    [SchemaAttr("w:dataSource")]
     public partial class DataSourceReference : RelationshipType
     {
         /// <summary>
@@ -21490,7 +20897,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:headerSource.</para>
     /// </summary>
-    [SchemaAttr("w:headerSource")]
     public partial class HeaderSource : RelationshipType
     {
         /// <summary>
@@ -21515,7 +20921,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sourceFileName.</para>
     /// </summary>
-    [SchemaAttr("w:sourceFileName")]
     public partial class SourceFileReference : RelationshipType
     {
         /// <summary>
@@ -21541,7 +20946,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:movie.</para>
     /// </summary>
-    [SchemaAttr("w:movie")]
     public partial class MovieReference : RelationshipType
     {
         /// <summary>
@@ -21566,7 +20970,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:attachedTemplate.</para>
     /// </summary>
-    [SchemaAttr("w:attachedTemplate")]
     public partial class AttachedTemplate : RelationshipType
     {
         /// <summary>
@@ -21609,7 +21012,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -21632,7 +21034,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cnfStyle.</para>
     /// </summary>
-    [SchemaAttr("w:cnfStyle")]
     public partial class ConditionalFormatStyle : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -21649,7 +21050,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -21663,7 +21063,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:firstRow")]
         public OnOffValue? FirstRow
         {
             get => GetAttribute<OnOffValue>();
@@ -21677,7 +21076,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lastRow")]
         public OnOffValue? LastRow
         {
             get => GetAttribute<OnOffValue>();
@@ -21691,7 +21089,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:firstColumn")]
         public OnOffValue? FirstColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -21705,7 +21102,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lastColumn")]
         public OnOffValue? LastColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -21719,7 +21115,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:oddVBand")]
         public OnOffValue? OddVerticalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -21733,7 +21128,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:evenVBand")]
         public OnOffValue? EvenVerticalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -21747,7 +21141,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:oddHBand")]
         public OnOffValue? OddHorizontalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -21761,7 +21154,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:evenHBand")]
         public OnOffValue? EvenHorizontalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -21775,7 +21167,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:firstRowFirstColumn")]
         public OnOffValue? FirstRowFirstColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -21789,7 +21180,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:firstRowLastColumn")]
         public OnOffValue? FirstRowLastColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -21803,7 +21193,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lastRowFirstColumn")]
         public OnOffValue? LastRowFirstColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -21817,7 +21206,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lastRowLastColumn")]
         public OnOffValue? LastRowLastColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -21895,7 +21283,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tcW.</para>
     /// </summary>
-    [SchemaAttr("w:tcW")]
     public partial class TableCellWidth : TableWidthType
     {
         /// <summary>
@@ -21920,7 +21307,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:wBefore.</para>
     /// </summary>
-    [SchemaAttr("w:wBefore")]
     public partial class WidthBeforeTableRow : TableWidthType
     {
         /// <summary>
@@ -21945,7 +21331,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:wAfter.</para>
     /// </summary>
-    [SchemaAttr("w:wAfter")]
     public partial class WidthAfterTableRow : TableWidthType
     {
         /// <summary>
@@ -21970,7 +21355,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblCellSpacing.</para>
     /// </summary>
-    [SchemaAttr("w:tblCellSpacing")]
     public partial class TableCellSpacing : TableWidthType
     {
         /// <summary>
@@ -21995,7 +21379,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblW.</para>
     /// </summary>
-    [SchemaAttr("w:tblW")]
     public partial class TableWidth : TableWidthType
     {
         /// <summary>
@@ -22020,7 +21403,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:top.</para>
     /// </summary>
-    [SchemaAttr("w:top")]
     public partial class TopMargin : TableWidthType
     {
         /// <summary>
@@ -22045,7 +21427,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:start.</para>
     /// </summary>
-    [SchemaAttr("w:start")]
     public partial class StartMargin : TableWidthType
     {
         /// <summary>
@@ -22071,7 +21452,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bottom.</para>
     /// </summary>
-    [SchemaAttr("w:bottom")]
     public partial class BottomMargin : TableWidthType
     {
         /// <summary>
@@ -22098,7 +21478,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:end.</para>
     /// </summary>
-    [SchemaAttr("w:end")]
     public partial class EndMargin : TableWidthType
     {
         /// <summary>
@@ -22124,7 +21503,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:left.</para>
     /// </summary>
-    [SchemaAttr("w:left")]
     public partial class LeftMargin : TableWidthType
     {
         /// <summary>
@@ -22149,7 +21527,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:right.</para>
     /// </summary>
-    [SchemaAttr("w:right")]
     public partial class RightMargin : TableWidthType
     {
         /// <summary>
@@ -22190,7 +21567,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:w")]
         public StringValue? Width
         {
             get => GetAttribute<StringValue>();
@@ -22204,7 +21580,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:type")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>();
@@ -22238,7 +21613,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hMerge.</para>
     /// </summary>
-    [SchemaAttr("w:hMerge")]
     public partial class HorizontalMerge : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -22255,7 +21629,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>();
@@ -22279,7 +21652,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vMerge.</para>
     /// </summary>
-    [SchemaAttr("w:vMerge")]
     public partial class VerticalMerge : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -22296,7 +21668,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>();
@@ -22335,7 +21706,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TopRightToBottomLeftCellBorder" /> <c>&lt;w:tr2bl></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tcBorders")]
     public partial class TableCellBorders : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -22537,7 +21907,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noWrap.</para>
     /// </summary>
-    [SchemaAttr("w:noWrap")]
     public partial class NoWrap : OnOffOnlyType
     {
         /// <summary>
@@ -22562,7 +21931,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tcFitText.</para>
     /// </summary>
-    [SchemaAttr("w:tcFitText")]
     public partial class TableCellFitText : OnOffOnlyType
     {
         /// <summary>
@@ -22587,7 +21955,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hideMark.</para>
     /// </summary>
-    [SchemaAttr("w:hideMark")]
     public partial class HideMark : OnOffOnlyType
     {
         /// <summary>
@@ -22612,7 +21979,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cantSplit.</para>
     /// </summary>
-    [SchemaAttr("w:cantSplit")]
     public partial class CantSplit : OnOffOnlyType
     {
         /// <summary>
@@ -22637,7 +22003,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblHeader.</para>
     /// </summary>
-    [SchemaAttr("w:tblHeader")]
     public partial class TableHeader : OnOffOnlyType
     {
         /// <summary>
@@ -22662,7 +22027,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bidiVisual.</para>
     /// </summary>
-    [SchemaAttr("w:bidiVisual")]
     public partial class BiDiVisual : OnOffOnlyType
     {
         /// <summary>
@@ -22687,7 +22051,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noResizeAllowed.</para>
     /// </summary>
-    [SchemaAttr("w:noResizeAllowed")]
     public partial class NoResizeAllowed : OnOffOnlyType
     {
         /// <summary>
@@ -22712,7 +22075,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:linkedToFile.</para>
     /// </summary>
-    [SchemaAttr("w:linkedToFile")]
     public partial class LinkedToFile : OnOffOnlyType
     {
         /// <summary>
@@ -22737,7 +22099,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noBorder.</para>
     /// </summary>
-    [SchemaAttr("w:noBorder")]
     public partial class NoBorder : OnOffOnlyType
     {
         /// <summary>
@@ -22762,7 +22123,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:flatBorders.</para>
     /// </summary>
-    [SchemaAttr("w:flatBorders")]
     public partial class FlatBorders : OnOffOnlyType
     {
         /// <summary>
@@ -22787,7 +22147,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoRedefine.</para>
     /// </summary>
-    [SchemaAttr("w:autoRedefine")]
     public partial class AutoRedefine : OnOffOnlyType
     {
         /// <summary>
@@ -22812,7 +22171,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hidden.</para>
     /// </summary>
-    [SchemaAttr("w:hidden")]
     public partial class StyleHidden : OnOffOnlyType
     {
         /// <summary>
@@ -22837,7 +22195,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:semiHidden.</para>
     /// </summary>
-    [SchemaAttr("w:semiHidden")]
     public partial class SemiHidden : OnOffOnlyType
     {
         /// <summary>
@@ -22862,7 +22219,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:unhideWhenUsed.</para>
     /// </summary>
-    [SchemaAttr("w:unhideWhenUsed")]
     public partial class UnhideWhenUsed : OnOffOnlyType
     {
         /// <summary>
@@ -22887,7 +22243,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:qFormat.</para>
     /// </summary>
-    [SchemaAttr("w:qFormat")]
     public partial class PrimaryStyle : OnOffOnlyType
     {
         /// <summary>
@@ -22912,7 +22267,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:locked.</para>
     /// </summary>
-    [SchemaAttr("w:locked")]
     public partial class Locked : OnOffOnlyType
     {
         /// <summary>
@@ -22937,7 +22291,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:personal.</para>
     /// </summary>
-    [SchemaAttr("w:personal")]
     public partial class Personal : OnOffOnlyType
     {
         /// <summary>
@@ -22962,7 +22315,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:personalCompose.</para>
     /// </summary>
-    [SchemaAttr("w:personalCompose")]
     public partial class PersonalCompose : OnOffOnlyType
     {
         /// <summary>
@@ -22987,7 +22339,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:personalReply.</para>
     /// </summary>
-    [SchemaAttr("w:personalReply")]
     public partial class PersonalReply : OnOffOnlyType
     {
         /// <summary>
@@ -23028,7 +22379,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues>>();
@@ -23059,7 +22409,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.EndMargin" /> <c>&lt;w:end></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tcMar")]
     public partial class TableCellMargin : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -23201,7 +22550,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vAlign.</para>
     /// </summary>
-    [SchemaAttr("w:vAlign")]
     public partial class TableCellVerticalAlignment : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -23218,7 +22566,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues>>();
@@ -23245,7 +22592,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:divId.</para>
     /// </summary>
-    [SchemaAttr("w:divId")]
     public partial class DivId : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -23262,7 +22608,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -23295,7 +22640,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:trHeight.</para>
     /// </summary>
-    [SchemaAttr("w:trHeight")]
     public partial class TableRowHeight : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -23312,7 +22656,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -23326,7 +22669,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hRule")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>? HeightType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>();
@@ -23354,7 +22696,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:jc.</para>
     /// </summary>
-    [SchemaAttr("w:jc")]
     public partial class TableJustification : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -23371,7 +22712,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues>>();
@@ -23398,7 +22738,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblpPr.</para>
     /// </summary>
-    [SchemaAttr("w:tblpPr")]
     public partial class TablePositionProperties : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -23415,7 +22754,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:leftFromText")]
         public Int16Value? LeftFromText
         {
             get => GetAttribute<Int16Value>();
@@ -23429,7 +22767,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rightFromText")]
         public Int16Value? RightFromText
         {
             get => GetAttribute<Int16Value>();
@@ -23443,7 +22780,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:topFromText")]
         public Int16Value? TopFromText
         {
             get => GetAttribute<Int16Value>();
@@ -23457,7 +22793,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:bottomFromText")]
         public Int16Value? BottomFromText
         {
             get => GetAttribute<Int16Value>();
@@ -23471,7 +22806,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:vertAnchor")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>? VerticalAnchor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>();
@@ -23485,7 +22819,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:horzAnchor")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>? HorizontalAnchor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>();
@@ -23499,7 +22832,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:tblpXSpec")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>? TablePositionXAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>();
@@ -23513,7 +22845,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:tblpX")]
         public Int32Value? TablePositionX
         {
             get => GetAttribute<Int32Value>();
@@ -23527,7 +22858,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:tblpYSpec")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>? TablePositionYAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>();
@@ -23541,7 +22871,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:tblpY")]
         public Int32Value? TablePositionY
         {
             get => GetAttribute<Int32Value>();
@@ -23592,7 +22921,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblOverlap.</para>
     /// </summary>
-    [SchemaAttr("w:tblOverlap")]
     public partial class TableOverlap : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -23609,7 +22937,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues>>();
@@ -23636,7 +22963,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblStyleRowBandSize.</para>
     /// </summary>
-    [SchemaAttr("w:tblStyleRowBandSize")]
     public partial class TableStyleRowBandSize : UnsignedDecimalNumberMax3Type
     {
         /// <summary>
@@ -23661,7 +22987,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblStyleColBandSize.</para>
     /// </summary>
-    [SchemaAttr("w:tblStyleColBandSize")]
     public partial class TableStyleColumnBandSize : UnsignedDecimalNumberMax3Type
     {
         /// <summary>
@@ -23702,7 +23027,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -23726,7 +23050,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblInd.</para>
     /// </summary>
-    [SchemaAttr("w:tblInd")]
     public partial class TableIndentation : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -23743,7 +23066,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:w")]
         public Int32Value? Width
         {
             get => GetAttribute<Int32Value>();
@@ -23757,7 +23079,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:type")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>();
@@ -23795,7 +23116,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder" /> <c>&lt;w:insideV></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblBorders")]
     public partial class TableBorders : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -23967,7 +23287,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblLayout.</para>
     /// </summary>
-    [SchemaAttr("w:tblLayout")]
     public partial class TableLayout : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -23984,7 +23303,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:type")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues>>();
@@ -24019,7 +23337,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellRightMargin" /> <c>&lt;w:right></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblCellMar")]
     public partial class TableCellMarginDefault : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -24161,7 +23478,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numStart.</para>
     /// </summary>
-    [SchemaAttr("w:numStart")]
     public partial class NumberingStart : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -24178,7 +23494,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -24205,7 +23520,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numRestart.</para>
     /// </summary>
-    [SchemaAttr("w:numRestart")]
     public partial class NumberingRestart : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -24222,7 +23536,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues>>();
@@ -24255,7 +23568,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties" /> <c>&lt;w:altChunkPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:altChunk")]
     public partial class AltChunk : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -24296,7 +23608,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -24340,7 +23651,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblLook.</para>
     /// </summary>
-    [SchemaAttr("w:tblLook")]
     public partial class TableLook : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -24357,7 +23667,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -24371,7 +23680,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:firstRow")]
         public OnOffValue? FirstRow
         {
             get => GetAttribute<OnOffValue>();
@@ -24385,7 +23693,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lastRow")]
         public OnOffValue? LastRow
         {
             get => GetAttribute<OnOffValue>();
@@ -24399,7 +23706,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:firstColumn")]
         public OnOffValue? FirstColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -24413,7 +23719,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lastColumn")]
         public OnOffValue? LastColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -24427,7 +23732,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:noHBand")]
         public OnOffValue? NoHorizontalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -24441,7 +23745,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:noVBand")]
         public OnOffValue? NoVerticalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -24501,7 +23804,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:footnotePr")]
     public partial class FootnoteProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -24628,7 +23930,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:endnotePr")]
     public partial class EndnoteProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -24746,7 +24047,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-    [SchemaAttr("w:type")]
     public partial class SectionType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -24763,7 +24063,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues>>();
@@ -24790,7 +24089,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pgSz.</para>
     /// </summary>
-    [SchemaAttr("w:pgSz")]
     public partial class PageSize : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -24807,7 +24105,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:w")]
         public UInt32Value? Width
         {
             get => GetAttribute<UInt32Value>();
@@ -24821,7 +24118,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:h")]
         public UInt32Value? Height
         {
             get => GetAttribute<UInt32Value>();
@@ -24835,7 +24131,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:orient")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues>? Orient
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues>>();
@@ -24849,7 +24144,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:code")]
         public UInt16Value? Code
         {
             get => GetAttribute<UInt16Value>();
@@ -24882,7 +24176,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pgMar.</para>
     /// </summary>
-    [SchemaAttr("w:pgMar")]
     public partial class PageMargin : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -24899,7 +24192,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:top")]
         public Int32Value? Top
         {
             get => GetAttribute<Int32Value>();
@@ -24913,7 +24205,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:right")]
         public UInt32Value? Right
         {
             get => GetAttribute<UInt32Value>();
@@ -24927,7 +24218,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:bottom")]
         public Int32Value? Bottom
         {
             get => GetAttribute<Int32Value>();
@@ -24941,7 +24231,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:left")]
         public UInt32Value? Left
         {
             get => GetAttribute<UInt32Value>();
@@ -24955,7 +24244,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:header")]
         public UInt32Value? Header
         {
             get => GetAttribute<UInt32Value>();
@@ -24969,7 +24257,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:footer")]
         public UInt32Value? Footer
         {
             get => GetAttribute<UInt32Value>();
@@ -24983,7 +24270,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:gutter")]
         public UInt32Value? Gutter
         {
             get => GetAttribute<UInt32Value>();
@@ -25034,7 +24320,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:paperSrc.</para>
     /// </summary>
-    [SchemaAttr("w:paperSrc")]
     public partial class PaperSource : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -25051,7 +24336,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:first")]
         public UInt16Value? First
         {
             get => GetAttribute<UInt16Value>();
@@ -25065,7 +24349,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:other")]
         public UInt16Value? Other
         {
             get => GetAttribute<UInt16Value>();
@@ -25099,7 +24382,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RightBorder" /> <c>&lt;w:right></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:pgBorders")]
     public partial class PageBorders : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -25140,7 +24422,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:zOrder")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues>? ZOrder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues>>();
@@ -25154,7 +24435,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:display")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues>? Display
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues>>();
@@ -25168,7 +24448,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:offsetFrom")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues>? OffsetFrom
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues>>();
@@ -25257,7 +24536,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lnNumType.</para>
     /// </summary>
-    [SchemaAttr("w:lnNumType")]
     public partial class LineNumberType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -25274,7 +24552,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:countBy")]
         public Int16Value? CountBy
         {
             get => GetAttribute<Int16Value>();
@@ -25288,7 +24565,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:start")]
         public Int16Value? Start
         {
             get => GetAttribute<Int16Value>();
@@ -25302,7 +24578,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:distance")]
         public StringValue? Distance
         {
             get => GetAttribute<StringValue>();
@@ -25316,7 +24591,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:restart")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues>? Restart
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues>>();
@@ -25357,7 +24631,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pgNumType.</para>
     /// </summary>
-    [SchemaAttr("w:pgNumType")]
     public partial class PageNumberType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -25374,7 +24647,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:fmt")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>? Format
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>();
@@ -25388,7 +24660,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:start")]
         public Int32Value? Start
         {
             get => GetAttribute<Int32Value>();
@@ -25402,7 +24673,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:chapStyle")]
         public ByteValue? ChapterStyle
         {
             get => GetAttribute<ByteValue>();
@@ -25416,7 +24686,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:chapSep")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>? ChapterSeparator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>();
@@ -25452,7 +24721,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Column" /> <c>&lt;w:col></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:cols")]
     public partial class Columns : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -25493,7 +24761,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:equalWidth")]
         public OnOffValue? EqualWidth
         {
             get => GetAttribute<OnOffValue>();
@@ -25507,7 +24774,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:space")]
         public StringValue? Space
         {
             get => GetAttribute<StringValue>();
@@ -25521,7 +24787,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:num")]
         public Int16Value? ColumnCount
         {
             get => GetAttribute<Int16Value>();
@@ -25535,7 +24800,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:sep")]
         public OnOffValue? Separator
         {
             get => GetAttribute<OnOffValue>();
@@ -25578,7 +24842,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vAlign.</para>
     /// </summary>
-    [SchemaAttr("w:vAlign")]
     public partial class VerticalTextAlignmentOnPage : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -25595,7 +24858,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues>>();
@@ -25622,7 +24884,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docGrid.</para>
     /// </summary>
-    [SchemaAttr("w:docGrid")]
     public partial class DocGrid : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -25639,7 +24900,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:type")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues>>();
@@ -25653,7 +24913,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:linePitch")]
         public Int32Value? LinePitch
         {
             get => GetAttribute<Int32Value>();
@@ -25667,7 +24926,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:charSpace")]
         public Int32Value? CharacterSpace
         {
             get => GetAttribute<Int32Value>();
@@ -25699,7 +24957,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RecipientData" /> <c>&lt;w:recipientData></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:recipients")]
     public partial class Recipients : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -25793,7 +25050,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:txbxContent")]
     public partial class TextBoxContent : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -25984,7 +25240,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Comment" /> <c>&lt;w:comment></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:comments")]
     public partial class Comments : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -26075,7 +25330,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Footnote" /> <c>&lt;w:footnote></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:footnotes")]
     public partial class Footnotes : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -26166,7 +25420,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Endnote" /> <c>&lt;w:endnote></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:endnotes")]
     public partial class Endnotes : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -26291,7 +25544,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:hdr")]
     public partial class Header : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -26547,7 +25799,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:ftr")]
     public partial class Footer : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -26990,7 +26241,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId" /> <c>&lt;w15:docId></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:settings")]
     public partial class Settings : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -27569,7 +26819,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TargetScreenSize" /> <c>&lt;w:targetScreenSz></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:webSettings")]
     public partial class WebSettings : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -27838,7 +27087,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Font" /> <c>&lt;w:font></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:fonts")]
     public partial class Fonts : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -27932,7 +27180,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingPictureBullet" /> <c>&lt;w:numPicBullet></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:numbering")]
     public partial class Numbering : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -28031,7 +27278,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Style" /> <c>&lt;w:style></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:styles")]
     public partial class Styles : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -28122,7 +27368,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Body" /> <c>&lt;w:body></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:document")]
     public partial class Document : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -28163,7 +27408,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:conformance")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance>? Conformance
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance>>();
@@ -28264,7 +27508,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocParts" /> <c>&lt;w:docParts></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:glossaryDocument")]
     public partial class GlossaryDocument : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -28397,7 +27640,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblPrEx")]
     public partial class PreviousTablePropertyExceptions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -28605,7 +27847,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalMerge" /> <c>&lt;w:vMerge></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tcPr")]
     public partial class PreviousTableCellProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -28923,7 +28164,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:trPr")]
     public partial class PreviousTableRowProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -29031,7 +28271,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblPr")]
     public partial class PreviousTableProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -29369,7 +28608,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sectPr")]
     public partial class PreviousSectionProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -29410,7 +28648,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidRPr")]
         public HexBinaryValue? RsidRPr
         {
             get => GetAttribute<HexBinaryValue>();
@@ -29424,7 +28661,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidDel")]
         public HexBinaryValue? RsidDel
         {
             get => GetAttribute<HexBinaryValue>();
@@ -29438,7 +28674,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidR")]
         public HexBinaryValue? RsidR
         {
             get => GetAttribute<HexBinaryValue>();
@@ -29452,7 +28687,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidSect")]
         public HexBinaryValue? RsidSect
         {
             get => GetAttribute<HexBinaryValue>();
@@ -29838,7 +29072,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:pPr")]
     public partial class ParagraphPropertiesExtended : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -30458,7 +29691,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rPr")]
     public partial class PreviousRunProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -30726,7 +29958,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rPr")]
     public partial class PreviousParagraphMarkRunProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -31016,7 +30247,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ilvl.</para>
     /// </summary>
-    [SchemaAttr("w:ilvl")]
     public partial class NumberingLevelReference : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -31033,7 +30263,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -31061,7 +30290,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numId.</para>
     /// </summary>
-    [SchemaAttr("w:numId")]
     public partial class NumberingId : NonNegativeDecimalNumberType
     {
         /// <summary>
@@ -31086,7 +30314,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:start.</para>
     /// </summary>
-    [SchemaAttr("w:start")]
     public partial class StartNumberingValue : NonNegativeDecimalNumberType
     {
         /// <summary>
@@ -31111,7 +30338,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:abstractNumId.</para>
     /// </summary>
-    [SchemaAttr("w:abstractNumId")]
     public partial class AbstractNumId : NonNegativeDecimalNumberType
     {
         /// <summary>
@@ -31152,7 +30378,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -31176,7 +30401,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numberingChange.</para>
     /// </summary>
-    [SchemaAttr("w:numberingChange")]
     public partial class NumberingChange : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -31193,7 +30417,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:original")]
         public StringValue? Original
         {
             get => GetAttribute<StringValue>();
@@ -31207,7 +30430,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -31221,7 +30443,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -31235,7 +30456,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -31276,7 +30496,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tab.</para>
     /// </summary>
-    [SchemaAttr("w:tab")]
     public partial class TabStop : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -31293,7 +30512,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues>>();
@@ -31307,7 +30525,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:leader")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues>? Leader
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues>>();
@@ -31321,7 +30538,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:pos")]
         public Int32Value? Position
         {
             get => GetAttribute<Int32Value>();
@@ -31417,7 +30633,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rPr")]
     public partial class ParagraphMarkRunProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -31737,7 +30952,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sectPr")]
     public partial class SectionProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -31778,7 +30992,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidRPr")]
         public HexBinaryValue? RsidRPr
         {
             get => GetAttribute<HexBinaryValue>();
@@ -31792,7 +31005,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidDel")]
         public HexBinaryValue? RsidDel
         {
             get => GetAttribute<HexBinaryValue>();
@@ -31806,7 +31018,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidR")]
         public HexBinaryValue? RsidR
         {
             get => GetAttribute<HexBinaryValue>();
@@ -31820,7 +31031,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:rsidSect")]
         public HexBinaryValue? RsidSect
         {
             get => GetAttribute<HexBinaryValue>();
@@ -31920,7 +31130,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:fldData.</para>
     /// </summary>
-    [SchemaAttr("w:fldData")]
     public partial class FieldData : TypedOpenXmlLeafTextElement
     {
         /// <summary>
@@ -31973,7 +31182,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CalculateOnExit" /> <c>&lt;w:calcOnExit></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:ffData")]
     public partial class FormFieldData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -32048,7 +31256,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-    [SchemaAttr("w:name")]
     public partial class FormFieldName : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -32065,7 +31272,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -32093,7 +31299,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:entryMacro.</para>
     /// </summary>
-    [SchemaAttr("w:entryMacro")]
     public partial class EntryMacro : MacroNameType
     {
         /// <summary>
@@ -32118,7 +31323,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:exitMacro.</para>
     /// </summary>
-    [SchemaAttr("w:exitMacro")]
     public partial class ExitMacro : MacroNameType
     {
         /// <summary>
@@ -32159,7 +31363,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -32183,7 +31386,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:helpText.</para>
     /// </summary>
-    [SchemaAttr("w:helpText")]
     public partial class HelpText : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -32200,7 +31402,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:type")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>();
@@ -32214,7 +31415,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -32242,7 +31442,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:statusText.</para>
     /// </summary>
-    [SchemaAttr("w:statusText")]
     public partial class StatusText : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -32259,7 +31458,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:type")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>();
@@ -32273,7 +31471,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -32311,7 +31508,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Checked" /> <c>&lt;w:checked></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:checkBox")]
     public partial class CheckBox : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -32382,7 +31578,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DefaultDropDownListItemIndex" /> <c>&lt;w:default></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:ddList")]
     public partial class DropDownListFormField : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -32475,7 +31670,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Format" /> <c>&lt;w:format></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:textInput")]
     public partial class TextInput : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -32587,7 +31781,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:default.</para>
     /// </summary>
-    [SchemaAttr("w:default")]
     public partial class DefaultDropDownListItemIndex : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -32604,7 +31797,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -32632,7 +31824,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:listEntry.</para>
     /// </summary>
-    [SchemaAttr("w:listEntry")]
     public partial class ListEntryFormField : String255Type
     {
         /// <summary>
@@ -32657,7 +31848,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:default.</para>
     /// </summary>
-    [SchemaAttr("w:default")]
     public partial class DefaultTextBoxFormFieldString : String255Type
     {
         /// <summary>
@@ -32682,7 +31872,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-    [SchemaAttr("w:name")]
     public partial class FrameName : String255Type
     {
         /// <summary>
@@ -32724,7 +31913,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -32748,7 +31936,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-    [SchemaAttr("w:type")]
     public partial class TextBoxFormFieldType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -32765,7 +31952,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues>>();
@@ -32792,7 +31978,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:maxLength.</para>
     /// </summary>
-    [SchemaAttr("w:maxLength")]
     public partial class MaxLength : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -32809,7 +31994,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public Int16Value? Val
         {
             get => GetAttribute<Int16Value>();
@@ -32837,7 +32021,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:format.</para>
     /// </summary>
-    [SchemaAttr("w:format")]
     public partial class Format : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -32854,7 +32037,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -32882,7 +32064,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:col.</para>
     /// </summary>
-    [SchemaAttr("w:col")]
     public partial class Column : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -32899,7 +32080,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:w")]
         public StringValue? Width
         {
             get => GetAttribute<StringValue>();
@@ -32913,7 +32093,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:space")]
         public StringValue? Space
         {
             get => GetAttribute<StringValue>();
@@ -32960,7 +32139,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties" /> <c>&lt;w:sectPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sectPrChange")]
     public partial class SectionPropertiesChange : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -33001,7 +32179,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -33015,7 +32192,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -33029,7 +32205,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -33095,7 +32270,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rPrChange")]
     public partial class ParagraphMarkRunPropertiesChange : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -33136,7 +32310,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -33150,7 +32323,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -33164,7 +32336,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -33230,7 +32401,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MatchSource" /> <c>&lt;w:matchSrc></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:altChunkPr")]
     public partial class AltChunkProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -33297,7 +32467,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rubyAlign.</para>
     /// </summary>
-    [SchemaAttr("w:rubyAlign")]
     public partial class RubyAlign : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -33314,7 +32483,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues>>();
@@ -33341,7 +32509,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hpsRaise.</para>
     /// </summary>
-    [SchemaAttr("w:hpsRaise")]
     public partial class PhoneticGuideRaise : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -33358,7 +32525,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public Int16Value? Val
         {
             get => GetAttribute<Int16Value>();
@@ -33385,7 +32551,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lid.</para>
     /// </summary>
-    [SchemaAttr("w:lid")]
     public partial class LanguageId : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -33402,7 +32567,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -33441,7 +32605,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RubyAlign" /> <c>&lt;w:rubyAlign></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rubyPr")]
     public partial class RubyProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -33645,7 +32808,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rt")]
     public partial class RubyContent : RubyContentType
     {
         /// <summary>
@@ -33879,7 +33041,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rubyBase")]
     public partial class RubyBase : RubyContentType
     {
         /// <summary>
@@ -34214,7 +33375,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:storeMappedDataAs.</para>
     /// </summary>
-    [SchemaAttr("w:storeMappedDataAs")]
     public partial class SdtDateMappingType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -34231,7 +33391,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues>>();
@@ -34255,7 +33414,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:calendar.</para>
     /// </summary>
-    [SchemaAttr("w:calendar")]
     public partial class Calendar : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -34272,7 +33430,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues>>();
@@ -34296,7 +33453,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:listItem.</para>
     /// </summary>
-    [SchemaAttr("w:listItem")]
     public partial class ListItem : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -34313,7 +33469,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:displayText")]
         public StringValue? DisplayText
         {
             get => GetAttribute<StringValue>();
@@ -34327,7 +33482,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:value")]
         public StringValue? Value
         {
             get => GetAttribute<StringValue>();
@@ -34387,7 +33541,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection" /> <c>&lt;w15:repeatingSection></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sdtPr")]
     public partial class SdtProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -34511,7 +33664,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sdtEndPr")]
     public partial class SdtEndCharProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -34604,7 +33756,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sdtContent")]
     public partial class SdtContentBlock : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -34834,7 +33985,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sdtContent")]
     public partial class SdtContentRun : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -35165,7 +34315,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sdtContent")]
     public partial class SdtContentRunRuby : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -35432,7 +34581,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sdtContent")]
     public partial class SdtContentCell : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -35627,7 +34775,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:sdtContent")]
     public partial class SdtContentRow : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -35791,7 +34938,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlAttribute" /> <c>&lt;w:attr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:customXmlPr")]
     public partial class CustomXmlProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -35860,7 +35006,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:attr.</para>
     /// </summary>
-    [SchemaAttr("w:attr")]
     public partial class CustomXmlAttribute : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -35877,7 +35022,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -35891,7 +35035,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -35905,7 +35048,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -35938,7 +35080,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gridCol.</para>
     /// </summary>
-    [SchemaAttr("w:gridCol")]
     public partial class GridColumn : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -35955,7 +35096,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:w")]
         public StringValue? Width
         {
             get => GetAttribute<StringValue>();
@@ -35993,7 +35133,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid" /> <c>&lt;w:tblGrid></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblGridChange")]
     public partial class TableGridChange : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -36034,7 +35173,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -36095,7 +35233,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties" /> <c>&lt;w:tcPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tcPrChange")]
     public partial class TableCellPropertiesChange : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -36136,7 +35273,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -36150,7 +35286,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -36164,7 +35299,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -36246,7 +35380,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalMerge" /> <c>&lt;w:vMerge></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tcPr")]
     public partial class TableCellProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -36561,7 +35694,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties" /> <c>&lt;w:tblPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblPrChange")]
     public partial class TablePropertiesChange : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -36602,7 +35734,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -36616,7 +35747,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -36630,7 +35760,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -36696,7 +35825,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions" /> <c>&lt;w:tblPrEx></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblPrExChange")]
     public partial class TablePropertyExceptionsChange : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -36737,7 +35865,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -36751,7 +35878,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -36765,7 +35891,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -36846,7 +35971,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblPr")]
     public partial class TableProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -37187,7 +36311,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.GridColumn" /> <c>&lt;w:gridCol></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblGrid")]
     public partial class TableGrid : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -37249,7 +36372,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pos.</para>
     /// </summary>
-    [SchemaAttr("w:pos")]
     public partial class FootnotePosition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37266,7 +36388,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues>>();
@@ -37293,7 +36414,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numFmt.</para>
     /// </summary>
-    [SchemaAttr("w:numFmt")]
     public partial class NumberingFormat : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37310,7 +36430,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>();
@@ -37324,7 +36443,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:format")]
         public StringValue? Format
         {
             get => GetAttribute<StringValue>();
@@ -37355,7 +36473,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pos.</para>
     /// </summary>
-    [SchemaAttr("w:pos")]
     public partial class EndnotePosition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37372,7 +36489,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues>>();
@@ -37399,7 +36515,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footnote.</para>
     /// </summary>
-    [SchemaAttr("w:footnote")]
     public partial class FootnoteSpecialReference : FootnoteEndnoteSeparatorReferenceType
     {
         /// <summary>
@@ -37426,7 +36541,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:endnote.</para>
     /// </summary>
-    [SchemaAttr("w:endnote")]
     public partial class EndnoteSpecialReference : FootnoteEndnoteSeparatorReferenceType
     {
         /// <summary>
@@ -37469,7 +36583,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public IntegerValue? Id
         {
             get => GetAttribute<IntegerValue>();
@@ -37493,7 +36606,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:column.</para>
     /// </summary>
-    [SchemaAttr("w:column")]
     public partial class ColumnIndex : UnsignedDecimalNumberType
     {
         /// <summary>
@@ -37518,7 +36630,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:colDelim.</para>
     /// </summary>
-    [SchemaAttr("w:colDelim")]
     public partial class ColumnDelimiter : UnsignedDecimalNumberType
     {
         /// <summary>
@@ -37559,7 +36670,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -37582,7 +36692,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:uniqueTag.</para>
     /// </summary>
-    [SchemaAttr("w:uniqueTag")]
     public partial class UniqueTag : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37599,7 +36708,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public Base64BinaryValue? Val
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -37634,7 +36742,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ColumnIndex" /> <c>&lt;w:column></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:recipientData")]
     public partial class RecipientData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -37732,7 +36839,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-    [SchemaAttr("w:type")]
     public partial class MailMergeFieldType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37749,7 +36855,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues>>();
@@ -37776,7 +36881,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-    [SchemaAttr("w:type")]
     public partial class MailMergeSource : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37793,7 +36897,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues>>();
@@ -37831,7 +36934,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ColumnIndex" /> <c>&lt;w:column></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:fieldMapData")]
     public partial class FieldMapData : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -37973,7 +37075,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mainDocumentType.</para>
     /// </summary>
-    [SchemaAttr("w:mainDocumentType")]
     public partial class MainDocumentType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -37990,7 +37091,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues>>();
@@ -38017,7 +37117,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dataType.</para>
     /// </summary>
-    [SchemaAttr("w:dataType")]
     public partial class DataType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -38034,7 +37133,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues>>();
@@ -38061,7 +37159,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:destination.</para>
     /// </summary>
-    [SchemaAttr("w:destination")]
     public partial class Destination : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -38078,7 +37175,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues>>();
@@ -38118,7 +37214,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ColumnDelimiter" /> <c>&lt;w:colDelim></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:odso")]
     public partial class DataSourceObject : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -38264,7 +37359,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docVar.</para>
     /// </summary>
-    [SchemaAttr("w:docVar")]
     public partial class DocumentVariable : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -38281,7 +37375,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -38295,7 +37388,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -38328,7 +37420,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rsidRoot.</para>
     /// </summary>
-    [SchemaAttr("w:rsidRoot")]
     public partial class RsidRoot : LongHexNumberType
     {
         /// <summary>
@@ -38353,7 +37444,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rsid.</para>
     /// </summary>
-    [SchemaAttr("w:rsid")]
     public partial class Rsid : LongHexNumberType
     {
         /// <summary>
@@ -38378,7 +37468,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:nsid.</para>
     /// </summary>
-    [SchemaAttr("w:nsid")]
     public partial class Nsid : LongHexNumberType
     {
         /// <summary>
@@ -38403,7 +37492,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tmpl.</para>
     /// </summary>
-    [SchemaAttr("w:tmpl")]
     public partial class TemplateCode : LongHexNumberType
     {
         /// <summary>
@@ -38444,7 +37532,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -38507,7 +37594,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rPr")]
     public partial class RunPropertiesBaseStyle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -39128,7 +38214,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:pPr")]
     public partial class ParagraphPropertiesBaseStyle : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -39642,7 +38727,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rPrDefault")]
     public partial class RunPropertiesDefault : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -39715,7 +38799,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle" /> <c>&lt;w:pPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:pPrDefault")]
     public partial class ParagraphPropertiesDefault : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -39782,7 +38865,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:marW.</para>
     /// </summary>
-    [SchemaAttr("w:marW")]
     public partial class MarginWidth : PixelsMeasureType
     {
         /// <summary>
@@ -39807,7 +38889,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:marH.</para>
     /// </summary>
-    [SchemaAttr("w:marH")]
     public partial class MarginHeight : PixelsMeasureType
     {
         /// <summary>
@@ -39848,7 +38929,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -39871,7 +38951,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:scrollbar.</para>
     /// </summary>
-    [SchemaAttr("w:scrollbar")]
     public partial class ScrollbarVisibility : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -39888,7 +38967,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues>>();
@@ -39915,7 +38993,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:w.</para>
     /// </summary>
-    [SchemaAttr("w:w")]
     public partial class Width : TwipsMeasureType
     {
         /// <summary>
@@ -39940,7 +39017,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hyphenationZone.</para>
     /// </summary>
-    [SchemaAttr("w:hyphenationZone")]
     public partial class HyphenationZone : TwipsMeasureType
     {
         /// <summary>
@@ -39965,7 +39041,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:drawingGridHorizontalSpacing.</para>
     /// </summary>
-    [SchemaAttr("w:drawingGridHorizontalSpacing")]
     public partial class DrawingGridHorizontalSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -39990,7 +39065,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:drawingGridVerticalSpacing.</para>
     /// </summary>
-    [SchemaAttr("w:drawingGridVerticalSpacing")]
     public partial class DrawingGridVerticalSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -40015,7 +39089,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:drawingGridHorizontalOrigin.</para>
     /// </summary>
-    [SchemaAttr("w:drawingGridHorizontalOrigin")]
     public partial class DrawingGridHorizontalOrigin : TwipsMeasureType
     {
         /// <summary>
@@ -40040,7 +39113,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:drawingGridVerticalOrigin.</para>
     /// </summary>
-    [SchemaAttr("w:drawingGridVerticalOrigin")]
     public partial class DrawingGridVerticalOrigin : TwipsMeasureType
     {
         /// <summary>
@@ -40081,7 +39153,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -40119,7 +39190,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Width" /> <c>&lt;w:w></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:framesetSplitbar")]
     public partial class FramesetSplitbar : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -40231,7 +39301,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:frameLayout.</para>
     /// </summary>
-    [SchemaAttr("w:frameLayout")]
     public partial class FrameLayout : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -40248,7 +39317,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues>>();
@@ -40285,7 +39353,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FrameSize" /> <c>&lt;w:sz></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:frameset")]
     public partial class Frameset : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -40405,7 +39472,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FrameName" /> <c>&lt;w:name></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:frame")]
     public partial class Frame : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -40577,7 +39643,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suff.</para>
     /// </summary>
-    [SchemaAttr("w:suff")]
     public partial class LevelSuffix : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -40594,7 +39659,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues>>();
@@ -40621,7 +39685,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lvlText.</para>
     /// </summary>
-    [SchemaAttr("w:lvlText")]
     public partial class LevelText : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -40638,7 +39701,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -40652,7 +39714,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:null")]
         public OnOffValue? Null
         {
             get => GetAttribute<OnOffValue>();
@@ -40677,7 +39738,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:legacy.</para>
     /// </summary>
-    [SchemaAttr("w:legacy")]
     public partial class LegacyNumbering : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -40694,7 +39754,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:legacy")]
         public OnOffValue? Legacy
         {
             get => GetAttribute<OnOffValue>();
@@ -40708,7 +39767,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:legacySpace")]
         public StringValue? LegacySpace
         {
             get => GetAttribute<StringValue>();
@@ -40722,7 +39780,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:legacyIndent")]
         public StringValue? LegacyIndent
         {
             get => GetAttribute<StringValue>();
@@ -40764,7 +39821,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lvlJc.</para>
     /// </summary>
-    [SchemaAttr("w:lvlJc")]
     public partial class LevelJustification : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -40781,7 +39837,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues>>();
@@ -40844,7 +39899,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:pPr")]
     public partial class PreviousParagraphProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -41414,7 +40468,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rPr")]
     public partial class NumberingSymbolRunProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -42030,7 +41083,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:multiLevelType.</para>
     /// </summary>
-    [SchemaAttr("w:multiLevelType")]
     public partial class MultiLevelType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -42047,7 +41099,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues>>();
@@ -42091,7 +41142,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleIdInLevel" /> <c>&lt;w:pStyle></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:lvl")]
     public partial class Level : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -42132,7 +41182,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:ilvl")]
         public Int32Value? LevelIndex
         {
             get => GetAttribute<Int32Value>();
@@ -42146,7 +41195,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:tplc")]
         public HexBinaryValue? TemplateCode
         {
             get => GetAttribute<HexBinaryValue>();
@@ -42160,7 +41208,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:tentative")]
         public OnOffValue? Tentative
         {
             get => GetAttribute<OnOffValue>();
@@ -42382,7 +41429,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PictureBulletBase" /> <c>&lt;w:pict></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:numPicBullet")]
     public partial class NumberingPictureBullet : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -42423,7 +41469,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:numPicBulletId")]
         public Int32Value? NumberingPictureBulletId
         {
             get => GetAttribute<Int32Value>();
@@ -42499,7 +41544,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink" /> <c>&lt;w:numStyleLink></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:abstractNum")]
     public partial class AbstractNum : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -42540,7 +41584,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:abstractNumId")]
         public Int32Value? AbstractNumberId
         {
             get => GetAttribute<Int32Value>();
@@ -42671,7 +41714,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.LevelOverride" /> <c>&lt;w:lvlOverride></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:num")]
     public partial class NumberingInstance : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -42712,7 +41754,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:numId")]
         public Int32Value? NumberID
         {
             get => GetAttribute<Int32Value>();
@@ -42726,7 +41767,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:durableId")]
         public Int32Value? DurableId
         {
             get => GetAttribute<Int32Value>();
@@ -42811,7 +41851,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:pPr")]
     public partial class StyleParagraphProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -43357,7 +42396,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblPr")]
     public partial class TableStyleConditionalFormattingTableProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -43521,7 +42559,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:trPr")]
     public partial class TableStyleConditionalFormattingTableRowProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -43599,7 +42636,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tcPr")]
     public partial class TableStyleConditionalFormattingTableCellProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -43744,7 +42780,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-    [SchemaAttr("w:name")]
     public partial class StyleName : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -43761,7 +42796,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -43790,7 +42824,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:uiPriority.</para>
     /// </summary>
-    [SchemaAttr("w:uiPriority")]
     public partial class UIPriority : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -43807,7 +42840,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -43875,7 +42907,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rPr")]
     public partial class StyleRunProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -44501,7 +43532,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableStyleColumnBandSize" /> <c>&lt;w:tblStyleColBandSize></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblPr")]
     public partial class StyleTableProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -44700,7 +43730,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tcPr")]
     public partial class StyleTableCellProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -44834,7 +43863,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblStylePr")]
     public partial class TableStyleProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -44875,7 +43903,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:type")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues>>();
@@ -44980,7 +44007,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lsdException.</para>
     /// </summary>
-    [SchemaAttr("w:lsdException")]
     public partial class LatentStyleExceptionInfo : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -44997,7 +44023,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -45011,7 +44036,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:locked")]
         public OnOffValue? Locked
         {
             get => GetAttribute<OnOffValue>();
@@ -45025,7 +44049,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:uiPriority")]
         public Int32Value? UiPriority
         {
             get => GetAttribute<Int32Value>();
@@ -45039,7 +44062,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:semiHidden")]
         public OnOffValue? SemiHidden
         {
             get => GetAttribute<OnOffValue>();
@@ -45053,7 +44075,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:unhideWhenUsed")]
         public OnOffValue? UnhideWhenUsed
         {
             get => GetAttribute<OnOffValue>();
@@ -45067,7 +44088,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:qFormat")]
         public OnOffValue? PrimaryStyle
         {
             get => GetAttribute<OnOffValue>();
@@ -45109,7 +44129,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault" /> <c>&lt;w:rPrDefault></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:docDefaults")]
     public partial class DocDefaults : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -45197,7 +44216,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.LatentStyleExceptionInfo" /> <c>&lt;w:lsdException></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:latentStyles")]
     public partial class LatentStyles : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -45238,7 +44256,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:defLockedState")]
         public OnOffValue? DefaultLockedState
         {
             get => GetAttribute<OnOffValue>();
@@ -45252,7 +44269,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:defUIPriority")]
         public Int32Value? DefaultUiPriority
         {
             get => GetAttribute<Int32Value>();
@@ -45266,7 +44282,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:defSemiHidden")]
         public OnOffValue? DefaultSemiHidden
         {
             get => GetAttribute<OnOffValue>();
@@ -45280,7 +44295,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:defUnhideWhenUsed")]
         public OnOffValue? DefaultUnhideWhenUsed
         {
             get => GetAttribute<OnOffValue>();
@@ -45294,7 +44308,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:defQFormat")]
         public OnOffValue? DefaultPrimaryStyle
         {
             get => GetAttribute<OnOffValue>();
@@ -45308,7 +44321,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:count")]
         public Int32Value? Count
         {
             get => GetAttribute<Int32Value>();
@@ -45372,7 +44384,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.UIPriority" /> <c>&lt;w:uiPriority></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:style")]
     public partial class Style : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -45413,7 +44424,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:type")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues>>();
@@ -45427,7 +44437,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:styleId")]
         public StringValue? StyleId
         {
             get => GetAttribute<StringValue>();
@@ -45441,7 +44450,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:default")]
         public OnOffValue? Default
         {
             get => GetAttribute<OnOffValue>();
@@ -45455,7 +44463,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:customStyle")]
         public OnOffValue? CustomStyle
         {
             get => GetAttribute<OnOffValue>();
@@ -45822,7 +44829,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltName" /> <c>&lt;w:altName></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:font")]
     public partial class Font : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -45863,7 +44869,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -46058,7 +45063,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:marLeft.</para>
     /// </summary>
-    [SchemaAttr("w:marLeft")]
     public partial class LeftMarginDiv : SignedTwipsMeasureType
     {
         /// <summary>
@@ -46083,7 +45087,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:marRight.</para>
     /// </summary>
-    [SchemaAttr("w:marRight")]
     public partial class RightMarginDiv : SignedTwipsMeasureType
     {
         /// <summary>
@@ -46108,7 +45111,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:marTop.</para>
     /// </summary>
-    [SchemaAttr("w:marTop")]
     public partial class TopMarginDiv : SignedTwipsMeasureType
     {
         /// <summary>
@@ -46133,7 +45135,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:marBottom.</para>
     /// </summary>
-    [SchemaAttr("w:marBottom")]
     public partial class BottomMarginDiv : SignedTwipsMeasureType
     {
         /// <summary>
@@ -46174,7 +45175,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -46212,7 +45212,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RightBorder" /> <c>&lt;w:right></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:divBdr")]
     public partial class DivBorder : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -46330,7 +45329,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Div" /> <c>&lt;w:div></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:divsChild")]
     public partial class DivsChild : DivsType
     {
         /// <summary>
@@ -46389,7 +45387,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Div" /> <c>&lt;w:div></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:divs")]
     public partial class Divs : DivsType
     {
         /// <summary>
@@ -46506,7 +45503,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv" /> <c>&lt;w:marBottom></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:div")]
     public partial class Div : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -46547,7 +45543,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -46707,7 +45702,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:comment")]
     public partial class Comment : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -46748,7 +45742,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:initials")]
         public StringValue? Initials
         {
             get => GetAttribute<StringValue>();
@@ -46762,7 +45755,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -46776,7 +45768,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -46790,7 +45781,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -46951,7 +45941,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:footnote")]
     public partial class Footnote : FootnoteEndnoteType
     {
         /// <summary>
@@ -47146,7 +46135,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:endnote")]
     public partial class Endnote : FootnoteEndnoteType
     {
         /// <summary>
@@ -47381,7 +46369,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:type")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues>>();
@@ -47395,7 +46382,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public IntegerValue? Id
         {
             get => GetAttribute<IntegerValue>();
@@ -47455,7 +46441,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:behavior.</para>
     /// </summary>
-    [SchemaAttr("w:behavior")]
     public partial class Behavior : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -47472,7 +46457,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues>>();
@@ -47499,7 +46483,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-    [SchemaAttr("w:type")]
     public partial class DocPartType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -47516,7 +46499,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues>>();
@@ -47543,7 +46525,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gallery.</para>
     /// </summary>
-    [SchemaAttr("w:gallery")]
     public partial class Gallery : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -47560,7 +46541,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues>>();
@@ -47587,7 +46567,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoCaption.</para>
     /// </summary>
-    [SchemaAttr("w:autoCaption")]
     public partial class AutoCaption : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -47604,7 +46583,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -47618,7 +46596,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:caption")]
         public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
@@ -47652,7 +46629,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:caption.</para>
     /// </summary>
-    [SchemaAttr("w:caption")]
     public partial class Caption : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -47669,7 +46645,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -47683,7 +46658,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:pos")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues>? Position
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues>>();
@@ -47697,7 +46671,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:chapNum")]
         public OnOffValue? ChapterNumber
         {
             get => GetAttribute<OnOffValue>();
@@ -47711,7 +46684,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:heading")]
         public Int32Value? Heading
         {
             get => GetAttribute<Int32Value>();
@@ -47725,7 +46697,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:noLabel")]
         public OnOffValue? NoLabel
         {
             get => GetAttribute<OnOffValue>();
@@ -47739,7 +46710,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:numFmt")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>? NumberFormat
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>();
@@ -47753,7 +46723,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:sep")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>? Separator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>();
@@ -47793,7 +46762,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AutoCaption" /> <c>&lt;w:autoCaption></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:autoCaptions")]
     public partial class AutoCaptions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -47853,7 +46821,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Background" /> <c>&lt;v:background></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:background")]
     public partial class DocumentBackground : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -47894,7 +46861,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:color")]
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -47908,7 +46874,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeColor")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -47922,7 +46887,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeTint")]
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -47936,7 +46900,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:themeShade")]
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -48000,7 +46963,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPart" /> <c>&lt;w:docPart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:docParts")]
     public partial class DocParts : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -48055,7 +47017,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-    [SchemaAttr("w:name")]
     public partial class DocPartName : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -48072,7 +47033,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -48086,7 +47046,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:decorated")]
         public OnOffValue? Decorated
         {
             get => GetAttribute<OnOffValue>();
@@ -48122,7 +47081,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Name" /> <c>&lt;w:name></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:category")]
     public partial class Category : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -48210,7 +47168,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartType" /> <c>&lt;w:type></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:types")]
     public partial class DocPartTypes : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -48251,7 +47208,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:all")]
         public OnOffValue? All
         {
             get => GetAttribute<OnOffValue>();
@@ -48286,7 +47242,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Behavior" /> <c>&lt;w:behavior></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:behaviors")]
     public partial class Behaviors : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -48340,7 +47295,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:guid.</para>
     /// </summary>
-    [SchemaAttr("w:guid")]
     public partial class DocPartId : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -48357,7 +47311,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -48397,7 +47350,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Description" /> <c>&lt;w:description></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:docPartPr")]
     public partial class DocPartProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -48595,7 +47547,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:docPartBody")]
     public partial class DocPartBody : BodyType
     {
         /// <summary>
@@ -48790,7 +47741,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:body")]
     public partial class Body : BodyType
     {
         /// <summary>
@@ -49072,7 +48022,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartProperties" /> <c>&lt;w:docPartPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:docPart")]
     public partial class DocPart : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -49154,7 +48103,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:compatSetting.</para>
     /// </summary>
-    [SchemaAttr("w:compatSetting")]
     public partial class CompatibilitySetting : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -49171,7 +48119,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:name")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues>? Name
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues>>();
@@ -49185,7 +48132,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:uri")]
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -49199,7 +48145,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -49235,7 +48180,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:left.</para>
     /// </summary>
-    [SchemaAttr("w:left")]
     public partial class TableCellLeftMargin : TableWidthDxaNilType
     {
         /// <summary>
@@ -49260,7 +48204,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:right.</para>
     /// </summary>
-    [SchemaAttr("w:right")]
     public partial class TableCellRightMargin : TableWidthDxaNilType
     {
         /// <summary>
@@ -49301,7 +48244,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:w")]
         public Int16Value? Width
         {
             get => GetAttribute<Int16Value>();
@@ -49315,7 +48257,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:type")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues>>();
@@ -49358,7 +48299,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblPrEx")]
     public partial class TablePropertyExceptions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -49588,7 +48528,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableRowPropertiesChange" /> <c>&lt;w:trPrChange></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:trPr")]
     public partial class TableRowProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -49704,7 +48643,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:trPrChange")]
     public partial class TableRowPropertiesChange : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -49745,7 +48683,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:author")]
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -49759,7 +48696,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:date")]
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -49773,7 +48709,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -49874,7 +48809,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:pPr")]
     public partial class ParagraphProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -50496,7 +49430,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:control.</para>
     /// </summary>
-    [SchemaAttr("w:control")]
     public partial class Control : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -50513,7 +49446,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -50527,7 +49459,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:shapeid")]
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -50541,7 +49472,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -50578,7 +49508,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.GridColumn" /> <c>&lt;w:gridCol></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:tblGrid")]
     public partial class PreviousTableGrid : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -50632,7 +49561,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:objectEmbed.</para>
     /// </summary>
-    [SchemaAttr("w:objectEmbed")]
     public partial class ObjectEmbed : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -50649,7 +49577,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:drawAspect")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>? drawAspect
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>();
@@ -50663,7 +49590,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -50677,7 +49603,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:progId")]
         public StringValue? ProgId
         {
             get => GetAttribute<StringValue>();
@@ -50691,7 +49616,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:shapeId")]
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -50705,7 +49629,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:fieldCodes")]
         public StringValue? FieldCodes
         {
             get => GetAttribute<StringValue>();
@@ -50736,7 +49659,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:objectLink.</para>
     /// </summary>
-    [SchemaAttr("w:objectLink")]
     public partial class ObjectLink : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -50753,7 +49675,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:updateMode")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode>? UpdateMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode>>();
@@ -50767,7 +49688,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lockedField")]
         public OnOffValue? LockedField
         {
             get => GetAttribute<OnOffValue>();
@@ -50781,7 +49701,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:drawAspect")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>? drawAspect
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>();
@@ -50795,7 +49714,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -50809,7 +49727,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:progId")]
         public StringValue? ProgId
         {
             get => GetAttribute<StringValue>();
@@ -50823,7 +49740,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:shapeId")]
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -50837,7 +49753,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:fieldCodes")]
         public StringValue? FieldCodes
         {
             get => GetAttribute<StringValue>();
@@ -50873,7 +49788,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lock.</para>
     /// </summary>
-    [SchemaAttr("w:lock")]
     public partial class Lock : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -50890,7 +49804,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues>>();
@@ -50920,7 +49833,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartReference" /> <c>&lt;w:docPart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:placeholder")]
     public partial class SdtPlaceholder : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -50987,7 +49899,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dataBinding.</para>
     /// </summary>
-    [SchemaAttr("w:dataBinding")]
     public partial class DataBinding : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -51004,7 +49915,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:prefixMappings")]
         public StringValue? PrefixMappings
         {
             get => GetAttribute<StringValue>();
@@ -51018,7 +49928,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:xpath")]
         public StringValue? XPath
         {
             get => GetAttribute<StringValue>();
@@ -51032,7 +49941,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:storeItemID")]
         public StringValue? StoreItemId
         {
             get => GetAttribute<StringValue>();
@@ -51070,7 +49978,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ListItem" /> <c>&lt;w:listItem></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:comboBox")]
     public partial class SdtContentComboBox : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -51111,7 +50018,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lastValue")]
         public StringValue? LastValue
         {
             get => GetAttribute<StringValue>();
@@ -51149,7 +50055,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DateFormat" /> <c>&lt;w:dateFormat></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:date")]
     public partial class SdtContentDate : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -51190,7 +50095,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:fullDate")]
         public DateTimeValue? FullDate
         {
             get => GetAttribute<DateTimeValue>();
@@ -51285,7 +50189,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartCategory" /> <c>&lt;w:docPartCategory></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:docPartObj")]
     public partial class SdtContentDocPartObject : SdtDocPartType
     {
         /// <summary>
@@ -51348,7 +50251,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartCategory" /> <c>&lt;w:docPartCategory></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:docPartList")]
     public partial class SdtContentDocPartList : SdtDocPartType
     {
         /// <summary>
@@ -51503,7 +50405,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ListItem" /> <c>&lt;w:listItem></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:dropDownList")]
     public partial class SdtContentDropDownList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -51544,7 +50445,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lastValue")]
         public StringValue? LastValue
         {
             get => GetAttribute<StringValue>();
@@ -51573,7 +50473,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:text.</para>
     /// </summary>
-    [SchemaAttr("w:text")]
     public partial class SdtContentText : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -51590,7 +50489,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:multiLine")]
         public OnOffValue? MultiLine
         {
             get => GetAttribute<OnOffValue>();
@@ -51614,7 +50512,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:writeProtection.</para>
     /// </summary>
-    [SchemaAttr("w:writeProtection")]
     public partial class WriteProtection : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -51631,7 +50528,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:recommended")]
         public OnOffValue? Recommended
         {
             get => GetAttribute<OnOffValue>();
@@ -51645,7 +50541,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptProviderType")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>? CryptographicProviderType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>();
@@ -51659,7 +50554,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptAlgorithmClass")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>? CryptographicAlgorithmClass
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>();
@@ -51673,7 +50567,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptAlgorithmType")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>? CryptographicAlgorithmType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>();
@@ -51687,7 +50580,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptAlgorithmSid")]
         public Int32Value? CryptographicAlgorithmSid
         {
             get => GetAttribute<Int32Value>();
@@ -51701,7 +50593,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptSpinCount")]
         public UInt32Value? CryptographicSpinCount
         {
             get => GetAttribute<UInt32Value>();
@@ -51715,7 +50606,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptProvider")]
         public StringValue? CryptographicProvider
         {
             get => GetAttribute<StringValue>();
@@ -51729,7 +50619,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:algIdExt")]
         public HexBinaryValue? AlgorithmIdExtensibility
         {
             get => GetAttribute<HexBinaryValue>();
@@ -51743,7 +50632,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:algIdExtSource")]
         public StringValue? AlgorithmIdExtensibilitySource
         {
             get => GetAttribute<StringValue>();
@@ -51757,7 +50645,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptProviderTypeExt")]
         public HexBinaryValue? CryptographicProviderTypeExtensibility
         {
             get => GetAttribute<HexBinaryValue>();
@@ -51771,7 +50658,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptProviderTypeExtSource")]
         public StringValue? CryptographicProviderTypeExtSource
         {
             get => GetAttribute<StringValue>();
@@ -51785,7 +50671,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hash")]
         public Base64BinaryValue? Hash
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -51799,7 +50684,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:salt")]
         public Base64BinaryValue? Salt
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -51813,7 +50697,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:algorithmName")]
         public StringValue? AlgorithmName
         {
             get => GetAttribute<StringValue>();
@@ -51827,7 +50710,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hashValue")]
         public Base64BinaryValue? HashValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -51841,7 +50723,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:saltValue")]
         public Base64BinaryValue? SaltValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -51855,7 +50736,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:spinCount")]
         public Int32Value? SpinCount
         {
             get => GetAttribute<Int32Value>();
@@ -51916,7 +50796,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:view.</para>
     /// </summary>
-    [SchemaAttr("w:view")]
     public partial class View : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -51933,7 +50812,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues>>();
@@ -51960,7 +50838,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:zoom.</para>
     /// </summary>
-    [SchemaAttr("w:zoom")]
     public partial class Zoom : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -51977,7 +50854,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues>>();
@@ -51991,7 +50867,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:percent")]
         public StringValue? Percent
         {
             get => GetAttribute<StringValue>();
@@ -52029,7 +50904,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:activeWritingStyle.</para>
     /// </summary>
-    [SchemaAttr("w:activeWritingStyle")]
     public partial class ActiveWritingStyle : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -52046,7 +50920,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lang")]
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -52060,7 +50933,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:vendorID")]
         public UInt16Value? VendorID
         {
             get => GetAttribute<UInt16Value>();
@@ -52074,7 +50946,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:dllVersion")]
         public Int32Value? DllVersion
         {
             get => GetAttribute<Int32Value>();
@@ -52088,7 +50959,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:nlCheck")]
         public OnOffValue? NaturalLanguageGrammarCheck
         {
             get => GetAttribute<OnOffValue>();
@@ -52102,7 +50972,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:checkStyle")]
         public OnOffValue? CheckStyle
         {
             get => GetAttribute<OnOffValue>();
@@ -52116,7 +50985,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:appName")]
         public StringValue? ApplicationName
         {
             get => GetAttribute<StringValue>();
@@ -52162,7 +51030,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:proofState.</para>
     /// </summary>
-    [SchemaAttr("w:proofState")]
     public partial class ProofState : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -52179,7 +51046,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:spelling")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>? Spelling
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>();
@@ -52193,7 +51059,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:grammar")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>? Grammar
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>();
@@ -52218,7 +51083,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:stylePaneFormatFilter.</para>
     /// </summary>
-    [SchemaAttr("w:stylePaneFormatFilter")]
     public partial class StylePaneFormatFilter : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -52235,7 +51099,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -52249,7 +51112,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:allStyles")]
         public OnOffValue? AllStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -52263,7 +51125,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:customStyles")]
         public OnOffValue? CustomStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -52277,7 +51138,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:latentStyles")]
         public OnOffValue? LatentStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -52291,7 +51151,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:stylesInUse")]
         public OnOffValue? StylesInUse
         {
             get => GetAttribute<OnOffValue>();
@@ -52305,7 +51164,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:headingStyles")]
         public OnOffValue? HeadingStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -52319,7 +51177,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:numberingStyles")]
         public OnOffValue? NumberingStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -52333,7 +51190,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:tableStyles")]
         public OnOffValue? TableStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -52347,7 +51203,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:directFormattingOnRuns")]
         public OnOffValue? DirectFormattingOnRuns
         {
             get => GetAttribute<OnOffValue>();
@@ -52361,7 +51216,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:directFormattingOnParagraphs")]
         public OnOffValue? DirectFormattingOnParagraphs
         {
             get => GetAttribute<OnOffValue>();
@@ -52375,7 +51229,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:directFormattingOnNumbering")]
         public OnOffValue? DirectFormattingOnNumbering
         {
             get => GetAttribute<OnOffValue>();
@@ -52389,7 +51242,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:directFormattingOnTables")]
         public OnOffValue? DirectFormattingOnTables
         {
             get => GetAttribute<OnOffValue>();
@@ -52403,7 +51255,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:clearFormatting")]
         public OnOffValue? ClearFormatting
         {
             get => GetAttribute<OnOffValue>();
@@ -52417,7 +51268,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:top3HeadingStyles")]
         public OnOffValue? Top3HeadingStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -52431,7 +51281,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:visibleStyles")]
         public OnOffValue? VisibleStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -52445,7 +51294,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:alternateStyleNames")]
         public OnOffValue? AlternateStyleNames
         {
             get => GetAttribute<OnOffValue>();
@@ -52533,7 +51381,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:stylePaneSortMethod.</para>
     /// </summary>
-    [SchemaAttr("w:stylePaneSortMethod")]
     public partial class StylePaneSortMethods : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -52550,7 +51397,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -52579,7 +51425,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:documentType.</para>
     /// </summary>
-    [SchemaAttr("w:documentType")]
     public partial class DocumentType : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -52596,7 +51441,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues>>();
@@ -52644,7 +51488,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MailSubject" /> <c>&lt;w:mailSubject></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:mailMerge")]
     public partial class MailMerge : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -52936,7 +51779,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:revisionView.</para>
     /// </summary>
-    [SchemaAttr("w:revisionView")]
     public partial class RevisionView : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -52953,7 +51795,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:markup")]
         public OnOffValue? Markup
         {
             get => GetAttribute<OnOffValue>();
@@ -52967,7 +51808,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:comments")]
         public OnOffValue? Comments
         {
             get => GetAttribute<OnOffValue>();
@@ -52981,7 +51821,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:insDel")]
         public OnOffValue? DisplayRevision
         {
             get => GetAttribute<OnOffValue>();
@@ -52995,7 +51834,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:formatting")]
         public OnOffValue? Formatting
         {
             get => GetAttribute<OnOffValue>();
@@ -53009,7 +51847,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:inkAnnotations")]
         public OnOffValue? InkAnnotations
         {
             get => GetAttribute<OnOffValue>();
@@ -53037,7 +51874,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:documentProtection.</para>
     /// </summary>
-    [SchemaAttr("w:documentProtection")]
     public partial class DocumentProtection : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -53054,7 +51890,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:edit")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues>? Edit
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues>>();
@@ -53068,7 +51903,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:formatting")]
         public OnOffValue? Formatting
         {
             get => GetAttribute<OnOffValue>();
@@ -53082,7 +51916,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:enforcement")]
         public OnOffValue? Enforcement
         {
             get => GetAttribute<OnOffValue>();
@@ -53096,7 +51929,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptProviderType")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>? CryptographicProviderType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>();
@@ -53110,7 +51942,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptAlgorithmClass")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>? CryptographicAlgorithmClass
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>();
@@ -53124,7 +51955,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptAlgorithmType")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>? CryptographicAlgorithmType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>();
@@ -53138,7 +51968,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptAlgorithmSid")]
         public Int32Value? CryptographicAlgorithmSid
         {
             get => GetAttribute<Int32Value>();
@@ -53152,7 +51981,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptSpinCount")]
         public UInt32Value? CryptographicSpinCount
         {
             get => GetAttribute<UInt32Value>();
@@ -53166,7 +51994,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptProvider")]
         public StringValue? CryptographicProvider
         {
             get => GetAttribute<StringValue>();
@@ -53180,7 +52007,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:algIdExt")]
         public HexBinaryValue? AlgorithmIdExtensibility
         {
             get => GetAttribute<HexBinaryValue>();
@@ -53194,7 +52020,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:algIdExtSource")]
         public StringValue? AlgorithmIdExtensibilitySource
         {
             get => GetAttribute<StringValue>();
@@ -53208,7 +52033,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptProviderTypeExt")]
         public HexBinaryValue? CryptographicProviderTypeExtensibility
         {
             get => GetAttribute<HexBinaryValue>();
@@ -53222,7 +52046,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:cryptProviderTypeExtSource")]
         public StringValue? CryptographicProviderTypeExtSource
         {
             get => GetAttribute<StringValue>();
@@ -53236,7 +52059,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hash")]
         public Base64BinaryValue? Hash
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -53250,7 +52072,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:salt")]
         public Base64BinaryValue? Salt
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -53264,7 +52085,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:algorithmName")]
         public StringValue? AlgorithmName
         {
             get => GetAttribute<StringValue>();
@@ -53278,7 +52098,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hashValue")]
         public Base64BinaryValue? HashValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -53292,7 +52111,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:saltValue")]
         public Base64BinaryValue? SaltValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -53306,7 +52124,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:spinCount")]
         public Int32Value? SpinCount
         {
             get => GetAttribute<Int32Value>();
@@ -53370,7 +52187,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:defaultTabStop.</para>
     /// </summary>
-    [SchemaAttr("w:defaultTabStop")]
     public partial class DefaultTabStop : NonNegativeShortType
     {
         /// <summary>
@@ -53395,7 +52211,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bookFoldPrintingSheets.</para>
     /// </summary>
-    [SchemaAttr("w:bookFoldPrintingSheets")]
     public partial class BookFoldPrintingSheets : NonNegativeShortType
     {
         /// <summary>
@@ -53436,7 +52251,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public Int16Value? Val
         {
             get => GetAttribute<Int16Value>();
@@ -53460,7 +52274,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:consecutiveHyphenLimit.</para>
     /// </summary>
-    [SchemaAttr("w:consecutiveHyphenLimit")]
     public partial class ConsecutiveHyphenLimit : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -53477,7 +52290,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -53504,7 +52316,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:summaryLength.</para>
     /// </summary>
-    [SchemaAttr("w:summaryLength")]
     public partial class SummaryLength : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -53521,7 +52332,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -53549,7 +52359,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:displayHorizontalDrawingGridEvery.</para>
     /// </summary>
-    [SchemaAttr("w:displayHorizontalDrawingGridEvery")]
     public partial class DisplayHorizontalDrawingGrid : UnsignedInt7Type
     {
         /// <summary>
@@ -53574,7 +52383,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:displayVerticalDrawingGridEvery.</para>
     /// </summary>
-    [SchemaAttr("w:displayVerticalDrawingGridEvery")]
     public partial class DisplayVerticalDrawingGrid : UnsignedInt7Type
     {
         /// <summary>
@@ -53615,7 +52423,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -53639,7 +52446,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:characterSpacingControl.</para>
     /// </summary>
-    [SchemaAttr("w:characterSpacingControl")]
     public partial class CharacterSpacingControl : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -53656,7 +52462,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues>>();
@@ -53683,7 +52488,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noLineBreaksAfter.</para>
     /// </summary>
-    [SchemaAttr("w:noLineBreaksAfter")]
     public partial class NoLineBreaksAfterKinsoku : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -53700,7 +52504,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lang")]
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -53714,7 +52517,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -53747,7 +52549,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noLineBreaksBefore.</para>
     /// </summary>
-    [SchemaAttr("w:noLineBreaksBefore")]
     public partial class NoLineBreaksBeforeKinsoku : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -53764,7 +52565,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:lang")]
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -53778,7 +52578,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -53811,7 +52610,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:saveThroughXslt.</para>
     /// </summary>
-    [SchemaAttr("w:saveThroughXslt")]
     public partial class SaveThroughXslt : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -53828,7 +52626,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -53842,7 +52639,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:solutionID")]
         public StringValue? SolutionId
         {
             get => GetAttribute<StringValue>();
@@ -53875,7 +52671,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeLayout" /> <c>&lt;o:shapelayout></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:hdrShapeDefaults")]
     public partial class HeaderShapeDefaults : ShapeDefaultsType
     {
         /// <summary>
@@ -53936,7 +52731,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeLayout" /> <c>&lt;o:shapelayout></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:shapeDefaults")]
     public partial class ShapeDefaults : ShapeDefaultsType
     {
         /// <summary>
@@ -54053,7 +52847,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:footnotePr")]
     public partial class FootnoteDocumentWideProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -54189,7 +52982,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:endnotePr")]
     public partial class EndnoteDocumentWideProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -54386,7 +53178,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CachedColumnBalance" /> <c>&lt;w:cachedColBalance></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:compat")]
     public partial class Compatibility : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -55421,7 +54212,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocumentVariable" /> <c>&lt;w:docVar></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:docVars")]
     public partial class DocumentVariables : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -55482,7 +54272,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Rsid" /> <c>&lt;w:rsid></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:rsids")]
     public partial class Rsids : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -55551,7 +54340,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:clrSchemeMapping.</para>
     /// </summary>
-    [SchemaAttr("w:clrSchemeMapping")]
     public partial class ColorSchemeMapping : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -55568,7 +54356,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:bg1")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Background1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -55582,7 +54369,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:t1")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Text1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -55596,7 +54382,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:bg2")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Background2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -55610,7 +54395,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:t2")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Text2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -55624,7 +54408,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:accent1")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -55638,7 +54421,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:accent2")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -55652,7 +54434,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:accent3")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent3
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -55666,7 +54447,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:accent4")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent4
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -55680,7 +54460,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:accent5")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent5
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -55694,7 +54473,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:accent6")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent6
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -55708,7 +54486,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:hyperlink")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Hyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -55722,7 +54499,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:followedHyperlink")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? FollowedHyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -55764,7 +54540,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Caption" /> <c>&lt;w:caption></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:captions")]
     public partial class Captions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -55820,7 +54595,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:readModeInkLockDown.</para>
     /// </summary>
-    [SchemaAttr("w:readModeInkLockDown")]
     public partial class ReadModeInkLockDown : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -55837,7 +54611,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:actualPg")]
         public OnOffValue? UseActualPages
         {
             get => GetAttribute<OnOffValue>();
@@ -55851,7 +54624,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:w")]
         public UInt32Value? Width
         {
             get => GetAttribute<UInt32Value>();
@@ -55865,7 +54637,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:h")]
         public UInt32Value? Height
         {
             get => GetAttribute<UInt32Value>();
@@ -55879,7 +54650,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:fontSz")]
         public StringValue? FontSize
         {
             get => GetAttribute<StringValue>();
@@ -55926,7 +54696,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:targetScreenSz.</para>
     /// </summary>
-    [SchemaAttr("w:targetScreenSz")]
     public partial class TargetScreenSize : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -55943,7 +54712,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues>>();
@@ -55984,7 +54752,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shapetype" /> <c>&lt;v:shapetype></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:pict")]
     public partial class PictureBulletBase : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -56060,7 +54827,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:panose1.</para>
     /// </summary>
-    [SchemaAttr("w:panose1")]
     public partial class Panose1Number : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -56077,7 +54843,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -56105,7 +54870,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:charset.</para>
     /// </summary>
-    [SchemaAttr("w:charset")]
     public partial class FontCharSet : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -56122,7 +54886,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -56136,7 +54899,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:characterSet")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet>? StrictCharacterSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet>>();
@@ -56164,7 +54926,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:family.</para>
     /// </summary>
-    [SchemaAttr("w:family")]
     public partial class FontFamily : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -56181,7 +54942,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues>>();
@@ -56208,7 +54968,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pitch.</para>
     /// </summary>
-    [SchemaAttr("w:pitch")]
     public partial class Pitch : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -56225,7 +54984,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:val")]
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues>>();
@@ -56252,7 +55010,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sig.</para>
     /// </summary>
-    [SchemaAttr("w:sig")]
     public partial class FontSignature : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -56269,7 +55026,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:usb0")]
         public HexBinaryValue? UnicodeSignature0
         {
             get => GetAttribute<HexBinaryValue>();
@@ -56283,7 +55039,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:usb1")]
         public HexBinaryValue? UnicodeSignature1
         {
             get => GetAttribute<HexBinaryValue>();
@@ -56297,7 +55052,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:usb2")]
         public HexBinaryValue? UnicodeSignature2
         {
             get => GetAttribute<HexBinaryValue>();
@@ -56311,7 +55065,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:usb3")]
         public HexBinaryValue? UnicodeSignature3
         {
             get => GetAttribute<HexBinaryValue>();
@@ -56325,7 +55078,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:csb0")]
         public HexBinaryValue? CodePageSignature0
         {
             get => GetAttribute<HexBinaryValue>();
@@ -56339,7 +55091,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:csb1")]
         public HexBinaryValue? CodePageSignature1
         {
             get => GetAttribute<HexBinaryValue>();
@@ -56394,7 +55145,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:embedRegular.</para>
     /// </summary>
-    [SchemaAttr("w:embedRegular")]
     public partial class EmbedRegularFont : FontRelationshipType
     {
         /// <summary>
@@ -56421,7 +55171,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:embedBold.</para>
     /// </summary>
-    [SchemaAttr("w:embedBold")]
     public partial class EmbedBoldFont : FontRelationshipType
     {
         /// <summary>
@@ -56447,7 +55196,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:embedItalic.</para>
     /// </summary>
-    [SchemaAttr("w:embedItalic")]
     public partial class EmbedItalicFont : FontRelationshipType
     {
         /// <summary>
@@ -56473,7 +55221,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:embedBoldItalic.</para>
     /// </summary>
-    [SchemaAttr("w:embedBoldItalic")]
     public partial class EmbedBoldItalicFont : FontRelationshipType
     {
         /// <summary>
@@ -56515,7 +55262,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:fontKey")]
         public StringValue? FontKey
         {
             get => GetAttribute<StringValue>();
@@ -56529,7 +55275,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:subsetted")]
         public OnOffValue? Subsetted
         {
             get => GetAttribute<OnOffValue>();
@@ -56543,7 +55288,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -56578,7 +55322,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Level" /> <c>&lt;w:lvl></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("w:lvlOverride")]
     public partial class LevelOverride : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -56619,7 +55362,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr("w:ilvl")]
         public Int32Value? LevelIndex
         {
             get => GetAttribute<Int32Value>();

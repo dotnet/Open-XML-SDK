@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -33,7 +31,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView" /> <c>&lt;xnsv:namedSheetView></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xnsv:namedSheetViews")]
     public partial class NamedSheetViews : TypedOpenXmlPartRootElement
     {
         /// <summary>
@@ -128,7 +125,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter" /> <c>&lt;xnsv:nsvFilter></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xnsv:namedSheetView")]
     public partial class NamedSheetView : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -166,7 +162,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>name, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr("name")]
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -177,7 +172,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -223,7 +217,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xnsv:extLst")]
     public partial class ExtensionList : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -292,7 +285,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules" /> <c>&lt;xnsv:sortRules></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xnsv:nsvFilter")]
     public partial class NsvFilter : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -330,7 +322,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>filterId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: filterId</para>
         /// </summary>
-        [SchemaAttr("filterId")]
         public StringValue? FilterId
         {
             get => GetAttribute<StringValue>();
@@ -341,7 +332,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>ref, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Ref
         {
             get => GetAttribute<StringValue>();
@@ -352,7 +342,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>tableId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: tableId</para>
         /// </summary>
-        [SchemaAttr("tableId")]
         public UInt32Value? TableId
         {
             get => GetAttribute<UInt32Value>();
@@ -400,7 +389,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn" /> <c>&lt;xnsv:filter></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xnsv:columnFilter")]
     public partial class ColumnFilter : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -438,7 +426,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>colId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: colId</para>
         /// </summary>
-        [SchemaAttr("colId")]
         public UInt32Value? ColId
         {
             get => GetAttribute<UInt32Value>();
@@ -449,7 +436,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -510,7 +496,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule" /> <c>&lt;xnsv:sortRule></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xnsv:sortRules")]
     public partial class SortRules : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -548,7 +533,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>sortMethod, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: sortMethod</para>
         /// </summary>
-        [SchemaAttr("sortMethod")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortMethodValues>? SortMethod
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortMethodValues>>();
@@ -559,7 +543,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>caseSensitive, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: caseSensitive</para>
         /// </summary>
-        [SchemaAttr("caseSensitive")]
         public BooleanValue? CaseSensitive
         {
             get => GetAttribute<BooleanValue>();
@@ -604,7 +587,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xnsv:dxf")]
     public partial class DifferentialFormatType : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -776,7 +758,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xnsv:filter")]
     public partial class FilterColumn : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -814,7 +795,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>Filter Column Data</para>
         /// <para>Represents the following attribute in the schema: colId</para>
         /// </summary>
-        [SchemaAttr("colId")]
         public UInt32Value? ColumnId
         {
             get => GetAttribute<UInt32Value>();
@@ -825,7 +805,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>Hidden AutoFilter Button</para>
         /// <para>Represents the following attribute in the schema: hiddenButton</para>
         /// </summary>
-        [SchemaAttr("hiddenButton")]
         public BooleanValue? HiddenButton
         {
             get => GetAttribute<BooleanValue>();
@@ -836,7 +815,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>Show Filter Button</para>
         /// <para>Represents the following attribute in the schema: showButton</para>
         /// </summary>
-        [SchemaAttr("showButton")]
         public BooleanValue? ShowButton
         {
             get => GetAttribute<BooleanValue>();
@@ -1012,7 +990,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.RichSortCondition" /> <c>&lt;xnsv:richSortCondition></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xnsv:sortRule")]
     public partial class SortRule : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -1050,7 +1027,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>colId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: colId</para>
         /// </summary>
-        [SchemaAttr("colId")]
         public UInt32Value? ColId
         {
             get => GetAttribute<UInt32Value>();
@@ -1061,7 +1037,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr("id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1118,7 +1093,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xnsv:sortCondition.</para>
     /// </summary>
-    [SchemaAttr("xnsv:sortCondition")]
     public partial class SortCondition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1132,7 +1106,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>descending, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: descending</para>
         /// </summary>
-        [SchemaAttr("descending")]
         public BooleanValue? Descending
         {
             get => GetAttribute<BooleanValue>();
@@ -1143,7 +1116,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>sortBy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
-        [SchemaAttr("sortBy")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>? SortBy
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
@@ -1154,7 +1126,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>ref, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
@@ -1165,7 +1136,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>customList, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: customList</para>
         /// </summary>
-        [SchemaAttr("customList")]
         public StringValue? CustomList
         {
             get => GetAttribute<StringValue>();
@@ -1176,7 +1146,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>dxfId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        [SchemaAttr("dxfId")]
         public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
@@ -1187,7 +1156,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>iconSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        [SchemaAttr("iconSet")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
@@ -1198,7 +1166,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>iconId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
-        [SchemaAttr("iconId")]
         public UInt32Value? IconId
         {
             get => GetAttribute<UInt32Value>();
@@ -1232,7 +1199,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xnsv:richSortCondition.</para>
     /// </summary>
-    [SchemaAttr("xnsv:richSortCondition")]
     public partial class RichSortCondition : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -1246,7 +1212,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>richSortKey, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: richSortKey</para>
         /// </summary>
-        [SchemaAttr("richSortKey")]
         public StringValue? RichSortKey
         {
             get => GetAttribute<StringValue>();
@@ -1257,7 +1222,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>descending, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: descending</para>
         /// </summary>
-        [SchemaAttr("descending")]
         public BooleanValue? Descending
         {
             get => GetAttribute<BooleanValue>();
@@ -1268,7 +1232,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>sortBy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
-        [SchemaAttr("sortBy")]
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>? SortBy
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
@@ -1279,7 +1242,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>ref, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr("ref")]
         public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
@@ -1290,7 +1252,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>customList, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: customList</para>
         /// </summary>
-        [SchemaAttr("customList")]
         public StringValue? CustomList
         {
             get => GetAttribute<StringValue>();
@@ -1301,7 +1262,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>dxfId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        [SchemaAttr("dxfId")]
         public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
@@ -1312,7 +1272,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>iconSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        [SchemaAttr("iconSet")]
         public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
@@ -1323,7 +1282,6 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <para>iconId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
-        [SchemaAttr("iconId")]
         public UInt32Value? IconId
         {
             get => GetAttribute<UInt32Value>();

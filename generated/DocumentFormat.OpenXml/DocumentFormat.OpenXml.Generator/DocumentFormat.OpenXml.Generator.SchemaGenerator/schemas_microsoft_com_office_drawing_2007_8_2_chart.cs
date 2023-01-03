@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -34,7 +32,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible" /> <c>&lt;c14:dropZonesVisible></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c14:pivotOptions")]
     public partial class PivotOptions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -169,7 +166,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton" /> <c>&lt;c14:showSketchBtn></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c14:sketchOptions")]
     public partial class SketchOptions : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -258,7 +254,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties" /> <c>&lt;c14:spPr></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c14:invertSolidFillFmt")]
     public partial class InvertSolidFillFormat : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -326,7 +321,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:style.</para>
     /// </summary>
-    [SchemaAttr("c14:style")]
     public partial class Style : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -340,7 +334,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
@@ -389,7 +382,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c14:spPr")]
     public partial class ShapeProperties : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -427,7 +419,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [SchemaAttr("bwMode")]
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -519,7 +510,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneFilter.</para>
     /// </summary>
-    [SchemaAttr("c14:dropZoneFilter")]
     public partial class DropZoneFilter : BooleanFalseType
     {
         /// <summary>
@@ -545,7 +535,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneCategories.</para>
     /// </summary>
-    [SchemaAttr("c14:dropZoneCategories")]
     public partial class DropZoneCategories : BooleanFalseType
     {
         /// <summary>
@@ -571,7 +560,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneData.</para>
     /// </summary>
-    [SchemaAttr("c14:dropZoneData")]
     public partial class DropZoneData : BooleanFalseType
     {
         /// <summary>
@@ -597,7 +585,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneSeries.</para>
     /// </summary>
-    [SchemaAttr("c14:dropZoneSeries")]
     public partial class DropZoneSeries : BooleanFalseType
     {
         /// <summary>
@@ -623,7 +610,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZonesVisible.</para>
     /// </summary>
-    [SchemaAttr("c14:dropZonesVisible")]
     public partial class DropZonesVisible : BooleanFalseType
     {
         /// <summary>
@@ -649,7 +635,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:inSketchMode.</para>
     /// </summary>
-    [SchemaAttr("c14:inSketchMode")]
     public partial class InSketchMode : BooleanFalseType
     {
         /// <summary>
@@ -688,7 +673,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
@@ -708,7 +692,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:showSketchBtn.</para>
     /// </summary>
-    [SchemaAttr("c14:showSketchBtn")]
     public partial class ShowSketchButton : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -722,7 +705,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr("val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();

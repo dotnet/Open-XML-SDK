@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -30,7 +28,6 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl" /> <c>&lt;xxl21:relativeUrl></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("xxl21:alternateUrls")]
     public partial class ExternalBookAlternateUrls : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -68,7 +65,6 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         /// <para>driveId, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: driveId</para>
         /// </summary>
-        [SchemaAttr("driveId")]
         public StringValue? DriveId
         {
             get => GetAttribute<StringValue>();
@@ -79,7 +75,6 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         /// <para>itemId, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: itemId</para>
         /// </summary>
-        [SchemaAttr("itemId")]
         public StringValue? ItemId
         {
             get => GetAttribute<StringValue>();
@@ -138,7 +133,6 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxl21:absoluteUrl.</para>
     /// </summary>
-    [SchemaAttr("xxl21:absoluteUrl")]
     public partial class AbsoluteUrlAlternateUrl : OpenXmlAlternateUrlElement
     {
         /// <summary>
@@ -164,7 +158,6 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxl21:relativeUrl.</para>
     /// </summary>
-    [SchemaAttr("xxl21:relativeUrl")]
     public partial class RelativeUrlAlternateUrl : OpenXmlAlternateUrlElement
     {
         /// <summary>
@@ -206,7 +199,6 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr("r:id")]
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();

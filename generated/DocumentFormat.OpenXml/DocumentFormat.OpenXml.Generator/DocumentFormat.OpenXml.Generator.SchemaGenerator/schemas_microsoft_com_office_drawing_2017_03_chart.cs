@@ -5,8 +5,6 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -29,7 +27,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse" /> <c>&lt;c16r3:dispNaAsBlank></c></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr("c16r3:dataDisplayOptions16")]
     public partial class DataDisplayOptions16 : TypedOpenXmlCompositeElement
     {
         /// <summary>
@@ -97,7 +94,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16r3:dispNaAsBlank.</para>
     /// </summary>
-    [SchemaAttr("c16r3:dispNaAsBlank")]
     public partial class BooleanFalse : TypedOpenXmlLeafElement
     {
         /// <summary>
@@ -114,7 +110,6 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         /// <remark>
         /// xmlns:c16r3=http://schemas.microsoft.com/office/drawing/2017/03/chart
         /// </remark>
-        [SchemaAttr("c16r3:val")]
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
