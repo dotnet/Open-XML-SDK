@@ -175,7 +175,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = AlternativeFormatImportPartTypeInfo.GetContentType(partType);
             var partExtension = AlternativeFormatImportPartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddAlternativeFormatImportPart(contentType, id);
         }
 
@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = AlternativeFormatImportPartTypeInfo.GetContentType(partType);
             var partExtension = AlternativeFormatImportPartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddAlternativeFormatImportPart(contentType);
         }
 
@@ -227,7 +227,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = EmbeddedControlPersistencePartTypeInfo.GetContentType(partType);
             var partExtension = EmbeddedControlPersistencePartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddEmbeddedControlPersistencePart(contentType, id);
         }
 
@@ -240,7 +240,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = EmbeddedControlPersistencePartTypeInfo.GetContentType(partType);
             var partExtension = EmbeddedControlPersistencePartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddEmbeddedControlPersistencePart(contentType);
         }
 
@@ -303,7 +303,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = ImagePartTypeInfo.GetContentType(partType);
             var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddImagePart(contentType, id);
         }
 
@@ -316,7 +316,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = ImagePartTypeInfo.GetContentType(partType);
             var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddImagePart(contentType);
         }
 

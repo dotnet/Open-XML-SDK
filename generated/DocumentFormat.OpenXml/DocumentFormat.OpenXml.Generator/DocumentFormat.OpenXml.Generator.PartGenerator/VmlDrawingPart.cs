@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = ImagePartTypeInfo.GetContentType(partType);
             var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddImagePart(contentType, id);
         }
 
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = ImagePartTypeInfo.GetContentType(partType);
             var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddImagePart(contentType);
         }
         

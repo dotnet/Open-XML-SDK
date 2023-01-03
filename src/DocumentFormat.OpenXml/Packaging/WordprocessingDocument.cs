@@ -392,7 +392,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             string contentType = ThumbnailPartTypeInfo.GetContentType(partType);
             string partExtension = ThumbnailPartTypeInfo.GetTargetExtension(partType);
-            PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            PartExtensions.Register(contentType, partExtension);
 
             return AddThumbnailPart(contentType);
         }

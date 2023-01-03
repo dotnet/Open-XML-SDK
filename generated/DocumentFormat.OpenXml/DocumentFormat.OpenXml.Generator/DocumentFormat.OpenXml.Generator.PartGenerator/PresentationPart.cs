@@ -186,7 +186,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
             var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddCustomXmlPart(contentType, id);
         }
 
@@ -199,7 +199,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
             var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddCustomXmlPart(contentType);
         }
 
@@ -238,7 +238,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = FontPartTypeInfo.GetContentType(partType);
             var partExtension = FontPartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddFontPart(contentType, id);
         }
 
@@ -251,7 +251,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = FontPartTypeInfo.GetContentType(partType);
             var partExtension = FontPartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddFontPart(contentType);
         }
         

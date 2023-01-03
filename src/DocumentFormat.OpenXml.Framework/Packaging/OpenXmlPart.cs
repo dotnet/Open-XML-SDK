@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             Uri parentUri = parent is not null ? parent.Uri : new Uri("/", UriKind.Relative);
 
-            var targets = GetAndVerifyTargetFeature(_openXmlPackage, contentType, targetExt);
+            var targets = GetAndVerifyTargetFeature(contentType, targetExt);
             var uri = Features.GetRequired<IPartUriFeature>().CreatePartUri(contentType, parentUri, targets.Path, targets.Name, targets.Extension);
 
             CreatePart(_openXmlPackage, uri, contentType);
@@ -128,13 +128,15 @@ namespace DocumentFormat.OpenXml.Packaging
             _openXmlPackage = openXmlPackage ?? throw new InvalidOperationException();
         }
 
-        private ITargetFeature GetAndVerifyTargetFeature(OpenXmlPackage openXmlPackage, string contentType, string? targetExt)
+        private ITargetFeature GetAndVerifyTargetFeature(string contentType, string? targetExt)
         {
             var targets = Features.GetRequired<ITargetFeature>();
 
             if (!IsContentTypeFixed)
             {
-                if (!openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out var found))
+                var extensions = Features.GetRequired<IPartExtensionFeature>();
+
+                if (!extensions.TryGetExtension(contentType, out var found))
                 {
                     targetExt = found;
                 }

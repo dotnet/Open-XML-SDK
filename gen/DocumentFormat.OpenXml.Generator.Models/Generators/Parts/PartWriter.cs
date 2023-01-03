@@ -644,7 +644,7 @@ public static class PartWriter
 
                 writer.WriteLine(");");
 
-                writer.WriteLine("OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);");
+                writer.WriteLine("Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);");
                 writer.Write($"return Add{p.Name}({ContentTypeParameterName}");
 
                 if (hasId)

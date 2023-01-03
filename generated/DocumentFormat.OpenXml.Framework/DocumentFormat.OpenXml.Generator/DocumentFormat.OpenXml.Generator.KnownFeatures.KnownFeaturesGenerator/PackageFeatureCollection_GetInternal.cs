@@ -13,6 +13,7 @@ public partial class OpenXmlPackage
     {
         private global::DocumentFormat.OpenXml.Features.IPartUriFeature? _CreatePartUri;
         private global::DocumentFormat.OpenXml.Features.AnnotationsFeature? _AnnotationsFeature;
+        private global::DocumentFormat.OpenXml.Features.IPartExtensionFeature? _PartExtensionProvider;
 
         private partial T? GetInternal<T>()
         {
@@ -34,6 +35,16 @@ public partial class OpenXmlPackage
                 }
 
                 return (T)(object)_AnnotationsFeature;
+            }
+
+            if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IPartExtensionFeature))
+            {
+                if (_PartExtensionProvider is null)
+                {
+                    _PartExtensionProvider = new global::DocumentFormat.OpenXml.Packaging.PartExtensionProvider();
+                }
+
+                return (T)_PartExtensionProvider;
             }
 
             return default;
