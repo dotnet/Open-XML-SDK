@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [3.0.0]
 
 ### Breaking change
+- Renamed PartExtensionProvider to IPartExtensionFeature and reduced its surface area to only two methods (instead of a full Dictionary<,>). The property to access this off of OpenXmlPackage has been removed, but may be accessed via `Features.Get<IPartExtensionFeature>()` if needed.
 - Removed unused `SchemaAttrAttribute`
 - Removed unused `ChildElementInfoAttribute`
 - Removed `OpenXmlSimpleType.TextValue`. This property was never meant to be used externally
