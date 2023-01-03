@@ -1794,10 +1794,17 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="loadedParts">Temp collection to detect loaded (shared) parts.</param>
         internal void LoadReferencedPartsAndRelationships(OpenXmlPackage openXmlPackage, OpenXmlPart? sourcePart, RelationshipCollection relationshipCollection, Dictionary<Uri, OpenXmlPart> loadedParts)
         {
-            foreach (var relationship in relationshipCollection)
+            List<string> partsToIgnore = new()
             {
                 // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1205
-                if (relationship.RelationshipType == @"http://schemas.microsoft.com/office/2006/relationships/recovered")
+                @"http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain",
+
+                // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1205
+                @"http://schemas.microsoft.com/office/2006/relationships/recovered",
+            };
+            foreach (var relationship in relationshipCollection)
+            {
+                if (partsToIgnore.Contains(relationship.RelationshipType))
                 {
                     continue;
                 }
