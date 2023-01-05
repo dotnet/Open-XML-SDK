@@ -10,9 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public class OpenSettings
     {
-        private bool? _autoSave;
         private MarkupCompatibilityProcessSettings? _mcSettings;
-        private bool? _ignoreExceptionsOnCalcChainPartMissing;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenSettings"/> class.
@@ -40,11 +38,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets or sets a value indicating whether to auto save document modifications.
         /// The default value is true.
         /// </summary>
-        public bool AutoSave
-        {
-            get => _autoSave ?? true;
-            set => _autoSave = value;
-        }
+        public bool AutoSave { get; set; } = true;
 
         /// <summary>
         /// Gets or sets the value of the markup compatibility processing mode.
@@ -53,10 +47,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (_mcSettings is null)
-                {
-                    _mcSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007);
-                }
+                _mcSettings ??= new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007);
 
                 return _mcSettings;
             }
@@ -84,10 +75,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets or sets a value indicating whether to ignore an exception if the calcChain part is missing.
         /// The default value is false which means missing calcChain part will throw an exception upon package open.
         /// </summary>
-        public bool IgnoreExceptionOnCalcChainPartMissing
-        {
-            get => _ignoreExceptionsOnCalcChainPartMissing ?? false;
-            set => _ignoreExceptionsOnCalcChainPartMissing = value;
-        }
+        public bool IgnoreExceptionOnCalcChainPartMissing { get; set; }
     }
 }
