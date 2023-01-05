@@ -12,6 +12,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         private bool? _autoSave;
         private MarkupCompatibilityProcessSettings? _mcSettings;
+        private bool? _ignoreExceptionsOnCalcChainPartMissing;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenSettings"/> class.
@@ -32,6 +33,7 @@ namespace DocumentFormat.OpenXml.Packaging
             MarkupCompatibilityProcessSettings.TargetFileFormatVersions = other.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
             MaxCharactersInPart = other.MaxCharactersInPart;
             RelationshipErrorHandlerFactory = other.RelationshipErrorHandlerFactory;
+            IgnoreExceptionOnCalcChainPartMissing = other.IgnoreExceptionOnCalcChainPartMissing;
         }
 
         /// <summary>
@@ -77,5 +79,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets or sets a delegate that is used to create a handler to rewrite relationships that are malformed. On platforms after .NET 4.5, <see cref="Uri"/> parsing will fail on malformed strings.
         /// </summary>
         public Func<OpenXmlPackage, RelationshipErrorHandler>? RelationshipErrorHandlerFactory { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether to ignore an exception if the calcChain part is missing.
+        /// The default value is false which means missing calcChain part will throw an exception upon package open.
+        /// </summary>
+        public bool IgnoreExceptionOnCalcChainPartMissing
+        {
+            get => _ignoreExceptionsOnCalcChainPartMissing ?? false;
+            set => _ignoreExceptionsOnCalcChainPartMissing = value;
+        }
     }
 }
