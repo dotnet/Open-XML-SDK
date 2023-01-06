@@ -2,7 +2,9 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
+using NSubstitute.ExceptionExtensions;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,6 +14,7 @@ using Xunit;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 
+using Run = DocumentFormat.OpenXml.Wordprocessing.Run;
 using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
 
 namespace DocumentFormat.OpenXml.Packaging.Tests
@@ -300,6 +303,32 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Model3DReferenceRelationshipPart model3DReferenceRelationshipPart = model3DReferenceRelationshipParts.FirstOrDefault();
 
             Assert.Equal("model/gltf-binary", model3DReferenceRelationshipPart.ContentType);
+        }
+
+        // Test issue #1281 for regressions.
+        // When opening a workbook (SpreadsheetDocument.Open) with a missing calcChain part and default OpenSettings
+        // specified, we should throw an exception.
+        [Fact]
+        public void OpenWithMissingCalcChainPart()
+        {
+            Stream stmSpd = GetStream(TestFiles.MissingCalcChainPart, false);
+            Action act = () => SpreadsheetDocument.Open(stmSpd, false);
+            InvalidOperationException exception = Assert.Throws<InvalidOperationException>(act);
+
+            Assert.Equal("Specified part does not exist in the package.", exception.Message);
+
+            try
+            {
+                SpreadsheetDocument spd = SpreadsheetDocument.Open(stmSpd, false, new OpenSettings() { IgnoreExceptionOnCalcChainPartMissing = true });
+
+                Assert.NotNull(spd);
+
+                spd.Close();
+            }
+            catch (InvalidOperationException ex)
+            {
+                Assert.NotEqual("Specified part does not exist in the package.", ex.Message);
+            }
         }
     }
 }
