@@ -743,7 +743,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(reachableParts));
             }
 
-            foreach (OpenXmlPart part in ChildrenRelationshipParts.Values)
+            foreach (OpenXmlPart part in ChildrenRelationshipParts.Parts)
             {
                 if (!reachableParts.ContainsKey(part))
                 {
@@ -1252,7 +1252,10 @@ namespace DocumentFormat.OpenXml.Packaging
             [KnownFeature(typeof(IPartUriFeature), Factory = nameof(CreatePartUri))]
             [KnownFeature(typeof(AnnotationsFeature))]
             [KnownFeature(typeof(IPartExtensionFeature), typeof(PartExtensionProvider))]
+            [KnownFeature(typeof(IChildPartFeatures), Factory = nameof(CreateChildParts))]
             private partial T? GetInternal<T>();
+
+            private IChildPartFeatures CreateChildParts() => new PartDictionary(this);
 
             private IPartUriFeature CreatePartUri() => new PackagePartUriHelper(this);
 

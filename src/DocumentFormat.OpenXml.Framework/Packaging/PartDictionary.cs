@@ -3,19 +3,20 @@
 
 using DocumentFormat.OpenXml.Features;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-    internal class PartDictionary
+    internal class PartDictionary : IChildPartFeatures
     {
         private object? _holder;
         private Dictionary<string, OpenXmlPart>? _parts;
 
-        public PartDictionary(OpenXmlPartContainer container)
+        public PartDictionary(IFeatureCollection features)
         {
-            _holder = container;
+            _holder = features;
         }
 
         private IPartEventsFeature? Events
@@ -26,9 +27,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     return events;
                 }
-                else if (_holder is OpenXmlPartContainer container)
+                else if (_holder is IFeatureCollection features)
                 {
-                    var feature = container.Features.Get<IPartEventsFeature>();
+                    var feature = features.Get<IPartEventsFeature>();
                     _holder = feature;
                     return feature;
                 }
@@ -37,13 +38,13 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        public Dictionary<string, OpenXmlPart>.ValueCollection Values => Parts.Values;
+        public IEnumerable<OpenXmlPart> Parts => InternalParts.Values;
 
         public void Add(string uri, OpenXmlPart part)
         {
             Events?.OnChange(part, EventType.Creating);
 
-            Parts.Add(uri, part);
+            InternalParts.Add(uri, part);
 
             Events?.OnChange(part, EventType.Created);
         }
@@ -81,11 +82,11 @@ namespace DocumentFormat.OpenXml.Packaging
 
         public int Count => _parts is null ? 0 : _parts.Count;
 
-        public bool ContainsValue(OpenXmlPart part) => _parts is null ? false : _parts.ContainsValue(part);
+        public bool Contains(OpenXmlPart part) => _parts is null ? false : _parts.ContainsValue(part);
 
-        public bool ContainsKey(string uri) => _parts is null ? false : _parts.ContainsKey(uri);
+        public bool Contains(string uri) => _parts is null ? false : _parts.ContainsKey(uri);
 
-        public bool TryGetValue(string uri, [MaybeNullWhen(false)] out OpenXmlPart part)
+        public bool TryGetPart(string uri, [MaybeNullWhen(false)] out OpenXmlPart part)
         {
             if (_parts is null)
             {
@@ -96,7 +97,7 @@ namespace DocumentFormat.OpenXml.Packaging
             return _parts.TryGetValue(uri, out part);
         }
 
-        private Dictionary<string, OpenXmlPart> Parts
+        private Dictionary<string, OpenXmlPart> InternalParts
         {
             get
             {
@@ -109,7 +110,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        public Dictionary<string, OpenXmlPart>.Enumerator GetEnumerator() => Parts.GetEnumerator();
+        public IEnumerator<KeyValuePair<string, OpenXmlPart>> GetEnumerator() => InternalParts.GetEnumerator();
 
         public void Remove(string uri)
         {
@@ -125,5 +126,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 Events?.OnChange(part, EventType.Removed);
             }
         }
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

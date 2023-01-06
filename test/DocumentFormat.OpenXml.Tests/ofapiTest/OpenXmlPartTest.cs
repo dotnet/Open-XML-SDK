@@ -219,8 +219,8 @@ namespace DocumentFormat.OpenXml.Tests
                     mainDocPart.ChangeIdOfPart(headerPart, "rId1");
 
                     Assert.Equal(2, mainDocPart.ChildrenRelationshipParts.Count);
-                    Assert.False(mainDocPart.ChildrenRelationshipParts.ContainsKey("rId2"));
-                    Assert.True(mainDocPart.ChildrenRelationshipParts.ContainsKey("rId3"));
+                    Assert.False(mainDocPart.ChildrenRelationshipParts.Contains("rId2"));
+                    Assert.True(mainDocPart.ChildrenRelationshipParts.Contains("rId3"));
 
                     var rId = mainDocPart.GetIdOfPart(mainDocPart.WordprocessingCommentsPart);
                     Assert.Equal("rId3", rId);
