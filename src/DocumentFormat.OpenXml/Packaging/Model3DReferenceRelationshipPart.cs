@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
     public partial class Model3DReferenceRelationshipPart
     {
         /// <inheritdoc/>
-        private protected override bool IsValidContentType(PackagePart part)
+        private protected override bool IsValidContentType(IPackagePart part)
         {
             if (base.IsValidContentType(part))
             {

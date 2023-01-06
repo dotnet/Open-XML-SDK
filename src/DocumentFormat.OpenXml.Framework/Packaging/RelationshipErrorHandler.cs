@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        internal void Handle(Package package)
+        internal void Handle(IPackage package)
         {
             if (package is null)
             {
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        private XDocument? WalkRelationships(PackagePart part)
+        private XDocument? WalkRelationships(IPackagePart part)
         {
             using var stream = part.GetStream(FileMode.Open, FileAccess.Read);
             using var reader = new StreamReader(stream);
@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Packaging
             return changed ? doc : null;
         }
 
-        private bool ValidateLink(PackagePart part, XElement child)
+        private bool ValidateLink(IPackagePart part, XElement child)
         {
             if (!EnumHelper.TryParse<TargetMode>(child.Attribute(TargetModeAttributeName)?.Value, out var targetMode))
             {

@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml.Tests
                         secondClone.MainDocumentPart.Document.Body
                             .GetFirstChild<Paragraph>()
                             .InsertBeforeSelf(new Paragraph(new Run(new Text("Changes."))));
-                        secondClone.Package.Flush();
+                        secondClone.Package.Save();
 
                         // Change the main document part.
                         clone.MainDocumentPart.Document.Body
@@ -169,13 +169,13 @@ namespace DocumentFormat.OpenXml.Tests
                         }
 
                         // Flush the clone (the removal of which fixed the original error).
-                        clone.Package.Flush();
+                        clone.Package.Save();
 
                         var thirdClone = (WordprocessingDocument)clone.Clone();
                         thirdClone.MainDocumentPart.Document.Body
                             .GetFirstChild<Paragraph>()
                             .InsertBeforeSelf(new Paragraph(new Run(new Text("Changes."))));
-                        thirdClone.Package.Flush();
+                        thirdClone.Package.Save();
 
                         using (var tempFile = TemporaryFile.Create())
                         {

@@ -9,9 +9,9 @@ namespace DocumentFormat.OpenXml.Packaging
     internal sealed class PackagePartUriHelper : IPartUriFeature
     {
         private readonly PartUriHelper _other;
-        private readonly IContainerFeature<OpenXmlPackage> _package;
+        private readonly IPackage _package;
 
-        public PackagePartUriHelper(IContainerFeature<OpenXmlPackage> package)
+        public PackagePartUriHelper(IPackage package)
         {
             _other = new PartUriHelper();
             _package = package;
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 partUri = _other.CreatePartUri(contentType, parentUri, targetPath, targetName, targetExt, forceUnique);
             }
-            while (_package.Value.Package.PartExists(partUri));
+            while (_package.PartExists(partUri));
 
             return partUri;
         }
@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 partUri = _other.EnsureUniquePartUri(contentType, parentUri, targetUri);
             }
-            while (_package.Value.Package.PartExists(partUri));
+            while (_package.PartExists(partUri));
 
             return partUri;
         }

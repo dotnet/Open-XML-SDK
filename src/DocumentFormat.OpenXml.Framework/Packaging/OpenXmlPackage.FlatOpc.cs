@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -57,14 +58,16 @@ namespace DocumentFormat.OpenXml.Packaging
             // to call it here.
             Save();
 
+            var package = Features.GetRequired<IPackageFeature>().Package;
+
             // Identify all AlternativeFormatInputParts (AltChunk parts).
             // This is necessary because AltChunk parts must be treated as binary
             // parts regardless of the actual content type, which might even be
             // XML-related such as application/xhtml+xml.
             var altChunkPartUris = new HashSet<Uri>(
-                Package.GetParts()
+                package.GetParts()
                     .Where(part => part.ContentType != RelationshipContentType)
-                    .SelectMany(part => part.GetRelationshipsByType(AltChunkRelationshipType))
+                    .SelectMany(part => part.GetRelationships().Where(r => string.Equals(r.RelationshipType, AltChunkRelationshipType, StringComparison.Ordinal)))
                     .Select(pr => PackUriHelper.ResolvePartUri(pr.SourceUri, pr.TargetUri)));
 
             // Create an XML document with a standalone declaration, processing
@@ -76,7 +79,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 new XElement(
                     Pkg + "package",
                     new XAttribute(XNamespace.Xmlns + "pkg", Pkg.ToString()),
-                    Package.GetParts().Select(part => GetContentsAsXml(part, altChunkPartUris))));
+                    package.GetParts().Select(part => GetContentsAsXml(part, altChunkPartUris))));
         }
 
         /// <summary>
@@ -85,7 +88,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="part">The package part.</param>
         /// <param name="altChunkPartUris">The collection of AlternativeFormatInputPart URIs.</param>
         /// <returns>The corresponding <see cref="XElement"/>.</returns>
-        private static XElement GetContentsAsXml(PackagePart part, HashSet<Uri> altChunkPartUris)
+        private static XElement GetContentsAsXml(IPackagePart part, HashSet<Uri> altChunkPartUris)
         {
 #if FEATURE_XML_PROHIBIT_DTD
             var settings = default(XmlReaderSettings);
@@ -117,7 +120,7 @@ namespace DocumentFormat.OpenXml.Packaging
             return GetBinaryPartContentsAsXml(part);
         }
 
-        private static XElement GetBinaryPartContentsAsXml(PackagePart part)
+        private static XElement GetBinaryPartContentsAsXml(IPackagePart part)
         {
             return new XElement(
                 Pkg + "part",
@@ -127,7 +130,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 new XElement(Pkg + "binaryData", ToChunkedBase64String(part)));
         }
 
-        private static string ToChunkedBase64String(PackagePart part)
+        private static string ToChunkedBase64String(IPackagePart part)
         {
             using var stream = part.GetStream();
             var size = checked((int)stream.Length);
@@ -167,7 +170,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The <see cref="Stream"/> containing the OpenXml package.</returns>
         protected static Stream FromFlatOpcDocumentCore(XDocument flatOpcDocument, Stream stream)
         {
-            using (Package package = Package.Open(stream, FileMode.Create, FileAccess.ReadWrite))
+            using (Package package = System.IO.Packaging.Package.Open(stream, FileMode.Create, FileAccess.ReadWrite))
             {
                 FromFlatOpcDocumentCore(flatOpcDocument, package);
             }
@@ -184,7 +187,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The path and file name of the file containing the OpenXml package.</returns>
         protected static string FromFlatOpcDocumentCore(XDocument flatOpcDocument, string path)
         {
-            using (Package package = Package.Open(path, FileMode.Create, FileAccess.ReadWrite, FileShare.None))
+            using (Package package = System.IO.Packaging.Package.Open(path, FileMode.Create, FileAccess.ReadWrite, FileShare.None))
             {
                 FromFlatOpcDocumentCore(flatOpcDocument, package);
             }
@@ -194,11 +197,11 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <summary>
         /// Converts an <see cref="XDocument"/> in Flat OPC format to an OpenXml package
-        /// stored in a <see cref="Package"/>.
+        /// stored in a <see cref="System.IO.Packaging.Package"/>.
         /// </summary>
         /// <param name="flatOpcDocument">The document in Flat OPC format.</param>
-        /// <param name="package">The <see cref="Package"/> in which to store the OpenXml package.</param>
-        /// <returns>The <see cref="Package"/> containing the OpenXml package.</returns>
+        /// <param name="package">The <see cref="System.IO.Packaging.Package"/> in which to store the OpenXml package.</param>
+        /// <returns>The <see cref="System.IO.Packaging.Package"/> containing the OpenXml package.</returns>
         protected static Package FromFlatOpcDocumentCore(XDocument flatOpcDocument, Package package)
         {
             if (flatOpcDocument is null)

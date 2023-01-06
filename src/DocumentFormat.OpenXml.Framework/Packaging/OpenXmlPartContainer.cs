@@ -1847,7 +1847,7 @@ namespace DocumentFormat.OpenXml.Packaging
                                 if (dataPart is null)
                                 {
                                     // Load the part as MediaDataPart.
-                                    var packagePart = openXmlPackage.Package.GetPart(uriTarget);
+                                    var packagePart = Features.GetRequired<IPackageFeature>().Package.GetPart(uriTarget);
                                     dataPart = new MediaDataPart(openXmlPackage, packagePart);
                                     openXmlPackage.AddDataPartToList(dataPart);
                                 }
@@ -1896,9 +1896,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal abstract void DeleteRelationship(string id);
 
-        internal abstract PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType);
+        internal abstract IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType);
 
-        internal abstract PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id);
+        internal abstract IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id);
 
         // find all reachable parts from the package root, the dictionary also used for cycle reference defense
         internal abstract void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts);
