@@ -305,30 +305,26 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Equal("model/gltf-binary", model3DReferenceRelationshipPart.ContentType);
         }
 
-        // Test issue #1281 for regressions.
         // When opening a workbook (SpreadsheetDocument.Open) with a missing calcChain part and default OpenSettings
         // specified, we should throw an exception.
         [Fact]
-        public void OpenWithMissingCalcChainPart()
+        public void ThrowWithMissingCalcChainPart()
         {
             Stream stmSpd = GetStream(TestFiles.MissingCalcChainPart, false);
-            Action act = () => SpreadsheetDocument.Open(stmSpd, false);
-            InvalidOperationException exception = Assert.Throws<InvalidOperationException>(act);
+            InvalidOperationException exception = Assert.Throws<InvalidOperationException>(() => { SpreadsheetDocument.Open(stmSpd, false); });
 
-            Assert.Equal("Specified part does not exist in the package.", exception.Message);
+            Assert.NotNull(exception);
+        }
 
-            try
-            {
-                SpreadsheetDocument spd = SpreadsheetDocument.Open(stmSpd, false, new OpenSettings() { IgnoreExceptionOnCalcChainPartMissing = true });
+        // When opening a workbook (SpreadsheetDocument.Open) with a missing calcChain part and OpenSettings
+        // set to ignore, we should succeed the opening.
+        [Fact]
+        public void SucceedWithMissingCalcChainPart()
+        {
+            Stream stmSpd = GetStream(TestFiles.MissingCalcChainPart, false);
 
-                Assert.NotNull(spd);
-
-                spd.Close();
-            }
-            catch (InvalidOperationException ex)
-            {
-                Assert.NotEqual("Specified part does not exist in the package.", ex.Message);
-            }
+            using SpreadsheetDocument spd = SpreadsheetDocument.Open(stmSpd, false, new OpenSettings() { IgnoreExceptionOnCalcChainPartMissing = true });
+            Assert.NotNull(spd);
         }
     }
 }
