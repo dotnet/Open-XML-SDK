@@ -307,6 +307,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         // When opening a workbook (SpreadsheetDocument.Open) with a missing calcChain part and default OpenSettings
         // specified, we should throw an exception.
+        // Test for https://github.com/OfficeDev/Open-XML-SDK/issues/1281
         [Fact]
         public void ThrowWithMissingCalcChainPart()
         {
@@ -318,6 +319,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         // When opening a workbook (SpreadsheetDocument.Open) with a missing calcChain part and OpenSettings
         // set to ignore, we should succeed the opening.
+        // Test for https://github.com/OfficeDev/Open-XML-SDK/issues/1281
         [Fact]
         public void SucceedWithMissingCalcChainPart()
         {

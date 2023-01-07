@@ -1796,7 +1796,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             Dictionary<string, bool> partsToIgnore = new()
             {
-                // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1205
+                // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1281
                 { @"http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain", openXmlPackage.OpenSettings.IgnoreExceptionOnCalcChainPartMissing },
 
                 // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1205
