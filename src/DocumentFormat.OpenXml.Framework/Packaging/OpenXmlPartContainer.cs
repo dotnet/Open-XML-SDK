@@ -1221,7 +1221,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 // Invalid part (same relationship type, but wrong (is different to be expected )content type
-                if (partConstraintRule.PartContentType is not null && contentType != partConstraintRule.PartContentType)
+                if (partConstraintRule.ContentType is not null && contentType != partConstraintRule.ContentType)
                 {
                     throw new ArgumentOutOfRangeException(nameof(newPart));
                 }
@@ -1290,7 +1290,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (Features.GetRequired<IPartConstraintFeature>().TryGetRule(subPart.RelationshipType, out var partConstraintRule))
             {
-                if (partConstraintRule.PartContentType is not null && subPart.ContentType != partConstraintRule.PartContentType)
+                if (partConstraintRule.ContentType is not null && subPart.ContentType != partConstraintRule.ContentType)
                 {
                     throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
                 }

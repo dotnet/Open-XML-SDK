@@ -6,8 +6,6 @@ using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 
-#pragma warning disable 0618 // CS0618: A class member was marked with the Obsolete attribute, such that a warning will be issued when the class member is referenced.
-
 namespace DocumentFormat.OpenXml.Validation
 {
     /// <summary>
@@ -23,45 +21,11 @@ namespace DocumentFormat.OpenXml.Validation
         }
 
         /// <summary>
-        /// Validates the package. This method does not validate the XML content in each part.
-        /// </summary>
-        /// <param name="validationSettings">The OpenXmlPackageValidationSettings for validation events.</param>
-        public void Validate(OpenXmlPackageValidationSettings validationSettings)
-        {
-            if (validationSettings is null)
-            {
-                throw new ArgumentNullException(nameof(validationSettings));
-            }
-
-            if (validationSettings.GetEventHandler() is null)
-            {
-                throw new ArgumentNullException(nameof(validationSettings.EventHandler));
-            }
-
-            if (!validationSettings.FileFormat.Any())
-            {
-                throw new ArgumentOutOfRangeException(nameof(validationSettings.FileFormat));
-            }
-
-            var handler = validationSettings.GetEventHandler();
-
-            if (handler is null)
-            {
-                return;
-            }
-
-            foreach (var result in Validate(validationSettings.FileFormat))
-            {
-                handler(result.Sender, result);
-            }
-        }
-
-        /// <summary>
         /// Validate against a given version
         /// </summary>
         /// <param name="version">Version to validate against</param>
         /// <returns>The validation errors</returns>
-        public IEnumerable<OpenXmlPackageValidationEventArgs> Validate(FileFormatVersions version)
+        public IEnumerable<OpenXmlPackageValidationResult> Validate(FileFormatVersions version)
         {
             // for cycle defense
             var processedParts = new Dictionary<OpenXmlPart, bool>();
@@ -75,7 +39,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <param name="container">The Open XML container to validate</param>
         /// <param name="version">Version to validate against</param>
         /// <param name="processedParts">Parts already processed.</param>
-        private IEnumerable<OpenXmlPackageValidationEventArgs> ValidateInternal(OpenXmlPartContainer container, FileFormatVersions version, Dictionary<OpenXmlPart, bool> processedParts)
+        private IEnumerable<OpenXmlPackageValidationResult> ValidateInternal(OpenXmlPartContainer container, FileFormatVersions version, Dictionary<OpenXmlPart, bool> processedParts)
         {
             var containerConstraints = container.Features.GetRequired<IPartConstraintFeature>();
 
@@ -100,10 +64,10 @@ namespace DocumentFormat.OpenXml.Validation
 
                 if (container is not ExtendedPart && !containerConstraints.TryGetRule(part.RelationshipType, out _) && part.IsInVersion(version))
                 {
-                    yield return new OpenXmlPackageValidationEventArgs(container)
+                    yield return new OpenXmlPackageValidationResult
                     {
                         MessageId = "PartIsNotAllowed",
-                        PartClassName = part.RelationshipType,
+                        RelationshipType = part.RelationshipType,
                         Part = container.ThisOpenXmlPart,
                         SubPart = part,
                     };
@@ -123,10 +87,10 @@ namespace DocumentFormat.OpenXml.Validation
                     // must have one
                     if (container.GetSubPart(constraintRule.RelationshipType) is null)
                     {
-                        yield return new OpenXmlPackageValidationEventArgs(container)
+                        yield return new OpenXmlPackageValidationResult
                         {
                             MessageId = "RequiredPartDoNotExist",
-                            PartClassName = constraintRule.PartClassName,
+                            RelationshipType = constraintRule.RelationshipType,
                             Part = container.ThisOpenXmlPart,
                         };
                     }
@@ -142,10 +106,10 @@ namespace DocumentFormat.OpenXml.Validation
                     {
                         if (occurs > 1)
                         {
-                            yield return new OpenXmlPackageValidationEventArgs(container)
+                            yield return new OpenXmlPackageValidationResult
                             {
                                 MessageId = "OnlyOnePartAllowed",
-                                PartClassName = constraintRule.PartClassName,
+                                RelationshipType = constraintRule.RelationshipType,
                                 Part = container.ThisOpenXmlPart,
 #if DEBUG
                                 SubPart = container.GetSubPart(constraintRule.RelationshipType),
@@ -167,11 +131,11 @@ namespace DocumentFormat.OpenXml.Validation
                             if (version.AtLeast(rule.FileFormat))
                             {
                                 // validate content type
-                                if (rule.PartContentType is not null && part.ContentType != rule.PartContentType)
+                                if (rule.ContentType is not null && part.ContentType != rule.ContentType)
                                 {
-                                    var message = SR.Format(ExceptionMessages.InvalidContentTypePart, rule.PartContentType);
+                                    var message = SR.Format(ExceptionMessages.InvalidContentTypePart, rule.ContentType);
 
-                                    yield return new OpenXmlPackageValidationEventArgs(container)
+                                    yield return new OpenXmlPackageValidationResult
                                     {
                                         Message = message,
                                         MessageId = "InvalidContentTypePart",
@@ -192,7 +156,7 @@ namespace DocumentFormat.OpenXml.Validation
                         // check the relationship type
                         if (part.RelationshipType.StartsWith(@"http://schemas.openxmlformats.org", StringComparison.OrdinalIgnoreCase))
                         {
-                            yield return new OpenXmlPackageValidationEventArgs(container)
+                            yield return new OpenXmlPackageValidationResult
                             {
                                 MessageId = "ExtendedPartIsOpenXmlPart",
                                 SubPart = part,
@@ -211,7 +175,7 @@ namespace DocumentFormat.OpenXml.Validation
             }
         }
 
-        private static IEnumerable<OpenXmlPackageValidationEventArgs> ValidateDataPartReferenceRelationships(OpenXmlPartContainer container, FileFormatVersions version)
+        private static IEnumerable<OpenXmlPackageValidationResult> ValidateDataPartReferenceRelationships(OpenXmlPartContainer container, FileFormatVersions version)
         {
             var knownDataParts = container.Features.GetRequired<IKnownDataPartFeature>();
 
@@ -221,10 +185,10 @@ namespace DocumentFormat.OpenXml.Validation
             {
                 if (!knownDataParts.IsKnown(dataPartReference.RelationshipType))
                 {
-                    yield return new OpenXmlPackageValidationEventArgs(container)
+                    yield return new OpenXmlPackageValidationResult
                     {
                         MessageId = "DataPartReferenceIsNotAllowed",
-                        PartClassName = dataPartReference.RelationshipType,
+                        RelationshipType = dataPartReference.RelationshipType,
                         Part = container.ThisOpenXmlPart,
                         SubPart = null,
                         DataPartReferenceRelationship = dataPartReference,

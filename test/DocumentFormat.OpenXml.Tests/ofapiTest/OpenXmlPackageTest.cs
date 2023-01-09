@@ -576,51 +576,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-#pragma warning disable 0618 // CS0618: A class member was marked with the Obsolete attribute, such that a warning will be issued when the class member is referenced.
-
-        /// <summary>
-        /// PackageValidateTest.
-        /// </summary>
-        [Fact]
-        public void PackageValidateTest()
-        {
-            using (var stream = new MemoryStream())
-            using (var doc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
-            {
-                doc.AddMainDocumentPart();
-                var document = doc.MainDocumentPart.Document = new Document();
-                document.Save();
-                doc.MainDocumentPart.AddNewPart<StyleDefinitionsPart>();
-                var styles = doc.MainDocumentPart.StyleDefinitionsPart.Styles = new Styles();
-                styles.Save();
-
-                // should no exception
-                doc.Validate(null);
-
-                // add new O14 part
-                doc.MainDocumentPart.AddNewPart<StylesWithEffectsPart>();
-                Assert.IsType<StylesWithEffectsPart>(doc.MainDocumentPart.StylesWithEffectsPart);
-
-                // should no exception
-                doc.Validate(null);
-
-                // use default DefaultValidationEventHandler( ) which throw an exception
-                OpenXmlPackageValidationSettings actualValidationSettings;
-                actualValidationSettings = new OpenXmlPackageValidationSettings();
-                actualValidationSettings.EventHandler += (sender, e) =>
-                {
-                    var exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
-                    exception.Data.Add("OpenXmlPackageValidationEventArgs", e);
-                    throw exception;
-                };
-
-                // should no exception
-                doc.Validate(actualValidationSettings, FileFormatVersions.Office2010);
-            }
-        }
-
-#pragma warning restore 0618
-
         /// <summary>
         /// AutoSaveCreateTest.
         /// </summary>
