@@ -305,8 +305,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Equal("model/gltf-binary", model3DReferenceRelationshipPart.ContentType);
         }
 
-        // When opening a workbook (SpreadsheetDocument.Open) with a missing calcChain part and default OpenSettings
-        // specified, we should throw an exception.
+        // When opening a workbook (SpreadsheetDocument.Open) with a missing calcChain part we should throw an exception.
         // Test for https://github.com/OfficeDev/Open-XML-SDK/issues/1281
         [Fact]
         public void ThrowWithMissingCalcChainPart()
