@@ -8,12 +8,6 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
-using System.Xml;
-
-#if FEATURE_XML_SCHEMA
-using System.ComponentModel;
-using System.Xml.Schema;
-#endif
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -305,72 +299,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the relationship type of the part.
         /// </summary>
         public abstract string RelationshipType { get; }
-
-#if FEATURE_XML_SCHEMA
-        /// <summary>
-        /// Validates the XML content of the part by using the specified schema.
-        /// </summary>
-        /// <param name="schemas">The set of XML schemas to be used.</param>
-        /// <param name="validationEventHandler">ValidationEventHandler for validation events.</param>
-        [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public void ValidateXml(XmlSchemaSet schemas, ValidationEventHandler validationEventHandler)
-        {
-            ThrowIfObjectDisposed();
-
-            if (schemas is null)
-            {
-                throw new ArgumentNullException(nameof(schemas));
-            }
-
-            XmlReaderSettings xmlReaderSettings = new XmlReaderSettings
-            {
-#if FEATURE_XML_PROHIBIT_DTD
-                ProhibitDtd = true,
-#else
-                DtdProcessing = DtdProcessing.Prohibit,
-#endif
-                MaxCharactersInDocument = MaxCharactersInPart,
-                Schemas = schemas,
-                ValidationType = ValidationType.Schema,
-            };
-
-            using (var partStream = GetStream())
-            {
-                xmlReaderSettings.ValidationEventHandler += validationEventHandler;
-
-                using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, Features.GetNamespaceResolver(), xmlReaderSettings))
-                {
-                    // Validate XML data
-                    while (xmlReader.Read())
-                    {
-                    }
-                }
-            }
-        }
-
-        /// <summary>
-        /// Validates the XML content of the part by using the specified schema.
-        /// </summary>
-        /// <param name="schemaFile">The XML schema to be used.</param>
-        /// <param name="validationEventHandler">ValidationEventHandler for validation events.</param>
-        [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public void ValidateXml(string schemaFile, ValidationEventHandler validationEventHandler)
-        {
-            ThrowIfObjectDisposed();
-
-            if (schemaFile is null)
-            {
-                throw new ArgumentNullException(nameof(schemaFile));
-            }
-
-            XmlSchemaSet schemas = new();
-            schemas.Add(null, schemaFile);
-
-            ValidateXml(schemas, validationEventHandler);
-        }
-#endif
 
         /// <summary>
         /// Gets the root element of the current part.

@@ -200,12 +200,12 @@ namespace DocumentFormat.OpenXml.Validation
                             break;
 
                         case "Pkg_RequiredPartDoNotExist":
-                            errorInfo.Description = SR.Format(ValidationResources.Pkg_RequiredPartDoNotExist, e.PartClassName);
+                            errorInfo.Description = SR.Format(ValidationResources.Pkg_RequiredPartDoNotExist, e.RelationshipType);
                             break;
 
                         case "Pkg_OnlyOnePartAllowed":
                             name = e.Part is not null ? GetPartNameAndUri(e.Part) : documentName;
-                            errorInfo.Description = SR.Format(ValidationResources.Pkg_OnlyOnePartAllowed, name, e.PartClassName);
+                            errorInfo.Description = SR.Format(ValidationResources.Pkg_OnlyOnePartAllowed, name, e.RelationshipType);
 #if DEBUG
                             Debug.Assert(e.SubPart is not null);
                             errorInfo.RelatedPart = e.SubPart;

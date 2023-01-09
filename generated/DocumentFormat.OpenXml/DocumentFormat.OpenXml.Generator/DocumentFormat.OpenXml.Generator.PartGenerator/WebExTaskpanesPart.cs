@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Packaging
             };
             private static readonly PartConstraints _partConstraints = new ()
             {
-                { "http://schemas.microsoft.com/office/2011/relationships/webextension", "WebExtensionPart", "application/vnd.ms-office.webextension+xml", false, true, FileFormatVersions.Office2013 },
+                { "http://schemas.microsoft.com/office/2011/relationships/webextension", "application/vnd.ms-office.webextension+xml", false, true, FileFormatVersions.Office2013 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
             IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;
