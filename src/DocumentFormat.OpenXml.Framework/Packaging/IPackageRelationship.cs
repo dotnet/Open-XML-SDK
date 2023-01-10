@@ -4,24 +4,40 @@
 using System;
 using System.IO.Packaging;
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-#pragma warning disable SA1649 // File name should match first type name
-#pragma warning disable SA1402 // File may only contain a single type
+namespace DocumentFormat.OpenXml.Packaging;
 
-namespace DocumentFormat.OpenXml.Packaging
+/// <summary>
+/// An interface that defines the relationship between a source and a target part. Similar to <see cref="PackageRelationship"/> but allows full overriding.
+/// </summary>
+public interface IPackageRelationship
 {
-    public interface IPackageRelationship
-    {
-        public string Id { get; }
+    /// <summary>
+    /// Gets a unique identifier across relationships for the given source.
+    /// </summary>
+    public string Id { get; }
 
-        public IPackage Package { get; }
+    /// <summary>
+    /// Gets the containing package object.
+    /// </summary>
+    public IPackage Package { get; }
 
-        public string RelationshipType { get; }
+    /// <summary>
+    /// Gets the type of the relationship used to uniquely define the role of the relationship.
+    /// </summary>
+    public string RelationshipType { get; }
 
-        public Uri SourceUri { get; }
+    /// <summary>
+    /// Gets a reference to the parent PackagePart to which this relationship belongs.
+    /// </summary>
+    public Uri SourceUri { get; }
 
-        public TargetMode TargetMode { get; }
+    /// <summary>
+    /// Gets a value indicating the interpretations of the "base" of the target uri.
+    /// </summary>
+    public TargetMode TargetMode { get; }
 
-        public Uri TargetUri { get; }
-    }
+    /// <summary>
+    /// Gets the uri of the part that this relationship points to.
+    /// </summary>
+    public Uri TargetUri { get; }
 }
