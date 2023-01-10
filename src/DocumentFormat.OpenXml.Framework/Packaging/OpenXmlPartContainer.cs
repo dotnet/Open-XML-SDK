@@ -20,7 +20,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPartContainer
     {
-        private readonly PartDictionary _childrenPartsDictionary;
         private readonly LinkedList<ReferenceRelationship> _referenceRelationships = new LinkedList<ReferenceRelationship>();
 
 #pragma warning disable SA1401 // Fields should be private
@@ -32,18 +31,17 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         protected OpenXmlPartContainer()
         {
-            _childrenPartsDictionary = new(this);
         }
 
         /// <summary>
         /// Gets the children parts IDictionary.
         /// </summary>
-        internal PartDictionary ChildrenRelationshipParts
+        internal IChildPartFeatures ChildrenRelationshipParts
         {
             get
             {
                 ThrowIfObjectDisposed();
-                return _childrenPartsDictionary;
+                return Features.GetRequired<IChildPartFeatures>();
             }
         }
 
@@ -545,7 +543,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            if (ChildrenRelationshipParts.TryGetValue(id, out var part))
+            if (ChildrenRelationshipParts.TryGetPart(id, out var part))
             {
                 return part;
             }
@@ -571,7 +569,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            return ChildrenRelationshipParts.TryGetValue(id, out part);
+            return ChildrenRelationshipParts.TryGetPart(id, out part);
         }
 
         /// <summary>
@@ -590,7 +588,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(part));
             }
 
-            if (ChildrenRelationshipParts.ContainsValue(part))
+            if (ChildrenRelationshipParts.Contains(part))
             {
                 foreach (var idPartPair in ChildrenRelationshipParts)
                 {
@@ -903,7 +901,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             if (part.OpenXmlPackage != InternalOpenXmlPackage ||
-                !ChildrenRelationshipParts.ContainsValue(part))
+                !ChildrenRelationshipParts.Contains(part))
             {
                 throw new InvalidOperationException(ExceptionMessages.ForeignOpenXmlPart);
             }
@@ -1036,7 +1034,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            return ChildrenRelationshipParts.Values.OfType<T>();
+            return ChildrenRelationshipParts.Parts.OfType<T>();
         }
 
         /// <summary>
@@ -1129,7 +1127,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     throw new ArgumentException(ExceptionMessages.InvalidXmlIDStringException, nameof(id));
                 }
 
-                if (ChildrenRelationshipParts.ContainsKey(id))
+                if (ChildrenRelationshipParts.Contains(id))
                 {
                     throw new ArgumentException(ExceptionMessages.RelationshipIdConflict, nameof(id));
                 }
@@ -1651,7 +1649,7 @@ namespace DocumentFormat.OpenXml.Packaging
             DeletePartsOfType<T>();
 
             // remove recursively
-            foreach (var child in ChildrenRelationshipParts.Values)
+            foreach (var child in ChildrenRelationshipParts.Parts)
             {
                 child.DeletePartsRecursivelyOfTypeBase<T>();
             }
@@ -1718,7 +1716,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // there should be only one part of this type
-            foreach (var part in ChildrenRelationshipParts.Values)
+            foreach (var part in ChildrenRelationshipParts.Parts)
             {
                 if (part.RelationshipType == relationshipType)
                 {
@@ -1743,7 +1741,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         internal OpenXmlPart? GetPart(string relationshipType)
-            => ChildrenRelationshipParts.Values.FirstOrDefault(v => v.RelationshipType == relationshipType);
+            => ChildrenRelationshipParts.Parts.FirstOrDefault(v => v.RelationshipType == relationshipType);
 
         internal bool IsChildPart(OpenXmlPart part)
         {
@@ -1759,7 +1757,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentOutOfRangeException(nameof(part));
             }
 
-            return ChildrenRelationshipParts.ContainsValue(part);
+            return ChildrenRelationshipParts.Contains(part);
         }
 
         /// <summary>
