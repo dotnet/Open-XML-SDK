@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
             var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddEmbeddedControlPersistenceBinaryDataPart(contentType, id);
         }
 
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
             var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddEmbeddedControlPersistenceBinaryDataPart(contentType);
         }
         
@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Path => "embeddings";
             private static readonly PartConstraints _partConstraints = new ()
             {
-                { "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", "EmbeddedControlPersistenceBinaryDataPart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", null, false, true, FileFormatVersions.Office2007 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
             IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;

@@ -221,7 +221,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
             var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddCustomXmlPart(contentType, id);
         }
 
@@ -234,7 +234,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
             var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddCustomXmlPart(contentType);
         }
 
@@ -273,7 +273,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
             var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddEmbeddedControlPersistenceBinaryDataPart(contentType, id);
         }
 
@@ -286,7 +286,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
             var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddEmbeddedControlPersistenceBinaryDataPart(contentType);
         }
 
@@ -349,7 +349,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = ImagePartTypeInfo.GetContentType(partType);
             var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddImagePart(contentType, id);
         }
 
@@ -362,7 +362,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = ImagePartTypeInfo.GetContentType(partType);
             var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddImagePart(contentType);
         }
 
@@ -397,24 +397,24 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Path => "../notesSlides";
             private static readonly PartConstraints _partConstraints = new ()
             {
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", "CustomXmlPart", null, false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", "ChartPart", "application/vnd.openxmlformats-officedocument.drawingml.chart+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.microsoft.com/office/2014/relationships/chartEx", "ExtendedChartPart", "application/vnd.ms-office.chartex+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", "DiagramColorsPart", "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", "DiagramDataPart", "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", "DiagramPersistLayoutPart", "application/vnd.ms-office.drawingml.diagramDrawing+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", "DiagramLayoutDefinitionPart", "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", "DiagramStylePart", "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", "EmbeddedObjectPart", null, false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", "EmbeddedPackagePart", null, false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", "ImagePart", null, false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", "VmlDrawingPart", "application/vnd.openxmlformats-officedocument.vmlDrawing", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", "EmbeddedControlPersistenceBinaryDataPart", null, false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.microsoft.com/office/2017/06/relationships/model3d", "Model3DReferenceRelationshipPart", "model/gltf-binary", false, true, FileFormatVersions.Office2019 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster", "NotesMasterPart", "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride", "ThemeOverridePart", "application/vnd.openxmlformats-officedocument.themeOverride+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", "SlidePart", "application/vnd.openxmlformats-officedocument.presentationml.slide+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", "UserDefinedTagsPart", "application/vnd.openxmlformats-officedocument.presentationml.tags+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", "application/vnd.openxmlformats-officedocument.drawingml.chart+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2014/relationships/chartEx", "application/vnd.ms-office.chartex+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", "application/vnd.ms-office.drawingml.diagramDrawing+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", "application/vnd.openxmlformats-officedocument.vmlDrawing", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2017/06/relationships/model3d", "model/gltf-binary", false, true, FileFormatVersions.Office2019 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster", "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride", "application/vnd.openxmlformats-officedocument.themeOverride+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", "application/vnd.openxmlformats-officedocument.presentationml.slide+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", "application/vnd.openxmlformats-officedocument.presentationml.tags+xml", false, true, FileFormatVersions.Office2007 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
             IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;

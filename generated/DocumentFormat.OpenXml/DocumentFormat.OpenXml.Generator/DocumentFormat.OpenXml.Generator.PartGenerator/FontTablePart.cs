@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = FontPartTypeInfo.GetContentType(partType);
             var partExtension = FontPartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddFontPart(contentType, id);
         }
 
@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = FontPartTypeInfo.GetContentType(partType);
             var partExtension = FontPartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddFontPart(contentType);
         }
         
@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Name => "fontTable";
             private static readonly PartConstraints _partConstraints = new ()
             {
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font", "FontPart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font", null, false, true, FileFormatVersions.Office2007 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
             IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;

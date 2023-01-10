@@ -1178,11 +1178,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Initializes a new created part
         /// </summary>
-        /// <typeparam name="T">The type of the part, must be derived from OpenXmlPart.</typeparam>
         /// <param name="newPart">The part to be initialized.</param>
         /// <param name="contentType">The content type of the part.</param>
-        internal void InitPart<T>(T newPart, string contentType)
-            where T : OpenXmlPart
+        internal void InitPart(OpenXmlPart newPart, string contentType)
         {
             InitPart(newPart, contentType, null);
         }
@@ -1190,12 +1188,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Initializes a new created part
         /// </summary>
-        /// <typeparam name="T">The type of the part, must be derived from OpenXmlPart.</typeparam>
         /// <param name="newPart">The part to be initialized.</param>
         /// <param name="contentType">The content type of the part.</param>
         /// <param name="id">The relationship id.</param>
-        internal virtual void InitPart<T>(T newPart, string contentType, string? id)
-            where T : OpenXmlPart
+        internal virtual void InitPart(OpenXmlPart newPart, string contentType, string? id)
         {
             ThrowIfObjectDisposed();
 
@@ -1213,7 +1209,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
-                    if (GetSubPartOfType<T>() is not null)
+                    if (GetSubPart(newPart.RelationshipType) is not null)
                     {
                         // already have one, can not add new one.
                         throw new OpenXmlPackageException(ExceptionMessages.OnlyOnePartAllowed);
@@ -1221,7 +1217,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 // Invalid part (same relationship type, but wrong (is different to be expected )content type
-                if (partConstraintRule.PartContentType is not null && contentType != partConstraintRule.PartContentType)
+                if (partConstraintRule.ContentType is not null && contentType != partConstraintRule.ContentType)
                 {
                     throw new ArgumentOutOfRangeException(nameof(newPart));
                 }
@@ -1234,18 +1230,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 return;
             }
-
-            // else if (newPart is ExtensionPart)
-            // {
-            //    newPart.CreateInternal(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, contentType, null);
-
-            // // add it and get the id
-            //    string relationshipId = this.AttachChild(newPart);
-
-            // this.ChildParts.Add(relationshipId, newPart);
-
-            // return;
-            // }
             else
             {
                 throw new ArgumentOutOfRangeException(nameof(newPart));
@@ -1290,7 +1274,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (Features.GetRequired<IPartConstraintFeature>().TryGetRule(subPart.RelationshipType, out var partConstraintRule))
             {
-                if (partConstraintRule.PartContentType is not null && subPart.ContentType != partConstraintRule.PartContentType)
+                if (partConstraintRule.ContentType is not null && subPart.ContentType != partConstraintRule.ContentType)
                 {
                     throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
                 }
@@ -1496,7 +1480,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         // Updates of existing dictionary keys during enumeration are only allowed after net 5.0.
         // Before that we need a temporary dictionary to store the updated values for the keys.
-#if NET50_OR_LATER
+#if NET5_0_OR_GREATER
         private void UpdateDataParts(Dictionary<DataPart, DataPart?> dataPartsDictionary)
         {
             foreach (var (key, value) in dataPartsDictionary)
@@ -1758,6 +1742,9 @@ namespace DocumentFormat.OpenXml.Packaging
             return null;
         }
 
+        internal OpenXmlPart? GetPart(string relationshipType)
+            => ChildrenRelationshipParts.Values.FirstOrDefault(v => v.RelationshipType == relationshipType);
+
         internal bool IsChildPart(OpenXmlPart part)
         {
             ThrowIfObjectDisposed();
@@ -1796,7 +1783,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             Dictionary<string, bool> partsToIgnore = new()
             {
-                // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1205
+                // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1281
                 { @"http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain", openXmlPackage.OpenSettings.IgnoreExceptionOnCalcChainPartMissing },
 
                 // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1205

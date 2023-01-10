@@ -120,7 +120,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = ImagePartTypeInfo.GetContentType(partType);
             var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddImagePart(contentType, id);
         }
 
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = ImagePartTypeInfo.GetContentType(partType);
             var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddImagePart(contentType);
         }
 
@@ -172,7 +172,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = MailMergeRecipientDataPartTypeInfo.GetContentType(partType);
             var partExtension = MailMergeRecipientDataPartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddMailMergeRecipientDataPart(contentType, id);
         }
 
@@ -185,7 +185,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = MailMergeRecipientDataPartTypeInfo.GetContentType(partType);
             var partExtension = MailMergeRecipientDataPartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddMailMergeRecipientDataPart(contentType);
         }
         
@@ -198,8 +198,8 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Name => "settings";
             private static readonly PartConstraints _partConstraints = new ()
             {
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData", "MailMergeRecipientDataPart", null, false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", "ImagePart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData", null, false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", null, false, true, FileFormatVersions.Office2007 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
             IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;

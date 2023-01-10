@@ -180,9 +180,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             public string RelationshipType { get; set; }
 
-            public string PartClassName { get; set; }
-
-            public string PartContentType { get; set; }
+            public string ContentType { get; set; }
 
             public bool MinOccursIsNonZero { get; set; }
 
@@ -199,18 +197,16 @@ namespace DocumentFormat.OpenXml.Tests
                 FileFormat = rule.FileFormat;
                 MaxOccursGreatThanOne = rule.MaxOccursGreatThanOne;
                 MinOccursIsNonZero = rule.MinOccursIsNonZero;
-#pragma warning disable CS0618 // Type or member is obsolete
-                PartClassName = rule.PartClassName;
-#pragma warning restore CS0618 // Type or member is obsolete
-                PartContentType = rule.PartContentType;
+                RelationshipType = rule.RelationshipType;
+                ContentType = rule.ContentType;
             }
 
             public override bool Equals(object obj)
             {
                 if (obj is PartConstraintRule2 other)
                 {
-                    return string.Equals(PartClassName, other.PartClassName, StringComparison.Ordinal)
-                        && string.Equals(PartContentType, other.PartContentType, StringComparison.Ordinal)
+                    return string.Equals(RelationshipType, other.RelationshipType, StringComparison.Ordinal)
+                        && string.Equals(ContentType, other.ContentType, StringComparison.Ordinal)
                         && MinOccursIsNonZero == other.MinOccursIsNonZero
                         && MaxOccursGreatThanOne == other.MaxOccursGreatThanOne
                         && FileFormat == other.FileFormat;
@@ -226,8 +222,8 @@ namespace DocumentFormat.OpenXml.Tests
                 unchecked
                 {
                     int hash = 17;
-                    hash = (hash * HashMultiplier) + StringComparer.Ordinal.GetHashCode(PartClassName);
-                    hash = (hash * HashMultiplier) + StringComparer.Ordinal.GetHashCode(PartContentType);
+                    hash = (hash * HashMultiplier) + StringComparer.Ordinal.GetHashCode(RelationshipType);
+                    hash = (hash * HashMultiplier) + StringComparer.Ordinal.GetHashCode(ContentType);
                     hash = (hash * HashMultiplier) + MinOccursIsNonZero.GetHashCode();
                     hash = (hash * HashMultiplier) + MaxOccursGreatThanOne.GetHashCode();
                     hash = (hash * HashMultiplier) + FileFormat.GetHashCode();

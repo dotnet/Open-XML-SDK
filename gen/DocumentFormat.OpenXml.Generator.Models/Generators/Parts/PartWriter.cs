@@ -193,8 +193,6 @@ public static class PartWriter
                 writer.Write("{ ");
                 writer.WriteString(p.RelationshipType);
                 writer.Write(", ");
-                writer.WriteString(p.Name);
-                writer.Write(", ");
                 writer.WriteString(p.ContentType);
                 writer.Write(", ");
                 writer.WriteBool(c.MinOccursIsNonZero);
@@ -644,7 +642,7 @@ public static class PartWriter
 
                 writer.WriteLine(");");
 
-                writer.WriteLine("OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);");
+                writer.WriteLine("Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);");
                 writer.Write($"return Add{p.Name}({ContentTypeParameterName}");
 
                 if (hasId)

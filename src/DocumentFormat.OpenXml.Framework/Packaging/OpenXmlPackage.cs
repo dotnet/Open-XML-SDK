@@ -20,7 +20,6 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         private protected const string DoNotUseParameterlessConstructor = "The parameterless constructor never initialized anything. This will be removed in future updates.";
 
-        private readonly PartExtensionProvider _partExtensionProvider = new PartExtensionProvider();
         private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
 
         private bool _isDisposed;
@@ -177,16 +176,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public CompressionOption CompressionOption { get; set; } = CompressionOption.Normal;
 
         /// <summary>
-        /// Gets a PartExtensionProvider part which provides a mapping from ContentType to part extension.
+        /// Gets a <see cref="IPartExtensionFeature"/> part which provides a mapping from content type to part extension.
         /// </summary>
-        public PartExtensionProvider PartExtensionProvider
-        {
-            get
-            {
-                ThrowIfObjectDisposed();
-                return _partExtensionProvider;
-            }
-        }
+        internal IPartExtensionFeature PartExtensions => Features.GetRequired<IPartExtensionFeature>();
 
         /// <summary>
         /// Gets a value that indicates the maximum allowable number of characters in an Open XML part. A zero (0) value indicates that there are no limits on the size
@@ -364,60 +356,6 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         #endregion
-
-        #endregion
-
-        #region public virtual methods
-
-        /// <summary>
-        /// Validates the package. This method does not validate the XML content in each part.
-        /// </summary>
-        /// <param name="validationSettings">The OpenXmlPackageValidationSettings for validation events.</param>
-        /// <remarks>If validationSettings is null or no EventHandler is set, the default behavior is to throw an OpenXmlPackageException on the validation error. </remarks>
-        [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public void Validate(OpenXmlPackageValidationSettings validationSettings)
-        {
-            ThrowIfObjectDisposed();
-
-            void DefaultValidationEventHandler(object? sender, OpenXmlPackageValidationEventArgs e)
-            {
-                var exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
-
-                exception.Data.Add("OpenXmlPackageValidationEventArgs", e);
-
-                throw exception;
-            }
-
-            OpenXmlPackageValidationSettings ValidateSettings(OpenXmlPackageValidationSettings settings)
-            {
-                if (settings.GetEventHandler() is null)
-                {
-                    // use default DefaultValidationEventHandler( ) which throw an exception
-                    settings.EventHandler += DefaultValidationEventHandler;
-                }
-
-                if (!settings.FileFormat.Any())
-                {
-                    settings.FileFormat = FileFormatVersions.Office2007;
-                }
-
-                return settings;
-            }
-
-            new Validation.PackageValidator(this).Validate(ValidateSettings(validationSettings ?? new OpenXmlPackageValidationSettings()));
-        }
-
-        [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        internal void Validate(OpenXmlPackageValidationSettings validationSettings, FileFormatVersions fileFormatVersions)
-        {
-            Debug.Assert(fileFormatVersions.Any());
-
-            validationSettings.FileFormat = fileFormatVersions;
-
-            Validate(validationSettings);
-        }
 
         #endregion
 
@@ -1265,6 +1203,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             [KnownFeature(typeof(IPartUriFeature), Factory = nameof(CreatePartUri))]
             [KnownFeature(typeof(AnnotationsFeature))]
+            [KnownFeature(typeof(IPartExtensionFeature), typeof(PartExtensionProvider))]
             private partial T? GetInternal<T>();
 
             private IPartUriFeature CreatePartUri() => new PackagePartUriHelper(this.GetRequired<IPackageFeature>().Package);

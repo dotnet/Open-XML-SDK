@@ -225,7 +225,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             string contentType = mediaDataPartType.GetContentType();
             string targetFileExt = mediaDataPartType.GetTargetExtension();
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, targetFileExt);
+            OpenXmlPackage.PartExtensions.Register(contentType, targetFileExt);
 
             _uri = NewPartUri(openXmlPackage, contentType, null);
             _metroPart = _openXmlPackage.CreateMetroPart(_uri, contentType);
@@ -262,7 +262,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (extension is null)
             {
-                if (!openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out targetFileExt))
+                if (!openXmlPackage.PartExtensions.TryGetExtension(contentType, out targetFileExt))
                 {
                     targetFileExt = TargetFileExtension;
                 }
