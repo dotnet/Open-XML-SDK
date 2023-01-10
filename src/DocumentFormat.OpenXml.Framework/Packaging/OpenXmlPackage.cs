@@ -21,7 +21,6 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         private protected const string DoNotUseParameterlessConstructor = "The parameterless constructor never initialized anything. This will be removed in future updates.";
 
-        private readonly PartExtensionProvider _partExtensionProvider = new PartExtensionProvider();
         private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
 
         private Package? _package;
@@ -180,16 +179,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public CompressionOption CompressionOption { get; set; } = CompressionOption.Normal;
 
         /// <summary>
-        /// Gets a PartExtensionProvider part which provides a mapping from ContentType to part extension.
+        /// Gets a <see cref="IPartExtensionFeature"/> part which provides a mapping from content type to part extension.
         /// </summary>
-        public PartExtensionProvider PartExtensionProvider
-        {
-            get
-            {
-                ThrowIfObjectDisposed();
-                return _partExtensionProvider;
-            }
-        }
+        internal IPartExtensionFeature PartExtensions => Features.GetRequired<IPartExtensionFeature>();
 
         /// <summary>
         /// Gets a value that indicates the maximum allowable number of characters in an Open XML part. A zero (0) value indicates that there are no limits on the size
@@ -1205,6 +1197,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             [KnownFeature(typeof(IPartUriFeature), Factory = nameof(CreatePartUri))]
             [KnownFeature(typeof(AnnotationsFeature))]
+            [KnownFeature(typeof(IPartExtensionFeature), typeof(PartExtensionProvider))]
             private partial T? GetInternal<T>();
 
             private IPartUriFeature CreatePartUri() => new PackagePartUriHelper(this);

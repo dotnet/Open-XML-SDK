@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = FontPartTypeInfo.GetContentType(partType);
             var partExtension = FontPartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddFontPart(contentType, id);
         }
 
@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = FontPartTypeInfo.GetContentType(partType);
             var partExtension = FontPartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddFontPart(contentType);
         }
         

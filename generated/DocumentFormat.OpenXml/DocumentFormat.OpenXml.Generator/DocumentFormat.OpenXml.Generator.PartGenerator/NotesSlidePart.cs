@@ -221,7 +221,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
             var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddCustomXmlPart(contentType, id);
         }
 
@@ -234,7 +234,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
             var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddCustomXmlPart(contentType);
         }
 
@@ -273,7 +273,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
             var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddEmbeddedControlPersistenceBinaryDataPart(contentType, id);
         }
 
@@ -286,7 +286,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
             var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddEmbeddedControlPersistenceBinaryDataPart(contentType);
         }
 
@@ -349,7 +349,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = ImagePartTypeInfo.GetContentType(partType);
             var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddImagePart(contentType, id);
         }
 
@@ -362,7 +362,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var contentType = ImagePartTypeInfo.GetContentType(partType);
             var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddImagePart(contentType);
         }
 
