@@ -369,7 +369,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             reachableParts.Add(this, false);
-            foreach (OpenXmlPart part in ChildrenRelationshipParts.Values)
+            foreach (OpenXmlPart part in ChildrenRelationshipParts.Parts)
             {
                 if (!reachableParts.ContainsKey(part))
                 {
