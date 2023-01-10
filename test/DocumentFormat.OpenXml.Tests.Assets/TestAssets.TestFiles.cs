@@ -74,6 +74,8 @@ namespace DocumentFormat.OpenXml.Tests
 
             public const string Mediareference = "TestFiles.mediareference.pptx";
 
+            public const string MissingCalcChainPart = "TestFiles.missingcalcchainpart.xlsx";
+
             public const string O09_Performance_typical_pptx = "TestFiles.o09_Performance_typical.pptx";
 
             public const string Plain = "TestFiles.Plain.docx";
