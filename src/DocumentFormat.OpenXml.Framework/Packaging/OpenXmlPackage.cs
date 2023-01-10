@@ -22,6 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
 
+        private Action? _onClose;
         private bool _isDisposed;
 
         /// <summary>
@@ -65,14 +66,12 @@ namespace DocumentFormat.OpenXml.Packaging
 
             Features.Set<IPackageFeature>(feature);
 
-            RegisterOnClose(package.Close);
+            OnClose(package.Close);
 
             Load(feature);
         }
 
-        private List<Action>? _onClose;
-
-        internal void RegisterOnClose(Action action) => (_onClose ??= new()).Add(action);
+        internal void OnClose(Action callback) => _onClose += callback;
 
         /// <summary>
         /// Gets the root part for the package.
@@ -396,13 +395,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 ChildrenRelationshipParts.Clear();
                 ReferenceRelationshipList.Clear();
 
-                if (_onClose is { } onClose)
-                {
-                    foreach (var item in onClose)
-                    {
-                        item();
-                    }
-                }
+                _onClose?.Invoke();
 
                 closing?.OnChange(this, EventType.Closed);
                 _isDisposed = true;

@@ -14,30 +14,30 @@ public interface IPackageRelationship
     /// <summary>
     /// Gets a unique identifier across relationships for the given source.
     /// </summary>
-    public string Id { get; }
+    string Id { get; }
 
     /// <summary>
     /// Gets the containing package object.
     /// </summary>
-    public IPackage Package { get; }
+    IPackage Package { get; }
 
     /// <summary>
     /// Gets the type of the relationship used to uniquely define the role of the relationship.
     /// </summary>
-    public string RelationshipType { get; }
+    string RelationshipType { get; }
 
     /// <summary>
     /// Gets a reference to the parent PackagePart to which this relationship belongs.
     /// </summary>
-    public Uri SourceUri { get; }
+    Uri SourceUri { get; }
 
     /// <summary>
     /// Gets a value indicating the interpretations of the "base" of the target uri.
     /// </summary>
-    public TargetMode TargetMode { get; }
+    TargetMode TargetMode { get; }
 
     /// <summary>
     /// Gets the uri of the part that this relationship points to.
     /// </summary>
-    public Uri TargetUri { get; }
+    Uri TargetUri { get; }
 }
