@@ -265,22 +265,22 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Path => "ppt";
             private static readonly PartConstraints _partConstraints = new ()
             {
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", "CustomXmlPart", null, false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font", "FontPart", null, false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps", "PresentationPropertiesPart", "application/vnd.openxmlformats-officedocument.presentationml.presProps+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles", "TableStylesPart", "application/vnd.openxmlformats-officedocument.presentationml.tableStyles+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", "ThemePart", "application/vnd.openxmlformats-officedocument.theme+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps", "ViewPropertiesPart", "application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster", "NotesMasterPart", "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", "SlidePart", "application/vnd.openxmlformats-officedocument.presentationml.slide+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster", "SlideMasterPart", "application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml", true, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", "UserDefinedTagsPart", "application/vnd.openxmlformats-officedocument.presentationml.tags+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors", "CommentAuthorsPart", "application/vnd.openxmlformats-officedocument.presentationml.commentAuthors+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster", "HandoutMasterPart", "application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.microsoft.com/office/2006/relationships/legacyDocTextInfo", "LegacyDiagramTextInfoPart", "application/vnd.ms-office.legacyDocTextInfo", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.microsoft.com/office/2006/relationships/vbaProject", "VbaProjectPart", "application/vnd.ms-office.vbaProject", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.microsoft.com/office/2018/10/relationships/comments", "PowerPointCommentPart", "application/vnd.ms-powerpoint.comments+xml", false, true, FileFormatVersions.Office2021 },
-                { "http://schemas.microsoft.com/office/2018/10/relationships/authors", "PowerPointAuthorsPart", "application/vnd.ms-powerpoint.authors+xml", false, false, FileFormatVersions.Office2021 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps", "application/vnd.openxmlformats-officedocument.presentationml.presProps+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles", "application/vnd.openxmlformats-officedocument.presentationml.tableStyles+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme", "application/vnd.openxmlformats-officedocument.theme+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps", "application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster", "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide", "application/vnd.openxmlformats-officedocument.presentationml.slide+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster", "application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml", true, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags", "application/vnd.openxmlformats-officedocument.presentationml.tags+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors", "application/vnd.openxmlformats-officedocument.presentationml.commentAuthors+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster", "application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/legacyDocTextInfo", "application/vnd.ms-office.legacyDocTextInfo", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/vbaProject", "application/vnd.ms-office.vbaProject", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2018/10/relationships/comments", "application/vnd.ms-powerpoint.comments+xml", false, true, FileFormatVersions.Office2021 },
+                { "http://schemas.microsoft.com/office/2018/10/relationships/authors", "application/vnd.ms-powerpoint.authors+xml", false, false, FileFormatVersions.Office2021 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
             IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;

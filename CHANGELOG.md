@@ -6,12 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [3.0.0]
 
+## Changed
+- When validation finds incrorect part, it will now raise the relationship type rather than a class name
+
 ### Breaking change
 - Renamed PartExtensionProvider to IPartExtensionFeature and reduced its surface area to only two methods (instead of a full Dictionary<,>). The property to access this off of OpenXmlPackage has been removed, but may be accessed via `Features.Get<IPartExtensionFeature>()` if needed.
 - Removed unused `SchemaAttrAttribute`
 - Removed unused `ChildElementInfoAttribute`
-- Removed `OpenXmlSimpleType.TextValue`. This property was never meant to be used externally
 - Core infrastructure is now contained in a new package DocumentFormat.OpenXml.Framework. Typed classes are still in DocumentFormat.OpenXml. This means that you may reference DocumentFormat.OpenXml and still compile the same types, but if you want a smaller package, you may rely on just the framework package. 
+- Removed `OpenXmlSimpleType.TextValue`. This property was never meant to be used externally
+- Removed obsolete validation logic from v1 of the SDK
 - Removed mutable properties on OpenXmlAttribute and marked as `readonly`
 
 ## [2.20.0]

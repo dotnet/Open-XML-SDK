@@ -355,19 +355,19 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Name => "commentsExtended";
             private static readonly PartConstraints _partConstraints = new ()
             {
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", "AlternativeFormatImportPart", null, false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", "ChartPart", "application/vnd.openxmlformats-officedocument.drawingml.chart+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.microsoft.com/office/2014/relationships/chartEx", "ExtendedChartPart", "application/vnd.ms-office.chartex+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", "DiagramColorsPart", "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", "DiagramDataPart", "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", "DiagramPersistLayoutPart", "application/vnd.ms-office.drawingml.diagramDrawing+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", "DiagramLayoutDefinitionPart", "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", "DiagramStylePart", "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml", false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", "EmbeddedControlPersistencePart", null, false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", "EmbeddedObjectPart", null, false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", "EmbeddedPackagePart", null, false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", "ImagePart", null, false, true, FileFormatVersions.Office2007 },
-                { "http://schemas.microsoft.com/office/2017/06/relationships/model3d", "Model3DReferenceRelationshipPart", "model/gltf-binary", false, true, FileFormatVersions.Office2019 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart", "application/vnd.openxmlformats-officedocument.drawingml.chart+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2014/relationships/chartEx", "application/vnd.ms-office.chartex+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors", "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData", "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing", "application/vnd.ms-office.drawingml.diagramDrawing+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout", "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle", "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2017/06/relationships/model3d", "model/gltf-binary", false, true, FileFormatVersions.Office2019 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
             IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;

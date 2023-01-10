@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Name => "numbering";
             private static readonly PartConstraints _partConstraints = new ()
             {
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", "ImagePart", null, false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", null, false, true, FileFormatVersions.Office2007 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
             IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;

@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Path => "_xmlsignatures";
             private static readonly PartConstraints _partConstraints = new ()
             {
-                { "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature", "XmlSignaturePart", "application/vnd.openxmlformats-package.digital-signature-xmlsignature+xml", false, true, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature", "application/vnd.openxmlformats-package.digital-signature-xmlsignature+xml", false, true, FileFormatVersions.Office2007 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
             IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;

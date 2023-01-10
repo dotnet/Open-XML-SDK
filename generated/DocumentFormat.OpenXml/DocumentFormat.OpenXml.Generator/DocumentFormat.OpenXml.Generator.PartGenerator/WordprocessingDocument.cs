@@ -21,17 +21,17 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             private static readonly PartConstraints _partConstraints = new ()
             {
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", "MainDocumentPart", null, true, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", "CoreFilePropertiesPart", "application/vnd.openxmlformats-package.core-properties+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", "ExtendedFilePropertiesPart", "application/vnd.openxmlformats-officedocument.extended-properties+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", "CustomFilePropertiesPart", "application/vnd.openxmlformats-officedocument.custom-properties+xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", "ThumbnailPart", null, false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", "DigitalSignatureOriginPart", "application/vnd.openxmlformats-package.digital-signature-origin", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", "QuickAccessToolbarCustomizationsPart", "application/xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", "RibbonExtensibilityPart", "application/xml", false, false, FileFormatVersions.Office2007 },
-                { "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", "RibbonAndBackstageCustomizationsPart", "application/xml", false, false, FileFormatVersions.Office2010 },
-                { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", "WebExTaskpanesPart", "application/vnd.ms-office.webextensiontaskpanes+xml", false, false, FileFormatVersions.Office2013 },
-                { "http://schemas.microsoft.com/office/2020/02/relationships/classificationlabels", "LabelInfoPart", "application/vnd.ms-office.classificationlabels+xml", false, false, FileFormatVersions.Office2021 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", null, true, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", "application/vnd.openxmlformats-package.core-properties+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", "application/vnd.openxmlformats-officedocument.extended-properties+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", "application/vnd.openxmlformats-officedocument.custom-properties+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", null, false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", "application/vnd.openxmlformats-package.digital-signature-origin", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", "application/xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", "application/xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", "application/xml", false, false, FileFormatVersions.Office2010 },
+                { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", "application/vnd.ms-office.webextensiontaskpanes+xml", false, false, FileFormatVersions.Office2013 },
+                { "http://schemas.microsoft.com/office/2020/02/relationships/classificationlabels", "application/vnd.ms-office.classificationlabels+xml", false, false, FileFormatVersions.Office2021 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
             IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;

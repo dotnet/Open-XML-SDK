@@ -193,8 +193,6 @@ public static class PartWriter
                 writer.Write("{ ");
                 writer.WriteString(p.RelationshipType);
                 writer.Write(", ");
-                writer.WriteString(p.Name);
-                writer.Write(", ");
                 writer.WriteString(p.ContentType);
                 writer.Write(", ");
                 writer.WriteBool(c.MinOccursIsNonZero);

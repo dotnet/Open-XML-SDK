@@ -3089,15 +3089,24 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var errors = validator.Validate(loadedDoc);
                     Assert.Equal(2, errors.Count());
-                    Assert.Same(loadedDoc.MainDocumentPart, errors.First().Part);
-                    Assert.Same(loadedDoc.MainDocumentPart, errors.First().RelatedPart);
-                    Assert.Equal("Pkg_PartIsNotAllowed", errors.First().Id);
-                    Assert.Equal("/word/document.xml", errors.First().Path.PartUri.ToString());
-                    Assert.Equal("The package/part 'MainDocumentPart{/word/document.xml}' cannot have a relationship that targets part 'MainDocumentPart{/word/document.xml}'.", errors.First().Description);
-                    Assert.Same(loadedDoc.MainDocumentPart, errors.ElementAt(1).Part);
-                    Assert.Equal("Pkg_OnlyOnePartAllowed", errors.ElementAt(1).Id);
-                    Assert.Equal("/word/document.xml", errors.ElementAt(1).Path.PartUri.ToString());
-                    Assert.Equal("The package/part 'MainDocumentPart{/word/document.xml}' can only have one instance of relationship that targets part 'WordprocessingCommentsPart'.", errors.ElementAt(1).Description);
+
+                    Assert.Collection(
+                        errors,
+                        e =>
+                        {
+                            Assert.Same(loadedDoc.MainDocumentPart, e.Part);
+                            Assert.Same(loadedDoc.MainDocumentPart, e.RelatedPart);
+                            Assert.Equal("Pkg_PartIsNotAllowed", e.Id);
+                            Assert.Equal("/word/document.xml", e.Path.PartUri.ToString());
+                            Assert.Equal("The package/part 'MainDocumentPart{/word/document.xml}' cannot have a relationship that targets part 'MainDocumentPart{/word/document.xml}'.", e.Description);
+                        },
+                        e =>
+                        {
+                            Assert.Same(loadedDoc.MainDocumentPart, e.Part);
+                            Assert.Equal("Pkg_OnlyOnePartAllowed", e.Id);
+                            Assert.Equal("/word/document.xml", e.Path.PartUri.ToString());
+                            Assert.Equal("The package/part 'MainDocumentPart{/word/document.xml}' can only have one instance of relationship that targets part 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments'.", e.Description);
+                        });
                 }
             }
 
@@ -3112,11 +3121,13 @@ namespace DocumentFormat.OpenXml.Tests
                     // must have a SlideMasterPart.
                     var errors = validator.Validate(pptdoc);
                     Assert.Equal(2, errors.Count());
-                    Assert.Same(presettationPart, errors.First().Part);
-                    Assert.Null(errors.First().RelatedPart);
-                    Assert.Equal("Pkg_RequiredPartDoNotExist", errors.First().Id);
-                    Assert.Equal("/ppt/presentation.xml", errors.First().Path.PartUri.ToString());
-                    Assert.Equal("A required part 'SlideMasterPart' is missing.", errors.First().Description);
+                    var first = errors.First();
+
+                    Assert.Same(presettationPart, first.Part);
+                    Assert.Null(first.RelatedPart);
+                    Assert.Equal("Pkg_RequiredPartDoNotExist", first.Id);
+                    Assert.Equal("/ppt/presentation.xml", first.Path.PartUri.ToString());
+                    Assert.Equal("A required part 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster' is missing.", first.Description);
                 }
             }
         }

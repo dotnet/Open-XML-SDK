@@ -1215,7 +1215,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 // Invalid part (same relationship type, but wrong (is different to be expected )content type
-                if (partConstraintRule.PartContentType is not null && contentType != partConstraintRule.PartContentType)
+                if (partConstraintRule.ContentType is not null && contentType != partConstraintRule.ContentType)
                 {
                     throw new ArgumentOutOfRangeException(nameof(newPart));
                 }
@@ -1272,7 +1272,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (Features.GetRequired<IPartConstraintFeature>().TryGetRule(subPart.RelationshipType, out var partConstraintRule))
             {
-                if (partConstraintRule.PartContentType is not null && subPart.ContentType != partConstraintRule.PartContentType)
+                if (partConstraintRule.ContentType is not null && subPart.ContentType != partConstraintRule.ContentType)
                 {
                     throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
                 }
@@ -1779,10 +1779,18 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="loadedParts">Temp collection to detect loaded (shared) parts.</param>
         internal void LoadReferencedPartsAndRelationships(OpenXmlPackage openXmlPackage, OpenXmlPart? sourcePart, RelationshipCollection relationshipCollection, Dictionary<Uri, OpenXmlPart> loadedParts)
         {
+            Dictionary<string, bool> partsToIgnore = new()
+            {
+                // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1281
+                { @"http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain", openXmlPackage.OpenSettings.IgnoreExceptionOnCalcChainPartMissing },
+
+                // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1205
+                { @"http://schemas.microsoft.com/office/2006/relationships/recovered", true },
+            };
+
             foreach (var relationship in relationshipCollection)
             {
-                // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1205
-                if (relationship.RelationshipType == @"http://schemas.microsoft.com/office/2006/relationships/recovered")
+                if (partsToIgnore.ContainsKey(relationship.RelationshipType) && partsToIgnore[relationship.RelationshipType])
                 {
                     continue;
                 }

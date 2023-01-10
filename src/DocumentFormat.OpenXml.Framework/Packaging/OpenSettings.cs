@@ -10,7 +10,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public class OpenSettings
     {
-        private bool? _autoSave;
         private MarkupCompatibilityProcessSettings? _mcSettings;
 
         /// <summary>
@@ -32,17 +31,14 @@ namespace DocumentFormat.OpenXml.Packaging
             MarkupCompatibilityProcessSettings.TargetFileFormatVersions = other.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
             MaxCharactersInPart = other.MaxCharactersInPart;
             RelationshipErrorHandlerFactory = other.RelationshipErrorHandlerFactory;
+            IgnoreExceptionOnCalcChainPartMissing = other.IgnoreExceptionOnCalcChainPartMissing;
         }
 
         /// <summary>
         /// Gets or sets a value indicating whether to auto save document modifications.
         /// The default value is true.
         /// </summary>
-        public bool AutoSave
-        {
-            get => _autoSave ?? true;
-            set => _autoSave = value;
-        }
+        public bool AutoSave { get; set; } = true;
 
         /// <summary>
         /// Gets or sets the value of the markup compatibility processing mode.
@@ -51,10 +47,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (_mcSettings is null)
-                {
-                    _mcSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007);
-                }
+                _mcSettings ??= new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007);
 
                 return _mcSettings;
             }
@@ -77,5 +70,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets or sets a delegate that is used to create a handler to rewrite relationships that are malformed. On platforms after .NET 4.5, <see cref="Uri"/> parsing will fail on malformed strings.
         /// </summary>
         public Func<OpenXmlPackage, RelationshipErrorHandler>? RelationshipErrorHandlerFactory { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether to ignore an exception if the calcChain part is missing.
+        /// The default value is false which means missing calcChain part will throw an exception upon package open.
+        /// </summary>
+        public bool IgnoreExceptionOnCalcChainPartMissing { get; set; }
     }
 }

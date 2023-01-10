@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Packaging
             string ITargetFeature.Name => "vbaProject";
             private static readonly PartConstraints _partConstraints = new ()
             {
-                { "http://schemas.microsoft.com/office/2006/relationships/wordVbaData", "VbaDataPart", "application/vnd.ms-word.vbaData+xml", false, false, FileFormatVersions.Office2007 },
+                { "http://schemas.microsoft.com/office/2006/relationships/wordVbaData", "application/vnd.ms-word.vbaData+xml", false, false, FileFormatVersions.Office2007 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
             IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;

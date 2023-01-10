@@ -11,9 +11,9 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         private readonly Dictionary<string, PartConstraintRule> _rules = new();
 
-        public void Add(string relationship, string name, string? contentType, bool minOccursIsNonZero, bool maxOccursGreatThanOne, FileFormatVersions versions)
+        public void Add(string relationship, string? contentType, bool minOccursIsNonZero, bool maxOccursGreatThanOne, FileFormatVersions versions)
         {
-            var info = new PartConstraintRule(relationship, name, contentType, minOccursIsNonZero, maxOccursGreatThanOne, versions);
+            var info = new PartConstraintRule(relationship, contentType, minOccursIsNonZero, maxOccursGreatThanOne, versions);
             _rules.Add(info.RelationshipType, info);
         }
 
