@@ -3593,7 +3593,7 @@
     "ContentType": "application/vnd.ms-office.vbaProject",
     "IsContentTypeFixed": true,
     "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
-    "TargetFileExtension": ".xml",
+    "TargetFileExtension": ".bin",
     "TargetName": "vbaProject",
     "TargetPath": ".",
     "Parts": [

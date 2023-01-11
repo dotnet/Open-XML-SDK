@@ -44,6 +44,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private sealed class GeneratedFeatures : TypedPartFeatureCollection, ITargetFeature, IPartConstraintFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
+            string ITargetFeature.Extension => ".bin";
             string ITargetFeature.Name => "vbaProject";
             private static readonly PartConstraints _partConstraints = new ()
             {
