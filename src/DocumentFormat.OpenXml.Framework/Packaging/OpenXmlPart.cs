@@ -17,7 +17,6 @@ namespace DocumentFormat.OpenXml.Packaging
     public abstract partial class OpenXmlPart : OpenXmlPartContainer
     {
         private OpenXmlPackage? _openXmlPackage;
-        private PackagePart? _packagePart;
         private bool _isLoading;
 
         /// <summary>
@@ -45,9 +44,9 @@ namespace DocumentFormat.OpenXml.Packaging
             Debug.Assert(loadedParts.ContainsKey(uriTarget));
 
             // TODO: should we delay load?
-            var part = _openXmlPackage.Package.GetPart(uriTarget);
+            var part = _openXmlPackage.Features.GetRequired<IPackageFeature>().Package.GetPart(uriTarget);
 
-            _packagePart = part;
+            Features.Set<IPackagePartFeature>(new PackagePartFeature(part));
 
             if (IsContentTypeFixed && !IsValidContentType(part))
             {
@@ -64,7 +63,7 @@ namespace DocumentFormat.OpenXml.Packaging
             Features.GetRequired<IPartUriFeature>().ReserveUri(ContentType, Uri);
 
             // load recursively
-            var relationshipCollection = new PackagePartRelationshipPropertyCollection(PackagePart, Features.GetNamespaceResolver());
+            var relationshipCollection = new PackagePartRelationshipPropertyCollection(Features.GetRequired<IPackagePartFeature>().Part, Features.GetNamespaceResolver());
             LoadReferencedPartsAndRelationships(_openXmlPackage, this, relationshipCollection, loadedParts);
         }
 
@@ -90,21 +89,15 @@ namespace DocumentFormat.OpenXml.Packaging
             CreatePart(_openXmlPackage, uri, contentType);
         }
 
-        [MemberNotNull(nameof(_packagePart))]
         private void CreatePart(OpenXmlPackage package, Uri uri, string contentType)
         {
-            _packagePart = package.CreateMetroPart(uri, contentType);
+            var part = package.CreateMetroPart(uri, contentType);
+            Features.Set<IPackagePartFeature>(new PackagePartFeature(part));
         }
 
         [MemberNotNull(nameof(_openXmlPackage))]
         private void SetPackage(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent)
         {
-            // throw exception to catch error in our code
-            if (_packagePart is not null)
-            {
-                throw new InvalidOperationException();
-            }
-
             if (openXmlPackage is null && parent is null)
             {
                 throw new ArgumentNullException(ExceptionMessages.PackageRelatedArgumentNullException);
@@ -212,12 +205,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Returns the part content data stream.
         /// </summary>
         /// <returns>The content data stream for the part. </returns>
-        public Stream GetStream()
-        {
-            ThrowIfObjectDisposed();
-
-            return PackagePart.GetStream();
-        }
+        public Stream GetStream() => GetStream(FileMode.OpenOrCreate);
 
         /// <summary>
         /// Returns the content stream that was opened using a specified I/O FileMode.
@@ -228,7 +216,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            return PackagePart.GetStream(mode);
+            return PackagePart.GetStream(mode, Features.GetRequired<IPackageFeature>().Package.FileOpenAccess);
         }
 
         /// <summary>
@@ -315,12 +303,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the internal metro PackagePart element.
         /// </summary>
-        internal PackagePart PackagePart
+        internal IPackagePart PackagePart
         {
             get
             {
                 ThrowIfObjectDisposed();
-                return _packagePart;
+                return Features.GetRequired<IPackagePartFeature>().Part;
             }
         }
 
@@ -365,7 +353,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="part"></param>
         /// <returns>True if the content type is valid for this part. False otherwise.</returns>
-        private protected virtual bool IsValidContentType(PackagePart part)
+        private protected virtual bool IsValidContentType(IPackagePart part)
         {
             return part.ContentType == ContentType;
         }
@@ -532,7 +520,6 @@ namespace DocumentFormat.OpenXml.Packaging
             ChildrenRelationshipParts.Clear();
             ReferenceRelationshipList.Clear();
             _openXmlPackage = null;
-            _packagePart = null;
 
             // this._ownerPart = null;
             if (InternalRootElement is not null)
@@ -550,10 +537,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Indicates whether the object is already disposed.
         /// </summary>
         [MemberNotNull(nameof(_openXmlPackage))]
-        [MemberNotNull(nameof(_packagePart))]
         protected sealed override void ThrowIfObjectDisposed()
         {
-            if (_openXmlPackage is null || _packagePart is null)
+            if (_openXmlPackage is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.PartIsDestroyed);
             }
@@ -580,18 +566,18 @@ namespace DocumentFormat.OpenXml.Packaging
             PackagePart.DeleteRelationship(id);
         }
 
-        internal sealed override PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType)
+        internal sealed override IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType)
         {
             ThrowIfObjectDisposed();
 
-            return _packagePart.CreateRelationship(targetUri, targetMode, relationshipType);
+            return PackagePart.CreateRelationship(targetUri, targetMode, relationshipType);
         }
 
-        internal sealed override PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id)
+        internal sealed override IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id)
         {
             ThrowIfObjectDisposed();
 
-            return _packagePart.CreateRelationship(targetUri, targetMode, relationshipType, id);
+            return PackagePart.CreateRelationship(targetUri, targetMode, relationshipType, id);
         }
 
         #endregion

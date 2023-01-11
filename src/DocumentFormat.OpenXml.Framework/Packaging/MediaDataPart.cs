@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private const string DefaultTargetName = "mediadata";
         private const string DefaultTargetExt = ".bin";
 
-        internal MediaDataPart(OpenXmlPackage openXmlPackage, PackagePart packagePart)
+        internal MediaDataPart(OpenXmlPackage openXmlPackage, IPackagePart packagePart)
             : base(openXmlPackage, packagePart)
         {
         }
