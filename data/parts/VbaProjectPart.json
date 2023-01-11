@@ -4,6 +4,7 @@
   "ContentType": "application/vnd.ms-office.vbaProject",
   "RelationshipType": "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
   "Target": "vbaProject",
+  "Extension": ".bin",
   "Paths": {
     "General": "."
   },
