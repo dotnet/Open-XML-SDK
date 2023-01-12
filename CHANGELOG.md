@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [3.0.0]
 
-## Changed
+### Changed
 - When validation finds incrorect part, it will now raise the relationship type rather than a class name
 
 ### Breaking change
@@ -18,10 +18,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed obsolete validation logic from v1 of the SDK
 - Removed mutable properties on OpenXmlAttribute and marked as `readonly`
 
+### Fixed
+- Fixed incorrect file extensions for vbaProject files (#1292)
+
 ## [2.20.0]
 
 ### Changed
 - Marked all obsoleted APIs as compile as error. These will be removed in the next release
+
+### Fixed
+- Fixed incorrect file extensions for vbaProject files (#1292)
 
 ## [2.19.0] - 2022-12-14
 
