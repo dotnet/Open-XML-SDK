@@ -12,9 +12,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     internal class PackagePartRelationshipPropertyCollection : RelationshipCollection
     {
-        public PackagePart PackagePart { get; }
+        public IPackagePart PackagePart { get; }
 
-        public PackagePartRelationshipPropertyCollection(PackagePart packagePart, IOpenXmlNamespaceResolver resolver)
+        public PackagePartRelationshipPropertyCollection(IPackagePart packagePart, IOpenXmlNamespaceResolver resolver)
             : base(packagePart.GetRelationships(), resolver)
         {
             PackagePart = packagePart;
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Packaging
             PackagePart.CreateRelationship(targetUri, targetMode, strRelationshipType, strId);
         }
 
-        internal override Package GetPackage()
+        internal override IPackage GetPackage()
         {
             return PackagePart.Package;
         }

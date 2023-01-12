@@ -15,11 +15,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     internal abstract class RelationshipCollection : List<RelationshipProperty>
     {
-        protected PackageRelationshipCollection BasePackageRelationshipCollection { get; }
+        protected IEnumerable<IPackageRelationship> BasePackageRelationshipCollection { get; }
 
         internal bool StrictRelationshipFound { get; set; }
 
-        public RelationshipCollection(PackageRelationshipCollection collection, IOpenXmlNamespaceResolver resolver)
+        public RelationshipCollection(IEnumerable<IPackageRelationship> collection, IOpenXmlNamespaceResolver resolver)
         {
             BasePackageRelationshipCollection = collection;
 
@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         private void Build(IOpenXmlNamespaceResolver resolver)
         {
-            foreach (PackageRelationship relationship in BasePackageRelationshipCollection)
+            foreach (var relationship in BasePackageRelationshipCollection)
             {
                 RelationshipProperty relationshipProperty;
 
@@ -68,6 +68,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal abstract void ReplaceRelationship(Uri targetUri, TargetMode targetMode, string strRelationshipType, string strId);
 
-        internal abstract Package GetPackage();
+        internal abstract IPackage GetPackage();
     }
 }

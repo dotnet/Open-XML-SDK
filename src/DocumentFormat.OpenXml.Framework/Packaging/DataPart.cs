@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private const string DefaultTargetExt = ".bin";
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private readonly PackagePart _metroPart;
+        private readonly IPackagePart _metroPart;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private readonly Uri _uri;
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the internal metro PackagePart.
         /// </summary>
-        internal PackagePart PackagePart
+        internal IPackagePart PackagePart
         {
             get
             {
@@ -195,7 +195,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         internal virtual string TargetFileExtension => DefaultTargetExt;
 
-        private protected DataPart(OpenXmlPackage openXmlPackage, PackagePart packagePart)
+        private protected DataPart(OpenXmlPackage openXmlPackage, IPackagePart packagePart)
         {
             Debug.Assert(openXmlPackage.Package.GetPart(packagePart.Uri) == packagePart);
 

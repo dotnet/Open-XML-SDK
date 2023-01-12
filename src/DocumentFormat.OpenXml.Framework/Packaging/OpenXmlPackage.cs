@@ -7,7 +7,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -23,7 +22,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
 
-        private Package? _package;
+        private Action? _onClose;
+        private bool _isDisposed;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class.
@@ -32,7 +32,6 @@ namespace DocumentFormat.OpenXml.Packaging
         protected OpenXmlPackage()
             : base()
         {
-            _package = null!;
             OpenSettings = null!;
         }
 
@@ -62,10 +61,17 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             OpenSettings = new OpenSettings(settings);
-            _package = package;
 
-            Load(package);
+            var feature = new PackageImpl(package);
+
+            Features.Set<IPackageFeature>(feature);
+
+            OnClose(package.Close);
+
+            Load(feature);
         }
+
+        internal void OnClose(Action callback) => _onClose += callback;
 
         /// <summary>
         /// Gets the root part for the package.
@@ -75,7 +81,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Loads the package. This method must be called in the constructor of a derived class.
         /// </summary>
-        private void Load(Package package)
+        private void Load(IPackage package)
         {
             try
             {
@@ -94,7 +100,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 var handler = OpenSettings.RelationshipErrorHandlerFactory?.Invoke(this);
 
-                handler?.Handle(Package);
+                handler?.Handle(package);
 
                 // AutoSave must be false when opening ISO Strict doc as editable.
                 // (Attention: #2545529. Now we disable this code until we finally decide to go with this. Instead, we take an alternative approach that is added in the SavePartContents() method
@@ -114,7 +120,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         hasMainPart = true;
 
                         var uriTarget = PackUriHelper.ResolvePartUri(new Uri("/", UriKind.Relative), relationship.TargetUri);
-                        var metroPart = Package.GetPart(uriTarget);
+                        var metroPart = package.GetPart(uriTarget);
 
                         mainPartFeature.ContentType = metroPart.ContentType;
                         break;
@@ -150,17 +156,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public bool StrictRelationshipFound { get; private set; }
 
-        /// <summary>
-        /// Gets the package of the document.
-        /// </summary>
-        public Package Package
-        {
-            get
-            {
-                ThrowIfObjectDisposed();
-                return _package;
-            }
-        }
+        internal IPackage Package => Features.GetRequired<IPackageFeature>().Package;
 
         /// <summary>
         /// Gets the FileAccess setting for the document.
@@ -367,10 +363,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Thrown if an object is disposed.
         /// </summary>
-        [MemberNotNull(nameof(_package))]
         protected override void ThrowIfObjectDisposed()
         {
-            if (_package is null)
+            if (_isDisposed)
             {
                 throw new ObjectDisposedException(GetType().Name);
             }
@@ -382,7 +377,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="disposing">Specify true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
         {
-            if (_package is null)
+            if (_isDisposed)
             {
                 return;
             }
@@ -394,16 +389,16 @@ namespace DocumentFormat.OpenXml.Packaging
                 closing?.OnChange(this, EventType.Closing);
 
                 // Try to save contents of every part in the package
-                SavePartContents(AutoSave, _package);
+                SavePartContents(AutoSave);
                 DeleteUnusedDataPartOnClose();
 
                 ChildrenRelationshipParts.Clear();
                 ReferenceRelationshipList.Clear();
 
-                closing?.OnChange(this, EventType.Closed);
+                _onClose?.Invoke();
 
-                _package.Close();
-                _package = null;
+                closing?.OnChange(this, EventType.Closed);
+                _isDisposed = true;
             }
         }
 
@@ -467,19 +462,21 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public bool AutoSave => OpenSettings.AutoSave;
 
-        private void SavePartContents(bool save, Package package)
+        private IPackage SavePartContents(bool save)
         {
+            var package = Features.GetRequired<IPackageFeature>().Package;
+
             bool isAnyPartChanged;
 
-            if (FileOpenAccess == FileAccess.Read)
+            if (package.FileOpenAccess == FileAccess.Read)
             {
-                return; // do nothing if the package is open in read-only mode.
+                return package; // do nothing if the package is open in read-only mode.
             }
 
             // When this.StrictRelationshipFound is true, we ignore the save argument to do the translation if isAnyPartChanged is true. That's the way to keep consistency.
             if (!save && !StrictRelationshipFound)
             {
-                return; // do nothing if saving is false.
+                return package; // do nothing if saving is false.
             }
 
             // Traversal the whole package and save changed contents.
@@ -515,6 +512,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     relationshipCollection.UpdateRelationshipTypesInPackage();
                 }
             }
+
+            return package;
         }
 
         // Check if the part content changed and save it if yes.
@@ -528,7 +527,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 // For PackagePart: Invoking UpdateRelationshipTypesInPackage() changes the relationship types in the package part.
                 // We need to new PackageRelationshipPropertyCollection to read through the package part contents right here
                 // because some operation may have updated the package part before we get here.
-                relationshipCollection = new PackagePartRelationshipPropertyCollection(part.PackagePart, part.Features.GetNamespaceResolver());
+                relationshipCollection = new PackagePartRelationshipPropertyCollection(part.Features.GetRequired<IPackagePartFeature>().Part, part.Features.GetNamespaceResolver());
                 relationshipCollection.UpdateRelationshipTypesInPackage();
 
                 // For ISO Strict documents, we read and save the part anyway to translate the contents. The contents are translated when PartRootElement is being loaded.
@@ -705,24 +704,24 @@ namespace DocumentFormat.OpenXml.Packaging
             Package.DeleteRelationship(id);
         }
 
-        internal sealed override PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType)
+        internal sealed override IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType)
         {
             ThrowIfObjectDisposed();
 
-            return Package.CreateRelationship(targetUri, targetMode, relationshipType);
+            return Features.GetRequired<IPackageFeature>().Package.CreateRelationship(targetUri, targetMode, relationshipType);
         }
 
-        internal sealed override PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id)
+        internal sealed override IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id)
         {
             ThrowIfObjectDisposed();
 
-            return Package.CreateRelationship(targetUri, targetMode, relationshipType, id);
+            return Features.GetRequired<IPackageFeature>().Package.CreateRelationship(targetUri, targetMode, relationshipType, id);
         }
 
         // create the metro part in the package with the CompressionOption
-        internal PackagePart CreateMetroPart(Uri partUri, string contentType)
+        internal IPackagePart CreateMetroPart(Uri partUri, string contentType)
         {
-            return Package.CreatePart(partUri, contentType, CompressionOption);
+            return Features.GetRequired<IPackageFeature>().Package.CreatePart(partUri, contentType, CompressionOption);
         }
 
         #endregion
@@ -825,8 +824,8 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 lock (_saveAndCloneLock)
                 {
-                    SavePartContents(true, _package);
-                    Package.Flush();
+                    SavePartContents(true);
+                    Features.GetRequired<IPackageFeature>().Package.Save();
                 }
             }
         }
@@ -1203,7 +1202,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             private IChildPartFeatures CreateChildParts() => new PartDictionary(this);
 
-            private IPartUriFeature CreatePartUri() => new PackagePartUriHelper(this);
+            private IPartUriFeature CreatePartUri() => new PackagePartUriHelper(this.GetRequired<IPackageFeature>().Package);
 
             public void Set<TFeature>(TFeature? instance)
                 => _container.Set(instance);
