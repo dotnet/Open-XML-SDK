@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Marked `OpenXmlSimpleType.TextValue` as obsolete. This property was never meant to be used externally
 
+### Fixed
+- Fixed incorrect file extensions for vbaProject files (#1292)
+
 ## [2.19.0]
 
 ### Added
