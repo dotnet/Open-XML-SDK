@@ -63,7 +63,8 @@ internal class StreamPackageFeature : PackageBase, IPackageFeature, IDisposable
 
     IPackage IPackageFeature.Package => this;
 
-    bool IPackageFeature.CanReload => true;
+    PackageCapability IPackageFeature.Capabilities
+        => PackageFeature.DefaultCapabilities | PackageCapability.Reload;
 
     void IPackageFeature.Reload(FileMode? mode, FileAccess? access)
         => InitializePackage(mode, access);

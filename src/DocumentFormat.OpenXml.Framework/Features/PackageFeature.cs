@@ -19,8 +19,16 @@ internal sealed class PackageFeature : PackageBase, IPackageFeature
 
     IPackage IPackageFeature.Package => this;
 
-    bool IPackageFeature.CanReload => false;
-
     void IPackageFeature.Reload(FileMode? mode, FileAccess? access)
-        => throw new NotSupportedException();
+        => throw new NotImplementedException();
+
+    PackageCapability IPackageFeature.Capabilities => DefaultCapabilities;
+
+    // ZipArchive.Flush only exists on .NET Framework (https://github.com/dotnet/runtime/issues/24149)
+    internal static PackageCapability DefaultCapabilities
+#if NETFRAMEWORK
+        => PackageCapability.Save;
+#else
+        => PackageCapability.None;
+#endif
 }

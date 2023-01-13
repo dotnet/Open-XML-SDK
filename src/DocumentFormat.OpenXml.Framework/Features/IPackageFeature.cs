@@ -17,9 +17,9 @@ public interface IPackageFeature
     IPackage Package { get; }
 
     /// <summary>
-    /// Gets a value indicating whether the package can be reloaded.
+    /// Gets the capabilities of the package.
     /// </summary>
-    bool CanReload { get; }
+    PackageCapability Capabilities { get; }
 
     /// <summary>
     /// Reloads the package.
