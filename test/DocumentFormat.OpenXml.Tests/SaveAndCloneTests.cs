@@ -337,7 +337,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Arrange
             var package = Substitute.ForPartsOf<OpenXmlPackage>();
             var feature = Substitute.For<IPackageFeature>();
-            feature.Capabilities.Returns(canSave ? PackageCapability.Save : PackageCapability.None);
+            feature.Capabilities.Returns(canSave ? PackageCapabilities.Save : PackageCapabilities.None);
             package.Features.Set<IPackageFeature>(feature);
 
             // Act

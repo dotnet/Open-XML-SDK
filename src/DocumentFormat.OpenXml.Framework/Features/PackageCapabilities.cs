@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Features;
 /// Values to query the capabilities of a package.
 /// </summary>
 [Flags]
-public enum PackageCapability
+public enum PackageCapabilities
 {
     /// <summary>
     /// No capabilities

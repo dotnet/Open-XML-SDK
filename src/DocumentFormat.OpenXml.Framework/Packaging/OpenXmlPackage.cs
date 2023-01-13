@@ -192,7 +192,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets a value indicating whether saving the package is supported by calling <see cref="Save"/>. Some platforms (such as .NET Core), have limited support for saving.
         /// If <c>false</c>, in order to save, the document and/or package needs to be fully closed and disposed and then reopened.
         /// </summary>
-        public bool CanSave => Features.GetRequired<IPackageFeature>().Capabilities.HasFlagFast(PackageCapability.Save);
+        public bool CanSave => Features.GetRequired<IPackageFeature>().Capabilities.HasFlagFast(PackageCapabilities.Save);
 
         /// <summary>
         /// Gets all the <see cref="DataPart"/> parts in the document package.

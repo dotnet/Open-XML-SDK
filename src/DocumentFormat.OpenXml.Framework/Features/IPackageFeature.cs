@@ -19,7 +19,7 @@ public interface IPackageFeature
     /// <summary>
     /// Gets the capabilities of the package.
     /// </summary>
-    PackageCapability Capabilities { get; }
+    PackageCapabilities Capabilities { get; }
 
     /// <summary>
     /// Reloads the package.
