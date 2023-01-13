@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Marked `OpenXmlSimpleType.TextValue` as obsolete. This property was never meant to be used externally
+- Marked `OpenXmlPackage.Package` as obsolete. This will be an implementation detail in future versions
 
 ## [2.19.0]
 

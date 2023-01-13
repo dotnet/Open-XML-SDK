@@ -197,7 +197,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private protected DataPart(OpenXmlPackage openXmlPackage, PackagePart packagePart)
         {
-            Debug.Assert(openXmlPackage.Package.GetPart(packagePart.Uri) == packagePart);
+            Debug.Assert(openXmlPackage.PackageInternal.GetPart(packagePart.Uri) == packagePart);
 
             _openXmlPackage = openXmlPackage;
             _metroPart = packagePart;
@@ -278,7 +278,7 @@ namespace DocumentFormat.OpenXml.Packaging
         // destroy itself (aka. dispose)
         internal void Destroy()
         {
-            OpenXmlPackage.Package.DeletePart(Uri);
+            OpenXmlPackage.PackageInternal.DeletePart(Uri);
 
             _openXmlPackage = null;
         }

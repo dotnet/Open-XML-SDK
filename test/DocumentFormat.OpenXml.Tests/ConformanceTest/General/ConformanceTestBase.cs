@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Tests
                 string.Format(
                     "Elements [{0}] are detected in [{1}]",
                     typeof(TElement).ToString(),
-                    package.Package.PackageProperties.Title));
+                    package.PackageInternal.PackageProperties.Title));
 
             return elements;
         }

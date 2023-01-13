@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 var handler = OpenSettings.RelationshipErrorHandlerFactory?.Invoke(this);
 
-                handler?.Handle(Package);
+                handler?.Handle(PackageInternal);
 
                 // AutoSave must be false when opening ISO Strict doc as editable.
                 // (Attention: #2545529. Now we disable this code until we finally decide to go with this. Instead, we take an alternative approach that is added in the SavePartContents() method
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         hasMainPart = true;
 
                         var uriTarget = PackUriHelper.ResolvePartUri(new Uri("/", UriKind.Relative), relationship.TargetUri);
-                        var metroPart = Package.GetPart(uriTarget);
+                        var metroPart = PackageInternal.GetPart(uriTarget);
 
                         mainPartFeature.ContentType = metroPart.ContentType;
                         break;
@@ -154,7 +154,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the package of the document.
         /// </summary>
-        public Package Package
+        [Obsolete("This property will be removed in a future version as an implementation detail", error: true)]
+        public Package Package => PackageInternal;
+
+        internal Package PackageInternal
         {
             get
             {
@@ -167,12 +170,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the FileAccess setting for the document.
         /// The current I/O access settings are: Read, Write, or ReadWrite.
         /// </summary>
-        public FileAccess FileOpenAccess => Package.FileOpenAccess;
+        public FileAccess FileOpenAccess => PackageInternal.FileOpenAccess;
 
         /// <summary>
         /// Gets the core package properties of the Open XML document.
         /// </summary>
-        public PackageProperties PackageProperties => Package.PackageProperties;
+        public PackageProperties PackageProperties => PackageInternal.PackageProperties;
 
         /// <summary>
         /// Gets or sets the compression level for the content of the new part
@@ -764,27 +767,27 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            Package.DeleteRelationship(id);
+            PackageInternal.DeleteRelationship(id);
         }
 
         internal sealed override PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType)
         {
             ThrowIfObjectDisposed();
 
-            return Package.CreateRelationship(targetUri, targetMode, relationshipType);
+            return PackageInternal.CreateRelationship(targetUri, targetMode, relationshipType);
         }
 
         internal sealed override PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id)
         {
             ThrowIfObjectDisposed();
 
-            return Package.CreateRelationship(targetUri, targetMode, relationshipType, id);
+            return PackageInternal.CreateRelationship(targetUri, targetMode, relationshipType, id);
         }
 
         // create the metro part in the package with the CompressionOption
         internal PackagePart CreateMetroPart(Uri partUri, string contentType)
         {
-            return Package.CreatePart(partUri, contentType, CompressionOption);
+            return PackageInternal.CreatePart(partUri, contentType, CompressionOption);
         }
 
         #endregion
@@ -888,7 +891,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 lock (_saveAndCloneLock)
                 {
                     SavePartContents(true, _package);
-                    Package.Flush();
+                    PackageInternal.Flush();
                 }
             }
         }

@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 partUri = _other.CreatePartUri(contentType, parentUri, targetPath, targetName, targetExt, forceUnique);
             }
-            while (_package.Value.Package.PartExists(partUri));
+            while (_package.Value.PackageInternal.PartExists(partUri));
 
             return partUri;
         }
@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 partUri = _other.EnsureUniquePartUri(contentType, parentUri, targetUri);
             }
-            while (_package.Value.Package.PartExists(partUri));
+            while (_package.Value.PackageInternal.PartExists(partUri));
 
             return partUri;
         }
