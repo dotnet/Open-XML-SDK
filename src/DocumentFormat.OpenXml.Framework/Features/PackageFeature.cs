@@ -21,6 +21,6 @@ internal sealed class PackageFeature : PackageBase, IPackageFeature
 
     bool IPackageFeature.CanReload => false;
 
-    void IPackageFeature.Reload(FileMode mode, FileAccess access)
+    void IPackageFeature.Reload(FileMode? mode, FileAccess? access)
         => throw new NotSupportedException();
 }

@@ -24,7 +24,7 @@ public interface IPackageFeature
     /// <summary>
     /// Reloads the package.
     /// </summary>
-    /// <param name="mode">File mode to use with new package.</param>
-    /// <param name="access">File access to use with the package.</param>
-    void Reload(FileMode mode, FileAccess access);
+    /// <param name="mode">File mode to use with reloaded package. If absent, will use original mode.</param>
+    /// <param name="access">File access to use with the reloaded package. If absent, will use original access.</param>
+    void Reload(FileMode? mode = default, FileAccess? access = default);
 }
