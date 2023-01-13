@@ -12,9 +12,9 @@ namespace DocumentFormat.OpenXml.Packaging;
 
 internal sealed class PackagePartImpl : IPackagePart, IPackagePartFeature
 {
-    private readonly PackageImpl _package;
+    private readonly PackageBase _package;
 
-    public PackagePartImpl(PackageImpl package, PackagePart part)
+    public PackagePartImpl(PackageBase package, PackagePart part)
     {
         _package = package;
         Part = part;

@@ -5,8 +5,6 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Features;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -38,17 +36,17 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Create an <see cref="OpenXmlPackage"/>.
         /// </summary>
-        /// <param name="package">Underlying package.</param>
+        /// <param name="packageFeature">Underlying package feature.</param>
         /// <param name="settings">Settings to use</param>
-        private protected OpenXmlPackage(Package package, OpenSettings? settings = null)
+        private protected OpenXmlPackage(IPackageFeature packageFeature, OpenSettings? settings = null)
             : base()
         {
-            if (package is null)
+            if (packageFeature is null)
             {
-                throw new ArgumentNullException(nameof(package));
+                throw new ArgumentNullException(nameof(packageFeature));
             }
 
-            if (package.FileOpenAccess == FileAccess.Write)
+            if (packageFeature.Package.FileOpenAccess == FileAccess.Write)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.PackageMustCanBeRead);
             }
@@ -62,13 +60,14 @@ namespace DocumentFormat.OpenXml.Packaging
 
             OpenSettings = new OpenSettings(settings);
 
-            var feature = new PackageImpl(package);
+            Features.Set<IPackageFeature>(packageFeature);
 
-            Features.Set<IPackageFeature>(feature);
+            if (packageFeature is IDisposable disposable)
+            {
+                OnClose(disposable.Dispose);
+            }
 
-            OnClose(package.Close);
-
-            Load(feature);
+            Load(packageFeature.Package);
         }
 
         internal void OnClose(Action callback) => _onClose += callback;

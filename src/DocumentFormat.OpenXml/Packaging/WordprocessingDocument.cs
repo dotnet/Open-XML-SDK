@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.IO;
@@ -23,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        private WordprocessingDocument(Package package, OpenSettings settings)
+        private WordprocessingDocument(IPackageFeature package, OpenSettings settings)
             : base(package, settings)
         {
         }
@@ -87,7 +88,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of WordprocessingDocument.</returns>
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static WordprocessingDocument Create(string path, WordprocessingDocumentType type, bool autoSave)
-            => new(PackageLoader.CreateCore(path), new OpenSettings { AutoSave = autoSave })
+            => new(new FilePackageFeature(path, PackageOpenMode.Create), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
             };
@@ -102,7 +103,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static WordprocessingDocument Create(Stream stream, WordprocessingDocumentType type, bool autoSave)
-            => new(PackageLoader.CreateCore(stream), new OpenSettings { AutoSave = autoSave })
+            => new(new StreamPackageFeature(stream, PackageOpenMode.Create), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
             };
@@ -117,7 +118,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static WordprocessingDocument Create(Package package, WordprocessingDocumentType type, bool autoSave)
-            => new(package, new OpenSettings { AutoSave = autoSave })
+            => new(new PackageFeature(package), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
             };
@@ -239,7 +240,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML WordprocessingDocument.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static WordprocessingDocument Open(string path, bool isEditable, OpenSettings openSettings)
-            => new WordprocessingDocument(PackageLoader.OpenCore(path, isEditable), openSettings);
+            => new WordprocessingDocument(new FilePackageFeature(path, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read), openSettings);
 
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the IO stream.
@@ -253,7 +254,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML WordprocessingDocument.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static WordprocessingDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
-            => new WordprocessingDocument(PackageLoader.OpenCore(stream, isEditable), openSettings);
+            => new WordprocessingDocument(new StreamPackageFeature(stream, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read), openSettings);
 
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the specified package.
@@ -266,7 +267,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static WordprocessingDocument Open(Package package, OpenSettings openSettings)
-            => new WordprocessingDocument(package, openSettings);
+            => new WordprocessingDocument(new PackageFeature(package), openSettings);
 
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the specified package.
