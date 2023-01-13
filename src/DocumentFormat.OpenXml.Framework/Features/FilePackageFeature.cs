@@ -4,7 +4,7 @@
 using System;
 using System.IO;
 
-namespace DocumentFormat.OpenXml.Packaging;
+namespace DocumentFormat.OpenXml.Features;
 
 internal sealed class FilePackageFeature : StreamPackageFeature
 {
@@ -20,7 +20,7 @@ internal sealed class FilePackageFeature : StreamPackageFeature
         {
             PackageOpenMode.Create => FileMode.Create,
             PackageOpenMode.Read => FileMode.Open,
-            PackageOpenMode.ReadWrite => FileMode.OpenOrCreate,
+            PackageOpenMode.ReadWrite => FileMode.Open,
             _ => throw new NotImplementedException(),
         };
         var share = openMode == PackageOpenMode.Read ? FileShare.Read : FileShare.None;

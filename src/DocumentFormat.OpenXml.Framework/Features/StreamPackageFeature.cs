@@ -3,12 +3,13 @@
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Packaging;
+namespace DocumentFormat.OpenXml.Features;
 
 internal class StreamPackageFeature : PackageBase, IPackageFeature, IDisposable
 {
