@@ -14,7 +14,6 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable
 {
     private readonly FileAccess _access;
     private readonly FileMode _mode;
-    private readonly long _defaultPosition;
 
     private Package _package;
     private bool _disposedValue;
@@ -51,8 +50,6 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable
         // Only the inital should create, after that, it should be open
         _mode = initialMode == FileMode.Create ? _mode = FileMode.Open : initialMode;
 
-        _defaultPosition = Stream.Position;
-
         InitializePackage(initialMode, _access);
     }
 
@@ -62,7 +59,6 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable
     private void InitializePackage(FileMode? mode = default, FileAccess? access = default)
     {
         _package?.Close();
-        Stream.Position = _defaultPosition;
         _package = Package.Open(Stream, mode ?? _mode, access ?? _access);
     }
 

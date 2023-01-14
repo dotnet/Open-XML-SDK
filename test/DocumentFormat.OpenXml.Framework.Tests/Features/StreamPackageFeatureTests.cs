@@ -264,6 +264,25 @@ public class StreamPackageFeatureTests
     }
 
     [Fact]
+    public void PackagePartReloadingWhenPacakgeIsCreated()
+    {
+        // Arrange
+        using var stream = new MemoryStream();
+        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.Create);
+        var feature = (IPackageFeature)streamFeature;
+
+        // Act
+        var part1Before = feature.Package.CreatePart(Part1.Uri, Part1.ContentType, CompressionOption.Normal);
+        feature.Reload();
+        var part1After = feature.Package.GetPart(Part1.Uri);
+
+        // Assert
+        Assert.Same(part1Before, part1After);
+        Assert.Equal(part1After.Uri, part1Before.Uri);
+        Assert.Equal(part1After.ContentType, part1Before.ContentType);
+    }
+
+    [Fact]
     public void PackageRelationshipAfterReload()
     {
         // Arrange
