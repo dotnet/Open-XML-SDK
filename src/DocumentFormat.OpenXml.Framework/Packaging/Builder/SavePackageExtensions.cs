@@ -28,7 +28,7 @@ internal static class SavePackageExtensions
         {
         }
 
-        public override PackageCapabilities Capabilities => base.Capabilities & PackageCapabilities.Save;
+        public override PackageCapabilities Capabilities => base.Capabilities | PackageCapabilities.Save;
 
         public override void Save() => Feature.Reload();
     }
