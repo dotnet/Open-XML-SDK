@@ -12,6 +12,10 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal class StreamPackageFeature : PackageFeatureBase, IDisposable
 {
+    private readonly FileAccess _access;
+    private readonly FileMode _mode;
+    private readonly long _defaultPosition;
+
     private Package _package;
     private bool _disposedValue;
 
@@ -35,8 +39,8 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable
         // Ensure the stream we're operating on is readonly if that is the requested mode
         Stream = openMode == PackageOpenMode.Read && stream.CanWrite ? new ReadOnlyStream(stream) : stream;
 
-        _initialAccess = openMode == PackageOpenMode.Read ? FileAccess.Read : FileAccess.ReadWrite;
-        _initialMode = openMode switch
+        _access = openMode == PackageOpenMode.Read ? FileAccess.Read : FileAccess.ReadWrite;
+        var initialMode = openMode switch
         {
             PackageOpenMode.Create => FileMode.Create,
             PackageOpenMode.Read => FileMode.Open,
@@ -44,19 +48,22 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable
             _ => throw new NotImplementedException(),
         };
 
-        InitializePackage();
+        // Only the inital should create, after that, it should be open
+        _mode = initialMode == FileMode.Create ? _mode = FileMode.Open : initialMode;
+
+        _defaultPosition = Stream.Position;
+
+        InitializePackage(initialMode, _access);
     }
 
     public Stream Stream { get; }
-
-    private readonly FileAccess _initialAccess;
-    private readonly FileMode _initialMode;
 
     [MemberNotNull(nameof(_package))]
     private void InitializePackage(FileMode? mode = default, FileAccess? access = default)
     {
         _package?.Close();
-        _package = Package.Open(Stream, mode ?? _initialMode, access ?? _initialAccess);
+        Stream.Position = _defaultPosition;
+        _package = Package.Open(Stream, mode ?? _mode, access ?? _access);
     }
 
     protected override Package Package => _package;
