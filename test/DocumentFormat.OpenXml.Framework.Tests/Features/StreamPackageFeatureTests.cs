@@ -77,7 +77,7 @@ public class StreamPackageFeatureTests
     {
         // Arrange
         using var stream = CreateSimplePackage();
-        using var feature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        using var feature = new StreamPackageFeature(stream, PackageOpenMode.Read);
         var package = (IPackage)feature;
 
         // Act
@@ -106,7 +106,7 @@ public class StreamPackageFeatureTests
     {
         // Arrange
         using var stream = CreateSimplePackage();
-        using var feature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        using var feature = new StreamPackageFeature(stream, PackageOpenMode.Read);
         var package = (IPackage)feature;
 
         // Act
@@ -125,7 +125,7 @@ public class StreamPackageFeatureTests
     {
         // Arrange
         using var stream = CreateSimplePackage();
-        using var feature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        using var feature = new StreamPackageFeature(stream, PackageOpenMode.Read);
         var package = (IPackage)feature;
 
         // Act
@@ -155,7 +155,7 @@ public class StreamPackageFeatureTests
     {
         // Arrange
         using var stream = CreateSimplePackage();
-        using var feature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        using var feature = new StreamPackageFeature(stream, PackageOpenMode.Read);
         var package = (IPackage)feature;
 
         // Act
@@ -191,7 +191,7 @@ public class StreamPackageFeatureTests
     {
         // Arrange
         using var stream = CreateSimplePackage();
-        using var feature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        using var feature = new StreamPackageFeature(stream, PackageOpenMode.Read);
         var package = (IPackage)feature;
 
         // Act
@@ -208,7 +208,7 @@ public class StreamPackageFeatureTests
     {
         // Arrange
         using var stream = CreateSimplePackage();
-        using var feature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        using var feature = new StreamPackageFeature(stream, PackageOpenMode.Read);
         var package = (IPackage)feature;
 
         // Act
@@ -224,7 +224,7 @@ public class StreamPackageFeatureTests
     {
         // Arrange
         using var stream = CreateSimplePackage();
-        using var feature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        using var feature = new StreamPackageFeature(stream, PackageOpenMode.Read);
         var package = (IPackage)feature;
 
         // Act
@@ -240,7 +240,7 @@ public class StreamPackageFeatureTests
     {
         // Arrange
         using var stream = CreateSimplePackage();
-        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.Read);
         var feature = (IPackageFeature)streamFeature;
 
         // Act
@@ -259,7 +259,7 @@ public class StreamPackageFeatureTests
     {
         // Arrange
         using var stream = CreateSimplePackage();
-        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.Read);
         var feature = (IPackageFeature)streamFeature;
 
         // Act
@@ -282,7 +282,7 @@ public class StreamPackageFeatureTests
     {
         // Arrange
         using var stream = CreateSimplePackage();
-        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.Read);
         var feature = (IPackageFeature)streamFeature;
         var part = feature.Package.GetPart(Part1.Uri);
 
@@ -316,7 +316,7 @@ public class StreamPackageFeatureTests
     {
         // Arrange
         using var stream = CreateSimplePackage();
-        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.Read);
         var feature = (IPackageFeature)streamFeature;
         var part = feature.Package.GetPart(Part1.Uri);
 
@@ -340,7 +340,7 @@ public class StreamPackageFeatureTests
     {
         // Arrange
         using var stream = CreateSimplePackage();
-        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.Read);
         var feature = (IPackageFeature)streamFeature;
         var part = feature.Package.GetPart(Part1.Uri);
 
@@ -357,7 +357,7 @@ public class StreamPackageFeatureTests
     {
         // Arrange
         using var stream = CreateSimplePackage();
-        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.Read);
         var feature = (IPackageFeature)streamFeature;
         var part = feature.Package.GetPart(Part1.Uri);
 
