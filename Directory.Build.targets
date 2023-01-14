@@ -7,7 +7,6 @@
     FEATURE_ABSTRACT_XML_CLOSE       : XmlWriter.Close is defined as abstract
     FEATURE_ARRAY_EMPTY              : Array.Empty exists
     FEATURE_CLOSE                    : Stream.Close is available in the platform
-    FEATURE_PACKAGE_FLUSH            : System.IO.Package.Flush will correctly flush all data
     FEATURE_CONCURRENT_COLLECTIONS   : Concurrent collections are not available
     FEATURE_SERIALIZATION            : Serialization using ISerializable is in the platform
     FEAUTRE_SPAN                     : Span<> and friends are available
@@ -18,10 +17,10 @@
     FEATURE_XML_QUOTECHAR            : XmlReader.QuoteChar is an abstract member
   -->
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
-    <DefineConstants>$(DefineConstants);FEATURE_PACKAGE_FLUSH;FEATURE_XML_PROHIBIT_DTD</DefineConstants>
+    <DefineConstants>$(DefineConstants);FEATURE_XML_PROHIBIT_DTD</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net452' ">
-    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_PACKAGE_FLUSH;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_DISPOSE_PROTECTED;FEATURE_XML_QUOTECHAR;</DefineConstants>
+    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_DISPOSE_PROTECTED;FEATURE_XML_QUOTECHAR;</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net452' ">
     <DefineConstants>$(DefineConstants);FEATURE_CONCURRENT_COLLECTIONS;FEATURE_CANCELLATION_TOKEN</DefineConstants>
@@ -31,9 +30,6 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">
     <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_SCHEMA_GENERATOR;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_QUOTECHAR;FEATURE_CANCELLATION_TOKEN</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
-    <DefineConstants>$(DefineConstants);FEATURE_PACKAGE_FLUSH</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">
     <DefineConstants>$(DefineConstants);FEATURE_SPAN</DefineConstants>
