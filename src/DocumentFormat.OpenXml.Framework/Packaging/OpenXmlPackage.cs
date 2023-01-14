@@ -67,6 +67,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 OnClose(disposable.Dispose);
             }
 
+            OpenSettings.PackageInitializer.Invoke(this);
+
             Load(packageFeature.Package);
         }
 

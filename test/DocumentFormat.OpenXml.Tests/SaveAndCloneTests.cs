@@ -369,26 +369,12 @@ namespace DocumentFormat.OpenXml.Tests
 
             var bytes = GetNewSpreadsheet();
 
-            bool canSave =
-#if FEATURE_PACKAGE_FLUSH
-                true;
-#else
-                false;
-#endif
+            Assert.NotEmpty(bytes);
 
-            if (canSave)
+            using (var stream = new MemoryStream(bytes))
+            using (var source = SpreadsheetDocument.Open(stream, false))
             {
-                Assert.NotEmpty(bytes);
-
-                using (var stream = new MemoryStream(bytes))
-                using (var source = SpreadsheetDocument.Open(stream, false))
-                {
-                    Assert.Single(source.WorkbookPart.Workbook.ChildElements);
-                }
-            }
-            else
-            {
-                Assert.Empty(bytes);
+                Assert.Single(source.WorkbookPart.Workbook.ChildElements);
             }
         }
 

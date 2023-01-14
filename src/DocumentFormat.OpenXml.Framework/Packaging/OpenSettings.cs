@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Packaging.Builder;
 using System;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -39,6 +41,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// The default value is true.
         /// </summary>
         public bool AutoSave { get; set; } = true;
+
+        /// <summary>
+        /// Gets a default initializer that attempts to setup the package in a way useful to most developers.
+        /// </summary>
+        internal static Action<OpenXmlPackage> PackageInitializer { get; } = DefaultInitializerImpl;
+
+        private static void DefaultInitializerImpl(OpenXmlPackage package) => package
+            .EnableSavePackage();
 
         /// <summary>
         /// Gets or sets the value of the markup compatibility processing mode.
