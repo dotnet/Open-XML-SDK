@@ -17,11 +17,6 @@ public interface IPackageRelationship
     string Id { get; }
 
     /// <summary>
-    /// Gets the containing package object.
-    /// </summary>
-    IPackage Package { get; }
-
-    /// <summary>
     /// Gets the type of the relationship used to uniquely define the role of the relationship.
     /// </summary>
     string RelationshipType { get; }

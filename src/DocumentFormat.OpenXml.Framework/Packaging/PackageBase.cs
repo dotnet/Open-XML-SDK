@@ -6,27 +6,45 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Packaging;
-using System.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
 internal abstract class PackageBase : IPackage
 {
-    private readonly Dictionary<Uri, PackagePart> _parts = new();
+    private RelationshipCache _relationships;
+    private Dictionary<Uri, PackagePart>? _parts;
 
     protected abstract Package Package { get; }
 
     private IPackagePart GetOrCreatePart(System.IO.Packaging.PackagePart part)
     {
-        if (_parts.TryGetValue(part.Uri, out var existing))
+        if (_parts is not null && _parts.TryGetValue(part.Uri, out var existing))
         {
             Debug.Assert(existing.Part == part);
             return existing;
         }
 
+        if (_parts is null)
+        {
+            _parts = new();
+        }
+
         var newItem = new PackagePart(this, part);
         _parts[part.Uri] = newItem;
         return newItem;
+    }
+
+    protected void UpdateCachedItems()
+    {
+        if (_parts is null)
+        {
+            return;
+        }
+
+        foreach (var part in _parts)
+        {
+            part.Value.Part = Package.GetPart(part.Key);
+        }
     }
 
     FileAccess IPackage.FileOpenAccess => Package.FileOpenAccess;
@@ -47,12 +65,8 @@ internal abstract class PackageBase : IPackage
 
     void IPackage.Save() => Package.Flush();
 
-    public IPackageRelationship GetOrCreate(PackageRelationship relationship) => new PackageRelationshipImpl(this, relationship);
-
     public IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string? relationshipType, string? id)
-    {
-        return GetOrCreate(Package.CreateRelationship(targetUri, targetMode, relationshipType, id));
-    }
+        => _relationships.GetOrCreate(Package.CreateRelationship(targetUri, targetMode, relationshipType, id));
 
     void IPackage.DeleteRelationship(string id) => Package.DeleteRelationship(id);
 
@@ -60,7 +74,7 @@ internal abstract class PackageBase : IPackage
     {
         foreach (var relationship in Package.GetRelationships())
         {
-            yield return GetOrCreate(relationship);
+            yield return _relationships.GetOrCreate(relationship);
         }
     }
 
@@ -70,13 +84,18 @@ internal abstract class PackageBase : IPackage
 
     public void DeletePart(Uri uri)
     {
-        _parts.Remove(uri);
+        _parts?.Remove(uri);
         Package.DeletePart(uri);
     }
+
+    public IPackageRelationship GetRelationship(string id)
+        => _relationships.GetOrCreate(Package.GetRelationship(id));
 
     private sealed class PackagePart : IPackagePart
     {
         private readonly PackageBase _package;
+
+        private RelationshipCache _relationships;
 
         public PackagePart(PackageBase package, System.IO.Packaging.PackagePart part)
         {
@@ -84,7 +103,7 @@ internal abstract class PackageBase : IPackage
             Part = part;
         }
 
-        public System.IO.Packaging.PackagePart Part { get; }
+        public System.IO.Packaging.PackagePart Part { get; set; }
 
         public IPackage Package => _package;
 
@@ -94,15 +113,65 @@ internal abstract class PackageBase : IPackage
 
         public void DeleteRelationship(string id) => Part.DeleteRelationship(id);
 
-        public IEnumerable<IPackageRelationship> GetRelationships() => Part.GetRelationships().Select(_package.GetOrCreate);
+        public IEnumerable<IPackageRelationship> GetRelationships()
+        {
+            foreach (var relationship in Part.GetRelationships())
+            {
+                yield return _relationships.GetOrCreate(relationship);
+            }
+        }
 
         public Stream GetStream(FileMode open, FileAccess write) => Part.GetStream(open, write);
 
         public IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string? id)
-            => _package.GetOrCreate(Part.CreateRelationship(targetUri, targetMode, relationshipType, id));
+            => _relationships.GetOrCreate(Part.CreateRelationship(targetUri, targetMode, relationshipType, id));
 
         public bool RelationshipExists(string relationship) => Part.RelationshipExists(relationship);
 
-        public IPackageRelationship GetRelationship(string id) => _package.GetOrCreate(Part.GetRelationship(id));
+        public IPackageRelationship GetRelationship(string id) => _relationships.GetOrCreate(Part.GetRelationship(id));
+    }
+
+    private sealed class PackageRelationship : IPackageRelationship
+    {
+        public PackageRelationship(System.IO.Packaging.PackageRelationship relationship)
+        {
+            Id = relationship.Id;
+            RelationshipType = relationship.RelationshipType;
+            SourceUri = relationship.SourceUri;
+            TargetMode = relationship.TargetMode;
+            TargetUri = relationship.TargetUri;
+        }
+
+        public string Id { get; }
+
+        public string RelationshipType { get; }
+
+        public Uri SourceUri { get; }
+
+        public TargetMode TargetMode { get; }
+
+        public Uri TargetUri { get; }
+    }
+
+    private struct RelationshipCache
+    {
+        private Dictionary<string, PackageRelationship>? _relationships;
+
+        public IPackageRelationship GetOrCreate(System.IO.Packaging.PackageRelationship relationship)
+        {
+            if (_relationships is not null && _relationships.TryGetValue(relationship.Id, out var existing))
+            {
+                return existing;
+            }
+
+            if (_relationships is null)
+            {
+                _relationships = new Dictionary<string, PackageRelationship>();
+            }
+
+            var newItem = new PackageRelationship(relationship);
+            _relationships[relationship.Id] = newItem;
+            return newItem;
+        }
     }
 }

@@ -39,15 +39,17 @@ internal class StreamPackageFeature : PackageBase, IPackageFeature, IDisposable
         _initialMode = openMode switch
         {
             PackageOpenMode.Create => FileMode.Create,
-            PackageOpenMode.Read => FileMode.Open,
+            PackageOpenMode.Read => FileMode.OpenOrCreate,
             PackageOpenMode.ReadWrite => FileMode.OpenOrCreate,
             _ => throw new NotImplementedException(),
         };
 
+        Capabilities = PackageFeature.GetDefaultCapabilities(openMode == PackageOpenMode.Read) | PackageCapabilities.Reload;
+
         InitializePackage();
     }
 
-    protected Stream Stream { get; }
+    public Stream Stream { get; }
 
     private readonly FileAccess _initialAccess;
     private readonly FileMode _initialMode;
@@ -63,11 +65,13 @@ internal class StreamPackageFeature : PackageBase, IPackageFeature, IDisposable
 
     IPackage IPackageFeature.Package => this;
 
-    PackageCapabilities IPackageFeature.Capabilities
-        => PackageFeature.DefaultCapabilities | PackageCapabilities.Reload;
+    public PackageCapabilities Capabilities { get; }
 
     void IPackageFeature.Reload(FileMode? mode, FileAccess? access)
-        => InitializePackage(mode, access);
+    {
+        InitializePackage(mode, access);
+        UpdateCachedItems();
+    }
 
     protected virtual void Dispose(bool disposing)
     {
@@ -84,7 +88,6 @@ internal class StreamPackageFeature : PackageBase, IPackageFeature, IDisposable
 
     public void Dispose()
     {
-        // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
         Dispose(disposing: true);
         GC.SuppressFinalize(this);
     }

@@ -25,4 +25,14 @@ public enum PackageCapabilities
     /// Capability that indicates that the package can be reloaded.
     /// </summary>
     Reload = 1 << 1,
+
+    /// <summary>
+    /// Capability that indicates that the package will return the same part and relationship for each call.
+    /// </summary>
+    Cached = 1 << 3,
+
+    /// <summary>
+    /// Capability that indicates that the package can handle writing large part streams without memory overhead.
+    /// </summary>
+    LargePartStreams = 1 << 4,
 }

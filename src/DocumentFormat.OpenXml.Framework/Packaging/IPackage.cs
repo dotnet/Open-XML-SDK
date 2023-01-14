@@ -86,6 +86,13 @@ public interface IPackage
     IEnumerable<IPackageRelationship> GetRelationships();
 
     /// <summary>
+    /// Gets a relationship by id.
+    /// </summary>
+    /// <param name="id">Id of relationship</param>
+    /// <returns>A package relationship</returns>
+    IPackageRelationship GetRelationship(string id);
+
+    /// <summary>
     /// Indicates whether a relationship with a given ID is defined.
     /// </summary>
     /// <param name="id">The id of the relationship</param>

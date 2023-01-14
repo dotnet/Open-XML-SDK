@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml;
 internal static class EnumExtensions
 {
     public static bool HasFlagFast<T>(this T e, T value)
-        where T : Enum
+        where T : struct, Enum
     {
         Debug.Assert(Enum.GetUnderlyingType(typeof(T)) == typeof(int));
 
@@ -17,6 +17,6 @@ internal static class EnumExtensions
         var ei = (int)(object)e;
         var valuei = (int)(object)value;
 
-        return (ei & valuei) != 0;
+        return (ei & valuei) == valuei;
     }
 }

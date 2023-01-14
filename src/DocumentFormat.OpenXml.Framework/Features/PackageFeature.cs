@@ -13,6 +13,7 @@ internal sealed class PackageFeature : PackageBase, IPackageFeature
     public PackageFeature(Package package)
     {
         Package = package;
+        Capabilities = GetDefaultCapabilities(!package.FileOpenAccess.HasFlagFast(FileAccess.Write));
     }
 
     protected override Package Package { get; }
@@ -22,13 +23,13 @@ internal sealed class PackageFeature : PackageBase, IPackageFeature
     void IPackageFeature.Reload(FileMode? mode, FileAccess? access)
         => throw new NotImplementedException();
 
-    PackageCapabilities IPackageFeature.Capabilities => DefaultCapabilities;
+    public PackageCapabilities Capabilities { get; }
 
     // ZipArchive.Flush only exists on .NET Framework (https://github.com/dotnet/runtime/issues/24149)
-    internal static PackageCapabilities DefaultCapabilities
+    internal static PackageCapabilities GetDefaultCapabilities(bool isReadOnly)
 #if NETFRAMEWORK
-        => PackageCapability.Save;
+        => (isReadOnly ? PackageCapabilities.None : PackageCapabilities.Save) & PackageCapabilities.Cached;
 #else
-        => PackageCapabilities.None;
+        => PackageCapabilities.Cached;
 #endif
 }
