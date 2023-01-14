@@ -105,7 +105,7 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
             // ZipArchive.Flush only exists on .NET Framework (https://github.com/dotnet/runtime/issues/24149)
 #if NETFRAMEWORK
             var isReadOnly = !Package.FileOpenAccess.HasFlagFast(FileAccess.Write);
-            return (isReadOnly ? PackageCapabilities.None : PackageCapabilities.Save) & PackageCapabilities.Cached;
+            return (isReadOnly ? PackageCapabilities.None : PackageCapabilities.Save) | PackageCapabilities.Cached | PackageCapabilities.LargePartStreams;
 #else
             return PackageCapabilities.Cached;
 #endif

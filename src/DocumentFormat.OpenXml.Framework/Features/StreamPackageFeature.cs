@@ -39,7 +39,7 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable
         _initialMode = openMode switch
         {
             PackageOpenMode.Create => FileMode.Create,
-            PackageOpenMode.Read => FileMode.OpenOrCreate,
+            PackageOpenMode.Read => FileMode.Open,
             PackageOpenMode.ReadWrite => FileMode.OpenOrCreate,
             _ => throw new NotImplementedException(),
         };
