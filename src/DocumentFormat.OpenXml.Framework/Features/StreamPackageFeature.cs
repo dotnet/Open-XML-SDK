@@ -10,7 +10,7 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal class StreamPackageFeature : PackageBase, IPackageFeature, IDisposable
+internal class StreamPackageFeature : PackageFeatureBase, IDisposable
 {
     private Package _package;
     private bool _disposedValue;
@@ -44,8 +44,6 @@ internal class StreamPackageFeature : PackageBase, IPackageFeature, IDisposable
             _ => throw new NotImplementedException(),
         };
 
-        Capabilities = PackageFeature.GetDefaultCapabilities(openMode == PackageOpenMode.Read) | PackageCapabilities.Reload;
-
         InitializePackage();
     }
 
@@ -63,11 +61,9 @@ internal class StreamPackageFeature : PackageBase, IPackageFeature, IDisposable
 
     protected override Package Package => _package;
 
-    IPackage IPackageFeature.Package => this;
+    public override PackageCapabilities Capabilities => base.Capabilities | PackageCapabilities.Reload;
 
-    public PackageCapabilities Capabilities { get; }
-
-    void IPackageFeature.Reload(FileMode? mode, FileAccess? access)
+    public override void Reload(FileMode? mode = null, FileAccess? access = null)
     {
         InitializePackage(mode, access);
         UpdateCachedItems();

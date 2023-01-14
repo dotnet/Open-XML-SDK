@@ -1,15 +1,16 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Packaging;
+namespace DocumentFormat.OpenXml.Features;
 
-internal abstract class PackageBase : IPackage
+internal abstract class PackageFeatureBase : IPackage, IPackageFeature
 {
     private RelationshipCache _relationships;
     private Dictionary<Uri, PackagePart>? _parts;
@@ -91,13 +92,32 @@ internal abstract class PackageBase : IPackage
     public IPackageRelationship GetRelationship(string id)
         => _relationships.GetOrCreate(Package.GetRelationship(id));
 
+    IPackage IPackageFeature.Package => this;
+
+    public virtual PackageCapabilities Capabilities
+    {
+        get
+        {
+            // ZipArchive.Flush only exists on .NET Framework (https://github.com/dotnet/runtime/issues/24149)
+#if NETFRAMEWORK
+            var isReadOnly = !Package.FileOpenAccess.HasFlagFast(FileAccess.Write);
+            return (isReadOnly ? PackageCapabilities.None : PackageCapabilities.Save) & PackageCapabilities.Cached;
+#else
+            return PackageCapabilities.Cached;
+#endif
+        }
+    }
+
+    public virtual void Reload(FileMode? mode = null, FileAccess? access = null)
+        => throw new NotSupportedException();
+
     private sealed class PackagePart : IPackagePart
     {
-        private readonly PackageBase _package;
+        private readonly PackageFeatureBase _package;
 
         private RelationshipCache _relationships;
 
-        public PackagePart(PackageBase package, System.IO.Packaging.PackagePart part)
+        public PackagePart(PackageFeatureBase package, System.IO.Packaging.PackagePart part)
         {
             _package = package;
             Part = part;
