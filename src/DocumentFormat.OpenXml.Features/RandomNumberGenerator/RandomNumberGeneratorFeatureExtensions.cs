@@ -19,7 +19,6 @@ namespace DocumentFormat.OpenXml.Features
         {
             if (package.Features.Get<IRandomNumberGeneratorFeature>() is null)
             {
-                package.AddDisposableFeature();
                 package.Features.SetDisposable<IRandomNumberGeneratorFeature>(new RandomNumberGeneratorFeature());
             }
         }

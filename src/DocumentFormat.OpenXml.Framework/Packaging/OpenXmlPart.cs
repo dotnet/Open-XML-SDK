@@ -527,6 +527,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 InternalRootElement.OpenXmlPart = null;
                 InternalRootElement = null;
             }
+
+            Features.Get<IContainerDisposableFeature>()?.Dispose();
         }
 
         #endregion
