@@ -48,7 +48,7 @@ public class StreamPackageFeatureTests
     [InlineData((int)PackageOpenMode.Read, FileAccess.Read, false)]
     [InlineData((int)PackageOpenMode.ReadWrite, FileAccess.ReadWrite, true)]
     [Theory]
-    public void ValidateCanWrite(int intMode, FileAccess access, bool canSave)
+    public void ValidateCapabilities(int intMode, FileAccess access, bool canSave)
     {
         // Arrange
         var mode = (PackageOpenMode)intMode;
@@ -65,10 +65,20 @@ public class StreamPackageFeatureTests
             = false;
 #endif
 
+        var largeParts
+#if NETFRAMEWORK
+            = true;
+#else
+            = false;
+#endif
+
         // Act/Assert
         Assert.Equal(canSave, package.Stream.CanWrite);
         Assert.Equal(access, asPackage.FileOpenAccess);
         Assert.Equal(canSaveExpected, asFeature.Capabilities.HasFlagFast(PackageCapabilities.Save));
+        Assert.True(asFeature.Capabilities.HasFlagFast(PackageCapabilities.Cached));
+        Assert.True(asFeature.Capabilities.HasFlagFast(PackageCapabilities.Reload));
+        Assert.Equal(largeParts, asFeature.Capabilities.HasFlagFast(PackageCapabilities.LargePartStreams));
     }
 
     [Fact]
