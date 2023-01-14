@@ -1,8 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using NSubstitute;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -327,14 +329,22 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [Fact]
-        public void CanSaveProperty()
+        [InlineData(true)]
+        [InlineData(false)]
+        [Theory]
+        public void CanSaveProperty(bool canSave)
         {
-#if FEATURE_PACKAGE_FLUSH
-            Assert.True(OpenXmlPackage.CanSave);
-#else
-            Assert.False(OpenXmlPackage.CanSave);
-#endif
+            // Arrange
+            var package = Substitute.ForPartsOf<OpenXmlPackage>();
+            var feature = Substitute.For<IPackageFeature>();
+            feature.Capabilities.Returns(canSave ? PackageCapabilities.Save : PackageCapabilities.None);
+            package.Features.Set<IPackageFeature>(feature);
+
+            // Act
+            var result = package.CanSave;
+
+            // Assert
+            Assert.Equal(canSave, result);
         }
 
         [Fact]
@@ -359,7 +369,14 @@ namespace DocumentFormat.OpenXml.Tests
 
             var bytes = GetNewSpreadsheet();
 
-            if (OpenXmlPackage.CanSave)
+            bool canSave =
+#if FEATURE_PACKAGE_FLUSH
+                true;
+#else
+                false;
+#endif
+
+            if (canSave)
             {
                 Assert.NotEmpty(bytes);
 
