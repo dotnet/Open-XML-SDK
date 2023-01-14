@@ -69,7 +69,11 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
     public IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string? relationshipType, string? id)
         => _relationships.GetOrCreate(Package.CreateRelationship(targetUri, targetMode, relationshipType, id));
 
-    void IPackage.DeleteRelationship(string id) => Package.DeleteRelationship(id);
+    void IPackage.DeleteRelationship(string id)
+    {
+        _relationships.Remove(id);
+        Package.DeleteRelationship(id);
+    }
 
     public IEnumerable<IPackageRelationship> GetRelationships()
     {
@@ -131,7 +135,11 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
 
         public string ContentType => Part.ContentType;
 
-        public void DeleteRelationship(string id) => Part.DeleteRelationship(id);
+        public void DeleteRelationship(string id)
+        {
+            _relationships.Remove(id);
+            Part.DeleteRelationship(id);
+        }
 
         public IEnumerable<IPackageRelationship> GetRelationships()
         {
@@ -141,14 +149,17 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
             }
         }
 
-        public Stream GetStream(FileMode open, FileAccess write) => Part.GetStream(open, write);
+        public Stream GetStream(FileMode open, FileAccess write)
+            => Part.GetStream(open, write);
 
         public IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string? id)
             => _relationships.GetOrCreate(Part.CreateRelationship(targetUri, targetMode, relationshipType, id));
 
-        public bool RelationshipExists(string relationship) => Part.RelationshipExists(relationship);
+        public bool RelationshipExists(string relationship)
+            => Part.RelationshipExists(relationship);
 
-        public IPackageRelationship GetRelationship(string id) => _relationships.GetOrCreate(Part.GetRelationship(id));
+        public IPackageRelationship GetRelationship(string id)
+            => _relationships.GetOrCreate(Part.GetRelationship(id));
     }
 
     private sealed class PackageRelationship : IPackageRelationship
@@ -193,5 +204,7 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
             _relationships[relationship.Id] = newItem;
             return newItem;
         }
+
+        internal void Remove(string id) => _relationships?.Remove(id);
     }
 }

@@ -137,6 +137,20 @@ public class StreamPackageFeatureTests
     }
 
     [Fact]
+    public void RelationshipRemoved()
+    {
+        // Arrange
+        using var stream = CreateSimplePackage();
+        using var feature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        var package = (IPackage)feature;
+
+        // Act/Assert
+        Assert.NotNull(package.GetRelationship(Relationship1.Id)); // This will cache the relationship
+        package.DeleteRelationship(Relationship1.Id);
+        Assert.Throws<InvalidOperationException>(() => package.GetRelationship(Relationship1.Id));
+    }
+
+    [Fact]
     public void GetParts()
     {
         // Arrange
@@ -280,6 +294,21 @@ public class StreamPackageFeatureTests
         Assert.Equal(Part1Relationship1.Relationship, relationship.RelationshipType);
         Assert.Equal(Part1Relationship1.Mode, relationship.TargetMode);
         Assert.Equal(Part1Relationship1.TargetUri, relationship.TargetUri);
+    }
+
+    [Fact]
+    public void PartRelationshipRemoved()
+    {
+        // Arrange
+        using var stream = CreateSimplePackage();
+        using var streamFeature = new StreamPackageFeature(stream, PackageOpenMode.ReadWrite);
+        var feature = (IPackageFeature)streamFeature;
+        var part = feature.Package.GetPart(Part1.Uri);
+
+        // Act/Assert
+        Assert.NotNull(part.GetRelationship(Part1Relationship1.Id)); // This will cache the relationship
+        part.DeleteRelationship(Part1Relationship1.Id);
+        Assert.Throws<InvalidOperationException>(() => part.GetRelationship(Part1Relationship1.Id));
     }
 
     [Fact]
