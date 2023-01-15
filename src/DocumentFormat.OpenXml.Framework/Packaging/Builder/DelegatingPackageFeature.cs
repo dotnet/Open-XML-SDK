@@ -9,9 +9,9 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Packaging.Builder;
 
-internal abstract class DelegatePackage : IPackage, IPackageFeature
+internal abstract class DelegatingPackageFeature : IPackage, IPackageFeature
 {
-    protected DelegatePackage(IPackageFeature package)
+    protected DelegatingPackageFeature(IPackageFeature package)
     {
         Feature = package;
     }

@@ -21,7 +21,7 @@ internal static class SavePackageExtensions
         return package;
     }
 
-    private sealed class SaveablePackage : DelegatePackage
+    private sealed class SaveablePackage : DelegatingPackageFeature
     {
         public SaveablePackage(IPackageFeature package)
             : base(package)

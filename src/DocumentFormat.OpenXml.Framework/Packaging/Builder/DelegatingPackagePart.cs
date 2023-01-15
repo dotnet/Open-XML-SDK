@@ -8,9 +8,9 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Packaging.Builder;
 
-internal abstract class DelegatePackagePart : IPackagePart
+internal abstract class DelegatingPackagePart : IPackagePart
 {
-    protected DelegatePackagePart(IPackage package, IPackagePart part)
+    protected DelegatingPackagePart(IPackage package, IPackagePart part)
     {
         OriginalPart = part;
         Package = package;
