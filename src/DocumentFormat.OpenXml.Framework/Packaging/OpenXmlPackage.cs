@@ -20,7 +20,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
 
-        private Action? _onClose;
         private bool _isDisposed;
 
         /// <summary>
@@ -64,15 +63,13 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (packageFeature is IDisposable disposable)
             {
-                OnClose(disposable.Dispose);
+                Features.GetRequired<IDisposableFeature>().Register(disposable);
             }
 
             OpenSettings.PackageInitializer.Invoke(this);
 
             Load(packageFeature.Package);
         }
-
-        internal void OnClose(Action callback) => _onClose += callback;
 
         /// <summary>
         /// Gets the root part for the package.
@@ -392,8 +389,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 ChildrenRelationshipParts.Clear();
                 ReferenceRelationshipList.Clear();
 
-                _onClose?.Invoke();
-
+                Features.Get<IContainerDisposableFeature>()?.Dispose();
                 closing?.OnChange(this, EventType.Closed);
                 _isDisposed = true;
             }
@@ -1144,10 +1140,13 @@ namespace DocumentFormat.OpenXml.Packaging
             IFeatureCollection,
             IContainerFeature<OpenXmlPackage>,
             IPartFactoryFeature,
-            IApplicationTypeFeature
+            IApplicationTypeFeature,
+            IDisposableFeature,
+            IContainerDisposableFeature
         {
             private readonly IFeatureCollection? _parent;
 
+            private Action? _disposable;
             private FeatureContainer _container;
 
             public PackageFeatureCollection(OpenXmlPackage package, IFeatureCollection? parent)
@@ -1205,6 +1204,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 => _container.Set(instance);
 
             OpenXmlPart? IPartFactoryFeature.Create(string relationshipType) => null;
+
+            void IDisposableFeature.Register(IDisposable disposable) => _disposable += disposable.Dispose;
+
+            void IContainerDisposableFeature.Dispose() => _disposable?.Invoke();
         }
     }
 }
