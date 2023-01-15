@@ -30,18 +30,12 @@
     <Version>$(GitVersion_NuGetVersionV2)</Version>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <!-- We need to test on frameworks that may be EOL due to the targets we build -->
-    <CheckEolTargetFramework>false</CheckEolTargetFramework>
-  </PropertyGroup>
-
   <Choose>
     <When Condition=" '$(ProjectLoadStyle)' == 'net35' ">
       <PropertyGroup>
         <ProductTargetFrameworks>net35</ProductTargetFrameworks>
         <TestTargetFrameworks>net452</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
         <LatestTargetFramework>net461</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
@@ -51,7 +45,6 @@
         <ProductTargetFrameworks>net40</ProductTargetFrameworks>
         <TestTargetFrameworks>net452</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
         <LatestTargetFramework>net461</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
@@ -85,10 +78,6 @@
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'All' ">
       <PropertyGroup>
-        <!--
-        .NET Standard target must be first to avoid a ResXFileCodeGenerator issue
-        (tracked at https://github.com/dotnet/project-system/issues/1519)
-        -->
         <ProductTargetFrameworks>netstandard2.0;net6.0;net35;net40;net46</ProductTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard2.0</AssetsTargetFrameworks>
         <TestTargetFrameworks>net452;net46;net6.0;net7.0</TestTargetFrameworks>
