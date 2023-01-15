@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 
-#if !FEATURE_SPAN
+#if !NET6_0_OR_GREATER
 using System.Text;
 #endif
 
@@ -127,7 +127,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="bytes">A buffer to write to</param>
         /// <returns>Whether bytes where successfully written.</returns>
-#if FEATURE_SPAN
+#if NET6_0_OR_GREATER
         public
 #else
         internal
@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="bytes">A byte array to use to create a new <see cref="HexBinaryValue"/> object.</param>
         /// <returns>A <see cref="HexBinaryValue"/> object that corresponds to the value parameter.</returns>
-#if FEATURE_SPAN
+#if NET6_0_OR_GREATER
         public
 #else
         internal

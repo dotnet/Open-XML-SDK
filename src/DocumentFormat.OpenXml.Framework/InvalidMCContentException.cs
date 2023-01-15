@@ -2,10 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-
-#if FEATURE_SERIALIZATION
 using System.Runtime.Serialization;
-#endif
 
 namespace DocumentFormat.OpenXml
 {
@@ -32,7 +29,6 @@ namespace DocumentFormat.OpenXml
         {
         }
 
-#if FEATURE_SERIALIZATION
         /// <summary>
         /// Initializes a new instance of the InvalidMCContentException class with serialized data.
         /// </summary>
@@ -42,7 +38,6 @@ namespace DocumentFormat.OpenXml
             : base(info, context)
         {
         }
-#endif
 
         /// <summary>
         /// Initializes a new instance of the InvalidMCContentException class with a specified error message and a reference to the inner exception that is the cause of this exception.

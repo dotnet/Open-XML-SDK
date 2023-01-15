@@ -664,11 +664,7 @@ namespace DocumentFormat.OpenXml
             _elementStack.Clear();
             _attributeList.Clear();
             _nsDecls.Clear();
-#if FEATURE_CLOSE
             _xmlReader.Close();
-#else
-            _xmlReader.Dispose();
-#endif
         }
 
         private XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, bool ignoreWhitespace, out bool? standalone, out string? encoding)

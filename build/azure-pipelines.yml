@@ -35,12 +35,6 @@ stages:
               vmImages: 
                 - image: 'windows-latest'
                   name: 'windows'
-            - name: netstandard1_3
-              vmImages: 
-                - image: 'windows-latest'
-                  name: 'windows'
-                - image: 'ubuntu-latest'
-                  name: 'linux'
             - name: net6_0
               runtimes:
                 - 6.0.11

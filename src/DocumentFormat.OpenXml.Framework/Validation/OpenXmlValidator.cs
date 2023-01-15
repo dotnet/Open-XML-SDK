@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <param name="token">Cancellation token</param>
         /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the <paramref name="openXmlPackage"/> parameter is null.</exception>
-#if FEATURE_CANCELLATION_TOKEN
+#if !NET35
         public
 #else
         private
@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the <paramref name="openXmlPart"/> parameter is null.</exception>
         /// <exception cref="InvalidOperationException">Throw when the specified part is not a defined part in the specified <see cref="FileFormat"/> version.</exception>
-#if FEATURE_CANCELLATION_TOKEN
+#if !NET35
         public
 #else
         private
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <exception cref="ArgumentNullException">Thrown when the <paramref name="openXmlElement"/> parameter is null.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the <paramref name="openXmlElement"/> is type of <see cref="OpenXmlUnknownElement"/>, <see cref="OpenXmlMiscNode"/>, <see cref="AlternateContent"/>, <see cref="AlternateContentChoice"/> or <see cref="AlternateContentFallback"/>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the <paramref name="openXmlElement"/> is not defined in the specified <see cref="FileFormat"/>.</exception>
-#if FEATURE_CANCELLATION_TOKEN
+#if !NET35
         public
 #else
         private

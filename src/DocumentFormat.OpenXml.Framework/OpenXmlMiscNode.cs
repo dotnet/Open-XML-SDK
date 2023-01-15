@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml
             {
                 XmlReaderSettings settings = new XmlReaderSettings
                 {
-#if FEATURE_XML_PROHIBIT_DTD
+#if NET35
                     ProhibitDtd = true, // set true explicitly for security fix
 #else
                     DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml
                         {
                             XmlReaderSettings settings = new XmlReaderSettings
                             {
-#if FEATURE_XML_PROHIBIT_DTD
+#if NET35
                                 ProhibitDtd = true,
 #else
                                 DtdProcessing = DtdProcessing.Prohibit,
