@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - When validation finds incorrect part, it will now include the relationship type rather than a class name
 
 ### Breaking change
+- IDisposableFeature is now a part of the framework package and is available by default on a package. Extension methods to manage this feature have been removed as it no longer needs to be opted into. It now registers all disposable actions to be done at the package level instead of adding support at the part level.
 - OpenXmlPackage.CanSave is now an instance method
 - Core infrastructure is now contained in a new package DocumentFormat.OpenXml.Framework. Typed classes are still in DocumentFormat.OpenXml. This means that you may reference DocumentFormat.OpenXml and still compile the same types, but if you want a smaller package, you may rely on just the framework package. 
 - Removed `OpenXmlPackage.Package` property. A `OpenXmlPackage` is now backed by a `IPackage` instead of `System.IO.Packaging.Package`. This can be retrieved by `OpenXmlPackage.Features.Get<IPackageFeature>()`
