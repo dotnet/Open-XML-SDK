@@ -16,13 +16,10 @@ public abstract partial class OpenXmlPart
         IContainerFeature<OpenXmlPart>,
         ITargetFeature,
         IPartConstraintFeature,
-        IKnownDataPartFeature,
-        IDisposableFeature,
-        IContainerDisposableFeature
+        IKnownDataPartFeature
     {
         private readonly OpenXmlPart _part;
 
-        private Action? _disposable;
         private FeatureContainer _container;
 
         public PartFeatureCollection(OpenXmlPart part)
@@ -87,9 +84,5 @@ public abstract partial class OpenXmlPart
         }
 
         bool IKnownDataPartFeature.IsKnown(string relationshipId) => false;
-
-        void IDisposableFeature.Register(IDisposable disposable) => _disposable += disposable.Dispose;
-
-        void IContainerDisposableFeature.Dispose() => _disposable?.Invoke();
     }
 }
