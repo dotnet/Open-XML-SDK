@@ -16,6 +16,12 @@ internal static class LargePartStreamExtensions
     {
         var feature = features.GetRequired<IPackageFeature>();
 
+        // If the package is readonly, we do not need to handle this
+        if (feature.Package.FileOpenAccess == FileAccess.Read)
+        {
+            return features;
+        }
+
         if (!feature.Capabilities.HasFlagFast(PackageCapabilities.LargePartStreams))
         {
             return features;

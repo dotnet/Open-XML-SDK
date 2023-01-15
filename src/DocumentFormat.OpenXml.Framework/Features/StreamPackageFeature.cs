@@ -48,7 +48,7 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable
         };
 
         // Only the inital should create, after that, it should be open
-        _mode = initialMode == FileMode.Create ? _mode = FileMode.Open : initialMode;
+        _mode = initialMode == FileMode.Create ? FileMode.Open : initialMode;
 
         InitializePackage(initialMode, _access);
     }
