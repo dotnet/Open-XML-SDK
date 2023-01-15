@@ -16,13 +16,14 @@ namespace DocumentFormat.OpenXml.Framework.Tests.Features;
 
 public class SaveablePackageTests
 {
-    [InlineData(PackageCapabilities.Save, false)]
-    [InlineData(PackageCapabilities.Reload, true)]
-    [InlineData(PackageCapabilities.Save | PackageCapabilities.Reload, false)]
+    [InlineData((int)PackageCapabilities.Save, false)]
+    [InlineData((int)PackageCapabilities.Reload, true)]
+    [InlineData((int)PackageCapabilities.Save | (int)PackageCapabilities.Reload, false)]
     [Theory]
-    public void RequiredCapabilityCheck(PackageCapabilities capabilities, bool shouldUpdate)
+    public void RequiredCapabilityCheck(int intCapabilities, bool shouldUpdate)
     {
         // Arrange
+        var capabilities = (PackageCapabilities)intCapabilities;
         var features = new FeatureCollection();
 
         var feature = Substitute.For<IPackageFeature>();
