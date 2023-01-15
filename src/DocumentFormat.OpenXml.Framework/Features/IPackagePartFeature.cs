@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Features;
 /// <summary>
 /// A feature to access the current package part.
 /// </summary>
-public interface IPackagePartFeature
+internal interface IPackagePartFeature
 {
     /// <summary>
     /// Gets the current package part.

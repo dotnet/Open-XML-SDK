@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Features;
 /// Values to query the capabilities of a package.
 /// </summary>
 [Flags]
-public enum PackageCapabilities
+internal enum PackageCapabilities
 {
     /// <summary>
     /// No capabilities
@@ -19,7 +19,7 @@ public enum PackageCapabilities
     /// <summary>
     /// Capability that indicates that the package can be saved.
     /// </summary>
-    Save = 1 << 2,
+    Save = 1,
 
     /// <summary>
     /// Capability that indicates that the package can be reloaded.
@@ -29,10 +29,10 @@ public enum PackageCapabilities
     /// <summary>
     /// Capability that indicates that the package will return the same part and relationship for each call.
     /// </summary>
-    Cached = 1 << 3,
+    Cached = 1 << 2,
 
     /// <summary>
     /// Capability that indicates that the package can handle writing large part streams without memory overhead.
     /// </summary>
-    LargePartStreams = 1 << 4,
+    LargePartStreams = 1 << 3,
 }
