@@ -2,10 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-
-#if FEATURE_SERIALIZATION
 using System.Runtime.Serialization;
-#endif
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -32,7 +29,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-#if FEATURE_SERIALIZATION
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackageException class using the supplied serialized data.
         /// </summary>
@@ -42,7 +38,6 @@ namespace DocumentFormat.OpenXml.Packaging
             : base(info, context)
         {
         }
-#endif
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackageException class using the supplied error message and a reference to the inner exception that caused the current exception.

@@ -7,7 +7,7 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal static class Cached
     {
-#if FEATURE_ARRAY_EMPTY
+#if !NET35 && !NET40
         public static T[] Array<T>() => System.Array.Empty<T>();
 #else
         public static T[] Array<T>() => EmptyArray<T>.Value;

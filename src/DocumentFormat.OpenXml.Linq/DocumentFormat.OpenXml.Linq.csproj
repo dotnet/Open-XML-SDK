@@ -38,11 +38,6 @@
       </ItemGroup>
     </When>
 
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
-      <ItemGroup>
-        <PackageReference Include="System.Xml.ReaderWriter" />
-      </ItemGroup>
-    </When>
   </Choose>
 
 </Project>

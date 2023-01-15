@@ -1,39 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-  <!--
-    Since this project supports multiple configurations which don't all have the same surface area, the following define
-    constants are used to conditionally compile features:
-
-    FEATURE_ABSTRACT_XML_CLOSE       : XmlWriter.Close is defined as abstract
-    FEATURE_ARRAY_EMPTY              : Array.Empty exists
-    FEATURE_CLOSE                    : Stream.Close is available in the platform
-    FEATURE_CONCURRENT_COLLECTIONS   : Concurrent collections are not available
-    FEATURE_SERIALIZATION            : Serialization using ISerializable is in the platform
-    FEAUTRE_SPAN                     : Span<> and friends are available
-    FEATURE_SCHEMA_GENERATOR         : Provides access to helpers to generate schema information
-    FEATURE_SYSTEMEXCEPTION          : SytemException is available in the platform
-    FEATURE_XML_DISPOSE_PROTECTED    : XmlWriter.Dispose is protected
-    FEATURE_XML_PROHIBIT_DTD         : XML settings only has ProhibitDtd property
-    FEATURE_XML_QUOTECHAR            : XmlReader.QuoteChar is an abstract member
-  -->
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
-    <DefineConstants>$(DefineConstants);FEATURE_XML_PROHIBIT_DTD</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net452' ">
-    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_DISPOSE_PROTECTED;FEATURE_XML_QUOTECHAR;</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net452' ">
-    <DefineConstants>$(DefineConstants);FEATURE_CONCURRENT_COLLECTIONS;FEATURE_CANCELLATION_TOKEN</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' OR '$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">
-    <DefineConstants> $(DefineConstants);FEATURE_ARRAY_EMPTY;FEATURE_CONCURRENT_COLLECTIONS;FEATURE_CANCELLATION_TOKEN</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">
-    <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_SCHEMA_GENERATOR;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_QUOTECHAR;FEATURE_CANCELLATION_TOKEN</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">
-    <DefineConstants>$(DefineConstants);FEATURE_SPAN</DefineConstants>
-  </PropertyGroup>
   <ItemGroup>
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)\stylecop.json" />
     <PackageReference Include="StyleCop.Analyzers">
