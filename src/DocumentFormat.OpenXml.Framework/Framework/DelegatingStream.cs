@@ -124,18 +124,6 @@ internal abstract class DelegatingStream : Stream
     }
 #endif
 
-#if !NETSTANDARD1_3
-    public override IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback? callback, object? state)
-    {
-        return _innerStream.BeginRead(buffer, offset, count, callback, state);
-    }
-
-    public override int EndRead(IAsyncResult asyncResult)
-    {
-        return _innerStream.EndRead(asyncResult);
-    }
-#endif
-
 #if NET6_0_OR_GREATER
     public override void CopyTo(Stream destination, int bufferSize)
     {

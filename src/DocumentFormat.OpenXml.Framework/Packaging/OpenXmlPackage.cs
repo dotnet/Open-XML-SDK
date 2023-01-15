@@ -653,12 +653,10 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentType, e);
             }
-#if FEATURE_SYSTEMEXCEPTION
             catch (SystemException e)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentTypeSerious, e);
             }
-#endif
         }
 
         #endregion

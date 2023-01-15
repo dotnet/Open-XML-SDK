@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml
         {
             return new XmlReaderSettings
             {
-#if FEATURE_XML_PROHIBIT_DTD
+#if NET35
                 ProhibitDtd = true,
 #else
                 DtdProcessing = DtdProcessing.Prohibit,

@@ -30,14 +30,6 @@ internal sealed class ReadOnlyStream : DelegatingStream
 
     public override void SetLength(long value) => throw new NotSupportedException();
 
-#if !NETSTANDARD1_3
-    public override IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback? callback, object? state)
-        => throw new NotSupportedException();
-
-    public override void EndWrite(IAsyncResult asyncResult)
-        => throw new NotSupportedException();
-#endif
-
     public override void Write(byte[] buffer, int offset, int count)
         => throw new NotSupportedException();
 

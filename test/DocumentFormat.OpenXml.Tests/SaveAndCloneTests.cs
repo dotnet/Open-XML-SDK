@@ -370,7 +370,7 @@ namespace DocumentFormat.OpenXml.Tests
             var bytes = GetNewSpreadsheet();
 
             bool canSave =
-#if FEATURE_PACKAGE_FLUSH
+#if !NET6_0_OR_GREATER
                 true;
 #else
                 false;

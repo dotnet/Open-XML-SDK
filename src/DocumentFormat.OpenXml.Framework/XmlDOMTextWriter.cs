@@ -129,20 +129,20 @@ namespace DocumentFormat.OpenXml
 
         public override XmlSpace XmlSpace => _writer.XmlSpace;
 
-#if FEATURE_ABSTRACT_XML_CLOSE
         public override void Close() => _writer.Close();
-#endif
 
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
 
-#if !FEATURE_XML_DISPOSE_PROTECTED
             if (disposing)
             {
+#if NET35 || NET40
+                ((IDisposable)_writer).Dispose();
+#else
                 _writer.Dispose();
-            }
 #endif
+            }
         }
     }
 }

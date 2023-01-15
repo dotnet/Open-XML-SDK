@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Changed
 - When validation finds incorrect part, it will now include the relationship type rather than a class name
 
+## Removed
+- .NET Standard 1.3 is no longer a supported platform. .NET Standard 2.0 is the lowest .NET Standard supported.
+
 ### Breaking change
 - IDisposableFeature is now a part of the framework package and is available by default on a package. Extension methods to manage this feature have been removed as it no longer needs to be opted into. It now registers all disposable actions to be done at the package level instead of adding support at the part level.
 - OpenXmlPackage.CanSave is now an instance method

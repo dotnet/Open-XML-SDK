@@ -3,7 +3,7 @@
 
 using System;
 
-#if !FEATURE_SPAN
+#if !NET6_0_OR_GREATER
 using System.Text;
 #endif
 
@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="bytes">A byte array to use to create a new hex string.</param>
         /// <returns>A hex string that corresponds to the value parameter.</returns>
-#if FEATURE_SPAN
+#if NET6_0_OR_GREATER
         public
 #else
         internal
@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml
                 return string.Empty;
             }
 
-#if FEATURE_SPAN
+#if NET6_0_OR_GREATER
             Span<char> chars = stackalloc char[bytes.Length * 2];
 
             for (var i = 0; i < bytes.Length; i++)
