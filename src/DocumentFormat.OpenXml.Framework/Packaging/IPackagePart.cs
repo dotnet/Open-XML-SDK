@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// An abstraction for <see cref="System.IO.Packaging.PackagePart"/> that is easier to override.
 /// </summary>
-public interface IPackagePart
+internal interface IPackagePart
 {
     /// <summary>
     /// Gets a reference to the containing package.

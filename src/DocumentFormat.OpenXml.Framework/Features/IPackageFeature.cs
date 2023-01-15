@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Features;
 /// <summary>
 /// A feature to access the backing <see cref="IPackage"/> data.
 /// </summary>
-public interface IPackageFeature
+internal interface IPackageFeature
 {
     /// <summary>
     /// Gets the <see cref="IPackage"/>.
