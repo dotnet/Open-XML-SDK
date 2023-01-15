@@ -2,23 +2,22 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
-using System;
 
 namespace DocumentFormat.OpenXml.Packaging.Builder;
 
 internal static class SavePackageExtensions
 {
-    internal static OpenXmlPackage EnableSavePackage(this OpenXmlPackage package)
+    internal static IFeatureCollection EnableSavePackage(this IFeatureCollection features)
     {
-        var feature = package.Features.GetRequired<IPackageFeature>();
+        var feature = features.GetRequired<IPackageFeature>();
         var capabilities = feature.Capabilities;
 
         if (!capabilities.HasFlagFast(PackageCapabilities.Save) && capabilities.HasFlagFast(PackageCapabilities.Reload))
         {
-            package.Features.Set<IPackageFeature>(new SaveablePackage(feature));
+            features.Set<IPackageFeature>(new SaveablePackage(feature));
         }
 
-        return package;
+        return features;
     }
 
     private sealed class SaveablePackage : DelegatingPackageFeature

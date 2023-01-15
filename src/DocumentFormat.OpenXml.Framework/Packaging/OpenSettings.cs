@@ -43,14 +43,6 @@ namespace DocumentFormat.OpenXml.Packaging
         public bool AutoSave { get; set; } = true;
 
         /// <summary>
-        /// Gets a default initializer that attempts to setup the package in a way useful to most developers.
-        /// </summary>
-        internal static Action<OpenXmlPackage> PackageInitializer { get; } = DefaultInitializerImpl;
-
-        private static void DefaultInitializerImpl(OpenXmlPackage package) => package
-            .EnableSavePackage();
-
-        /// <summary>
         /// Gets or sets the value of the markup compatibility processing mode.
         /// </summary>
         public MarkupCompatibilityProcessSettings MarkupCompatibilityProcessSettings

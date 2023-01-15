@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Packaging.Builder;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -66,7 +67,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 Features.GetRequired<IDisposableFeature>().Register(disposable);
             }
 
-            OpenSettings.PackageInitializer.Invoke(this);
+            this.InitializePackage();
 
             Load(packageFeature.Package);
         }

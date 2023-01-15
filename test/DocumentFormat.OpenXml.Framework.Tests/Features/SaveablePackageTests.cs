@@ -23,21 +23,18 @@ public class SaveablePackageTests
     public void RequiredCapabilityCheck(PackageCapabilities capabilities, bool shouldUpdate)
     {
         // Arrange
-        var featureCollection = new FeatureCollection();
+        var features = new FeatureCollection();
 
         var feature = Substitute.For<IPackageFeature>();
         feature.Capabilities.Returns(capabilities);
-        featureCollection.Set(feature);
-
-        var package = Substitute.ForPartsOf<OpenXmlPackage>();
-        package.Features.Returns(featureCollection);
+        features.Set(feature);
 
         // Act
-        var updatedPackage = package.EnableSavePackage();
-        var updatedFeature = package.Features.GetRequired<IPackageFeature>();
+        var updatedFeatures = features.EnableSavePackage();
+        var updatedFeature = features.GetRequired<IPackageFeature>();
 
         // Assert
-        Assert.Same(package, updatedPackage);
+        Assert.Same(features, updatedFeatures);
 
         if (shouldUpdate)
         {
@@ -54,18 +51,15 @@ public class SaveablePackageTests
     public void SaveCallsReload()
     {
         // Arrange
-        var featureCollection = new FeatureCollection();
+        var features = new FeatureCollection();
 
         var feature = Substitute.For<IPackageFeature>();
         feature.Capabilities.Returns(PackageCapabilities.Reload);
-        featureCollection.Set(feature);
-
-        var package = Substitute.ForPartsOf<OpenXmlPackage>();
-        package.Features.Returns(featureCollection);
+        features.Set(feature);
 
         // Act
-        package.EnableSavePackage();
-        var updatedFeature = package.Features.GetRequired<IPackageFeature>();
+        features.EnableSavePackage();
+        var updatedFeature = features.GetRequired<IPackageFeature>();
         updatedFeature.Package.Save();
 
         // Assert
