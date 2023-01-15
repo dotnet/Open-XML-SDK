@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// An interface that defines the relationship between a source and a target part. Similar to <see cref="PackageRelationship"/> but allows full overriding.
 /// </summary>
-public interface IPackageRelationship
+internal interface IPackageRelationship
 {
     /// <summary>
     /// Gets a unique identifier across relationships for the given source.

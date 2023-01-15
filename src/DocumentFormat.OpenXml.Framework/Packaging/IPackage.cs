@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// An abstraction similar to <see cref="System.IO.Packaging.Package"/> that allows for pass through implementations
 /// </summary>
-public interface IPackage
+internal interface IPackage
 {
     /// <summary>
     /// Gets the file access of the package
