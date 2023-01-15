@@ -137,7 +137,11 @@ namespace DocumentFormat.OpenXml
 
             if (disposing)
             {
+#if NET35 || NET40
+                ((IDisposable)_writer).Dispose();
+#else
                 _writer.Dispose();
+#endif
             }
         }
     }

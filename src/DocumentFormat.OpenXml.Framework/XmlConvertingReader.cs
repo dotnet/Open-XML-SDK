@@ -43,7 +43,11 @@ namespace DocumentFormat.OpenXml
         {
             base.Dispose(disposing);
 
+#if NET35 || NET40
+            ((IDisposable)BaseReader).Dispose();
+#else
             BaseReader.Dispose();
+#endif
         }
 
         /// <inheritdoc/>
