@@ -74,9 +74,13 @@ internal static class LargePartStreamExtensions
             var stream = new FileStream(path, FileMode.Create, FileAccess.ReadWrite, FileShare.None, 4096, FileOptions.DeleteOnClose);
             _streams[uri] = stream;
 
-            using var original = originalPart.GetStream(mode, FileAccess.Read);
-            original.CopyTo(stream);
-            stream.Position = 0;
+            // In this case, we will overwrite the existing stream
+            if (mode != FileMode.Create)
+            {
+                using var original = originalPart.GetStream(mode, FileAccess.Read);
+                original.CopyTo(stream);
+                stream.Position = 0;
+            }
 
             return new LargePartStream(EnsureAccess(stream, access));
         }
