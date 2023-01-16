@@ -112,8 +112,6 @@ internal static class LargePartStreamExtensions
                 WriteStreams(streams);
                 _streams = null;
 
-                base.Save();
-
                 Feature.Reload();
             }
         }
