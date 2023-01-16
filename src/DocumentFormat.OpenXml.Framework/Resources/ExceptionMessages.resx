@@ -414,4 +414,7 @@
   <data name="NamespaceIdNotAvailable" xml:space="preserve">
     <value>Namespace ids are only available for namespaces for Office 2021 and before. Please use prefixes or URLs instead.</value>
   </data>
+  <data name="PartStreamInUse" xml:space="preserve">
+    <value>Part stream cannot be accessed because it is in use</value>
+  </data>
 </root>

@@ -10,9 +10,8 @@
 
 namespace DocumentFormat.OpenXml {
     using System;
-    using System.Reflection;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -40,7 +39,7 @@ namespace DocumentFormat.OpenXml {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DocumentFormat.OpenXml.Resources.ExceptionMessages", typeof(ExceptionMessages).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DocumentFormat.OpenXml.Resources.ExceptionMessages", typeof(ExceptionMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -718,6 +717,15 @@ namespace DocumentFormat.OpenXml {
         internal static string PartRootAlreadyHasAssociation {
             get {
                 return ResourceManager.GetString("PartRootAlreadyHasAssociation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Part stream cannot be accessed because it is in use.
+        /// </summary>
+        internal static string PartStreamInUse {
+            get {
+                return ResourceManager.GetString("PartStreamInUse", resourceCulture);
             }
         }
         
