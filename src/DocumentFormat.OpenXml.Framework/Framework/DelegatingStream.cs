@@ -14,49 +14,51 @@ namespace DocumentFormat.OpenXml.Framework;
 
 internal abstract class DelegatingStream : Stream
 {
+    private readonly Stream _innerStream;
+
     #region Properties
 
     public override bool CanRead
     {
-        get { return InnerStream.CanRead; }
+        get { return _innerStream.CanRead; }
     }
 
     public override bool CanSeek
     {
-        get { return InnerStream.CanSeek; }
+        get { return _innerStream.CanSeek; }
     }
 
     public override bool CanWrite
     {
-        get { return InnerStream.CanWrite; }
+        get { return _innerStream.CanWrite; }
     }
 
     public override long Length
     {
-        get { return InnerStream.Length; }
+        get { return _innerStream.Length; }
     }
 
     public override long Position
     {
-        get { return InnerStream.Position; }
-        set { InnerStream.Position = value; }
+        get { return _innerStream.Position; }
+        set { _innerStream.Position = value; }
     }
 
     public override int ReadTimeout
     {
-        get { return InnerStream.ReadTimeout; }
-        set { InnerStream.ReadTimeout = value; }
+        get { return _innerStream.ReadTimeout; }
+        set { _innerStream.ReadTimeout = value; }
     }
 
     public override bool CanTimeout
     {
-        get { return InnerStream.CanTimeout; }
+        get { return _innerStream.CanTimeout; }
     }
 
     public override int WriteTimeout
     {
-        get { return InnerStream.WriteTimeout; }
-        set { InnerStream.WriteTimeout = value; }
+        get { return _innerStream.WriteTimeout; }
+        set { _innerStream.WriteTimeout = value; }
     }
 
     #endregion Properties
@@ -64,16 +66,14 @@ internal abstract class DelegatingStream : Stream
     protected DelegatingStream(Stream innerStream)
     {
         Debug.Assert(innerStream != null);
-        InnerStream = innerStream!;
+        _innerStream = innerStream!;
     }
-
-    public Stream InnerStream { get; }
 
     protected override void Dispose(bool disposing)
     {
         if (disposing)
         {
-            InnerStream.Dispose();
+            _innerStream.Dispose();
         }
 
         base.Dispose(disposing);
@@ -90,12 +90,12 @@ internal abstract class DelegatingStream : Stream
 
     public override long Seek(long offset, SeekOrigin origin)
     {
-        return InnerStream.Seek(offset, origin);
+        return _innerStream.Seek(offset, origin);
     }
 
     public override int Read(byte[] buffer, int offset, int count)
     {
-        return InnerStream.Read(buffer, offset, count);
+        return _innerStream.Read(buffer, offset, count);
     }
 
 #if NET6_0_OR_GREATER
@@ -107,13 +107,13 @@ internal abstract class DelegatingStream : Stream
 
     public override int ReadByte()
     {
-        return InnerStream.ReadByte();
+        return _innerStream.ReadByte();
     }
 
 #if !NET35 && !NET40
     public override Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken)
     {
-        return InnerStream.ReadAsync(buffer, offset, count, cancellationToken);
+        return _innerStream.ReadAsync(buffer, offset, count, cancellationToken);
     }
 #endif
 
@@ -134,7 +134,7 @@ internal abstract class DelegatingStream : Stream
 #if !NET35 && !NET40
     public override Task CopyToAsync(Stream destination, int bufferSize, CancellationToken cancellationToken)
     {
-        return InnerStream.CopyToAsync(destination, bufferSize, cancellationToken);
+        return _innerStream.CopyToAsync(destination, bufferSize, cancellationToken);
     }
 #endif
 
@@ -144,24 +144,24 @@ internal abstract class DelegatingStream : Stream
 
     public override void Flush()
     {
-        InnerStream.Flush();
+        _innerStream.Flush();
     }
 
 #if !NET35 && !NET40
     public override Task FlushAsync(CancellationToken cancellationToken)
     {
-        return InnerStream.FlushAsync(cancellationToken);
+        return _innerStream.FlushAsync(cancellationToken);
     }
 #endif
 
     public override void SetLength(long value)
     {
-        InnerStream.SetLength(value);
+        _innerStream.SetLength(value);
     }
 
     public override void Write(byte[] buffer, int offset, int count)
     {
-        InnerStream.Write(buffer, offset, count);
+        _innerStream.Write(buffer, offset, count);
     }
 
 #if NET6_0_OR_GREATER
@@ -173,13 +173,13 @@ internal abstract class DelegatingStream : Stream
 
     public override void WriteByte(byte value)
     {
-        InnerStream.WriteByte(value);
+        _innerStream.WriteByte(value);
     }
 
 #if !NET35 && !NET40
     public override Task WriteAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken)
     {
-        return InnerStream.WriteAsync(buffer, offset, count, cancellationToken);
+        return _innerStream.WriteAsync(buffer, offset, count, cancellationToken);
     }
 #endif
 
@@ -193,12 +193,12 @@ internal abstract class DelegatingStream : Stream
 #if !NETSTANDARD1_3
     public override IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback? callback, object? state)
     {
-        return InnerStream.BeginWrite(buffer, offset, count, callback, state);
+        return _innerStream.BeginWrite(buffer, offset, count, callback, state);
     }
 
     public override void EndWrite(IAsyncResult asyncResult)
     {
-        InnerStream.EndWrite(asyncResult);
+        _innerStream.EndWrite(asyncResult);
     }
 #endif
 

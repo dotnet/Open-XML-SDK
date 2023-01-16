@@ -33,7 +33,7 @@ internal static class LargePartStreamExtensions
             return features;
         }
 
-        var newFeature = new TemporaryStreamPackage(feature, FileFactory);
+        var newFeature = new TemporaryStreamPackage(feature);
 
         features.Set<IPackageFeature>(newFeature);
         features.GetRequired<IDisposableFeature>().Register(newFeature);
@@ -41,22 +41,13 @@ internal static class LargePartStreamExtensions
         return features;
     }
 
-    private static Stream FileFactory()
-    {
-        var path = Path.GetTempFileName();
-        return new FileStream(path, FileMode.Create, FileAccess.ReadWrite, FileShare.None, 4096, FileOptions.DeleteOnClose);
-    }
-
     private sealed class TemporaryStreamPackage : DelegatingPackageFeature, IDisposable
     {
-        private readonly Func<Stream> _temporaryFactory;
+        private Dictionary<Uri, Stream>? _streams;
 
-        private Dictionary<Uri, LargePartStream>? _streams;
-
-        public TemporaryStreamPackage(IPackageFeature package, Func<Stream> temporaryFactory)
+        public TemporaryStreamPackage(IPackageFeature package)
             : base(package)
         {
-            _temporaryFactory = temporaryFactory;
         }
 
         public override PackageCapabilities Capabilities => base.Capabilities & PackageCapabilities.LargePartStreams;
@@ -65,9 +56,7 @@ internal static class LargePartStreamExtensions
         {
             if (_streams is not null && _streams.TryGetValue(uri, out var existing))
             {
-                existing.Borrow();
-
-                return EnsureAccess(existing, access);
+                return new LargePartStream(EnsureAccess(existing, access));
             }
 
             // We don't need to do any redirection if it is just reading the stream
@@ -81,7 +70,8 @@ internal static class LargePartStreamExtensions
                 _streams = new();
             }
 
-            var stream = new LargePartStream(_temporaryFactory());
+            var path = Path.GetTempFileName();
+            var stream = new FileStream(path, FileMode.Create, FileAccess.ReadWrite, FileShare.None, 4096, FileOptions.DeleteOnClose);
             _streams[uri] = stream;
 
             // In this case, we will overwrite the existing stream
@@ -92,7 +82,7 @@ internal static class LargePartStreamExtensions
                 stream.Position = 0;
             }
 
-            return EnsureAccess(stream, access);
+            return new LargePartStream(EnsureAccess(stream, access));
         }
 
         private static Stream EnsureAccess(Stream stream, FileAccess access)
@@ -128,11 +118,11 @@ internal static class LargePartStreamExtensions
             }
         }
 
-        private void WriteStreams(Dictionary<Uri, LargePartStream> files)
+        private void WriteStreams(Dictionary<Uri, Stream> files)
         {
             foreach (var entry in files)
             {
-                using var stream = entry.Value.InnerStream;
+                using var stream = entry.Value;
                 using var partStream = base.GetPart(entry.Key).GetStream(FileMode.Create, FileAccess.Write);
 
                 stream.CopyTo(partStream);
@@ -198,27 +188,17 @@ internal static class LargePartStreamExtensions
 
     internal sealed class LargePartStream : DelegatingStream
     {
-        private bool _inUse;
-
         public LargePartStream(Stream innerStream)
             : base(innerStream)
         {
-            _inUse = true;
+            InUse = true;
         }
 
-        public void Borrow()
-        {
-            if (_inUse)
-            {
-                throw new InvalidOperationException(ExceptionMessages.PartStreamInUse);
-            }
-
-            _inUse = true;
-        }
+        public bool InUse { get; private set; }
 
         protected override void Dispose(bool disposing)
         {
-            _inUse = false;
+            InUse = false;
             Position = 0;
         }
     }
