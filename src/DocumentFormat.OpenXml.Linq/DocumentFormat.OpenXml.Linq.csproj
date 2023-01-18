@@ -6,6 +6,7 @@
     <Description>Provides additional LINQ functionality to the Open XML SDK to allow operations using XLINQ.</Description>
     <NoWarn>$(NoWarn);RS0041</NoWarn>
     <IncludeFrameworkShims>true</IncludeFrameworkShims>
+    <TargetFrameworks>net35;net40;netstandard2.0</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,14 +24,6 @@
     </When>
 
     <When Condition=" '$(TargetFramework)' == 'net40'">
-      <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-        <Reference Include="System.Xml.Linq" />
-      </ItemGroup>
-    </When>
-
-    <When Condition=" '$(TargetFramework)' == 'net46'">
       <ItemGroup>
         <Reference Include="System" />
         <Reference Include="System.Xml" />

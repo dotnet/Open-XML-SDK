@@ -29,10 +29,13 @@ The Open XML SDK provides tools for working with Office Word, Excel, and PowerPo
 - [Packages](#packages)
   - [Daily Builds](#daily-builds)
   - [Framework Support](#framework-support)
-- [If You Have Problems](#if-you-have-problems)
 - [Known Issues](#known-issues)
 - [Documentation](#documentation)
 - [Related tools](#related-tools)
+- [How can I contribute?](#how-can-i-contribute)
+- [Reporting security issues and security bugs](#reporting-security-issues-and-security-bugs)
+- [.NET Foundation](#net-foundation)
+- [License](#license)
 
 # Packages
 
@@ -61,18 +64,13 @@ For latests changes, please see the [changelog](CHANGELOG.md)
 
 ## Framework Support
 
-The package currently supports the following frameworks:
+As of v3.0, .NET Standard 1.3 support has been dropped. The current target frameworks built are:
 
-- .NET Framework 3.5+
-- .NET Standard 1.3+
-- .NET Core 1.0+
-- .NET 5+
-- Mono 4.6+
-- Xamarin.iOS 10.0+
-- Xamarin.Mac 3.0+
-- Xamarin.Android 7.0+
-- UWP 10.0+
-- Unity 2018.1+
+- .NET 3.5
+- .NET 4.0
+- .NET 4.6
+- .NET Standard 2.0
+- .NET 6.0
 
 For details on platform support, please see the docs at https://docs.microsoft.com/en-us/dotnet/standard/net-standard.
 

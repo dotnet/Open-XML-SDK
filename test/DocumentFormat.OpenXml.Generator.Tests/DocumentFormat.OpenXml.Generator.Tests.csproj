@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>$(LatestTargetFramework)</TargetFrameworks>
+    <TargetFrameworks>net7.0</TargetFrameworks>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
   <ItemGroup>

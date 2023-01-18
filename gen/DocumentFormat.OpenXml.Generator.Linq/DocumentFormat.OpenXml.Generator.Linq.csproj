@@ -8,26 +8,15 @@
       To simplify this, only builds targeting .NET 5.0 will actually have any code and on other targets
       will be a no-op.
       -->
-    <TargetFrameworks>$(SamplesFrameworks)</TargetFrameworks>
+    <TargetFrameworks>net6.0</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
     <NoWarn>$(NoWarn);3003</NoWarn>
   </PropertyGroup>
 
-  <Choose>
-    <When Condition=" '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">
-      <ItemGroup>
-        <PackageReference Include="System.CodeDom" />
-        <ProjectReference Include="..\..\src\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
-        <Compile Remove="Program.Empty.cs" />
-      </ItemGroup>
-    </When>
-
-    <Otherwise>
-      <ItemGroup>
-        <Compile Remove="Program.cs" />
-      </ItemGroup>
-    </Otherwise>
-  </Choose>
+  <ItemGroup>
+    <PackageReference Include="System.CodeDom" />
+    <ProjectReference Include="..\..\src\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
+  </ItemGroup>
 
 </Project>

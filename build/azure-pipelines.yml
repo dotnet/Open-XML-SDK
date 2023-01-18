@@ -23,27 +23,21 @@ stages:
       - template: build.yml
         parameters:
           buildTargets:
-            - name: net35
-              vmImages: 
-                - image: 'windows-latest'
-                  name: 'windows'
-            - name: net40
-              vmImages: 
-                - image: 'windows-latest'
-                  name: 'windows'
-            - name: net46
-              vmImages: 
-                - image: 'windows-latest'
-                  name: 'windows'
-            - name: net6_0
-              runtimes:
-                - 6.0.11
+            - name: full
               vmImages: 
                 - image: 'windows-latest'
                   name: 'windows'
                 - image: 'ubuntu-latest'
                   name: 'linux'
-            - name: net7_0
+            - name: net35
+              TestTargetFramework: net452
+              TestDependencyTargetFramework: net35
+              vmImages: 
+                - image: 'windows-latest'
+                  name: 'windows'
+            - name: netstandard20
+              TestTargetFramework: net6.0
+              TestDependencyTargetFramework: netstandard2.0
               vmImages: 
                 - image: 'windows-latest'
                   name: 'windows'

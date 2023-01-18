@@ -1,7 +1,6 @@
 jobs:
   - job: Pack
     variables:
-      ProjectLoadStyle: All
       Configuration: Release
     pool:
       vmImage: 'windows-latest' # Needed for PEVerify

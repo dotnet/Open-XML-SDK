@@ -12,11 +12,13 @@ jobs:
           debug:
             buildConfiguration: debug
             upload: false
-            ProjectLoadStyle: ${{ buildTarget.name }}
+            TestTargetFramework: ${{ buildTarget.TestTargetFramework }}
+            TestDependencyTargetFramework: ${{ buildTarget.TestDependencyTargetFramework }}
           release:
             buildConfiguration: release
             upload: ${{ buildTarget.upload }}
-            ProjectLoadStyle: ${{ buildTarget.name }}
+            TestTargetFramework: ${{ buildTarget.TestTargetFramework }}
+            TestDependencyTargetFramework: ${{ buildTarget.TestDependencyTargetFramework }}
       steps:
       - task: UseDotNet@2
         displayName: 'Install global.json .NET Core SDK'
@@ -24,12 +26,11 @@ jobs:
           packageType: 'sdk'
           useGlobalJson: true
 
-      - ${{ each runtime in buildTarget.runtimes }}:
-        - task: UseDotNet@2
-          displayName: 'Install .NET Runtime ${{ runtime }}'
-          inputs:
-            packageType: 'runtime'
-            version: ${{ runtime }}
+      - task: UseDotNet@2
+        displayName: 'Install .NET Runtime 6.x'
+        inputs:
+          packageType: 'runtime'
+          version: 6.0.11
 
       - task: DotNetCoreCLI@2
         inputs:

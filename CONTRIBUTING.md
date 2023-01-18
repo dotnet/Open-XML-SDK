@@ -25,6 +25,8 @@ This repository can be built on Windows, Linux, and OSX.
 
 Building, testing, and packing this repository can be done by using the standard dotnet CLI commands (e.g. `dotnet build`, `dotnet test`, `dotnet pack`, etc.).
 
-Since there are a number of targets for the project, and loading all at once may cause slow performance in Visual Studio, the target framework can be controlled by an environment variable. This is controlled in [Directory.Build.props](./Directory.Build.props) via the environment variable `ProjectLoadStyle`. This changes over time, but that file will contain what the available load configurations are. By default, this will try to default to the current LTS version of .NET Core, but allows development against previous targets if needed. This is helpful, for instance, if you don't have the latest .NET installed.  The continuous integration system sets `ProjectLoadStyle=All` to build for all targets.
-
 [VisualStudio]: https://docs.microsoft.com/dotnet/core/install/sdk?pivots=os-windows#install-with-visual-studio
+
+## Tests
+
+There are a number of unit tests in the project. Running `dotnet test` will run them. Additionally, builds target `net35` and `netstandard2.0` which by default aren't tested; in order to do that set `TestTargetFramework` to match the test asset framework and `TestDependencyTargetFramework` to set the framework used for the test. This is done automatically on the CI builds to ensure we get some test coverage on those builds (although the `net35` will be run on `net452` since there's no support to run it on `net35` itself).

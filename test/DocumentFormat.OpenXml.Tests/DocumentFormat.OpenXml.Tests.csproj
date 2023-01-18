@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>$(TestTargetFrameworks)</TargetFrameworks>
+    <TargetFrameworks>net6.0</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TargetFrameworks);net452;net46</TargetFrameworks>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
