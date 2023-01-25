@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         private static IEnumerable<LookupData> GetBuiltIn()
         {
             return typeof(TypedFeatures).GetTypeInfo().Assembly.GetTypes()
-                .Where(t => !t.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).GetTypeInfo().IsAssignableFrom(t))
+                .Where(t => !t.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).IsAssignableFrom(t))
                 .Concat(TypesFromFramework)
                 .Distinct()
                 .OrderBy(type => type.FullName, StringComparer.Ordinal)

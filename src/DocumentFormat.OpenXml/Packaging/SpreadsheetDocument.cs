@@ -269,7 +269,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (typeof(WorkbookPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != Features.GetRequired<IMainPartFeature>().ContentType)
+            if (typeof(WorkbookPart).IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != Features.GetRequired<IMainPartFeature>().ContentType)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
             }

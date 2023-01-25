@@ -348,7 +348,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (typeof(PresentationPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != Features.GetRequired<IMainPartFeature>().ContentType)
+            if (typeof(PresentationPart).IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != Features.GetRequired<IMainPartFeature>().ContentType)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
             }

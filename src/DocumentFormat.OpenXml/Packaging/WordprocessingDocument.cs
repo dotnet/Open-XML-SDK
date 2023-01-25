@@ -309,7 +309,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (typeof(MainDocumentPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != Features.GetRequired<IMainPartFeature>().ContentType)
+            if (typeof(MainDocumentPart).IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != Features.GetRequired<IMainPartFeature>().ContentType)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
             }

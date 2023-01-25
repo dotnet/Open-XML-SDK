@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Features
             {
                 if (_annotations is not object?[] annotations)
                 {
-                    if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
+                    if (type.IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
                     {
                         return _annotations;
                     }
@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Features
                             break;
                         }
 
-                        if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
+                        if (type.IsAssignableFrom(obj.GetType().GetTypeInfo()))
                         {
                             return obj;
                         }
@@ -170,7 +170,7 @@ namespace DocumentFormat.OpenXml.Features
             {
                 if (_annotations is not object?[] annotations)
                 {
-                    if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
+                    if (type.IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
                     {
                         yield return _annotations;
                     }
@@ -185,7 +185,7 @@ namespace DocumentFormat.OpenXml.Features
                             break;
                         }
 
-                        if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
+                        if (type.IsAssignableFrom(obj.GetType().GetTypeInfo()))
                         {
                             yield return obj;
                         }
@@ -252,7 +252,7 @@ namespace DocumentFormat.OpenXml.Features
             {
                 if (_annotations is not object?[] annotations)
                 {
-                    if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
+                    if (type.IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
                     {
                         _annotations = null;
                     }
@@ -269,7 +269,7 @@ namespace DocumentFormat.OpenXml.Features
                             break;
                         }
 
-                        if (!type.GetTypeInfo().IsAssignableFrom(o.GetType().GetTypeInfo()))
+                        if (!type.IsAssignableFrom(o.GetType().GetTypeInfo()))
                         {
                             annotations[num++] = o;
                         }

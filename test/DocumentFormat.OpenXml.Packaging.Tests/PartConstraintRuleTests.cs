@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Tests
                 .Where(t => t != typeof(TypedOpenXmlPart))
                 .Concat(fromFramework)
                 .Distinct()
-                .Where(t => typeof(OpenXmlPart).GetTypeInfo().IsAssignableFrom(t))
+                .Where(t => typeof(OpenXmlPart).IsAssignableFrom(t))
                 .Select(t => t.FullName)
                 .OrderBy(v => v, StringComparer.Ordinal)
                 .ToList();

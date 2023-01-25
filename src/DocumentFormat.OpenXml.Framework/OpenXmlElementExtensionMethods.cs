@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml
             {
                 foreach (var element in parent.Metadata.Children.Elements)
                 {
-                    if (element.Type is not null && element.Type.GetTypeInfo().IsAssignableFrom(child.GetType().GetTypeInfo()))
+                    if (element.Type is not null && element.Type.IsAssignableFrom(child.GetType().GetTypeInfo()))
                     {
                         return true;
                     }
