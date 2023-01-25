@@ -689,7 +689,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.IsType<MediaDataPart>(dataPart);
                     Assert.Same(testDocument, dataPart.OpenXmlPackage);
                     Assert.NotNull(dataPart.PackagePart);
-                    Assert.Same(testDocument.Package.GetPart(dataPart.Uri), dataPart.PackagePart);
+                    Assert.Same(testDocument.PackageInternal.GetPart(dataPart.Uri), dataPart.PackagePart);
                     Assert.Equal("audio/wav", dataPart.ContentType);
                     Assert.Equal(3, dataPart.GetDataPartReferenceRelationships().Count());
 
@@ -732,7 +732,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.IsType<MediaDataPart>(dataPart);
                     Assert.Same(testDocument, dataPart.OpenXmlPackage);
                     Assert.NotNull(dataPart.PackagePart);
-                    Assert.Same(testDocument.Package.GetPart(dataPart.Uri), dataPart.PackagePart);
+                    Assert.Same(testDocument.PackageInternal.GetPart(dataPart.Uri), dataPart.PackagePart);
                     Assert.Equal("audio/wav", dataPart.ContentType);
                     Assert.Equal(2, dataPart.GetDataPartReferenceRelationships().Count());
 

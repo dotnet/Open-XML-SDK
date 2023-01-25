@@ -1839,7 +1839,7 @@ namespace DocumentFormat.OpenXml.Packaging
                                 if (dataPart is null)
                                 {
                                     // Load the part as MediaDataPart.
-                                    var packagePart = openXmlPackage.Package.GetPart(uriTarget);
+                                    var packagePart = openXmlPackage.PackageInternal.GetPart(uriTarget);
                                     dataPart = new MediaDataPart(openXmlPackage, packagePart);
                                     openXmlPackage.AddDataPartToList(dataPart);
                                 }

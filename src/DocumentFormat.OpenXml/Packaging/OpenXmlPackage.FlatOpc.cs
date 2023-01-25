@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // parts regardless of the actual content type, which might even be
             // XML-related such as application/xhtml+xml.
             var altChunkPartUris = new HashSet<Uri>(
-                Package.GetParts()
+                PackageInternal.GetParts()
                     .Where(part => part.ContentType != RelationshipContentType)
                     .SelectMany(part => part.GetRelationshipsByType(AltChunkRelationshipType))
                     .Select(pr => PackUriHelper.ResolvePartUri(pr.SourceUri, pr.TargetUri)));
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 new XElement(
                     Pkg + "package",
                     new XAttribute(XNamespace.Xmlns + "pkg", Pkg.ToString()),
-                    Package.GetParts().Select(part => GetContentsAsXml(part, altChunkPartUris))));
+                    PackageInternal.GetParts().Select(part => GetContentsAsXml(part, altChunkPartUris))));
         }
 
         /// <summary>
@@ -194,11 +194,11 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <summary>
         /// Converts an <see cref="XDocument"/> in Flat OPC format to an OpenXml package
-        /// stored in a <see cref="Package"/>.
+        /// stored in a <see cref="PackageInternal"/>.
         /// </summary>
         /// <param name="flatOpcDocument">The document in Flat OPC format.</param>
-        /// <param name="package">The <see cref="Package"/> in which to store the OpenXml package.</param>
-        /// <returns>The <see cref="Package"/> containing the OpenXml package.</returns>
+        /// <param name="package">The <see cref="PackageInternal"/> in which to store the OpenXml package.</param>
+        /// <returns>The <see cref="PackageInternal"/> containing the OpenXml package.</returns>
         protected static Package FromFlatOpcDocumentCore(XDocument flatOpcDocument, Package package)
         {
             if (flatOpcDocument is null)

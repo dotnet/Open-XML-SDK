@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Packaging
             Debug.Assert(loadedParts.ContainsKey(uriTarget));
 
             // TODO: should we delay load?
-            var part = _openXmlPackage.Package.GetPart(uriTarget);
+            var part = _openXmlPackage.PackageInternal.GetPart(uriTarget);
 
             _packagePart = part;
 
@@ -597,7 +597,7 @@ namespace DocumentFormat.OpenXml.Packaging
         // destroy itself (aka. dispose)
         internal void Destroy()
         {
-            OpenXmlPackage.Package.DeletePart(Uri);
+            OpenXmlPackage.PackageInternal.DeletePart(Uri);
 
             ChildrenRelationshipParts.Clear();
             ReferenceRelationshipList.Clear();
