@@ -141,21 +141,17 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static void AssertNamespace(XmlPath xmlPath, Uri partUri, string uri, params NS[] namespaces)
         {
-#pragma warning disable CS0618 // Type or member is obsolete
             Assert.Equal(partUri, xmlPath.PartUri);
             Assert.Equal(uri, xmlPath.XPath);
 
             var actualNamespaces = xmlPath.Namespaces.GetNamespacesInScope(XmlNamespaceScope.Local);
 
-            Assert.Equal(namespaces.Length, xmlPath.NamespacesDefinitions.Count);
             Assert.Equal(namespaces.Length, actualNamespaces.Count);
 
             foreach (var name in namespaces)
             {
-                Assert.Contains($"xmlns:{name.Prefix}=\"{name.Namespace}\"", xmlPath.NamespacesDefinitions);
                 Assert.Contains(name.ToPair(), actualNamespaces);
             }
-#pragma warning restore CS0618 // Type or member is obsolete
         }
     }
 }

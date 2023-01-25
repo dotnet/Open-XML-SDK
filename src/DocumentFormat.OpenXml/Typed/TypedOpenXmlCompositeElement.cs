@@ -29,11 +29,5 @@ public abstract class TypedOpenXmlCompositeElement : OpenXmlCompositeElement
     {
     }
 
-    [Obsolete(UseGenericVersion)]
-    private protected TypedOpenXmlCompositeElement(IEnumerable elements)
-        : base(elements)
-    {
-    }
-
     private protected override IFeatureCollection CreateFeatures() => TypedOpenXmlElement.GetTypedElementFeatures(this);
 }
