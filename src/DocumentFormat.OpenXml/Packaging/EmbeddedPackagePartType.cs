@@ -3,36 +3,10 @@
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-	/// <summary>
-	/// Defines EmbeddedPackagePartType - types of EmbeddedPackagePart.
-	///
-	/// Data from "dev12\msoutilstat\src\metro.cpp":
-	///
-	/// <![CDATA[
-	/// L".bin",    L"image/unknown",
-	/// L".docm",    L"image/bmp",
-	/// L".docx",    L"image/gif",
-	/// L".dotm",    L"image/png",
-	/// L".dotx",   L"image/tiff",
-	/// L".potm",    L"image/xbm",
-	/// L".potx",    L"image/x-icon",
-	/// L".ppam",    L"image/x-pcx",
-	/// L".ppsm",    L"image/x-pcz",
-	/// L".ppsx",    L"image/x-emz",
-	/// L".pptm",    L"image/x-wmz",
-	/// L".pptx",   L"image/jpeg",
-	/// L".sldm",    L"image/x-emf",
-	/// L".sldx",    L"image/x-wmf",
-	/// L".thmx",    L"image/svg+xml",
-	/// L".xlam",    L"image/x-wmz",
-	/// L".xlsb",   L"image/jpeg",
-	/// L".xlsm",   L"image/jpeg",
-	/// L".xlsx",    L"image/x-emf",
-	/// L".xltm",    L"image/x-wmf",
-	/// L".xltx",    L"image/svg+xml",
-	/// ]]>
-	/// </summary>
-	public enum EmbeddedPackagePartType
+    /// <summary>
+    /// Defines EmbeddedPackagePartType - types of EmbeddedPackagePart.
+    /// </summary>
+    public enum EmbeddedPackagePartType
 	{
 		/// <summary>
 		/// Office Open XML macro-enabled document (.docm).

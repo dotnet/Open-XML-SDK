@@ -35,10 +35,8 @@ namespace DocumentFormat.OpenXml.Packaging
         private sealed class GeneratedFeatures : TypedPartFeatureCollection, ITargetFeature
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
-            string ITargetFeature.Extension => ".bin";
             string ITargetFeature.Name => "package";
             string ITargetFeature.Path => "embeddings";
         }
-    
     }
 }
