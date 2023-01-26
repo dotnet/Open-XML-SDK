@@ -6,5 +6,6 @@ namespace DocumentFormat.OpenXml.Packaging.Builder;
 internal static class OpenXmlPackageInitializerExtensions
 {
     public static void InitializePackage(this OpenXmlPackage package) => package.Features
+        .EnableSavePackage();
         .EnableLargePartStreams();
 }
