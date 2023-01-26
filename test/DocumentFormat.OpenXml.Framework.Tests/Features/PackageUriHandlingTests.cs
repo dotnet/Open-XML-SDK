@@ -14,7 +14,7 @@ using Xunit;
 
 namespace DocumentFormat.OpenXml.Framework.Tests.Features;
 
-public class MalformedUriPackageTests
+public class PackageUriHandlingTests
 {
     [InlineData((int)PackageCapabilities.MalformedUri, false)]
     [InlineData((int)PackageCapabilities.Save, true)]
@@ -170,8 +170,6 @@ public class MalformedUriPackageTests
 
     private static readonly PartInfo Part1 = new(new("/part1", UriKind.Relative), "type1/content");
     private static readonly PartInfo Part2 = new(new("/part2", UriKind.Relative), "type2/content");
-    private static readonly PartInfo PartRels = new(new("/_rels/.rels", UriKind.Relative), "application/vnd.openxmlformats-package.relationships+xml");
-    private static readonly PartInfo Part1Rels = new(new("/_rels/part1.rels", UriKind.Relative), "application/vnd.openxmlformats-package.relationships+xml");
 
     private static readonly RelationshipInfo Relationship1 = new("mailto:test@", TargetMode.External, "relationship1", "id1");
 
@@ -206,8 +204,7 @@ public class MalformedUriPackageTests
         var package = Package.Open(stream, FileMode.CreateNew);
 
         package.CreatePart(Part1.Uri, Part1.ContentType);
-
-        var part2 = package.CreatePart(Part2.Uri, Part2.ContentType);
+        package.CreatePart(Part2.Uri, Part2.ContentType);
 
         package.Close();
 
@@ -233,7 +230,7 @@ public class MalformedUriPackageTests
         return $"""
             <?xml version="1.0" encoding="utf-8"?>
             <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
-                <Relationship Type="{relationship.Relationship}" TargetMode="{relationship.Mode}" Target="{relationship.Target}" Id="{relationship.Id}" />
+              <Relationship Type="{relationship.Relationship}" TargetMode="{relationship.Mode}" Target="{relationship.Target}" Id="{relationship.Id}" />
             </Relationships>
             """;
     }
