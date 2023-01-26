@@ -3,7 +3,6 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Packaging.Builder;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,64 +16,17 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPackage : OpenXmlPartContainer, IDisposable
     {
-        private protected const string DoNotUseParameterlessConstructor = "The parameterless constructor never initialized anything. This will be removed in future updates.";
-
         private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
 
         private bool _isDisposed;
+        private OpenSettings? _settings;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class.
         /// </summary>
-        [Obsolete(DoNotUseParameterlessConstructor, error: true)]
         protected OpenXmlPackage()
             : base()
         {
-            OpenSettings = null!;
-        }
-
-        /// <summary>
-        /// Create an <see cref="OpenXmlPackage"/>.
-        /// </summary>
-        /// <param name="packageFeature">Underlying package feature.</param>
-        /// <param name="settings">Settings to use</param>
-        private protected OpenXmlPackage(IPackageFeature packageFeature, OpenSettings? settings = null)
-            : base()
-        {
-            if (packageFeature is null)
-            {
-                throw new ArgumentNullException(nameof(packageFeature));
-            }
-
-            if (packageFeature.Package.FileOpenAccess == FileAccess.Write)
-            {
-                throw new OpenXmlPackageException(ExceptionMessages.PackageMustCanBeRead);
-            }
-
-            if (settings is not null &&
-                settings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
-                !settings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
-            {
-                throw new ArgumentException(ExceptionMessages.InvalidMCMode);
-            }
-
-            OpenSettings = new OpenSettings(settings);
-
-            Features.Set<IPackageFeature>(packageFeature);
-
-            if (packageFeature is IDisposable disposable)
-            {
-                Features.GetRequired<IDisposableFeature>().Register(disposable);
-            }
-
-            if (packageFeature is IPackageStreamFeature streamFeature)
-            {
-                Features.Set<IPackageStreamFeature>(streamFeature);
-            }
-
-            this.InitializePackage();
-
-            Load(packageFeature.Package);
         }
 
         /// <summary>
@@ -85,8 +37,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Loads the package. This method must be called in the constructor of a derived class.
         /// </summary>
-        private void Load(IPackage package)
+        internal void Load()
         {
+            var package = Features.GetRequired<IPackageFeature>().Package;
+
             try
             {
                 var relationshipCollection = new PackageRelationshipPropertyCollection(package, Features.GetNamespaceResolver());
@@ -147,7 +101,11 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal OpenSettings OpenSettings { get; set; }
+        internal OpenSettings OpenSettings
+        {
+            get => _settings ??= new();
+            set => _settings = value;
+        }
 
         /// <summary>
         /// Gets a value indicating whether this package contains Transitional relationships converted from Strict.
@@ -218,9 +176,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(part));
             }
 
-            var mainPart = Features.GetRequired<IMainPartFeature>();
-
-            if (part.RelationshipType == mainPart.RelationshipType && part.ContentType != mainPart.ContentType)
+            if (Features.Get<IMainPartFeature>() is { } mainPart && part.RelationshipType == mainPart.RelationshipType && part.ContentType != mainPart.ContentType)
             {
                 throw new ArgumentOutOfRangeException(ExceptionMessages.MainPartIsDifferent);
             }

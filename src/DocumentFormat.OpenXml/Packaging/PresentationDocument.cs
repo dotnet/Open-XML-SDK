@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Packaging.Builder;
 using System;
 using System.IO;
 using System.IO.Packaging;
@@ -14,17 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public partial class PresentationDocument : TypedOpenXmlPackage
     {
-        /// <summary>
-        /// Creates a PresentationDocument.
-        /// </summary>
-        [Obsolete(DoNotUseParameterlessConstructor)]
-        protected PresentationDocument()
+        private PresentationDocument()
             : base()
-        {
-        }
-
-        private PresentationDocument(IPackageFeature package, OpenSettings settings)
-            : base(package, settings)
         {
         }
 
@@ -87,10 +79,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of PresentationDocument.</returns>
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static PresentationDocument Create(string path, PresentationDocumentType type, bool autoSave)
-            => new PresentationDocument(new FilePackageFeature(path, PackageOpenMode.Create), new OpenSettings { AutoSave = autoSave })
-            {
-                DocumentType = type,
-            };
+            => new PresentationDocument()
+                .WithAutosave(autoSave)
+                .WithStorage(path, PackageOpenMode.Create)
+                .AddAction(p => p.DocumentType = type)
+                .InitializePackage()
+                .DefaultInitialize();
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the IO stream.
@@ -102,10 +96,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static PresentationDocument Create(Stream stream, PresentationDocumentType type, bool autoSave)
-            => new PresentationDocument(new StreamPackageFeature(stream, PackageOpenMode.Create), new OpenSettings { AutoSave = autoSave })
-            {
-                DocumentType = type,
-            };
+            => new PresentationDocument()
+                .WithAutosave(autoSave)
+                .WithStorage(stream, PackageOpenMode.Create)
+                .AddAction(p => p.DocumentType = type)
+                .InitializePackage()
+                .DefaultInitialize();
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the specified package.
@@ -117,10 +113,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static PresentationDocument Create(Package package, PresentationDocumentType type, bool autoSave)
-            => new PresentationDocument(new PackageFeature(package), new OpenSettings { AutoSave = autoSave })
-            {
-                DocumentType = type,
-            };
+            => new PresentationDocument()
+                .WithAutosave(autoSave)
+                .WithStorage(package)
+                .AddAction(p => p.DocumentType = type)
+                .InitializePackage()
+                .DefaultInitialize();
 
         /// <summary>
         /// Creates an editable PresentationDocument from a template, opened on
@@ -209,7 +207,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML PresentationDocument.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static PresentationDocument Open(string path, bool isEditable, OpenSettings openSettings)
-            => new PresentationDocument(new FilePackageFeature(path, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read), openSettings);
+            => new PresentationDocument()
+                .WithSettings(openSettings)
+                .WithStorage(path, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read)
+                .InitializePackage()
+                .DefaultInitialize();
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the IO stream.
@@ -223,7 +225,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML PresentationDocument.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static PresentationDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
-            => new PresentationDocument(new StreamPackageFeature(stream, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read), openSettings);
+            => new PresentationDocument()
+                .WithSettings(openSettings)
+                .WithStorage(stream, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read)
+                .InitializePackage()
+                .DefaultInitialize();
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the specified package.
@@ -236,7 +242,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static PresentationDocument Open(Package package, OpenSettings openSettings)
-            => new PresentationDocument(new PackageFeature(package), openSettings);
+            => new PresentationDocument()
+                .WithSettings(openSettings)
+                .WithStorage(package)
+                .InitializePackage()
+                .DefaultInitialize();
 
         /// <summary>
         /// Changes the document type.

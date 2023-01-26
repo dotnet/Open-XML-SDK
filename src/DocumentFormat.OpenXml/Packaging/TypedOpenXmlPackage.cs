@@ -2,11 +2,9 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Framework;
 using System;
 using System.ComponentModel;
 using System.IO;
-using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
@@ -16,13 +14,8 @@ namespace DocumentFormat.OpenXml.Packaging;
 [EditorBrowsable(EditorBrowsableState.Never)]
 public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
 {
-    [Obsolete(DoNotUseParameterlessConstructor)]
     private protected TypedOpenXmlPackage()
-    {
-    }
-
-    private protected TypedOpenXmlPackage(IPackageFeature feature, OpenSettings settings)
-        : base(feature, settings)
+        : base()
     {
     }
 
