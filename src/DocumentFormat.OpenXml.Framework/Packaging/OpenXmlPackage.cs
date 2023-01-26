@@ -67,6 +67,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 Features.GetRequired<IDisposableFeature>().Register(disposable);
             }
 
+            if (packageFeature is IPackageStreamFeature streamFeature)
+            {
+                Features.Set<IPackageStreamFeature>(streamFeature);
+            }
+
             this.InitializePackage();
 
             Load(packageFeature.Package);
@@ -96,10 +101,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 // relationCollection.StrictRelationshipFound is true when this collection contains Transitional relationships converted from Strict.
                 StrictRelationshipFound = relationshipCollection.StrictRelationshipFound;
-
-                var handler = OpenSettings.RelationshipErrorHandlerFactory?.Invoke(this);
-
-                handler?.Handle(package);
 
                 // AutoSave must be false when opening ISO Strict doc as editable.
                 // (Attention: #2545529. Now we disable this code until we finally decide to go with this. Instead, we take an alternative approach that is added in the SavePartContents() method
@@ -132,8 +133,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 LoadReferencedPartsAndRelationships(this, null, relationshipCollection, loadedParts);
-
-                handler?.OnPackageLoaded();
             }
             catch (UriFormatException exception)
             {
@@ -1204,7 +1203,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             OpenXmlPart? IPartFactoryFeature.Create(string relationshipType) => null;
 
-            void IDisposableFeature.Register(IDisposable disposable) => _disposable += disposable.Dispose;
+            void IDisposableFeature.Register(IDisposable disposable) => _disposable = disposable.Dispose + _disposable;
 
             void IContainerDisposableFeature.Dispose() => _disposable?.Invoke();
         }

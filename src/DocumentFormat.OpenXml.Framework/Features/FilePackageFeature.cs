@@ -6,7 +6,7 @@ using System.IO;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal sealed class FilePackageFeature : StreamPackageFeature
+internal sealed class FilePackageFeature : StreamPackageFeature, IPackageStreamFeature
 {
     public FilePackageFeature(string path, PackageOpenMode mode)
         : base(CreateStream(path, mode), mode)
@@ -26,6 +26,17 @@ internal sealed class FilePackageFeature : StreamPackageFeature
         var share = openMode == PackageOpenMode.Read ? FileShare.Read : FileShare.None;
 
         return File.Open(path, mode, access, share);
+    }
+
+    Stream IPackageStreamFeature.Stream
+    {
+        get => Stream;
+        set
+        {
+            var previous = Stream;
+            Stream = value;
+            previous.Dispose();
+        }
     }
 
     protected override void Dispose(bool disposing)
