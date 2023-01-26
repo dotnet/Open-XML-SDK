@@ -88,7 +88,6 @@
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Packaging.PartExtensionProvider))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Packaging.ReferenceRelationship))]
-[assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Packaging.RelationshipErrorHandler))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Packaging.VideoReferenceRelationship))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Validation.OpenXmlValidator))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Validation.ValidationErrorInfo))]

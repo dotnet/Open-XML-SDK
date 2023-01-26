@@ -10,9 +10,8 @@
 
 namespace DocumentFormat.OpenXml {
     using System;
-    using System.Reflection;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -40,7 +39,7 @@ namespace DocumentFormat.OpenXml {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DocumentFormat.OpenXml.Resources.ExceptionMessages", typeof(ExceptionMessages).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DocumentFormat.OpenXml.Resources.ExceptionMessages", typeof(ExceptionMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -466,15 +465,6 @@ namespace DocumentFormat.OpenXml {
         internal static string InvalidUriFormat {
             get {
                 return ResourceManager.GetString("InvalidUriFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Provided URI was invalid after rewriting malformed relationship URI.
-        /// </summary>
-        internal static string InvalidUriProvided {
-            get {
-                return ResourceManager.GetString("InvalidUriProvided", resourceCulture);
             }
         }
         

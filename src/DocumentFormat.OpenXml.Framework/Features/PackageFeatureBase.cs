@@ -42,9 +42,34 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
             return;
         }
 
+#if !NET6_0_OR_GREATER
+        List<Uri>? unused = null;
+#endif
+
         foreach (var part in _parts)
         {
-            part.Value.Part = Package.GetPart(part.Key);
+            if (Package.PartExists(part.Key))
+            {
+                part.Value.Part = Package.GetPart(part.Key);
+            }
+            else
+            {
+#if NET6_0_OR_GREATER
+                _parts.Remove(part.Key);
+#else
+                (unused ??= new()).Add(part.Key);
+#endif
+            }
+
+#if !NET6_0_OR_GREATER
+            if (unused is not null)
+            {
+                foreach (var uri in unused)
+                {
+                    _parts.Remove(uri);
+                }
+            }
+#endif
         }
     }
 
@@ -104,13 +129,20 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
         {
             // ZipArchive.Flush only exists on .NET Framework (https://github.com/dotnet/runtime/issues/24149)
 #if NETFRAMEWORK
-            var isReadOnly = !Package.FileOpenAccess.HasFlagFast(FileAccess.Write);
-            return (isReadOnly ? PackageCapabilities.None : PackageCapabilities.Save) | PackageCapabilities.Cached | PackageCapabilities.LargePartStreams;
+            var canSave = Package.FileOpenAccess.HasFlagFast(FileAccess.Write) ? PackageCapabilities.Save : PackageCapabilities.None;
+            var uriSupport = GetSupportsMalformedUri() ? PackageCapabilities.MalformedUri : PackageCapabilities.None;
+
+            return canSave | uriSupport | PackageCapabilities.Cached | PackageCapabilities.LargePartStreams;
 #else
             return PackageCapabilities.Cached;
 #endif
         }
     }
+
+#if NETFRAMEWORK
+    private static bool GetSupportsMalformedUri()
+        => Uri.TryCreate("mailto:one@", UriKind.RelativeOrAbsolute, out _);
+#endif
 
     public virtual void Reload(FileMode? mode = null, FileAccess? access = null)
         => throw new NotSupportedException();
