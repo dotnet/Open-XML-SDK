@@ -5,7 +5,13 @@ namespace DocumentFormat.OpenXml.Packaging.Builder;
 
 internal static class OpenXmlPackageInitializerExtensions
 {
-    public static void InitializePackage(this OpenXmlPackage package) => package.Features
-        .EnableSavePackage()
-        .EnableUriHandling();
+    public static TPackage InitializePackage<TPackage>(this TPackage package)
+        where TPackage : OpenXmlPackage
+    {
+        package.Features
+            .EnableSavePackage()
+            .EnableUriHandling();
+
+        return package;
+    }
 }
