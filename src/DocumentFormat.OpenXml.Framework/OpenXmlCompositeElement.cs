@@ -41,25 +41,6 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the OpenXmlCompositeElement class using the supplied collection of elements.
-        /// </summary>
-        /// <param name="childrenElements">A collection of elements.</param>
-        [Obsolete(UseGenericVersion)]
-        protected OpenXmlCompositeElement(IEnumerable childrenElements)
-            : this()
-        {
-            if (childrenElements is null)
-            {
-                throw new ArgumentNullException(nameof(childrenElements));
-            }
-
-            foreach (OpenXmlElement child in childrenElements)
-            {
-                AppendChild(child);
-            }
-        }
-
-        /// <summary>
         /// Initializes a new instance of the OpenXmlCompositeElement class using the supplied collection of OpenXmlElement elements.
         /// </summary>
         /// <param name="childrenElements">A collection of OpenXmlElement elements.</param>

@@ -1,12 +1,9 @@
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.AlternateContent))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.AlternateContentChoice))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.AlternateContentFallback))]
-[assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.AppendOption))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.Base64BinaryValue))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.BooleanValue))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.ByteValue))]

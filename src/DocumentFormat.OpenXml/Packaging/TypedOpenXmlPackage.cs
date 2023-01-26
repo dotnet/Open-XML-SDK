@@ -21,8 +21,8 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
     {
     }
 
-    private protected TypedOpenXmlPackage(Package package, OpenSettings settings)
-        : base(package, settings)
+    private protected TypedOpenXmlPackage(IPackageFeature feature, OpenSettings settings)
+        : base(feature, settings)
     {
     }
 

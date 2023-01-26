@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ShimFile Include="$(MSBuildThisFileDirectory)System\IO\StreamReadExtensions.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\EnumExtensions.cs" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
@@ -43,17 +44,6 @@
     <ShimFile Include="$(MSBuildThisFileDirectory)System\HashCode.cs" />
     <ShimFile Include="$(MSBuildThisFileDirectory)System\Span.cs" />
     <ShimFile Include="$(MSBuildThisFileDirectory)System\SpanExtensions.cs" />
-    <ShimFile Include="$(MSBuildThisFileDirectory)System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
-    <ShimFile Include="$(MSBuildThisFileDirectory)System\HashCode.cs" />
-    <ShimFile Include="$(MSBuildThisFileDirectory)System\ICloneable.cs" />
-    <ShimFile Include="$(MSBuildThisFileDirectory)System\NonSerializedAttribute.cs" />
-    <ShimFile Include="$(MSBuildThisFileDirectory)System\SerializableAttribute.cs" />
-    <ShimFile Include="$(MSBuildThisFileDirectory)System\Span.cs" />
-    <ShimFile Include="$(MSBuildThisFileDirectory)System\SpanExtensions.cs" />
-    <ShimFile Include="$(MSBuildThisFileDirectory)System\Reflection\SubclassExtensions.cs" />
     <ShimFile Include="$(MSBuildThisFileDirectory)System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
   </ItemGroup>
 

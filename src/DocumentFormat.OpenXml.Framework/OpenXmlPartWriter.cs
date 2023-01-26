@@ -358,11 +358,7 @@ namespace DocumentFormat.OpenXml
         {
             if (_xmlWriter is not null)
             {
-#if FEATURE_CLOSE
                 _xmlWriter.Close();
-#else
-                _xmlWriter.Dispose();
-#endif
             }
 
             _isLeafTextElementStart = false;

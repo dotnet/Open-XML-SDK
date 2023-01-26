@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml
             // set MaxCharactersInDocument to limit the part size on loading DOM.
             context.XmlReaderSettings.MaxCharactersInDocument = openXmlPart.MaxCharactersInPart;
 
-#if FEATURE_XML_PROHIBIT_DTD
+#if NET35
             context.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
 #else
             context.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix

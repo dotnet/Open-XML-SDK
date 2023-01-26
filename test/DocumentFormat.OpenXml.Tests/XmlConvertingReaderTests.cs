@@ -37,7 +37,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-#if FEATURE_ABSTRACT_XML_CLOSE && !NETSTANDARD1_3_SDK
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
@@ -50,7 +49,6 @@ namespace DocumentFormat.OpenXml.Tests
                 baseReader.Received(1).Close();
             }
         }
-#endif
 
         [Theory]
         [InlineData(true)]
@@ -63,11 +61,9 @@ namespace DocumentFormat.OpenXml.Tests
                 ((IDisposable)reader).Dispose();
                 ((IDisposable)baseReader).Received(1).Dispose();
 
-#if !FEATURE_XML_DISPOSE_PROTECTED
                 baseReader.ClearReceivedCalls();
                 reader.Dispose();
                 baseReader.Received(1).Dispose();
-#endif
             }
         }
 

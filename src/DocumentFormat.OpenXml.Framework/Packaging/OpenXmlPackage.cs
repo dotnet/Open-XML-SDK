@@ -3,10 +3,9 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Packaging.Builder;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -22,7 +21,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
 
-        private Action? _onClose;
         private bool _isDisposed;
 
         /// <summary>
@@ -38,17 +36,17 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Create an <see cref="OpenXmlPackage"/>.
         /// </summary>
-        /// <param name="package">Underlying package.</param>
+        /// <param name="packageFeature">Underlying package feature.</param>
         /// <param name="settings">Settings to use</param>
-        private protected OpenXmlPackage(Package package, OpenSettings? settings = null)
+        private protected OpenXmlPackage(IPackageFeature packageFeature, OpenSettings? settings = null)
             : base()
         {
-            if (package is null)
+            if (packageFeature is null)
             {
-                throw new ArgumentNullException(nameof(package));
+                throw new ArgumentNullException(nameof(packageFeature));
             }
 
-            if (package.FileOpenAccess == FileAccess.Write)
+            if (packageFeature.Package.FileOpenAccess == FileAccess.Write)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.PackageMustCanBeRead);
             }
@@ -62,16 +60,17 @@ namespace DocumentFormat.OpenXml.Packaging
 
             OpenSettings = new OpenSettings(settings);
 
-            var feature = new PackageImpl(package);
+            Features.Set<IPackageFeature>(packageFeature);
 
-            Features.Set<IPackageFeature>(feature);
+            if (packageFeature is IDisposable disposable)
+            {
+                Features.GetRequired<IDisposableFeature>().Register(disposable);
+            }
 
-            OnClose(package.Close);
+            this.InitializePackage();
 
-            Load(feature);
+            Load(packageFeature.Package);
         }
-
-        internal void OnClose(Action callback) => _onClose += callback;
 
         /// <summary>
         /// Gets the root part for the package.
@@ -193,11 +192,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets a value indicating whether saving the package is supported by calling <see cref="Save"/>. Some platforms (such as .NET Core), have limited support for saving.
         /// If <c>false</c>, in order to save, the document and/or package needs to be fully closed and disposed and then reopened.
         /// </summary>
-#if FEATURE_PACKAGE_FLUSH
-        public static bool CanSave { get; } = true;
-#else
-        public static bool CanSave { get; }
-#endif
+        public bool CanSave => Features.GetRequired<IPackageFeature>().Capabilities.HasFlagFast(PackageCapabilities.Save);
 
         /// <summary>
         /// Gets all the <see cref="DataPart"/> parts in the document package.
@@ -395,8 +390,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 ChildrenRelationshipParts.Clear();
                 ReferenceRelationshipList.Clear();
 
-                _onClose?.Invoke();
-
+                Features.Get<IContainerDisposableFeature>()?.Dispose();
                 closing?.OnChange(this, EventType.Closed);
                 _isDisposed = true;
             }
@@ -662,12 +656,10 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentType, e);
             }
-#if FEATURE_SYSTEMEXCEPTION
             catch (SystemException e)
             {
                 throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentTypeSerious, e);
             }
-#endif
         }
 
         #endregion
@@ -1147,10 +1139,13 @@ namespace DocumentFormat.OpenXml.Packaging
             IFeatureCollection,
             IContainerFeature<OpenXmlPackage>,
             IPartFactoryFeature,
-            IApplicationTypeFeature
+            IApplicationTypeFeature,
+            IDisposableFeature,
+            IContainerDisposableFeature
         {
             private readonly IFeatureCollection? _parent;
 
+            private Action? _disposable;
             private FeatureContainer _container;
 
             public PackageFeatureCollection(OpenXmlPackage package, IFeatureCollection? parent)
@@ -1208,6 +1203,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 => _container.Set(instance);
 
             OpenXmlPart? IPartFactoryFeature.Create(string relationshipType) => null;
+
+            void IDisposableFeature.Register(IDisposable disposable) => _disposable += disposable.Dispose;
+
+            void IContainerDisposableFeature.Dispose() => _disposable?.Invoke();
         }
     }
 }

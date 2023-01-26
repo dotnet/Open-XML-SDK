@@ -12,16 +12,6 @@ namespace DocumentFormat.OpenXml.Packaging
     public class ExtendedPart : OpenXmlPart
     {
         /// <summary>
-        /// Default constructor.
-        /// </summary>
-        [Obsolete("Does not set a RelationshipType")]
-        protected ExtendedPart()
-            : base()
-        {
-            RelationshipType = null!;
-        }
-
-        /// <summary>
         /// Initialize a new instance of ExtendedPart.
         /// </summary>
         /// <param name="relationshipType"></param>

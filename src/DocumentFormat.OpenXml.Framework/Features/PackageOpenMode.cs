@@ -1,11 +1,11 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
+namespace DocumentFormat.OpenXml.Features;
 
-namespace DocumentFormat.OpenXml
+internal enum PackageOpenMode
 {
-    internal sealed class NonSerializedAttribute : Attribute
-    {
-    }
+    Create,
+    Read,
+    ReadWrite,
 }

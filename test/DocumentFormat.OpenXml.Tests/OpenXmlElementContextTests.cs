@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         public void XmlReaderSettingsSet(XmlReaderSettings settings)
         {
-#if FEATURE_XML_PROHIBIT_DTD
+#if NET35
             Assert.True(xmlReader.ProhibitDtd);
 #else
             Assert.Equal(DtdProcessing.Prohibit, settings.DtdProcessing);

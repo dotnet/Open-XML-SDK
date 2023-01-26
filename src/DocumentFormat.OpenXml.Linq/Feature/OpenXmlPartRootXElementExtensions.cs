@@ -26,14 +26,14 @@ namespace DocumentFormat.OpenXml.Packaging
                 return feature;
             }
 
-            part.AddDisposableFeature();
             part.AddPartRootEventsFeature();
 
-            feature = new OpenXmlPartRootXElementFeature(part);
+            var newFeature = new OpenXmlPartRootXElementFeature(part);
 
-            part.Features.SetDisposable(feature);
+            part.Features.Set<IOpenXmlPartRootXElementFeature>(newFeature);
+            part.Features.GetRequired<IDisposableFeature>().Register(newFeature);
 
-            return feature;
+            return newFeature;
         }
 
         /// <summary>
