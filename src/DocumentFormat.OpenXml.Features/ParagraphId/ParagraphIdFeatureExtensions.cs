@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Features
         /// </summary>
         /// <param name="doc">Document to add feature to.</param>
         /// <param name="options">Options of how paragraph ids should be generated.</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Regsitered for disposal")]
         public static void AddParagraphIdFeature(this WordprocessingDocument doc, ParagraphIdOptions? options = default)
         {
             options ??= new();
@@ -46,6 +47,11 @@ namespace DocumentFormat.OpenXml.Features
         /// <param name="doc">Document to add generator to.</param>
         public static void AddParagraphIdGeneratorFeature(this WordprocessingDocument doc)
         {
+            if (doc is null)
+            {
+                throw new ArgumentNullException(nameof(doc));
+            }
+
             if (doc.Features.Get<IParagraphIdGeneratorFeature>() is null)
             {
                 doc.AddRandomNumberGeneratorFeature();

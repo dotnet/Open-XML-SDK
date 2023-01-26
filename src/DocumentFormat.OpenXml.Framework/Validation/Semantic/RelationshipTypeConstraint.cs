@@ -21,6 +21,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _type = type;
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1851:Possible multiple enumerations of 'IEnumerable' collection", Justification = "https://github.com/dotnet/Open-XML-SDK/issues/1325")]
         public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
             var current = context.Stack.Current;

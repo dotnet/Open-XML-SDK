@@ -80,9 +80,10 @@ internal abstract class DelegatingStream : Stream
     }
 
 #if NET6_0_OR_GREATER
-    public override ValueTask DisposeAsync()
+    public override async ValueTask DisposeAsync()
     {
-        return _innerStream.DisposeAsync();
+        await base.DisposeAsync().ConfigureAwait(false);
+        await _innerStream.DisposeAsync().ConfigureAwait(false);
     }
 #endif
 

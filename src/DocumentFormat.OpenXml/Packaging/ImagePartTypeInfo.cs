@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Globalization;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -49,8 +50,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 _ => ".image",
             };
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Globalization", "CA1308:Normalize strings to uppercase", Justification = "Extensions")]
         internal static ImagePartType GetImagePartType(string extension)
-            => extension.ToLower() switch
+            => extension.ToLowerInvariant() switch
             {
                 ".bmp" => ImagePartType.Bmp,
                 ".emf" => ImagePartType.Emf,

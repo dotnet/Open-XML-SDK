@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
+using System;
 
 namespace DocumentFormat.OpenXml.Features
 {
@@ -16,6 +17,11 @@ namespace DocumentFormat.OpenXml.Features
         /// <param name="package">Package to add the feature to.</param>
         public static void AddPartEventsFeature(this OpenXmlPackage package)
         {
+            if (package is null)
+            {
+                throw new ArgumentNullException(nameof(package));
+            }
+
             if (package.Features.Get<IPartEventsFeature>() is null)
             {
                 package.Features.Set<IPartEventsFeature>(new PartEventsFeature());

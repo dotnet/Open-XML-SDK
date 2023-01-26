@@ -3,6 +3,8 @@
 
 using DocumentFormat.OpenXml.Packaging;
 
+#pragma warning disable CA1724
+
 namespace DocumentFormat.OpenXml.Office.CustomUI
 {
     /// <summary>

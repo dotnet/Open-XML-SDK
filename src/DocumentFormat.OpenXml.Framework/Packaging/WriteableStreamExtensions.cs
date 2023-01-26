@@ -12,6 +12,7 @@ internal static class WriteableStreamExtensions
     /// <summary>
     /// Attempts to replace the underlying stream so that we can modify it even in readonly situations via a copy
     /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public static bool EnableWriteableStream(this IFeatureCollection features)
     {
         if (features.Get<IPackageStreamFeature>() is { Stream.CanWrite: false } feature &&

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Features
 {
-    internal class WordDocumentParagraphIdCollectionFeature : IParagraphIdCollectionFeature, IDisposable
+    internal sealed class WordDocumentParagraphIdCollectionFeature : IParagraphIdCollectionFeature, IDisposable
     {
         private readonly Dictionary<OpenXmlPart, HashSet<string>> _parts = new();
         private readonly WordprocessingDocument _doc;

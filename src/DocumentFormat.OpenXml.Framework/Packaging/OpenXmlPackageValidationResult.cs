@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System.Globalization;
+
 namespace DocumentFormat.OpenXml.Packaging;
 
 internal sealed class OpenXmlPackageValidationResult
@@ -16,7 +18,7 @@ internal sealed class OpenXmlPackageValidationResult
         {
             if (_message is null && MessageId is not null)
             {
-                return ExceptionMessages.ResourceManager.GetString(MessageId) ?? string.Empty;
+                return ExceptionMessages.ResourceManager.GetString(MessageId, CultureInfo.CurrentCulture) ?? string.Empty;
             }
             else
             {

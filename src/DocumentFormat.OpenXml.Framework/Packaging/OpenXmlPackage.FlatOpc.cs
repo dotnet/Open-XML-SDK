@@ -248,7 +248,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     // We expect the Flat OPC part to have either a pkg:xmlData
                     // or a pkg:binaryData child element.
-                    throw new ArgumentOutOfRangeException();
+                    throw new InvalidDataException();
                 }
             }
         }

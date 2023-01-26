@@ -13,6 +13,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines PresentationDocument - an OpenXmlPackage represents a Presentation document
     /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
     public partial class PresentationDocument : TypedOpenXmlPackage
     {
         private PresentationDocument()
@@ -147,7 +148,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 PresentationDocument document = (PresentationDocument)template.Clone();
 
                 // If the template is a document rather than a template, we are done.
-                if (extension == ".xlsx" || extension == ".xlsm")
+                if (extension == ".pptx" || extension == ".pptm")
                 {
                     return document;
                 }

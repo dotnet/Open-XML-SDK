@@ -1749,7 +1749,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             foreach (var relationship in relationshipCollection)
             {
-                if (partsToIgnore.ContainsKey(relationship.RelationshipType) && partsToIgnore[relationship.RelationshipType])
+                if (partsToIgnore.TryGetValue(relationship.RelationshipType, out bool value) && value)
                 {
                     continue;
                 }

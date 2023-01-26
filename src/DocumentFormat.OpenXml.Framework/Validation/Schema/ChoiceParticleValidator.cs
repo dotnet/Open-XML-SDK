@@ -76,10 +76,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         return;
                 }
             }
-
-            // no match
-            Debug.Assert(particleMatchInfo.Match == ParticleMatch.Nomatch);
-            return;
         }
 
         /// <summary>

@@ -23,6 +23,7 @@ internal static class PackageUriHandlingExtensions
     private const string TargetModeAttributeName = "TargetMode";
     private const string IdAttributeName = "Id";
 
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     internal static IFeatureCollection EnableUriHandling(this IFeatureCollection features)
     {
         var feature = features.GetRequired<IPackageFeature>();
@@ -327,6 +328,6 @@ internal static class PackageUriHandlingExtensions
             => obj is ReplacedUri key && Equals(key);
 
         public bool Equals(ReplacedUri other)
-            => Original.Equals(other.Original) && string.Equals(Replacement, other.Replacement, StringComparison.OrdinalIgnoreCase);
+            => Original.Equals(other.Original, StringComparison.OrdinalIgnoreCase) && string.Equals(Replacement, other.Replacement, StringComparison.OrdinalIgnoreCase);
     }
 }
