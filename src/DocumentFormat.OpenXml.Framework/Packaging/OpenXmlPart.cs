@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Create an instance of <see cref="OpenXmlPart"/>
         /// </summary>
-        protected internal OpenXmlPart()
+        protected OpenXmlPart()
             : base()
         {
         }
