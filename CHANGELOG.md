@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [3.0.0]
 
+## Added
+- Packages can now be saved on .NET Core and .NET 5+ if constructed with a path or stream (#1307).
+
 ## Changed
 - When validation finds incorrect part, it will now include the relationship type rather than a class name
 
@@ -13,9 +16,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - .NET Standard 1.3 is no longer a supported platform. .NET Standard 2.0 is the lowest .NET Standard supported.
 
 ### Breaking change
+- OpenXmlPackage.CanSave is now an instance method (#1307)
 - IdPartPair is now a readonly struct rather than a class
 - IDisposableFeature is now a part of the framework package and is available by default on a package. Extension methods to manage this feature have been removed as it no longer needs to be opted into. It now registers all disposable actions to be done at the package level instead of adding support at the part level.
-- OpenXmlPackage.CanSave is now an instance method
 - Core infrastructure is now contained in a new package DocumentFormat.OpenXml.Framework. Typed classes are still in DocumentFormat.OpenXml. This means that you may reference DocumentFormat.OpenXml and still compile the same types, but if you want a smaller package, you may rely on just the framework package. 
 - Removed `OpenXmlPackage.Package` property. A `OpenXmlPackage` is now backed by a `IPackage` instead of `System.IO.Packaging.Package`. This can be retrieved by `OpenXmlPackage.Features.Get<IPackageFeature>()`
 - Renamed PartExtensionProvider to IPartExtensionFeature and reduced its surface area to only two methods (instead of a full Dictionary<,>). The property to access this off of OpenXmlPackage has been removed, but may be accessed via `Features.Get<IPartExtensionFeature>()` if needed.
