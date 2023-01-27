@@ -50,42 +50,10 @@ namespace DocumentFormat.OpenXml.Packaging
                     return;
                 }
 
-                var loadedParts = new Dictionary<Uri, OpenXmlPart>();
-                var hasMainPart = false;
-
                 // relationCollection.StrictRelationshipFound is true when this collection contains Transitional relationships converted from Strict.
                 StrictRelationshipFound = relationshipCollection.StrictRelationshipFound;
 
-                // AutoSave must be false when opening ISO Strict doc as editable.
-                // (Attention: #2545529. Now we disable this code until we finally decide to go with this. Instead, we take an alternative approach that is added in the SavePartContents() method
-                // which we ignore AutoSave when this.StrictRelationshipFound is true to keep consistency in the document.)
-                // if (this.StrictRelationshipFound && (this._accessMode == FileAccess.ReadWrite || this._accessMode == FileAccess.Write) && !this.AutoSave)
-                // {
-                //    OpenXmlPackageException exception = new OpenXmlPackageException(ExceptionMessages.StrictEditNeedsAutoSave);
-                //    throw exception;
-                // }
-                var mainPartFeature = Features.GetRequired<IMainPartFeature>();
-
-                // auto detect document type (main part type for Transitional)
-                foreach (var relationship in relationshipCollection)
-                {
-                    if (relationship.RelationshipType == mainPartFeature.RelationshipType)
-                    {
-                        hasMainPart = true;
-
-                        var uriTarget = PackUriHelper.ResolvePartUri(new Uri("/", UriKind.Relative), relationship.TargetUri);
-                        var metroPart = package.GetPart(uriTarget);
-
-                        mainPartFeature.ContentType = metroPart.ContentType;
-                        break;
-                    }
-                }
-
-                if (!hasMainPart)
-                {
-                    throw new OpenXmlPackageException(ExceptionMessages.NoMainPart);
-                }
-
+                var loadedParts = new Dictionary<Uri, OpenXmlPart>();
                 LoadReferencedPartsAndRelationships(this, null, relationshipCollection, loadedParts);
             }
             catch (UriFormatException exception)
@@ -516,13 +484,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #region internal methods related main part
 
-        /// <summary>
-        /// Gets or sets the content type of the main part of the package.
-        /// </summary>
         internal string MainPartContentType
         {
             get => Features.GetRequired<IMainPartFeature>().ContentType;
-            set => Features.GetRequired<IMainPartFeature>().ContentType = value;
         }
 
         /// <summary>
