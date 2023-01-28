@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.IO;
@@ -48,8 +49,26 @@ internal static class PackageStorageExtensions
     internal static TPackage DefaultInitialize<TPackage>(this TPackage package)
         where TPackage : OpenXmlPackage
     {
+        package.ConvertStrictRelationshipToTransitional();
         package.Load();
+
         return package;
+    }
+
+    internal static void ConvertStrictRelationshipToTransitional(this OpenXmlPackage package)
+    {
+        var resolver = package.Features.GetNamespaceResolver();
+        var feature = package.Features.GetRequired<IRelationshipFilterFeature>();
+        feature.AddFilter(r =>
+        {
+            var ns = new OpenXmlNamespace(r.RelationshipType);
+
+            if (resolver.TryGetTransitionalRelationship(ns, out var transitionalNamespace))
+            {
+                r.RelationshipType = transitionalNamespace.Uri;
+                package.StrictRelationshipFound = true;
+            }
+        });
     }
 
     internal static TPackage WithSettings<TPackage>(this TPackage package, OpenSettings settings)

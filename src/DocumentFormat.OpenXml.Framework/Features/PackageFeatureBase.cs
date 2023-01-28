@@ -229,6 +229,7 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelatio
 
             var newItem = new PackageRelationshipBuilder(partUri, relationship);
             Feature.RunFilter(newItem);
+
             _relationships[relationship.Id] = newItem;
             return newItem;
         }

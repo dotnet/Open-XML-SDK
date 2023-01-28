@@ -1732,10 +1732,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="openXmlPackage">The OpenXmlPackage.</param>
         /// <param name="sourcePart">The source part. Be null if loading from the package root.</param>
-        /// <param name="relationshipCollection">The relationships of the source part (or the package).</param>
-        /// <param name="loadedParts">Temp collection to detect loaded (shared) parts.</param>
-        internal void LoadReferencedPartsAndRelationships(OpenXmlPackage openXmlPackage, OpenXmlPart? sourcePart, RelationshipCollection relationshipCollection, Dictionary<Uri, OpenXmlPart> loadedParts)
+        internal void LoadReferencedPartsAndRelationships(OpenXmlPackage openXmlPackage, OpenXmlPart? sourcePart)
         {
+            var partLookup = openXmlPackage.LoadedParts;
+
             Dictionary<string, bool> partsToIgnore = new()
             {
                 // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1281
@@ -1745,7 +1745,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 { @"http://schemas.microsoft.com/office/2006/relationships/recovered", true },
             };
 
-            foreach (var relationship in relationshipCollection)
+            var relationships = sourcePart?.PackagePart.GetRelationships() ?? openXmlPackage.Package.GetRelationships();
+
+            foreach (var relationship in relationships)
             {
                 if (partsToIgnore.TryGetValue(relationship.RelationshipType, out bool value) && value)
                 {
@@ -1770,7 +1772,7 @@ namespace DocumentFormat.OpenXml.Packaging
                             var sourceUri = sourcePart is null ? new Uri("/", UriKind.Relative) : sourcePart.Uri;
                             var uriTarget = PackUriHelper.ResolvePartUri(sourceUri, relationship.TargetUri);
 
-                            if (loadedParts.TryGetValue(uriTarget, out var child))
+                            if (partLookup.TryGetValue(uriTarget, out var child))
                             {
                                 // shared part, already loaded
 
@@ -1789,7 +1791,7 @@ namespace DocumentFormat.OpenXml.Packaging
                                 if (dataPart is null)
                                 {
                                     // Load the part as MediaDataPart.
-                                    var packagePart = Features.GetRequired<IPackageFeature>().Package.GetPart(uriTarget);
+                                    var packagePart = openXmlPackage.Package.GetPart(uriTarget);
                                     dataPart = new MediaDataPart(openXmlPackage, packagePart);
                                     openXmlPackage.AddDataPartToList(dataPart);
                                 }
@@ -1804,9 +1806,9 @@ namespace DocumentFormat.OpenXml.Packaging
                                 child.MCSettings = openXmlPackage.MarkupCompatibilityProcessSettings;
 
                                 // add it to loaded part list
-                                loadedParts.Add(uriTarget, child);
+                                partLookup.Add(uriTarget, child);
 
-                                child.Load(openXmlPackage, sourcePart, uriTarget, relationship.Id, loadedParts);
+                                child.Load(openXmlPackage, sourcePart, uriTarget, relationship.Id);
 
                                 ChildrenRelationshipParts.Add(relationship.Id, child);
                             }

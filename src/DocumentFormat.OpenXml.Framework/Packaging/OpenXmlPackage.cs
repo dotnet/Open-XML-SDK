@@ -37,37 +37,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Loads the package. This method must be called in the constructor of a derived class.
         /// </summary>
-        internal void Load()
-        {
-            var package = Features.GetRequired<IPackageFeature>().Package;
-
-            try
-            {
-                var relationshipCollection = new PackageRelationshipPropertyCollection(package, Features.GetNamespaceResolver());
-
-                if (relationshipCollection.Count == 0)
-                {
-                    return;
-                }
-
-                // relationCollection.StrictRelationshipFound is true when this collection contains Transitional relationships converted from Strict.
-                StrictRelationshipFound = relationshipCollection.StrictRelationshipFound;
-
-                var loadedParts = new Dictionary<Uri, OpenXmlPart>();
-                LoadReferencedPartsAndRelationships(this, null, relationshipCollection, loadedParts);
-            }
-            catch (UriFormatException exception)
-            {
-                // UriFormatException is wrapped here in an OpenXmlPackageException
-                Close();
-                throw new OpenXmlPackageException(ExceptionMessages.InvalidUriFormat, exception);
-            }
-            catch (Exception)
-            {
-                Close();
-                throw;
-            }
-        }
+        internal void Load() => LoadReferencedPartsAndRelationships(this, null);
 
         internal OpenSettings OpenSettings
         {
@@ -78,7 +48,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets a value indicating whether this package contains Transitional relationships converted from Strict.
         /// </summary>
-        public bool StrictRelationshipFound { get; private set; }
+        public bool StrictRelationshipFound { get; internal set; }
+
+        internal Dictionary<Uri, OpenXmlPart> LoadedParts { get; } = new();
 
         internal IPackage Package => Features.GetRequired<IPackageFeature>().Package;
 
@@ -416,17 +388,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 foreach (var part in this.GetAllParts())
                 {
                     TrySavePartContent(part);
-                }
-
-                if (StrictRelationshipFound)
-                {
-                    RelationshipCollection relationshipCollection;
-
-                    // For Package: Invoking UpdateRelationshipTypesInPackage() changes the relationship types in the package.
-                    // We need to new PackageRelationshipPropertyCollection to read through the package contents right here
-                    // because some operation may have updated the package before we get here.
-                    relationshipCollection = new PackageRelationshipPropertyCollection(package, Features.GetNamespaceResolver());
-                    relationshipCollection.UpdateRelationshipTypesInPackage();
+                    saveFeature.Save(part);
                 }
             }
 
@@ -439,14 +401,6 @@ namespace DocumentFormat.OpenXml.Packaging
             // If StrictRelationshipFound is true, we need to update the part anyway.
             if (part.OpenXmlPackage.StrictRelationshipFound)
             {
-                RelationshipCollection relationshipCollection;
-
-                // For PackagePart: Invoking UpdateRelationshipTypesInPackage() changes the relationship types in the package part.
-                // We need to new PackageRelationshipPropertyCollection to read through the package part contents right here
-                // because some operation may have updated the package part before we get here.
-                relationshipCollection = new PackagePartRelationshipPropertyCollection(part.Features.GetRequired<IPackagePartFeature>().Part, part.Features.GetNamespaceResolver());
-                relationshipCollection.UpdateRelationshipTypesInPackage();
-
                 // For ISO Strict documents, we read and save the part anyway to translate the contents. The contents are translated when PartRootElement is being loaded.
                 if (part.PartRootElement is not null)
                 {

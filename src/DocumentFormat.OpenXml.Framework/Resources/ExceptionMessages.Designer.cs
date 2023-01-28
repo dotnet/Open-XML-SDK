@@ -460,15 +460,6 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A malformed URI was found in the document. Please provide a OpenSettings.RelationshipErrorRewriter to handle these errors while opening a package..
-        /// </summary>
-        internal static string InvalidUriFormat {
-            get {
-                return ResourceManager.GetString("InvalidUriFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Text string can only be written out in OpenXmlLeafTextElement..
         /// </summary>
         internal static string InvalidWriteStringCall {
