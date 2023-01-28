@@ -13,38 +13,34 @@ internal static class PackageStorageExtensions
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public static TPackage WithStorage<TPackage>(this TPackage package, Stream stream, PackageOpenMode mode)
         where TPackage : OpenXmlPackage
-    {
-        if (package.Features.Get<IPackageStreamFeature>() is { } streamFeature)
-        {
-            streamFeature.Stream = stream;
-        }
-        else
-        {
-            var streamPackage = new StreamPackageFeature(stream, mode);
-            package.Features.Set<IPackageFeature>(streamPackage);
-            package.Features.Set<IPackageStreamFeature>(streamPackage);
-            package.Features.GetRequired<IDisposableFeature>().Register(streamPackage);
-        }
-
-        return package;
-    }
+        => package.SetPackageFeatures(new StreamPackageFeature(stream, mode));
 
     public static TPackage WithStorage<TPackage>(this TPackage oPackage, Package package)
         where TPackage : OpenXmlPackage
-    {
-        oPackage.Features.Set<IPackageFeature>(new PackageFeature(package));
-        return oPackage;
-    }
+        => oPackage.SetPackageFeatures(new PackageFeature(package));
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public static TPackage WithStorage<TPackage>(this TPackage package, string path, PackageOpenMode mode)
         where TPackage : OpenXmlPackage
-    {
-        var streamPackage = new FilePackageFeature(path, mode);
+        => package.SetPackageFeatures(new FilePackageFeature(path, mode));
 
-        package.Features.Set<IPackageFeature>(streamPackage);
-        package.Features.Set<IPackageStreamFeature>(streamPackage);
-        package.Features.GetRequired<IDisposableFeature>().Register(streamPackage);
+    private static TPackage SetPackageFeatures<TPackage>(this TPackage package, PackageFeatureBase packageFeature)
+        where TPackage : OpenXmlPackage
+    {
+        var features = package.Features;
+
+        features.Set<IPackageFeature>(packageFeature);
+        features.Set<IRelationshipFilterFeature>(packageFeature);
+
+        if (packageFeature is IDisposable disposable)
+        {
+            features.GetRequired<IDisposableFeature>().Register(disposable);
+        }
+
+        if (packageFeature is IPackageStreamFeature streamFeature)
+        {
+            features.Set<IPackageStreamFeature>(streamFeature);
+        }
 
         return package;
     }

@@ -28,7 +28,9 @@ public class PackageUriHandlingTests
         var disposable = Substitute.For<IDisposableFeature>();
         var feature = Substitute.For<IPackageFeature>();
         feature.Capabilities.Returns(capabilities);
+        var filter = Substitute.For<IRelationshipFilterFeature>();
 
+        features.Set(filter);
         features.Set(feature);
         features.Set(disposable);
 
@@ -59,6 +61,9 @@ public class PackageUriHandlingTests
         var disposable = Substitute.For<IDisposableFeature>();
         var feature = Substitute.For<IPackageFeature>();
         feature.Capabilities.Returns(PackageCapabilities.Save);
+        var filter = Substitute.For<IRelationshipFilterFeature>();
+
+        features.Set(filter);
 
         features.Set(disposable);
         features.Set(feature);
@@ -126,6 +131,7 @@ public class PackageUriHandlingTests
                 Assert.Equal(r.Id, Relationship1.Id);
                 Assert.Equal(r.TargetMode, Relationship1.Mode);
                 Assert.Equal(r.TargetUri.ToString(), Relationship1.Target);
+                Assert.Equal("rewritten", r.TargetUri.Scheme);
             });
     }
 
@@ -138,17 +144,18 @@ public class PackageUriHandlingTests
         var stream = new MemoryStream();
         var features = new FeatureCollection();
 
-        var disposable = Substitute.For<IDisposableFeature>();
-        features.Set(disposable);
+        using (var disposable = new DisposableFeature())
+        {
+            features.Set<IDisposableFeature>(disposable);
 
-        var package = AddPackage(features, stream, isReadOnly)
-            .EnableUriHandling()
-            .GetRequired<IPackageFeature>();
+            var package = AddPackage(features, stream, isReadOnly)
+                .EnableUriHandling()
+                .GetRequired<IPackageFeature>();
 
-        // Act
-        var part = package.Package.GetPart(Part1.Uri);
-        _ = part.GetRelationships().ToList();
-        ((IDisposable)package).Dispose();
+            // Act
+            var part = package.Package.GetPart(Part1.Uri);
+            _ = part.GetRelationships().ToList();
+        }
 
         // Assert
         var contents = GetPartContents(stream, Part1.Uri);
@@ -191,10 +198,10 @@ public class PackageUriHandlingTests
         CreateSimplePackage(stream);
         AddProblemRelationships(stream);
 
-        var packageFeature = new StreamPackageFeature(stream, isReadOnly ? PackageOpenMode.Read : PackageOpenMode.ReadWrite);
+        var package = Substitute.ForPartsOf<OpenXmlPackage>();
+        package.Features.Returns(features);
 
-        features.Set<IPackageFeature>(packageFeature);
-        features.Set<IPackageStreamFeature>(packageFeature);
+        package.WithStorage(stream, isReadOnly ? PackageOpenMode.Read : PackageOpenMode.ReadWrite);
 
         return features.EnableSavePackage();
     }
@@ -233,5 +240,15 @@ public class PackageUriHandlingTests
               <Relationship Type="{relationship.Relationship}" TargetMode="{relationship.Mode}" Target="{relationship.Target}" Id="{relationship.Id}" />
             </Relationships>
             """;
+    }
+
+    private sealed class DisposableFeature : IDisposableFeature, IDisposable
+    {
+        private Action _dispose;
+
+        void IDisposable.Dispose() => _dispose?.Invoke();
+
+        void IDisposableFeature.Register(IDisposable disposable)
+            => _dispose = disposable.Dispose + _dispose;
     }
 }

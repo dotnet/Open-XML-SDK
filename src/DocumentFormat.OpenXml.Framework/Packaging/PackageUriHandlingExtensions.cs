@@ -2,12 +2,10 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging.Builder;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 using System.Xml.Linq;
@@ -26,33 +24,28 @@ internal static class PackageUriHandlingExtensions
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     internal static IFeatureCollection EnableUriHandling(this IFeatureCollection features)
     {
-        var feature = features.GetRequired<IPackageFeature>();
+        var packageFeature = features.GetRequired<IPackageFeature>();
 
-        if (feature.Capabilities.HasFlagFast(PackageCapabilities.MalformedUri))
+        if (packageFeature.Capabilities.HasFlagFast(PackageCapabilities.MalformedUri))
         {
             return features;
         }
 
-        if (feature.Package.FileOpenAccess == FileAccess.Read)
+        if (packageFeature.Package.FileOpenAccess == FileAccess.Read && !features.EnableWriteableStream())
         {
-            if (features.EnableWriteableStream())
-            {
-                // Don't register for disposal as we don't want it to write out to the temporary stream
-                features.Set<IPackageFeature>(new MalformedUriHandlingPackage(feature));
-            }
+            return features;
         }
-        else
-        {
-            var newFeature = new MalformedUriHandlingPackage(feature);
 
-            features.Set<IPackageFeature>(newFeature);
-            features.GetRequired<IDisposableFeature>().Register(newFeature);
-        }
+        var newFeature = new MalformedUriHandlingPackage(packageFeature);
+
+        features.GetRequired<IRelationshipFilterFeature>().AddFilter(newFeature.Filter);
+        features.Set<IPackageFeature>(newFeature);
+        features.GetRequired<IDisposableFeature>().Register(newFeature);
 
         return features;
     }
 
-    private static XDocument? WalkRelationships(IPackagePart part, KnownUris uris)
+    private static XDocument? WalkRelationships(IPackagePart part, RewrittenUriCollection uris, bool isDisposing)
     {
         using var stream = part.GetStream(FileMode.Open, FileAccess.Read);
         using var reader = new StreamReader(stream);
@@ -70,7 +63,7 @@ internal static class PackageUriHandlingExtensions
         {
             foreach (var child in doc.Root.Descendants(XName.Get(RelationshipTagName, RelationshipNamespaceUri)))
             {
-                if (Update(child, uris))
+                if (Update(child, uris, isDisposing))
                 {
                     changed = true;
                 }
@@ -80,7 +73,7 @@ internal static class PackageUriHandlingExtensions
         return changed ? doc : null;
     }
 
-    private static bool Update(XElement child, KnownUris uris)
+    private static bool Update(XElement child, RewrittenUriCollection uris, bool isDisposing)
     {
         if (!EnumHelper.TryParse<TargetMode>(child.Attribute(TargetModeAttributeName)?.Value, out var targetMode))
         {
@@ -100,10 +93,12 @@ internal static class PackageUriHandlingExtensions
             return false;
         }
 
-        // if it already exists, we're writing things back out
-        if (uris.TryGetValue(id, out var existing) && string.Equals(existing.Replacement, target, StringComparison.OrdinalIgnoreCase))
+        if (isDisposing)
         {
-            child.SetAttributeValue(TargetAttributeName, existing.Original);
+            if (uris.TryGetValue(id, out var existing) && string.Equals(existing.Rewritten, target, StringComparison.OrdinalIgnoreCase))
+            {
+                child.SetAttributeValue(TargetAttributeName, existing.Target);
+            }
         }
         else if (target.Length > 0 && Uri.TryCreate(target, UriHelper.RelativeOrAbsolute, out _))
         {
@@ -113,9 +108,7 @@ internal static class PackageUriHandlingExtensions
         {
             var updated = uris.Register(id, target);
 
-            Debug.Assert(Uri.TryCreate(updated, UriHelper.RelativeOrAbsolute, out _));
-
-            child.SetAttributeValue(TargetAttributeName, updated);
+            child.SetAttributeValue(TargetAttributeName, updated.Rewritten);
         }
 
         return true;
@@ -123,7 +116,7 @@ internal static class PackageUriHandlingExtensions
 
     private sealed class MalformedUriHandlingPackage : DelegatingPackageFeature, IDisposable
     {
-        private readonly Dictionary<Uri, IPackagePart> _rewritten = new();
+        private readonly Dictionary<Uri, RewrittenUriCollection?> _rewritten = new();
 
         public override PackageCapabilities Capabilities => base.Capabilities | PackageCapabilities.MalformedUri;
 
@@ -133,36 +126,31 @@ internal static class PackageUriHandlingExtensions
         }
 
         public override IPackagePart GetPart(Uri uriTarget)
-            => WrapPartIfNeeded(uriTarget);
+             => WrapPartIfNeeded(base.GetPart(uriTarget));
 
-        private IPackagePart WrapPartIfNeeded(Uri uriTarget, IPackagePart? part = null)
+        private IPackagePart WrapPartIfNeeded(IPackagePart part)
         {
-            if (_rewritten.TryGetValue(uriTarget, out var existing))
-            {
-                return existing;
-            }
+            var uriTarget = part.Uri;
 
-            if (part is null)
+            if (_rewritten.ContainsKey(uriTarget))
             {
-                part = base.GetPart(uriTarget);
+                return part;
             }
 
             if (!PackUriHelper.IsRelationshipPartUri(uriTarget) && PackUriHelper.GetRelationshipPartUri(uriTarget) is { } relationshipUri && PartExists(relationshipUri))
             {
                 var relationshipPart = base.GetPart(relationshipUri);
-                var known = new KnownUris();
+                var known = new RewrittenUriCollection();
 
-                if (WalkRelationships(relationshipPart, known) is { } doc)
+                if (WalkRelationships(relationshipPart, known, isDisposing: false) is { } doc)
                 {
                     WriteStream(relationshipPart, doc);
-
-                    var handled = new MalformedUriPackagePart(this, part, known);
-                    _rewritten[uriTarget] = handled;
-                    return handled;
+                    _rewritten[uriTarget] = known;
+                    return part;
                 }
             }
 
-            _rewritten[uriTarget] = part;
+            _rewritten[uriTarget] = null;
             return part;
         }
 
@@ -197,7 +185,7 @@ internal static class PackageUriHandlingExtensions
         {
             foreach (var part in base.GetParts())
             {
-                yield return WrapPartIfNeeded(part.Uri, part);
+                yield return WrapPartIfNeeded(part);
             }
         }
 
@@ -210,12 +198,12 @@ internal static class PackageUriHandlingExtensions
 
             foreach (var malformed in _rewritten)
             {
-                if (malformed.Value is MalformedUriPackagePart part)
+                if (malformed.Value is { } uris)
                 {
                     var relationshipUri = PackUriHelper.GetRelationshipPartUri(malformed.Key);
                     var relationshipPart = base.GetPart(relationshipUri);
 
-                    if (WalkRelationships(relationshipPart, part.Known) is { } doc)
+                    if (WalkRelationships(relationshipPart, uris, isDisposing: true) is { } doc)
                     {
                         using var stream = relationshipPart.GetStream(FileMode.Create, FileAccess.Write);
                         stream.SetLength(0);
@@ -225,103 +213,37 @@ internal static class PackageUriHandlingExtensions
             }
         }
 
-        private sealed class MalformedUriPackagePart : DelegatingPackagePart
+        internal void Filter(PackageRelationshipBuilder relationship)
         {
-            public MalformedUriPackagePart(IPackage package, IPackagePart part, KnownUris known)
-                : base(package, part)
+            if (_rewritten.TryGetValue(relationship.PartUri, out var rewritten) && rewritten is not null && rewritten.TryGetValue(relationship.Id, out var known))
             {
-                Known = known;
-            }
-
-            public KnownUris Known { get; }
-
-            public override IPackageRelationship GetRelationship(string id)
-                => Normalize(base.GetRelationship(id));
-
-            private IPackageRelationship Normalize(IPackageRelationship relationship)
-            {
-                if (Known.TryGetValue(relationship.Id, out var replaced))
-                {
-                    return new MalformedRelationship(relationship, replaced.Original);
-                }
-
-                return relationship;
-            }
-
-            public override IEnumerable<IPackageRelationship> GetRelationships()
-            {
-                foreach (var relationship in base.GetRelationships())
-                {
-                    yield return Normalize(relationship);
-                }
-            }
-
-            private sealed class MalformedUri : Uri
-            {
-                private readonly string _original;
-
-                public MalformedUri(string uriString, string original)
-                    : base(uriString)
-                {
-                    _original = original;
-                }
-
-                public override string ToString() => _original;
-            }
-
-            private sealed class MalformedRelationship : IPackageRelationship
-            {
-                private readonly IPackageRelationship _other;
-
-                public MalformedRelationship(IPackageRelationship other, string actualUri)
-                {
-                    _other = other;
-                    TargetUri = new MalformedUri(other.TargetUri.ToString(), actualUri);
-                }
-
-                public string Id => _other.Id;
-
-                public string RelationshipType => _other.RelationshipType;
-
-                public Uri SourceUri => _other.SourceUri;
-
-                public TargetMode TargetMode => _other.TargetMode;
-
-                public Uri TargetUri { get; }
+                relationship.TargetUri = known;
             }
         }
     }
 
-    private class KnownUris : Dictionary<string, ReplacedUri>
+    private sealed class RewrittenUri : Uri
     {
-        public string Register(string id, string target)
+        public RewrittenUri(string uriString, string original)
+            : base(uriString)
         {
-            var registered = new ReplacedUri(target);
-            Add(id, registered);
-            return registered.Replacement;
+            Target = original;
         }
+
+        public string Target { get; }
+
+        public string Rewritten => OriginalString;
+
+        public override string ToString() => Target;
     }
 
-    private readonly struct ReplacedUri : IEquatable<ReplacedUri>
+    private class RewrittenUriCollection : Dictionary<string, RewrittenUri>
     {
-        public ReplacedUri(string original)
+        public RewrittenUri Register(string id, string target)
         {
-            Replacement = $"scheme://{Guid.NewGuid()}";
-            Original = original;
-        }
-
-        public string Original { get; }
-
-        public string Replacement { get; }
-
-        public override int GetHashCode()
-        {
-            var h = default(HashCode);
-
-            h.Add(Original, StringComparer.OrdinalIgnoreCase);
-            h.Add(Replacement, StringComparer.OrdinalIgnoreCase);
-
-            return h.ToHashCode();
+            var replacement = new RewrittenUri($"rewritten://{Guid.NewGuid()}", target);
+            Add(id, replacement);
+            return replacement;
         }
 
         public override bool Equals([NotNullWhen(true)] object? obj)
