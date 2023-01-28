@@ -2,11 +2,9 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO.Packaging;
@@ -36,12 +34,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the children parts IDictionary.
         /// </summary>
-        internal IChildPartFeatures ChildrenRelationshipParts
+        internal IChildRelationshipPartFeatures ChildrenRelationshipParts
         {
             get
             {
                 ThrowIfObjectDisposed();
-                return Features.GetRequired<IChildPartFeatures>();
+                return Features.GetRequired<IChildRelationshipPartFeatures>();
             }
         }
 

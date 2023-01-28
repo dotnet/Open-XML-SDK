@@ -67,10 +67,10 @@ public abstract partial class OpenXmlPart
         }
 
         [KnownFeature(typeof(AnnotationsFeature))]
-        [KnownFeature(typeof(IChildPartFeatures), Factory = nameof(CreateChildParts))]
+        [KnownFeature(typeof(IChildRelationshipPartFeatures), Factory = nameof(CreateChildParts))]
         private partial T? GetInternal<T>();
 
-        private IChildPartFeatures CreateChildParts() => new PartDictionary(this);
+        private IChildRelationshipPartFeatures CreateChildParts() => new PartDictionary(this);
 
         public void Set<TFeature>(TFeature? instance)
             => _container.Set(instance);

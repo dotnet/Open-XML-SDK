@@ -9,7 +9,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-    internal class PartDictionary : IChildPartFeatures
+    internal class PartDictionary : IChildRelationshipPartFeatures
     {
         private object? _holder;
         private Dictionary<string, OpenXmlPart>? _parts;

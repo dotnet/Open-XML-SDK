@@ -12,7 +12,7 @@ public partial class OpenXmlPart
     private protected partial class PartFeatureCollection
     {
         private global::DocumentFormat.OpenXml.Features.AnnotationsFeature? _AnnotationsFeature;
-        private global::DocumentFormat.OpenXml.Features.IChildPartFeatures? _CreateChildParts;
+        private global::DocumentFormat.OpenXml.Features.IChildRelationshipPartFeatures? _CreateChildParts;
 
         private partial T? GetInternal<T>()
         {
@@ -26,7 +26,7 @@ public partial class OpenXmlPart
                 return (T)(object)_AnnotationsFeature;
             }
 
-            if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IChildPartFeatures))
+            if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IChildRelationshipPartFeatures))
             {
                 if (_CreateChildParts is null)
                 {

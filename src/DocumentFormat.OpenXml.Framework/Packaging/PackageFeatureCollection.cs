@@ -68,10 +68,10 @@ namespace DocumentFormat.OpenXml.Packaging
         [KnownFeature(typeof(IPartUriFeature), Factory = nameof(CreatePartUri))]
         [KnownFeature(typeof(AnnotationsFeature))]
         [KnownFeature(typeof(IPartExtensionFeature), typeof(PartExtensionProvider))]
-        [KnownFeature(typeof(IChildPartFeatures), Factory = nameof(CreateChildParts))]
+        [KnownFeature(typeof(IChildRelationshipPartFeatures), Factory = nameof(CreateChildParts))]
         private partial T? GetInternal<T>();
 
-        private IChildPartFeatures CreateChildParts() => new PartDictionary(this);
+        private IChildRelationshipPartFeatures CreateChildParts() => new PartDictionary(this);
 
         private IPartUriFeature CreatePartUri() => new PackagePartUriHelper(this.GetRequired<IPackageFeature>().Package);
 
