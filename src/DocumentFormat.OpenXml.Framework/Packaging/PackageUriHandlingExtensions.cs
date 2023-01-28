@@ -107,9 +107,7 @@ internal static class PackageUriHandlingExtensions
         {
             var updated = uris.Register(id, target);
 
-            Debug.Assert(Uri.TryCreate(updated, UriHelper.RelativeOrAbsolute, out _));
-
-            child.SetAttributeValue(TargetAttributeName, updated);
+            child.SetAttributeValue(TargetAttributeName, updated.Rewritten);
         }
 
         return true;
@@ -240,11 +238,11 @@ internal static class PackageUriHandlingExtensions
 
     private class RewrittenUriCollection : Dictionary<string, RewrittenUri>
     {
-        public string Register(string id, string target)
+        public RewrittenUri Register(string id, string target)
         {
             var replacement = new RewrittenUri($"rewritten://{Guid.NewGuid()}", target);
             Add(id, replacement);
-            return replacement.Rewritten;
+            return replacement;
         }
     }
 }
