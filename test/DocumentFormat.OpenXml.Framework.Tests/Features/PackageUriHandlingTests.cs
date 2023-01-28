@@ -28,7 +28,9 @@ public class PackageUriHandlingTests
         var disposable = Substitute.For<IDisposableFeature>();
         var feature = Substitute.For<IPackageFeature>();
         feature.Capabilities.Returns(capabilities);
+        var filter = Substitute.For<IRelationshipFilterFeature>();
 
+        features.Set(filter);
         features.Set(feature);
         features.Set(disposable);
 
@@ -59,6 +61,9 @@ public class PackageUriHandlingTests
         var disposable = Substitute.For<IDisposableFeature>();
         var feature = Substitute.For<IPackageFeature>();
         feature.Capabilities.Returns(PackageCapabilities.Save);
+        var filter = Substitute.For<IRelationshipFilterFeature>();
+
+        features.Set(filter);
 
         features.Set(disposable);
         features.Set(feature);
@@ -191,10 +196,10 @@ public class PackageUriHandlingTests
         CreateSimplePackage(stream);
         AddProblemRelationships(stream);
 
-        var packageFeature = new StreamPackageFeature(stream, isReadOnly ? PackageOpenMode.Read : PackageOpenMode.ReadWrite);
+        var package = Substitute.ForPartsOf<OpenXmlPackage>();
+        package.Features.Returns(features);
 
-        features.Set<IPackageFeature>(packageFeature);
-        features.Set<IPackageStreamFeature>(packageFeature);
+        package.WithStorage(stream, isReadOnly ? PackageOpenMode.Read : PackageOpenMode.ReadWrite);
 
         return features.EnableSavePackage();
     }
