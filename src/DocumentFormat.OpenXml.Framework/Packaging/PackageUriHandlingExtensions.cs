@@ -44,7 +44,7 @@ internal static class PackageUriHandlingExtensions
         return features;
     }
 
-    private static XDocument? WalkRelationships(IPackagePart part, RewrittenUriCollection uris, bool isDisposing)
+    private static XDocument? WalkRelationships(IPackagePart part, RewrittenUriCollection uris)
     {
         using var stream = part.GetStream(FileMode.Open, FileAccess.Read);
         using var reader = new StreamReader(stream);
@@ -62,7 +62,7 @@ internal static class PackageUriHandlingExtensions
         {
             foreach (var child in doc.Root.Descendants(XName.Get(RelationshipTagName, RelationshipNamespaceUri)))
             {
-                if (Update(child, uris, isDisposing))
+                if (Update(child, uris))
                 {
                     changed = true;
                 }
@@ -72,7 +72,7 @@ internal static class PackageUriHandlingExtensions
         return changed ? doc : null;
     }
 
-    private static bool Update(XElement child, RewrittenUriCollection uris, bool isDisposing)
+    private static bool Update(XElement child, RewrittenUriCollection uris)
     {
         if (!EnumHelper.TryParse<TargetMode>(child.Attribute(TargetModeAttributeName)?.Value, out var targetMode))
         {
@@ -92,12 +92,10 @@ internal static class PackageUriHandlingExtensions
             return false;
         }
 
-        if (isDisposing)
+        // if it already exists, we're writing things back out
+        if (uris.TryGetValue(id, out var existing) && string.Equals(existing.Target, target, StringComparison.OrdinalIgnoreCase))
         {
-            if (uris.TryGetValue(id, out var existing) && string.Equals(existing.Rewritten, target, StringComparison.OrdinalIgnoreCase))
-            {
-                child.SetAttributeValue(TargetAttributeName, existing.Target);
-            }
+            child.SetAttributeValue(TargetAttributeName, existing.Target);
         }
         else if (target.Length > 0 && Uri.TryCreate(target, UriHelper.RelativeOrAbsolute, out _))
         {
@@ -143,7 +141,7 @@ internal static class PackageUriHandlingExtensions
                 var relationshipPart = base.GetPart(relationshipUri);
                 var known = new RewrittenUriCollection();
 
-                if (WalkRelationships(relationshipPart, known, isDisposing: false) is { } doc)
+                if (WalkRelationships(relationshipPart, known) is { } doc)
                 {
                     WriteStream(relationshipPart, doc);
                     _rewritten[uriTarget] = known;
@@ -204,7 +202,7 @@ internal static class PackageUriHandlingExtensions
                     var relationshipUri = PackUriHelper.GetRelationshipPartUri(malformed.Key);
                     var relationshipPart = base.GetPart(relationshipUri);
 
-                    if (WalkRelationships(relationshipPart, uris, isDisposing: true) is { } doc)
+                    if (WalkRelationships(relationshipPart, uris) is { } doc)
                     {
                         using var stream = relationshipPart.GetStream(FileMode.Create, FileAccess.Write);
                         stream.SetLength(0);
