@@ -245,11 +245,5 @@ internal static class PackageUriHandlingExtensions
             Add(id, replacement);
             return replacement;
         }
-
-        public override bool Equals([NotNullWhen(true)] object? obj)
-            => obj is ReplacedUri key && Equals(key);
-
-        public bool Equals(ReplacedUri other)
-            => Original.Equals(other.Original, StringComparison.OrdinalIgnoreCase) && string.Equals(Replacement, other.Replacement, StringComparison.OrdinalIgnoreCase);
     }
 }
