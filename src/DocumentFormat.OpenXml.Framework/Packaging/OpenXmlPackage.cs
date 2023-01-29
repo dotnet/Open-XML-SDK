@@ -388,7 +388,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 foreach (var part in this.GetAllParts())
                 {
                     TrySavePartContent(part);
-                    saveFeature.Save(part);
                 }
             }
 
