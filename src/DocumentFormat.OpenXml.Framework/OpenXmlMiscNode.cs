@@ -267,27 +267,21 @@ namespace DocumentFormat.OpenXml
             switch (xmlReader.NodeType)
             {
                 case XmlNodeType.None:
-                    Debug.Assert(xmlReader.NodeType != XmlNodeType.None);
                     break;
 
                 case XmlNodeType.XmlDeclaration:
-                    Debug.Assert(xmlReader.NodeType != XmlNodeType.XmlDeclaration);
                     break;
 
                 case XmlNodeType.Element:
-                    Debug.Assert(xmlReader.NodeType != XmlNodeType.Element);
                     break;
 
                 case XmlNodeType.EndElement:
-                    Debug.Assert(xmlReader.NodeType != XmlNodeType.EndElement);
                     break;
 
                 case XmlNodeType.Notation:
-                    Debug.Assert(xmlReader.NodeType != XmlNodeType.Notation);
                     break;
 
                 case XmlNodeType.Attribute:
-                    Debug.Assert(xmlReader.NodeType != XmlNodeType.Attribute);
                     break;
 
                 case XmlNodeType.Text:
@@ -314,20 +308,16 @@ namespace DocumentFormat.OpenXml
                     break;
 
                 case XmlNodeType.Document:
-                    Debug.Assert(xmlReader.NodeType != XmlNodeType.Document);
                     break;
 
                 case XmlNodeType.DocumentType:
-                    Debug.Assert(xmlReader.NodeType != XmlNodeType.DocumentType);
                     break;
 
                 case XmlNodeType.EntityReference:
-                    Debug.Assert(xmlReader.NodeType != XmlNodeType.EntityReference);
                     RawOuterXml = xmlReader.Name;
                     break;
 
                 case XmlNodeType.Entity:
-                    Debug.Assert(xmlReader.NodeType != XmlNodeType.Entity);
                     break;
 
                 case XmlNodeType.DocumentFragment:

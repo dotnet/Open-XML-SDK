@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal static class PackageStorageExtensions
 {
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public static TPackage WithStorage<TPackage>(this TPackage package, Stream stream, PackageOpenMode mode)
         where TPackage : OpenXmlPackage
         => package.SetPackageFeatures(new StreamPackageFeature(stream, mode));
@@ -18,6 +19,7 @@ internal static class PackageStorageExtensions
         where TPackage : OpenXmlPackage
         => oPackage.SetPackageFeatures(new PackageFeature(package));
 
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public static TPackage WithStorage<TPackage>(this TPackage package, string path, PackageOpenMode mode)
         where TPackage : OpenXmlPackage
         => package.SetPackageFeatures(new FilePackageFeature(path, mode));

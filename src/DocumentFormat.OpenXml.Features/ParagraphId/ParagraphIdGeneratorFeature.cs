@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Features
 {
-    internal class ParagraphIdGeneratorFeature : IParagraphIdGeneratorFeature
+    internal sealed class ParagraphIdGeneratorFeature : IParagraphIdGeneratorFeature
     {
         private readonly IFeatureCollection _features;
         private readonly IRandomNumberGeneratorFeature _randomNumber;

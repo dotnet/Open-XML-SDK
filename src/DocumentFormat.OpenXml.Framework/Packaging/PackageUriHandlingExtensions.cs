@@ -21,6 +21,7 @@ internal static class PackageUriHandlingExtensions
     private const string TargetModeAttributeName = "TargetMode";
     private const string IdAttributeName = "Id";
 
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     internal static IFeatureCollection EnableUriHandling(this IFeatureCollection features)
     {
         var packageFeature = features.GetRequired<IPackageFeature>();

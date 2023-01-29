@@ -49,8 +49,8 @@ public readonly struct IdPartPair : IEquatable<IdPartPair>
     }
 
     /// <inheritdoc/>
-    public bool Equals(IdPartPair value)
-        => string.Equals(RelationshipId, value.RelationshipId, StringComparison.Ordinal) && Equals(OpenXmlPart, value.OpenXmlPart);
+    public bool Equals(IdPartPair other)
+        => string.Equals(RelationshipId, other.RelationshipId, StringComparison.Ordinal) && Equals(OpenXmlPart, other.OpenXmlPart);
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public static bool operator ==(IdPartPair left, IdPartPair right) => left.Equals(right);

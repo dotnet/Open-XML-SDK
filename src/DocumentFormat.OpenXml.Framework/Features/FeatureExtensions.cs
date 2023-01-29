@@ -18,6 +18,11 @@ namespace DocumentFormat.OpenXml.Features
         /// <returns>The available feature.</returns>
         public static TFeature GetRequired<TFeature>(this IFeatureCollection features)
         {
+            if (features is null)
+            {
+                throw new ArgumentNullException(nameof(features));
+            }
+
             if (features.Get<TFeature>() is TFeature feature)
             {
                 return feature;

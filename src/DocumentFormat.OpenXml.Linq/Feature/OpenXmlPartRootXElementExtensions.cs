@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
+using System;
 using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -60,7 +61,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <seealso cref="SetXDocument"/>
         /// <seealso cref="SaveXDocument"/>
         public static XDocument GetXDocument(this OpenXmlPart part)
-            => part.GetOpenXmlPartRootXElementFeature().Document;
+        {
+            if (part is null)
+            {
+                throw new ArgumentNullException(nameof(part));
+            }
+
+            return part.GetOpenXmlPartRootXElementFeature().Document;
+        }
 
         /// <summary>
         /// Gets an <see cref="XElement"/> representation of the <paramref name="part"/>.
@@ -84,7 +92,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <seealso cref="SetXElement"/>
         /// <seealso cref="SaveXElement"/>
         public static XElement? GetXElement(this OpenXmlPart part)
-            => part.GetOpenXmlPartRootXElementFeature().Root;
+        {
+            if (part is null)
+            {
+                throw new ArgumentNullException(nameof(part));
+            }
+
+            return part.GetOpenXmlPartRootXElementFeature().Root;
+        }
 
         /// <summary>
         /// Gets a value indicating whether the root <see cref="XElement"/> is loaded from the part
@@ -96,7 +111,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <see langword="false"/>, otherwise.
         /// </returns>
         public static bool IsRootXElementLoaded(this OpenXmlPart part)
-            => part.GetOpenXmlPartRootXElementFeature().IsRootXElementLoaded;
+        {
+            if (part is null)
+            {
+                throw new ArgumentNullException(nameof(part));
+            }
+
+            return part.GetOpenXmlPartRootXElementFeature().IsRootXElementLoaded;
+        }
 
         /// <summary>
         /// Sets the <see cref="OpenXmlPart"/>'s <see cref="XDocument"/> to the given XDocument,
@@ -108,7 +130,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <seealso cref="GetXDocument"/>
         /// <seealso cref="SaveXDocument"/>
         public static void SetXDocument(this OpenXmlPart part, XDocument document)
-            => part.GetOpenXmlPartRootXElementFeature().Document = document;
+        {
+            if (part is null)
+            {
+                throw new ArgumentNullException(nameof(part));
+            }
+
+            part.GetOpenXmlPartRootXElementFeature().Document = document;
+        }
 
         /// <summary>
         /// Sets the <see cref="OpenXmlPart"/>'s root <see cref="XElement"/> to the given XElement,
@@ -124,7 +153,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <seealso cref="GetXElement"/>
         /// <seealso cref="SaveXElement"/>
         public static void SetXElement(this OpenXmlPart part, XElement element)
-            => part.GetOpenXmlPartRootXElementFeature().Root = element;
+        {
+            if (part is null)
+            {
+                throw new ArgumentNullException(nameof(part));
+            }
+
+            part.GetOpenXmlPartRootXElementFeature().Root = element;
+        }
 
         /// <summary>
         /// Saves the current <see cref="XDocument"/> to the part if it and its <see cref="XDocument.Root"/>
@@ -141,7 +177,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <see langword="false"/>, otherwise.
         /// </returns>
         public static bool SaveXDocument(this OpenXmlPart part)
-            => part.GetOpenXmlPartRootXElementFeature().Save();
+        {
+            if (part is null)
+            {
+                throw new ArgumentNullException(nameof(part));
+            }
+
+            return part.GetOpenXmlPartRootXElementFeature().Save();
+        }
 
         /// <summary>
         /// Saves the current <see cref="XDocument"/> to the part if it and its <see cref="XDocument.Root"/>
@@ -158,6 +201,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <see langword="false"/>, otherwise.
         /// </returns>
         public static bool SaveXElement(this OpenXmlPart part)
-            => part.GetOpenXmlPartRootXElementFeature().Save();
+        {
+            if (part is null)
+            {
+                throw new ArgumentNullException(nameof(part));
+            }
+
+            return part.GetOpenXmlPartRootXElementFeature().Save();
+        }
     }
 }

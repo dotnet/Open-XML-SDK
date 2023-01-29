@@ -8,6 +8,7 @@ namespace DocumentFormat.OpenXml;
 /// <summary>
 /// A collection of options for reading part information.
 /// </summary>
+[System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1815:Override equals and operator equals on value types", Justification = "This type should not be used for equality")]
 public struct OpenXmlPartReaderOptions
 {
     /// <summary>

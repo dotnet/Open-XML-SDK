@@ -21,7 +21,14 @@ public static class OpenXmlUnknownElementExtensions
     /// <param name="outerXml">The outer XML of the element.</param>
     /// <returns>A new OpenXmlUnknownElement class.</returns>
     public static OpenXmlUnknownElement CreateUnknownElement(this OpenXmlPartContainer container, string outerXml)
-        => CreateOpenXmlUnknownElement(container.Features, outerXml);
+    {
+        if (container is null)
+        {
+            throw new ArgumentNullException(nameof(container));
+        }
+
+        return CreateOpenXmlUnknownElement(container.Features, outerXml);
+    }
 
     internal static OpenXmlUnknownElement CreateOpenXmlUnknownElement(IFeatureCollection features, string outerXml)
     {

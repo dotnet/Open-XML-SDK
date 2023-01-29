@@ -200,7 +200,7 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            var wasAdded = Metadata.Particle.Set(this, newChild, newChild?.GetType());
+            var wasAdded = Metadata.Particle.Set(this, newChild, newChild.GetType());
 
             if (throwOnError && !wasAdded)
             {
@@ -413,20 +413,20 @@ namespace DocumentFormat.OpenXml
 
         /// <inheritdoc/>
         [return: NotNullIfNotNull("newChild")]
-        public override T? RemoveChild<T>(T? child)
+        public override T? RemoveChild<T>(T? oldChild)
             where T : class
         {
-            if (child is null)
+            if (oldChild is null)
             {
                 return null;
             }
 
-            if (child.Parent != this)
+            if (oldChild.Parent != this)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsNotChild);
             }
 
-            var removedElement = child;
+            var removedElement = oldChild;
             var last = _lastChild;
 
             ElementRemovingEvent(removedElement);
