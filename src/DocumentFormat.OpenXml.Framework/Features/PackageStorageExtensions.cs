@@ -48,7 +48,9 @@ internal static class PackageStorageExtensions
     internal static TPackage DefaultInitialize<TPackage>(this TPackage package)
         where TPackage : OpenXmlPackage
     {
+        package.ConvertStrictRelationshipToTransitional();
         package.Load();
+
         return package;
     }
 
