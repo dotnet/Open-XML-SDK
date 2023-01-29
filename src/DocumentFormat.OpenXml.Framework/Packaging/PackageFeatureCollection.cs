@@ -12,10 +12,12 @@ internal partial class PackageFeatureCollection :
     IPartFactoryFeature,
     IApplicationTypeFeature,
     IDisposableFeature,
-    IContainerDisposableFeature
+    IContainerDisposableFeature,
+    ISaveFeature
 {
     private readonly IFeatureCollection? _parent;
 
+    private Action<OpenXmlPartContainer>? _save;
     private Action? _disposable;
     private FeatureContainer _container;
 
@@ -78,4 +80,10 @@ internal partial class PackageFeatureCollection :
     void IDisposableFeature.Register(IDisposable disposable) => _disposable = disposable.Dispose + _disposable;
 
     void IContainerDisposableFeature.Dispose() => _disposable?.Invoke();
+
+    void ISaveFeature.Save(OpenXmlPartContainer container)
+        => _save?.Invoke(container);
+
+    void ISaveFeature.Register(Action<OpenXmlPartContainer> container)
+        => _save += container;
 }

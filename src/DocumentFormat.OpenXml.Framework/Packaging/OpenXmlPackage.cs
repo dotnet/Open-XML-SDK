@@ -356,6 +356,7 @@ namespace DocumentFormat.OpenXml.Packaging
             var package = Features.GetRequired<IPackageFeature>().Package;
 
             bool isAnyPartChanged;
+            var saveFeature = Features.Get<ISaveFeature>();
 
             if (package.FileOpenAccess == FileAccess.Read)
             {
@@ -368,27 +369,13 @@ namespace DocumentFormat.OpenXml.Packaging
                 return package; // do nothing if saving is false.
             }
 
-            // Traversal the whole package and save changed contents.
-            isAnyPartChanged = false;
+            saveFeature?.Save(this);
 
-            // If a part is in the state of 'loaded', something in the part should've been changed.
-            // When all the part is not loaded yet, we can skip saving all parts' contents and updating Package relationship types.
             foreach (var part in this.GetAllParts())
             {
-                if (part.IsRootElementLoaded)
-                {
-                    isAnyPartChanged = true;
-                    break;
-                }
-            }
+                saveFeature?.Save(part);
 
-            // We update parts and relationship types only when any one of the parts was changed (i.e. loaded).
-            if (isAnyPartChanged)
-            {
-                foreach (var part in this.GetAllParts())
-                {
-                    TrySavePartContent(part);
-                }
+                TrySavePartContent(part);
             }
 
             return package;
