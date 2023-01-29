@@ -355,9 +355,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var package = Features.GetRequired<IPackageFeature>().Package;
 
-            bool isAnyPartChanged;
-            var saveFeature = Features.Get<ISaveFeature>();
-
             if (package.FileOpenAccess == FileAccess.Read)
             {
                 return package; // do nothing if the package is open in read-only mode.
@@ -368,6 +365,8 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 return package; // do nothing if saving is false.
             }
+
+            var saveFeature = Features.Get<ISaveFeature>();
 
             saveFeature?.Save(this);
 
