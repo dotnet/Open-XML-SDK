@@ -3,7 +3,6 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
-using Microsoft.VisualStudio.TestPlatform.PlatformAbstractions.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
