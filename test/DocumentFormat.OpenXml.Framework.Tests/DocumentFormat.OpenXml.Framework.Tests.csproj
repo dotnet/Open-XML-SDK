@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\DocumentFormat.OpenXml.Framework\DocumentFormat.OpenXml.Framework.csproj" />
     <ProjectReference Include="..\..\src\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
   </ItemGroup>
 

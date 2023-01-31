@@ -2,11 +2,9 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO.Packaging;
@@ -36,12 +34,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the children parts IDictionary.
         /// </summary>
-        internal IChildPartFeatures ChildrenRelationshipParts
+        internal IChildRelationshipPartFeatures ChildrenRelationshipParts
         {
             get
             {
                 ThrowIfObjectDisposed();
-                return Features.GetRequired<IChildPartFeatures>();
+                return Features.GetRequired<IChildRelationshipPartFeatures>();
             }
         }
 
@@ -940,21 +938,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        /// <summary>
-        /// Gets the count of all parts of type T.
-        /// </summary>
-        /// <typeparam name="T">The type of the part.</typeparam>
-        /// <returns>The number of parts of this type.</returns>
-        [Obsolete("Use GetPartsOfType<T>().Count() instead")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public int GetPartsCountOfType<T>()
-            where T : OpenXmlPart
-        {
-            ThrowIfObjectDisposed();
-
-            return GetPartsOfType<T>().Count();
-        }
-
         #endregion
 
         #region methods to operate annotation
@@ -1035,32 +1018,6 @@ namespace DocumentFormat.OpenXml.Packaging
             ThrowIfObjectDisposed();
 
             return ChildrenRelationshipParts.Parts.OfType<T>();
-        }
-
-        /// <summary>
-        /// Gets all the children parts of the specified type <typeparamref name="T"/> into <paramref name="partCollection"/> of this part.
-        /// </summary>
-        /// <typeparam name="T">Derived class from OpenXmlPart.</typeparam>
-        /// <param name="partCollection">The part collection to be filled in.</param>
-        /// <exception cref="ArgumentNullException">Thrown when <paramref name="partCollection"/> is null.</exception>
-        [Obsolete("Use GetPartsOfType<T> to manually add to a collection")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public void GetPartsOfType<T>(ICollection<T> partCollection)
-            where T : OpenXmlPart
-        {
-            ThrowIfObjectDisposed();
-
-            if (partCollection is null)
-            {
-                throw new ArgumentNullException(nameof(partCollection));
-            }
-
-            partCollection.Clear();
-
-            foreach (var part in GetPartsOfType<T>())
-            {
-                partCollection.Add(part);
-            }
         }
 
         #region internal methods
@@ -1775,10 +1732,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="openXmlPackage">The OpenXmlPackage.</param>
         /// <param name="sourcePart">The source part. Be null if loading from the package root.</param>
-        /// <param name="relationshipCollection">The relationships of the source part (or the package).</param>
-        /// <param name="loadedParts">Temp collection to detect loaded (shared) parts.</param>
-        internal void LoadReferencedPartsAndRelationships(OpenXmlPackage openXmlPackage, OpenXmlPart? sourcePart, RelationshipCollection relationshipCollection, Dictionary<Uri, OpenXmlPart> loadedParts)
+        internal void LoadReferencedPartsAndRelationships(OpenXmlPackage openXmlPackage, OpenXmlPart? sourcePart)
         {
+            var partLookup = openXmlPackage.LoadedParts;
+
             Dictionary<string, bool> partsToIgnore = new()
             {
                 // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1281
@@ -1788,9 +1745,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 { @"http://schemas.microsoft.com/office/2006/relationships/recovered", true },
             };
 
-            foreach (var relationship in relationshipCollection)
+            var relationships = sourcePart?.PackagePart.GetRelationships() ?? openXmlPackage.Package.GetRelationships();
+
+            foreach (var relationship in relationships)
             {
-                if (partsToIgnore.ContainsKey(relationship.RelationshipType) && partsToIgnore[relationship.RelationshipType])
+                if (partsToIgnore.TryGetValue(relationship.RelationshipType, out bool value) && value)
                 {
                     continue;
                 }
@@ -1813,7 +1772,7 @@ namespace DocumentFormat.OpenXml.Packaging
                             var sourceUri = sourcePart is null ? new Uri("/", UriKind.Relative) : sourcePart.Uri;
                             var uriTarget = PackUriHelper.ResolvePartUri(sourceUri, relationship.TargetUri);
 
-                            if (loadedParts.TryGetValue(uriTarget, out var child))
+                            if (partLookup.TryGetValue(uriTarget, out var child))
                             {
                                 // shared part, already loaded
 
@@ -1832,7 +1791,7 @@ namespace DocumentFormat.OpenXml.Packaging
                                 if (dataPart is null)
                                 {
                                     // Load the part as MediaDataPart.
-                                    var packagePart = Features.GetRequired<IPackageFeature>().Package.GetPart(uriTarget);
+                                    var packagePart = openXmlPackage.Package.GetPart(uriTarget);
                                     dataPart = new MediaDataPart(openXmlPackage, packagePart);
                                     openXmlPackage.AddDataPartToList(dataPart);
                                 }
@@ -1847,9 +1806,9 @@ namespace DocumentFormat.OpenXml.Packaging
                                 child.MCSettings = openXmlPackage.MarkupCompatibilityProcessSettings;
 
                                 // add it to loaded part list
-                                loadedParts.Add(uriTarget, child);
+                                partLookup.Add(uriTarget, child);
 
-                                child.Load(openXmlPackage, sourcePart, uriTarget, relationship.Id, loadedParts);
+                                child.Load(openXmlPackage, sourcePart, uriTarget, relationship.Id);
 
                                 ChildrenRelationshipParts.Add(relationship.Id, child);
                             }

@@ -68,8 +68,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
             else
             {
-                minValueString = _minValue.ToString(System.Globalization.CultureInfo.CurrentUICulture);
-                maxValueString = _maxValue.ToString(System.Globalization.CultureInfo.CurrentUICulture);
+                minValueString = _minValue.ToString(System.Globalization.CultureInfo.CurrentCulture);
+                maxValueString = _maxValue.ToString(System.Globalization.CultureInfo.CurrentCulture);
             }
 
             var subMsg = default(string);

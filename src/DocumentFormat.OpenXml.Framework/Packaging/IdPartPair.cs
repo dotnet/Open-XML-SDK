@@ -7,74 +7,54 @@ using System;
 using DocumentFormat.OpenXml.Framework;
 #endif
 
-namespace DocumentFormat.OpenXml.Packaging
+namespace DocumentFormat.OpenXml.Packaging;
+
+/// <summary>
+/// Represents a (RelationshipId, OpenXmlPart) pair.
+/// </summary>
+public readonly struct IdPartPair : IEquatable<IdPartPair>
 {
     /// <summary>
-    /// Represents a (RelationshipId, OpenXmlPart) pair.
+    /// Initializes a new instance of the IdPartPair with the specified id and part.
     /// </summary>
-    public class IdPartPair : IEquatable<IdPartPair>
+    /// <param name="id">The relationship ID.</param>
+    /// <param name="part">The OpenXmlPart.</param>
+    public IdPartPair(string id, OpenXmlPart part)
     {
-        /// <summary>
-        /// Gets or sets the relationship ID in the pair.
-        /// </summary>
-        public string RelationshipId
-        {
-            get;
-            [Obsolete("This object will be made immutable in a future release. Please use a new instance.")]
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the OpenXmlPart in the pair.
-        /// </summary>
-        public OpenXmlPart OpenXmlPart
-        {
-            get;
-            [Obsolete("This object will be made immutable in a future release. Please use a new instance.")]
-            set;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the IdPartPair with the specified id and part.
-        /// </summary>
-        /// <param name="id">The relationship ID.</param>
-        /// <param name="part">The OpenXmlPart.</param>
-        public IdPartPair(string id, OpenXmlPart part)
-        {
-#pragma warning disable CS0618 // Type or member is obsolete
-            RelationshipId = id;
-            OpenXmlPart = part;
-#pragma warning restore CS0618 // Type or member is obsolete
-        }
-
-        /// <inheritdoc/>
-        public override bool Equals(object? obj) => obj is IdPartPair other && Equals(other);
-
-        /// <inheritdoc/>
-        public override int GetHashCode()
-        {
-            var code = default(HashCode);
-
-            code.Add(RelationshipId, StringComparer.Ordinal);
-
-            return code.ToHashCode();
-        }
-
-        /// <inheritdoc/>
-        public bool Equals(IdPartPair? value)
-        {
-            // Check for null
-            if (value is null)
-            {
-                return false;
-            }
-
-            if (ReferenceEquals(this, value))
-            {
-                return true;
-            }
-
-            return string.Equals(RelationshipId, value.RelationshipId, StringComparison.Ordinal) && (OpenXmlPart == value.OpenXmlPart);
-        }
+        RelationshipId = id;
+        OpenXmlPart = part;
     }
+
+    /// <summary>
+    /// Gets the relationship ID in the pair.
+    /// </summary>
+    public string RelationshipId { get; }
+
+    /// <summary>
+    /// Gets the OpenXmlPart in the pair.
+    /// </summary>
+    public OpenXmlPart OpenXmlPart { get; }
+
+    /// <inheritdoc/>
+    public override bool Equals(object? obj) => obj is IdPartPair other && Equals(other);
+
+    /// <inheritdoc/>
+    public override int GetHashCode()
+    {
+        var code = default(HashCode);
+
+        code.Add(RelationshipId, StringComparer.Ordinal);
+
+        return code.ToHashCode();
+    }
+
+    /// <inheritdoc/>
+    public bool Equals(IdPartPair other)
+        => string.Equals(RelationshipId, other.RelationshipId, StringComparison.Ordinal) && Equals(OpenXmlPart, other.OpenXmlPart);
+
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+    public static bool operator ==(IdPartPair left, IdPartPair right) => left.Equals(right);
+
+    public static bool operator !=(IdPartPair left, IdPartPair right) => !(left == right);
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 }

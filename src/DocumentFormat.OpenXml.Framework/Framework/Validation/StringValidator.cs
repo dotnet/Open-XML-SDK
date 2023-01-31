@@ -99,6 +99,7 @@ namespace DocumentFormat.OpenXml.Framework
             set => _length = value;
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Maintainability", "CA1508:Avoid dead conditional code", Justification = "Variable may be updated in callback")]
         protected override void ValidateVersion(ValidationContext context)
         {
             var current = context.Stack.Current;

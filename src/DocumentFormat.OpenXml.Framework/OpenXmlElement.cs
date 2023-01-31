@@ -238,6 +238,7 @@ namespace DocumentFormat.OpenXml
         /// Gets the first child of the OpenXmlElement element.
         /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element.
         /// </summary>
+        [SuppressMessage("Naming", "CA1721:Property names should not match get methods", Justification = "Existing API")]
         public virtual OpenXmlElement? FirstChild => null;
 
         /// <summary>

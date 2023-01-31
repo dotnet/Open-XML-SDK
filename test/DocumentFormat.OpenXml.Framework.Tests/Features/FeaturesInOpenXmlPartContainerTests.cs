@@ -11,15 +11,20 @@ namespace DocumentFormat.OpenXml.Features.Tests
 {
     public class FeaturesInOpenXmlPartContainerTests
     {
+        private const string RelationshipType = "relationshipType";
+        private const string ContentType = "content/type";
+        private const string TargetExt = ".ext";
+
         [Fact]
         public void FeaturesPropogateThroughContainer()
         {
             using var ms = new MemoryStream();
-            using var package = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document);
+            using var package = Substitute.ForPartsOf<OpenXmlPackage>()
+                .WithStorage(ms, PackageOpenMode.Create);
 
             var feature1 = new Feature();
 
-            var part = package.AddMainDocumentPart();
+            var part = package.AddExtendedPart(RelationshipType, ContentType, TargetExt);
 
             package.Features.Set(feature1);
 
@@ -31,11 +36,12 @@ namespace DocumentFormat.OpenXml.Features.Tests
         public void FeaturesDoNotPropogateBackThroughContainer()
         {
             using var ms = new MemoryStream();
-            using var package = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document);
+            using var package = Substitute.ForPartsOf<OpenXmlPackage>()
+                .WithStorage(ms, PackageOpenMode.Create);
 
             var feature1 = new Feature();
 
-            var part = package.AddMainDocumentPart();
+            var part = package.AddExtendedPart(RelationshipType, ContentType, TargetExt);
 
             part.Features.Set(feature1);
 
@@ -47,14 +53,15 @@ namespace DocumentFormat.OpenXml.Features.Tests
         public void FeaturesIndependentParts()
         {
             using var ms = new MemoryStream();
-            using var package = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document);
+            using var package = Substitute.ForPartsOf<OpenXmlPackage>()
+                .WithStorage(ms, PackageOpenMode.Create);
 
-            var part1 = package.AddMainDocumentPart();
+            var part1 = package.AddExtendedPart(RelationshipType, ContentType, TargetExt);
             var feature1 = new Feature();
             part1.Features.Set(feature1);
 
             var feature2 = new Feature();
-            var part2 = package.AddCoreFilePropertiesPart();
+            var part2 = package.AddExtendedPart(RelationshipType, ContentType, TargetExt);
             part2.Features.Set(feature2);
 
             Assert.Null(package.Features.Get<Feature>());
@@ -66,16 +73,17 @@ namespace DocumentFormat.OpenXml.Features.Tests
         public void FeaturesIndependentPartsReadFromPackage()
         {
             using var ms = new MemoryStream();
-            using var package = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document);
+            using var package = Substitute.ForPartsOf<OpenXmlPackage>()
+                .WithStorage(ms, PackageOpenMode.Create);
 
-            var part1 = package.AddMainDocumentPart();
+            var part1 = package.AddExtendedPart(RelationshipType, ContentType, TargetExt);
             var feature1 = new Feature();
             part1.Features.Set(feature1);
 
             var feature2 = new Feature();
             package.Features.Set(feature2);
 
-            var part2 = package.AddCoreFilePropertiesPart();
+            var part2 = package.AddExtendedPart(RelationshipType, ContentType, TargetExt);
 
             Assert.Same(feature2, package.Features.Get<Feature>());
             Assert.Same(feature1, part1.Features.Get<Feature>());

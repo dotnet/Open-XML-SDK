@@ -10,13 +10,14 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal class StreamPackageFeature : PackageFeatureBase, IDisposable
+internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageStreamFeature
 {
     private readonly FileAccess _access;
     private readonly FileMode _mode;
 
     private Package _package;
     private bool _disposedValue;
+    private Stream _stream;
 
     public StreamPackageFeature(Stream stream, PackageOpenMode openMode)
     {
@@ -36,7 +37,7 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable
         }
 
         // Ensure the stream we're operating on is readonly if that is the requested mode
-        Stream = openMode == PackageOpenMode.Read && stream.CanWrite ? new ReadOnlyStream(stream) : stream;
+        _stream = openMode == PackageOpenMode.Read && stream.CanWrite ? new ReadOnlyStream(stream) : stream;
 
         _access = openMode == PackageOpenMode.Read ? FileAccess.Read : FileAccess.ReadWrite;
         var initialMode = openMode switch
@@ -53,7 +54,15 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable
         InitializePackage(initialMode, _access);
     }
 
-    public Stream Stream { get; }
+    public Stream Stream
+    {
+        get => _stream;
+        set
+        {
+            _stream = value;
+            Reload();
+        }
+    }
 
     [MemberNotNull(nameof(_package))]
     private void InitializePackage(FileMode? mode = default, FileAccess? access = default)

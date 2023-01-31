@@ -60,15 +60,6 @@ namespace DocumentFormat.OpenXml
 
         internal uint ACBlockLevel { get; set; }
 
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlElementContext class.
-        /// </summary>
-        [Obsolete("This object is created internally and the public constructor will be removed at some point in the future.")]
-        public OpenXmlElementContext()
-            : this(FeatureCollection.TypedOrDefault.GetNamespaceResolver())
-        {
-        }
-
         internal OpenXmlElementContext(IOpenXmlNamespaceResolver resolver)
         {
             MCContext = new MCContext(resolver);

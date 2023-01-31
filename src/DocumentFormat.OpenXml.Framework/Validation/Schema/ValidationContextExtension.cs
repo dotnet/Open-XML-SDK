@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System.Globalization;
+
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     internal static class ValidationContextExtension
@@ -34,7 +36,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             string messageId,
             params object?[] args)
         {
-            var message = ValidationResources.ResourceManager.GetString(messageId);
+            var message = ValidationResources.ResourceManager.GetString(messageId, CultureInfo.CurrentCulture);
 
             var description = message switch
             {

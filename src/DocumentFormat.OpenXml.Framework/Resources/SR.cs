@@ -9,22 +9,22 @@ namespace DocumentFormat.OpenXml
     {
         public static string Format(string str, params object?[] args)
         {
-            return string.Format(CultureInfo.CurrentUICulture, str, args);
+            return string.Format(CultureInfo.CurrentCulture, str, args);
         }
 
         public static string Format(string str, object? arg0)
         {
-            return string.Format(CultureInfo.CurrentUICulture, str, arg0);
+            return string.Format(CultureInfo.CurrentCulture, str, arg0);
         }
 
         public static string Format(string str, object? arg0, object? arg1)
         {
-            return string.Format(CultureInfo.CurrentUICulture, str, arg0, arg1);
+            return string.Format(CultureInfo.CurrentCulture, str, arg0, arg1);
         }
 
         public static string Format(string str, object? arg0, object? arg1, object? arg2)
         {
-            return string.Format(CultureInfo.CurrentUICulture, str, arg0, arg1, arg2);
+            return string.Format(CultureInfo.CurrentCulture, str, arg0, arg1, arg2);
         }
     }
 }
