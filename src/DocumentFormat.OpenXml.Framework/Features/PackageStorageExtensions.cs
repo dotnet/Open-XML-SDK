@@ -46,12 +46,24 @@ internal static class PackageStorageExtensions
         return package;
     }
 
-    internal static TPackage DefaultInitialize<TPackage>(this TPackage package)
+    internal static TPackage UseDefaultBehavior<TPackage>(this TPackage package)
         where TPackage : OpenXmlPackage
     {
-        package.EnableSavePackage();
-        package.EnableUriHandling();
+        var compatLevel = package.OpenSettings.CompatibilityLevel;
+
         package.UseTransitionalRelationshipNamespaces();
+
+        if (compatLevel >= CompatibilityLevel.Version_3_0)
+        {
+            package.EnableSavePackage();
+            package.EnableUriHandling();
+        }
+
+        if (compatLevel == CompatibilityLevel.Version_2_20)
+        {
+            // Before v3.0, all parts were eagerly loaded
+            package.LoadAllParts();
+        }
 
         return package;
     }
