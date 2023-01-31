@@ -15,7 +15,10 @@ internal static class StrictNamespaceExtensions
     {
         var resolver = package.Features.GetNamespaceResolver();
 
+        var foundFeature = new StrictNamespaceFeature(package);
         var alteredRelationships = new Dictionary<Uri, List<PackageRelationshipBuilder>>();
+
+        package.Features.Set<IStrictNamespaceFeature>(foundFeature);
 
         var relationshipFeature = package.Features.GetRequired<IRelationshipFilterFeature>();
         relationshipFeature.AddFilter(r =>
@@ -33,7 +36,7 @@ internal static class StrictNamespaceExtensions
                 existing.Add(r);
 
                 r.RelationshipType = transitionalNamespace.Uri;
-                package.StrictRelationshipFound = true;
+                foundFeature.Found = true;
             }
         });
 
@@ -73,5 +76,31 @@ internal static class StrictNamespaceExtensions
                 }
             }
         });
+    }
+
+    private sealed class StrictNamespaceFeature : IStrictNamespaceFeature
+    {
+        private OpenXmlPackage? _package;
+
+        public StrictNamespaceFeature(OpenXmlPackage package)
+        {
+            _package = package;
+        }
+
+        bool IStrictNamespaceFeature.Found
+        {
+            get
+            {
+                if (_package is { } package)
+                {
+                    _package = null;
+                    package.LoadAllParts();
+                }
+
+                return Found;
+            }
+        }
+
+        public bool Found { get; set; }
     }
 }

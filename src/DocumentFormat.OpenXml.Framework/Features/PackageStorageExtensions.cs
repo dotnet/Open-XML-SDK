@@ -49,7 +49,6 @@ internal static class PackageStorageExtensions
         where TPackage : OpenXmlPackage
     {
         package.ConvertStrictRelationshipToTransitional();
-        package.Load();
 
         return package;
     }

@@ -16,8 +16,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPackage : OpenXmlPartContainer, IDisposable
     {
-        private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
-
         private bool _isDisposed;
         private OpenSettings? _settings;
 
@@ -34,11 +32,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public virtual OpenXmlPart? RootPart => Features.GetRequired<IMainPartFeature>().Part;
 
-        /// <summary>
-        /// Loads the package. This method must be called in the constructor of a derived class.
-        /// </summary>
-        internal void Load() => LoadReferencedPartsAndRelationships(this, null);
-
         internal OpenSettings OpenSettings
         {
             get => _settings ??= new();
@@ -48,9 +41,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets a value indicating whether this package contains Transitional relationships converted from Strict.
         /// </summary>
-        public bool StrictRelationshipFound { get; internal set; }
-
-        internal Dictionary<Uri, OpenXmlPart> LoadedParts { get; } = new();
+        public bool StrictRelationshipFound => Features.Get<IStrictNamespaceFeature>()?.Found ?? false;
 
         internal IPackage Package => Features.GetRequired<IPackageFeature>().Package;
 
@@ -94,7 +85,23 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets all the <see cref="DataPart"/> parts in the document package.
         /// </summary>
-        public IEnumerable<DataPart> DataParts => _dataPartList;
+        public IEnumerable<DataPart> DataParts
+        {
+            get
+            {
+                LoadAllParts();
+                return Features.GetRequired<IDataPartsFeature>().Parts;
+            }
+        }
+
+        internal void LoadAllParts()
+        {
+            foreach (var part in this.GetAllParts())
+            {
+                // Force it to load
+                _ = part.ChildrenRelationshipParts.Count;
+            }
+        }
 
         #region public methods
 
@@ -162,7 +169,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             var mediaDataPart = new MediaDataPart(InternalOpenXmlPackage, contentType, extension: null);
 
-            _dataPartList.AddLast(mediaDataPart);
+            Features.GetRequired<IDataPartsFeature>().Add(mediaDataPart);
 
             return mediaDataPart;
         }
@@ -191,7 +198,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             var mediaDataPart = new MediaDataPart(InternalOpenXmlPackage, contentType, extension);
 
-            _dataPartList.AddLast(mediaDataPart);
+            Features.GetRequired<IDataPartsFeature>().Add(mediaDataPart);
 
             return mediaDataPart;
         }
@@ -207,7 +214,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             var mediaDataPart = new MediaDataPart(InternalOpenXmlPackage, mediaDataPartType);
 
-            _dataPartList.AddLast(mediaDataPart);
+            Features.GetRequired<IDataPartsFeature>().Add(mediaDataPart);
 
             return mediaDataPart;
         }
@@ -236,7 +243,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 // delete the part from the package
                 dataPart.Destroy();
-                return _dataPartList.Remove(dataPart);
+                return Features.GetRequired<IDataPartsFeature>().Remove(dataPart);
             }
             else
             {
@@ -282,10 +289,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 SavePartContents(AutoSave);
                 DeleteUnusedDataPartOnClose();
 
-                ChildrenRelationshipParts.Clear();
-                ReferenceRelationshipList.Clear();
+                if (Features.Get<IContainerDisposableFeature>() is { } disposable && disposable.IsOwner(this))
+                {
+                    disposable.Dispose();
+                }
 
-                Features.Get<IContainerDisposableFeature>()?.Dispose();
                 closing?.OnChange(this, EventType.Closed);
                 _isDisposed = true;
             }
@@ -321,27 +329,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
         }
-
-        // internal FileFormatVersions MCTargetFormat
-        // {
-        //    get
-        //    {
-        //        if (MarkupCompatibilityProcessSettings.ProcessMode == MarkupCompatibilityProcessMode.NoProcess)
-        //            return (FileFormatVersions.Office2007 | FileFormatVersions.Office2010);
-        //        else
-        //        {
-        //            return MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-        //        }
-        //    }
-        // }
-
-        // internal bool ProcessMCInWholePackage
-        // {
-        //    get
-        //    {
-        //        return MarkupCompatibilityProcessSettings.ProcessMode == MarkupCompatibilityProcessMode.ProcessAllParts;
-        //    }
-        // }
         #endregion
 
         #region Auto-Save functions
@@ -458,7 +445,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         childParts.Add(idPartPair.Key, idPartPair.Value);
                     }
 
-                    ReferenceRelationship[] referenceRelationships = mainPart.ReferenceRelationshipList.ToArray();
+                    var referenceRelationships = mainPart.Features.GetRequired<IReferenceRelationshipsFeature>().Relationships.ToArray();
 
                     Uri uri = mainPart.Uri;
                     string id = GetIdOfPart(mainPart);
@@ -588,10 +575,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         private void DeleteUnusedDataPartOnClose()
         {
-            if (_dataPartList.Count > 0)
+            var dataParts = Features.GetRequired<IDataPartsFeature>();
+
+            if (dataParts.Count > 0)
             {
                 HashSet<DataPart> dataPartSet = new HashSet<DataPart>();
-                foreach (var dataPart in DataParts)
+                foreach (var dataPart in dataParts.Parts)
                 {
                     dataPartSet.Add(dataPart);
                 }
@@ -625,32 +614,14 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     // delete the part from the package
                     dataPart.Destroy();
-                    _dataPartList.Remove(dataPart);
+                    Features.GetRequired<IDataPartsFeature>().Remove(dataPart);
                 }
             }
-        }
-
-        /// <summary>
-        /// Finds the DataPart that has the specified part URI.
-        /// </summary>
-        /// <param name="partUri">The part URI.</param>
-        /// <returns>Returns null if there is no DataPart with the specified URI.</returns>
-        internal DataPart? FindDataPart(Uri partUri)
-        {
-            foreach (var dataPart in DataParts)
-            {
-                if (dataPart.Uri == partUri)
-                {
-                    return dataPart;
-                }
-            }
-
-            return null;
         }
 
         internal DataPart AddDataPartToList(DataPart dataPart)
         {
-            _dataPartList.AddLast(dataPart);
+            Features.GetRequired<IDataPartsFeature>().Add(dataPart);
             return dataPart;
         }
 

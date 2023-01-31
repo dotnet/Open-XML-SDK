@@ -18,8 +18,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPartContainer
     {
-        private readonly LinkedList<ReferenceRelationship> _referenceRelationships = new LinkedList<ReferenceRelationship>();
-
 #pragma warning disable SA1401 // Fields should be private
         private protected IFeatureCollection? _features;
 #pragma warning restore SA1401 // Fields should be private
@@ -27,31 +25,24 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Initializes OpenXmlPartContainer.
         /// </summary>
+        [SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Registered to be disposed with container")]
         protected OpenXmlPartContainer()
         {
+            var childFeatures = new ChildRelationshipsFeature(this);
+
+            Features.Set<IPartRelationshipFeature>(childFeatures);
+            Features.Set<IReferenceRelationshipsFeature>(childFeatures);
         }
 
         /// <summary>
         /// Gets the children parts IDictionary.
         /// </summary>
-        internal IChildRelationshipPartFeatures ChildrenRelationshipParts
+        internal IPartRelationshipFeature ChildrenRelationshipParts
         {
             get
             {
                 ThrowIfObjectDisposed();
-                return Features.GetRequired<IChildRelationshipPartFeatures>();
-            }
-        }
-
-        /// <summary>
-        /// Gets the ReferenceRelationship list.
-        /// </summary>
-        internal LinkedList<ReferenceRelationship> ReferenceRelationshipList
-        {
-            get
-            {
-                ThrowIfObjectDisposed();
-                return _referenceRelationships;
+                return Features.GetRequired<IPartRelationshipFeature>();
             }
         }
 
@@ -79,11 +70,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ReferenceRelationshipIsNotReferenced);
             }
 
-            if (ReferenceRelationshipList.Contains(referenceRelationship))
+            if (Features.GetRequired<IReferenceRelationshipsFeature>().Remove(referenceRelationship))
             {
-                ReferenceRelationshipList.Remove(referenceRelationship);
-                DeleteRelationship(referenceRelationship.Id);
-                referenceRelationship.Container = null;
+                return;
             }
             else
             {
@@ -106,15 +95,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            foreach (var referenceRelationship in ReferenceRelationshipList)
+            if (Features.GetRequired<IReferenceRelationshipsFeature>().Remove(id))
             {
-                if (referenceRelationship.Id == id)
-                {
-                    ReferenceRelationshipList.Remove(referenceRelationship);
-                    DeleteRelationship(referenceRelationship.Id);
-                    referenceRelationship.Container = null;
-                    return;
-                }
+                return;
             }
 
             throw new KeyNotFoundException(ExceptionMessages.NoSpecifiedReferenceRelationship);
@@ -136,12 +119,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            foreach (var referenceRelationship in ReferenceRelationshipList)
+            if (Features.GetRequired<IReferenceRelationshipsFeature>().TryGetRelationship(id, out var existing))
             {
-                if (referenceRelationship.Id == id)
-                {
-                    return referenceRelationship;
-                }
+                return existing;
             }
 
             throw new KeyNotFoundException(ExceptionMessages.NoSpecifiedReferenceRelationship);
@@ -160,7 +140,7 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return ReferenceRelationshipList.OfType<ExternalRelationship>();
+                return Features.GetRequired<IReferenceRelationshipsFeature>().Relationships.OfType<ExternalRelationship>();
             }
         }
 
@@ -191,12 +171,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.UseAddHyperlinkRelationship);
             }
 
-            var relationship = CreateRelationship(externalUri, TargetMode.External, relationshipType);
-
-            var externalRel = new ExternalRelationship(relationship.TargetUri, relationship.RelationshipType, relationship.Id);
-            externalRel.Container = this;
-            ReferenceRelationshipList.AddLast(externalRel);
-            return externalRel;
+            return Features.GetRequired<IReferenceRelationshipsFeature>().CreateExternalRelationship(relationshipType, externalUri);
         }
 
         /// <summary>
@@ -233,12 +208,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.UseAddHyperlinkRelationship);
             }
 
-            var relationship = CreateRelationship(externalUri, TargetMode.External, relationshipType, id);
-
-            var externalRel = new ExternalRelationship(relationship.TargetUri, relationship.RelationshipType, relationship.Id);
-            externalRel.Container = this;
-            ReferenceRelationshipList.AddLast(externalRel);
-            return externalRel;
+            return Features.GetRequired<IReferenceRelationshipsFeature>().CreateExternalRelationship(relationshipType, externalUri, id);
         }
 
         /// <summary>
@@ -261,16 +231,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ExternalRelationshipIsNotReferenced);
             }
 
-            if (ReferenceRelationshipList.Contains(externalRelationship))
+            if (Features.GetRequired<IReferenceRelationshipsFeature>().Remove(externalRelationship))
             {
-                ReferenceRelationshipList.Remove(externalRelationship);
-                DeleteRelationship(externalRelationship.Id);
-                externalRelationship.Container = null;
+                return;
             }
-            else
-            {
-                throw new InvalidOperationException(ExceptionMessages.ExternalRelationshipIsNotReferenced);
-            }
+
+            throw new InvalidOperationException(ExceptionMessages.ExternalRelationshipIsNotReferenced);
         }
 
         /// <summary>
@@ -286,15 +252,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            foreach (var externalRelationship in ReferenceRelationshipList.OfType<ExternalRelationship>())
+            if (Features.GetRequired<IReferenceRelationshipsFeature>().Remove(id))
             {
-                if (externalRelationship.Id == id)
-                {
-                    ReferenceRelationshipList.Remove(externalRelationship);
-                    DeleteRelationship(externalRelationship.Id);
-                    externalRelationship.Container = null;
-                    return;
-                }
+                return;
             }
 
             throw new KeyNotFoundException(ExceptionMessages.NoSpecifiedExternalRelationship);
@@ -308,21 +268,25 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when the "id" parameter is null.</exception>
         /// <exception cref="KeyNotFoundException">Thrown when there is no ExternalRelationship with the specified relationship ID.</exception>
         public ExternalRelationship GetExternalRelationship(string id)
+            => GetRelationship<ExternalRelationship>(id, ExceptionMessages.NoSpecifiedExternalRelationship);
+
+        private T GetRelationship<T>(string? id, string errorMessage)
+            where T : ReferenceRelationship
         {
             if (id is null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
 
-            foreach (var externalRelationship in ReferenceRelationshipList.OfType<ExternalRelationship>())
+            if (Features.GetRequired<IReferenceRelationshipsFeature>().TryGetRelationship(id, out var existing))
             {
-                if (externalRelationship.Id == id)
+                if (existing is T t)
                 {
-                    return externalRelationship;
+                    return t;
                 }
             }
 
-            throw new KeyNotFoundException(ExceptionMessages.NoSpecifiedExternalRelationship);
+            throw new KeyNotFoundException(errorMessage);
         }
 
         #endregion
@@ -337,7 +301,7 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return ReferenceRelationshipList.OfType<HyperlinkRelationship>();
+                return Features.GetRequired<IReferenceRelationshipsFeature>().Relationships.OfType<HyperlinkRelationship>();
             }
         }
 
@@ -357,13 +321,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(hyperlinkUri));
             }
 
-            var targetMode = isExternal ? TargetMode.External : TargetMode.Internal;
-            var relationship = CreateRelationship(hyperlinkUri, targetMode, HyperlinkRelationship.RelationshipTypeConst);
-
-            var hyperlinkRel = new HyperlinkRelationship(relationship.TargetUri, isExternal, relationship.Id);
-            hyperlinkRel.Container = this;
-            ReferenceRelationshipList.AddLast(hyperlinkRel);
-            return hyperlinkRel;
+            return Features.GetRequired<IReferenceRelationshipsFeature>().CreateHyperLink(hyperlinkUri, isExternal);
         }
 
         /// <summary>
@@ -388,12 +346,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            var relationship = CreateRelationship(hyperlinkUri, TargetMode.External, HyperlinkRelationship.RelationshipTypeConst, id);
-
-            var hyperlinkRel = new HyperlinkRelationship(relationship.TargetUri, isExternal, relationship.Id);
-            hyperlinkRel.Container = this;
-            ReferenceRelationshipList.AddLast(hyperlinkRel);
-            return hyperlinkRel;
+            return Features.GetRequired<IReferenceRelationshipsFeature>().CreateHyperLink(hyperlinkUri, isExternal, id);
         }
 
         #endregion
@@ -408,8 +361,7 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-
-                return ReferenceRelationshipList.OfType<DataPartReferenceRelationship>();
+                return Features.GetRequired<IReferenceRelationshipsFeature>().Relationships.OfType<DataPartReferenceRelationship>();
             }
         }
 
@@ -474,17 +426,7 @@ namespace DocumentFormat.OpenXml.Packaging
             where T : DataPartReferenceRelationship
         {
             var relationshipType = DataPartReferenceRelationship.GetRelationshipType<T>();
-            var relationship = id switch
-            {
-                null => CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, relationshipType),
-                _ => CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, relationshipType, id),
-            };
-
-            var dataPartReferenceRelationship = (T)DataPartReferenceRelationship.Create(this, mediaDataPart, relationshipType, relationship.Id);
-
-            ReferenceRelationshipList.AddLast(dataPartReferenceRelationship);
-
-            return dataPartReferenceRelationship;
+            return (T)Features.GetRequired<IReferenceRelationshipsFeature>().CreateDataPartRelationship(relationshipType, mediaDataPart, id);
         }
 
         /// <summary>
@@ -500,10 +442,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(dataPartReferenceRelationship));
             }
 
-            var mediaDataPart = dataPartReferenceRelationship.DataPart;
-            CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
-            ReferenceRelationshipList.AddLast(dataPartReferenceRelationship);
-            return dataPartReferenceRelationship;
+            var dataPart = dataPartReferenceRelationship.DataPart;
+
+            return Features.GetRequired<IReferenceRelationshipsFeature>()
+                .CreateDataPartRelationship(dataPartReferenceRelationship.RelationshipType, dataPart, dataPartReferenceRelationship.Id);
         }
 
         #endregion
@@ -1424,8 +1366,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     if (dataPartsDictionary[dataPartReferenceRelationship.DataPart] is MediaDataPart newDataPart)
                     {
-                        var newDataPartReference = DataPartReferenceRelationship.Create(child, newDataPart, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
-                        child.AddDataPartReferenceRelationship(newDataPartReference);
+                        child.Features.GetRequired<IReferenceRelationshipsFeature>().CreateDataPartRelationship(dataPartReferenceRelationship.RelationshipType, newDataPart, dataPartReferenceRelationship.Id);
                     }
                 }
 
@@ -1725,101 +1666,6 @@ namespace DocumentFormat.OpenXml.Packaging
         internal OpenXmlPart CreateOpenXmlPart(string relationshipType)
         {
             return Features.GetRequired<IPartFactoryFeature>().Create(relationshipType) ?? new ExtendedPart(relationshipType);
-        }
-
-        /// <summary>
-        /// Loads all children parts and relationships recursively.
-        /// </summary>
-        /// <param name="openXmlPackage">The OpenXmlPackage.</param>
-        /// <param name="sourcePart">The source part. Be null if loading from the package root.</param>
-        internal void LoadReferencedPartsAndRelationships(OpenXmlPackage openXmlPackage, OpenXmlPart? sourcePart)
-        {
-            var partLookup = openXmlPackage.LoadedParts;
-
-            Dictionary<string, bool> partsToIgnore = new()
-            {
-                // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1281
-                { @"http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain", openXmlPackage.OpenSettings.IgnoreExceptionOnCalcChainPartMissing },
-
-                // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1205
-                { @"http://schemas.microsoft.com/office/2006/relationships/recovered", true },
-            };
-
-            var relationships = sourcePart?.PackagePart.GetRelationships() ?? openXmlPackage.Package.GetRelationships();
-
-            foreach (var relationship in relationships)
-            {
-                if (partsToIgnore.TryGetValue(relationship.RelationshipType, out bool value) && value)
-                {
-                    continue;
-                }
-
-                if (relationship.RelationshipType == HyperlinkRelationship.RelationshipTypeConst)
-                {
-                    // Fix bug #517956 - both internal and external hyperlinks should be loaded as HyperlinkRelationship.
-                    ReferenceRelationshipList.AddLast(new HyperlinkRelationship(relationship.TargetUri, relationship.TargetMode == TargetMode.External ? true : false, relationship.Id) { Container = this });
-                }
-                else
-                {
-                    if (relationship.TargetMode == TargetMode.Internal)
-                    {
-                        if (!relationship.TargetUri.ToString().Equals("NULL", StringComparison.OrdinalIgnoreCase))
-                        {
-                            // Resolve the Relationship Target Uri
-                            //   so the Document Part can be retrieved.
-
-                            // when sourcePart is null, use the package root as sourceUri.
-                            var sourceUri = sourcePart is null ? new Uri("/", UriKind.Relative) : sourcePart.Uri;
-                            var uriTarget = PackUriHelper.ResolvePartUri(sourceUri, relationship.TargetUri);
-
-                            if (partLookup.TryGetValue(uriTarget, out var child))
-                            {
-                                // shared part, already loaded
-
-                                // shared part should have same relationship type
-                                if (child.RelationshipType != relationship.RelationshipType)
-                                {
-                                    throw new OpenXmlPackageException(ExceptionMessages.SamePartWithDifferentRelationshipType);
-                                }
-
-                                ChildrenRelationshipParts.Add(relationship.Id, child);
-                            }
-                            else if (DataPartReferenceRelationship.IsDataPartReferenceRelationship(relationship.RelationshipType))
-                            {
-                                var dataPart = openXmlPackage.FindDataPart(uriTarget);
-
-                                if (dataPart is null)
-                                {
-                                    // Load the part as MediaDataPart.
-                                    var packagePart = openXmlPackage.Package.GetPart(uriTarget);
-                                    dataPart = new MediaDataPart(openXmlPackage, packagePart);
-                                    openXmlPackage.AddDataPartToList(dataPart);
-                                }
-
-                                // Already loaded data part. Create reference relationship.
-                                var referenceRelationship = DataPartReferenceRelationship.Create(this, dataPart, relationship.RelationshipType, relationship.Id);
-                                ReferenceRelationshipList.AddLast(referenceRelationship);
-                            }
-                            else
-                            {
-                                child = CreateOpenXmlPart(relationship.RelationshipType);
-                                child.MCSettings = openXmlPackage.MarkupCompatibilityProcessSettings;
-
-                                // add it to loaded part list
-                                partLookup.Add(uriTarget, child);
-
-                                child.Load(openXmlPackage, sourcePart, uriTarget, relationship.Id);
-
-                                ChildrenRelationshipParts.Add(relationship.Id, child);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        ReferenceRelationshipList.AddLast(new ExternalRelationship(relationship.TargetUri, relationship.RelationshipType, relationship.Id) { Container = this });
-                    }
-                }
-            }
         }
 
         #endregion

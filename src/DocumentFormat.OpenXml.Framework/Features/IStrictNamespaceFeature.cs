@@ -3,9 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal interface IContainerDisposableFeature
-{
-    bool IsOwner(object obj);
-
-    void Dispose();
-}
+internal interface IStrictNamespaceFeature
+    {
+        bool Found { get; }
+    }

@@ -105,12 +105,10 @@ public class UnknownElementTests
 
     private OpenXmlPartContainer GetContainer()
     {
-        var features = new FeatureCollection();
-        var namespaceResolver = Substitute.For<IOpenXmlNamespaceResolver>();
-        features.Set(namespaceResolver);
+        var container = Substitute.ForPartsOf<OpenXmlPartContainer>();
 
-        var container = Substitute.For<OpenXmlPartContainer>();
-        container.Features.Returns(features);
+        var namespaceResolver = Substitute.For<IOpenXmlNamespaceResolver>();
+        container.Features.Set(namespaceResolver);
 
         return container;
     }
