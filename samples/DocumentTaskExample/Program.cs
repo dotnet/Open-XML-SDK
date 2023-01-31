@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Office2021.DocumentTasks;
+using DocumentFormat.OpenXml.Office.Tasks.Y2019.DocumentTasks;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;

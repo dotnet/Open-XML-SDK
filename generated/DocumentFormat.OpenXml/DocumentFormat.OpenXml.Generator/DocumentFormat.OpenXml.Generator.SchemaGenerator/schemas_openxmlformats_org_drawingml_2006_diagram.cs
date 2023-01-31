@@ -9,7 +9,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office2019.Drawing.Diagram11;
+using DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -7370,8 +7370,8 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType" /> <c>&lt;dgm1612:lstStyle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList" /> <c>&lt;dgm1611:autoBuNodeInfoLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2016.M12.Diagram.TextListStyleType" /> <c>&lt;dgm1612:lstStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram.NumberDiagramInfoList" /> <c>&lt;dgm1611:autoBuNodeInfoLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class DiagramDefinitionExtension : TypedOpenXmlCompositeElement
@@ -7421,8 +7421,8 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("dgm:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2016.M12.Diagram.TextListStyleType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram.NumberDiagramInfoList>();
             builder.AddElement<DiagramDefinitionExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -7431,8 +7431,8 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList), 1, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram.NumberDiagramInfoList), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2016.M12.Diagram.TextListStyleType), 1, 1, version: FileFormatVersions.Office2019),
                 new AnyParticle(0, 1)
             };
         }

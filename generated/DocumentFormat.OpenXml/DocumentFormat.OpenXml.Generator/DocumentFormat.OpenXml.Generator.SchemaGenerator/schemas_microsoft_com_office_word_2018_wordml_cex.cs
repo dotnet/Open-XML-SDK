@@ -8,14 +8,14 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office2021.Word.ExtensionList;
+using DocumentFormat.OpenXml.Office.Word.Y2018.WordML;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
+namespace DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX
 {
     /// <summary>
     /// <para>Defines the CommentsExtensible Class.</para>
@@ -25,8 +25,8 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible" /> <c>&lt;w16cex:commentExtensible></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.CommentExtensible" /> <c>&lt;w16cex:commentExtensible></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class CommentsExtensible : TypedOpenXmlPartRootElement
@@ -67,12 +67,12 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
             base.ConfigureMetadata(builder);
             builder.SetSchema("w16cex:commentsExtensible");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.CommentExtensible>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.CommentExtensible), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class CommentExtensible : TypedOpenXmlCompositeElement
@@ -199,7 +199,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
             base.ConfigureMetadata(builder);
             builder.SetSchema("w16cex:commentExtensible");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.ExtensionList>();
             builder.AddElement<CommentExtensible>()
                 .AddAttribute("w16cex:durableId", a => a.DurableId, aBuilder =>
                 {
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -228,9 +228,9 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         /// <remark>
         /// xmlns:w16cex = http://schemas.microsoft.com/office/word/2018/wordml/cex
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -246,7 +246,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension" /> <c>&lt;w16cur:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2018.WordML.Extension" /> <c>&lt;w16cur:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ExtensionList : TypedOpenXmlCompositeElement
@@ -287,10 +287,10 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
             base.ConfigureMetadata(builder);
             builder.SetSchema("w16cex:extLst");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2018.WordML.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2018.WordML.Extension), 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 

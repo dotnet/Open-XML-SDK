@@ -4,16 +4,16 @@
 using Common;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
-using DocumentFormat.OpenXml.Office2016.Presentation.Command;
-using DocumentFormat.OpenXml.Office2021.PowerPoint.Comment;
+using DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command;
+using DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
 using System;
 using System.IO;
 using System.Linq;
 
-using Comment = DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Comment;
-using CommentList = DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentList;
+using Comment = DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main.Comment;
+using CommentList = DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main.CommentList;
 using Text = DocumentFormat.OpenXml.Drawing.Text;
 
 namespace PowerPointModernCommentSample

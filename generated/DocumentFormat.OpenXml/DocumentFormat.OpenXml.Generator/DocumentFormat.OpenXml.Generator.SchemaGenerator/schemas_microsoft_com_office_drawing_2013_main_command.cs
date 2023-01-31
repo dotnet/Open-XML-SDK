@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command
 {
     /// <summary>
     /// <para>Defines the ShapeMoniker Class.</para>
@@ -1026,9 +1026,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>linkage, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: linkage</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.Command.ResourceLinkage>? Linkage
+        public EnumValue<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ResourceLinkage>? Linkage
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.Command.ResourceLinkage>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ResourceLinkage>>();
             set => SetAttribute(value);
         }
 
@@ -1085,16 +1085,16 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeProperties" /> <c>&lt;oac:grpSpPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualDrawingProps" /> <c>&lt;oac:cNvPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualGroupDrawingShapeProps" /> <c>&lt;oac:cNvGrpSpPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.ConnectorMoniker" /> <c>&lt;oac:cxnSpMk></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList" /> <c>&lt;oac:dgMkLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.GraphicFrameMoniker" /> <c>&lt;oac:graphicFrameMk></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeMoniker" /> <c>&lt;oac:grpSpMk></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.InkMoniker" /> <c>&lt;oac:inkMk></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.PictureMoniker" /> <c>&lt;oac:picMk></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.ShapeMoniker" /> <c>&lt;oac:spMk></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GroupShapeProperties" /> <c>&lt;oac:grpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NonVisualDrawingProps" /> <c>&lt;oac:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NonVisualGroupDrawingShapeProps" /> <c>&lt;oac:cNvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ConnectorMoniker" /> <c>&lt;oac:cxnSpMk></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.DrawingMonikerList" /> <c>&lt;oac:dgMkLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GraphicFrameMoniker" /> <c>&lt;oac:graphicFrameMk></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GroupShapeMoniker" /> <c>&lt;oac:grpSpMk></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.InkMoniker" /> <c>&lt;oac:inkMk></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.PictureMoniker" /> <c>&lt;oac:picMk></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ShapeMoniker" /> <c>&lt;oac:spMk></c></description></item>
     /// </list>
     /// </remark>
     public partial class GroupCommand : TypedOpenXmlCompositeElement
@@ -1165,38 +1165,38 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema("oac:grpCmd");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualDrawingProps>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualGroupDrawingShapeProps>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.ConnectorMoniker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.GraphicFrameMoniker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeMoniker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.InkMoniker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.PictureMoniker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.ShapeMoniker>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GroupShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NonVisualDrawingProps>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NonVisualGroupDrawingShapeProps>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ConnectorMoniker>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.DrawingMonikerList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GraphicFrameMoniker>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GroupShapeMoniker>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.InkMoniker>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.PictureMoniker>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ShapeMoniker>();
             builder.AddElement<GroupCommand>()
                 .AddAttribute("verId", a => a.VerId)
                 .AddAttribute("preventRegroup", a => a.PreventRegroup)
                 .AddAttribute("grpId", a => a.GrpId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.DrawingMonikerList), 1, 1, version: FileFormatVersions.Office2016),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0, version: FileFormatVersions.Office2016)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.ShapeMoniker), 1, 1, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeMoniker), 1, 1, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.GraphicFrameMoniker), 1, 1, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.ConnectorMoniker), 1, 1, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.PictureMoniker), 1, 1, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.InkMoniker), 1, 1, version: FileFormatVersions.Office2016)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ShapeMoniker), 1, 1, version: FileFormatVersions.Office2016),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GroupShapeMoniker), 1, 1, version: FileFormatVersions.Office2016),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GraphicFrameMoniker), 1, 1, version: FileFormatVersions.Office2016),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ConnectorMoniker), 1, 1, version: FileFormatVersions.Office2016),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.PictureMoniker), 1, 1, version: FileFormatVersions.Office2016),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.InkMoniker), 1, 1, version: FileFormatVersions.Office2016)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualDrawingProps), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualGroupDrawingShapeProps), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GroupShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NonVisualDrawingProps), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NonVisualGroupDrawingShapeProps), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -1207,9 +1207,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList? DrawingMonikerList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.DrawingMonikerList? DrawingMonikerList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.DrawingMonikerList>();
             set => SetElement(value);
         }
 
@@ -4210,15 +4210,15 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty" /> <c>&lt;oac:xfrm></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty" /> <c>&lt;oac:geom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty" /> <c>&lt;oac:fill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty" /> <c>&lt;oac:ln></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty" /> <c>&lt;oac:effect></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty" /> <c>&lt;oac:scene3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty" /> <c>&lt;oac:sp3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty" /> <c>&lt;oac:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty" /> <c>&lt;oac:bwMode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.XfrmEmpty" /> <c>&lt;oac:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GeomEmpty" /> <c>&lt;oac:geom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillEmpty" /> <c>&lt;oac:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LnEmpty" /> <c>&lt;oac:ln></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectEmpty" /> <c>&lt;oac:effect></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Scene3dEmpty" /> <c>&lt;oac:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Sp3dEmpty" /> <c>&lt;oac:sp3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ExtLstEmpty" /> <c>&lt;oac:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.BwModeEmpty" /> <c>&lt;oac:bwMode></c></description></item>
     /// </list>
     /// </remark>
     public partial class ResetShapeProperties : TypedOpenXmlCompositeElement
@@ -4259,26 +4259,26 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema("oac:spPr");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.XfrmEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GeomEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LnEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Scene3dEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Sp3dEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ExtLstEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.BwModeEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.XfrmEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GeomEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LnEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Scene3dEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Sp3dEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ExtLstEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.BwModeEmpty), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -4289,9 +4289,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty? XfrmEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.XfrmEmpty? XfrmEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.XfrmEmpty>();
             set => SetElement(value);
         }
 
@@ -4302,9 +4302,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty? GeomEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GeomEmpty? GeomEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.GeomEmpty>();
             set => SetElement(value);
         }
 
@@ -4315,9 +4315,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty? FillEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillEmpty? FillEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillEmpty>();
             set => SetElement(value);
         }
 
@@ -4328,9 +4328,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty? LnEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LnEmpty? LnEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LnEmpty>();
             set => SetElement(value);
         }
 
@@ -4341,9 +4341,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty? EffectEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectEmpty? EffectEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectEmpty>();
             set => SetElement(value);
         }
 
@@ -4354,9 +4354,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty? Scene3dEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Scene3dEmpty? Scene3dEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Scene3dEmpty>();
             set => SetElement(value);
         }
 
@@ -4367,9 +4367,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty? Sp3dEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Sp3dEmpty? Sp3dEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Sp3dEmpty>();
             set => SetElement(value);
         }
 
@@ -4380,9 +4380,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty? ExtLstEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ExtLstEmpty? ExtLstEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ExtLstEmpty>();
             set => SetElement(value);
         }
 
@@ -4393,9 +4393,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty? BwModeEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.BwModeEmpty? BwModeEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.BwModeEmpty>();
             set => SetElement(value);
         }
 
@@ -4965,10 +4965,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference" /> <c>&lt;oac:fontRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference" /> <c>&lt;oac:lnRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference" /> <c>&lt;oac:fillRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference" /> <c>&lt;oac:effectRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FontReference" /> <c>&lt;oac:fontRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LnRefStyleMatrixReference" /> <c>&lt;oac:lnRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillRefStyleMatrixReference" /> <c>&lt;oac:fillRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectRefStyleMatrixReference" /> <c>&lt;oac:effectRef></c></description></item>
     /// </list>
     /// </remark>
     public partial class ModifyShapeStyleProps : TypedOpenXmlCompositeElement
@@ -5009,16 +5009,16 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema("oac:style");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FontReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LnRefStyleMatrixReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillRefStyleMatrixReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectRefStyleMatrixReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LnRefStyleMatrixReference), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillRefStyleMatrixReference), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectRefStyleMatrixReference), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FontReference), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -5029,9 +5029,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference? LnRefStyleMatrixReference
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LnRefStyleMatrixReference? LnRefStyleMatrixReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LnRefStyleMatrixReference>();
             set => SetElement(value);
         }
 
@@ -5042,9 +5042,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference? FillRefStyleMatrixReference
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillRefStyleMatrixReference? FillRefStyleMatrixReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillRefStyleMatrixReference>();
             set => SetElement(value);
         }
 
@@ -5055,9 +5055,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference? EffectRefStyleMatrixReference
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectRefStyleMatrixReference? EffectRefStyleMatrixReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectRefStyleMatrixReference>();
             set => SetElement(value);
         }
 
@@ -5068,9 +5068,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference? FontReference
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FontReference? FontReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FontReference>();
             set => SetElement(value);
         }
 
@@ -5403,10 +5403,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty" /> <c>&lt;oac:srcRect></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty" /> <c>&lt;oac:fillMode></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty" /> <c>&lt;oac:dpi></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty" /> <c>&lt;oac:rotWithShape></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.SrcRectEmpty" /> <c>&lt;oac:srcRect></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillModeEmpty" /> <c>&lt;oac:fillMode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.DpiEmpty" /> <c>&lt;oac:dpi></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.RotWithShapeEmpty" /> <c>&lt;oac:rotWithShape></c></description></item>
     /// </list>
     /// </remark>
     public partial class ResetBlipFillProperties : TypedOpenXmlCompositeElement
@@ -5447,16 +5447,16 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema("oac:blipFill");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.SrcRectEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillModeEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.DpiEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.RotWithShapeEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.SrcRectEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillModeEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.DpiEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.RotWithShapeEmpty), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -5467,9 +5467,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty? SrcRectEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.SrcRectEmpty? SrcRectEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.SrcRectEmpty>();
             set => SetElement(value);
         }
 
@@ -5480,9 +5480,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty? FillModeEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillModeEmpty? FillModeEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillModeEmpty>();
             set => SetElement(value);
         }
 
@@ -5493,9 +5493,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty? DpiEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.DpiEmpty? DpiEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.DpiEmpty>();
             set => SetElement(value);
         }
 
@@ -5506,9 +5506,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty? RotWithShapeEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.RotWithShapeEmpty? RotWithShapeEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.RotWithShapeEmpty>();
             set => SetElement(value);
         }
 
@@ -5757,12 +5757,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty" /> <c>&lt;oac:xfrm></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty" /> <c>&lt;oac:fill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty" /> <c>&lt;oac:effect></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty" /> <c>&lt;oac:scene3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty" /> <c>&lt;oac:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty" /> <c>&lt;oac:bwMode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.XfrmEmpty" /> <c>&lt;oac:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillEmpty" /> <c>&lt;oac:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectEmpty" /> <c>&lt;oac:effect></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Scene3dEmpty" /> <c>&lt;oac:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ExtLstEmpty" /> <c>&lt;oac:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.BwModeEmpty" /> <c>&lt;oac:bwMode></c></description></item>
     /// </list>
     /// </remark>
     public partial class ResetGroupShapeProperties : TypedOpenXmlCompositeElement
@@ -5803,20 +5803,20 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema("oac:grpSpPr");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.XfrmEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Scene3dEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ExtLstEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.BwModeEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.XfrmEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Scene3dEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ExtLstEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.BwModeEmpty), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -5827,9 +5827,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty? XfrmEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.XfrmEmpty? XfrmEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.XfrmEmpty>();
             set => SetElement(value);
         }
 
@@ -5840,9 +5840,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty? FillEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillEmpty? FillEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.FillEmpty>();
             set => SetElement(value);
         }
 
@@ -5853,9 +5853,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty? EffectEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectEmpty? EffectEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EffectEmpty>();
             set => SetElement(value);
         }
 
@@ -5866,9 +5866,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty? Scene3dEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Scene3dEmpty? Scene3dEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.Scene3dEmpty>();
             set => SetElement(value);
         }
 
@@ -5879,9 +5879,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty? ExtLstEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ExtLstEmpty? ExtLstEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ExtLstEmpty>();
             set => SetElement(value);
         }
 
@@ -5892,9 +5892,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty? BwModeEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.BwModeEmpty? BwModeEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.BwModeEmpty>();
             set => SetElement(value);
         }
 
@@ -6357,8 +6357,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection" /> <c>&lt;oac:stCxn></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection" /> <c>&lt;oac:endCxn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.StCxnConnection" /> <c>&lt;oac:stCxn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EndCxnConnection" /> <c>&lt;oac:endCxn></c></description></item>
     /// </list>
     /// </remark>
     public partial class ModifyNonVisualConnectorProps : TypedOpenXmlCompositeElement
@@ -6499,8 +6499,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema("oac:cNvCxnSpPr");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.StCxnConnection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EndCxnConnection>();
             builder.AddElement<ModifyNonVisualConnectorProps>()
                 .AddAttribute("noGrp", a => a.NoGrp)
                 .AddAttribute("noSelect", a => a.NoSelect)
@@ -6514,8 +6514,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 .AddAttribute("noChangeShapeType", a => a.NoChangeShapeType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.StCxnConnection), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EndCxnConnection), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -6526,9 +6526,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection? StCxnConnection
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.StCxnConnection? StCxnConnection
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.StCxnConnection>();
             set => SetElement(value);
         }
 
@@ -6539,9 +6539,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection? EndCxnConnection
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EndCxnConnection? EndCxnConnection
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EndCxnConnection>();
             set => SetElement(value);
         }
 
@@ -6557,18 +6557,18 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty" /> <c>&lt;oac:stCxn></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty" /> <c>&lt;oac:endCxn></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty" /> <c>&lt;oac:noGrp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty" /> <c>&lt;oac:noSelect></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty" /> <c>&lt;oac:noRot></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty" /> <c>&lt;oac:noChangeAspect></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty" /> <c>&lt;oac:noMove></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty" /> <c>&lt;oac:noResize></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty" /> <c>&lt;oac:noEditPoints></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty" /> <c>&lt;oac:noAdjustHandles></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty" /> <c>&lt;oac:noChangeArrowheads></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty" /> <c>&lt;oac:noChangeShapeType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.StCxnEmpty" /> <c>&lt;oac:stCxn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EndCxnEmpty" /> <c>&lt;oac:endCxn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoGrpEmpty" /> <c>&lt;oac:noGrp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoSelectEmpty" /> <c>&lt;oac:noSelect></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoRotEmpty" /> <c>&lt;oac:noRot></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeAspectEmpty" /> <c>&lt;oac:noChangeAspect></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoMoveEmpty" /> <c>&lt;oac:noMove></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoResizeEmpty" /> <c>&lt;oac:noResize></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoEditPointsEmpty" /> <c>&lt;oac:noEditPoints></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoAdjustHandlesEmpty" /> <c>&lt;oac:noAdjustHandles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeArrowheadsEmpty" /> <c>&lt;oac:noChangeArrowheads></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeShapeTypeEmpty" /> <c>&lt;oac:noChangeShapeType></c></description></item>
     /// </list>
     /// </remark>
     public partial class ResetNonVisualConnectorProps : TypedOpenXmlCompositeElement
@@ -6609,32 +6609,32 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema("oac:cNvCxnSpPr");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.StCxnEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EndCxnEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoGrpEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoSelectEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoRotEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeAspectEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoMoveEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoResizeEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoEditPointsEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoAdjustHandlesEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeArrowheadsEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeShapeTypeEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.StCxnEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EndCxnEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoGrpEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoSelectEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoRotEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeAspectEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoMoveEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoResizeEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoEditPointsEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoAdjustHandlesEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeArrowheadsEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeShapeTypeEmpty), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -6645,9 +6645,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty? StCxnEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.StCxnEmpty? StCxnEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.StCxnEmpty>();
             set => SetElement(value);
         }
 
@@ -6658,9 +6658,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty? EndCxnEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EndCxnEmpty? EndCxnEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.EndCxnEmpty>();
             set => SetElement(value);
         }
 
@@ -6671,9 +6671,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty? NoGrpEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoGrpEmpty? NoGrpEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoGrpEmpty>();
             set => SetElement(value);
         }
 
@@ -6684,9 +6684,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty? NoSelectEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoSelectEmpty? NoSelectEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoSelectEmpty>();
             set => SetElement(value);
         }
 
@@ -6697,9 +6697,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty? NoRotEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoRotEmpty? NoRotEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoRotEmpty>();
             set => SetElement(value);
         }
 
@@ -6710,9 +6710,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty? NoChangeAspectEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeAspectEmpty? NoChangeAspectEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeAspectEmpty>();
             set => SetElement(value);
         }
 
@@ -6723,9 +6723,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty? NoMoveEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoMoveEmpty? NoMoveEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoMoveEmpty>();
             set => SetElement(value);
         }
 
@@ -6736,9 +6736,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty? NoResizeEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoResizeEmpty? NoResizeEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoResizeEmpty>();
             set => SetElement(value);
         }
 
@@ -6749,9 +6749,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty? NoEditPointsEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoEditPointsEmpty? NoEditPointsEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoEditPointsEmpty>();
             set => SetElement(value);
         }
 
@@ -6762,9 +6762,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty? NoAdjustHandlesEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoAdjustHandlesEmpty? NoAdjustHandlesEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoAdjustHandlesEmpty>();
             set => SetElement(value);
         }
 
@@ -6775,9 +6775,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty? NoChangeArrowheadsEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeArrowheadsEmpty? NoChangeArrowheadsEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeArrowheadsEmpty>();
             set => SetElement(value);
         }
 
@@ -6788,9 +6788,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty? NoChangeShapeTypeEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeShapeTypeEmpty? NoChangeShapeTypeEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.NoChangeShapeTypeEmpty>();
             set => SetElement(value);
         }
 
@@ -7026,7 +7026,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty" /> <c>&lt;oac:lfPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LfPrEmpty" /> <c>&lt;oac:lfPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class ResetNonVisualPictureProps : TypedOpenXmlCompositeElement
@@ -7067,10 +7067,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema("oac:cNvPicPr");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LfPrEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LfPrEmpty), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -7081,9 +7081,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty? LfPrEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LfPrEmpty? LfPrEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.LfPrEmpty>();
             set => SetElement(value);
         }
 
@@ -7553,7 +7553,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData" /> <c>&lt;oac:sndData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.SndDataImgData" /> <c>&lt;oac:sndData></c></description></item>
     /// </list>
     /// </remark>
     public partial class HlinkClickHyperlinkProps : OpenXmlHyperlinkPropsElement
@@ -7596,7 +7596,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.SndDataImgData), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -7612,7 +7612,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData" /> <c>&lt;oac:sndData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.SndDataImgData" /> <c>&lt;oac:sndData></c></description></item>
     /// </list>
     /// </remark>
     public partial class HlinkHoverHyperlinkProps : OpenXmlHyperlinkPropsElement
@@ -7655,7 +7655,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.SndDataImgData), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -7671,7 +7671,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData" /> <c>&lt;oac:sndData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.SndDataImgData" /> <c>&lt;oac:sndData></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class OpenXmlHyperlinkPropsElement : TypedOpenXmlCompositeElement
@@ -7780,7 +7780,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.SndDataImgData>();
             builder.AddElement<OpenXmlHyperlinkPropsElement>()
                 .AddAttribute("source", a => a.Source)
                 .AddAttribute("action", a => a.Action)
@@ -7798,9 +7798,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData? SndDataImgData
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.SndDataImgData? SndDataImgData
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.SndDataImgData>();
             set => SetElement(value);
         }
     }
@@ -7813,8 +7813,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps" /> <c>&lt;oac:hlinkClick></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps" /> <c>&lt;oac:hlinkHover></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkClickHyperlinkProps" /> <c>&lt;oac:hlinkClick></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkHoverHyperlinkProps" /> <c>&lt;oac:hlinkHover></c></description></item>
     /// </list>
     /// </remark>
     public partial class ModifyHyperlinkProps : TypedOpenXmlCompositeElement
@@ -7855,12 +7855,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema("oac:hlink");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkClickHyperlinkProps>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkHoverHyperlinkProps>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkClickHyperlinkProps), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkHoverHyperlinkProps), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -7871,9 +7871,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps? HlinkClickHyperlinkProps
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkClickHyperlinkProps? HlinkClickHyperlinkProps
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkClickHyperlinkProps>();
             set => SetElement(value);
         }
 
@@ -7884,9 +7884,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps? HlinkHoverHyperlinkProps
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkHoverHyperlinkProps? HlinkHoverHyperlinkProps
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkHoverHyperlinkProps>();
             set => SetElement(value);
         }
 
@@ -7902,8 +7902,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty" /> <c>&lt;oac:hlinkClick></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty" /> <c>&lt;oac:hlinkHover></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkClickEmpty" /> <c>&lt;oac:hlinkClick></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkHoverEmpty" /> <c>&lt;oac:hlinkHover></c></description></item>
     /// </list>
     /// </remark>
     public partial class ResetHyperlinkProps : TypedOpenXmlCompositeElement
@@ -7944,12 +7944,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema("oac:hlink");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkClickEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkHoverEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkClickEmpty), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkHoverEmpty), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -7960,9 +7960,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty? HlinkClickEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkClickEmpty? HlinkClickEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkClickEmpty>();
             set => SetElement(value);
         }
 
@@ -7973,9 +7973,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <remark>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty? HlinkHoverEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkHoverEmpty? HlinkHoverEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.HlinkHoverEmpty>();
             set => SetElement(value);
         }
 

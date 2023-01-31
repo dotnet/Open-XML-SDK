@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2018/08/relationships/commentsExtensible";
-        private DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentsExtensible? _rootElement;
+        private DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.CommentsExtensible? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WordCommentsExtensiblePart OpenXmlType
@@ -31,13 +31,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentsExtensible CommentsExtensible
+        public DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.CommentsExtensible CommentsExtensible
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentsExtensible>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.CommentsExtensible>();
                 }
 
                 return _rootElement!;
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentsExtensible;
+                _rootElement = value as DocumentFormat.OpenXml.Office.Word.Y2018.WordML.CEX.CommentsExtensible;
             }
         }
 

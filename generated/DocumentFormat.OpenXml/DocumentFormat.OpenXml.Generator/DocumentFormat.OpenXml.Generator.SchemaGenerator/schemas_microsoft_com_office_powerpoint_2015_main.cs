@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2016.Presentation
+namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2015.Main
 {
     /// <summary>
     /// <para>Defines the DesignElement Class.</para>

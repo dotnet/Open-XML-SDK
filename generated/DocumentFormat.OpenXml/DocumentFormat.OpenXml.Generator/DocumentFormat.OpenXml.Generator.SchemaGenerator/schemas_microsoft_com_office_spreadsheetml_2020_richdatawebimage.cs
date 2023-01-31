@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
+namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage
 {
     /// <summary>
     /// <para>Defines the WebImagesSupportingRichData Class.</para>
@@ -25,8 +25,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.ExtensionList" /> <c>&lt;xlrdwi:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.WebImageSupportingRichData" /> <c>&lt;xlrdwi:webImageSrd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.ExtensionList" /> <c>&lt;xlrdwi:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.WebImageSupportingRichData" /> <c>&lt;xlrdwi:webImageSrd></c></description></item>
     /// </list>
     /// </remark>
     public partial class WebImagesSupportingRichData : TypedOpenXmlPartRootElement
@@ -67,12 +67,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrdwi:webImagesSrd");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.WebImageSupportingRichData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.WebImageSupportingRichData>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.WebImageSupportingRichData), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.WebImageSupportingRichData), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -119,9 +119,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship" /> <c>&lt;xlrdwi:address></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship" /> <c>&lt;xlrdwi:moreImagesAddress></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship" /> <c>&lt;xlrdwi:blip></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.AddressWebImageSupportingRichDataRelationship" /> <c>&lt;xlrdwi:address></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship" /> <c>&lt;xlrdwi:moreImagesAddress></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.BlipWebImageSupportingRichDataRelationship" /> <c>&lt;xlrdwi:blip></c></description></item>
     /// </list>
     /// </remark>
     public partial class WebImageSupportingRichData : TypedOpenXmlCompositeElement
@@ -162,14 +162,14 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrdwi:webImageSrd");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.AddressWebImageSupportingRichDataRelationship>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.BlipWebImageSupportingRichDataRelationship>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship), 1, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.AddressWebImageSupportingRichDataRelationship), 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.BlipWebImageSupportingRichDataRelationship), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -180,9 +180,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         /// <remark>
         /// xmlns:xlrdwi = http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship? AddressWebImageSupportingRichDataRelationship
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.AddressWebImageSupportingRichDataRelationship? AddressWebImageSupportingRichDataRelationship
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.AddressWebImageSupportingRichDataRelationship>();
             set => SetElement(value);
         }
 
@@ -193,9 +193,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         /// <remark>
         /// xmlns:xlrdwi = http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship? MoreImagesAddressWebImageSupportingRichDataRelationship
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship? MoreImagesAddressWebImageSupportingRichDataRelationship
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship>();
             set => SetElement(value);
         }
 
@@ -206,9 +206,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         /// <remark>
         /// xmlns:xlrdwi = http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship? BlipWebImageSupportingRichDataRelationship
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.BlipWebImageSupportingRichDataRelationship? BlipWebImageSupportingRichDataRelationship
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.BlipWebImageSupportingRichDataRelationship>();
             set => SetElement(value);
         }
 

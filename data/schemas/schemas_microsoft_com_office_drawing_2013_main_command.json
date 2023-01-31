@@ -525,7 +525,7 @@
         },
         {
           "QName": ":linkage",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.Command.ResourceLinkage\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command.ResourceLinkage\u003E",
           "Version": "Office2016",
           "PropertyComments": "linkage",
           "Validators": [

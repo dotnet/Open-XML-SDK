@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes
 {
     /// <summary>
     /// <para>Defines the LineSketchNoneEmpty Class.</para>
@@ -146,10 +146,10 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.OfficeArtExtensionList" /> <c>&lt;ask:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.OfficeArtExtensionList" /> <c>&lt;ask:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchTypeProperties" /> <c>&lt;ask:type></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchSeed" /> <c>&lt;ask:seed></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchTypeProperties" /> <c>&lt;ask:type></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchSeed" /> <c>&lt;ask:seed></c></description></item>
     /// </list>
     /// </remark>
     public partial class LineSketchStyleProperties : TypedOpenXmlCompositeElement
@@ -201,10 +201,10 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
             builder.SetSchema("ask:lineSketchStyleProps");
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchTypeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchSeed>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchTypeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchSeed>();
             builder.AddElement<LineSketchStyleProperties>()
                 .AddAttribute("sd", a => a.Sd);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -217,9 +217,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchTypeProperties), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchSeed), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchTypeProperties), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchSeed), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -235,10 +235,10 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty" /> <c>&lt;ask:lineSketchNone></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty" /> <c>&lt;ask:lineSketchCurved></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty" /> <c>&lt;ask:lineSketchFreehand></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty" /> <c>&lt;ask:lineSketchScribble></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchNoneEmpty" /> <c>&lt;ask:lineSketchNone></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchCurvedEmpty" /> <c>&lt;ask:lineSketchCurved></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchFreehandEmpty" /> <c>&lt;ask:lineSketchFreehand></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchScribbleEmpty" /> <c>&lt;ask:lineSketchScribble></c></description></item>
     /// </list>
     /// </remark>
     public partial class LineSketchTypeProperties : TypedOpenXmlCompositeElement
@@ -279,20 +279,20 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
             base.ConfigureMetadata(builder);
             builder.SetSchema("ask:type");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchNoneEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchCurvedEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchFreehandEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchScribbleEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2021)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty), 1, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty), 1, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty), 1, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty), 1, 1, version: FileFormatVersions.Office2021)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchNoneEmpty), 1, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchCurvedEmpty), 1, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchFreehandEmpty), 1, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchScribbleEmpty), 1, 1, version: FileFormatVersions.Office2021)
                     }
                 }
             };
@@ -305,9 +305,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <remark>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty? LineSketchNoneEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchNoneEmpty? LineSketchNoneEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchNoneEmpty>();
             set => SetElement(value);
         }
 
@@ -318,9 +318,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <remark>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty? LineSketchCurvedEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchCurvedEmpty? LineSketchCurvedEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchCurvedEmpty>();
             set => SetElement(value);
         }
 
@@ -331,9 +331,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <remark>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty? LineSketchFreehandEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchFreehandEmpty? LineSketchFreehandEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchFreehandEmpty>();
             set => SetElement(value);
         }
 
@@ -344,9 +344,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <remark>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty? LineSketchScribbleEmpty
+        public DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchScribbleEmpty? LineSketchScribbleEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchScribbleEmpty>();
             set => SetElement(value);
         }
 

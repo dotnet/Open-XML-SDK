@@ -3,7 +3,7 @@
 #nullable enable
 
 using Common;
-using DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments;
 using DocumentFormat.OpenXml.Packaging;
 
 // WORKBOOK
@@ -139,8 +139,8 @@ namespace ThreadedCommentsExample
             }
 
             LabelInfoPart lip = sd.AddLabelInfoPart();
-            lip.ClassificationLabelList = new DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabelList(
-                new DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel()
+            lip.ClassificationLabelList = new DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationLabelList(
+                new DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationLabel()
                 {
                     Id = "{f42aa342-8706-4288-bd11-ebb85995028c}",     // Unique sensitivity label Id.
                     SiteId = "{72f988bf-86f1-41af-91ab-2d7cd011db47}", // Azure AD site Id.

@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.rdrichvaluetypes+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueTypes";
-        private DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypesInfo? _rootElement;
+        private DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypesInfo? _rootElement;
 
         /// <summary>
         /// Creates an instance of the RdRichValueTypesPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypesInfo;
+                _rootElement = value as DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypesInfo;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypesInfo RichValueTypesInfo
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypesInfo RichValueTypesInfo
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypesInfo>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypesInfo>();
                 }
 
                 return _rootElement!;

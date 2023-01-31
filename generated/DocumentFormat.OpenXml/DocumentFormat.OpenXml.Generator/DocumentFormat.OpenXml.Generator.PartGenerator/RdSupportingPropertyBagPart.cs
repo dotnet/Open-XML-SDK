@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.rdsupportingpropertybag+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBag";
-        private DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBags? _rootElement;
+        private DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBags? _rootElement;
 
         /// <summary>
         /// Creates an instance of the RdSupportingPropertyBagPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBags;
+                _rootElement = value as DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBags;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBags SupportingPropertyBags
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBags SupportingPropertyBags
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBags>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBags>();
                 }
 
                 return _rootElement!;

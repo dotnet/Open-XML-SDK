@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2016.Word.Symex
+namespace DocumentFormat.OpenXml.Office.Word.Y2015.WordML.Symex
 {
     /// <summary>
     /// <para>Defines the SymEx Class.</para>

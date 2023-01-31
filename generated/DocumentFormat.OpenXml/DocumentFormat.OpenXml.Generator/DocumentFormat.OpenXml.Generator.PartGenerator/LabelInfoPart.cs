@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.classificationlabels+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2020/02/relationships/classificationlabels";
-        private DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabelList? _rootElement;
+        private DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationLabelList? _rootElement;
 
         /// <summary>
         /// Creates an instance of the LabelInfoPart OpenXmlType
@@ -31,13 +31,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabelList ClassificationLabelList
+        public DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationLabelList ClassificationLabelList
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabelList>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationLabelList>();
                 }
 
                 return _rootElement!;
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabelList;
+                _rootElement = value as DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationLabelList;
             }
         }
 

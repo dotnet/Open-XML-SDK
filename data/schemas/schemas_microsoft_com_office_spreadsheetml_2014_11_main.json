@@ -120,7 +120,7 @@
         },
         {
           "QName": ":contentType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2014.M11.Main.ModelTimeGroupingContentType\u003E",
           "Version": "Office2016",
           "PropertyComments": "contentType",
           "Validators": [

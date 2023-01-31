@@ -8,7 +8,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office2016.Presentation.Command;
+using DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList" /> <c>&lt;pc:sldMkLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.SlideMonikerList" /> <c>&lt;pc:sldMkLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker" /> <c>&lt;pc2:cmMK></c></description></item>
     /// </list>
     /// </remark>
@@ -67,11 +67,11 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema("pc2:cmMkLst");
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.SlideMonikerList>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.SlideMonikerList), 1, 1, version: FileFormatVersions.Office2016),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker), 1, 1, version: FileFormatVersions.Microsoft365)
             };
         }
@@ -83,9 +83,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
         /// <remark>
         /// xmlns:pc = http://schemas.microsoft.com/office/powerpoint/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList? SlideMonikerList
+        public DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.SlideMonikerList? SlideMonikerList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.SlideMonikerList>();
             set => SetElement(value);
         }
 

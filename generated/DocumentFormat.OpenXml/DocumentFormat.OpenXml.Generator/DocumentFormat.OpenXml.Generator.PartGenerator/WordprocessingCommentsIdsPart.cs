@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsIds+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2016/09/relationships/commentsIds";
-        private DocumentFormat.OpenXml.Office2019.Word.Cid.CommentsIds? _rootElement;
+        private DocumentFormat.OpenXml.Office.Word.Y2016.WordML.CID.CommentsIds? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WordprocessingCommentsIdsPart OpenXmlType
@@ -41,13 +41,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2019.Word.Cid.CommentsIds CommentsIds
+        public DocumentFormat.OpenXml.Office.Word.Y2016.WordML.CID.CommentsIds CommentsIds
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2019.Word.Cid.CommentsIds>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.Word.Y2016.WordML.CID.CommentsIds>();
                 }
 
                 return _rootElement!;
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2019.Word.Cid.CommentsIds;
+                _rootElement = value as DocumentFormat.OpenXml.Office.Word.Y2016.WordML.CID.CommentsIds;
             }
         }
 

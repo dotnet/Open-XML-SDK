@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.documenttasks+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2019/05/relationships/documenttasks";
-        private DocumentFormat.OpenXml.Office2021.DocumentTasks.Tasks? _rootElement;
+        private DocumentFormat.OpenXml.Office.Tasks.Y2019.DocumentTasks.Tasks? _rootElement;
 
         /// <summary>
         /// Creates an instance of the DocumentTasksPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2021.DocumentTasks.Tasks;
+                _rootElement = value as DocumentFormat.OpenXml.Office.Tasks.Y2019.DocumentTasks.Tasks;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2021.DocumentTasks.Tasks Tasks
+        public DocumentFormat.OpenXml.Office.Tasks.Y2019.DocumentTasks.Tasks Tasks
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2021.DocumentTasks.Tasks>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.Tasks.Y2019.DocumentTasks.Tasks>();
                 }
 
                 return _rootElement!;

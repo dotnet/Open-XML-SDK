@@ -11,7 +11,7 @@
       "Attributes": [
         {
           "QName": ":val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2019.Presentation.ClassificationOutcomeType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.PowerPoint.Y2018.M4.Main.ClassificationOutcomeType\u003E",
           "Version": "Office2019",
           "PropertyComments": "val",
           "Validators": [

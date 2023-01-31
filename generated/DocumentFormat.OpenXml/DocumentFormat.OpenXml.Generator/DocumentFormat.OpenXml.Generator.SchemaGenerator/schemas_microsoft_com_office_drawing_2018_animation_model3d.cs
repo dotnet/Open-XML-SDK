@@ -9,14 +9,14 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office2019.Drawing.Animation;
+using DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D
 {
     /// <summary>
     /// <para>Defines the EmbeddedAnimation Class.</para>
@@ -26,8 +26,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList" /> <c>&lt;a3danim:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties" /> <c>&lt;a3danim:animPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.OfficeArtExtensionList" /> <c>&lt;a3danim:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.AnimationProperties" /> <c>&lt;a3danim:animPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class EmbeddedAnimation : TypedOpenXmlCompositeElement
@@ -78,8 +78,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema("a3danim:embedAnim");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.AnimationProperties>();
             builder.AddElement<EmbeddedAnimation>()
                 .AddAttribute("animId", a => a.AnimId, aBuilder =>
                 {
@@ -87,8 +87,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties), 1, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.AnimationProperties), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -99,9 +99,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <remark>
         /// xmlns:a3danim = http://schemas.microsoft.com/office/drawing/2018/animation/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties? AnimationProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.AnimationProperties? AnimationProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.AnimationProperties>();
             set => SetElement(value);
         }
 
@@ -112,9 +112,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <remark>
         /// xmlns:a3danim = http://schemas.microsoft.com/office/drawing/2018/animation/model3d
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -184,7 +184,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class AnimationProperties : TypedOpenXmlCompositeElement
@@ -295,7 +295,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema("a3danim:animPr");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.OfficeArtExtensionList>();
             builder.AddElement<AnimationProperties>()
                 .AddAttribute("name", a => a.Name)
                 .AddAttribute("length", a => a.Length, aBuilder =>
@@ -307,7 +307,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
                     aBuilder.AddUnion(union =>
                     {
                         union.AddValidator<UInt32Value>(NumberValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Indefinite>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Indefinite>>(EnumValidator.Instance);
                     });
                 })
                 .AddAttribute("auto", a => a.Auto)
@@ -316,7 +316,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
                 .AddAttribute("end", a => a.End);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -327,9 +327,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <remark>
         /// xmlns:aanim = http://schemas.microsoft.com/office/drawing/2018/animation
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

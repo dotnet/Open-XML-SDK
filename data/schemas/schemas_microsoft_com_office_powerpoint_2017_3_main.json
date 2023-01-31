@@ -11,7 +11,7 @@
       "Attributes": [
         {
           "QName": ":displayLoc",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2019.Presentation.DisplayLocation\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.PowerPoint.Y2017.M03.Main.DisplayLocation\u003E",
           "Version": "Office2019",
           "PropertyComments": "displayLoc",
           "Validators": [

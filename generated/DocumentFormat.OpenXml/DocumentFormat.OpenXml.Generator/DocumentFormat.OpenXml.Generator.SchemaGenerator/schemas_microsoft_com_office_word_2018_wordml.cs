@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2021.Word.ExtensionList
+namespace DocumentFormat.OpenXml.Office.Word.Y2018.WordML
 {
     /// <summary>
     /// <para>Defines the Extension Class.</para>

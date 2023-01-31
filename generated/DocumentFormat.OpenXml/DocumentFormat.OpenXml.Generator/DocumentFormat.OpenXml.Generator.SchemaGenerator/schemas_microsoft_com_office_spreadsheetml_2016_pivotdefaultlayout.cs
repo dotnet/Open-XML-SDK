@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
+namespace DocumentFormat.OpenXml.Office.SpreadsheelML.Y2016.PivotDefaultLayout
 {
     /// <summary>
     /// <para>Defines the PivotTableDefinition16 Class.</para>

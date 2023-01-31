@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
+namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.PivotNov2020
 {
     /// <summary>
     /// <para>Defines the Xsdboolean Class.</para>

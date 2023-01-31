@@ -310,7 +310,7 @@
         },
         {
           "QName": ":status",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentStatus\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main.CommentStatus\u003E",
           "Version": "Office2021",
           "PropertyComments": "status",
           "Validators": [
@@ -537,7 +537,7 @@
         },
         {
           "QName": ":status",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentStatus\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main.CommentStatus\u003E",
           "Version": "Office2021",
           "PropertyComments": "status",
           "Validators": [

@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Word.Cid
+namespace DocumentFormat.OpenXml.Office.Word.Y2016.WordML.CID
 {
     /// <summary>
     /// <para>Defines the CommentsIds Class.</para>
@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId" /> <c>&lt;w16cid:commentId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2016.WordML.CID.CommentId" /> <c>&lt;w16cid:commentId></c></description></item>
     /// </list>
     /// </remark>
     public partial class CommentsIds : TypedOpenXmlPartRootElement
@@ -65,10 +65,10 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
             base.ConfigureMetadata(builder);
             builder.SetSchema("w16cid:commentsIds");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2016.WordML.CID.CommentId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2016.WordML.CID.CommentId), 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 

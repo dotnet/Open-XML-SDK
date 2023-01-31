@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2014.Chart.Ac
 {
     /// <summary>
     /// <para>Defines the MultiLvlStrData Class.</para>

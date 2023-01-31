@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
+namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main
 {
     /// <summary>
     /// <para>Defines the DesignerTagList Class.</para>
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag" /> <c>&lt;p202:designTag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main.DesignerTag" /> <c>&lt;p202:designTag></c></description></item>
     /// </list>
     /// </remark>
     public partial class DesignerTagList : TypedOpenXmlCompositeElement
@@ -66,10 +66,10 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
             base.ConfigureMetadata(builder);
             builder.SetSchema("p202:designTagLst");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main.DesignerTag>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main.DesignerTag), 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -85,8 +85,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList" /> <c>&lt;p202:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList" /> <c>&lt;p202:designTagLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main.ExtensionList" /> <c>&lt;p202:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main.DesignerTagList" /> <c>&lt;p202:designTagLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class DesignerDrawingProps : TypedOpenXmlCompositeElement
@@ -137,14 +137,14 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
             base.ConfigureMetadata(builder);
             builder.SetSchema("p202:designPr");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main.DesignerTagList>();
             builder.AddElement<DesignerDrawingProps>()
                 .AddAttribute("edtDesignElem", a => a.EdtDesignElem);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main.DesignerTagList), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -155,9 +155,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         /// <remark>
         /// xmlns:p202 = http://schemas.microsoft.com/office/powerpoint/2020/02/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList? DesignerTagList
+        public DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main.DesignerTagList? DesignerTagList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main.DesignerTagList>();
             set => SetElement(value);
         }
 
@@ -168,9 +168,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         /// <remark>
         /// xmlns:p202 = http://schemas.microsoft.com/office/powerpoint/2020/02/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2020.M02.Main.ExtensionList>();
             set => SetElement(value);
         }
 

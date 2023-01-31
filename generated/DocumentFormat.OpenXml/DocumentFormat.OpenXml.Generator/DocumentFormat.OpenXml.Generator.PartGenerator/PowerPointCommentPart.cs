@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-powerpoint.comments+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2018/10/relationships/comments";
-        private DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentList? _rootElement;
+        private DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main.CommentList? _rootElement;
 
         /// <summary>
         /// Creates an instance of the PowerPointCommentPart OpenXmlType
@@ -31,13 +31,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentList CommentList
+        public DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main.CommentList CommentList
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentList>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main.CommentList>();
                 }
 
                 return _rootElement!;
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentList;
+                _rootElement = value as DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main.CommentList;
             }
         }
 

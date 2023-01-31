@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2018.HyperlinkColor
 {
     /// <summary>
     /// <para>Defines the HyperlinkColor Class.</para>
@@ -34,9 +34,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
         /// <para>val, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum>? Val
+        public EnumValue<DocumentFormat.OpenXml.Office.Drawing.Y2018.HyperlinkColor.HyperlinkColorEnum>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Drawing.Y2018.HyperlinkColor.HyperlinkColorEnum>>();
             set => SetAttribute(value);
         }
 

@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Drawing
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2017.Decorative
 {
     /// <summary>
     /// <para>Defines the Decorative Class.</para>

@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
+namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.DynamicArray
 {
     /// <summary>
     /// <para>Defines the DynamicArrayProperties Class.</para>
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList" /> <c>&lt;xda:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.DynamicArray.ExtensionList" /> <c>&lt;xda:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class DynamicArrayProperties : TypedOpenXmlCompositeElement
@@ -86,13 +86,13 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
             base.ConfigureMetadata(builder);
             builder.SetSchema("xda:dynamicArrayProperties");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.DynamicArray.ExtensionList>();
             builder.AddElement<DynamicArrayProperties>()
                 .AddAttribute("fDynamic", a => a.FDynamic)
                 .AddAttribute("fCollapsed", a => a.FCollapsed);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.DynamicArray.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -103,9 +103,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         /// <remark>
         /// xmlns:xda = http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.DynamicArray.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.DynamicArray.ExtensionList>();
             set => SetElement(value);
         }
 

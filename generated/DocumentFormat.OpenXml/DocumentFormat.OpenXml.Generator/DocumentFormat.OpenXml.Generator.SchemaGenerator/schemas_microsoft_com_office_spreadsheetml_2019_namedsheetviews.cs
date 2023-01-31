@@ -8,8 +8,8 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2;
 using DocumentFormat.OpenXml.Office2010.Excel;
-using DocumentFormat.OpenXml.Office2019.Excel.RichData2;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -17,7 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
+namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
 {
     /// <summary>
     /// <para>Defines the NamedSheetViews Class.</para>
@@ -27,8 +27,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView" /> <c>&lt;xnsv:namedSheetView></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.NamedSheetView" /> <c>&lt;xnsv:namedSheetView></c></description></item>
     /// </list>
     /// </remark>
     public partial class NamedSheetViews : TypedOpenXmlPartRootElement
@@ -69,12 +69,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema("xnsv:namedSheetViews");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.NamedSheetView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.NamedSheetView), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -121,8 +121,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter" /> <c>&lt;xnsv:nsvFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.NsvFilter" /> <c>&lt;xnsv:nsvFilter></c></description></item>
     /// </list>
     /// </remark>
     public partial class NamedSheetView : TypedOpenXmlCompositeElement
@@ -183,8 +183,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema("xnsv:namedSheetView");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.NsvFilter>();
             builder.AddElement<NamedSheetView>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -197,8 +197,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.NsvFilter), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -280,9 +280,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ColumnFilter" /> <c>&lt;xnsv:columnFilter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules" /> <c>&lt;xnsv:sortRules></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ColumnFilter" /> <c>&lt;xnsv:columnFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.SortRules" /> <c>&lt;xnsv:sortRules></c></description></item>
     /// </list>
     /// </remark>
     public partial class NsvFilter : TypedOpenXmlCompositeElement
@@ -353,9 +353,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema("xnsv:nsvFilter");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ColumnFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ColumnFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.SortRules>();
             builder.AddElement<NsvFilter>()
                 .AddAttribute("filterId", a => a.FilterId, aBuilder =>
                 {
@@ -366,9 +366,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
                 .AddAttribute("tableId", a => a.TableId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ColumnFilter), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ColumnFilter), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.SortRules), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -384,9 +384,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType" /> <c>&lt;xnsv:dxf></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn" /> <c>&lt;xnsv:filter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.DifferentialFormatType" /> <c>&lt;xnsv:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.FilterColumn" /> <c>&lt;xnsv:filter></c></description></item>
     /// </list>
     /// </remark>
     public partial class ColumnFilter : TypedOpenXmlCompositeElement
@@ -447,9 +447,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema("xnsv:columnFilter");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.DifferentialFormatType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.FilterColumn>();
             builder.AddElement<ColumnFilter>()
                 .AddAttribute("colId", a => a.ColId, aBuilder =>
                 {
@@ -461,9 +461,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.DifferentialFormatType), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.FilterColumn), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -474,9 +474,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <remark>
         /// xmlns:xnsv = http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType? DifferentialFormatType
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.DifferentialFormatType? DifferentialFormatType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.DifferentialFormatType>();
             set => SetElement(value);
         }
 
@@ -492,8 +492,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule" /> <c>&lt;xnsv:sortRule></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList" /> <c>&lt;xnsv:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.SortRule" /> <c>&lt;xnsv:sortRule></c></description></item>
     /// </list>
     /// </remark>
     public partial class SortRules : TypedOpenXmlCompositeElement
@@ -554,15 +554,15 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema("xnsv:sortRules");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.SortRule>();
             builder.AddElement<SortRules>()
                 .AddAttribute("sortMethod", a => a.SortMethod)
                 .AddAttribute("caseSensitive", a => a.CaseSensitive);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule), 0, 64, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.SortRule), 0, 64, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -985,9 +985,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType" /> <c>&lt;xnsv:dxf></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortCondition" /> <c>&lt;xnsv:sortCondition></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.RichSortCondition" /> <c>&lt;xnsv:richSortCondition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.DifferentialFormatType" /> <c>&lt;xnsv:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.SortCondition" /> <c>&lt;xnsv:sortCondition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.RichSortCondition" /> <c>&lt;xnsv:richSortCondition></c></description></item>
     /// </list>
     /// </remark>
     public partial class SortRule : TypedOpenXmlCompositeElement
@@ -1048,9 +1048,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema("xnsv:sortRule");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortCondition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.RichSortCondition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.DifferentialFormatType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.SortCondition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.RichSortCondition>();
             builder.AddElement<SortRule>()
                 .AddAttribute("colId", a => a.ColId, aBuilder =>
                 {
@@ -1062,11 +1062,11 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.DifferentialFormatType), 0, 1, version: FileFormatVersions.Office2021),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortCondition), 0, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.RichSortCondition), 0, 1, version: FileFormatVersions.Office2021)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.SortCondition), 0, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.RichSortCondition), 0, 1, version: FileFormatVersions.Office2021)
                 }
             };
         }
@@ -1078,9 +1078,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// <remark>
         /// xmlns:xnsv = http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType? DifferentialFormatType
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.DifferentialFormatType? DifferentialFormatType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews.DifferentialFormatType>();
             set => SetElement(value);
         }
 

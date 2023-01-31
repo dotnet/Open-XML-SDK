@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Drawing.SVG
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2016.SVG.Main
 {
     /// <summary>
     /// <para>Defines the SVGBlip Class.</para>

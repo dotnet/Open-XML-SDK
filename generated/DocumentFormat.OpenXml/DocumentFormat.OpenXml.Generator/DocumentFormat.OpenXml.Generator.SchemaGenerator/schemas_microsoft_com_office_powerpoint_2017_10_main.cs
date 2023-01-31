@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Presentation
+namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2017.M10.Main
 {
     /// <summary>
     /// <para>Defines the ReadonlyRecommended Class.</para>

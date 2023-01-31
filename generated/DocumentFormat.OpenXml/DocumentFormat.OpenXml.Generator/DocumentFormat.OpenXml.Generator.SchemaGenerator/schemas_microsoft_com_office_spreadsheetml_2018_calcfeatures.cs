@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
+namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.CalcFeatures
 {
     /// <summary>
     /// <para>Defines the CalcFeatures Class.</para>
@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature" /> <c>&lt;xcalcf:feature></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.CalcFeatures.CalcFeature" /> <c>&lt;xcalcf:feature></c></description></item>
     /// </list>
     /// </remark>
     public partial class CalcFeatures : TypedOpenXmlCompositeElement
@@ -65,10 +65,10 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
             base.ConfigureMetadata(builder);
             builder.SetSchema("xcalcf:calcFeatures");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.CalcFeatures.CalcFeature>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.CalcFeatures.CalcFeature), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 

@@ -2,8 +2,8 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Office.Drawing.Y2016.SVG.Main;
 using DocumentFormat.OpenXml.Office2016.Drawing;
-using DocumentFormat.OpenXml.Office2019.Drawing.SVG;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.IO;

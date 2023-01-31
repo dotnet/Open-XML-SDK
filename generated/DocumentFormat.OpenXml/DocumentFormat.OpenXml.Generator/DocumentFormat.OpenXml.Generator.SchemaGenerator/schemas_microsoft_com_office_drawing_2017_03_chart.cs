@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2017.M03.Chart
 {
     /// <summary>
     /// <para>Defines the DataDisplayOptions16 Class.</para>
@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse" /> <c>&lt;c16r3:dispNaAsBlank></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2017.M03.Chart.BooleanFalse" /> <c>&lt;c16r3:dispNaAsBlank></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataDisplayOptions16 : TypedOpenXmlCompositeElement
@@ -65,10 +65,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c16r3:dataDisplayOptions16");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2017.M03.Chart.BooleanFalse>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2017.M03.Chart.BooleanFalse), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -79,9 +79,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         /// <remark>
         /// xmlns:c16r3 = http://schemas.microsoft.com/office/drawing/2017/03/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse? BooleanFalse
+        public DocumentFormat.OpenXml.Office.Drawing.Y2017.M03.Chart.BooleanFalse? BooleanFalse
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2017.M03.Chart.BooleanFalse>();
             set => SetElement(value);
         }
 

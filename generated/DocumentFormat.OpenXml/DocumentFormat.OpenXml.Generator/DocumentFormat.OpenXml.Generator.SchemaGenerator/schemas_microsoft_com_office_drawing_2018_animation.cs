@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation
 {
     /// <summary>
     /// <para>Defines the AnimationProperties Class.</para>
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class AnimationProperties : TypedOpenXmlCompositeElement
@@ -136,7 +136,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
             base.ConfigureMetadata(builder);
             builder.SetSchema("aanim:animPr");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.OfficeArtExtensionList>();
             builder.AddElement<AnimationProperties>()
                 .AddAttribute("name", a => a.Name)
                 .AddAttribute("length", a => a.Length, aBuilder =>
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
                     aBuilder.AddUnion(union =>
                     {
                         union.AddValidator<UInt32Value>(NumberValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Indefinite>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Indefinite>>(EnumValidator.Instance);
                     });
                 })
                 .AddAttribute("auto", a => a.Auto)
@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
                 .AddAttribute("end", a => a.End);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -168,9 +168,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// <remark>
         /// xmlns:aanim = http://schemas.microsoft.com/office/drawing/2018/animation
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

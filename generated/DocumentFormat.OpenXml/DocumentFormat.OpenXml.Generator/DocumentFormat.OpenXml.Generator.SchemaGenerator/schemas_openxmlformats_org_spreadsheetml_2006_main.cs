@@ -46989,7 +46989,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion" /> <c>&lt;x15:pivotCacheIdVersion></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition" /> <c>&lt;x15:timelinePivotCacheDefinition></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RichDataPivotCacheGuid" /> <c>&lt;x:richInfo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean" /> <c>&lt;xxpim:implicitMeasureSupport></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.PivotNov2020.Xsdboolean" /> <c>&lt;xxpim:implicitMeasureSupport></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo" /> <c>&lt;xxpvi:cacheVersionInfo></c></description></item>
     /// </list>
     /// </remark>
@@ -47045,7 +47045,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RichDataPivotCacheGuid>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.PivotNov2020.Xsdboolean>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo>();
             builder.AddElement<PivotCacheDefinitionExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -47059,7 +47059,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean), 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.PivotNov2020.Xsdboolean), 1, 1, version: FileFormatVersions.Office2021),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RichDataPivotCacheGuid), 1, 1, version: FileFormatVersions.Microsoft365),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)

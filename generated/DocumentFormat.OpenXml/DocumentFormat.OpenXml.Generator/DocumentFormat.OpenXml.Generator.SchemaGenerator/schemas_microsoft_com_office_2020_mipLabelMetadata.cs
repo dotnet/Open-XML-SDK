@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
+namespace DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData
 {
     /// <summary>
     /// <para>Defines the ClassificationLabelList Class.</para>
@@ -24,8 +24,8 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtensionList" /> <c>&lt;clbl:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel" /> <c>&lt;clbl:label></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationExtensionList" /> <c>&lt;clbl:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationLabel" /> <c>&lt;clbl:label></c></description></item>
     /// </list>
     /// </remark>
     public partial class ClassificationLabelList : TypedOpenXmlPartRootElement
@@ -66,12 +66,12 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
             base.ConfigureMetadata(builder);
             builder.SetSchema("clbl:labelList");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationLabel>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationLabel), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -328,7 +328,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension" /> <c>&lt;clbl:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationExtension" /> <c>&lt;clbl:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ClassificationExtensionList : TypedOpenXmlCompositeElement
@@ -369,10 +369,10 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
             base.ConfigureMetadata(builder);
             builder.SetSchema("clbl:extLst");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData.ClassificationExtension), 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 

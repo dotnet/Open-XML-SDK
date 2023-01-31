@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
+namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2
 {
     /// <summary>
     /// <para>Defines the RichFilterColumn Class.</para>
@@ -25,11 +25,11 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters" /> <c>&lt;xlrd2:customFilters></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.DynamicRichFilter" /> <c>&lt;xlrd2:dynamicFilter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters" /> <c>&lt;xlrd2:filters></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10" /> <c>&lt;xlrd2:top10></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.CustomRichFilters" /> <c>&lt;xlrd2:customFilters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.DynamicRichFilter" /> <c>&lt;xlrd2:dynamicFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFilters" /> <c>&lt;xlrd2:filters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichTop10" /> <c>&lt;xlrd2:top10></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichFilterColumn : TypedOpenXmlCompositeElement
@@ -70,18 +70,18 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:filterColumn");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.DynamicRichFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.CustomRichFilters>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.DynamicRichFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFilters>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichTop10>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters), 1, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10), 1, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters), 1, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.DynamicRichFilter), 1, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 1, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFilters), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichTop10), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.CustomRichFilters), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.DynamicRichFilter), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList), 1, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -92,9 +92,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters? RichFilters
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFilters? RichFilters
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFilters>();
             set => SetElement(value);
         }
 
@@ -105,9 +105,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10? RichTop10
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichTop10? RichTop10
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichTop10>();
             set => SetElement(value);
         }
 
@@ -118,9 +118,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters? CustomRichFilters
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.CustomRichFilters? CustomRichFilters
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.CustomRichFilters>();
             set => SetElement(value);
         }
 
@@ -131,9 +131,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.DynamicRichFilter? DynamicRichFilter
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.DynamicRichFilter? DynamicRichFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.DynamicRichFilter>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.DynamicRichFilter>();
             set => SetElement(value);
         }
 
@@ -144,9 +144,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -279,8 +279,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData" /> <c>&lt;xlrd2:spbArrays></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData" /> <c>&lt;xlrd2:spbData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArrayData" /> <c>&lt;xlrd2:spbArrays></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagData" /> <c>&lt;xlrd2:spbData></c></description></item>
     /// </list>
     /// </remark>
     public partial class SupportingPropertyBags : TypedOpenXmlPartRootElement
@@ -321,12 +321,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:supportingPropertyBags");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArrayData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagData>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData), 1, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArrayData), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagData), 1, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -337,9 +337,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData? SupportingPropertyBagArrayData
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArrayData? SupportingPropertyBagArrayData
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArrayData>();
             set => SetElement(value);
         }
 
@@ -350,9 +350,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData? SupportingPropertyBagData
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagData? SupportingPropertyBagData
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagData>();
             set => SetElement(value);
         }
 
@@ -399,8 +399,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure" /> <c>&lt;xlrd2:s></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagStructure" /> <c>&lt;xlrd2:s></c></description></item>
     /// </list>
     /// </remark>
     public partial class SupportingPropertyBagStructures : TypedOpenXmlPartRootElement
@@ -451,8 +451,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:spbStructures");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagStructure>();
             builder.AddElement<SupportingPropertyBagStructures>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -460,8 +460,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagStructure), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -508,8 +508,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array" /> <c>&lt;xlrd2:a></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.Array" /> <c>&lt;xlrd2:a></c></description></item>
     /// </list>
     /// </remark>
     public partial class ArrayData : TypedOpenXmlPartRootElement
@@ -560,8 +560,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:arrayData");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.Array>();
             builder.AddElement<ArrayData>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -569,8 +569,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.Array), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -617,10 +617,10 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs" /> <c>&lt;xlrd2:dxfs></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties" /> <c>&lt;xlrd2:richProperties></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles" /> <c>&lt;xlrd2:richStyles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.Dxfs" /> <c>&lt;xlrd2:dxfs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFormatProperties" /> <c>&lt;xlrd2:richProperties></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichStyles" /> <c>&lt;xlrd2:richStyles></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichStylesheet : TypedOpenXmlPartRootElement
@@ -661,16 +661,16 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:richStyleSheet");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.Dxfs>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFormatProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichStyles>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.Dxfs), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFormatProperties), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichStyles), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -681,9 +681,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs? Dxfs
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.Dxfs? Dxfs
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.Dxfs>();
             set => SetElement(value);
         }
 
@@ -694,9 +694,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties? RichFormatProperties
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFormatProperties? RichFormatProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFormatProperties>();
             set => SetElement(value);
         }
 
@@ -707,9 +707,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles? RichStyles
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichStyles? RichStyles
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichStyles>();
             set => SetElement(value);
         }
 
@@ -720,9 +720,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -769,9 +769,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType" /> <c>&lt;xlrd2:global></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes" /> <c>&lt;xlrd2:types></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueGlobalType" /> <c>&lt;xlrd2:global></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypes" /> <c>&lt;xlrd2:types></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichValueTypesInfo : TypedOpenXmlPartRootElement
@@ -812,14 +812,14 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:rvTypesInfo");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueGlobalType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypes>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueGlobalType), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypes), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -830,9 +830,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType? RichValueGlobalType
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueGlobalType? RichValueGlobalType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueGlobalType>();
             set => SetElement(value);
         }
 
@@ -843,9 +843,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes? RichValueTypes
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypes? RichValueTypes
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypes>();
             set => SetElement(value);
         }
 
@@ -856,9 +856,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -905,9 +905,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichDateGroupItem" /> <c>&lt;xlrd2:dateGroupItem></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilter" /> <c>&lt;xlrd2:filter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichDateGroupItem" /> <c>&lt;xlrd2:dateGroupItem></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFilter" /> <c>&lt;xlrd2:filter></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichFilters : TypedOpenXmlCompositeElement
@@ -948,14 +948,14 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:filters");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichDateGroupItem>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichDateGroupItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFilter>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilter), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichDateGroupItem), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFilter), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichDateGroupItem), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -1055,8 +1055,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilter" /> <c>&lt;xlrd2:customFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.CustomRichFilter" /> <c>&lt;xlrd2:customFilter></c></description></item>
     /// </list>
     /// </remark>
     public partial class CustomRichFilters : TypedOpenXmlCompositeElement
@@ -1107,16 +1107,16 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:customFilters");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.CustomRichFilter>();
             builder.AddElement<CustomRichFilters>()
                 .AddAttribute("and", a => a.And);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 2)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilter), 0, 1, version: FileFormatVersions.Office2019),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.CustomRichFilter), 0, 1, version: FileFormatVersions.Office2019),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
                 }
             };
         }
@@ -1549,8 +1549,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray" /> <c>&lt;xlrd2:a></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArray" /> <c>&lt;xlrd2:a></c></description></item>
     /// </list>
     /// </remark>
     public partial class SupportingPropertyBagArrayData : TypedOpenXmlCompositeElement
@@ -1601,8 +1601,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:spbArrays");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArray>();
             builder.AddElement<SupportingPropertyBagArrayData>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -1610,8 +1610,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArray), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -1627,8 +1627,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag" /> <c>&lt;xlrd2:spb></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBag" /> <c>&lt;xlrd2:spb></c></description></item>
     /// </list>
     /// </remark>
     public partial class SupportingPropertyBagData : TypedOpenXmlCompositeElement
@@ -1679,8 +1679,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:spbData");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBag>();
             builder.AddElement<SupportingPropertyBagData>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -1688,8 +1688,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBag), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -1705,7 +1705,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValue" /> <c>&lt;xlrd2:v></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagValue" /> <c>&lt;xlrd2:v></c></description></item>
     /// </list>
     /// </remark>
     public partial class SupportingPropertyBag : TypedOpenXmlCompositeElement
@@ -1756,7 +1756,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:spb");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagValue>();
             builder.AddElement<SupportingPropertyBag>()
                 .AddAttribute("s", a => a.S, aBuilder =>
                 {
@@ -1764,7 +1764,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValue), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagValue), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -1818,7 +1818,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagKey" /> <c>&lt;xlrd2:k></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagKey" /> <c>&lt;xlrd2:k></c></description></item>
     /// </list>
     /// </remark>
     public partial class SupportingPropertyBagStructure : TypedOpenXmlCompositeElement
@@ -1859,10 +1859,10 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:s");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagKey>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagKey>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagKey), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagKey), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -1898,9 +1898,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValueType>? T
+        public EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagValueType>? T
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValueType>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagValueType>>();
             set => SetAttribute(value);
         }
 
@@ -1929,7 +1929,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValue" /> <c>&lt;xlrd2:v></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArrayValue" /> <c>&lt;xlrd2:v></c></description></item>
     /// </list>
     /// </remark>
     public partial class SupportingPropertyBagArray : TypedOpenXmlCompositeElement
@@ -1980,7 +1980,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:a");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArrayValue>();
             builder.AddElement<SupportingPropertyBagArray>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -1988,7 +1988,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValue), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArrayValue), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2027,9 +2027,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValueType>? T
+        public EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArrayValueType>? T
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValueType>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArrayValueType>>();
             set => SetAttribute(value);
         }
 
@@ -2054,7 +2054,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValue" /> <c>&lt;xlrd2:v></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ArrayValue" /> <c>&lt;xlrd2:v></c></description></item>
     /// </list>
     /// </remark>
     public partial class Array : TypedOpenXmlCompositeElement
@@ -2115,7 +2115,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:a");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ArrayValue>();
             builder.AddElement<Array>()
                 .AddAttribute("r", a => a.R, aBuilder =>
                 {
@@ -2124,7 +2124,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
                 .AddAttribute("c", a => a.C);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValue), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ArrayValue), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2163,9 +2163,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValueType>? T
+        public EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ArrayValueType>? T
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValueType>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ArrayValueType>>();
             set => SetAttribute(value);
         }
 
@@ -2262,7 +2262,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperty" /> <c>&lt;xlrd2:rPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFormatProperty" /> <c>&lt;xlrd2:rPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichFormatProperties : TypedOpenXmlCompositeElement
@@ -2303,10 +2303,10 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:richProperties");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFormatProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperty), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFormatProperty), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2322,7 +2322,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyle" /> <c>&lt;xlrd2:rSty></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichStyle" /> <c>&lt;xlrd2:rSty></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichStyles : TypedOpenXmlCompositeElement
@@ -2363,10 +2363,10 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:richStyles");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichStyle>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyle), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichStyle), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2402,9 +2402,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatPropertyType>? T
+        public EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFormatPropertyType>? T
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatPropertyType>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFormatPropertyType>>();
             set => SetAttribute(value);
         }
 
@@ -2436,7 +2436,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylePropertyValue" /> <c>&lt;xlrd2:rpv></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichStylePropertyValue" /> <c>&lt;xlrd2:rpv></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichStyle : TypedOpenXmlCompositeElement
@@ -2487,12 +2487,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:rSty");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylePropertyValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichStylePropertyValue>();
             builder.AddElement<RichStyle>()
                 .AddAttribute("dxfid", a => a.Dxfid);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylePropertyValue), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichStylePropertyValue), 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2561,8 +2561,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags" /> <c>&lt;xlrd2:keyFlags></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeKeyFlags" /> <c>&lt;xlrd2:keyFlags></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichValueGlobalType : TypedOpenXmlCompositeElement
@@ -2603,12 +2603,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:global");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeKeyFlags>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeKeyFlags), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2619,9 +2619,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags? RichValueTypeKeyFlags
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeKeyFlags? RichValueTypeKeyFlags
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeKeyFlags>();
             set => SetElement(value);
         }
 
@@ -2632,9 +2632,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2650,7 +2650,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueType" /> <c>&lt;xlrd2:type></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueType" /> <c>&lt;xlrd2:type></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichValueTypes : TypedOpenXmlCompositeElement
@@ -2691,10 +2691,10 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:types");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueType>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueType), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueType), 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2710,8 +2710,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags" /> <c>&lt;xlrd2:keyFlags></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList" /> <c>&lt;xlrd2:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeKeyFlags" /> <c>&lt;xlrd2:keyFlags></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichValueType : TypedOpenXmlCompositeElement
@@ -2762,8 +2762,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:type");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeKeyFlags>();
             builder.AddElement<RichValueType>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -2771,8 +2771,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeKeyFlags), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2783,9 +2783,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags? RichValueTypeKeyFlags
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeKeyFlags? RichValueTypeKeyFlags
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeKeyFlags>();
             set => SetElement(value);
         }
 
@@ -2796,9 +2796,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2814,7 +2814,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKey" /> <c>&lt;xlrd2:key></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeReservedKey" /> <c>&lt;xlrd2:key></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichValueTypeKeyFlags : TypedOpenXmlCompositeElement
@@ -2855,10 +2855,10 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:keyFlags");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKey>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeReservedKey>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKey), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeReservedKey), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2874,7 +2874,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKeyFlag" /> <c>&lt;xlrd2:flag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeReservedKeyFlag" /> <c>&lt;xlrd2:flag></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichValueTypeReservedKey : TypedOpenXmlCompositeElement
@@ -2925,7 +2925,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:key");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKeyFlag>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeReservedKeyFlag>();
             builder.AddElement<RichValueTypeReservedKey>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -2933,7 +2933,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKeyFlag), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichValueTypeReservedKeyFlag), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 

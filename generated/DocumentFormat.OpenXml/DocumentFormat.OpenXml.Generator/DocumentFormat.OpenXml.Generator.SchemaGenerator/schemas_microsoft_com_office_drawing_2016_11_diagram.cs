@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram
 {
     /// <summary>
     /// <para>Defines the NumberDiagramInfoList Class.</para>
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo" /> <c>&lt;dgm1611:autoBuNodeInfo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram.NumberDiagramInfo" /> <c>&lt;dgm1611:autoBuNodeInfo></c></description></item>
     /// </list>
     /// </remark>
     public partial class NumberDiagramInfoList : TypedOpenXmlCompositeElement
@@ -66,10 +66,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
             base.ConfigureMetadata(builder);
             builder.SetSchema("dgm1611:autoBuNodeInfoLst");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram.NumberDiagramInfo>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram.NumberDiagramInfo), 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -232,7 +232,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet" /> <c>&lt;dgm1611:buPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram.DiagramAutoBullet" /> <c>&lt;dgm1611:buPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class NumberDiagramInfo : TypedOpenXmlCompositeElement
@@ -282,9 +282,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <para>ptType, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.STorageType>? PtType
+        public EnumValue<DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram.STorageType>? PtType
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.STorageType>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram.STorageType>>();
             set => SetAttribute(value);
         }
 
@@ -293,7 +293,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
             base.ConfigureMetadata(builder);
             builder.SetSchema("dgm1611:autoBuNodeInfo");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram.DiagramAutoBullet>();
             builder.AddElement<NumberDiagramInfo>()
                 .AddAttribute("lvl", a => a.Lvl, aBuilder =>
                 {
@@ -306,7 +306,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet), 1, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram.DiagramAutoBullet), 1, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -317,9 +317,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <remark>
         /// xmlns:dgm1611 = http://schemas.microsoft.com/office/drawing/2016/11/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet? DiagramAutoBullet
+        public DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram.DiagramAutoBullet? DiagramAutoBullet
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram.DiagramAutoBullet>();
             set => SetElement(value);
         }
 

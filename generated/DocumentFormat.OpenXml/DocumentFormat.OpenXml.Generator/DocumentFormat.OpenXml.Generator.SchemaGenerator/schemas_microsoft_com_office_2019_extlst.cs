@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2021.OfficeExtLst
+namespace DocumentFormat.OpenXml.Office.Y2019.ExtLst
 {
     /// <summary>
     /// <para>Defines the Extension Class.</para>

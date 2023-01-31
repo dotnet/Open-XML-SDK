@@ -537,7 +537,7 @@
       "Attributes": [
         {
           "QName": ":dir",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormulaDirection\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.FormulaDirection\u003E",
           "Version": "Office2016",
           "PropertyComments": "dir"
         }
@@ -665,7 +665,7 @@
       "Attributes": [
         {
           "QName": ":type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimensionType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.NumericDimensionType\u003E",
           "Version": "Office2016",
           "PropertyComments": "type",
           "Validators": [
@@ -735,7 +735,7 @@
       "Attributes": [
         {
           "QName": ":type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimensionType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.StringDimensionType\u003E",
           "Version": "Office2016",
           "PropertyComments": "type",
           "Validators": [
@@ -1682,7 +1682,7 @@
       "Attributes": [
         {
           "QName": ":unit",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnit\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.AxisUnit\u003E",
           "Version": "Office2016",
           "PropertyComments": "unit"
         }
@@ -1897,7 +1897,7 @@
       "Attributes": [
         {
           "QName": ":type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickMarksType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.TickMarksType\u003E",
           "Version": "Office2016",
           "PropertyComments": "type"
         }
@@ -2067,7 +2067,7 @@
         },
         {
           "QName": ":entityType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.EntityTypeEnum\u003E",
           "Version": "Office2016",
           "PropertyComments": "entityType",
           "Validators": [
@@ -2132,7 +2132,7 @@
         },
         {
           "QName": ":entityType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.EntityTypeEnum\u003E",
           "Version": "Office2016",
           "PropertyComments": "entityType",
           "Validators": [
@@ -2313,7 +2313,7 @@
       "Attributes": [
         {
           "QName": ":entityType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.EntityTypeEnum\u003E",
           "Version": "Office2016",
           "PropertyComments": "entityType",
           "Validators": [
@@ -2495,7 +2495,7 @@
       "Attributes": [
         {
           "QName": ":entityType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.EntityTypeEnum\u003E",
           "Version": "Office2016",
           "PropertyComments": "entityType",
           "Validators": [
@@ -2538,7 +2538,7 @@
       "Attributes": [
         {
           "QName": ":entityType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.EntityTypeEnum\u003E",
           "Version": "Office2016",
           "PropertyComments": "entityType",
           "Validators": [
@@ -2672,7 +2672,7 @@
         },
         {
           "QName": ":entityType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.EntityTypeEnum\u003E",
           "Version": "Office2016",
           "PropertyComments": "entityType",
           "Validators": [
@@ -2831,7 +2831,7 @@
         },
         {
           "QName": ":entityType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityTypeEnum\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.EntityTypeEnum\u003E",
           "Version": "Office2016",
           "PropertyComments": "entityType",
           "Validators": [
@@ -3194,7 +3194,7 @@
         {
           "QName": ":val",
           "PropertyName": "ParentLabelLayoutVal",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayoutVal\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.ParentLabelLayoutVal\u003E",
           "Version": "Office2016",
           "PropertyComments": "val",
           "Validators": [
@@ -3215,7 +3215,7 @@
       "Attributes": [
         {
           "QName": ":val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RegionLabelLayoutEnum\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.RegionLabelLayoutEnum\u003E",
           "Version": "Office2016",
           "PropertyComments": "val",
           "Validators": [
@@ -3284,7 +3284,7 @@
       "Attributes": [
         {
           "QName": ":intervalClosed",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IntervalClosedSide\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.IntervalClosedSide\u003E",
           "Version": "Office2016",
           "PropertyComments": "intervalClosed"
         },
@@ -3366,13 +3366,13 @@
       "Attributes": [
         {
           "QName": ":projectionType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoProjectionType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.GeoProjectionType\u003E",
           "Version": "Office2016",
           "PropertyComments": "projectionType"
         },
         {
           "QName": ":viewedRegionType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoMappingLevel\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.GeoMappingLevel\u003E",
           "Version": "Office2016",
           "PropertyComments": "viewedRegionType"
         },
@@ -3452,7 +3452,7 @@
       "Attributes": [
         {
           "QName": ":quartileMethod",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.QuartileMethod\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.QuartileMethod\u003E",
           "Version": "Office2016",
           "PropertyComments": "quartileMethod"
         }
@@ -3720,7 +3720,7 @@
         },
         {
           "QName": ":pos",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.DataLabelPos\u003E",
           "Version": "Office2016",
           "PropertyComments": "pos"
         }
@@ -4030,7 +4030,7 @@
       "Attributes": [
         {
           "QName": ":pos",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.DataLabelPos\u003E",
           "Version": "Office2016",
           "PropertyComments": "pos"
         }
@@ -4363,7 +4363,7 @@
       "Attributes": [
         {
           "QName": ":layoutId",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayout\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.SeriesLayout\u003E",
           "Version": "Office2016",
           "PropertyComments": "layoutId",
           "Validators": [
@@ -4769,13 +4769,13 @@
       "Attributes": [
         {
           "QName": ":pos",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.SidePos\u003E",
           "Version": "Office2016",
           "PropertyComments": "pos"
         },
         {
           "QName": ":align",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.PosAlign\u003E",
           "Version": "Office2016",
           "PropertyComments": "align"
         },
@@ -4913,13 +4913,13 @@
       "Attributes": [
         {
           "QName": ":pos",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.SidePos\u003E",
           "Version": "Office2016",
           "PropertyComments": "pos"
         },
         {
           "QName": ":align",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.PosAlign\u003E",
           "Version": "Office2016",
           "PropertyComments": "align"
         },
@@ -5242,7 +5242,7 @@
         },
         {
           "QName": ":orientation",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageOrientation\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx.PageOrientation\u003E",
           "Version": "Office2016",
           "PropertyComments": "orientation"
         },

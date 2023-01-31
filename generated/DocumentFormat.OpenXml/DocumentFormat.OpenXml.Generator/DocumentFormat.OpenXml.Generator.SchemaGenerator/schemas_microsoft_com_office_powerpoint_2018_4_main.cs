@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Presentation
+namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M4.Main
 {
     /// <summary>
     /// <para>Defines the ClassificationOutcome Class.</para>
@@ -34,9 +34,9 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         /// <para>val, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Presentation.ClassificationOutcomeType>? Val
+        public EnumValue<DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M4.Main.ClassificationOutcomeType>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Presentation.ClassificationOutcomeType>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M4.Main.ClassificationOutcomeType>>();
             set => SetAttribute(value);
         }
 

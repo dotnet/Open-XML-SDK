@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
+namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.ThreadedComments2
 {
     /// <summary>
     /// <para>Defines the XsdunsignedInt Class.</para>
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList" /> <c>&lt;xltc2:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.ThreadedComments2.ExtensionList" /> <c>&lt;xltc2:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class CommentHyperlink : TypedOpenXmlCompositeElement
@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xltc2:hyperlink");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.ThreadedComments2.ExtensionList>();
             builder.AddElement<CommentHyperlink>()
                 .AddAttribute("startIndex", a => a.StartIndex, aBuilder =>
                 {
@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.ThreadedComments2.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -162,9 +162,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         /// <remark>
         /// xmlns:xltc2 = http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.ThreadedComments2.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.ThreadedComments2.ExtensionList>();
             set => SetElement(value);
         }
 

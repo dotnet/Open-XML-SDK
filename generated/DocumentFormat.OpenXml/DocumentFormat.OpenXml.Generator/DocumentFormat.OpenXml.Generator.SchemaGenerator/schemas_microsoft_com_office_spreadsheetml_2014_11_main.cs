@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2016.ExcelAc
+namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2014.M11.Main
 {
     /// <summary>
     /// <para>Defines the ModelTimeGroupings Class.</para>
@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping" /> <c>&lt;x16:modelTimeGrouping></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2014.M11.Main.ModelTimeGrouping" /> <c>&lt;x16:modelTimeGrouping></c></description></item>
     /// </list>
     /// </remark>
     public partial class ModelTimeGroupings : TypedOpenXmlCompositeElement
@@ -65,10 +65,10 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
             base.ConfigureMetadata(builder);
             builder.SetSchema("x16:modelTimeGroupings");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2014.M11.Main.ModelTimeGrouping>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping), 1, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2014.M11.Main.ModelTimeGrouping), 1, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn" /> <c>&lt;x16:calculatedTimeColumn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2014.M11.Main.CalculatedTimeColumn" /> <c>&lt;x16:calculatedTimeColumn></c></description></item>
     /// </list>
     /// </remark>
     public partial class ModelTimeGrouping : TypedOpenXmlCompositeElement
@@ -155,7 +155,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
             base.ConfigureMetadata(builder);
             builder.SetSchema("x16:modelTimeGrouping");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2014.M11.Main.CalculatedTimeColumn>();
             builder.AddElement<ModelTimeGrouping>()
                 .AddAttribute("tableName", a => a.TableName, aBuilder =>
                 {
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn), 1, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2014.M11.Main.CalculatedTimeColumn), 1, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -217,9 +217,9 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>contentType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: contentType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType>? ContentType
+        public EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2014.M11.Main.ModelTimeGroupingContentType>? ContentType
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2014.M11.Main.ModelTimeGroupingContentType>>();
             set => SetAttribute(value);
         }
 

@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Drawing
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Main
 {
     /// <summary>
     /// <para>Defines the PictureAttributionSourceURL Class.</para>

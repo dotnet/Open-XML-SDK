@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
+namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command
 {
     /// <summary>
     /// <para>Defines the CommentAuthorMonikerList Class.</para>
@@ -501,8 +501,8 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker" /> <c>&lt;pc:docMk></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker" /> <c>&lt;pc:sldMk></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.DocumentMoniker" /> <c>&lt;pc:docMk></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.SlideMoniker" /> <c>&lt;pc:sldMk></c></description></item>
     /// </list>
     /// </remark>
     public partial class SlideMonikerList : TypedOpenXmlCompositeElement
@@ -543,12 +543,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema("pc:sldMkLst");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.DocumentMoniker>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.SlideMoniker>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.DocumentMoniker), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.SlideMoniker), 1, 1, version: FileFormatVersions.Office2016),
                 new AnyParticle(0, 0)
             };
         }
@@ -560,9 +560,9 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         /// <remark>
         /// xmlns:pc = http://schemas.microsoft.com/office/powerpoint/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker? DocumentMoniker
+        public DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.DocumentMoniker? DocumentMoniker
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.DocumentMoniker>();
             set => SetElement(value);
         }
 
@@ -573,9 +573,9 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         /// <remark>
         /// xmlns:pc = http://schemas.microsoft.com/office/powerpoint/2013/main/command
         /// </remark>
-        public DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker? SlideMoniker
+        public DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.SlideMoniker? SlideMoniker
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command.SlideMoniker>();
             set => SetElement(value);
         }
 

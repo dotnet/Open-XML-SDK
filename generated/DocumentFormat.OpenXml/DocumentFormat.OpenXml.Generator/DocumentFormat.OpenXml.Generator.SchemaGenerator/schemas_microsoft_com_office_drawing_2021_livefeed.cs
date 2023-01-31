@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed
 {
     /// <summary>
     /// <para>Defines the BackgroundNormalProperties Class.</para>
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class BackgroundNormalProperties : TypedOpenXmlCompositeElement
@@ -66,10 +66,10 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             base.ConfigureMetadata(builder);
             builder.SetSchema("alf:Normal");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -80,9 +80,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// <remark>
         /// xmlns:alf = http://schemas.microsoft.com/office/drawing/2021/livefeed
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class BackgroundRemovedProperties : TypedOpenXmlCompositeElement
@@ -139,10 +139,10 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             base.ConfigureMetadata(builder);
             builder.SetSchema("alf:Removed");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -153,9 +153,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// <remark>
         /// xmlns:alf = http://schemas.microsoft.com/office/drawing/2021/livefeed
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class BackgroundBlurProperties : TypedOpenXmlCompositeElement
@@ -212,10 +212,10 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             base.ConfigureMetadata(builder);
             builder.SetSchema("alf:Blur");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -226,9 +226,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// <remark>
         /// xmlns:alf = http://schemas.microsoft.com/office/drawing/2021/livefeed
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -244,7 +244,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class BackgroundCustomProperties : TypedOpenXmlCompositeElement
@@ -285,10 +285,10 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             base.ConfigureMetadata(builder);
             builder.SetSchema("alf:Custom");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -299,9 +299,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// <remark>
         /// xmlns:alf = http://schemas.microsoft.com/office/drawing/2021/livefeed
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -317,8 +317,8 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties" /> <c>&lt;alf:backgroundProps></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.LiveFeedBackgroundProperties" /> <c>&lt;alf:backgroundProps></c></description></item>
     /// </list>
     /// </remark>
     public partial class LiveFeedProperties : TypedOpenXmlCompositeElement
@@ -359,12 +359,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             base.ConfigureMetadata(builder);
             builder.SetSchema("alf:liveFeedProps");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.LiveFeedBackgroundProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.LiveFeedBackgroundProperties), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -375,9 +375,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// <remark>
         /// xmlns:alf = http://schemas.microsoft.com/office/drawing/2021/livefeed
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties? LiveFeedBackgroundProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.LiveFeedBackgroundProperties? LiveFeedBackgroundProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.LiveFeedBackgroundProperties>();
             set => SetElement(value);
         }
 
@@ -388,9 +388,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// <remark>
         /// xmlns:alf = http://schemas.microsoft.com/office/drawing/2021/livefeed
         /// </remark>
-        public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -472,11 +472,11 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties" /> <c>&lt;alf:Blur></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties" /> <c>&lt;alf:Custom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties" /> <c>&lt;alf:Normal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties" /> <c>&lt;alf:Removed></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.BackgroundBlurProperties" /> <c>&lt;alf:Blur></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.BackgroundCustomProperties" /> <c>&lt;alf:Custom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.BackgroundNormalProperties" /> <c>&lt;alf:Normal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.BackgroundRemovedProperties" /> <c>&lt;alf:Removed></c></description></item>
     /// </list>
     /// </remark>
     public partial class LiveFeedBackgroundProperties : TypedOpenXmlCompositeElement
@@ -517,24 +517,24 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             base.ConfigureMetadata(builder);
             builder.SetSchema("alf:backgroundProps");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.BackgroundBlurProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.BackgroundCustomProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.BackgroundNormalProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.BackgroundRemovedProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2021)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties), 0, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties), 0, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties), 0, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties), 0, 1, version: FileFormatVersions.Office2021)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.BackgroundNormalProperties), 0, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.BackgroundRemovedProperties), 0, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.BackgroundBlurProperties), 0, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.BackgroundCustomProperties), 0, 1, version: FileFormatVersions.Office2021)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 

@@ -9,10 +9,10 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main;
 using DocumentFormat.OpenXml.Office2010.Drawing;
 using DocumentFormat.OpenXml.Office2010.PowerPoint;
 using DocumentFormat.OpenXml.Office2013.PowerPoint;
-using DocumentFormat.OpenXml.Office2021.PowerPoint.Comment;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -15675,7 +15675,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList" /> <c>&lt;p14:laserTraceLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList" /> <c>&lt;p14:showEvtLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentRelationship" /> <c>&lt;p188:commentRel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main.CommentRelationship" /> <c>&lt;p188:commentRel></c></description></item>
     /// </list>
     /// </remark>
     public partial class SlideExtension : TypedOpenXmlCompositeElement
@@ -15727,7 +15727,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentRelationship>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main.CommentRelationship>();
             builder.AddElement<SlideExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15738,7 +15738,7 @@ namespace DocumentFormat.OpenXml.Presentation
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentRelationship), 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main.CommentRelationship), 1, 1, version: FileFormatVersions.Office2021),
                 new AnyParticle(0, 1)
             };
         }

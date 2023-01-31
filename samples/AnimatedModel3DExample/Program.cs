@@ -122,7 +122,7 @@ namespace AnimatedModel3DExample
                     DocumentFormat.OpenXml.Drawing.Extension aExtension2 = (DocumentFormat.OpenXml.Drawing.Extension)aExtension.Clone();
 
                     // Create a a3damin:posterFrame and add the namespace
-                    DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame model3dPosterFrame = new DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame() { AnimId = 0 };
+                    DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.PosterFrame model3dPosterFrame = new DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.PosterFrame() { AnimId = 0 };
                     model3dPosterFrame.AddNamespaceDeclaration("a3danim", "http://schemas.microsoft.com/office/drawing/2018/animation/model3d");
 
                     // Create a clone of a:ext for p:spPr
@@ -133,9 +133,9 @@ namespace AnimatedModel3DExample
                     DocumentFormat.OpenXml.Drawing.Offset offset2 = (DocumentFormat.OpenXml.Drawing.Offset)offset.Clone();
 
                     // Create a3danim:embedAnim and assign its namespace
-                    DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation embeddedAnimation = new DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation() { AnimId = 0 };
+                    DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.EmbeddedAnimation embeddedAnimation = new DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.EmbeddedAnimation() { AnimId = 0 };
                     embeddedAnimation.AddNamespaceDeclaration("a3danim", "http://schemas.microsoft.com/office/drawing/2018/animation/model3d");
-                    embeddedAnimation.AppendChild(new DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties() { Length = "1899", Count = "indefinite" });
+                    embeddedAnimation.AppendChild(new DocumentFormat.OpenXml.Office.Drawing.Y2018.Animation.Model3D.AnimationProperties() { Length = "1899", Count = "indefinite" });
 
                     // Create the mc:AlternateContent element
                     alternateContentChoice.AppendChild(
@@ -158,60 +158,60 @@ namespace AnimatedModel3DExample
                                 aExtension),
                             new DocumentFormat.OpenXml.Drawing.Graphic(
                                 new DocumentFormat.OpenXml.Drawing.GraphicData(
-                                    new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3D(
-                                        new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties(
+                                    new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.Model3D(
+                                        new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.ShapeProperties(
                                             new DocumentFormat.OpenXml.Drawing.Transform2D(
                                                 new DocumentFormat.OpenXml.Drawing.Offset() { X = 0, Y = 0 },
                                                 aExtension2),
                                             new DocumentFormat.OpenXml.Drawing.PresetGeometry(
                                                 new DocumentFormat.OpenXml.Drawing.AdjustValueList())
                                             { Preset = DocumentFormat.OpenXml.Drawing.ShapeTypeValues.Rectangle }),
-                                        new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DCamera(
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D() { X = 0, Y = 0, Z = 67740115 },
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UpVector3D() { Dx = 0, Dy = 36000000, Dz = 0 },
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D() { X = 0, Y = 0, Z = 0 },
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PerspectiveProjection() { Fov = 2700000 }),
-                                        new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform(
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio() { N = 30569, D = 1000000 },
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D() { Dx = -98394, Dy = -14223043, Dz = -1124542 },
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D(
-                                                new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio() { Numerator = 1000000, Denominator = 1000000 },
-                                                new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio() { Numerator = 1000000, Denominator = 1000000 },
-                                                new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio() { Numerator = 1000000, Denominator = 1000000 }),
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D(),
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PostTransVector3D() { Dx = 0, Dy = 0, Dz = 0 }),
-                                        new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster(
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip() { Embed = pngId })
+                                        new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.Model3DCamera(
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.PosPoint3D() { X = 0, Y = 0, Z = 67740115 },
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.UpVector3D() { Dx = 0, Dy = 36000000, Dz = 0 },
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.LookAtPoint3D() { X = 0, Y = 0, Z = 0 },
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.PerspectiveProjection() { Fov = 2700000 }),
+                                        new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.Model3DTransform(
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.MeterPerModelUnitPositiveRatio() { N = 30569, D = 1000000 },
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.PreTransVector3D() { Dx = -98394, Dy = -14223043, Dz = -1124542 },
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.Scale3D(
+                                                new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.SxRatio() { Numerator = 1000000, Denominator = 1000000 },
+                                                new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.SyRatio() { Numerator = 1000000, Denominator = 1000000 },
+                                                new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.SzRatio() { Numerator = 1000000, Denominator = 1000000 }),
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.Rotate3D(),
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.PostTransVector3D() { Dx = 0, Dy = 0, Dz = 0 }),
+                                        new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.Model3DRaster(
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.Blip() { Embed = pngId })
                                         { RName = "Office3DRenderer", RVer = "16.0.8326" },
-                                        new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList(
+                                        new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.Model3DExtensionList(
                                             new DocumentFormat.OpenXml.Drawing.Extension(
                                                 embeddedAnimation)
                                             { Uri = "{9A65AA19-BECB-4387-8358-8AD5134E1D82}" },
                                             new DocumentFormat.OpenXml.Drawing.Extension(
                                                 model3dPosterFrame)
                                             { Uri = "{E9DE012E-A134-456F-84FE-255F9AAD75C6}" }),
-                                        new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ObjectViewport() { ViewportSz = 5418666 },
-                                        new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.AmbientLight(
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType(
+                                        new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.ObjectViewport() { ViewportSz = 5418666 },
+                                        new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.AmbientLight(
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.ColorType(
                                                 new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage() { RedPortion = 50000, GreenPortion = 50000, BluePortion = 50000 }),
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio() { N = 500000, D = 1000000 }),
-                                        new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PointLight(
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType(
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.IlluminancePositiveRatio() { N = 500000, D = 1000000 }),
+                                        new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.PointLight(
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.ColorType(
                                                 new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage() { RedPortion = 100000, GreenPortion = 75000, BluePortion = 50000 }),
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio() { N = 9765625, D = 1000000 },
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D() { X = 21959998, Y = 70920001, Z = 16344003 })
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.IntensityPositiveRatio() { N = 9765625, D = 1000000 },
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.PosPoint3D() { X = 21959998, Y = 70920001, Z = 16344003 })
                                         { Rad = 0 },
-                                        new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PointLight(
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType(
+                                        new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.PointLight(
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.ColorType(
                                                 new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage() { RedPortion = 40000, GreenPortion = 60000, BluePortion = 95000 }),
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio() { N = 12250000, D = 1000000 },
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D() { X = -37964106, Y = 51130435, Z = 57631972 })
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.IntensityPositiveRatio() { N = 12250000, D = 1000000 },
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.PosPoint3D() { X = -37964106, Y = 51130435, Z = 57631972 })
                                         { Rad = 0 },
-                                        new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PointLight(
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType(
+                                        new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.PointLight(
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.ColorType(
                                                 new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage() { RedPortion = 86837, GreenPortion = 72700, BluePortion = 100000 }),
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio() { N = 3125000, D = 1000000 },
-                                            new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D() { X = -37739122, Y = 58056624, Z = -34769649 })
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.IntensityPositiveRatio() { N = 3125000, D = 1000000 },
+                                            new DocumentFormat.OpenXml.Office.Drawing.Y2017.Model3D.PosPoint3D() { X = -37739122, Y = 58056624, Z = -34769649 })
                                         { Rad = 0 })
                                     { Embed = glbId })
                                 { Uri = "http://schemas.microsoft.com/office/drawing/2017/model3d" })));

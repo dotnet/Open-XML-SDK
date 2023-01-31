@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Drawing.Ink
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2016.Ink
 {
     /// <summary>
     /// Defines the ExtendedBrushPropertyName enumeration.

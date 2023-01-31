@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
-using DocumentFormat.OpenXml.Office2019.Drawing.SVG;
+using DocumentFormat.OpenXml.Office.Drawing.Y2016.SVG.Main;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
 using Svg;

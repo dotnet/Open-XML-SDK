@@ -10,9 +10,9 @@ using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.ChartDrawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Office.Drawing.Y2017.M03.Chart;
 using DocumentFormat.OpenXml.Office2010.Drawing.Charts;
 using DocumentFormat.OpenXml.Office2013.Drawing.Chart;
-using DocumentFormat.OpenXml.Office2019.Drawing.Chart;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -20966,7 +20966,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse" /> <c>&lt;c16r3:dispNaAsBlank></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2017.M03.Chart.BooleanFalse" /> <c>&lt;c16r3:dispNaAsBlank></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataDisplayOptions16 : TypedOpenXmlCompositeElement
@@ -21007,10 +21007,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2017.M03.Chart.BooleanFalse>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2017.M03.Chart.BooleanFalse), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -21021,9 +21021,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c16r3 = http://schemas.microsoft.com/office/drawing/2017/03/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse? BooleanFalse
+        public DocumentFormat.OpenXml.Office.Drawing.Y2017.M03.Chart.BooleanFalse? BooleanFalse
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2017.M03.Chart.BooleanFalse>();
             set => SetElement(value);
         }
 
