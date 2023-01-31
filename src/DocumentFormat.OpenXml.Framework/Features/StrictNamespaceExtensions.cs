@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal static class StrictNamespaceExtensions
 {
-    internal static void ConvertStrictRelationshipToTransitional(this OpenXmlPackage package)
+    internal static void UseTransitionalRelationshipNamespaces(this OpenXmlPackage package, bool save = true)
     {
         var resolver = package.Features.GetNamespaceResolver();
 
@@ -40,42 +40,43 @@ internal static class StrictNamespaceExtensions
             }
         });
 
-        var packageUri = new Uri("/", UriKind.Relative);
-
-        package.Features.GetRequired<ISaveFeature>().Register(container =>
+        if (save)
         {
-            if (alteredRelationships.Count == 0)
+            package.Features.GetRequired<ISaveFeature>().Register(container =>
             {
-                return;
-            }
-
-            if (container is OpenXmlPackage package)
-            {
-                if (alteredRelationships.TryGetValue(packageUri, out var list))
+                if (alteredRelationships.Count == 0)
                 {
-                    foreach (var toReplace in list)
-                    {
-                        package.DeleteRelationship(toReplace.Id);
-                        package.CreateRelationship(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
-                    }
-
-                    alteredRelationships.Remove(packageUri);
+                    return;
                 }
-            }
-            else if (container is OpenXmlPart part)
-            {
-                if (alteredRelationships.TryGetValue(part.Uri, out var list))
+
+                if (container is OpenXmlPackage package)
                 {
-                    foreach (var toReplace in list)
+                    if (alteredRelationships.TryGetValue(OpenXmlPackage.Uri, out var list))
                     {
-                        part.DeleteRelationship(toReplace.Id);
-                        part.CreateRelationship(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
-                    }
+                        foreach (var toReplace in list)
+                        {
+                            package.DeleteRelationship(toReplace.Id);
+                            package.CreateRelationship(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
+                        }
 
-                    alteredRelationships.Remove(part.Uri);
+                        alteredRelationships.Remove(OpenXmlPackage.Uri);
+                    }
                 }
-            }
-        });
+                else if (container is OpenXmlPart part)
+                {
+                    if (alteredRelationships.TryGetValue(part.Uri, out var list))
+                    {
+                        foreach (var toReplace in list)
+                        {
+                            part.DeleteRelationship(toReplace.Id);
+                            part.CreateRelationship(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
+                        }
+
+                        alteredRelationships.Remove(part.Uri);
+                    }
+                }
+            });
+        }
     }
 
     private sealed class StrictNamespaceFeature : IStrictNamespaceFeature

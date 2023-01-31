@@ -16,6 +16,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPackage : OpenXmlPartContainer, IDisposable
     {
+        internal static Uri Uri { get; } = new Uri("/", UriKind.Relative);
+
         private bool _isDisposed;
         private OpenSettings? _settings;
 

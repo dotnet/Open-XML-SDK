@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Packaging.Builder;
 using System;
 using System.IO;
 using System.IO.Packaging;
@@ -48,7 +49,9 @@ internal static class PackageStorageExtensions
     internal static TPackage DefaultInitialize<TPackage>(this TPackage package)
         where TPackage : OpenXmlPackage
     {
-        package.ConvertStrictRelationshipToTransitional();
+        package.EnableSavePackage();
+        package.EnableUriHandling();
+        package.UseTransitionalRelationshipNamespaces();
 
         return package;
     }
