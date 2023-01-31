@@ -7,7 +7,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal interface IPartRelationshipFeature : IEnumerable<KeyValuePair<string, OpenXmlPart>>
+internal interface IPartRelationshipsFeature : IEnumerable<KeyValuePair<string, OpenXmlPart>>
 {
     void Add(string id, OpenXmlPart part);
 

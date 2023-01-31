@@ -28,21 +28,21 @@ namespace DocumentFormat.OpenXml.Packaging
         [SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Registered to be disposed with container")]
         protected OpenXmlPartContainer()
         {
-            var childFeatures = new ChildRelationshipsFeature(this);
+            var childFeatures = new PartRelationshipsFeature(this);
 
-            Features.Set<IPartRelationshipFeature>(childFeatures);
+            Features.Set<IPartRelationshipsFeature>(childFeatures);
             Features.Set<IReferenceRelationshipsFeature>(childFeatures);
         }
 
         /// <summary>
         /// Gets the children parts IDictionary.
         /// </summary>
-        internal IPartRelationshipFeature ChildrenRelationshipParts
+        internal IPartRelationshipsFeature ChildrenRelationshipParts
         {
             get
             {
                 ThrowIfObjectDisposed();
-                return Features.GetRequired<IPartRelationshipFeature>();
+                return Features.GetRequired<IPartRelationshipsFeature>();
             }
         }
 
@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ReferenceRelationshipIsNotReferenced);
             }
 
-            if (Features.GetRequired<IReferenceRelationshipsFeature>().Remove(referenceRelationship))
+            if (Features.GetRequired<IReferenceRelationshipsFeature>().Remove(referenceRelationship.Id))
             {
                 return;
             }
@@ -231,7 +231,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ExternalRelationshipIsNotReferenced);
             }
 
-            if (Features.GetRequired<IReferenceRelationshipsFeature>().Remove(externalRelationship))
+            if (Features.GetRequired<IReferenceRelationshipsFeature>().Remove(externalRelationship.Id))
             {
                 return;
             }

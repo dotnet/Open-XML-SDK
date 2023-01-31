@@ -10,8 +10,8 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
-internal sealed class ChildRelationshipsFeature :
-    IPartRelationshipFeature,
+internal sealed class PartRelationshipsFeature :
+    IPartRelationshipsFeature,
     IReferenceRelationshipsFeature
 {
     private readonly OpenXmlPartContainer _owner;
@@ -19,20 +19,20 @@ internal sealed class ChildRelationshipsFeature :
     private Dictionary<string, OpenXmlPart>? _parts;
     private Dictionary<string, ReferenceRelationship>? _referenceRelationships;
 
-    public ChildRelationshipsFeature(OpenXmlPartContainer owner)
+    public PartRelationshipsFeature(OpenXmlPartContainer owner)
     {
         _owner = owner;
     }
 
     private IPartEventsFeature? Events => _owner.Features.Get<IPartEventsFeature>();
 
-    IEnumerable<OpenXmlPart> IPartRelationshipFeature.Parts => InternalParts.Values;
+    IEnumerable<OpenXmlPart> IPartRelationshipsFeature.Parts => InternalParts.Values;
 
     private IDataPartsFeature LoadedDataParts => _owner.Features.GetRequired<IDataPartsFeature>();
 
     private IPartsFeature LoadedParts => _owner.Features.GetRequired<IPartsFeature>();
 
-    void IPartRelationshipFeature.Add(string id, OpenXmlPart part)
+    void IPartRelationshipsFeature.Add(string id, OpenXmlPart part)
     {
         var loaded = LoadedParts;
 
@@ -57,7 +57,7 @@ internal sealed class ChildRelationshipsFeature :
         Events?.OnChange(part, EventType.Created);
     }
 
-    void IPartRelationshipFeature.Clear()
+    void IPartRelationshipsFeature.Clear()
     {
         if (Events is IPartEventsFeature events)
         {
@@ -83,13 +83,13 @@ internal sealed class ChildRelationshipsFeature :
         InternalParts.Clear();
     }
 
-    int IPartRelationshipFeature.Count => InternalParts.Count;
+    int IPartRelationshipsFeature.Count => InternalParts.Count;
 
-    bool IPartRelationshipFeature.Contains(OpenXmlPart part) => InternalParts.ContainsValue(part);
+    bool IPartRelationshipsFeature.Contains(OpenXmlPart part) => InternalParts.ContainsValue(part);
 
-    bool IPartRelationshipFeature.Contains(string id) => InternalParts.ContainsKey(id);
+    bool IPartRelationshipsFeature.Contains(string id) => InternalParts.ContainsKey(id);
 
-    bool IPartRelationshipFeature.TryGetPart(string id, [MaybeNullWhen(false)] out OpenXmlPart part)
+    bool IPartRelationshipsFeature.TryGetPart(string id, [MaybeNullWhen(false)] out OpenXmlPart part)
         => InternalParts.TryGetValue(id, out part);
 
     private Dictionary<string, OpenXmlPart> InternalParts
@@ -107,7 +107,7 @@ internal sealed class ChildRelationshipsFeature :
 
     public IEnumerator<KeyValuePair<string, OpenXmlPart>> GetEnumerator() => InternalParts.GetEnumerator();
 
-    void IPartRelationshipFeature.Remove(string uri)
+    void IPartRelationshipsFeature.Remove(string uri)
     {
         if (InternalParts.TryGetValue(uri, out var part))
         {
@@ -236,9 +236,6 @@ internal sealed class ChildRelationshipsFeature :
             return _referenceRelationships;
         }
     }
-
-    bool IReferenceRelationshipsFeature.Remove(ReferenceRelationship relationship)
-        => DeleteRelationship(relationship.Id);
 
     bool IReferenceRelationshipsFeature.Remove(string id)
         => DeleteRelationship(id);

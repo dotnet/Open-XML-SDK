@@ -10,8 +10,6 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal interface IReferenceRelationshipsFeature
 {
-    bool Remove(ReferenceRelationship relationship);
-
     bool Remove(string id);
 
     bool TryGetRelationship(string id, [MaybeNullWhen(false)] out ReferenceRelationship relationship);
