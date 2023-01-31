@@ -16,11 +16,14 @@ public abstract partial class OpenXmlPart
         IContainerFeature<OpenXmlPart>,
         ITargetFeature,
         IPartConstraintFeature,
-        IKnownDataPartFeature
+        IKnownDataPartFeature,
+        IDisposableFeature,
+        IContainerDisposableFeature
     {
         private readonly OpenXmlPart _part;
 
         private FeatureContainer _container;
+        private Action? _onDispose;
 
         public PartFeatureCollection(OpenXmlPart part)
         {
@@ -67,10 +70,7 @@ public abstract partial class OpenXmlPart
         }
 
         [KnownFeature(typeof(AnnotationsFeature))]
-        [KnownFeature(typeof(IChildRelationshipPartFeatures), Factory = nameof(CreateChildParts))]
         private partial T? GetInternal<T>();
-
-        private IChildRelationshipPartFeatures CreateChildParts() => new PartDictionary(this);
 
         public void Set<TFeature>(TFeature? instance)
             => _container.Set(instance);
@@ -84,5 +84,14 @@ public abstract partial class OpenXmlPart
         }
 
         bool IKnownDataPartFeature.IsKnown(string relationshipId) => false;
+
+        void IDisposableFeature.Register(IDisposable disposable)
+            => _onDispose = disposable.Dispose + _onDispose;
+
+        void IContainerDisposableFeature.Dispose()
+            => _onDispose?.Invoke();
+
+        bool IContainerDisposableFeature.IsOwner(object obj)
+            => obj is OpenXmlPart part && ReferenceEquals(this, part.Features);
     }
 }

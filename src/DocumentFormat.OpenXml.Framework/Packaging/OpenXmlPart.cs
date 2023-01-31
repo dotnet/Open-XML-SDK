@@ -511,8 +511,11 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             OpenXmlPackage.Package.DeletePart(Uri);
 
-            ChildrenRelationshipParts.Clear();
-            ReferenceRelationshipList.Clear();
+            if (Features.Get<IContainerDisposableFeature>() is { } disposable && disposable.IsOwner(this))
+            {
+                disposable.Dispose();
+            }
+
             _openXmlPackage = null;
 
             // this._ownerPart = null;
