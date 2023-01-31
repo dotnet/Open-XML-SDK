@@ -25,6 +25,8 @@ internal partial class PackageFeatureCollection :
     private Action<OpenXmlPartContainer>? _save;
     private Action? _disposable;
     private FeatureContainer _container;
+    private LinkedList<DataPart>? _dataParts;
+    private Dictionary<Uri, OpenXmlPart>? _parts;
 
     public PackageFeatureCollection(OpenXmlPackage package, IFeatureCollection? parent)
     {
@@ -88,12 +90,6 @@ internal partial class PackageFeatureCollection :
 
     void ISaveFeature.Register(Action<OpenXmlPartContainer> container)
         => _save += container;
-
-    bool IContainerDisposableFeature.IsOwner(object obj)
-        => obj is OpenXmlPackage package && ReferenceEquals(this, package.Features);
-
-    private LinkedList<DataPart>? _dataParts;
-    private Dictionary<Uri, OpenXmlPart>? _parts;
 
     bool IDataPartsFeature.TryGetDataPart(Uri uri, [MaybeNullWhen(false)] out DataPart dataPart)
     {

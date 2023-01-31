@@ -289,10 +289,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 SavePartContents(AutoSave);
                 DeleteUnusedDataPartOnClose();
 
-                if (Features.Get<IContainerDisposableFeature>() is { } disposable && disposable.IsOwner(this))
-                {
-                    disposable.Dispose();
-                }
+                Features.Get<IContainerDisposableFeature>()?.Dispose();
 
                 closing?.OnChange(this, EventType.Closed);
                 _isDisposed = true;
