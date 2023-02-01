@@ -37,21 +37,14 @@ namespace DocumentFormat.OpenXml
             PartUri = element.GetPartUri();
             XPath = TryBuildXPath(GetElements(element), out var namespaces);
 
-#pragma warning disable CS0618 // Type or member is obsolete
             if (namespaces is null)
             {
                 Namespaces = ReadOnlyWrapper.Instance;
-                NamespacesDefinitions = Cached.Array<string>();
             }
             else
             {
-                NamespacesDefinitions = namespaces
-                    .GetNamespacesInScope(XmlNamespaceScope.Local)
-                    .Select(ns => $"xmlns:{ns.Key}=\"{ns.Value}\"")
-                    .ToArray();
                 Namespaces = new ReadOnlyWrapper(namespaces);
             }
-#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         /// <summary>
@@ -69,18 +62,8 @@ namespace DocumentFormat.OpenXml
             PartUri = part.Uri;
             XPath = string.Empty;
 
-#pragma warning disable CS0618 // Type or member is obsolete
             Namespaces = ReadOnlyWrapper.Instance;
-            NamespacesDefinitions = Cached.Array<string>();
-#pragma warning restore CS0618 // Type or member is obsolete
         }
-
-        /// <summary>
-        /// Gets the namespace definitions used in <see cref="XPath"/>. Use <see cref="Namespaces"/> instead
-        /// </summary>
-        [Obsolete("Use the Namespaces property instead")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public IList<string> NamespacesDefinitions { get; }
 
         /// <summary>
         /// Gets the namespace definitions used in <see cref="XPath"/>

@@ -35,18 +35,16 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public bool StrictRelationshipFound { get; }
 
-#if FEATURE_ABSTRACT_XML_CLOSE
         /// <inheritdoc/>
         public override void Close() => BaseReader.Close();
-#endif
 
         /// <inheritdoc/>
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
 
-#if FEATURE_XML_DISPOSE_PROTECTED
-            (BaseReader as IDisposable)?.Dispose();
+#if NET35 || NET40
+            ((IDisposable)BaseReader).Dispose();
 #else
             BaseReader.Dispose();
 #endif
@@ -153,10 +151,8 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override string Prefix => BaseReader.Prefix;
 
-#if FEATURE_XML_QUOTECHAR
         /// <inheritdoc/>
         public override char QuoteChar => BaseReader.QuoteChar;
-#endif
 
         /// <inheritdoc/>
         public override ReadState ReadState => BaseReader.ReadState;

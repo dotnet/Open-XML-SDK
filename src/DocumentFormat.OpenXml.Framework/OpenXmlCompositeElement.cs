@@ -41,25 +41,6 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the OpenXmlCompositeElement class using the supplied collection of elements.
-        /// </summary>
-        /// <param name="childrenElements">A collection of elements.</param>
-        [Obsolete(UseGenericVersion)]
-        protected OpenXmlCompositeElement(IEnumerable childrenElements)
-            : this()
-        {
-            if (childrenElements is null)
-            {
-                throw new ArgumentNullException(nameof(childrenElements));
-            }
-
-            foreach (OpenXmlElement child in childrenElements)
-            {
-                AppendChild(child);
-            }
-        }
-
-        /// <summary>
         /// Initializes a new instance of the OpenXmlCompositeElement class using the supplied collection of OpenXmlElement elements.
         /// </summary>
         /// <param name="childrenElements">A collection of OpenXmlElement elements.</param>
@@ -219,7 +200,7 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            var wasAdded = Metadata.Particle.Set(this, newChild, newChild?.GetType());
+            var wasAdded = Metadata.Particle.Set(this, newChild, newChild.GetType());
 
             if (throwOnError && !wasAdded)
             {
@@ -432,20 +413,20 @@ namespace DocumentFormat.OpenXml
 
         /// <inheritdoc/>
         [return: NotNullIfNotNull("newChild")]
-        public override T? RemoveChild<T>(T? child)
+        public override T? RemoveChild<T>(T? oldChild)
             where T : class
         {
-            if (child is null)
+            if (oldChild is null)
             {
                 return null;
             }
 
-            if (child.Parent != this)
+            if (oldChild.Parent != this)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsNotChild);
             }
 
-            var removedElement = child;
+            var removedElement = oldChild;
             var last = _lastChild;
 
             ElementRemovingEvent(removedElement);

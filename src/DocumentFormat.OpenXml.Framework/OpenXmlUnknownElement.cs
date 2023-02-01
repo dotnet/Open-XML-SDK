@@ -112,15 +112,6 @@ namespace DocumentFormat.OpenXml
             _tagName = localName;
         }
 
-        /// <summary>
-        /// Creates a new OpenXmlUnknownElement class by using the outer XML.
-        /// </summary>
-        /// <param name="outerXml">The outer XML of the element.</param>
-        /// <returns>A new OpenXmlUnknownElement class.</returns>
-        [Obsolete("Use extension method CreateUnknownElement off of a part container", error: true)]
-        public static OpenXmlUnknownElement CreateOpenXmlUnknownElement(string outerXml)
-            => OpenXmlUnknownElementExtensions.CreateOpenXmlUnknownElement(FeatureCollection.TypedOrDefault, outerXml);
-
         /// <inheritdoc/>
         public override string LocalName => _tagName;
 

@@ -20,6 +20,11 @@ namespace DocumentFormat.OpenXml.Features
         /// <returns>The existing or new shared collection.</returns>
         public static ISharedFeature<IParagraphIdCollectionFeature> AddSharedParagraphIdFeature(this WordprocessingDocument doc)
         {
+            if (doc is null)
+            {
+                throw new ArgumentNullException(nameof(doc));
+            }
+
             var existingShared = doc.Features.Get<ISharedFeature<IParagraphIdCollectionFeature>>();
 
             if (existingShared is not null)
@@ -46,8 +51,19 @@ namespace DocumentFormat.OpenXml.Features
         /// <param name="shared">Shared collection feature.</param>
         /// <param name="doc">Document to register with shared paragraph collection.</param>
         /// <returns></returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Regsitered for disposal")]
         public static ISharedFeature<IParagraphIdCollectionFeature> Add(this ISharedFeature<IParagraphIdCollectionFeature> shared, WordprocessingDocument doc)
         {
+            if (shared is null)
+            {
+                throw new ArgumentNullException(nameof(shared));
+            }
+
+            if (doc is null)
+            {
+                throw new ArgumentNullException(nameof(doc));
+            }
+
             doc.AddPackageEventsFeature();
             doc.AddParagraphIdFeature();
 
@@ -68,11 +84,21 @@ namespace DocumentFormat.OpenXml.Features
         /// <returns></returns>
         public static ISharedFeature<IParagraphIdCollectionFeature> Add(this ISharedFeature<IParagraphIdCollectionFeature> shared, IEnumerable<string> paragraphIds)
         {
+            if (shared is null)
+            {
+                throw new ArgumentNullException(nameof(shared));
+            }
+
+            if (paragraphIds is null)
+            {
+                throw new ArgumentNullException(nameof(paragraphIds));
+            }
+
             shared.Add(new ParagraphIdCollectionFeature(paragraphIds));
             return shared;
         }
 
-        internal class SharedParagraphIdCollectionFeature : IParagraphIdCollectionFeature, ISharedFeature<IParagraphIdCollectionFeature>
+        internal sealed class SharedParagraphIdCollectionFeature : IParagraphIdCollectionFeature, ISharedFeature<IParagraphIdCollectionFeature>
         {
             private readonly List<IParagraphIdCollectionFeature> _others = new();
 

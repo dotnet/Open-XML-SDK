@@ -15,22 +15,27 @@ namespace DocumentFormat.OpenXml.Features
         /// <summary>
         /// Add a random number generator to the package.
         /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Registered for disposable on package")]
         public static void AddRandomNumberGeneratorFeature(this OpenXmlPackage package)
         {
+            if (package is null)
+            {
+                throw new ArgumentNullException(nameof(package));
+            }
+
             if (package.Features.Get<IRandomNumberGeneratorFeature>() is null)
             {
-                package.AddDisposableFeature();
                 package.Features.SetDisposable<IRandomNumberGeneratorFeature>(new RandomNumberGeneratorFeature());
             }
         }
 
-        private class RandomNumberGeneratorFeature : IRandomNumberGeneratorFeature, IDisposable
+        private sealed class RandomNumberGeneratorFeature : IRandomNumberGeneratorFeature, IDisposable
         {
             private readonly RandomNumberGenerator _generator = RandomNumberGenerator.Create();
 
             public void Dispose()
             {
-#if NET40_OR_GREATER
+#if NET40 || NETSTANDARD || NET
                 _generator.Dispose();
 #endif
             }

@@ -186,18 +186,10 @@ namespace DocumentFormat.OpenXml.Tests
                 stream.Seek(0, SeekOrigin.Begin);
 
                 // System.Xml.XmlException occurs while opening
-                using (var wordDocument = WordprocessingDocument.Open(stream, true, new OpenSettings { RelationshipErrorHandlerFactory = _ => new RemoveMalformedHyperlinksRelationshipErrorHandler() }))
+                using (var wordDocument = WordprocessingDocument.Open(stream, true))
                 {
                     Assert.Single(wordDocument.MainDocumentPart.HyperlinkRelationships);
                 }
-            }
-        }
-
-        private sealed class RemoveMalformedHyperlinksRelationshipErrorHandler : RelationshipErrorHandler
-        {
-            public override string Rewrite(System.Uri partUri, string id, string uri)
-            {
-                return "http://error";
             }
         }
 

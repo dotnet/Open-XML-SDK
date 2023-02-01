@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Features
 {
-    internal class ElementEventFeature : IDisposable, IElementEventFeature
+    internal sealed class ElementEventFeature : IDisposable, IElementEventFeature
     {
         private readonly Dictionary<OpenXmlPart, ElementContextHolder> _rootElements = new();
         private readonly IPartRootEventsFeature _rootEvents;

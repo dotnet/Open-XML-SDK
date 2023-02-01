@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Framework;
 using System;
 using System.ComponentModel;
 using System.IO;
@@ -16,13 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging;
 [EditorBrowsable(EditorBrowsableState.Never)]
 public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
 {
-    [Obsolete(DoNotUseParameterlessConstructor)]
     private protected TypedOpenXmlPackage()
-    {
-    }
-
-    private protected TypedOpenXmlPackage(Package package, OpenSettings settings)
-        : base(package, settings)
+        : base()
     {
     }
 
@@ -34,7 +28,7 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
         where TDocumentType : struct, Enum
         where TMainPart : OpenXmlPart
     {
-        private TDocumentType _documentType;
+        private TDocumentType? _documentType;
 
         protected TypedPackageFeatureCollection(TypedOpenXmlPackage package)
             : base(package, TypedFeatures.Shared)
@@ -45,13 +39,44 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
 
         string IMainPartFeature.ContentType
         {
-            get => GetContentType(_documentType)!;
-            set => _documentType = GetType(value) ?? throw new OpenXmlPackageException(ExceptionMessages.InvalidContentTypePart);
+            get
+            {
+                if (_documentType is null)
+                {
+                    var hasRelationships = false;
+                    var package = this.GetRequired<IPackageFeature>().Package;
+
+                    foreach (var relationship in package.GetRelationships())
+                    {
+                        hasRelationships = true;
+                        if (relationship.RelationshipType == RelationshipType)
+                        {
+                            var uriTarget = PackUriHelper.ResolvePartUri(new Uri("/", UriKind.Relative), relationship.TargetUri);
+                            var metroPart = package.GetPart(uriTarget);
+
+                            _documentType = GetType(metroPart.ContentType);
+                            break;
+                        }
+                    }
+
+                    if (!hasRelationships)
+                    {
+                        _documentType = default;
+                    }
+
+                    if (_documentType is null)
+                    {
+                        throw new OpenXmlPackageException(ExceptionMessages.NoMainPart);
+                    }
+                }
+
+                return GetContentType(_documentType.Value)!;
+            }
         }
 
         TDocumentType IDocumentTypeFeature<TDocumentType>.Type
         {
-            get => _documentType;
+            get => _documentType ?? default;
             set => _documentType = value;
         }
 

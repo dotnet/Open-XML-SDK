@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The corresponding <see cref="XElement"/>.</returns>
         private static XElement GetContentsAsXml(IPackagePart part, HashSet<Uri> altChunkPartUris)
         {
-#if FEATURE_XML_PROHIBIT_DTD
+#if NET35
             var settings = default(XmlReaderSettings);
 #else
             var settings = new XmlReaderSettings
@@ -248,7 +248,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     // We expect the Flat OPC part to have either a pkg:xmlData
                     // or a pkg:binaryData child element.
-                    throw new ArgumentOutOfRangeException();
+                    throw new InvalidDataException();
                 }
             }
         }

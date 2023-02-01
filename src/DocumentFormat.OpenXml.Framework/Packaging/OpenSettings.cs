@@ -30,7 +30,6 @@ namespace DocumentFormat.OpenXml.Packaging
             MarkupCompatibilityProcessSettings.ProcessMode = other.MarkupCompatibilityProcessSettings.ProcessMode;
             MarkupCompatibilityProcessSettings.TargetFileFormatVersions = other.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
             MaxCharactersInPart = other.MaxCharactersInPart;
-            RelationshipErrorHandlerFactory = other.RelationshipErrorHandlerFactory;
             IgnoreExceptionOnCalcChainPartMissing = other.IgnoreExceptionOnCalcChainPartMissing;
         }
 
@@ -65,11 +64,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// This property allows you to mitigate denial of service attacks where the attacker submits a package with an extremely large Open XML part. By limiting the size of the part, you can detect the attack and recover reliably.
         /// </remarks>
         public long MaxCharactersInPart { get; set; }
-
-        /// <summary>
-        /// Gets or sets a delegate that is used to create a handler to rewrite relationships that are malformed. On platforms after .NET 4.5, <see cref="Uri"/> parsing will fail on malformed strings.
-        /// </summary>
-        public Func<OpenXmlPackage, RelationshipErrorHandler>? RelationshipErrorHandlerFactory { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether to ignore an exception if the calcChain part is missing.

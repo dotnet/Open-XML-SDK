@@ -190,9 +190,9 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
         private void ArgumentOutOfRangeTest<TEnum>(TEnum item)
             where TEnum : struct
         {
-            Assert.Throws<ArgumentOutOfRangeException>(nameof(TEnum), () => EnumInfoLookup<TEnum>.ToString(item));
-            Assert.Throws<ArgumentOutOfRangeException>(nameof(TEnum), () => EnumInfoLookup<TEnum>.TryParse("a", out _));
-            Assert.Throws<ArgumentOutOfRangeException>(nameof(TEnum), () => EnumInfoLookup<TEnum>.GetVersion(item));
+            Assert.Throws<ArgumentOutOfRangeException>("value", () => EnumInfoLookup<TEnum>.ToString(item));
+            Assert.Throws<ArgumentOutOfRangeException>("value", () => EnumInfoLookup<TEnum>.TryParse("a", out _));
+            Assert.Throws<ArgumentOutOfRangeException>("value", () => EnumInfoLookup<TEnum>.GetVersion(item));
         }
     }
 }

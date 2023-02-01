@@ -14,6 +14,7 @@ namespace DocumentFormat.OpenXml.Features
         /// <summary>
         /// Event to register to listen to any changes.
         /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1003:Use generic event handler instances", Justification = "Existing API")]
         event Action<FeatureEventArgs<TArg>> Change;
     }
 }

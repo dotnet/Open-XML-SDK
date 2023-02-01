@@ -9,7 +9,7 @@ internal interface IMainPartFeature
 {
     string RelationshipType { get; }
 
-    string ContentType { get; set; }
+    string ContentType { get; }
 
     OpenXmlPart? Part { get; }
 }

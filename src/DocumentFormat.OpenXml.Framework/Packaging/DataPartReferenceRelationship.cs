@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="relationshipType">The relationship type of the reference relationship.</param>
         /// <param name="id">The relationship ID.</param>
         internal protected DataPartReferenceRelationship(DataPart dataPart, string relationshipType, string id)
-            : base(dataPart.Uri, false, relationshipType, id)
+            : base(dataPart?.Uri ?? throw new ArgumentNullException(nameof(dataPart)), false, relationshipType, id)
         {
             DataPart = dataPart ?? throw new ArgumentNullException(nameof(dataPart));
         }

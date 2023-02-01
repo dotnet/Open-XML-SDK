@@ -7,58 +7,55 @@
 
 namespace DocumentFormat.OpenXml.Packaging;
 
-public partial class OpenXmlPackage
+internal partial class PackageFeatureCollection
 {
-    private protected partial class PackageFeatureCollection
+    private global::DocumentFormat.OpenXml.Features.IPartUriFeature? _CreatePartUri;
+    private global::DocumentFormat.OpenXml.Features.AnnotationsFeature? _AnnotationsFeature;
+    private global::DocumentFormat.OpenXml.Features.IPartExtensionFeature? _PartExtensionProvider;
+    private global::DocumentFormat.OpenXml.Features.IChildRelationshipPartFeatures? _CreateChildParts;
+
+    private partial T? GetInternal<T>()
     {
-        private global::DocumentFormat.OpenXml.Features.IPartUriFeature? _CreatePartUri;
-        private global::DocumentFormat.OpenXml.Features.AnnotationsFeature? _AnnotationsFeature;
-        private global::DocumentFormat.OpenXml.Features.IPartExtensionFeature? _PartExtensionProvider;
-        private global::DocumentFormat.OpenXml.Features.IChildPartFeatures? _CreateChildParts;
-
-        private partial T? GetInternal<T>()
+        if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IPartUriFeature))
         {
-            if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IPartUriFeature))
+            if (_CreatePartUri is null)
             {
-                if (_CreatePartUri is null)
-                {
-                    _CreatePartUri = CreatePartUri();
-                }
-
-                return (T)_CreatePartUri;
+                _CreatePartUri = CreatePartUri();
             }
 
-            if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.AnnotationsFeature))
-            {
-                if (_AnnotationsFeature is null)
-                {
-                    _AnnotationsFeature = new global::DocumentFormat.OpenXml.Features.AnnotationsFeature();
-                }
-
-                return (T)(object)_AnnotationsFeature;
-            }
-
-            if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IPartExtensionFeature))
-            {
-                if (_PartExtensionProvider is null)
-                {
-                    _PartExtensionProvider = new global::DocumentFormat.OpenXml.Packaging.PartExtensionProvider();
-                }
-
-                return (T)_PartExtensionProvider;
-            }
-
-            if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IChildPartFeatures))
-            {
-                if (_CreateChildParts is null)
-                {
-                    _CreateChildParts = CreateChildParts();
-                }
-
-                return (T)_CreateChildParts;
-            }
-
-            return default;
+            return (T)_CreatePartUri;
         }
+
+        if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.AnnotationsFeature))
+        {
+            if (_AnnotationsFeature is null)
+            {
+                _AnnotationsFeature = new global::DocumentFormat.OpenXml.Features.AnnotationsFeature();
+            }
+
+            return (T)(object)_AnnotationsFeature;
+        }
+
+        if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IPartExtensionFeature))
+        {
+            if (_PartExtensionProvider is null)
+            {
+                _PartExtensionProvider = new global::DocumentFormat.OpenXml.Packaging.PartExtensionProvider();
+            }
+
+            return (T)_PartExtensionProvider;
+        }
+
+        if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IChildRelationshipPartFeatures))
+        {
+            if (_CreateChildParts is null)
+            {
+                _CreateChildParts = CreateChildParts();
+            }
+
+            return (T)_CreateChildParts;
+        }
+
+        return default;
     }
 }

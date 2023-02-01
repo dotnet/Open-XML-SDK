@@ -238,6 +238,7 @@ namespace DocumentFormat.OpenXml
         /// Gets the first child of the OpenXmlElement element.
         /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element.
         /// </summary>
+        [SuppressMessage("Naming", "CA1721:Property names should not match get methods", Justification = "Existing API")]
         public virtual OpenXmlElement? FirstChild => null;
 
         /// <summary>
@@ -1782,7 +1783,7 @@ namespace DocumentFormat.OpenXml
 
             if (OpenXmlElementContext is not null)
             {
-#if FEATURE_XML_PROHIBIT_DTD
+#if NET35
                 OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
 #else
                 OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix

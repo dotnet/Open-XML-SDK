@@ -4,6 +4,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.Reflection;
 
 namespace DocumentFormat.OpenXml
@@ -51,7 +52,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (_nameLookup is null)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(TEnum));
+                    throw new ArgumentOutOfRangeException(nameof(value));
                 }
 
                 if (name is null)
@@ -78,10 +79,10 @@ namespace DocumentFormat.OpenXml
             {
                 if (_enumInfo is null)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(TEnum));
+                    throw new ArgumentOutOfRangeException(nameof(value));
                 }
 
-                index = Convert.ToInt32(value);
+                index = Convert.ToInt32(value, CultureInfo.InvariantCulture);
 
                 return index >= 0 && index < _enumInfo.Length;
             }
@@ -144,7 +145,7 @@ namespace DocumentFormat.OpenXml
 
                     var versions = officeAvailability?.OfficeVersion ?? Version;
 
-                    var index = Convert.ToInt32(enumVal);
+                    var index = Convert.ToInt32(enumVal, CultureInfo.InvariantCulture);
 
                     if (index < 0 || index >= enumInfo.Length)
                     {

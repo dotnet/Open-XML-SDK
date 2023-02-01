@@ -109,6 +109,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         /// <param name="parent">The parent element. Used to map ElementTypeId to element name for child element.</param>
         /// <returns>The Fmt_ListOfPossibleElements sub string to be used in error reporting.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Maintainability", "CA1508:Avoid dead conditional code", Justification = "Needs refactoring")]
         internal string GetExpectedChildrenMessage(OpenXmlElement parent)
         {
             if (_elementTypes is not null || _xsdanyNamespaces is not null)

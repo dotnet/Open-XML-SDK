@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// An abstraction similar to <see cref="System.IO.Packaging.Package"/> that allows for pass through implementations
 /// </summary>
-public interface IPackage
+internal interface IPackage
 {
     /// <summary>
     /// Gets the file access of the package
@@ -84,6 +84,13 @@ public interface IPackage
     /// </summary>
     /// <returns>The relationships for package.</returns>
     IEnumerable<IPackageRelationship> GetRelationships();
+
+    /// <summary>
+    /// Gets a relationship by id.
+    /// </summary>
+    /// <param name="id">Id of relationship</param>
+    /// <returns>A package relationship</returns>
+    IPackageRelationship GetRelationship(string id);
 
     /// <summary>
     /// Indicates whether a relationship with a given ID is defined.
