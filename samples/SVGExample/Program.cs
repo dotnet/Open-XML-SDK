@@ -74,7 +74,7 @@ namespace SVGExample
                         string pngId = $"rId{++partsCount}";
                         string svgId = $"rId{++partsCount}";
 
-                        var creationId = new DocumentFormat.OpenXml.Office2016.Drawing.CreationId();
+                        var creationId = new DocumentFormat.OpenXml.Office.Drawing.Y2014.Main.CreationId();
                         creationId.AddNamespaceDeclaration("a16", "http://schemas.microsoft.com/office/drawing/2014/main");
                         creationId.Id = "{E36DC281-2F17-44E3-80EA-AB5BFA90E4D7}";
 

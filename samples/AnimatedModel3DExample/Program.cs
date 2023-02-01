@@ -94,12 +94,12 @@ namespace AnimatedModel3DExample
 
                     // Create a creationId with the correct namespace
                     string guidId = "{" + System.Guid.NewGuid().ToString().ToUpper() + "}";
-                    DocumentFormat.OpenXml.Office2016.Drawing.CreationId creationId = new DocumentFormat.OpenXml.Office2016.Drawing.CreationId();
+                    DocumentFormat.OpenXml.Office.Drawing.Y2014.Main.CreationId creationId = new DocumentFormat.OpenXml.Office.Drawing.Y2014.Main.CreationId();
                     creationId.AddNamespaceDeclaration("a16", "http://schemas.microsoft.com/office/drawing/2014/main");
                     creationId.Id = guidId;
 
                     // Clone the creationId
-                    DocumentFormat.OpenXml.Office2016.Drawing.CreationId creationId2 = (DocumentFormat.OpenXml.Office2016.Drawing.CreationId)creationId.Clone();
+                    DocumentFormat.OpenXml.Office.Drawing.Y2014.Main.CreationId creationId2 = (DocumentFormat.OpenXml.Office.Drawing.Y2014.Main.CreationId)creationId.Clone();
                     string creationIdPartenId = guidId;
                     UInt32Value threeDModelId = new UInt32Value(2U);
 

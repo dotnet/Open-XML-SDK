@@ -7,7 +7,7 @@ using DocumentFormat.OpenXml.Presentation;
 
 using A = DocumentFormat.OpenXml.Drawing;
 using C = DocumentFormat.OpenXml.Drawing.Charts;
-using C16 = DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
+using C16 = DocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx;
 using Cs = DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle;
 using P14 = DocumentFormat.OpenXml.Office2010.PowerPoint;
 
