@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtended+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/commentsExtended";
-        private DocumentFormat.OpenXml.Office2013.Word.CommentsEx? _rootElement;
+        private DocumentFormat.OpenXml.Office.Word.Y2012.WordML.CommentsEx? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WordprocessingCommentsExPart OpenXmlType
@@ -41,13 +41,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2013.Word.CommentsEx CommentsEx
+        public DocumentFormat.OpenXml.Office.Word.Y2012.WordML.CommentsEx CommentsEx
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2013.Word.CommentsEx>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.CommentsEx>();
                 }
 
                 return _rootElement!;
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2013.Word.CommentsEx;
+                _rootElement = value as DocumentFormat.OpenXml.Office.Word.Y2012.WordML.CommentsEx;
             }
         }
 

@@ -1951,7 +1951,7 @@
         {
           "QName": "w14:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.SchemeColorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.SchemeColorValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "val",
           "Validators": [
@@ -2107,7 +2107,7 @@
         {
           "QName": "w14:scaled",
           "PropertyName": "Scaled",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.OnOffValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.OnOffValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "scaled",
           "Validators": [
@@ -2135,7 +2135,7 @@
         {
           "QName": "w14:path",
           "PropertyName": "Path",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.PathShadeTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "path",
           "Validators": [
@@ -2332,7 +2332,7 @@
         {
           "QName": "w14:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.PresetLineDashValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "val",
           "Validators": [
@@ -2683,7 +2683,7 @@
         {
           "QName": "w14:algn",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.RectangleAlignmentValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "algn",
           "Validators": [
@@ -3121,7 +3121,7 @@
         {
           "QName": "w14:algn",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.RectangleAlignmentValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "algn",
           "Validators": [
@@ -3182,7 +3182,7 @@
         {
           "QName": "w14:cap",
           "PropertyName": "CapType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.LineCapValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.LineCapValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "cap",
           "Validators": [
@@ -3200,7 +3200,7 @@
         {
           "QName": "w14:cmpd",
           "PropertyName": "Compound",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.CompoundLineValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.CompoundLineValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "cmpd",
           "Validators": [
@@ -3218,7 +3218,7 @@
         {
           "QName": "w14:algn",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.PenAlignmentValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "algn",
           "Validators": [
@@ -3504,7 +3504,7 @@
         {
           "QName": "w14:prstMaterial",
           "PropertyName": "PresetMaterialType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.PresetMaterialTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "prstMaterial",
           "Validators": [
@@ -3602,7 +3602,7 @@
         {
           "QName": "w14:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.LigaturesValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.LigaturesValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "val",
           "Validators": [
@@ -3633,7 +3633,7 @@
         {
           "QName": "w14:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.NumberFormValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberFormValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "val",
           "Validators": [
@@ -3664,7 +3664,7 @@
         {
           "QName": "w14:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacingValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "val",
           "Validators": [
@@ -3761,7 +3761,7 @@
         {
           "QName": "w14:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.OnOffValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.OnOffValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "val",
           "Validators": [
@@ -4389,7 +4389,7 @@
         {
           "QName": "w14:prst",
           "PropertyName": "PresetCameraType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.PresetCameraTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "prst",
           "Validators": [
@@ -4431,7 +4431,7 @@
         {
           "QName": "w14:rig",
           "PropertyName": "LightRigType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.LightRigTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "rig",
           "Validators": [
@@ -4463,7 +4463,7 @@
         {
           "QName": "w14:dir",
           "PropertyName": "LightDirectionType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.LightRigDirectionValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "dir",
           "Validators": [
@@ -4612,7 +4612,7 @@
         {
           "QName": "w14:prst",
           "PropertyName": "PresetProfileType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.BevelPresetTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "prst",
           "Validators": [
@@ -4781,7 +4781,7 @@
         {
           "QName": "w14:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.OnOffValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordML.OnOffValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "val",
           "Validators": [

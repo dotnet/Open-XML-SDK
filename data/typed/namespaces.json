@@ -60,16 +60,16 @@
     "Namespace": "DocumentFormat.OpenXml.Drawing.Wordprocessing"
   },
   {
-    "Prefix": "emma",
-    "Namespace": "DocumentFormat.OpenXml.EMMA"
-  },
-  {
     "Prefix": "ap",
     "Namespace": "DocumentFormat.OpenXml.ExtendedProperties"
   },
   {
-    "Prefix": "inkml",
-    "Namespace": "DocumentFormat.OpenXml.InkML"
+    "Prefix": "msink",
+    "Namespace": "DocumentFormat.OpenXml.Ink.Y2010.Main"
+  },
+  {
+    "Prefix": "mc",
+    "Namespace": "DocumentFormat.OpenXml.Markup-Compatibility.Y2006"
   },
   {
     "Prefix": "m",
@@ -100,8 +100,52 @@
     "Namespace": "DocumentFormat.OpenXml.Office.CustomXsn"
   },
   {
+    "Prefix": "c14",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart"
+  },
+  {
     "Prefix": "dsp",
-    "Namespace": "DocumentFormat.OpenXml.Office.Drawing"
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram"
+  },
+  {
+    "Prefix": "cdr14",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing"
+  },
+  {
+    "Prefix": "com14",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2010.Compatibility"
+  },
+  {
+    "Prefix": "dgm14",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2010.Diagram"
+  },
+  {
+    "Prefix": "a14",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2010.Main"
+  },
+  {
+    "Prefix": "pic14",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2010.Picture"
+  },
+  {
+    "Prefix": "sle",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2010.Slicer"
+  },
+  {
+    "Prefix": "c15",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart"
+  },
+  {
+    "Prefix": "cs",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle"
+  },
+  {
+    "Prefix": "a15",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2012.Main"
+  },
+  {
+    "Prefix": "tsle",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2012.TimeSlicer"
   },
   {
     "Prefix": "oac",
@@ -192,12 +236,28 @@
     "Namespace": "DocumentFormat.OpenXml.Office.Excel"
   },
   {
+    "Prefix": "xdr14",
+    "Namespace": "DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing"
+  },
+  {
     "Prefix": "lp",
     "Namespace": "DocumentFormat.OpenXml.Office.LongProperties"
   },
   {
     "Prefix": "ma",
     "Namespace": "DocumentFormat.OpenXml.Office.MetaAttributes"
+  },
+  {
+    "Prefix": "p14",
+    "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main"
+  },
+  {
+    "Prefix": "p15",
+    "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main"
+  },
+  {
+    "Prefix": "pRoam",
+    "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2012.RoamingSettings"
   },
   {
     "Prefix": "pc",
@@ -240,8 +300,20 @@
     "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main"
   },
   {
-    "Prefix": "xpdl",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheelML.Y2016.PivotDefaultLayout"
+    "Prefix": "x14",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main"
+  },
+  {
+    "Prefix": "x15ac",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac"
+  },
+  {
+    "Prefix": "x15",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main"
+  },
+  {
+    "Prefix": "x12ac",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2011.M01.Ac"
   },
   {
     "Prefix": "x16",
@@ -257,11 +329,15 @@
   },
   {
     "Prefix": "xr2",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2015.Revision2"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2015.Revision2"
   },
   {
     "Prefix": "xlPr",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2016.M01.Main"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2016.M01.Main"
+  },
+  {
+    "Prefix": "xpdl",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2016.PivotDefaultLayout"
   },
   {
     "Prefix": "xr10",
@@ -352,8 +428,44 @@
     "Namespace": "DocumentFormat.OpenXml.Office.Tasks.Y2019.DocumentTasks"
   },
   {
+    "Prefix": "thm15",
+    "Namespace": "DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main"
+  },
+  {
+    "Prefix": "wetp",
+    "Namespace": "DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11"
+  },
+  {
+    "Prefix": "we",
+    "Namespace": "DocumentFormat.OpenXml.Office.WebExtensions.WebExtensions.Y2010.M11"
+  },
+  {
     "Prefix": "wne",
     "Namespace": "DocumentFormat.OpenXml.Office.Word"
+  },
+  {
+    "Prefix": "w14",
+    "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2010.WordML"
+  },
+  {
+    "Prefix": "wpc",
+    "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas"
+  },
+  {
+    "Prefix": "wp14",
+    "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing"
+  },
+  {
+    "Prefix": "wpg",
+    "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup"
+  },
+  {
+    "Prefix": "wps",
+    "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape"
+  },
+  {
+    "Prefix": "w15",
+    "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2012.WordML"
   },
   {
     "Prefix": "w16se",
@@ -380,136 +492,20 @@
     "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2020.WordML.SdtDataHash"
   },
   {
+    "Prefix": "mso14",
+    "Namespace": "DocumentFormat.OpenXml.Office.Y2009.M07.CustomUI"
+  },
+  {
+    "Prefix": "wp15",
+    "Namespace": "DocumentFormat.OpenXml.Office.Y2012.WordprocessingDrawing"
+  },
+  {
     "Prefix": "oel",
     "Namespace": "DocumentFormat.OpenXml.Office.Y2019.ExtLst"
   },
   {
     "Prefix": "clbl",
     "Namespace": "DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData"
-  },
-  {
-    "Prefix": "mso14",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.CustomUI"
-  },
-  {
-    "Prefix": "a14",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing"
-  },
-  {
-    "Prefix": "cdr14",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing"
-  },
-  {
-    "Prefix": "c14",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing.Charts"
-  },
-  {
-    "Prefix": "dgm14",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing.Diagram"
-  },
-  {
-    "Prefix": "com14",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility"
-  },
-  {
-    "Prefix": "pic14",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing.Pictures"
-  },
-  {
-    "Prefix": "sle",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Drawing.Slicer"
-  },
-  {
-    "Prefix": "x14",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Excel"
-  },
-  {
-    "Prefix": "xdr14",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Excel.Drawing"
-  },
-  {
-    "Prefix": "x12ac",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.ExcelAc"
-  },
-  {
-    "Prefix": "msink",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Ink"
-  },
-  {
-    "Prefix": "p14",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.PowerPoint"
-  },
-  {
-    "Prefix": "w14",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Word"
-  },
-  {
-    "Prefix": "wp14",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Word.Drawing"
-  },
-  {
-    "Prefix": "wpc",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas"
-  },
-  {
-    "Prefix": "wpg",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Word.DrawingGroup"
-  },
-  {
-    "Prefix": "wps",
-    "Namespace": "DocumentFormat.OpenXml.Office2010.Word.DrawingShape"
-  },
-  {
-    "Prefix": "a15",
-    "Namespace": "DocumentFormat.OpenXml.Office2013.Drawing"
-  },
-  {
-    "Prefix": "c15",
-    "Namespace": "DocumentFormat.OpenXml.Office2013.Drawing.Chart"
-  },
-  {
-    "Prefix": "cs",
-    "Namespace": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle"
-  },
-  {
-    "Prefix": "tsle",
-    "Namespace": "DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer"
-  },
-  {
-    "Prefix": "x15",
-    "Namespace": "DocumentFormat.OpenXml.Office2013.Excel"
-  },
-  {
-    "Prefix": "x15ac",
-    "Namespace": "DocumentFormat.OpenXml.Office2013.ExcelAc"
-  },
-  {
-    "Prefix": "p15",
-    "Namespace": "DocumentFormat.OpenXml.Office2013.PowerPoint"
-  },
-  {
-    "Prefix": "pRoam",
-    "Namespace": "DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming"
-  },
-  {
-    "Prefix": "thm15",
-    "Namespace": "DocumentFormat.OpenXml.Office2013.Theme"
-  },
-  {
-    "Prefix": "we",
-    "Namespace": "DocumentFormat.OpenXml.Office2013.WebExtension"
-  },
-  {
-    "Prefix": "wetp",
-    "Namespace": "DocumentFormat.OpenXml.Office2013.WebExtentionPane"
-  },
-  {
-    "Prefix": "w15",
-    "Namespace": "DocumentFormat.OpenXml.Office2013.Word"
-  },
-  {
-    "Prefix": "wp15",
-    "Namespace": "DocumentFormat.OpenXml.Office2013.Word.Drawing"
   },
   {
     "Prefix": "p",
@@ -552,7 +548,11 @@
     "Namespace": "DocumentFormat.OpenXml.Wordprocessing"
   },
   {
-    "Prefix": "mc",
-    "Namespace": "Microsoft.Office.DocumentFormat.OpenXml.MetroVer"
+    "Prefix": "inkml",
+    "Namespace": "DocumentFormat.OpenXml.Y2003.InkML"
+  },
+  {
+    "Prefix": "emma",
+    "Namespace": "DocumentFormat.OpenXml.Y2003.M04.EMMA"
   }
 ]

@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
+namespace DocumentFormat.OpenXml.Office.Y2012.WordprocessingDrawing
 {
     /// <summary>
     /// <para>Defines the WebVideoProperty Class.</para>

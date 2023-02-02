@@ -11,8 +11,8 @@ using DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Math;
-using DocumentFormat.OpenXml.Office2010.Word;
-using DocumentFormat.OpenXml.Office2013.Word;
+using DocumentFormat.OpenXml.Office.Word.Y2010.WordML;
+using DocumentFormat.OpenXml.Office.Word.Y2012.WordML;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -12085,18 +12085,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CharacterScale" /> <c>&lt;w:w></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Underline" /> <c>&lt;w:u></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.FillTextEffect" /> <c>&lt;w14:textFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Glow" /> <c>&lt;w14:glow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Ligatures" /> <c>&lt;w14:ligatures></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NumberingFormat" /> <c>&lt;w14:numForm></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NumberSpacing" /> <c>&lt;w14:numSpacing></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives" /> <c>&lt;w14:cntxtAlts></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Properties3D" /> <c>&lt;w14:props3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Reflection" /> <c>&lt;w14:reflection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Scene3D" /> <c>&lt;w14:scene3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Shadow" /> <c>&lt;w14:shadow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.StylisticSets" /> <c>&lt;w14:stylisticSets></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect" /> <c>&lt;w14:textFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow" /> <c>&lt;w14:glow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures" /> <c>&lt;w14:ligatures></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat" /> <c>&lt;w14:numForm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing" /> <c>&lt;w14:numSpacing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives" /> <c>&lt;w14:cntxtAlts></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D" /> <c>&lt;w14:props3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection" /> <c>&lt;w14:reflection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D" /> <c>&lt;w14:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow" /> <c>&lt;w14:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets" /> <c>&lt;w14:stylisticSets></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
     public partial class RunProperties : TypedOpenXmlCompositeElement
@@ -12175,18 +12175,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Underline>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Glow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -12275,24 +12275,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 {
                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                     {
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Glow), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Shadow), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Reflection), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.FillTextEffect), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Scene3D), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Properties3D), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 },
                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                     {
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Ligatures), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberingFormat), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberSpacing), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.StylisticSets), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 }
                             }
@@ -12810,9 +12810,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Glow? Glow
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow? Glow
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Glow>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow>();
             set => SetElement(value);
         }
 
@@ -12823,9 +12823,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Shadow? Shadow14
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow? Shadow14
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow>();
             set => SetElement(value);
         }
 
@@ -12836,9 +12836,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Reflection? Reflection
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection? Reflection
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection>();
             set => SetElement(value);
         }
 
@@ -12849,9 +12849,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect? TextOutlineEffect
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect? TextOutlineEffect
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect>();
             set => SetElement(value);
         }
 
@@ -12862,9 +12862,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.FillTextEffect? FillTextEffect
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect? FillTextEffect
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect>();
             set => SetElement(value);
         }
 
@@ -12875,9 +12875,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Scene3D? Scene3D
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D? Scene3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D>();
             set => SetElement(value);
         }
 
@@ -12888,9 +12888,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Properties3D? Properties3D
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D? Properties3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D>();
             set => SetElement(value);
         }
 
@@ -12901,9 +12901,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Ligatures? Ligatures
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures? Ligatures
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures>();
             set => SetElement(value);
         }
 
@@ -12914,9 +12914,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -12927,9 +12927,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.NumberSpacing? NumberSpacing
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing? NumberSpacing
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing>();
             set => SetElement(value);
         }
 
@@ -12940,9 +12940,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.StylisticSets? StylisticSets
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets? StylisticSets
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets>();
             set => SetElement(value);
         }
 
@@ -12953,9 +12953,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives? ContextualAlternatives
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives? ContextualAlternatives
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives>();
             set => SetElement(value);
         }
 
@@ -13550,8 +13550,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -13567,16 +13567,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class CustomXmlRuby : CustomXmlElement
@@ -13647,8 +13647,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -13664,16 +13664,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
@@ -13735,10 +13735,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                     }
                                                 },
-                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                             }
                                         },
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -13750,8 +13750,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                         {
                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                             {
-                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                             }
                                         }
                                     }
@@ -13846,8 +13846,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -13863,16 +13863,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class SimpleFieldRuby : TypedOpenXmlCompositeElement
@@ -13982,8 +13982,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -13999,16 +13999,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<SimpleFieldRuby>()
                 .AddAttribute("w:instr", a => a.Instruction, aBuilder =>
                 {
@@ -14077,10 +14077,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                     }
                                                 },
-                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                             }
                                         },
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -14092,8 +14092,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                         {
                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                             {
-                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                             }
                                         }
                                     }
@@ -14200,8 +14200,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -14217,16 +14217,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class HyperlinkRuby : TypedOpenXmlCompositeElement
@@ -14374,8 +14374,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -14391,16 +14391,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<HyperlinkRuby>()
                 .AddAttribute("w:tgtFrame", a => a.TargetFrame, aBuilder =>
                 {
@@ -14478,10 +14478,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                 }
                                             },
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                         }
                                     },
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -14493,8 +14493,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                     {
                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                         {
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                         }
                                     }
                                 }
@@ -14795,8 +14795,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -14811,8 +14811,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class SdtRunRuby : SdtElement
@@ -14857,8 +14857,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -14873,8 +14873,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
@@ -14912,10 +14912,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                             }
                         },
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -15194,8 +15194,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -15211,15 +15211,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class InsertedRun : RunTrackChangeType
@@ -15321,10 +15321,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                                 }
                                                             },
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     },
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -15336,8 +15336,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     }
                                                 }
@@ -15444,8 +15444,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -15461,15 +15461,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class DeletedRun : RunTrackChangeType
@@ -15571,10 +15571,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                                 }
                                                             },
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     },
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -15586,8 +15586,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     }
                                                 }
@@ -15694,8 +15694,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -15711,15 +15711,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class MoveFromRun : RunTrackChangeType
@@ -15821,10 +15821,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                                 }
                                                             },
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     },
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -15836,8 +15836,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     }
                                                 }
@@ -15944,8 +15944,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -15961,15 +15961,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class MoveToRun : RunTrackChangeType
@@ -16071,10 +16071,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                                 }
                                                             },
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     },
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -16086,8 +16086,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     }
                                                 }
@@ -16194,8 +16194,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -16211,15 +16211,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class RunTrackChangeType : TypedOpenXmlCompositeElement
@@ -16327,8 +16327,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -16344,15 +16344,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<RunTrackChangeType>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -16428,8 +16428,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -16444,8 +16444,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class SdtRun : SdtElement
@@ -16490,8 +16490,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -16506,8 +16506,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
@@ -16545,10 +16545,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                             }
                         },
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -16587,8 +16587,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -16604,16 +16604,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class CustomXmlBlock : CustomXmlElement
@@ -16661,8 +16661,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -16678,16 +16678,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
@@ -16750,10 +16750,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                             }
                                         },
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 },
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -16765,8 +16765,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 {
                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                     {
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 }
                             }
@@ -16793,8 +16793,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -16809,8 +16809,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class SdtBlock : SdtElement
@@ -16855,8 +16855,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -16871,8 +16871,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
@@ -16910,10 +16910,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                             }
                         },
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -16976,8 +16976,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -16995,16 +16995,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleField" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class Paragraph : TypedOpenXmlCompositeElement
@@ -17180,8 +17180,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -17199,16 +17199,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<Paragraph>()
                 .AddAttribute("w:rsidRPr", a => a.RsidParagraphMarkRevision, aBuilder =>
                 {
@@ -17318,10 +17318,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                                     }
                                                                 },
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         },
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -17333,8 +17333,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         }
                                                     }
@@ -17434,8 +17434,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -17451,8 +17451,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRow" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableGrid" /> <c>&lt;w:tblGrid></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableProperties" /> <c>&lt;w:tblPr></c></description></item>
@@ -17460,8 +17460,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class Table : TypedOpenXmlCompositeElement
@@ -17508,8 +17508,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -17525,8 +17525,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRow>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableGrid>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableProperties>();
@@ -17534,8 +17534,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -17570,10 +17570,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                             }
                         },
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                     }
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableProperties), 1, 1),
@@ -17630,10 +17630,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                             }
                                         },
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 },
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -17645,8 +17645,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 {
                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                     {
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 }
                             }
@@ -17675,8 +17675,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -17691,8 +17691,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtCell" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions" /> <c>&lt;w:tblPrEx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCell" /> <c>&lt;w:tc></c></description></item>
@@ -17700,8 +17700,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     /// </list>
     /// </remark>
@@ -17827,8 +17827,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -17843,8 +17843,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtCell>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCell>();
@@ -17852,8 +17852,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableRowProperties>();
             builder.AddElement<TableRow>()
                 .AddAttribute("w:rsidRPr", a => a.RsidTableRowMarkRevision, aBuilder =>
@@ -17938,10 +17938,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                             }
                                         },
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 },
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -17953,8 +17953,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 {
                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                     {
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 }
                             }
@@ -18012,8 +18012,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -18029,15 +18029,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRow" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class CustomXmlRow : CustomXmlElement
@@ -18085,8 +18085,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -18102,15 +18102,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRow>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
@@ -18166,10 +18166,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                             }
                                         },
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 },
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -18181,8 +18181,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 {
                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                     {
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 }
                             }
@@ -18209,8 +18209,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -18225,8 +18225,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class SdtRow : SdtElement
@@ -18271,8 +18271,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -18287,8 +18287,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
@@ -18326,10 +18326,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                             }
                         },
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -18368,8 +18368,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -18385,8 +18385,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellProperties" /> <c>&lt;w:tcPr></c></description></item>
@@ -18394,8 +18394,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class TableCell : TypedOpenXmlCompositeElement
@@ -18443,8 +18443,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -18460,8 +18460,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellProperties>();
@@ -18469,8 +18469,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCellProperties), 0, 1),
@@ -18548,10 +18548,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                             }
                                                         },
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                     }
                                                 },
                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -18563,8 +18563,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                     {
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                     }
                                                 }
                                             }
@@ -18611,8 +18611,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -18627,16 +18627,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtCell" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCell" /> <c>&lt;w:tc></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class CustomXmlCell : CustomXmlElement
@@ -18684,8 +18684,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -18700,16 +18700,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtCell>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCell>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
@@ -18765,10 +18765,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                             }
                                         },
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 },
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -18780,8 +18780,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 {
                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                     {
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 }
                             }
@@ -18808,8 +18808,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -18824,8 +18824,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class SdtCell : SdtElement
@@ -18870,8 +18870,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -18886,8 +18886,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
@@ -18925,10 +18925,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                             }
                         },
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -18992,8 +18992,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -19010,16 +19010,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleField" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class CustomXmlRun : CustomXmlElement
@@ -19092,8 +19092,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -19110,16 +19110,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
@@ -19194,10 +19194,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                                     }
                                                                 },
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         },
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -19209,8 +19209,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         }
                                                     }
@@ -19321,8 +19321,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -19339,16 +19339,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleField" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class SimpleField : TypedOpenXmlCompositeElement
@@ -19460,8 +19460,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -19478,16 +19478,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<SimpleField>()
                 .AddAttribute("w:instr", a => a.Instruction, aBuilder =>
                 {
@@ -19569,10 +19569,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                                     }
                                                                 },
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         },
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -19584,8 +19584,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         }
                                                     }
@@ -19708,8 +19708,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -19726,16 +19726,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleField" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class Hyperlink : TypedOpenXmlCompositeElement
@@ -19885,8 +19885,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -19903,16 +19903,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<Hyperlink>()
                 .AddAttribute("w:tgtFrame", a => a.TargetFrame, aBuilder =>
                 {
@@ -20003,10 +20003,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                                 }
                                                             },
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     },
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -20018,8 +20018,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     }
                                                 }
@@ -20129,8 +20129,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -20147,16 +20147,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleField" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class BidirectionalOverride : TypedOpenXmlCompositeElement
@@ -20242,8 +20242,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -20260,16 +20260,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<BidirectionalOverride>()
                 .AddAttribute("w:val", a => a.Val);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -20343,10 +20343,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                                 }
                                                             },
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     },
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -20358,8 +20358,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     }
                                                 }
@@ -20468,8 +20468,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -20486,16 +20486,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleField" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class BidirectionalEmbedding : TypedOpenXmlCompositeElement
@@ -20581,8 +20581,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -20599,16 +20599,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<BidirectionalEmbedding>()
                 .AddAttribute("w:val", a => a.Val);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -20682,10 +20682,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                                 }
                                                             },
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     },
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -20697,8 +20697,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     }
                                                 }
@@ -25021,8 +25021,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -25038,16 +25038,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class TextBoxContent : TypedOpenXmlCompositeElement
@@ -25095,8 +25095,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -25112,16 +25112,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 1, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -25196,10 +25196,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                         }
                                                     },
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                 }
                                             },
                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -25211,8 +25211,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                             {
                                                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                 {
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                 }
                                             }
                                         }
@@ -25515,8 +25515,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -25532,16 +25532,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class Header : TypedOpenXmlPartRootElement
@@ -25589,8 +25589,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -25606,16 +25606,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 1, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -25690,10 +25690,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                         }
                                                     },
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                 }
                                             },
                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -25705,8 +25705,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                             {
                                                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                 {
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                 }
                                             }
                                         }
@@ -25770,8 +25770,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -25787,16 +25787,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class Footer : TypedOpenXmlPartRootElement
@@ -25844,8 +25844,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -25861,16 +25861,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 1, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -25945,10 +25945,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                         }
                                                     },
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                 }
                                             },
                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -25960,8 +25960,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                             {
                                                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                 {
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                 }
                                             }
                                         }
@@ -26025,8 +26025,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -26042,16 +26042,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class HeaderFooterType : TypedOpenXmlCompositeElement
@@ -26098,8 +26098,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -26115,16 +26115,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
         }
     }
 
@@ -26206,7 +26206,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.UICompatibleWith97To2003" /> <c>&lt;w:uiCompat97To2003></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DoNotIncludeSubdocsInStats" /> <c>&lt;w:doNotIncludeSubdocsInStats></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DoNotAutoCompressPictures" /> <c>&lt;w:doNotAutoCompressPictures></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.ChartTrackingRefBased" /> <c>&lt;w15:chartTrackingRefBased></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.ChartTrackingRefBased" /> <c>&lt;w15:chartTrackingRefBased></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ProofState" /> <c>&lt;w:proofState></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ReadModeInkLockDown" /> <c>&lt;w:readModeInkLockDown></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AttachedTemplate" /> <c>&lt;w:attachedTemplate></c></description></item>
@@ -26234,11 +26234,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.WriteProtection" /> <c>&lt;w:writeProtection></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ActiveWritingStyle" /> <c>&lt;w:activeWritingStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Zoom" /> <c>&lt;w:zoom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DefaultImageDpi" /> <c>&lt;w14:defaultImageDpi></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DocumentId" /> <c>&lt;w14:docId></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DiscardImageEditingData" /> <c>&lt;w14:discardImageEditingData></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ConflictMode" /> <c>&lt;w14:conflictMode></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId" /> <c>&lt;w15:docId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.DefaultImageDpi" /> <c>&lt;w14:defaultImageDpi></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.DocumentId" /> <c>&lt;w14:docId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.DiscardImageEditingData" /> <c>&lt;w14:discardImageEditingData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictMode" /> <c>&lt;w14:conflictMode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.PersistentDocumentId" /> <c>&lt;w15:docId></c></description></item>
     /// </list>
     /// </remark>
     public partial class Settings : TypedOpenXmlPartRootElement
@@ -26348,7 +26348,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UICompatibleWith97To2003>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotIncludeSubdocsInStats>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotAutoCompressPictures>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.ChartTrackingRefBased>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.ChartTrackingRefBased>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofState>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ReadModeInkLockDown>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AttachedTemplate>();
@@ -26376,11 +26376,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WriteProtection>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ActiveWritingStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Zoom>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DefaultImageDpi>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DocumentId>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DiscardImageEditingData>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictMode>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.DefaultImageDpi>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.DocumentId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.DiscardImageEditingData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictMode>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.PersistentDocumentId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.WriteProtection), 0, 1),
@@ -26480,12 +26480,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ShapeDefaults), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DecimalSymbol), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ListSeparator), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DocumentId), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DiscardImageEditingData), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DefaultImageDpi), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictMode), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.ChartTrackingRefBased), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.DocumentId), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.DiscardImageEditingData), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.DefaultImageDpi), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictMode), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.ChartTrackingRefBased), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.PersistentDocumentId), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -28587,7 +28587,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Columns" /> <c>&lt;w:cols></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns" /> <c>&lt;w15:footnoteColumns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.FootnoteColumns" /> <c>&lt;w15:footnoteColumns></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocGrid" /> <c>&lt;w:docGrid></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties" /> <c>&lt;w:endnotePr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties" /> <c>&lt;w:footnotePr></c></description></item>
@@ -28698,7 +28698,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:sectPr");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Columns>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.FootnoteColumns>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocGrid>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties>();
@@ -28759,7 +28759,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.GutterOnRight), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocGrid), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PrinterSettingsReference), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns), 0, 1, version: FileFormatVersions.Office2013)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.FootnoteColumns), 0, 1, version: FileFormatVersions.Office2013)
                     }
                 }
             };
@@ -29019,9 +29019,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns? FootnoteColumns
+        public DocumentFormat.OpenXml.Office.Word.Y2012.WordML.FootnoteColumns? FootnoteColumns
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.FootnoteColumns>();
             set => SetElement(value);
         }
 
@@ -29677,18 +29677,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CharacterScale" /> <c>&lt;w:w></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Underline" /> <c>&lt;w:u></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.FillTextEffect" /> <c>&lt;w14:textFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Glow" /> <c>&lt;w14:glow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Ligatures" /> <c>&lt;w14:ligatures></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NumberingFormat" /> <c>&lt;w14:numForm></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NumberSpacing" /> <c>&lt;w14:numSpacing></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives" /> <c>&lt;w14:cntxtAlts></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Properties3D" /> <c>&lt;w14:props3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Reflection" /> <c>&lt;w14:reflection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Scene3D" /> <c>&lt;w14:scene3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Shadow" /> <c>&lt;w14:shadow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.StylisticSets" /> <c>&lt;w14:stylisticSets></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect" /> <c>&lt;w14:textFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow" /> <c>&lt;w14:glow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures" /> <c>&lt;w14:ligatures></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat" /> <c>&lt;w14:numForm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing" /> <c>&lt;w14:numSpacing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives" /> <c>&lt;w14:cntxtAlts></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D" /> <c>&lt;w14:props3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection" /> <c>&lt;w14:reflection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D" /> <c>&lt;w14:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow" /> <c>&lt;w14:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets" /> <c>&lt;w14:stylisticSets></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
     public partial class PreviousRunProperties : TypedOpenXmlCompositeElement
@@ -29766,18 +29766,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Underline>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Glow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -29862,24 +29862,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                         {
                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Glow), 0, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Shadow), 0, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Reflection), 0, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect), 0, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.FillTextEffect), 0, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Scene3D), 0, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Properties3D), 0, 1, version: FileFormatVersions.Office2010)
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow), 0, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow), 0, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection), 0, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect), 0, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect), 0, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D), 0, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D), 0, 1, version: FileFormatVersions.Office2010)
                             }
                         },
                         new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                         {
                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Ligatures), 0, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberingFormat), 0, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberSpacing), 0, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.StylisticSets), 0, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives), 0, 1, version: FileFormatVersions.Office2010)
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures), 0, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat), 0, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing), 0, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets), 0, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives), 0, 1, version: FileFormatVersions.Office2010)
                             }
                         }
                     }
@@ -29940,22 +29940,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Deleted" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFrom" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveTo" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Underline" /> <c>&lt;w:u></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.FillTextEffect" /> <c>&lt;w14:textFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Glow" /> <c>&lt;w14:glow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Ligatures" /> <c>&lt;w14:ligatures></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NumberingFormat" /> <c>&lt;w14:numForm></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NumberSpacing" /> <c>&lt;w14:numSpacing></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives" /> <c>&lt;w14:cntxtAlts></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Properties3D" /> <c>&lt;w14:props3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Reflection" /> <c>&lt;w14:reflection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Scene3D" /> <c>&lt;w14:scene3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Shadow" /> <c>&lt;w14:shadow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.StylisticSets" /> <c>&lt;w14:stylisticSets></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect" /> <c>&lt;w14:textFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow" /> <c>&lt;w14:glow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures" /> <c>&lt;w14:ligatures></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat" /> <c>&lt;w14:numForm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing" /> <c>&lt;w14:numSpacing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives" /> <c>&lt;w14:cntxtAlts></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D" /> <c>&lt;w14:props3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection" /> <c>&lt;w14:reflection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D" /> <c>&lt;w14:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow" /> <c>&lt;w14:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets" /> <c>&lt;w14:stylisticSets></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
     public partial class PreviousParagraphMarkRunProperties : TypedOpenXmlCompositeElement
@@ -30036,22 +30036,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Deleted>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFrom>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveTo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Underline>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Glow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -30066,8 +30066,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                             }
                         }
                     }
@@ -30158,24 +30158,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 {
                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                     {
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Glow), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Shadow), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Reflection), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.FillTextEffect), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Scene3D), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Properties3D), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 },
                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                     {
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Ligatures), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberingFormat), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberSpacing), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.StylisticSets), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 }
                             }
@@ -30615,22 +30615,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Deleted" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFrom" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveTo" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Underline" /> <c>&lt;w:u></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.FillTextEffect" /> <c>&lt;w14:textFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Glow" /> <c>&lt;w14:glow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Ligatures" /> <c>&lt;w14:ligatures></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NumberingFormat" /> <c>&lt;w14:numForm></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NumberSpacing" /> <c>&lt;w14:numSpacing></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives" /> <c>&lt;w14:cntxtAlts></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Properties3D" /> <c>&lt;w14:props3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Reflection" /> <c>&lt;w14:reflection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Scene3D" /> <c>&lt;w14:scene3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Shadow" /> <c>&lt;w14:shadow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.StylisticSets" /> <c>&lt;w14:stylisticSets></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect" /> <c>&lt;w14:textFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow" /> <c>&lt;w14:glow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures" /> <c>&lt;w14:ligatures></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat" /> <c>&lt;w14:numForm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing" /> <c>&lt;w14:numSpacing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives" /> <c>&lt;w14:cntxtAlts></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D" /> <c>&lt;w14:props3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection" /> <c>&lt;w14:reflection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D" /> <c>&lt;w14:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow" /> <c>&lt;w14:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets" /> <c>&lt;w14:stylisticSets></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
     public partial class ParagraphMarkRunProperties : TypedOpenXmlCompositeElement
@@ -30712,22 +30712,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Deleted>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFrom>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveTo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Underline>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Glow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -30742,8 +30742,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                             }
                         }
                     }
@@ -30834,24 +30834,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                 {
                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                     {
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Glow), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Shadow), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Reflection), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.FillTextEffect), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Scene3D), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Properties3D), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Glow), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Shadow), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Reflection), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.TextOutlineEffect), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.FillTextEffect), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Scene3D), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Properties3D), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 },
                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                     {
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Ligatures), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberingFormat), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberSpacing), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.StylisticSets), 0, 1, version: FileFormatVersions.Office2010),
-                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives), 0, 1, version: FileFormatVersions.Office2010)
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.Ligatures), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberingFormat), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.NumberSpacing), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.StylisticSets), 0, 1, version: FileFormatVersions.Office2010),
+                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContextualAlternatives), 0, 1, version: FileFormatVersions.Office2010)
                                     }
                                 }
                             }
@@ -30928,7 +30928,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Columns" /> <c>&lt;w:cols></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns" /> <c>&lt;w15:footnoteColumns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.FootnoteColumns" /> <c>&lt;w15:footnoteColumns></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocGrid" /> <c>&lt;w:docGrid></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties" /> <c>&lt;w:endnotePr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties" /> <c>&lt;w:footnotePr></c></description></item>
@@ -31042,7 +31042,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:sectPr");
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Columns>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.FootnoteColumns>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocGrid>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties>();
@@ -31114,7 +31114,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.GutterOnRight), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocGrid), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PrinterSettingsReference), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns), 0, 1, version: FileFormatVersions.Office2013)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.FootnoteColumns), 0, 1, version: FileFormatVersions.Office2013)
                     }
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SectionPropertiesChange), 0, 1)
@@ -32779,8 +32779,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -32796,16 +32796,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class RubyContent : RubyContentType
@@ -32903,10 +32903,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                 }
                                             },
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                         }
                                     },
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -32918,8 +32918,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                     {
                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                         {
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                         }
                                     }
                                 }
@@ -33012,8 +33012,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -33029,16 +33029,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class RubyBase : RubyContentType
@@ -33136,10 +33136,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                 }
                                             },
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                         }
                                     },
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -33151,8 +33151,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                     {
                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                         {
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                         }
                                     }
                                 }
@@ -33245,8 +33245,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -33262,16 +33262,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class RubyContentType : TypedOpenXmlCompositeElement
@@ -33340,8 +33340,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -33357,16 +33357,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
         }
     }
 
@@ -33509,9 +33509,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.Color" /> <c>&lt;w15:color></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.Color" /> <c>&lt;w15:color></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DataBinding" /> <c>&lt;w:dataBinding></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.DataBinding" /> <c>&lt;w15:dataBinding></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.DataBinding" /> <c>&lt;w15:dataBinding></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtId" /> <c>&lt;w:id></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtContentEquation" /> <c>&lt;w:equation></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtContentPicture" /> <c>&lt;w:picture></c></description></item>
@@ -33519,13 +33519,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtContentCitation" /> <c>&lt;w:citation></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtContentGroup" /> <c>&lt;w:group></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtContentBibliography" /> <c>&lt;w:bibliography></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.EntityPickerEmpty" /> <c>&lt;w14:entityPicker></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem" /> <c>&lt;w15:repeatingSectionItem></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.EntityPickerEmpty" /> <c>&lt;w14:entityPicker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.SdtRepeatedSectionItem" /> <c>&lt;w15:repeatingSectionItem></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Lock" /> <c>&lt;w:lock></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ShowingPlaceholder" /> <c>&lt;w:showingPlcHdr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TemporarySdt" /> <c>&lt;w:temporary></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.WebExtensionLinked" /> <c>&lt;w15:webExtensionLinked></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.WebExtensionCreated" /> <c>&lt;w15:webExtensionCreated></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.WebExtensionLinked" /> <c>&lt;w15:webExtensionLinked></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.WebExtensionCreated" /> <c>&lt;w15:webExtensionCreated></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtPlaceholder" /> <c>&lt;w:placeholder></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtContentComboBox" /> <c>&lt;w:comboBox></c></description></item>
@@ -33536,9 +33536,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtContentText" /> <c>&lt;w:text></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtAlias" /> <c>&lt;w:alias></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Tag" /> <c>&lt;w:tag></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SdtContentCheckBox" /> <c>&lt;w14:checkbox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.Appearance" /> <c>&lt;w15:appearance></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection" /> <c>&lt;w15:repeatingSection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.SdtContentCheckBox" /> <c>&lt;w14:checkbox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.Appearance" /> <c>&lt;w15:appearance></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.SdtRepeatedSection" /> <c>&lt;w15:repeatingSection></c></description></item>
     /// </list>
     /// </remark>
     public partial class SdtProperties : TypedOpenXmlCompositeElement
@@ -33578,9 +33578,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("w:sdtPr");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.Color>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DataBinding>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.DataBinding>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.DataBinding>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtId>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentEquation>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentPicture>();
@@ -33588,13 +33588,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentCitation>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentGroup>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentBibliography>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.EntityPickerEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.EntityPickerEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.SdtRepeatedSectionItem>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Lock>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ShowingPlaceholder>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TemporarySdt>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.WebExtensionLinked>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.WebExtensionCreated>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.WebExtensionLinked>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.WebExtensionCreated>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtPlaceholder>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentComboBox>();
@@ -33605,9 +33605,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentText>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtAlias>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Tag>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SdtContentCheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Appearance>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.SdtContentCheckBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.Appearance>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.SdtRepeatedSection>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties), 0, 1),
@@ -33618,15 +33618,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DataBinding), 0, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.DataBinding), 0, 1, version: FileFormatVersions.Office2013)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.DataBinding), 0, 1, version: FileFormatVersions.Office2013)
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TemporarySdt), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtId), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Tag), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.Color), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.Appearance), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.WebExtensionLinked), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.WebExtensionCreated), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.Color), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.Appearance), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.WebExtensionLinked), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.WebExtensionCreated), 1, 1, version: FileFormatVersions.Office2013),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtContentEquation), 1, 1),
@@ -33641,10 +33641,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtContentCitation), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtContentGroup), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtContentBibliography), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.EntityPickerEmpty), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SdtContentCheckBox), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection), 1, 1, version: FileFormatVersions.Office2013),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem), 1, 1, version: FileFormatVersions.Office2013)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.EntityPickerEmpty), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.SdtContentCheckBox), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.SdtRepeatedSection), 1, 1, version: FileFormatVersions.Office2013),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.SdtRepeatedSectionItem), 1, 1, version: FileFormatVersions.Office2013)
                 }
             };
         }
@@ -33727,8 +33727,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -33744,16 +33744,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class SdtContentBlock : TypedOpenXmlCompositeElement
@@ -33800,8 +33800,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -33817,16 +33817,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -33886,10 +33886,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                         }
                                     },
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                 }
                             },
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -33901,8 +33901,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                             {
                                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                 }
                             }
                         }
@@ -33955,8 +33955,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -33973,16 +33973,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleField" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class SdtContentRun : TypedOpenXmlCompositeElement
@@ -34054,8 +34054,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -34072,16 +34072,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -34162,10 +34162,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                                     }
                                                                 },
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         },
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -34177,8 +34177,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         }
                                                     }
@@ -34286,8 +34286,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -34303,16 +34303,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby" /> <c>&lt;w:fldSimple></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class SdtContentRunRuby : TypedOpenXmlCompositeElement
@@ -34382,8 +34382,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -34399,16 +34399,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -34467,10 +34467,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                 }
                                             },
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                         }
                                     },
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -34482,8 +34482,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                     {
                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                         {
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                         }
                                     }
                                 }
@@ -34553,8 +34553,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -34569,16 +34569,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtCell" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCell" /> <c>&lt;w:tc></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class SdtContentCell : TypedOpenXmlCompositeElement
@@ -34625,8 +34625,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -34641,16 +34641,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtCell>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCell>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -34703,10 +34703,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                         }
                                     },
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                 }
                             },
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -34718,8 +34718,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                             {
                                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                 }
                             }
                         }
@@ -34747,8 +34747,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -34764,15 +34764,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRow" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class SdtContentRow : TypedOpenXmlCompositeElement
@@ -34819,8 +34819,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -34836,15 +34836,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRow>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -34897,10 +34897,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                         }
                                     },
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                 }
                             },
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -34912,8 +34912,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                             {
                                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                 }
                             }
                         }
@@ -45912,8 +45912,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -45929,16 +45929,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class Footnote : FootnoteEndnoteType
@@ -46054,10 +46054,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                             }
                                                         },
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                     }
                                                 },
                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -46069,8 +46069,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                     {
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                     }
                                                 }
                                             }
@@ -46106,8 +46106,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -46123,16 +46123,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class Endnote : FootnoteEndnoteType
@@ -46248,10 +46248,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                             }
                                                         },
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                     }
                                                 },
                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -46263,8 +46263,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                     {
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                     }
                                                 }
                                             }
@@ -46300,8 +46300,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -46317,16 +46317,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class FootnoteEndnoteType : TypedOpenXmlCompositeElement
@@ -46399,8 +46399,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -46416,16 +46416,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<FootnoteEndnoteType>()
                 .AddAttribute("w:type", a => a.Type)
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
@@ -47517,8 +47517,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -47534,8 +47534,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SectionProperties" /> <c>&lt;w:sectPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
@@ -47543,8 +47543,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class DocPartBody : BodyType
@@ -47660,10 +47660,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                             }
                                                         },
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                     }
                                                 },
                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -47675,8 +47675,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                     {
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                     }
                                                 }
                                             }
@@ -47711,8 +47711,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -47728,8 +47728,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SectionProperties" /> <c>&lt;w:sectPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
@@ -47737,8 +47737,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public partial class Body : BodyType
@@ -47854,10 +47854,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
                                                             }
                                                         },
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                     }
                                                 },
                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
@@ -47869,8 +47869,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                     {
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                                                     }
                                                 }
                                             }
@@ -47905,8 +47905,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
@@ -47922,8 +47922,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SectionProperties" /> <c>&lt;w:sectPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
@@ -47931,8 +47931,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class BodyType : TypedOpenXmlCompositeElement
@@ -47979,8 +47979,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
@@ -47996,8 +47996,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SectionProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
@@ -48005,8 +48005,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
         }
     }
 
@@ -48523,8 +48523,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Inserted" /> <c>&lt;w:ins></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Deleted" /> <c>&lt;w:del></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableRowPropertiesChange" /> <c>&lt;w:trPrChange></c></description></item>
     /// </list>
     /// </remark>
@@ -48579,8 +48579,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Inserted>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Deleted>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableRowPropertiesChange>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -48620,8 +48620,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 }

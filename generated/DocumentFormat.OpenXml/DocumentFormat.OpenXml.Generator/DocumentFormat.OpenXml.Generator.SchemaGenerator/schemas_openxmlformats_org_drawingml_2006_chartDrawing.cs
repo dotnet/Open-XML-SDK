@@ -9,7 +9,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing;
+using DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.ToAnchor" /> <c>&lt;cdr:to></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.Picture" /> <c>&lt;cdr:pic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.Shape" /> <c>&lt;cdr:sp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart" /> <c>&lt;cdr14:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ContentPart" /> <c>&lt;cdr14:contentPart></c></description></item>
     /// </list>
     /// </remark>
     public partial class RelativeAnchorSize : TypedOpenXmlCompositeElement
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.ToAnchor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.Picture>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.FromAnchor), 1, 1),
@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.GraphicFrame), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.ConnectionShape), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Picture), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 }
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.FromAnchor" /> <c>&lt;cdr:from></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.Picture" /> <c>&lt;cdr:pic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.Shape" /> <c>&lt;cdr:sp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart" /> <c>&lt;cdr14:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ContentPart" /> <c>&lt;cdr14:contentPart></c></description></item>
     /// </list>
     /// </remark>
     public partial class AbsoluteAnchorSize : TypedOpenXmlCompositeElement
@@ -196,7 +196,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.FromAnchor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.Picture>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.FromAnchor), 1, 1),
@@ -212,7 +212,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.GraphicFrame), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.ConnectionShape), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Picture), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 }
@@ -430,7 +430,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGroupShapeProperties" /> <c>&lt;cdr:nvGrpSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.Picture" /> <c>&lt;cdr:pic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.Shape" /> <c>&lt;cdr:sp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart" /> <c>&lt;cdr14:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ContentPart" /> <c>&lt;cdr14:contentPart></c></description></item>
     /// </list>
     /// </remark>
     public partial class GroupShape : TypedOpenXmlCompositeElement
@@ -477,7 +477,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGroupShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.Picture>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGroupShapeProperties), 1, 1),
@@ -489,7 +489,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.GraphicFrame), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.ConnectionShape), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Picture), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }

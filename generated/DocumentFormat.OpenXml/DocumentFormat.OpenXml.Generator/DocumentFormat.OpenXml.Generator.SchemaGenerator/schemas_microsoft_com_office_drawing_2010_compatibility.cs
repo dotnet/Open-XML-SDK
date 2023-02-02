@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2010.Compatibility
 {
     /// <summary>
     /// <para>Defines the CompatibilityShape Class.</para>

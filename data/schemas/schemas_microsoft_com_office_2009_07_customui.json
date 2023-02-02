@@ -2295,7 +2295,7 @@
         {
           "QName": ":showInRibbon",
           "PropertyName": "ShowInRibbon",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.GalleryShowInRibbonValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "showInRibbon"
         },
@@ -4828,7 +4828,7 @@
         {
           "QName": ":itemSize",
           "PropertyName": "ItemSize",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ItemSizeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "itemSize"
         },
@@ -7050,7 +7050,7 @@
         {
           "QName": ":itemSize",
           "PropertyName": "ItemSize",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ItemSizeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "itemSize"
         },
@@ -8007,7 +8007,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.SizeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "size"
         },
@@ -9253,7 +9253,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.SizeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "size"
         },
@@ -10048,7 +10048,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.SizeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "size"
         },
@@ -13627,7 +13627,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.SizeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "size"
         },
@@ -13893,7 +13893,7 @@
         {
           "QName": ":showInRibbon",
           "PropertyName": "ShowInRibbon",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.GalleryShowInRibbonValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "showInRibbon"
         },
@@ -14890,7 +14890,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.SizeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "size"
         },
@@ -14922,7 +14922,7 @@
         {
           "QName": ":itemSize",
           "PropertyName": "ItemSize",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ItemSizeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "itemSize"
         },
@@ -15779,7 +15779,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.SizeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "size"
         },
@@ -16583,7 +16583,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.SizeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "size"
         },
@@ -17345,7 +17345,7 @@
         {
           "QName": ":boxStyle",
           "PropertyName": "BoxStyle",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.BoxStyleValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "boxStyle"
         }
@@ -19528,14 +19528,14 @@
         {
           "QName": ":expand",
           "PropertyName": "Expand",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "expand"
         },
         {
           "QName": ":style",
           "PropertyName": "Style",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.Style2Values\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.Style2Values\u003E",
           "Version": "Office2010",
           "PropertyComments": "style"
         },
@@ -20033,7 +20033,7 @@
         {
           "QName": ":expand",
           "PropertyName": "Expand",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "expand"
         },
@@ -20609,14 +20609,14 @@
         {
           "QName": ":alignLabel",
           "PropertyName": "AlignLabel",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "alignLabel"
         },
         {
           "QName": ":expand",
           "PropertyName": "Expand",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "expand"
         },
@@ -21001,14 +21001,14 @@
         {
           "QName": ":alignLabel",
           "PropertyName": "AlignLabel",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "alignLabel"
         },
         {
           "QName": ":expand",
           "PropertyName": "Expand",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "expand"
         },
@@ -21557,14 +21557,14 @@
         {
           "QName": ":alignLabel",
           "PropertyName": "AlignLabel",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "alignLabel"
         },
         {
           "QName": ":expand",
           "PropertyName": "Expand",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "expand"
         },
@@ -21988,14 +21988,14 @@
         {
           "QName": ":alignLabel",
           "PropertyName": "AlignLabel",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "alignLabel"
         },
         {
           "QName": ":expand",
           "PropertyName": "Expand",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "expand"
         },
@@ -22445,14 +22445,14 @@
         {
           "QName": ":alignLabel",
           "PropertyName": "AlignLabel",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "alignLabel"
         },
         {
           "QName": ":expand",
           "PropertyName": "Expand",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "expand"
         },
@@ -22993,14 +22993,14 @@
         {
           "QName": ":alignLabel",
           "PropertyName": "AlignLabel",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "alignLabel"
         },
         {
           "QName": ":expand",
           "PropertyName": "Expand",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "expand"
         },
@@ -23231,7 +23231,7 @@
         {
           "QName": ":expand",
           "PropertyName": "Expand",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "expand"
         },
@@ -23492,21 +23492,21 @@
         {
           "QName": ":align",
           "PropertyName": "Align",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "align"
         },
         {
           "QName": ":expand",
           "PropertyName": "Expand",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ExpandValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "expand"
         },
         {
           "QName": ":layoutChildren",
           "PropertyName": "LayoutChildren",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.LayoutChildrenValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "layoutChildren"
         }
@@ -24268,7 +24268,7 @@
         {
           "QName": ":style",
           "PropertyName": "Style",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.StyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.StyleValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "style"
         },
@@ -24867,7 +24867,7 @@
         },
         {
           "QName": ":allowedTaskSizes",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.TaskSizesValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "allowedTaskSizes"
         }
@@ -24952,7 +24952,7 @@
         {
           "QName": ":itemSize",
           "PropertyName": "ItemSize",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ItemSizeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "itemSize"
         }
@@ -28058,7 +28058,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.SizeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "size"
         },
@@ -30865,7 +30865,7 @@
         {
           "QName": ":itemSize",
           "PropertyName": "ItemSize",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.ItemSizeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "itemSize"
         }
@@ -33491,7 +33491,7 @@
         },
         {
           "QName": ":allowedTaskSizes",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.TaskSizesValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "allowedTaskSizes"
         }

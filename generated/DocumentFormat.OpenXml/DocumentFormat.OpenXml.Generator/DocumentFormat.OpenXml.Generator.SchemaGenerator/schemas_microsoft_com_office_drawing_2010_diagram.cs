@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2010.Diagram
 {
     /// <summary>
     /// <para>Defines the NonVisualDrawingProperties Class.</para>

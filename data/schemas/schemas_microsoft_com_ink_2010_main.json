@@ -414,7 +414,7 @@
         {
           "QName": ":direction",
           "PropertyName": "Direction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Ink.Y2010.Main.LinkDirectionValues\u003E",
           "PropertyComments": "direction"
         },
         {

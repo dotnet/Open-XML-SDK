@@ -9,7 +9,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office2010.Word.Drawing;
+using DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -728,8 +728,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough" /> <c>&lt;wp:wrapThrough></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight" /> <c>&lt;wp:wrapTight></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom" /> <c>&lt;wp:wrapTopAndBottom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth" /> <c>&lt;wp14:sizeRelH></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight" /> <c>&lt;wp14:sizeRelV></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.RelativeWidth" /> <c>&lt;wp14:sizeRelH></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.RelativeHeight" /> <c>&lt;wp14:sizeRelV></c></description></item>
     /// </list>
     /// </remark>
     public partial class Anchor : TypedOpenXmlCompositeElement
@@ -918,8 +918,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.RelativeWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.RelativeHeight>();
             builder.AddElement<Anchor>()
                 .AddAttribute("distT", a => a.DistanceFromTop)
                 .AddAttribute("distB", a => a.DistanceFromBottom)
@@ -981,8 +981,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.RelativeWidth), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.RelativeHeight), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1358,7 +1358,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset" /> <c>&lt;wp14:pctPosHOffset></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentagePositionHeightOffset" /> <c>&lt;wp14:pctPosHOffset></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment" /> <c>&lt;wp:align></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset" /> <c>&lt;wp:posOffset></c></description></item>
     /// </list>
@@ -1410,7 +1410,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("wp:positionH");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentagePositionHeightOffset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>();
             builder.AddElement<HorizontalPosition>()
@@ -1425,7 +1425,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset), 0, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentagePositionHeightOffset), 0, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -1463,9 +1463,9 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <remark>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset? PercentagePositionHeightOffset
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentagePositionHeightOffset? PercentagePositionHeightOffset
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentagePositionHeightOffset>();
             set => SetElement(value);
         }
 
@@ -1481,7 +1481,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset" /> <c>&lt;wp14:pctPosVOffset></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentagePositionVerticalOffset" /> <c>&lt;wp14:pctPosVOffset></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment" /> <c>&lt;wp:align></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset" /> <c>&lt;wp:posOffset></c></description></item>
     /// </list>
@@ -1533,7 +1533,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("wp:positionV");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentagePositionVerticalOffset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>();
             builder.AddElement<VerticalPosition>()
@@ -1548,7 +1548,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset), 0, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentagePositionVerticalOffset), 0, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -1586,9 +1586,9 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <remark>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset? PercentagePositionVerticalOffset
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentagePositionVerticalOffset? PercentagePositionVerticalOffset
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentagePositionVerticalOffset>();
             set => SetElement(value);
         }
 

@@ -6,17 +6,17 @@
 #nullable enable
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.EMMA;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
+using DocumentFormat.OpenXml.Y2003.M04.EMMA;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.InkML
+namespace DocumentFormat.OpenXml.Y2003.InkML
 {
     /// <summary>
     /// <para>Defines the Ink Class.</para>
@@ -26,13 +26,13 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Context" /> <c>&lt;inkml:context></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Definitions" /> <c>&lt;inkml:definitions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Trace" /> <c>&lt;inkml:trace></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Context" /> <c>&lt;inkml:context></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Definitions" /> <c>&lt;inkml:definitions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Trace" /> <c>&lt;inkml:trace></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
     /// </remark>
     public partial class Ink : TypedOpenXmlPartRootElement
@@ -82,13 +82,13 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:ink");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Context>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Definitions>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Trace>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Context>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Definitions>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Trace>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.TraceGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.TraceView>();
             builder.AddElement<Ink>()
                 .AddAttribute("documentID", a => a.DocumentId, aBuilder =>
                 {
@@ -96,13 +96,13 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Definitions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Context), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Annotation), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Definitions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Context), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Trace), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.TraceGroup), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.TraceView), 0, 1)
             };
         }
 
@@ -223,9 +223,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>apply</para>
         /// <para>Represents the following attribute in the schema: apply</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>? Apply
+        public EnumValue<DocumentFormat.OpenXml.Y2003.InkML.TableApplyValues>? Apply
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.TableApplyValues>>();
             set => SetAttribute(value);
         }
 
@@ -233,9 +233,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>interpolation</para>
         /// <para>Represents the following attribute in the schema: interpolation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>? Interpolation
+        public EnumValue<DocumentFormat.OpenXml.Y2003.InkML.TableInterpolationValues>? Interpolation
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.TableInterpolationValues>>();
             set => SetAttribute(value);
         }
 
@@ -313,10 +313,10 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Bind" /> <c>&lt;inkml:bind></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Matrix" /> <c>&lt;inkml:matrix></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Table" /> <c>&lt;inkml:table></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Bind" /> <c>&lt;inkml:bind></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Matrix" /> <c>&lt;inkml:matrix></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Table" /> <c>&lt;inkml:table></c></description></item>
     /// </list>
     /// </remark>
     public partial class Mapping : TypedOpenXmlCompositeElement
@@ -369,9 +369,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.Y2003.InkML.MappingTypeValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.MappingTypeValues>>();
             set => SetAttribute(value);
         }
 
@@ -389,10 +389,10 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:mapping");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Bind>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Table>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Bind>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Mapping>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Table>();
             builder.AddElement<Mapping>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("type", a => a.Type)
@@ -404,16 +404,16 @@ namespace DocumentFormat.OpenXml.InkML
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Bind), 0, 0),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Bind), 0, 0),
                     new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Table), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Matrix), 1, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Table), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Matrix), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Mapping), 0, 0)
                 }
             };
         }
@@ -430,7 +430,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
     /// </list>
     /// </remark>
     public partial class Channel : TypedOpenXmlCompositeElement
@@ -493,9 +493,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.Y2003.InkML.ChannelDataTypeValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.ChannelDataTypeValues>>();
             set => SetAttribute(value);
         }
 
@@ -533,9 +533,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>orientation</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues>? Orientation
+        public EnumValue<DocumentFormat.OpenXml.Y2003.InkML.ChannelValueOrientationValues>? Orientation
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.ChannelValueOrientationValues>>();
             set => SetAttribute(value);
         }
 
@@ -563,7 +563,7 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:channel");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Mapping>();
             builder.AddElement<Channel>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("name", a => a.Name, aBuilder =>
@@ -571,7 +571,7 @@ namespace DocumentFormat.OpenXml.InkML
                     aBuilder.AddValidator(RequiredValidator.Instance);
                     aBuilder.AddUnion(union =>
                     {
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardChannelNameValues>>(EnumValidator.Instance);
                         union.AddValidator(StringValidator.Instance);
                     });
                 })
@@ -595,22 +595,22 @@ namespace DocumentFormat.OpenXml.InkML
                 {
                     aBuilder.AddUnion(union =>
                     {
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
                         union.AddValidator(StringValidator.Instance);
                     });
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Mapping), 0, 0)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("inkml:units"), true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
@@ -627,7 +627,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Channel" /> <c>&lt;inkml:channel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Channel" /> <c>&lt;inkml:channel></c></description></item>
     /// </list>
     /// </remark>
     public partial class IntermittentChannels : TypedOpenXmlCompositeElement
@@ -667,10 +667,10 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:intermittentChannels");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Channel>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Channel>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Channel), 0, 0)
             };
         }
 
@@ -742,7 +742,7 @@ namespace DocumentFormat.OpenXml.InkML
                     aBuilder.AddValidator(RequiredValidator.Instance);
                     aBuilder.AddUnion(union =>
                     {
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardChannelNameValues>>(EnumValidator.Instance);
                         union.AddValidator(StringValidator.Instance);
                     });
                 })
@@ -751,7 +751,7 @@ namespace DocumentFormat.OpenXml.InkML
                     aBuilder.AddValidator(RequiredValidator.Instance);
                     aBuilder.AddUnion(union =>
                     {
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelPropertyNameValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardChannelPropertyNameValues>>(EnumValidator.Instance);
                         union.AddValidator(StringValidator.Instance);
                     });
                 })
@@ -763,16 +763,16 @@ namespace DocumentFormat.OpenXml.InkML
                 {
                     aBuilder.AddUnion(union =>
                     {
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
                         union.AddValidator(StringValidator.Instance);
                     });
                 });
@@ -791,8 +791,8 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Channel" /> <c>&lt;inkml:channel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.IntermittentChannels" /> <c>&lt;inkml:intermittentChannels></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Channel" /> <c>&lt;inkml:channel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.IntermittentChannels" /> <c>&lt;inkml:intermittentChannels></c></description></item>
     /// </list>
     /// </remark>
     public partial class TraceFormat : TypedOpenXmlCompositeElement
@@ -845,14 +845,14 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:traceFormat");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Channel>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.IntermittentChannels>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Channel>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.IntermittentChannels>();
             builder.AddElement<TraceFormat>()
                 .AddAttribute("xml:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.IntermittentChannels), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Channel), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.IntermittentChannels), 0, 1)
             };
         }
 
@@ -1015,16 +1015,16 @@ namespace DocumentFormat.OpenXml.InkML
                 {
                     aBuilder.AddUnion(union =>
                     {
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
                         union.AddValidator(StringValidator.Instance);
                     });
                 });
@@ -1096,16 +1096,16 @@ namespace DocumentFormat.OpenXml.InkML
                 {
                     aBuilder.AddUnion(union =>
                     {
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
                         union.AddValidator(StringValidator.Instance);
                     });
                 });
@@ -1124,7 +1124,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.ChannelProperty" /> <c>&lt;inkml:channelProperty></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.ChannelProperty" /> <c>&lt;inkml:channelProperty></c></description></item>
     /// </list>
     /// </remark>
     public partial class ChannelProperties : TypedOpenXmlCompositeElement
@@ -1164,10 +1164,10 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:channelProperties");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.ChannelProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.ChannelProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperty), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.ChannelProperty), 0, 0)
             };
         }
 
@@ -1243,7 +1243,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Emma" /> <c>&lt;emma:emma></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Emma" /> <c>&lt;emma:emma></c></description></item>
     /// </list>
     /// </remark>
     public partial class AnnotationXml : TypedOpenXmlCompositeElement
@@ -1313,7 +1313,7 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:annotationXML");
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Emma>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Emma>();
             builder.AddElement<AnnotationXml>()
                 .AddAttribute("type", a => a.Type)
                 .AddAttribute("encoding", a => a.Encoding)
@@ -1323,7 +1323,7 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Emma), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Emma), 0, 1)
             };
         }
 
@@ -1334,9 +1334,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:emma = http://www.w3.org/2003/04/emma
         /// </remark>
-        public DocumentFormat.OpenXml.EMMA.Emma? Emma
+        public DocumentFormat.OpenXml.Y2003.M04.EMMA.Emma? Emma
         {
-            get => GetElement<DocumentFormat.OpenXml.EMMA.Emma>();
+            get => GetElement<DocumentFormat.OpenXml.Y2003.M04.EMMA.Emma>();
             set => SetElement(value);
         }
 
@@ -1352,8 +1352,8 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
     /// </list>
     /// </remark>
     public partial class BrushProperty : TypedOpenXmlCompositeElement
@@ -1423,15 +1423,15 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:brushProperty");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml>();
             builder.AddElement<BrushProperty>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
                     aBuilder.AddUnion(union =>
                     {
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardBrushPropertyNameValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardBrushPropertyNameValues>>(EnumValidator.Instance);
                         union.AddValidator(StringValidator.Instance);
                     });
                 })
@@ -1442,8 +1442,8 @@ namespace DocumentFormat.OpenXml.InkML
                     {
                         union.AddValidator<DecimalValue>(NumberValidator.Instance);
                         union.AddValidator<BooleanValue>(NumberValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.PenTipShapeValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.RasterOperationValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.PenTipShapeValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.RasterOperationValues>>(EnumValidator.Instance);
                         union.AddValidator(StringValidator.Instance);
                     });
                 })
@@ -1451,23 +1451,23 @@ namespace DocumentFormat.OpenXml.InkML
                 {
                     aBuilder.AddUnion(union =>
                     {
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerLengthUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerTimeUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerMassForceUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerAngleUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardOtherUnitsValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.StandardPerOtherUnitsValues>>(EnumValidator.Instance);
                         union.AddValidator(StringValidator.Instance);
                     });
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Annotation), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml), 0, 0)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("inkml:units"), true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
@@ -1484,7 +1484,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
     /// </list>
     /// </remark>
     public partial class Canvas : TypedOpenXmlCompositeElement
@@ -1547,7 +1547,7 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:canvas");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.TraceFormat>();
             builder.AddElement<Canvas>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("traceFormatRef", a => a.TraceFormatRef, aBuilder =>
@@ -1556,7 +1556,7 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.TraceFormat), 0, 1)
             };
         }
 
@@ -1567,9 +1567,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
+        public DocumentFormat.OpenXml.Y2003.InkML.TraceFormat? TraceFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Y2003.InkML.TraceFormat>();
             set => SetElement(value);
         }
 
@@ -1585,7 +1585,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
     /// </list>
     /// </remark>
     public partial class CanvasTransform : TypedOpenXmlCompositeElement
@@ -1648,13 +1648,13 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:canvasTransform");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Mapping>();
             builder.AddElement<CanvasTransform>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("invertible", a => a.Invertible);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 1, 2)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Mapping), 1, 2)
             };
         }
 
@@ -1670,12 +1670,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.ActiveArea" /> <c>&lt;inkml:activeArea></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.ChannelProperties" /> <c>&lt;inkml:channelProperties></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Latency" /> <c>&lt;inkml:latency></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.SampleRate" /> <c>&lt;inkml:sampleRate></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.SourceProperty" /> <c>&lt;inkml:srcProperty></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.ActiveArea" /> <c>&lt;inkml:activeArea></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.ChannelProperties" /> <c>&lt;inkml:channelProperties></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Latency" /> <c>&lt;inkml:latency></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.SampleRate" /> <c>&lt;inkml:sampleRate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.SourceProperty" /> <c>&lt;inkml:srcProperty></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
     /// </list>
     /// </remark>
     public partial class InkSource : TypedOpenXmlCompositeElement
@@ -1778,12 +1778,12 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:inkSource");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.ActiveArea>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.ChannelProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Latency>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.SampleRate>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.SourceProperty>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.ActiveArea>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.ChannelProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Latency>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.SampleRate>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.SourceProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.TraceFormat>();
             builder.AddElement<InkSource>()
                 .AddAttribute("xml:id", a => a.Id, aBuilder =>
                 {
@@ -1799,12 +1799,12 @@ namespace DocumentFormat.OpenXml.InkML
                 .AddAttribute("description", a => a.Description);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SampleRate), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Latency), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ActiveArea), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SourceProperty), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperties), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.TraceFormat), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.SampleRate), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Latency), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.ActiveArea), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.SourceProperty), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.ChannelProperties), 0, 1)
             };
         }
 
@@ -1815,9 +1815,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
+        public DocumentFormat.OpenXml.Y2003.InkML.TraceFormat? TraceFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Y2003.InkML.TraceFormat>();
             set => SetElement(value);
         }
 
@@ -1828,9 +1828,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public DocumentFormat.OpenXml.InkML.SampleRate? SampleRate
+        public DocumentFormat.OpenXml.Y2003.InkML.SampleRate? SampleRate
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.SampleRate>();
+            get => GetElement<DocumentFormat.OpenXml.Y2003.InkML.SampleRate>();
             set => SetElement(value);
         }
 
@@ -1841,9 +1841,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public DocumentFormat.OpenXml.InkML.Latency? Latency
+        public DocumentFormat.OpenXml.Y2003.InkML.Latency? Latency
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.Latency>();
+            get => GetElement<DocumentFormat.OpenXml.Y2003.InkML.Latency>();
             set => SetElement(value);
         }
 
@@ -1854,9 +1854,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public DocumentFormat.OpenXml.InkML.ActiveArea? ActiveArea
+        public DocumentFormat.OpenXml.Y2003.InkML.ActiveArea? ActiveArea
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.ActiveArea>();
+            get => GetElement<DocumentFormat.OpenXml.Y2003.InkML.ActiveArea>();
             set => SetElement(value);
         }
 
@@ -1872,9 +1872,9 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.BrushProperty" /> <c>&lt;inkml:brushProperty></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.BrushProperty" /> <c>&lt;inkml:brushProperty></c></description></item>
     /// </list>
     /// </remark>
     public partial class Brush : TypedOpenXmlCompositeElement
@@ -1937,9 +1937,9 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:brush");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.BrushProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.BrushProperty>();
             builder.AddElement<Brush>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("brushRef", a => a.BrushRef, aBuilder =>
@@ -1948,9 +1948,9 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.BrushProperty), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Annotation), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.BrushProperty), 0, 0)
             };
         }
 
@@ -2091,9 +2091,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.Y2003.InkML.TraceTypeValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.TraceTypeValues>>();
             set => SetAttribute(value);
         }
 
@@ -2101,9 +2101,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>continuation</para>
         /// <para>Represents the following attribute in the schema: continuation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues>? Continuation
+        public EnumValue<DocumentFormat.OpenXml.Y2003.InkML.TraceContinuationValues>? Continuation
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.InkML.TraceContinuationValues>>();
             set => SetAttribute(value);
         }
 
@@ -2193,10 +2193,10 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Trace" /> <c>&lt;inkml:trace></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Trace" /> <c>&lt;inkml:trace></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
     /// </list>
     /// </remark>
     public partial class TraceGroup : TypedOpenXmlCompositeElement
@@ -2269,10 +2269,10 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:traceGroup");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Trace>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Trace>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.TraceGroup>();
             builder.AddElement<TraceGroup>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
@@ -2285,10 +2285,10 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Annotation), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Trace), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.TraceGroup), 0, 1)
             };
         }
 
@@ -2304,9 +2304,9 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
     /// </remark>
     public partial class TraceView : TypedOpenXmlCompositeElement
@@ -2399,9 +2399,9 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:traceView");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.TraceView>();
             builder.AddElement<TraceView>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
@@ -2416,9 +2416,9 @@ namespace DocumentFormat.OpenXml.InkML
                 .AddAttribute("to", a => a.To);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Annotation), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.AnnotationXml), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.TraceView), 0, 1)
             };
         }
 
@@ -2434,12 +2434,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Brush" /> <c>&lt;inkml:brush></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Canvas" /> <c>&lt;inkml:canvas></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.CanvasTransform" /> <c>&lt;inkml:canvasTransform></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.InkSource" /> <c>&lt;inkml:inkSource></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Timestamp" /> <c>&lt;inkml:timestamp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Brush" /> <c>&lt;inkml:brush></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Canvas" /> <c>&lt;inkml:canvas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.CanvasTransform" /> <c>&lt;inkml:canvasTransform></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.InkSource" /> <c>&lt;inkml:inkSource></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Timestamp" /> <c>&lt;inkml:timestamp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
     /// </list>
     /// </remark>
     public partial class Context : TypedOpenXmlCompositeElement
@@ -2562,12 +2562,12 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:context");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Brush>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Canvas>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.CanvasTransform>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.InkSource>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Timestamp>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Brush>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Canvas>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.CanvasTransform>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.InkSource>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Timestamp>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.TraceFormat>();
             builder.AddElement<Context>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
@@ -2600,12 +2600,12 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.CanvasTransform), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.InkSource), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Timestamp), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Canvas), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.CanvasTransform), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.TraceFormat), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.InkSource), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Brush), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Timestamp), 0, 1)
             };
         }
 
@@ -2616,9 +2616,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public DocumentFormat.OpenXml.InkML.Canvas? Canvas
+        public DocumentFormat.OpenXml.Y2003.InkML.Canvas? Canvas
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.Canvas>();
+            get => GetElement<DocumentFormat.OpenXml.Y2003.InkML.Canvas>();
             set => SetElement(value);
         }
 
@@ -2629,9 +2629,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public DocumentFormat.OpenXml.InkML.CanvasTransform? CanvasTransform
+        public DocumentFormat.OpenXml.Y2003.InkML.CanvasTransform? CanvasTransform
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.CanvasTransform>();
+            get => GetElement<DocumentFormat.OpenXml.Y2003.InkML.CanvasTransform>();
             set => SetElement(value);
         }
 
@@ -2642,9 +2642,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
+        public DocumentFormat.OpenXml.Y2003.InkML.TraceFormat? TraceFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
+            get => GetElement<DocumentFormat.OpenXml.Y2003.InkML.TraceFormat>();
             set => SetElement(value);
         }
 
@@ -2655,9 +2655,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public DocumentFormat.OpenXml.InkML.InkSource? InkSource
+        public DocumentFormat.OpenXml.Y2003.InkML.InkSource? InkSource
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.InkSource>();
+            get => GetElement<DocumentFormat.OpenXml.Y2003.InkML.InkSource>();
             set => SetElement(value);
         }
 
@@ -2668,9 +2668,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public DocumentFormat.OpenXml.InkML.Brush? Brush
+        public DocumentFormat.OpenXml.Y2003.InkML.Brush? Brush
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.Brush>();
+            get => GetElement<DocumentFormat.OpenXml.Y2003.InkML.Brush>();
             set => SetElement(value);
         }
 
@@ -2681,9 +2681,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public DocumentFormat.OpenXml.InkML.Timestamp? Timestamp
+        public DocumentFormat.OpenXml.Y2003.InkML.Timestamp? Timestamp
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.Timestamp>();
+            get => GetElement<DocumentFormat.OpenXml.Y2003.InkML.Timestamp>();
             set => SetElement(value);
         }
 
@@ -2699,17 +2699,17 @@ namespace DocumentFormat.OpenXml.InkML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Brush" /> <c>&lt;inkml:brush></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Canvas" /> <c>&lt;inkml:canvas></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.CanvasTransform" /> <c>&lt;inkml:canvasTransform></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Context" /> <c>&lt;inkml:context></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.InkSource" /> <c>&lt;inkml:inkSource></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Timestamp" /> <c>&lt;inkml:timestamp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Trace" /> <c>&lt;inkml:trace></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Brush" /> <c>&lt;inkml:brush></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Canvas" /> <c>&lt;inkml:canvas></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.CanvasTransform" /> <c>&lt;inkml:canvasTransform></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Context" /> <c>&lt;inkml:context></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.InkSource" /> <c>&lt;inkml:inkSource></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Timestamp" /> <c>&lt;inkml:timestamp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.Trace" /> <c>&lt;inkml:trace></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
     /// </remark>
     public partial class Definitions : TypedOpenXmlCompositeElement
@@ -2749,30 +2749,30 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("inkml:definitions");
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Brush>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Canvas>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.CanvasTransform>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Context>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.InkSource>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Timestamp>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.Trace>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Brush>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Canvas>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.CanvasTransform>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Context>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.InkSource>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Mapping>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Timestamp>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.Trace>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.TraceFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.TraceGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.InkML.TraceView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.CanvasTransform), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Context), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.InkSource), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Timestamp), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Brush), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Canvas), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.CanvasTransform), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Context), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.InkSource), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Mapping), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Timestamp), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.Trace), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.TraceFormat), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.TraceGroup), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.InkML.TraceView), 0, 1)
             };
         }
 

@@ -17,7 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2013.PowerPoint
+namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main
 {
     /// <summary>
     /// <para>Defines the PresetTransition Class.</para>
@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier" /> <c>&lt;p15:parentCm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ParentCommentIdentifier" /> <c>&lt;p15:parentCm></c></description></item>
     /// </list>
     /// </remark>
     public partial class ThreadingInfo : TypedOpenXmlCompositeElement
@@ -193,12 +193,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema("p15:threadingInfo");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ParentCommentIdentifier>();
             builder.AddElement<ThreadingInfo>()
                 .AddAttribute("timeZoneBias", a => a.TimeZoneBias);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ParentCommentIdentifier), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -209,9 +209,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <remark>
         /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier? ParentCommentIdentifier
+        public DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ParentCommentIdentifier? ParentCommentIdentifier
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ParentCommentIdentifier>();
             set => SetElement(value);
         }
 
@@ -227,8 +227,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
     /// </list>
     /// </remark>
     public partial class SlideGuideList : ExtendedGuideList
@@ -271,8 +271,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide), 0, 0, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtendedGuide), 0, 0, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -288,8 +288,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
     /// </list>
     /// </remark>
     public partial class NotesGuideList : ExtendedGuideList
@@ -332,8 +332,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide), 0, 0, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtendedGuide), 0, 0, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -349,8 +349,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class ExtendedGuideList : TypedOpenXmlCompositeElement
@@ -389,8 +389,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtendedGuide>();
         }
     }
 
@@ -715,8 +715,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType" /> <c>&lt;p15:clr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ColorType" /> <c>&lt;p15:clr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class ExtendedGuide : TypedOpenXmlCompositeElement
@@ -807,8 +807,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema("p15:guide");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ColorType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtensionList>();
             builder.AddElement<ExtendedGuide>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -823,8 +823,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
                 .AddAttribute("userDrawn", a => a.IsUserDrawn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ColorType), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -835,9 +835,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <remark>
         /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType? ColorType
+        public DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ColorType? ColorType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ColorType>();
             set => SetElement(value);
         }
 
@@ -848,9 +848,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// <remark>
         /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main.ExtensionList>();
             set => SetElement(value);
         }
 

@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility";
-        private DocumentFormat.OpenXml.Office2010.CustomUI.CustomUI? _rootElement;
+        private DocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.CustomUI? _rootElement;
 
         /// <summary>
         /// Creates an instance of the RibbonAndBackstageCustomizationsPart OpenXmlType
@@ -34,13 +34,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2010.CustomUI.CustomUI CustomUI
+        public DocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.CustomUI CustomUI
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2010.CustomUI.CustomUI>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.CustomUI>();
                 }
 
                 return _rootElement!;
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2010.CustomUI.CustomUI;
+                _rootElement = value as DocumentFormat.OpenXml.Office.Y2009.M07.CustomUI.CustomUI;
             }
         }
 

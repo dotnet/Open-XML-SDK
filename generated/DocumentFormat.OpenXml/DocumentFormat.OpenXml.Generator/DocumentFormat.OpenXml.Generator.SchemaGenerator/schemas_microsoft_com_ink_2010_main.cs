@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2010.Ink
+namespace DocumentFormat.OpenXml.Ink.Y2010.Main
 {
     /// <summary>
     /// <para>Defines the ContextNode Class.</para>
@@ -24,9 +24,9 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Ink.SourceLink" /> <c>&lt;msink:sourceLink></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Ink.DestinationLink" /> <c>&lt;msink:destinationLink></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty" /> <c>&lt;msink:property></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Ink.Y2010.Main.SourceLink" /> <c>&lt;msink:sourceLink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Ink.Y2010.Main.DestinationLink" /> <c>&lt;msink:destinationLink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Ink.Y2010.Main.ContextNodeProperty" /> <c>&lt;msink:property></c></description></item>
     /// </list>
     /// </remark>
     public partial class ContextNode : TypedOpenXmlCompositeElement
@@ -276,9 +276,9 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("msink:context");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.SourceLink>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.DestinationLink>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Ink.Y2010.Main.SourceLink>();
+            builder.AddChild<DocumentFormat.OpenXml.Ink.Y2010.Main.DestinationLink>();
+            builder.AddChild<DocumentFormat.OpenXml.Ink.Y2010.Main.ContextNodeProperty>();
             builder.AddElement<ContextNode>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -289,7 +289,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
                     aBuilder.AddValidator(RequiredValidator.Instance);
                     aBuilder.AddUnion(union =>
                     {
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownContextNodeTypeValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Ink.Y2010.Main.KnownContextNodeTypeValues>>(EnumValidator.Instance);
                         union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
                     });
                 })
@@ -353,7 +353,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
                 {
                     aBuilder.AddUnion(union =>
                     {
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownSemanticTypeValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Ink.Y2010.Main.KnownSemanticTypeValues>>(EnumValidator.Instance);
                         union.AddValidator<UInt32Value>(NumberValidator.Instance);
                     });
                 })
@@ -364,9 +364,9 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.SourceLink), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.DestinationLink), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Ink.Y2010.Main.ContextNodeProperty), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Ink.Y2010.Main.SourceLink), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Ink.Y2010.Main.DestinationLink), 0, 0)
             };
         }
 
@@ -492,9 +492,9 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>direction</para>
         /// <para>Represents the following attribute in the schema: direction</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>? Direction
+        public EnumValue<DocumentFormat.OpenXml.Ink.Y2010.Main.LinkDirectionValues>? Direction
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Ink.Y2010.Main.LinkDirectionValues>>();
             set => SetAttribute(value);
         }
 

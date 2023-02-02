@@ -4106,7 +4106,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SparklineTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "type"
         },
@@ -4120,7 +4120,7 @@
         {
           "QName": ":displayEmptyCellsAs",
           "PropertyName": "DisplayEmptyCellsAs",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DisplayBlanksAsValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "displayEmptyCellsAs"
         },
@@ -4183,14 +4183,14 @@
         {
           "QName": ":minAxisType",
           "PropertyName": "MinAxisType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SparklineAxisMinMaxValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "minAxisType"
         },
         {
           "QName": ":maxAxisType",
           "PropertyName": "MaxAxisType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SparklineAxisMinMaxValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "maxAxisType"
         },

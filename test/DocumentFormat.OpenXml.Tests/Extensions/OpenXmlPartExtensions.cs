@@ -184,7 +184,7 @@ namespace DocumentFormat.OpenXml.Tests
                     }
                     else if (part.IsInkPart())
                     {
-                        return new InkML.Ink(xmlDoc.DocumentElement.OuterXml);
+                        return new Y2003.InkML.Ink(xmlDoc.DocumentElement.OuterXml);
                     }
                 }
             }

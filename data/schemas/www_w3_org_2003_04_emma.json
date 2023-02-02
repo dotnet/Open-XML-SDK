@@ -135,7 +135,7 @@
         {
           "QName": "emma:time-ref-anchor-point",
           "PropertyName": "TimeReferenceAnchorPoint",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.AnchorPointValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues\u003E",
           "PropertyComments": "time-ref-anchor-point"
         }
       ],
@@ -294,7 +294,7 @@
         {
           "QName": "emma:time-ref-anchor-point",
           "PropertyName": "TimeReferenceAnchorPoint",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.AnchorPointValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues\u003E",
           "PropertyComments": "time-ref-anchor-point"
         },
         {
@@ -312,7 +312,7 @@
         {
           "QName": "emma:medium",
           "PropertyName": "Medium",
-          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.EMMA.MediumValues\u003E\u003E",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues\u003E\u003E",
           "PropertyComments": "medium"
         },
         {
@@ -454,7 +454,7 @@
         {
           "QName": ":disjunction-type",
           "PropertyName": "DisjunctionType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.DisjunctionTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.M04.EMMA.DisjunctionTypeValues\u003E",
           "PropertyComments": "disjunction-type"
         },
         {
@@ -576,7 +576,7 @@
         {
           "QName": "emma:time-ref-anchor-point",
           "PropertyName": "TimeReferenceAnchorPoint",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.AnchorPointValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues\u003E",
           "PropertyComments": "time-ref-anchor-point"
         },
         {
@@ -594,7 +594,7 @@
         {
           "QName": "emma:medium",
           "PropertyName": "Medium",
-          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.EMMA.MediumValues\u003E\u003E",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues\u003E\u003E",
           "PropertyComments": "medium"
         },
         {
@@ -841,7 +841,7 @@
         {
           "QName": "emma:time-ref-anchor-point",
           "PropertyName": "TimeReferenceAnchorPoint",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.AnchorPointValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues\u003E",
           "PropertyComments": "time-ref-anchor-point"
         },
         {
@@ -859,7 +859,7 @@
         {
           "QName": "emma:medium",
           "PropertyName": "Medium",
-          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.EMMA.MediumValues\u003E\u003E",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues\u003E\u003E",
           "PropertyComments": "medium"
         },
         {
@@ -1112,7 +1112,7 @@
         {
           "QName": "emma:time-ref-anchor-point",
           "PropertyName": "TimeReferenceAnchorPoint",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.AnchorPointValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues\u003E",
           "PropertyComments": "time-ref-anchor-point"
         },
         {
@@ -1130,7 +1130,7 @@
         {
           "QName": "emma:medium",
           "PropertyName": "Medium",
-          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.EMMA.MediumValues\u003E\u003E",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues\u003E\u003E",
           "PropertyComments": "medium"
         },
         {
@@ -1566,7 +1566,7 @@
         {
           "QName": "emma:endpoint-role",
           "PropertyName": "EndpointRole",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.EMMA.EndPointRoleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.M04.EMMA.EndPointRoleValues\u003E",
           "PropertyComments": "endpoint-role"
         },
         {
@@ -1614,7 +1614,7 @@
         {
           "QName": "emma:medium",
           "PropertyName": "Medium",
-          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.EMMA.MediumValues\u003E\u003E",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues\u003E\u003E",
           "PropertyComments": "medium"
         },
         {
@@ -1862,7 +1862,7 @@
         {
           "QName": "emma:medium",
           "PropertyName": "Medium",
-          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.EMMA.MediumValues\u003E\u003E",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues\u003E\u003E",
           "PropertyComments": "medium"
         },
         {

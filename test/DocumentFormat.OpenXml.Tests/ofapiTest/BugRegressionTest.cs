@@ -266,7 +266,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            DocumentFormat.OpenXml.Office2010.Ink.ContextNode cn = new DocumentFormat.OpenXml.Office2010.Ink.ContextNode() { Type = "root" };
+            DocumentFormat.OpenXml.Ink.Y2010.Main.ContextNode cn = new DocumentFormat.OpenXml.Ink.Y2010.Main.ContextNode() { Type = "root" };
 
             cn.RotatedBoundingBox = new ListValue<StringValue>();
             cn.RotatedBoundingBox.Items.Add("aaa");
@@ -339,12 +339,12 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties fp = new DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties();
+            DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.FormControlProperties fp = new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.FormControlProperties();
 
             var errors = validator.Validate(fp);
             Assert.Empty(errors);
 
-            fp.AppendChild(new DocumentFormat.OpenXml.Office2010.Excel.BorderColor());
+            fp.AppendChild(new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.BorderColor());
             errors = validator.Validate(fp);
             Assert.Single(errors);
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);

@@ -9,7 +9,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office2013.WebExtension;
+using DocumentFormat.OpenXml.Office.WebExtensions.WebExtensions.Y2010.M11;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -17,7 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
+namespace DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11
 {
     /// <summary>
     /// <para>Defines the Taskpanes Class.</para>
@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane" /> <c>&lt;wetp:taskpane></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.WebExtensionTaskpane" /> <c>&lt;wetp:taskpane></c></description></item>
     /// </list>
     /// </remark>
     public partial class Taskpanes : TypedOpenXmlPartRootElement
@@ -68,10 +68,10 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
             base.ConfigureMetadata(builder);
             builder.SetSchema("wetp:taskpanes");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.WebExtensionTaskpane>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane), 0, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.WebExtensionTaskpane), 0, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -228,8 +228,8 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList" /> <c>&lt;wetp:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference" /> <c>&lt;wetp:webextensionref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.OfficeArtExtensionList" /> <c>&lt;wetp:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.WebExtensionPartReference" /> <c>&lt;wetp:webextensionref></c></description></item>
     /// </list>
     /// </remark>
     public partial class WebExtensionTaskpane : TypedOpenXmlCompositeElement
@@ -320,8 +320,8 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
             base.ConfigureMetadata(builder);
             builder.SetSchema("wetp:taskpane");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.WebExtensionPartReference>();
             builder.AddElement<WebExtensionTaskpane>()
                 .AddAttribute("dockstate", a => a.DockState, aBuilder =>
                 {
@@ -342,8 +342,8 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
                 .AddAttribute("locked", a => a.Locked);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.WebExtensionPartReference), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -354,9 +354,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         /// <remark>
         /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference? WebExtensionPartReference
+        public DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.WebExtensionPartReference? WebExtensionPartReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference>();
+            get => GetElement<DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.WebExtensionPartReference>();
             set => SetElement(value);
         }
 
@@ -367,9 +367,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         /// <remark>
         /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

@@ -3233,12 +3233,12 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DspInDiagramTest()
         {
-            DocumentFormat.OpenXml.Office.Drawing.Drawing element = new DocumentFormat.OpenXml.Office.Drawing.Drawing();
-            element.ShapeTree = new DocumentFormat.OpenXml.Office.Drawing.ShapeTree(
-                                                new DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties(
-                                                        new DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties() { Id = 0, Name = string.Empty },
-                                                        new DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties()),
-                                                new DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties());
+            DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Drawing element = new DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Drawing();
+            element.ShapeTree = new DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeTree(
+                                                new DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeNonVisualProperties(
+                                                        new DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingProperties() { Id = 0, Name = string.Empty },
+                                                        new DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualGroupDrawingShapeProperties()),
+                                                new DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeProperties());
 
             // ***** good case ******
             var actual = O14Validator.Validate(element);

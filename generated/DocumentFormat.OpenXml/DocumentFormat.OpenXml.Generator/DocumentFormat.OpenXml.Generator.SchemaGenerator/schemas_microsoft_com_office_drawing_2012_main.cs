@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2013.Drawing
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2012.Main
 {
     /// <summary>
     /// <para>Defines the BackgroundProperties Class.</para>
@@ -64,9 +64,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>targetScreenSize, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: targetScreenSize</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>? TargetScreenSize
+        public EnumValue<DocumentFormat.OpenXml.Office.Drawing.Y2012.Main.TargetScreenSize>? TargetScreenSize
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Drawing.Y2012.Main.TargetScreenSize>>();
             set => SetAttribute(value);
         }
 

@@ -16,7 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2010.Drawing
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2010.Main
 {
     /// <summary>
     /// <para>Defines the CameraTool Class.</para>
@@ -153,9 +153,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Transform2D" /> <c>&lt;a14:xfrm></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties" /> <c>&lt;a14:nvContentPartPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.Transform2D" /> <c>&lt;a14:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualContentPartProperties" /> <c>&lt;a14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class GvmlContentPart : TypedOpenXmlCompositeElement
@@ -219,9 +219,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("a14:contentPart");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualContentPartProperties>();
             builder.AddElement<GvmlContentPart>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -233,9 +233,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -246,9 +246,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties? NonVisualContentPartProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualContentPartProperties? NonVisualContentPartProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualContentPartProperties>();
             set => SetElement(value);
         }
 
@@ -259,9 +259,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Transform2D? Transform2D
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Transform2D>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.Transform2D>();
             set => SetElement(value);
         }
 
@@ -272,9 +272,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -1064,7 +1064,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer" /> <c>&lt;a14:imgLayer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ImageLayer" /> <c>&lt;a14:imgLayer></c></description></item>
     /// </list>
     /// </remark>
     public partial class ImageProperties : TypedOpenXmlCompositeElement
@@ -1105,10 +1105,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("a14:imgProps");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ImageLayer>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ImageLayer), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1119,9 +1119,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer? ImageLayer
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ImageLayer? ImageLayer
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ImageLayer>();
             set => SetElement(value);
         }
 
@@ -1265,7 +1265,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class ContentPartLocks : TypedOpenXmlCompositeElement
@@ -1406,7 +1406,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("a14:cpLocks");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList>();
             builder.AddElement<ContentPartLocks>()
                 .AddAttribute("noGrp", a => a.NoGrouping)
                 .AddAttribute("noSelect", a => a.NoSelection)
@@ -1420,7 +1420,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
                 .AddAttribute("noChangeShapeType", a => a.NoChangeShapeType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1431,9 +1431,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -2795,8 +2795,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.BackgroundMark" /> <c>&lt;a14:backgroundMark></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark" /> <c>&lt;a14:foregroundMark></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.BackgroundMark" /> <c>&lt;a14:backgroundMark></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ForegroundMark" /> <c>&lt;a14:foregroundMark></c></description></item>
     /// </list>
     /// </remark>
     public partial class BackgroundRemoval : TypedOpenXmlCompositeElement
@@ -2877,8 +2877,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("a14:backgroundRemoval");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.BackgroundMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.BackgroundMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ForegroundMark>();
             builder.AddElement<BackgroundRemoval>()
                 .AddAttribute("t", a => a.MarqueeTop, aBuilder =>
                 {
@@ -2902,8 +2902,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark), 0, 0, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.BackgroundMark), 0, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ForegroundMark), 0, 0, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.BackgroundMark), 0, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3093,33 +3093,33 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval" /> <c>&lt;a14:backgroundRemoval></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur" /> <c>&lt;a14:artisticBlur></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast" /> <c>&lt;a14:brightnessContrast></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement" /> <c>&lt;a14:artisticCement></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch" /> <c>&lt;a14:artisticChalkSketch></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature" /> <c>&lt;a14:colorTemperature></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching" /> <c>&lt;a14:artisticCrisscrossEtching></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout" /> <c>&lt;a14:artisticCutout></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain" /> <c>&lt;a14:artisticFilmGrain></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass" /> <c>&lt;a14:artisticGlass></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused" /> <c>&lt;a14:artisticGlowDiffused></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges" /> <c>&lt;a14:artisticGlowEdges></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen" /> <c>&lt;a14:artisticLightScreen></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing" /> <c>&lt;a14:artisticLineDrawing></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker" /> <c>&lt;a14:artisticMarker></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles" /> <c>&lt;a14:artisticMosiaicBubbles></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush" /> <c>&lt;a14:artisticPaintBrush></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes" /> <c>&lt;a14:artisticPaintStrokes></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth" /> <c>&lt;a14:artisticPastelsSmooth></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale" /> <c>&lt;a14:artisticPencilGrayscale></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch" /> <c>&lt;a14:artisticPencilSketch></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy" /> <c>&lt;a14:artisticPhotocopy></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap" /> <c>&lt;a14:artisticPlasticWrap></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Saturation" /> <c>&lt;a14:saturation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften" /> <c>&lt;a14:sharpenSoften></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer" /> <c>&lt;a14:artisticTexturizer></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge" /> <c>&lt;a14:artisticWatercolorSponge></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.BackgroundRemoval" /> <c>&lt;a14:backgroundRemoval></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticBlur" /> <c>&lt;a14:artisticBlur></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.BrightnessContrast" /> <c>&lt;a14:brightnessContrast></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCement" /> <c>&lt;a14:artisticCement></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticChalkSketch" /> <c>&lt;a14:artisticChalkSketch></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ColorTemperature" /> <c>&lt;a14:colorTemperature></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCrisscrossEtching" /> <c>&lt;a14:artisticCrisscrossEtching></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCutout" /> <c>&lt;a14:artisticCutout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticFilmGrain" /> <c>&lt;a14:artisticFilmGrain></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlass" /> <c>&lt;a14:artisticGlass></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlowDiffused" /> <c>&lt;a14:artisticGlowDiffused></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlowEdges" /> <c>&lt;a14:artisticGlowEdges></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticLightScreen" /> <c>&lt;a14:artisticLightScreen></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticLineDrawing" /> <c>&lt;a14:artisticLineDrawing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticMarker" /> <c>&lt;a14:artisticMarker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticMosaicBubbles" /> <c>&lt;a14:artisticMosiaicBubbles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPaintBrush" /> <c>&lt;a14:artisticPaintBrush></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPaintStrokes" /> <c>&lt;a14:artisticPaintStrokes></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPastelsSmooth" /> <c>&lt;a14:artisticPastelsSmooth></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPencilGrayscale" /> <c>&lt;a14:artisticPencilGrayscale></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPencilSketch" /> <c>&lt;a14:artisticPencilSketch></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPhotocopy" /> <c>&lt;a14:artisticPhotocopy></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPlasticWrap" /> <c>&lt;a14:artisticPlasticWrap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.Saturation" /> <c>&lt;a14:saturation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.SharpenSoften" /> <c>&lt;a14:sharpenSoften></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticTexturizer" /> <c>&lt;a14:artisticTexturizer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticWatercolorSponge" /> <c>&lt;a14:artisticWatercolorSponge></c></description></item>
     /// </list>
     /// </remark>
     public partial class ImageEffect : TypedOpenXmlCompositeElement
@@ -3170,64 +3170,64 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("a14:imgEffect");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Saturation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.BackgroundRemoval>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticBlur>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.BrightnessContrast>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCement>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticChalkSketch>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ColorTemperature>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCrisscrossEtching>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCutout>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticFilmGrain>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlass>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlowDiffused>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlowEdges>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticLightScreen>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticLineDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticMarker>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticMosaicBubbles>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPaintBrush>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPaintStrokes>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPastelsSmooth>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPencilGrayscale>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPencilSketch>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPhotocopy>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPlasticWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.Saturation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.SharpenSoften>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticTexturizer>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticWatercolorSponge>();
             builder.AddElement<ImageEffect>()
                 .AddAttribute("visible", a => a.Visible);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Saturation), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticBlur), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCement), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticChalkSketch), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCrisscrossEtching), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCutout), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticFilmGrain), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlass), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlowDiffused), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlowEdges), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticLightScreen), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticLineDrawing), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticMarker), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticMosaicBubbles), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPaintStrokes), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPaintBrush), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPastelsSmooth), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPencilGrayscale), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPencilSketch), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPhotocopy), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPlasticWrap), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticTexturizer), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticWatercolorSponge), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.BackgroundRemoval), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.BrightnessContrast), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ColorTemperature), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.Saturation), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.SharpenSoften), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3238,9 +3238,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur? ArtisticBlur
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticBlur? ArtisticBlur
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticBlur>();
             set => SetElement(value);
         }
 
@@ -3251,9 +3251,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement? ArtisticCement
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCement? ArtisticCement
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCement>();
             set => SetElement(value);
         }
 
@@ -3264,9 +3264,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch? ArtisticChalkSketch
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticChalkSketch? ArtisticChalkSketch
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticChalkSketch>();
             set => SetElement(value);
         }
 
@@ -3277,9 +3277,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching? ArtisticCrisscrossEtching
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCrisscrossEtching? ArtisticCrisscrossEtching
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCrisscrossEtching>();
             set => SetElement(value);
         }
 
@@ -3290,9 +3290,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout? ArtisticCutout
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCutout? ArtisticCutout
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticCutout>();
             set => SetElement(value);
         }
 
@@ -3303,9 +3303,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain? ArtisticFilmGrain
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticFilmGrain? ArtisticFilmGrain
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticFilmGrain>();
             set => SetElement(value);
         }
 
@@ -3316,9 +3316,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass? ArtisticGlass
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlass? ArtisticGlass
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlass>();
             set => SetElement(value);
         }
 
@@ -3329,9 +3329,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused? ArtisticGlowDiffused
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlowDiffused? ArtisticGlowDiffused
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlowDiffused>();
             set => SetElement(value);
         }
 
@@ -3342,9 +3342,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges? ArtisticGlowEdges
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlowEdges? ArtisticGlowEdges
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticGlowEdges>();
             set => SetElement(value);
         }
 
@@ -3355,9 +3355,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen? ArtisticLightScreen
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticLightScreen? ArtisticLightScreen
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticLightScreen>();
             set => SetElement(value);
         }
 
@@ -3368,9 +3368,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing? ArtisticLineDrawing
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticLineDrawing? ArtisticLineDrawing
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticLineDrawing>();
             set => SetElement(value);
         }
 
@@ -3381,9 +3381,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker? ArtisticMarker
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticMarker? ArtisticMarker
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticMarker>();
             set => SetElement(value);
         }
 
@@ -3394,9 +3394,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles? ArtisticMosaicBubbles
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticMosaicBubbles? ArtisticMosaicBubbles
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticMosaicBubbles>();
             set => SetElement(value);
         }
 
@@ -3407,9 +3407,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes? ArtisticPaintStrokes
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPaintStrokes? ArtisticPaintStrokes
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPaintStrokes>();
             set => SetElement(value);
         }
 
@@ -3420,9 +3420,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush? ArtisticPaintBrush
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPaintBrush? ArtisticPaintBrush
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPaintBrush>();
             set => SetElement(value);
         }
 
@@ -3433,9 +3433,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth? ArtisticPastelsSmooth
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPastelsSmooth? ArtisticPastelsSmooth
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPastelsSmooth>();
             set => SetElement(value);
         }
 
@@ -3446,9 +3446,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale? ArtisticPencilGrayscale
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPencilGrayscale? ArtisticPencilGrayscale
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPencilGrayscale>();
             set => SetElement(value);
         }
 
@@ -3459,9 +3459,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch? ArtisticPencilSketch
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPencilSketch? ArtisticPencilSketch
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPencilSketch>();
             set => SetElement(value);
         }
 
@@ -3472,9 +3472,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy? ArtisticPhotocopy
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPhotocopy? ArtisticPhotocopy
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPhotocopy>();
             set => SetElement(value);
         }
 
@@ -3485,9 +3485,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap? ArtisticPlasticWrap
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPlasticWrap? ArtisticPlasticWrap
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticPlasticWrap>();
             set => SetElement(value);
         }
 
@@ -3498,9 +3498,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer? ArtisticTexturizer
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticTexturizer? ArtisticTexturizer
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticTexturizer>();
             set => SetElement(value);
         }
 
@@ -3511,9 +3511,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge? ArtisticWatercolorSponge
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticWatercolorSponge? ArtisticWatercolorSponge
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ArtisticWatercolorSponge>();
             set => SetElement(value);
         }
 
@@ -3524,9 +3524,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval? BackgroundRemoval
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.BackgroundRemoval? BackgroundRemoval
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.BackgroundRemoval>();
             set => SetElement(value);
         }
 
@@ -3537,9 +3537,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast? BrightnessContrast
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.BrightnessContrast? BrightnessContrast
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.BrightnessContrast>();
             set => SetElement(value);
         }
 
@@ -3550,9 +3550,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature? ColorTemperature
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ColorTemperature? ColorTemperature
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ColorTemperature>();
             set => SetElement(value);
         }
 
@@ -3563,9 +3563,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Saturation? Saturation
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.Saturation? Saturation
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Saturation>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.Saturation>();
             set => SetElement(value);
         }
 
@@ -3576,9 +3576,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften? SharpenSoften
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.SharpenSoften? SharpenSoften
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.SharpenSoften>();
             set => SetElement(value);
         }
 
@@ -3594,7 +3594,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect" /> <c>&lt;a14:imgEffect></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ImageEffect" /> <c>&lt;a14:imgEffect></c></description></item>
     /// </list>
     /// </remark>
     public partial class ImageLayer : TypedOpenXmlCompositeElement
@@ -3648,12 +3648,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("a14:imgLayer");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ImageEffect>();
             builder.AddElement<ImageLayer>()
                 .AddAttribute("r:embed", a => a.Embed);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect), 0, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ImageEffect), 0, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3836,8 +3836,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remark>
     public partial class NonVisualInkContentPartProperties : TypedOpenXmlCompositeElement
@@ -3888,14 +3888,14 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("a14:cNvContentPartPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ContentPartLocks>();
             builder.AddElement<NonVisualInkContentPartProperties>()
                 .AddAttribute("isComment", a => a.IsComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ContentPartLocks), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3906,9 +3906,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks? ContentPartLocks
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ContentPartLocks? ContentPartLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ContentPartLocks>();
             set => SetElement(value);
         }
 
@@ -3919,9 +3919,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -3937,8 +3937,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties" /> <c>&lt;a14:cNvPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties" /> <c>&lt;a14:cNvContentPartPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualDrawingProperties" /> <c>&lt;a14:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualInkContentPartProperties" /> <c>&lt;a14:cNvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class NonVisualContentPartProperties : TypedOpenXmlCompositeElement
@@ -3979,12 +3979,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("a14:nvContentPartPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualInkContentPartProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualInkContentPartProperties), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3995,9 +3995,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -4008,9 +4008,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.NonVisualInkContentPartProperties>();
             set => SetElement(value);
         }
 

@@ -8,8 +8,8 @@ using DocumentFormat.OpenXml.Presentation;
 using A = DocumentFormat.OpenXml.Drawing;
 using C = DocumentFormat.OpenXml.Drawing.Charts;
 using C16 = DocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx;
-using Cs = DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle;
-using P14 = DocumentFormat.OpenXml.Office2010.PowerPoint;
+using Cs = DocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle;
+using P14 = DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main;
 
 #pragma warning disable CA1303 // Do not pass literals as localized parameters
 

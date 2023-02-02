@@ -9,7 +9,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office2010.Excel.Drawing;
+using DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -569,7 +569,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties" /> <c>&lt;xdr:nvGrpSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture" /> <c>&lt;xdr:pic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape" /> <c>&lt;xdr:sp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart" /> <c>&lt;xdr14:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ContentPart" /> <c>&lt;xdr14:contentPart></c></description></item>
     /// </list>
     /// </remark>
     public partial class GroupShape : TypedOpenXmlCompositeElement
@@ -616,7 +616,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties), 1, 1),
@@ -628,7 +628,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -1070,10 +1070,10 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList" /> <c>&lt;xdr14:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D" /> <c>&lt;xdr14:xfrm></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties" /> <c>&lt;xdr14:nvPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties" /> <c>&lt;xdr14:nvContentPartPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.OfficeArtExtensionList" /> <c>&lt;xdr14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.Transform2D" /> <c>&lt;xdr14:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ApplicationNonVisualDrawingProperties" /> <c>&lt;xdr14:nvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ExcelNonVisualContentPartShapeProperties" /> <c>&lt;xdr14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class ContentPart : TypedOpenXmlCompositeElement
@@ -1137,10 +1137,10 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             base.ConfigureMetadata(builder);
             builder.SetSchema("xdr:contentPart");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ApplicationNonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ExcelNonVisualContentPartShapeProperties>();
             builder.AddElement<ContentPart>()
                 .AddAttribute("r:id", a => a.RelationshipId, aBuilder =>
                 {
@@ -1152,10 +1152,10 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ExcelNonVisualContentPartShapeProperties), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ApplicationNonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1166,9 +1166,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <remark>
         /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties? ExcelNonVisualContentPartShapeProperties
+        public DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ExcelNonVisualContentPartShapeProperties? ExcelNonVisualContentPartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ExcelNonVisualContentPartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -1179,9 +1179,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <remark>
         /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1192,9 +1192,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <remark>
         /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D? Transform2D
+        public DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.Transform2D>();
             set => SetElement(value);
         }
 
@@ -1205,9 +1205,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <remark>
         /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

@@ -8,13 +8,13 @@ using System.IO;
 using A = DocumentFormat.OpenXml.Drawing;
 using Ap = DocumentFormat.OpenXml.ExtendedProperties;
 using C = DocumentFormat.OpenXml.Drawing.Charts;
-using C14 = DocumentFormat.OpenXml.Office2010.Drawing.Charts;
+using C14 = DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart;
 using S = DocumentFormat.OpenXml.Spreadsheet;
-using Tsle = DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer;
+using Tsle = DocumentFormat.OpenXml.Office.Drawing.Y2012.TimeSlicer;
 using Vt = DocumentFormat.OpenXml.VariantTypes;
-using X14 = DocumentFormat.OpenXml.Office2010.Excel;
-using X15 = DocumentFormat.OpenXml.Office2013.Excel;
-using X15ac = DocumentFormat.OpenXml.Office2013.ExcelAc;
+using X14 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main;
+using X15 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
+using X15ac = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac;
 using Xdr = DocumentFormat.OpenXml.Drawing.Spreadsheet;
 
 namespace DocumentFormat.OpenXml.Tests.TimelineClass

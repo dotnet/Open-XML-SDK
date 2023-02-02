@@ -10,16 +10,16 @@ using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Pictures;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office2010.Word;
-using DocumentFormat.OpenXml.Office2010.Word.DrawingGroup;
-using DocumentFormat.OpenXml.Office2010.Word.DrawingShape;
+using DocumentFormat.OpenXml.Office.Word.Y2010.WordML;
+using DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup;
+using DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
+namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas
 {
     /// <summary>
     /// <para>Defines the WordprocessingCanvas Class.</para>
@@ -29,14 +29,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting" /> <c>&lt;wpc:bg></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.OfficeArtExtensionList" /> <c>&lt;wpc:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WholeFormatting" /> <c>&lt;wpc:whole></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.BackgroundFormatting" /> <c>&lt;wpc:bg></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.OfficeArtExtensionList" /> <c>&lt;wpc:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.WholeFormatting" /> <c>&lt;wpc:whole></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.Picture" /> <c>&lt;pic:pic></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ContentPart" /> <c>&lt;w14:contentPart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.GraphicFrameType" /> <c>&lt;wpc:graphicFrame></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup" /> <c>&lt;wpg:wgp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape" /> <c>&lt;wps:wsp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContentPart" /> <c>&lt;w14:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.GraphicFrameType" /> <c>&lt;wpc:graphicFrame></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.WordprocessingGroup" /> <c>&lt;wpg:wgp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.WordprocessingShape" /> <c>&lt;wps:wsp></c></description></item>
     /// </list>
     /// </remark>
     public partial class WordprocessingCanvas : TypedOpenXmlCompositeElement
@@ -77,27 +77,27 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
             base.ConfigureMetadata(builder);
             builder.SetSchema("wpc:wpc");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WholeFormatting>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.BackgroundFormatting>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.WholeFormatting>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.GraphicFrameType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.GraphicFrameType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.WordprocessingGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.WordprocessingShape>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WholeFormatting), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.BackgroundFormatting), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.WholeFormatting), 0, 1, version: FileFormatVersions.Office2010),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.WordprocessingShape), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Pictures.Picture), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ContentPart), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.GraphicFrameType), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContentPart), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.WordprocessingGroup), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.GraphicFrameType), 1, 1, version: FileFormatVersions.Office2010)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -108,9 +108,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpc = http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting? BackgroundFormatting
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.BackgroundFormatting? BackgroundFormatting
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.BackgroundFormatting>();
             set => SetElement(value);
         }
 
@@ -121,9 +121,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpc = http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WholeFormatting? WholeFormatting
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.WholeFormatting? WholeFormatting
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WholeFormatting>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.WholeFormatting>();
             set => SetElement(value);
         }
 
@@ -318,10 +318,10 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Graphic" /> <c>&lt;a:graphic></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties" /> <c>&lt;wpg:cNvPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties" /> <c>&lt;wpg:cNvFrPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList" /> <c>&lt;wpg:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D" /> <c>&lt;wpg:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualDrawingProperties" /> <c>&lt;wpg:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualGraphicFrameProperties" /> <c>&lt;wpg:cNvFrPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList" /> <c>&lt;wpg:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.Transform2D" /> <c>&lt;wpg:xfrm></c></description></item>
     /// </list>
     /// </remark>
     public partial class GraphicFrameType : TypedOpenXmlCompositeElement
@@ -363,17 +363,17 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
             builder.SetSchema("wpc:graphicFrame");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualGraphicFrameProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.Transform2D>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualGraphicFrameProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.Transform2D), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -384,9 +384,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -397,9 +397,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualGraphicFrameProperties>();
             set => SetElement(value);
         }
 
@@ -410,9 +410,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D? Transform2D
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.Transform2D>();
             set => SetElement(value);
         }
 
@@ -436,9 +436,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

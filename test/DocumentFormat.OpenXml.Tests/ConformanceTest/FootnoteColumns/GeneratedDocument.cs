@@ -12,7 +12,7 @@ using Ds = DocumentFormat.OpenXml.CustomXmlDataProperties;
 using M = DocumentFormat.OpenXml.Math;
 using Ovml = DocumentFormat.OpenXml.Vml.Office;
 using V = DocumentFormat.OpenXml.Vml;
-using W15 = DocumentFormat.OpenXml.Office2013.Word;
+using W15 = DocumentFormat.OpenXml.Office.Word.Y2012.WordML;
 
 namespace DocumentFormat.OpenXml.Tests.FootnoteColumnsClass
 {

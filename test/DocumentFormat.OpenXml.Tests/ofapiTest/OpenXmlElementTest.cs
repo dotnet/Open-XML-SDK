@@ -928,7 +928,7 @@ namespace DocumentFormat.OpenXml.Tests
                 // Well, if CommentEx is not integrated in the SDK, we can't even compile this unit test project...
 
                 // Check if CommentEx is available.
-                var commentEx = new DocumentFormat.OpenXml.Office2013.Word.CommentEx();
+                var commentEx = new DocumentFormat.OpenXml.Office.Word.Y2012.WordML.CommentEx();
                 Assert.NotNull(commentEx);
             }
             catch

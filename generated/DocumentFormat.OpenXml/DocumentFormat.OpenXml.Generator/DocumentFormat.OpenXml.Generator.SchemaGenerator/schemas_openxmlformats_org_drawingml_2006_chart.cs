@@ -10,9 +10,9 @@ using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.ChartDrawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart;
+using DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart;
 using DocumentFormat.OpenXml.Office.Drawing.Y2017.M03.Chart;
-using DocumentFormat.OpenXml.Office2010.Drawing.Charts;
-using DocumentFormat.OpenXml.Office2013.Drawing.Chart;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -4545,7 +4545,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UserShapesReference" /> <c>&lt;c:userShapes></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Style" /> <c>&lt;c:style></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage" /> <c>&lt;c:lang></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style" /> <c>&lt;c14:style></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.Style" /> <c>&lt;c14:style></c></description></item>
     /// </list>
     /// </remark>
     public partial class ChartSpace : TypedOpenXmlPartRootElement
@@ -4599,7 +4599,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UserShapesReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Style>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.Style>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Date1904), 0, 1),
@@ -4607,7 +4607,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.Style), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Style), 1, 1)
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ColorMapOverride), 0, 1),
@@ -13037,7 +13037,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class StockChartExtension : TypedOpenXmlCompositeElement
@@ -13087,7 +13087,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredLineSeriesExtension>();
             builder.AddElement<StockChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -13096,7 +13096,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredLineSeriesExtension), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13113,7 +13113,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries" /> <c>&lt;c15:filteredPieSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredPieSeries" /> <c>&lt;c15:filteredPieSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class PieChartExtension : TypedOpenXmlCompositeElement
@@ -13163,7 +13163,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredPieSeries>();
             builder.AddElement<PieChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -13172,7 +13172,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredPieSeries), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13189,7 +13189,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries" /> <c>&lt;c15:filteredPieSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredPieSeries" /> <c>&lt;c15:filteredPieSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class Pie3DChartExtension : TypedOpenXmlCompositeElement
@@ -13239,7 +13239,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredPieSeries>();
             builder.AddElement<Pie3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -13248,7 +13248,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredPieSeries), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13265,9 +13265,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference" /> <c>&lt;c15:formulaRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference" /> <c>&lt;c15:fullRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FormulaReference" /> <c>&lt;c15:formulaRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FullReference" /> <c>&lt;c15:fullRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
     /// </list>
     /// </remark>
     public partial class NumRefExtension : TypedOpenXmlCompositeElement
@@ -13317,9 +13317,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FormulaReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FullReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LevelReference>();
             builder.AddElement<NumRefExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -13328,9 +13328,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FullReference), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LevelReference), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FormulaReference), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13347,7 +13347,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories" /> <c>&lt;c15:autoCat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.AutoGeneneratedCategories" /> <c>&lt;c15:autoCat></c></description></item>
     /// </list>
     /// </remark>
     public partial class StrDataExtension : TypedOpenXmlCompositeElement
@@ -13397,7 +13397,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.AutoGeneneratedCategories>();
             builder.AddElement<StrDataExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -13406,7 +13406,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.AutoGeneneratedCategories), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13423,9 +13423,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference" /> <c>&lt;c15:formulaRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference" /> <c>&lt;c15:fullRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FormulaReference" /> <c>&lt;c15:formulaRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FullReference" /> <c>&lt;c15:fullRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
     /// </list>
     /// </remark>
     public partial class StrRefExtension : TypedOpenXmlCompositeElement
@@ -13475,9 +13475,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FormulaReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FullReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LevelReference>();
             builder.AddElement<StrRefExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -13486,9 +13486,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FullReference), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LevelReference), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FormulaReference), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13505,9 +13505,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference" /> <c>&lt;c15:formulaRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference" /> <c>&lt;c15:fullRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FormulaReference" /> <c>&lt;c15:formulaRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FullReference" /> <c>&lt;c15:fullRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
     /// </list>
     /// </remark>
     public partial class MultiLvlStrRefExtension : TypedOpenXmlCompositeElement
@@ -13557,9 +13557,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FormulaReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FullReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LevelReference>();
             builder.AddElement<MultiLvlStrRefExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -13568,9 +13568,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FullReference), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LevelReference), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FormulaReference), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13587,11 +13587,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties" /> <c>&lt;c15:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave" /> <c>&lt;c15:xForSave></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange" /> <c>&lt;c15:showDataLabelsRange></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout" /> <c>&lt;c15:layout></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable" /> <c>&lt;c15:dlblFieldTable></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShapeProperties" /> <c>&lt;c15:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ExceptionForSave" /> <c>&lt;c15:xForSave></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShowDataLabelsRange" /> <c>&lt;c15:showDataLabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Layout" /> <c>&lt;c15:layout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTable" /> <c>&lt;c15:dlblFieldTable></c></description></item>
     /// </list>
     /// </remark>
     public partial class DLblExtension : TypedOpenXmlCompositeElement
@@ -13641,11 +13641,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ExceptionForSave>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShowDataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTable>();
             builder.AddElement<DLblExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -13654,11 +13654,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTable), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ExceptionForSave), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShowDataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShapeProperties), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Layout), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13675,13 +13675,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties" /> <c>&lt;c15:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange" /> <c>&lt;c15:showDataLabelsRange></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines" /> <c>&lt;c15:showLeaderLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines" /> <c>&lt;c15:leaderLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout" /> <c>&lt;c15:layout></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText" /> <c>&lt;c15:tx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable" /> <c>&lt;c15:dlblFieldTable></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShapeProperties" /> <c>&lt;c15:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShowDataLabelsRange" /> <c>&lt;c15:showDataLabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShowLeaderLines" /> <c>&lt;c15:showLeaderLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LeaderLines" /> <c>&lt;c15:leaderLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Layout" /> <c>&lt;c15:layout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ChartText" /> <c>&lt;c15:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTable" /> <c>&lt;c15:dlblFieldTable></c></description></item>
     /// </list>
     /// </remark>
     public partial class DLblsExtension : TypedOpenXmlCompositeElement
@@ -13731,13 +13731,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShowDataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShowLeaderLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LeaderLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ChartText>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTable>();
             builder.AddElement<DLblsExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -13746,13 +13746,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ChartText), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTable), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShowDataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShapeProperties), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Layout), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShowLeaderLines), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LeaderLines), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13769,10 +13769,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
     public partial class LineSerExtension : TypedOpenXmlCompositeElement
@@ -13822,10 +13822,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange>();
             builder.AddElement<LineSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -13834,10 +13834,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13854,10 +13854,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
     public partial class ScatterSerExtension : TypedOpenXmlCompositeElement
@@ -13907,10 +13907,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange>();
             builder.AddElement<ScatterSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -13919,10 +13919,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13939,10 +13939,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
     public partial class RadarSerExtension : TypedOpenXmlCompositeElement
@@ -13992,10 +13992,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange>();
             builder.AddElement<RadarSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14004,10 +14004,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14024,10 +14024,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
     public partial class AreaSerExtension : TypedOpenXmlCompositeElement
@@ -14077,10 +14077,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange>();
             builder.AddElement<AreaSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14089,10 +14089,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14109,10 +14109,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
     public partial class PieSerExtension : TypedOpenXmlCompositeElement
@@ -14162,10 +14162,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange>();
             builder.AddElement<PieSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14174,10 +14174,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14194,9 +14194,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
     /// </list>
     /// </remark>
     public partial class SurfaceSerExtension : TypedOpenXmlCompositeElement
@@ -14246,9 +14246,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle>();
             builder.AddElement<SurfaceSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14257,9 +14257,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14276,7 +14276,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class LineChartExtension : TypedOpenXmlCompositeElement
@@ -14326,7 +14326,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredLineSeriesExtension>();
             builder.AddElement<LineChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14335,7 +14335,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredLineSeriesExtension), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14352,7 +14352,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class Line3DChartExtension : TypedOpenXmlCompositeElement
@@ -14402,7 +14402,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredLineSeriesExtension>();
             builder.AddElement<Line3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14411,7 +14411,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredLineSeriesExtension), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14428,7 +14428,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries" /> <c>&lt;c15:filteredScatterSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredScatterSeries" /> <c>&lt;c15:filteredScatterSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class ScatterChartExtension : TypedOpenXmlCompositeElement
@@ -14478,7 +14478,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredScatterSeries>();
             builder.AddElement<ScatterChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14487,7 +14487,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredScatterSeries), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14504,7 +14504,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries" /> <c>&lt;c15:filteredRadarSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredRadarSeries" /> <c>&lt;c15:filteredRadarSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class RadarChartExtension : TypedOpenXmlCompositeElement
@@ -14554,7 +14554,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredRadarSeries>();
             builder.AddElement<RadarChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14563,7 +14563,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredRadarSeries), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14580,7 +14580,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries" /> <c>&lt;c15:filteredBarSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredBarSeries" /> <c>&lt;c15:filteredBarSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class BarChartExtension : TypedOpenXmlCompositeElement
@@ -14630,7 +14630,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredBarSeries>();
             builder.AddElement<BarChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14639,7 +14639,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredBarSeries), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14656,7 +14656,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries" /> <c>&lt;c15:filteredBarSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredBarSeries" /> <c>&lt;c15:filteredBarSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class Bar3DChartExtension : TypedOpenXmlCompositeElement
@@ -14706,7 +14706,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredBarSeries>();
             builder.AddElement<Bar3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14715,7 +14715,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredBarSeries), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14732,7 +14732,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries" /> <c>&lt;c15:filteredAreaSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredAreaSeries" /> <c>&lt;c15:filteredAreaSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class AreaChartExtension : TypedOpenXmlCompositeElement
@@ -14782,7 +14782,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredAreaSeries>();
             builder.AddElement<AreaChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14791,7 +14791,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredAreaSeries), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14808,7 +14808,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries" /> <c>&lt;c15:filteredAreaSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredAreaSeries" /> <c>&lt;c15:filteredAreaSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class Area3DChartExtension : TypedOpenXmlCompositeElement
@@ -14858,7 +14858,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredAreaSeries>();
             builder.AddElement<Area3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14867,7 +14867,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredAreaSeries), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14884,7 +14884,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries" /> <c>&lt;c15:filteredBubbleSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredBubbleSeries" /> <c>&lt;c15:filteredBubbleSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class BubbleChartExtension : TypedOpenXmlCompositeElement
@@ -14934,7 +14934,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredBubbleSeries>();
             builder.AddElement<BubbleChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14943,7 +14943,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredBubbleSeries), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14960,7 +14960,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries" /> <c>&lt;c15:filteredSurfaceSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSurfaceSeries" /> <c>&lt;c15:filteredSurfaceSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class SurfaceChartExtension : TypedOpenXmlCompositeElement
@@ -15010,7 +15010,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSurfaceSeries>();
             builder.AddElement<SurfaceChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15019,7 +15019,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSurfaceSeries), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -15036,7 +15036,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries" /> <c>&lt;c15:filteredSurfaceSeries></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSurfaceSeries" /> <c>&lt;c15:filteredSurfaceSeries></c></description></item>
     /// </list>
     /// </remark>
     public partial class Surface3DChartExtension : TypedOpenXmlCompositeElement
@@ -15086,7 +15086,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSurfaceSeries>();
             builder.AddElement<Surface3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15095,7 +15095,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSurfaceSeries), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -15112,7 +15112,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
     /// </remark>
     public partial class CatAxExtension : TypedOpenXmlCompositeElement
@@ -15162,7 +15162,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.NumberingFormat>();
             builder.AddElement<CatAxExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15171,7 +15171,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.NumberingFormat), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -15188,7 +15188,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
     /// </remark>
     public partial class DateAxExtension : TypedOpenXmlCompositeElement
@@ -15238,7 +15238,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.NumberingFormat>();
             builder.AddElement<DateAxExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15247,7 +15247,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.NumberingFormat), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -15264,7 +15264,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
     /// </remark>
     public partial class SerAxExtension : TypedOpenXmlCompositeElement
@@ -15314,7 +15314,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.NumberingFormat>();
             builder.AddElement<SerAxExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15323,7 +15323,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.NumberingFormat), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -15340,7 +15340,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
     /// </remark>
     public partial class ValAxExtension : TypedOpenXmlCompositeElement
@@ -15390,7 +15390,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.NumberingFormat>();
             builder.AddElement<ValAxExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15399,7 +15399,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.NumberingFormat), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -17311,11 +17311,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat" /> <c>&lt;c14:invertSolidFillFmt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.InvertSolidFillFormat" /> <c>&lt;c14:invertSolidFillFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
     public partial class BarSerExtension : TypedOpenXmlCompositeElement
@@ -17365,11 +17365,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.InvertSolidFillFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange>();
             builder.AddElement<BarSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -17378,11 +17378,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.InvertSolidFillFormat), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -17576,10 +17576,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat" /> <c>&lt;c14:invertSolidFillFmt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.InvertSolidFillFormat" /> <c>&lt;c14:invertSolidFillFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
     public partial class BubbleSerExtension : TypedOpenXmlCompositeElement
@@ -17629,10 +17629,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.InvertSolidFillFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange>();
             builder.AddElement<BubbleSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -17641,10 +17641,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.InvertSolidFillFormat), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -20884,9 +20884,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource" /> <c>&lt;c15:pivotSource></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions" /> <c>&lt;c14:pivotOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions" /> <c>&lt;c14:sketchOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.PivotSource" /> <c>&lt;c15:pivotSource></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.PivotOptions" /> <c>&lt;c14:pivotOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.SketchOptions" /> <c>&lt;c14:sketchOptions></c></description></item>
     /// </list>
     /// </remark>
     public partial class ChartSpaceExtension : TypedOpenXmlCompositeElement
@@ -20936,9 +20936,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.PivotSource>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.PivotOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.SketchOptions>();
             builder.AddElement<ChartSpaceExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -20947,9 +20947,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.PivotOptions), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.SketchOptions), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.PivotSource), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }

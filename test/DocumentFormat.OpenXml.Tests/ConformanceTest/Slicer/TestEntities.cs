@@ -7,8 +7,8 @@ using LogUtil;
 using System.IO;
 using System.Linq;
 
-using X14 = DocumentFormat.OpenXml.Office2010.Excel;
-using X15 = DocumentFormat.OpenXml.Office2013.Excel;
+using X14 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main;
+using X15 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
 
 namespace DocumentFormat.OpenXml.Tests.Slicer
 {

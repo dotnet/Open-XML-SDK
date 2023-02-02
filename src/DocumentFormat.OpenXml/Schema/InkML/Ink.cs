@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 
 #pragma warning disable CA1724
 
-namespace DocumentFormat.OpenXml.InkML
+namespace DocumentFormat.OpenXml.Y2003.InkML
 {
     /// <summary>
     /// Defines Ink.

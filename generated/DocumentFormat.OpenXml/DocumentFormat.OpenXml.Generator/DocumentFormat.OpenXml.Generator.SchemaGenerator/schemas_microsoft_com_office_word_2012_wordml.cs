@@ -16,7 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2013.Word
+namespace DocumentFormat.OpenXml.Office.Word.Y2012.WordML
 {
     /// <summary>
     /// <para>Defines the Color Class.</para>
@@ -209,9 +209,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>? Val
+        public EnumValue<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.SdtAppearance>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.SdtAppearance>>();
             set => SetAttribute(value);
         }
 
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.CommentEx" /> <c>&lt;w15:commentEx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.CommentEx" /> <c>&lt;w15:commentEx></c></description></item>
     /// </list>
     /// </remark>
     public partial class CommentsEx : TypedOpenXmlPartRootElement
@@ -280,10 +280,10 @@ namespace DocumentFormat.OpenXml.Office2013.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema("w15:commentsEx");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.CommentEx>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.CommentEx>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.CommentEx), 0, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.CommentEx), 0, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -330,7 +330,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.Person" /> <c>&lt;w15:person></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.Person" /> <c>&lt;w15:person></c></description></item>
     /// </list>
     /// </remark>
     public partial class People : TypedOpenXmlPartRootElement
@@ -371,10 +371,10 @@ namespace DocumentFormat.OpenXml.Office2013.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema("w15:people");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Person>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.Person), 0, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.Person), 0, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -421,8 +421,8 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection" /> <c>&lt;w15:doNotAllowInsertDeleteSection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.SectionTitle" /> <c>&lt;w15:sectionTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.DoNotAllowInsertDeleteSection" /> <c>&lt;w15:doNotAllowInsertDeleteSection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.SectionTitle" /> <c>&lt;w15:sectionTitle></c></description></item>
     /// </list>
     /// </remark>
     public partial class SdtRepeatedSection : TypedOpenXmlCompositeElement
@@ -463,12 +463,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema("w15:repeatingSection");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SectionTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.DoNotAllowInsertDeleteSection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.SectionTitle>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.SectionTitle), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.SectionTitle), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.DoNotAllowInsertDeleteSection), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -479,9 +479,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Word.SectionTitle? SectionTitle
+        public DocumentFormat.OpenXml.Office.Word.Y2012.WordML.SectionTitle? SectionTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.SectionTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.SectionTitle>();
             set => SetElement(value);
         }
 
@@ -492,9 +492,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection? DoNotAllowInsertDeleteSection
+        public DocumentFormat.OpenXml.Office.Word.Y2012.WordML.DoNotAllowInsertDeleteSection? DoNotAllowInsertDeleteSection
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.DoNotAllowInsertDeleteSection>();
             set => SetElement(value);
         }
 
@@ -864,7 +864,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.PresenceInfo" /> <c>&lt;w15:presenceInfo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2012.WordML.PresenceInfo" /> <c>&lt;w15:presenceInfo></c></description></item>
     /// </list>
     /// </remark>
     public partial class Person : TypedOpenXmlCompositeElement
@@ -918,7 +918,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema("w15:person");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.PresenceInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.PresenceInfo>();
             builder.AddElement<Person>()
                 .AddAttribute("w15:author", a => a.Author, aBuilder =>
                 {
@@ -927,7 +927,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.PresenceInfo), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2012.WordML.PresenceInfo), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -938,9 +938,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Word.PresenceInfo? PresenceInfo
+        public DocumentFormat.OpenXml.Office.Word.Y2012.WordML.PresenceInfo? PresenceInfo
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.PresenceInfo>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.PresenceInfo>();
             set => SetElement(value);
         }
 

@@ -9,14 +9,14 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office2010.Drawing;
+using DocumentFormat.OpenXml.Office.Drawing.Y2010.Main;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing
 {
     /// <summary>
     /// <para>Defines the ContentPart Class.</para>
@@ -26,10 +26,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.OfficeArtExtensionList" /> <c>&lt;cdr14:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.Transform2D" /> <c>&lt;cdr14:xfrm></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ApplicationNonVisualDrawingProperties" /> <c>&lt;cdr14:nvPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualContentPartProperties" /> <c>&lt;cdr14:nvContentPartPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.OfficeArtExtensionList" /> <c>&lt;cdr14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.Transform2D" /> <c>&lt;cdr14:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ApplicationNonVisualDrawingProperties" /> <c>&lt;cdr14:nvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualContentPartProperties" /> <c>&lt;cdr14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class ContentPart : TypedOpenXmlCompositeElement
@@ -93,10 +93,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("cdr14:contentPart");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ApplicationNonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualContentPartProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ApplicationNonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualContentPartProperties>();
             builder.AddElement<ContentPart>()
                 .AddAttribute("r:id", a => a.RelationshipId, aBuilder =>
                 {
@@ -108,10 +108,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ApplicationNonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ApplicationNonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -122,9 +122,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualContentPartProperties? NonVisualContentPartProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualContentPartProperties? NonVisualContentPartProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualContentPartProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualContentPartProperties>();
             set => SetElement(value);
         }
 
@@ -135,9 +135,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ApplicationNonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -148,9 +148,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.Transform2D? Transform2D
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.Transform2D>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.Transform2D>();
             set => SetElement(value);
         }
 
@@ -161,9 +161,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -346,8 +346,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remark>
     public partial class NonVisualInkContentPartProperties : TypedOpenXmlCompositeElement
@@ -398,14 +398,14 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("cdr14:cNvContentPartPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ContentPartLocks>();
             builder.AddElement<NonVisualInkContentPartProperties>()
                 .AddAttribute("isComment", a => a.IsComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ContentPartLocks), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -416,9 +416,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks? ContentPartLocks
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ContentPartLocks? ContentPartLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.ContentPartLocks>();
             set => SetElement(value);
         }
 
@@ -429,9 +429,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -447,8 +447,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualDrawingProperties" /> <c>&lt;cdr14:cNvPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualInkContentPartProperties" /> <c>&lt;cdr14:cNvContentPartPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualDrawingProperties" /> <c>&lt;cdr14:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualInkContentPartProperties" /> <c>&lt;cdr14:cNvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class NonVisualContentPartProperties : TypedOpenXmlCompositeElement
@@ -489,12 +489,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("cdr14:nvContentPartPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualInkContentPartProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualInkContentPartProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualInkContentPartProperties), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualInkContentPartProperties), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -505,9 +505,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -518,9 +518,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualInkContentPartProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.ChartDrawing.NonVisualInkContentPartProperties>();
             set => SetElement(value);
         }
 

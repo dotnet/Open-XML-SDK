@@ -7,25 +7,25 @@ using System.IO;
 using System.Xml;
 
 using A = DocumentFormat.OpenXml.Drawing;
-using A14 = DocumentFormat.OpenXml.Office2010.Drawing;
+using A14 = DocumentFormat.OpenXml.Office.Drawing.Y2010.Main;
 using Ap = DocumentFormat.OpenXml.ExtendedProperties;
 using C = DocumentFormat.OpenXml.Drawing.Charts;
-using C14 = DocumentFormat.OpenXml.Office2010.Drawing.Charts;
+using C14 = DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart;
 using Dgm = DocumentFormat.OpenXml.Drawing.Diagrams;
 using Ds = DocumentFormat.OpenXml.CustomXmlDataProperties;
-using Dsp = DocumentFormat.OpenXml.Office.Drawing;
+using Dsp = DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram;
 using M = DocumentFormat.OpenXml.Math;
 using Ovml = DocumentFormat.OpenXml.Vml.Office;
 using Pic = DocumentFormat.OpenXml.Drawing.Pictures;
-using Thm15 = DocumentFormat.OpenXml.Office2013.Theme;
+using Thm15 = DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main;
 using V = DocumentFormat.OpenXml.Vml;
 using Vt = DocumentFormat.OpenXml.VariantTypes;
 using W = DocumentFormat.OpenXml.Wordprocessing;
-using W14 = DocumentFormat.OpenXml.Office2010.Word;
-using W15 = DocumentFormat.OpenXml.Office2013.Word;
+using W14 = DocumentFormat.OpenXml.Office.Word.Y2010.WordML;
+using W15 = DocumentFormat.OpenXml.Office.Word.Y2012.WordML;
 using Wp = DocumentFormat.OpenXml.Drawing.Wordprocessing;
-using Wp14 = DocumentFormat.OpenXml.Office2010.Word.Drawing;
-using Wps = DocumentFormat.OpenXml.Office2010.Word.DrawingShape;
+using Wp14 = DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing;
+using Wps = DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape;
 using Wvml = DocumentFormat.OpenXml.Vml.Wordprocessing;
 
 namespace DocumentFormat.OpenXml.Tests

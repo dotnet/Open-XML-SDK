@@ -8,7 +8,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office2010.Ink;
+using DocumentFormat.OpenXml.Ink.Y2010.Main;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -16,7 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.EMMA
+namespace DocumentFormat.OpenXml.Y2003.M04.EMMA
 {
     /// <summary>
     /// <para>Defines the DerivedFrom Class.</para>
@@ -144,8 +144,8 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Arc" /> <c>&lt;emma:arc></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Node" /> <c>&lt;emma:node></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Arc" /> <c>&lt;emma:arc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Node" /> <c>&lt;emma:node></c></description></item>
     /// </list>
     /// </remark>
     public partial class Lattice : TypedOpenXmlCompositeElement
@@ -221,9 +221,9 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>? TimeReferenceAnchorPoint
+        public EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues>? TimeReferenceAnchorPoint
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues>>();
             set => SetAttribute(value);
         }
 
@@ -231,8 +231,8 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:lattice");
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Arc>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Node>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Arc>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Node>();
             builder.AddElement<Lattice>()
                 .AddAttribute("initial", a => a.Initial, aBuilder =>
                 {
@@ -247,8 +247,8 @@ namespace DocumentFormat.OpenXml.EMMA
                 .AddAttribute("emma:time-ref-anchor-point", a => a.TimeReferenceAnchorPoint);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Arc), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Node), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Arc), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Node), 1, 1)
             };
         }
 
@@ -301,11 +301,11 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.DerivedFrom" /> <c>&lt;emma:derived-from></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Lattice" /> <c>&lt;emma:lattice></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Literal" /> <c>&lt;emma:literal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Ink.ContextNode" /> <c>&lt;msink:context></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.DerivedFrom" /> <c>&lt;emma:derived-from></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Lattice" /> <c>&lt;emma:lattice></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Literal" /> <c>&lt;emma:literal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Ink.Y2010.Main.ContextNode" /> <c>&lt;msink:context></c></description></item>
     /// </list>
     /// </remark>
     public partial class Interpretation : TypedOpenXmlCompositeElement
@@ -501,9 +501,9 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>? TimeReferenceAnchorPoint
+        public EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues>? TimeReferenceAnchorPoint
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues>>();
             set => SetAttribute(value);
         }
 
@@ -540,9 +540,9 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>? Medium
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues>>? Medium
         {
-            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>();
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues>>>();
             set => SetAttribute(value);
         }
 
@@ -680,11 +680,11 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:interpretation");
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Lattice>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Literal>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.ContextNode>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.DerivedFrom>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Info>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Lattice>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Literal>();
+            builder.AddChild<DocumentFormat.OpenXml.Ink.Y2010.Main.ContextNode>();
             builder.AddElement<Interpretation>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -726,11 +726,11 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Lattice), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Literal), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNode), 0, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.DerivedFrom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Info), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Lattice), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Literal), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Ink.Y2010.Main.ContextNode), 0, 1)
                 }
             };
             builder.AddConstraint(new AttributeValuePatternConstraint(builder.CreateQName("emma:id"), @"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}") { Version = FileFormatVersions.Office2010 });
@@ -749,12 +749,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.DerivedFrom" /> <c>&lt;emma:derived-from></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.DerivedFrom" /> <c>&lt;emma:derived-from></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
     public partial class OneOf : TypedOpenXmlCompositeElement
@@ -794,9 +794,9 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>disjunction-type</para>
         /// <para>Represents the following attribute in the schema: disjunction-type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues>? DisjunctionType
+        public EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.DisjunctionTypeValues>? DisjunctionType
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.DisjunctionTypeValues>>();
             set => SetAttribute(value);
         }
 
@@ -960,9 +960,9 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>? TimeReferenceAnchorPoint
+        public EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues>? TimeReferenceAnchorPoint
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues>>();
             set => SetAttribute(value);
         }
 
@@ -999,9 +999,9 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>? Medium
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues>>? Medium
         {
-            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>();
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues>>>();
             set => SetAttribute(value);
         }
 
@@ -1113,12 +1113,12 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:one-of");
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.DerivedFrom>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Group>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Info>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence>();
             builder.AddElement<OneOf>()
                 .AddAttribute("disjunction-type", a => a.DisjunctionType)
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -1159,12 +1159,12 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.DerivedFrom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Info), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Group), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence), 1, 1)
                 }
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("emma:disjunction-type"), true, new string[] { "recognition" }) { Version = FileFormatVersions.Office2010 });
@@ -1182,13 +1182,13 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.DerivedFrom" /> <c>&lt;emma:derived-from></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.GroupInfo" /> <c>&lt;emma:group-info></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.DerivedFrom" /> <c>&lt;emma:derived-from></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.GroupInfo" /> <c>&lt;emma:group-info></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
     public partial class Group : TypedOpenXmlCompositeElement
@@ -1384,9 +1384,9 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>? TimeReferenceAnchorPoint
+        public EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues>? TimeReferenceAnchorPoint
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues>>();
             set => SetAttribute(value);
         }
 
@@ -1423,9 +1423,9 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>? Medium
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues>>? Medium
         {
-            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>();
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues>>>();
             set => SetAttribute(value);
         }
 
@@ -1537,13 +1537,13 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:group");
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.GroupInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.DerivedFrom>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Group>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.GroupInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Info>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence>();
             builder.AddElement<Group>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -1583,13 +1583,13 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.GroupInfo), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.DerivedFrom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.GroupInfo), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Info), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Group), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence), 1, 1)
                 }
             };
         }
@@ -1606,12 +1606,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.DerivedFrom" /> <c>&lt;emma:derived-from></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.DerivedFrom" /> <c>&lt;emma:derived-from></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
     public partial class Sequence : TypedOpenXmlCompositeElement
@@ -1807,9 +1807,9 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>? TimeReferenceAnchorPoint
+        public EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues>? TimeReferenceAnchorPoint
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.AnchorPointValues>>();
             set => SetAttribute(value);
         }
 
@@ -1846,9 +1846,9 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>? Medium
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues>>? Medium
         {
-            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>();
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues>>>();
             set => SetAttribute(value);
         }
 
@@ -1960,12 +1960,12 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:sequence");
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.DerivedFrom>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Group>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Info>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence>();
             builder.AddElement<Sequence>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2005,12 +2005,12 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.DerivedFrom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Info), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Group), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence), 1, 1)
                 }
             };
         }
@@ -2094,10 +2094,10 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
     public partial class Derivation : TypedOpenXmlCompositeElement
@@ -2137,16 +2137,16 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:derivation");
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Group>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Group), 1, 1)
             };
         }
 
@@ -2299,7 +2299,7 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.EndPoint" /> <c>&lt;emma:endpoint></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.EndPoint" /> <c>&lt;emma:endpoint></c></description></item>
     /// </list>
     /// </remark>
     public partial class EndPointInfo : TypedOpenXmlCompositeElement
@@ -2349,7 +2349,7 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:endpoint-info");
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.EndPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.EndPoint>();
             builder.AddElement<EndPointInfo>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2358,7 +2358,7 @@ namespace DocumentFormat.OpenXml.EMMA
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPoint), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.EndPoint), 1, 1)
             };
         }
 
@@ -2421,9 +2421,9 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues>? EndpointRole
+        public EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.EndPointRoleValues>? EndpointRole
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.EndPointRoleValues>>();
             set => SetAttribute(value);
         }
 
@@ -2525,9 +2525,9 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>? Medium
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues>>? Medium
         {
-            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>();
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues>>>();
             set => SetAttribute(value);
         }
 
@@ -2582,7 +2582,7 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
     /// </list>
     /// </remark>
     public partial class Node : TypedOpenXmlCompositeElement
@@ -2658,7 +2658,7 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:node");
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Info>();
             builder.AddElement<Node>()
                 .AddAttribute("node-number", a => a.NodeNumber, aBuilder =>
                 {
@@ -2675,7 +2675,7 @@ namespace DocumentFormat.OpenXml.EMMA
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Info), 1, 1)
             };
         }
 
@@ -2691,7 +2691,7 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
     /// </list>
     /// </remark>
     public partial class Arc : TypedOpenXmlCompositeElement
@@ -2845,9 +2845,9 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>? Medium
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues>>? Medium
         {
-            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>();
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Y2003.M04.EMMA.MediumValues>>>();
             set => SetAttribute(value);
         }
 
@@ -2881,7 +2881,7 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:arc");
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Info>();
             builder.AddElement<Arc>()
                 .AddAttribute("from", a => a.From, aBuilder =>
                 {
@@ -2911,7 +2911,7 @@ namespace DocumentFormat.OpenXml.EMMA
                 .AddAttribute("emma:source", a => a.Source);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Info), 1, 1)
             };
         }
 
@@ -2927,15 +2927,15 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Derivation" /> <c>&lt;emma:derivation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.EndPointInfo" /> <c>&lt;emma:endpoint-info></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Grammar" /> <c>&lt;emma:grammar></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Model" /> <c>&lt;emma:model></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Derivation" /> <c>&lt;emma:derivation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.EndPointInfo" /> <c>&lt;emma:endpoint-info></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Grammar" /> <c>&lt;emma:grammar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Model" /> <c>&lt;emma:model></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
     public partial class Emma : TypedOpenXmlCompositeElement
@@ -2985,15 +2985,15 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("emma:emma");
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Derivation>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.EndPointInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Grammar>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Model>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Derivation>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.EndPointInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Grammar>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Group>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Info>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Model>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf>();
+            builder.AddChild<DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence>();
             builder.AddElement<Emma>()
                 .AddAttribute("version", a => a.Version, aBuilder =>
                 {
@@ -3003,15 +3003,15 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Derivation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Grammar), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Model), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPointInfo), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Derivation), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Grammar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Model), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.EndPointInfo), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Info), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Interpretation), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.OneOf), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Group), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Y2003.M04.EMMA.Sequence), 1, 1)
                 }
             };
         }

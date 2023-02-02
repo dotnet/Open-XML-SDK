@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.controlproperties+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp";
-        private DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties? _rootElement;
+        private DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.FormControlProperties? _rootElement;
 
         /// <summary>
         /// Creates an instance of the ControlPropertiesPart OpenXmlType
@@ -34,13 +34,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties FormControlProperties
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.FormControlProperties FormControlProperties
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.FormControlProperties>();
                 }
 
                 return _rootElement!;
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties;
+                _rootElement = value as DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.FormControlProperties;
             }
         }
 

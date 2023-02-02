@@ -232,9 +232,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2
         /// <para>iconSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
+        public EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSetTypeValues>? IconSet
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSetTypeValues>>();
             set => SetAttribute(value);
         }
 

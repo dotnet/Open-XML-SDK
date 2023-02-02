@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2010.Slicer
 {
     /// <summary>
     /// <para>Defines the Slicer Class.</para>
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList" /> <c>&lt;sle:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Slicer.OfficeArtExtensionList" /> <c>&lt;sle:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class Slicer : TypedOpenXmlCompositeElement
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
             base.ConfigureMetadata(builder);
             builder.SetSchema("sle:slicer");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Slicer.OfficeArtExtensionList>();
             builder.AddElement<Slicer>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Slicer.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -95,9 +95,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
         /// <remark>
         /// xmlns:sle = http://schemas.microsoft.com/office/drawing/2010/slicer
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Slicer.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Slicer.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

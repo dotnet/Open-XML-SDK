@@ -11,8 +11,8 @@ using M = DocumentFormat.OpenXml.Math;
 using Ovml = DocumentFormat.OpenXml.Vml.Office;
 using V = DocumentFormat.OpenXml.Vml;
 using Vt = DocumentFormat.OpenXml.VariantTypes;
-using W14 = DocumentFormat.OpenXml.Office2010.Word;
-using W15 = DocumentFormat.OpenXml.Office2013.Word;
+using W14 = DocumentFormat.OpenXml.Office.Word.Y2010.WordML;
+using W15 = DocumentFormat.OpenXml.Office.Word.Y2012.WordML;
 
 namespace DocumentFormat.OpenXml.Tests.CommentExPeopleClass
 {

@@ -8,8 +8,8 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2;
-using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -754,8 +754,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Filters" /> <c>&lt;x:filters></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IconFilter" /> <c>&lt;x:iconFilter></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Top10" /> <c>&lt;x:top10></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CustomFilters" /> <c>&lt;x14:customFilters></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CustomFilters" /> <c>&lt;x14:customFilters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
     /// </list>
     /// </remark>
     public partial class FilterColumn : TypedOpenXmlCompositeElement
@@ -833,8 +833,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Filters>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IconFilter>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Top10>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CustomFilters>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconFilter>();
             builder.AddElement<FilterColumn>()
                 .AddAttribute("colId", a => a.ColumnId, aBuilder =>
                 {
@@ -846,11 +846,11 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Filters), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Top10), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CustomFilters), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CustomFilters), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomFilters), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DynamicFilter), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColorFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.IconFilter), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconFilter), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IconFilter), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -889,9 +889,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.CustomFilters? CustomFilters14
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CustomFilters? CustomFilters14
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CustomFilters>();
             set => SetElement(value);
         }
 
@@ -941,9 +941,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.IconFilter? IconFilter14
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconFilter? IconFilter14
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconFilter>();
             set => SetElement(value);
         }
 
@@ -1156,9 +1156,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <para>iconSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
+        public EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSetTypeValues>? IconSet
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSetTypeValues>>();
             set => SetAttribute(value);
         }
 
@@ -1272,9 +1272,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <para>iconSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
+        public EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSetTypeValues>? IconSet
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSetTypeValues>>();
             set => SetAttribute(value);
         }
 

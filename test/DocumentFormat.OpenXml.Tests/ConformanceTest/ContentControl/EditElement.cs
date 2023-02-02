@@ -8,7 +8,7 @@ using System.IO;
 using System.Linq;
 
 using ConstStr = DocumentFormat.OpenXml.Tests.ContentControl.ConstantStrings;
-using W15 = DocumentFormat.OpenXml.Office2013.Word;
+using W15 = DocumentFormat.OpenXml.Office.Word.Y2012.WordML;
 
 namespace DocumentFormat.OpenXml.Tests.ContentControl
 {

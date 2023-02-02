@@ -9,7 +9,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office2010.Drawing;
+using DocumentFormat.OpenXml.Office.Drawing.Y2010.Main;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Picture" /> <c>&lt;a:pic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape" /> <c>&lt;a:sp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TextShape" /> <c>&lt;a:txSp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart" /> <c>&lt;a14:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.GvmlContentPart" /> <c>&lt;a14:contentPart></c></description></item>
     /// </list>
     /// </remark>
     public partial class LockedCanvas : TypedOpenXmlCompositeElement
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Picture>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TextShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.GvmlContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties), 1, 1),
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShape), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Picture), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.GvmlContentPart), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrame), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShape), 1, 1)
                 },

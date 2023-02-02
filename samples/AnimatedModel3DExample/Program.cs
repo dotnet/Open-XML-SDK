@@ -104,7 +104,7 @@ namespace AnimatedModel3DExample
                     UInt32Value threeDModelId = new UInt32Value(2U);
 
                     // Create modId in with the correct namespace xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main" val="3636546711"
-                    DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId modificationId = new DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId();
+                    DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main.ModificationId modificationId = new DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main.ModificationId();
                     modificationId.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
                     modificationId.Val = 3636546711;
 

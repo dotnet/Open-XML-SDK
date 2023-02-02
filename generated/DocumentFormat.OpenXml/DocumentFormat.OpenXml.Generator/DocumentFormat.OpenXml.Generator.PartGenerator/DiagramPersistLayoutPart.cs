@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.drawingml.diagramDrawing+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing";
-        private DocumentFormat.OpenXml.Office.Drawing.Drawing? _rootElement;
+        private DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Drawing? _rootElement;
 
         /// <summary>
         /// Creates an instance of the DiagramPersistLayoutPart OpenXmlType
@@ -34,13 +34,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office.Drawing.Drawing Drawing
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Drawing Drawing
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office.Drawing.Drawing>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Drawing>();
                 }
 
                 return _rootElement!;
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office.Drawing.Drawing;
+                _rootElement = value as DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Drawing;
             }
         }
 

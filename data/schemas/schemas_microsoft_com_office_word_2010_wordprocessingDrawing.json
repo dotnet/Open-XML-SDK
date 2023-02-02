@@ -44,7 +44,7 @@
         {
           "QName": ":relativeFrom",
           "PropertyName": "ObjectId",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.SizeRelativeHorizontallyValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "relativeFrom",
           "Validators": [
@@ -92,7 +92,7 @@
         {
           "QName": ":relativeFrom",
           "PropertyName": "RelativeFrom",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.SizeRelativeVerticallyValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "relativeFrom",
           "Validators": [

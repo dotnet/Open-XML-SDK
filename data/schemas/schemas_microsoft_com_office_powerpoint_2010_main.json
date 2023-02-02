@@ -337,7 +337,7 @@
         {
           "QName": ":dir",
           "PropertyName": "Direction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main.TransitionLeftRightDirectionTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "dir",
           "Validators": [
@@ -535,7 +535,7 @@
         {
           "QName": ":pattern",
           "PropertyName": "Pattern",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main.TransitionPatternValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "pattern",
           "Validators": [
@@ -631,7 +631,7 @@
         {
           "QName": ":pattern",
           "PropertyName": "Pattern",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main.TransitionShredPatternValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "pattern",
           "Validators": [
@@ -688,7 +688,7 @@
         {
           "QName": ":dir",
           "PropertyName": "Direction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main.TransitionLeftRightDirectionTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "dir",
           "Validators": [

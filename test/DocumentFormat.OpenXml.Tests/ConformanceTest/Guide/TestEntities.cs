@@ -9,7 +9,7 @@ using System.IO;
 using System.Linq;
 
 using A = DocumentFormat.OpenXml.Drawing;
-using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
+using P15 = DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main;
 
 namespace DocumentFormat.OpenXml.Tests.GuideTest
 {

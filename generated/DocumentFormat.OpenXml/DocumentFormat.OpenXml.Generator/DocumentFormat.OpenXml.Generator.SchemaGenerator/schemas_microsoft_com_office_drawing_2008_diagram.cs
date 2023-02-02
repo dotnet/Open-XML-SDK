@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.Drawing
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram
 {
     /// <summary>
     /// <para>Defines the Drawing Class.</para>
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.ShapeTree" /> <c>&lt;dsp:spTree></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeTree" /> <c>&lt;dsp:spTree></c></description></item>
     /// </list>
     /// </remark>
     public partial class Drawing : TypedOpenXmlPartRootElement
@@ -66,10 +66,10 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("dsp:drawing");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.ShapeTree>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeTree>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.ShapeTree), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeTree), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -80,9 +80,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.ShapeTree? ShapeTree
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeTree? ShapeTree
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.ShapeTree>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeTree>();
             set => SetElement(value);
         }
 
@@ -448,8 +448,8 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties" /> <c>&lt;dsp:cNvPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties" /> <c>&lt;dsp:cNvSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingProperties" /> <c>&lt;dsp:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingShapeProperties" /> <c>&lt;dsp:cNvSpPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class ShapeNonVisualProperties : TypedOpenXmlCompositeElement
@@ -490,12 +490,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("dsp:nvSpPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingShapeProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingShapeProperties), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -506,9 +506,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -519,9 +519,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties? NonVisualDrawingShapeProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingShapeProperties? NonVisualDrawingShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingShapeProperties>();
             set => SetElement(value);
         }
 
@@ -1176,8 +1176,8 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties" /> <c>&lt;dsp:cNvPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties" /> <c>&lt;dsp:cNvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingProperties" /> <c>&lt;dsp:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualGroupDrawingShapeProperties" /> <c>&lt;dsp:cNvGrpSpPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class GroupShapeNonVisualProperties : TypedOpenXmlCompositeElement
@@ -1218,12 +1218,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("dsp:nvGrpSpPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualGroupDrawingShapeProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualGroupDrawingShapeProperties), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1234,9 +1234,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1247,9 +1247,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties? NonVisualGroupDrawingShapeProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualGroupDrawingShapeProperties? NonVisualGroupDrawingShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualGroupDrawingShapeProperties>();
             set => SetElement(value);
         }
 
@@ -1395,12 +1395,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList" /> <c>&lt;dsp:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.ShapeProperties" /> <c>&lt;dsp:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.ShapeStyle" /> <c>&lt;dsp:style></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.TextBody" /> <c>&lt;dsp:txBody></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Transform2D" /> <c>&lt;dsp:txXfrm></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties" /> <c>&lt;dsp:nvSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.OfficeArtExtensionList" /> <c>&lt;dsp:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeProperties" /> <c>&lt;dsp:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeStyle" /> <c>&lt;dsp:style></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.TextBody" /> <c>&lt;dsp:txBody></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Transform2D" /> <c>&lt;dsp:txXfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeNonVisualProperties" /> <c>&lt;dsp:nvSpPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class Shape : TypedOpenXmlCompositeElement
@@ -1451,12 +1451,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("dsp:sp");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.ShapeStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.TextBody>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.TextBody>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeNonVisualProperties>();
             builder.AddElement<Shape>()
                 .AddAttribute("modelId", a => a.ModelId, aBuilder =>
                 {
@@ -1469,12 +1469,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.ShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.ShapeStyle), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.TextBody), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeNonVisualProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeStyle), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.TextBody), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1485,9 +1485,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties? ShapeNonVisualProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeNonVisualProperties? ShapeNonVisualProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeNonVisualProperties>();
             set => SetElement(value);
         }
 
@@ -1498,9 +1498,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -1511,9 +1511,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.ShapeStyle? ShapeStyle
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.ShapeStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -1524,9 +1524,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.TextBody? TextBody
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.TextBody? TextBody
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.TextBody>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.TextBody>();
             set => SetElement(value);
         }
 
@@ -1537,9 +1537,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.Transform2D? Transform2D
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Transform2D>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Transform2D>();
             set => SetElement(value);
         }
 
@@ -1550,9 +1550,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -1568,11 +1568,11 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties" /> <c>&lt;dsp:grpSpPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList" /> <c>&lt;dsp:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShape" /> <c>&lt;dsp:grpSp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties" /> <c>&lt;dsp:nvGrpSpPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeProperties" /> <c>&lt;dsp:grpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.OfficeArtExtensionList" /> <c>&lt;dsp:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShape" /> <c>&lt;dsp:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeNonVisualProperties" /> <c>&lt;dsp:nvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
     /// </remark>
     public partial class GroupShape : GroupShapeType
@@ -1615,14 +1615,14 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeNonVisualProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Shape), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.GroupShape), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Shape), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShape), 1, 1, version: FileFormatVersions.Office2010)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1638,11 +1638,11 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties" /> <c>&lt;dsp:grpSpPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList" /> <c>&lt;dsp:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShape" /> <c>&lt;dsp:grpSp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties" /> <c>&lt;dsp:nvGrpSpPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeProperties" /> <c>&lt;dsp:grpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.OfficeArtExtensionList" /> <c>&lt;dsp:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShape" /> <c>&lt;dsp:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeNonVisualProperties" /> <c>&lt;dsp:nvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
     /// </remark>
     public partial class ShapeTree : GroupShapeType
@@ -1685,14 +1685,14 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeNonVisualProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Shape), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.GroupShape), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Shape), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShape), 1, 1, version: FileFormatVersions.Office2010)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1708,11 +1708,11 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties" /> <c>&lt;dsp:grpSpPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList" /> <c>&lt;dsp:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShape" /> <c>&lt;dsp:grpSp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties" /> <c>&lt;dsp:nvGrpSpPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeProperties" /> <c>&lt;dsp:grpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.OfficeArtExtensionList" /> <c>&lt;dsp:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShape" /> <c>&lt;dsp:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeNonVisualProperties" /> <c>&lt;dsp:nvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class GroupShapeType : TypedOpenXmlCompositeElement
@@ -1751,11 +1751,11 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.GroupShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeNonVisualProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Shape>();
         }
 
         /// <summary>
@@ -1765,9 +1765,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties? GroupShapeNonVisualProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeNonVisualProperties? GroupShapeNonVisualProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeNonVisualProperties>();
             set => SetElement(value);
         }
 
@@ -1778,9 +1778,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <remark>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties? GroupShapeProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeProperties? GroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeProperties>();
             set => SetElement(value);
         }
     }

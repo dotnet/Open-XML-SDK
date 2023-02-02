@@ -16,7 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart
 {
     /// <summary>
     /// <para>Defines the PivotSource Class.</para>
@@ -419,7 +419,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences" /> <c>&lt;c15:sqref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences" /> <c>&lt;c15:sqref></c></description></item>
     /// </list>
     /// </remark>
     public partial class FullReference : TypedOpenXmlCompositeElement
@@ -460,10 +460,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:fullRef");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -474,9 +474,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences? SequenceOfReferences
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences? SequenceOfReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences>();
             set => SetElement(value);
         }
 
@@ -492,7 +492,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences" /> <c>&lt;c15:sqref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences" /> <c>&lt;c15:sqref></c></description></item>
     /// </list>
     /// </remark>
     public partial class LevelReference : TypedOpenXmlCompositeElement
@@ -533,10 +533,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:levelRef");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -547,9 +547,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences? SequenceOfReferences
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences? SequenceOfReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences>();
             set => SetElement(value);
         }
 
@@ -565,7 +565,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences" /> <c>&lt;c15:sqref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences" /> <c>&lt;c15:sqref></c></description></item>
     /// </list>
     /// </remark>
     public partial class FormulaReference : TypedOpenXmlCompositeElement
@@ -606,10 +606,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:formulaRef");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -620,9 +620,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences? SequenceOfReferences
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences? SequenceOfReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences>();
             set => SetElement(value);
         }
 
@@ -638,7 +638,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText" /> <c>&lt;c15:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ChartText" /> <c>&lt;c15:tx></c></description></item>
     /// </list>
     /// </remark>
     public partial class FilteredSeriesTitle : TypedOpenXmlCompositeElement
@@ -679,10 +679,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:filteredSeriesTitle");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ChartText>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ChartText), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -693,9 +693,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText? ChartText
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ChartText? ChartText
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ChartText>();
             set => SetElement(value);
         }
 
@@ -711,7 +711,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.AxisDataSourceType" /> <c>&lt;c15:cat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.AxisDataSourceType" /> <c>&lt;c15:cat></c></description></item>
     /// </list>
     /// </remark>
     public partial class FilteredCategoryTitle : TypedOpenXmlCompositeElement
@@ -752,10 +752,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:filteredCategoryTitle");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AxisDataSourceType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.AxisDataSourceType>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.AxisDataSourceType), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.AxisDataSourceType), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -766,9 +766,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.AxisDataSourceType? AxisDataSourceType
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.AxisDataSourceType? AxisDataSourceType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AxisDataSourceType>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.AxisDataSourceType>();
             set => SetElement(value);
         }
 
@@ -784,7 +784,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.AreaChartSeries" /> <c>&lt;c15:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.AreaChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
     public partial class FilteredAreaSeries : TypedOpenXmlCompositeElement
@@ -825,10 +825,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:filteredAreaSeries");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AreaChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.AreaChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.AreaChartSeries), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.AreaChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -839,9 +839,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.AreaChartSeries? AreaChartSeries
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.AreaChartSeries? AreaChartSeries
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AreaChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.AreaChartSeries>();
             set => SetElement(value);
         }
 
@@ -857,7 +857,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.BarChartSeries" /> <c>&lt;c15:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.BarChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
     public partial class FilteredBarSeries : TypedOpenXmlCompositeElement
@@ -898,10 +898,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:filteredBarSeries");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.BarChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.BarChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.BarChartSeries), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.BarChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -912,9 +912,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.BarChartSeries? BarChartSeries
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.BarChartSeries? BarChartSeries
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.BarChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.BarChartSeries>();
             set => SetElement(value);
         }
 
@@ -930,7 +930,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.BubbleChartSeries" /> <c>&lt;c15:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.BubbleChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
     public partial class FilteredBubbleSeries : TypedOpenXmlCompositeElement
@@ -971,10 +971,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:filteredBubbleSeries");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.BubbleChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.BubbleChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.BubbleChartSeries), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.BubbleChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -985,9 +985,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.BubbleChartSeries? BubbleChartSeries
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.BubbleChartSeries? BubbleChartSeries
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.BubbleChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.BubbleChartSeries>();
             set => SetElement(value);
         }
 
@@ -1003,7 +1003,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LineChartSeries" /> <c>&lt;c15:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LineChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
     public partial class FilteredLineSeriesExtension : TypedOpenXmlCompositeElement
@@ -1044,10 +1044,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:filteredLineSeries");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LineChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LineChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LineChartSeries), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LineChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1058,9 +1058,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.LineChartSeries? LineChartSeries
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LineChartSeries? LineChartSeries
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LineChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.LineChartSeries>();
             set => SetElement(value);
         }
 
@@ -1076,7 +1076,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.PieChartSeries" /> <c>&lt;c15:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.PieChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
     public partial class FilteredPieSeries : TypedOpenXmlCompositeElement
@@ -1117,10 +1117,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:filteredPieSeries");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.PieChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.PieChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PieChartSeries), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.PieChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1131,9 +1131,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.PieChartSeries? PieChartSeries
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.PieChartSeries? PieChartSeries
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.PieChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.PieChartSeries>();
             set => SetElement(value);
         }
 
@@ -1149,7 +1149,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.RadarChartSeries" /> <c>&lt;c15:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.RadarChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
     public partial class FilteredRadarSeries : TypedOpenXmlCompositeElement
@@ -1190,10 +1190,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:filteredRadarSeries");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.RadarChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.RadarChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.RadarChartSeries), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.RadarChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1204,9 +1204,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.RadarChartSeries? RadarChartSeries
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.RadarChartSeries? RadarChartSeries
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.RadarChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.RadarChartSeries>();
             set => SetElement(value);
         }
 
@@ -1222,7 +1222,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ScatterChartSeries" /> <c>&lt;c15:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ScatterChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
     public partial class FilteredScatterSeries : TypedOpenXmlCompositeElement
@@ -1263,10 +1263,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:filteredScatterSeries");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ScatterChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ScatterChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ScatterChartSeries), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ScatterChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1277,9 +1277,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.ScatterChartSeries? ScatterChartSeries
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ScatterChartSeries? ScatterChartSeries
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ScatterChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ScatterChartSeries>();
             set => SetElement(value);
         }
 
@@ -1295,7 +1295,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.SurfaceChartSeries" /> <c>&lt;c15:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SurfaceChartSeries" /> <c>&lt;c15:ser></c></description></item>
     /// </list>
     /// </remark>
     public partial class FilteredSurfaceSeries : TypedOpenXmlCompositeElement
@@ -1336,10 +1336,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:filteredSurfaceSeries");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SurfaceChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SurfaceChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.SurfaceChartSeries), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SurfaceChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1350,9 +1350,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.SurfaceChartSeries? SurfaceChartSeries
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SurfaceChartSeries? SurfaceChartSeries
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SurfaceChartSeries>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SurfaceChartSeries>();
             set => SetElement(value);
         }
 
@@ -1368,8 +1368,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRangeChache" /> <c>&lt;c15:dlblRangeCache></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula" /> <c>&lt;c15:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRangeChache" /> <c>&lt;c15:dlblRangeCache></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Formula" /> <c>&lt;c15:f></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataLabelsRange : TypedOpenXmlCompositeElement
@@ -1410,12 +1410,12 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:datalabelsRange");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRangeChache>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRangeChache>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Formula>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRangeChache), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Formula), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRangeChache), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1426,9 +1426,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula? Formula
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Formula>();
             set => SetElement(value);
         }
 
@@ -1439,9 +1439,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRangeChache? DataLabelsRangeChache
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRangeChache? DataLabelsRangeChache
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRangeChache>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelsRangeChache>();
             set => SetElement(value);
         }
 
@@ -1457,7 +1457,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterException" /> <c>&lt;c15:categoryFilterException></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterException" /> <c>&lt;c15:categoryFilterException></c></description></item>
     /// </list>
     /// </remark>
     public partial class CategoryFilterExceptions : TypedOpenXmlCompositeElement
@@ -1498,10 +1498,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:categoryFilterExceptions");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterException>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterException>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterException), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.CategoryFilterException), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1517,7 +1517,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableEntry" /> <c>&lt;c15:dlblFTEntry></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTableEntry" /> <c>&lt;c15:dlblFTEntry></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataLabelFieldTable : TypedOpenXmlCompositeElement
@@ -1558,10 +1558,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:dlblFieldTable");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableEntry>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTableEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableEntry), 0, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTableEntry), 0, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4120,13 +4120,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties" /> <c>&lt;c15:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.InvertIfNegativeBoolean" /> <c>&lt;c15:invertIfNegative></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.Bubble3D" /> <c>&lt;c15:bubble3D></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabel" /> <c>&lt;c15:dLbl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.Marker" /> <c>&lt;c15:marker></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.Explosion" /> <c>&lt;c15:explosion></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences" /> <c>&lt;c15:sqref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShapeProperties" /> <c>&lt;c15:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.InvertIfNegativeBoolean" /> <c>&lt;c15:invertIfNegative></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Bubble3D" /> <c>&lt;c15:bubble3D></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabel" /> <c>&lt;c15:dLbl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Marker" /> <c>&lt;c15:marker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Explosion" /> <c>&lt;c15:explosion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences" /> <c>&lt;c15:sqref></c></description></item>
     /// </list>
     /// </remark>
     public partial class CategoryFilterException : TypedOpenXmlCompositeElement
@@ -4167,22 +4167,22 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:categoryFilterException");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.InvertIfNegativeBoolean>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Bubble3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabel>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Marker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Explosion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.InvertIfNegativeBoolean>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Bubble3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Explosion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Explosion), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.InvertIfNegativeBoolean), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Bubble3D), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Marker), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabel), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Explosion), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.InvertIfNegativeBoolean), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Bubble3D), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Marker), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabel), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4193,9 +4193,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences? SequenceOfReferences
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences? SequenceOfReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.SequenceOfReferences>();
             set => SetElement(value);
         }
 
@@ -4206,9 +4206,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -4219,9 +4219,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.Explosion? Explosion
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Explosion? Explosion
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Explosion>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Explosion>();
             set => SetElement(value);
         }
 
@@ -4232,9 +4232,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.InvertIfNegativeBoolean? InvertIfNegativeBoolean
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.InvertIfNegativeBoolean? InvertIfNegativeBoolean
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.InvertIfNegativeBoolean>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.InvertIfNegativeBoolean>();
             set => SetElement(value);
         }
 
@@ -4245,9 +4245,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.Bubble3D? Bubble3D
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Bubble3D? Bubble3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Bubble3D>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Bubble3D>();
             set => SetElement(value);
         }
 
@@ -4258,9 +4258,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.Marker? Marker
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Marker? Marker
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Marker>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Marker>();
             set => SetElement(value);
         }
 
@@ -4271,9 +4271,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabel? DataLabel
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabel? DataLabel
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabel>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabel>();
             set => SetElement(value);
         }
 
@@ -4289,9 +4289,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableCache" /> <c>&lt;c15:dlblFieldTableCache></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.TextFieldGuid" /> <c>&lt;c15:txfldGUID></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula" /> <c>&lt;c15:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTableCache" /> <c>&lt;c15:dlblFieldTableCache></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.TextFieldGuid" /> <c>&lt;c15:txfldGUID></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Formula" /> <c>&lt;c15:f></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataLabelFieldTableEntry : TypedOpenXmlCompositeElement
@@ -4332,14 +4332,14 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema("c15:dlblFTEntry");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableCache>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.TextFieldGuid>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTableCache>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.TextFieldGuid>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Formula>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.TextFieldGuid), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableCache), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.TextFieldGuid), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Formula), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTableCache), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4350,9 +4350,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.TextFieldGuid? TextFieldGuid
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.TextFieldGuid? TextFieldGuid
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.TextFieldGuid>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.TextFieldGuid>();
             set => SetElement(value);
         }
 
@@ -4363,9 +4363,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula? Formula
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.Formula>();
             set => SetElement(value);
         }
 
@@ -4376,9 +4376,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remark>
         /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableCache? DataLabelFieldTableCache
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTableCache? DataLabelFieldTableCache
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableCache>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.Chart.DataLabelFieldTableCache>();
             set => SetElement(value);
         }
 

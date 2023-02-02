@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = SpreadsheetDocument.Open(stream, false))
             {
                 var ele14 = doc.WorkbookPart.RootElement.LastChild.First().First();
-                Assert.True(ele14 is DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties);
+                Assert.True(ele14 is DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.WorkbookProperties);
             }
         }
 
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = SpreadsheetDocument.Open(stream, false))
             {
                 var ele14 = doc.WorkbookPart.GetPartById("rId1").GetPartById("rId2").GetPartById("rId1").RootElement.LastChild.FirstChild.FirstChild;
-                Assert.True(ele14 is DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions);
+                Assert.True(ele14 is DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.PivotOptions);
             }
         }
 

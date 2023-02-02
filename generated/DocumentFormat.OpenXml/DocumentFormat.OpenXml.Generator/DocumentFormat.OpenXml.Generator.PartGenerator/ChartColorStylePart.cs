@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.chartcolorstyle+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle";
-        private DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyle? _rootElement;
+        private DocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.ColorStyle? _rootElement;
 
         /// <summary>
         /// Creates an instance of the ChartColorStylePart OpenXmlType
@@ -31,13 +31,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyle ColorStyle
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.ColorStyle ColorStyle
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyle>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.ColorStyle>();
                 }
 
                 return _rootElement!;
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyle;
+                _rootElement = value as DocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.ColorStyle;
             }
         }
 

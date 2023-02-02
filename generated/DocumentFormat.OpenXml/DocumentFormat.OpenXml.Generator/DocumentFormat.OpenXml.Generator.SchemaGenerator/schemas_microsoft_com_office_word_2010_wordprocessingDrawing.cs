@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
+namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing
 {
     /// <summary>
     /// <para>Defines the PercentagePositionHeightOffset Class.</para>
@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth" /> <c>&lt;wp14:pctWidth></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentageWidth" /> <c>&lt;wp14:pctWidth></c></description></item>
     /// </list>
     /// </remark>
     public partial class RelativeWidth : TypedOpenXmlCompositeElement
@@ -143,9 +143,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <para>relativeFrom, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>? ObjectId
+        public EnumValue<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.SizeRelativeHorizontallyValues>? ObjectId
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.SizeRelativeHorizontallyValues>>();
             set => SetAttribute(value);
         }
 
@@ -154,7 +154,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("wp14:sizeRelH");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentageWidth>();
             builder.AddElement<RelativeWidth>()
                 .AddAttribute("relativeFrom", a => a.ObjectId, aBuilder =>
                 {
@@ -163,7 +163,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentageWidth), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -174,9 +174,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <remark>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth? PercentageWidth
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentageWidth? PercentageWidth
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentageWidth>();
             set => SetElement(value);
         }
 
@@ -192,7 +192,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight" /> <c>&lt;wp14:pctHeight></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentageHeight" /> <c>&lt;wp14:pctHeight></c></description></item>
     /// </list>
     /// </remark>
     public partial class RelativeHeight : TypedOpenXmlCompositeElement
@@ -232,9 +232,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <para>relativeFrom, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>? RelativeFrom
+        public EnumValue<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.SizeRelativeVerticallyValues>? RelativeFrom
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.SizeRelativeVerticallyValues>>();
             set => SetAttribute(value);
         }
 
@@ -243,7 +243,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema("wp14:sizeRelV");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentageHeight>();
             builder.AddElement<RelativeHeight>()
                 .AddAttribute("relativeFrom", a => a.RelativeFrom, aBuilder =>
                 {
@@ -252,7 +252,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentageHeight), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -263,9 +263,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <remark>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight? PercentageHeight
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentageHeight? PercentageHeight
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing.PercentageHeight>();
             set => SetElement(value);
         }
 

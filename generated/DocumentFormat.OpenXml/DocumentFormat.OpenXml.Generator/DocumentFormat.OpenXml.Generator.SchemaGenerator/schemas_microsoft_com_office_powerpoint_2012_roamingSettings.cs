@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
+namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2012.RoamingSettings
 {
     /// <summary>
     /// <para>Defines the Key Class.</para>
@@ -100,8 +100,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key" /> <c>&lt;pRoam:key></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value" /> <c>&lt;pRoam:value></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2012.RoamingSettings.Key" /> <c>&lt;pRoam:key></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2012.RoamingSettings.Value" /> <c>&lt;pRoam:value></c></description></item>
     /// </list>
     /// </remark>
     public partial class RoamingProperty : TypedOpenXmlCompositeElement
@@ -142,12 +142,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
             base.ConfigureMetadata(builder);
             builder.SetSchema("pRoam:props");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2012.RoamingSettings.Key>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2012.RoamingSettings.Value>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2012.RoamingSettings.Key), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2012.RoamingSettings.Value), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -158,9 +158,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         /// <remark>
         /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key? Key
+        public DocumentFormat.OpenXml.Office.PowerPoint.Y2012.RoamingSettings.Key? Key
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2012.RoamingSettings.Key>();
             set => SetElement(value);
         }
 
@@ -171,9 +171,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         /// <remark>
         /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value? Value
+        public DocumentFormat.OpenXml.Office.PowerPoint.Y2012.RoamingSettings.Value? Value
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value>();
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2012.RoamingSettings.Value>();
             set => SetElement(value);
         }
 

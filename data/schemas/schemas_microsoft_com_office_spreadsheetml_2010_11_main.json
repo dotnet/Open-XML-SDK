@@ -427,7 +427,7 @@
         {
           "QName": ":numberFormat",
           "PropertyName": "NumberFormat",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Excel.CalculatedMemberNumberFormat\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.CalculatedMemberNumberFormat\u003E",
           "Version": "Office2013",
           "PropertyComments": "numberFormat"
         },
@@ -789,7 +789,7 @@
         },
         {
           "QName": ":referencePeriod",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Excel.MovingPeriodStep\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.MovingPeriodStep\u003E",
           "Version": "Office2013",
           "PropertyComments": "referencePeriod",
           "Validators": [
@@ -811,7 +811,7 @@
         },
         {
           "QName": ":movingPeriod",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Excel.MovingPeriodStep\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.MovingPeriodStep\u003E",
           "Version": "Office2013",
           "PropertyComments": "movingPeriod",
           "Validators": [
@@ -894,7 +894,7 @@
         {
           "QName": ":sortOrder",
           "PropertyName": "SortOrder",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.TabularSlicerCacheSortOrderValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "sortOrder"
         },
@@ -908,7 +908,7 @@
         {
           "QName": ":crossFilter",
           "PropertyName": "CrossFilter",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SlicerCacheCrossFilterValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "crossFilter"
         }
@@ -1375,7 +1375,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Excel.TimelineStyleType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelineStyleType\u003E",
           "Version": "Office2013",
           "PropertyComments": "type",
           "Validators": [
@@ -2005,7 +2005,7 @@
         {
           "QName": ":t",
           "PropertyName": "Text",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Excel.SXVCellType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.SXVCellType\u003E",
           "Version": "Office2013",
           "PropertyComments": "t"
         }
@@ -2426,7 +2426,7 @@
         },
         {
           "QName": ":position",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Excel.SurveyPosition\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.SurveyPosition\u003E",
           "Version": "Office2013",
           "PropertyComments": "position"
         }
@@ -2508,13 +2508,13 @@
         },
         {
           "QName": ":type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Excel.QuestionType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.QuestionType\u003E",
           "Version": "Office2013",
           "PropertyComments": "type"
         },
         {
           "QName": ":format",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Excel.QuestionFormat\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.QuestionFormat\u003E",
           "Version": "Office2013",
           "PropertyComments": "format"
         },

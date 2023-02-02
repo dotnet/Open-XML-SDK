@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.people+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/people";
-        private DocumentFormat.OpenXml.Office2013.Word.People? _rootElement;
+        private DocumentFormat.OpenXml.Office.Word.Y2012.WordML.People? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WordprocessingPeoplePart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2013.Word.People;
+                _rootElement = value as DocumentFormat.OpenXml.Office.Word.Y2012.WordML.People;
             }
         }
 
@@ -49,13 +49,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2013.Word.People People
+        public DocumentFormat.OpenXml.Office.Word.Y2012.WordML.People People
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2013.Word.People>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.Word.Y2012.WordML.People>();
                 }
 
                 return _rootElement!;

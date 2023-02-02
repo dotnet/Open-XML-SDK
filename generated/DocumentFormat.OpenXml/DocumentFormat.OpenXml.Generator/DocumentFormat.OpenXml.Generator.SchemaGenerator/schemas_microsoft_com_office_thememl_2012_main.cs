@@ -16,7 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2013.Theme
+namespace DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main
 {
     /// <summary>
     /// <para>Defines the ThemeFamily Class.</para>
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class ThemeFamily : TypedOpenXmlCompositeElement
@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
             base.ConfigureMetadata(builder);
             builder.SetSchema("thm15:themeFamily");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main.OfficeArtExtensionList>();
             builder.AddElement<ThemeFamily>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("thm15:id"), 1, 100) { Application = ApplicationType.Excel | ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 });
         }
@@ -127,9 +127,9 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <remark>
         /// xmlns:thm15 = http://schemas.microsoft.com/office/thememl/2012/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -211,7 +211,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class ThemeVariant : TypedOpenXmlCompositeElement
@@ -305,7 +305,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
             base.ConfigureMetadata(builder);
             builder.SetSchema("thm15:themeVariant");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main.OfficeArtExtensionList>();
             builder.AddElement<ThemeVariant>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -332,7 +332,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -343,9 +343,9 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <remark>
         /// xmlns:thm15 = http://schemas.microsoft.com/office/thememl/2012/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -361,7 +361,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant" /> <c>&lt;thm15:themeVariant></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main.ThemeVariant" /> <c>&lt;thm15:themeVariant></c></description></item>
     /// </list>
     /// </remark>
     public partial class ThemeVariantList : TypedOpenXmlCompositeElement
@@ -402,10 +402,10 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
             base.ConfigureMetadata(builder);
             builder.SetSchema("thm15:themeVariantLst");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main.ThemeVariant>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main.ThemeVariant), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 

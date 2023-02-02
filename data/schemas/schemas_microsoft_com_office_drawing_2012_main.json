@@ -72,7 +72,7 @@
         {
           "QName": ":targetScreenSize",
           "PropertyName": "TargetScreenSize",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.Main.TargetScreenSize\u003E",
           "Version": "Office2013",
           "PropertyComments": "targetScreenSize",
           "Validators": [

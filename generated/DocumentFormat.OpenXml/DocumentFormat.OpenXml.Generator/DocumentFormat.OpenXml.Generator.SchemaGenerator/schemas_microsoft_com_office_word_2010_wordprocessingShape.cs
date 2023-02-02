@@ -16,7 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
+namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape
 {
     /// <summary>
     /// <para>Defines the WordprocessingShape Class.</para>
@@ -26,15 +26,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualConnectorProperties" /> <c>&lt;wps:cNvCnPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties" /> <c>&lt;wps:cNvPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingShapeProperties" /> <c>&lt;wps:cNvSpPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList" /> <c>&lt;wps:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeProperties" /> <c>&lt;wps:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeStyle" /> <c>&lt;wps:style></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBodyProperties" /> <c>&lt;wps:bodyPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.LinkedTextBox" /> <c>&lt;wps:linkedTxbx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBoxInfo2" /> <c>&lt;wps:txbx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.NonVisualConnectorProperties" /> <c>&lt;wps:cNvCnPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.NonVisualDrawingProperties" /> <c>&lt;wps:cNvPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.NonVisualDrawingShapeProperties" /> <c>&lt;wps:cNvSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.OfficeArtExtensionList" /> <c>&lt;wps:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.ShapeProperties" /> <c>&lt;wps:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.ShapeStyle" /> <c>&lt;wps:style></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.TextBodyProperties" /> <c>&lt;wps:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.LinkedTextBox" /> <c>&lt;wps:linkedTxbx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.TextBoxInfo2" /> <c>&lt;wps:txbx></c></description></item>
     /// </list>
     /// </remark>
     public partial class WordprocessingShape : TypedOpenXmlCompositeElement
@@ -85,34 +85,34 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema("wps:wsp");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualConnectorProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBodyProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.LinkedTextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBoxInfo2>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.NonVisualConnectorProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.NonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.NonVisualDrawingShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.ShapeStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.TextBodyProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.LinkedTextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.TextBoxInfo2>();
             builder.AddElement<WordprocessingShape>()
                 .AddAttribute("normalEastAsianFlow", a => a.NormalEastAsianFlow);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.NonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualConnectorProperties), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.NonVisualDrawingShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.NonVisualConnectorProperties), 1, 1, version: FileFormatVersions.Office2010)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeStyle), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.ShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.ShapeStyle), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBoxInfo2), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.LinkedTextBox), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.TextBoxInfo2), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.LinkedTextBox), 1, 1, version: FileFormatVersions.Office2010)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBodyProperties), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.TextBodyProperties), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -123,9 +123,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <remark>
         /// xmlns:wps = http://schemas.microsoft.com/office/word/2010/wordprocessingShape
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -865,7 +865,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList" /> <c>&lt;wps:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.OfficeArtExtensionList" /> <c>&lt;wps:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextBoxContent" /> <c>&lt;w:txbxContent></c></description></item>
     /// </list>
     /// </remark>
@@ -917,14 +917,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema("wps:txbx");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxContent>();
             builder.AddElement<TextBoxInfo2>()
                 .AddAttribute("id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -948,9 +948,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <remark>
         /// xmlns:wps = http://schemas.microsoft.com/office/word/2010/wordprocessingShape
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -966,7 +966,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList" /> <c>&lt;wps:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.OfficeArtExtensionList" /> <c>&lt;wps:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class LinkedTextBox : TypedOpenXmlCompositeElement
@@ -1027,7 +1027,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema("wps:linkedTxbx");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.OfficeArtExtensionList>();
             builder.AddElement<LinkedTextBox>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -1039,7 +1039,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1050,9 +1050,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <remark>
         /// xmlns:wps = http://schemas.microsoft.com/office/word/2010/wordprocessingShape
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

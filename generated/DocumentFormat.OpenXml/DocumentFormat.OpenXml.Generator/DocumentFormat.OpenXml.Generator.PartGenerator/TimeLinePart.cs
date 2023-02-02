@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.timeline+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/timeline";
-        private DocumentFormat.OpenXml.Office2013.Excel.Timelines? _rootElement;
+        private DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.Timelines? _rootElement;
 
         /// <summary>
         /// Creates an instance of the TimeLinePart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2013.Excel.Timelines;
+                _rootElement = value as DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.Timelines;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2013.Excel.Timelines Timelines
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.Timelines Timelines
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2013.Excel.Timelines>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.Timelines>();
                 }
 
                 return _rootElement!;

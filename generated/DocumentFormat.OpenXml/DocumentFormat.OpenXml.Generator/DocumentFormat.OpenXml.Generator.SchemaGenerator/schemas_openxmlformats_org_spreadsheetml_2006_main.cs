@@ -10,12 +10,12 @@ using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Spreadsheet;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo;
-using DocumentFormat.OpenXml.Office2010.Excel;
-using DocumentFormat.OpenXml.Office2013.Excel;
-using DocumentFormat.OpenXml.Office2013.ExcelAc;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -5242,7 +5242,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties" /> <c>&lt;x:workbookPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection" /> <c>&lt;x:workbookProtection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath" /> <c>&lt;x15ac:absPath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac.AbsolutePath" /> <c>&lt;x15ac:absPath></c></description></item>
     /// </list>
     /// </remark>
     public partial class Workbook : TypedOpenXmlPartRootElement
@@ -5309,7 +5309,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac.AbsolutePath>();
             builder.AddElement<Workbook>()
                 .AddAttribute("conformance", a => a.Conformance);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -5317,7 +5317,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FileVersion), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FileSharing), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac.AbsolutePath), 0, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BookViews), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Sheets), 1, 1),
@@ -5381,9 +5381,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x15ac = http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath? AbsolutePath
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac.AbsolutePath? AbsolutePath
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac.AbsolutePath>();
             set => SetElement(value);
         }
 
@@ -5580,8 +5580,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Filters" /> <c>&lt;x:filters></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IconFilter" /> <c>&lt;x:iconFilter></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Top10" /> <c>&lt;x:top10></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CustomFilters" /> <c>&lt;x14:customFilters></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CustomFilters" /> <c>&lt;x14:customFilters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
     /// </list>
     /// </remark>
     public partial class FilterColumn : TypedOpenXmlCompositeElement
@@ -5658,8 +5658,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Filters>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IconFilter>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Top10>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CustomFilters>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconFilter>();
             builder.AddElement<FilterColumn>()
                 .AddAttribute("colId", a => a.ColumnId, aBuilder =>
                 {
@@ -5671,11 +5671,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Filters), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Top10), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CustomFilters), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CustomFilters), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomFilters), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DynamicFilter), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColorFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.IconFilter), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconFilter), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IconFilter), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -5714,9 +5714,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.CustomFilters? CustomFilters14
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CustomFilters? CustomFilters14
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CustomFilters>();
             set => SetElement(value);
         }
 
@@ -5766,9 +5766,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.IconFilter? IconFilter14
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconFilter? IconFilter14
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconFilter>();
             set => SetElement(value);
         }
 
@@ -5812,7 +5812,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortCondition" /> <c>&lt;x:sortCondition></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SortCondition" /> <c>&lt;x14:sortCondition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SortCondition" /> <c>&lt;x14:sortCondition></c></description></item>
     /// </list>
     /// </remark>
     public partial class SortState : TypedOpenXmlCompositeElement
@@ -5894,7 +5894,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:sortState");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortCondition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SortCondition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SortCondition>();
             builder.AddElement<SortState>()
                 .AddAttribute("columnSort", a => a.ColumnSort)
                 .AddAttribute("caseSensitive", a => a.CaseSensitive)
@@ -5907,7 +5907,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SortCondition), 0, 64, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SortCondition), 0, 64, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortCondition), 0, 64)
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -24451,7 +24451,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula1" /> <c>&lt;x:formula1></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula2" /> <c>&lt;x:formula2></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.ExcelAc.List" /> <c>&lt;x12ac:list></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2011.M01.Ac.List" /> <c>&lt;x12ac:list></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataValidation : TypedOpenXmlCompositeElement
@@ -24623,7 +24623,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:dataValidation");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2011.M01.Ac.List>();
             builder.AddElement<DataValidation>()
                 .AddAttribute("type", a => a.Type)
                 .AddAttribute("errorStyle", a => a.ErrorStyle)
@@ -24643,7 +24643,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2011.M01.Ac.List), 0, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula1), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula2), 0, 1)
             };
@@ -24659,9 +24659,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x12ac = http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.ExcelAc.List? List
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2011.M01.Ac.List? List
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2011.M01.Ac.List>();
             set => SetElement(value);
         }
 
@@ -30320,7 +30320,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleItem" /> <c>&lt;x:oleItem></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OleItem" /> <c>&lt;x14:oleItem></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.OleItem" /> <c>&lt;x14:oleItem></c></description></item>
     /// </list>
     /// </remark>
     public partial class OleItems : TypedOpenXmlCompositeElement
@@ -30361,11 +30361,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:oleItems");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleItem>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OleItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.OleItem>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OleItem), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.OleItem), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -32744,7 +32744,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Table" /> <c>&lt;x14:table></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Table" /> <c>&lt;x14:table></c></description></item>
     /// </list>
     /// </remark>
     public partial class TableExtension : TypedOpenXmlCompositeElement
@@ -32794,7 +32794,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Table>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Table>();
             builder.AddElement<TableExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -32803,7 +32803,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Table), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Table), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
             };
         }
@@ -33182,7 +33182,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Id" /> <c>&lt;x14:id></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Id" /> <c>&lt;x14:id></c></description></item>
     /// </list>
     /// </remark>
     public partial class ConditionalFormattingRuleExtension : TypedOpenXmlCompositeElement
@@ -33232,7 +33232,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Id>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Id>();
             builder.AddElement<ConditionalFormattingRuleExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -33241,7 +33241,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Id), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Id), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
             };
         }
@@ -33258,7 +33258,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy" /> <c>&lt;x14:pivotHierarchy></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotHierarchy" /> <c>&lt;x14:pivotHierarchy></c></description></item>
     /// </list>
     /// </remark>
     public partial class PivotHierarchyExtension : TypedOpenXmlCompositeElement
@@ -33308,7 +33308,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotHierarchy>();
             builder.AddElement<PivotHierarchyExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -33317,7 +33317,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotHierarchy), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
             };
         }
@@ -33334,7 +33334,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotField" /> <c>&lt;x14:pivotField></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotField" /> <c>&lt;x14:pivotField></c></description></item>
     /// </list>
     /// </remark>
     public partial class PivotFieldExtension : TypedOpenXmlCompositeElement
@@ -33384,7 +33384,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotField>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotField>();
             builder.AddElement<PivotFieldExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -33393,7 +33393,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotField), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotField), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
             };
         }
@@ -33410,7 +33410,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SourceConnection" /> <c>&lt;x14:sourceConnection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SourceConnection" /> <c>&lt;x14:sourceConnection></c></description></item>
     /// </list>
     /// </remark>
     public partial class CacheSourceExtension : TypedOpenXmlCompositeElement
@@ -33460,7 +33460,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SourceConnection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SourceConnection>();
             builder.AddElement<CacheSourceExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -33469,7 +33469,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SourceConnection), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SourceConnection), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
             };
         }
@@ -38463,7 +38463,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DateGroupItem" /> <c>&lt;x:dateGroupItem></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Filter" /> <c>&lt;x:filter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Filter" /> <c>&lt;x14:filter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Filter" /> <c>&lt;x14:filter></c></description></item>
     /// </list>
     /// </remark>
     public partial class Filters : TypedOpenXmlCompositeElement
@@ -38525,13 +38525,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:filters");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DateGroupItem>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Filter>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Filter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Filter>();
             builder.AddElement<Filters>()
                 .AddAttribute("blank", a => a.Blank)
                 .AddAttribute("calendarType", a => a.CalendarType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Filter), 0, 0, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Filter), 0, 0, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Filter), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DateGroupItem), 0, 0)
             };
@@ -38882,9 +38882,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables" /> <c>&lt;x15:slicerCachePivotTables></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData" /> <c>&lt;x15:slicerCacheHideItemsWithNoData></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache" /> <c>&lt;x15:tableSlicerCache></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.SlicerCachePivotTables" /> <c>&lt;x15:slicerCachePivotTables></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.SlicerCacheHideItemsWithNoData" /> <c>&lt;x15:slicerCacheHideItemsWithNoData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TableSlicerCache" /> <c>&lt;x15:tableSlicerCache></c></description></item>
     /// </list>
     /// </remark>
     public partial class SlicerCacheDefinitionExtension : TypedOpenXmlCompositeElement
@@ -38934,9 +38934,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.SlicerCachePivotTables>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.SlicerCacheHideItemsWithNoData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TableSlicerCache>();
             builder.AddElement<SlicerCacheDefinitionExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -38945,9 +38945,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.SlicerCachePivotTables), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TableSlicerCache), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.SlicerCacheHideItemsWithNoData), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -38964,8 +38964,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState" /> <c>&lt;x15:movingPeriodState></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotFilter" /> <c>&lt;x15:pivotFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.MovingPeriodState" /> <c>&lt;x15:movingPeriodState></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotFilter" /> <c>&lt;x15:pivotFilter></c></description></item>
     /// </list>
     /// </remark>
     public partial class PivotFilterExtension : TypedOpenXmlCompositeElement
@@ -39015,8 +39015,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.MovingPeriodState>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotFilter>();
             builder.AddElement<PivotFilterExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -39025,8 +39025,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotFilter), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotFilter), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.MovingPeriodState), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -39043,7 +39043,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.QueryTable" /> <c>&lt;x15:queryTable></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.QueryTable" /> <c>&lt;x15:queryTable></c></description></item>
     /// </list>
     /// </remark>
     public partial class QueryTableExtension : TypedOpenXmlCompositeElement
@@ -39093,7 +39093,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.QueryTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.QueryTable>();
             builder.AddElement<QueryTableExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -39102,7 +39102,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.QueryTable), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.QueryTable), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -39919,8 +39919,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Connection" /> <c>&lt;x14:connection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.Connection" /> <c>&lt;x15:connection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Connection" /> <c>&lt;x14:connection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.Connection" /> <c>&lt;x15:connection></c></description></item>
     /// </list>
     /// </remark>
     public partial class ConnectionExtension : TypedOpenXmlCompositeElement
@@ -39970,8 +39970,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Connection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.Connection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Connection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.Connection>();
             builder.AddElement<ConnectionExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -39980,8 +39980,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Connection), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.Connection), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Connection), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.Connection), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -40451,8 +40451,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CacheField" /> <c>&lt;x14:cacheField></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames" /> <c>&lt;x15:cachedUniqueNames></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CacheField" /> <c>&lt;x14:cacheField></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.CachedUniqueNames" /> <c>&lt;x15:cachedUniqueNames></c></description></item>
     /// </list>
     /// </remark>
     public partial class CacheFieldExtension : TypedOpenXmlCompositeElement
@@ -40502,8 +40502,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CacheField>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CacheField>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.CachedUniqueNames>();
             builder.AddElement<CacheFieldExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -40512,8 +40512,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheField), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CacheField), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.CachedUniqueNames), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -40731,8 +40731,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy" /> <c>&lt;x14:cacheHierarchy></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy" /> <c>&lt;x15:cacheHierarchy></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CacheHierarchy" /> <c>&lt;x14:cacheHierarchy></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.CacheHierarchy" /> <c>&lt;x15:cacheHierarchy></c></description></item>
     /// </list>
     /// </remark>
     public partial class CacheHierarchyExtension : TypedOpenXmlCompositeElement
@@ -40782,8 +40782,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CacheHierarchy>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.CacheHierarchy>();
             builder.AddElement<CacheHierarchyExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -40792,8 +40792,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CacheHierarchy), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.CacheHierarchy), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -40869,8 +40869,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember" /> <c>&lt;x14:calculatedMember></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember" /> <c>&lt;x15:calculatedMember></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CalculatedMember" /> <c>&lt;x14:calculatedMember></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.CalculatedMember" /> <c>&lt;x15:calculatedMember></c></description></item>
     /// </list>
     /// </remark>
     public partial class CalculatedMemberExtension : TypedOpenXmlCompositeElement
@@ -40920,8 +40920,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CalculatedMember>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.CalculatedMember>();
             builder.AddElement<CalculatedMemberExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -40930,8 +40930,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CalculatedMember), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.CalculatedMember), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -41007,8 +41007,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataField" /> <c>&lt;x14:dataField></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DataField" /> <c>&lt;x15:dataField></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataField" /> <c>&lt;x14:dataField></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.DataField" /> <c>&lt;x15:dataField></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataFieldExtension : TypedOpenXmlCompositeElement
@@ -41058,8 +41058,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataField>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DataField>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataField>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.DataField>();
             builder.AddElement<DataFieldExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -41068,8 +41068,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataField), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataField), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataField), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.DataField), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -42082,14 +42082,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings" /> <c>&lt;x14:conditionalFormattings></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataValidations" /> <c>&lt;x14:dataValidations></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors" /> <c>&lt;x14:ignoredErrors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ProtectedRanges" /> <c>&lt;x14:protectedRanges></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerList" /> <c>&lt;x14:slicerList></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups" /> <c>&lt;x14:sparklineGroups></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences" /> <c>&lt;x15:timelineRefs></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WebExtensions" /> <c>&lt;x15:webExtensions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ConditionalFormattings" /> <c>&lt;x14:conditionalFormattings></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataValidations" /> <c>&lt;x14:dataValidations></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IgnoredErrors" /> <c>&lt;x14:ignoredErrors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ProtectedRanges" /> <c>&lt;x14:protectedRanges></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SlicerList" /> <c>&lt;x14:slicerList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SparklineGroups" /> <c>&lt;x14:sparklineGroups></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelineReferences" /> <c>&lt;x15:timelineRefs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.WebExtensions" /> <c>&lt;x15:webExtensions></c></description></item>
     /// </list>
     /// </remark>
     public partial class WorksheetExtension : TypedOpenXmlCompositeElement
@@ -42139,14 +42139,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataValidations>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ProtectedRanges>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.WebExtensions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ConditionalFormattings>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataValidations>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IgnoredErrors>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ProtectedRanges>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SlicerList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SparklineGroups>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelineReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.WebExtensions>();
             builder.AddElement<WorksheetExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -42155,14 +42155,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataValidations), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerList), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ProtectedRanges), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.WebExtensions), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ConditionalFormattings), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataValidations), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SparklineGroups), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SlicerList), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ProtectedRanges), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IgnoredErrors), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.WebExtensions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelineReferences), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -43005,10 +43005,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats" /> <c>&lt;x14:dxfs></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DifferentialFormats" /> <c>&lt;x15:dxfs></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles" /> <c>&lt;x14:slicerStyles></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles" /> <c>&lt;x15:timelineStyles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DifferentialFormats" /> <c>&lt;x14:dxfs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.DifferentialFormats" /> <c>&lt;x15:dxfs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SlicerStyles" /> <c>&lt;x14:slicerStyles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelineStyles" /> <c>&lt;x15:timelineStyles></c></description></item>
     /// </list>
     /// </remark>
     public partial class StylesheetExtension : TypedOpenXmlCompositeElement
@@ -43058,10 +43058,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DifferentialFormats>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DifferentialFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.DifferentialFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SlicerStyles>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelineStyles>();
             builder.AddElement<StylesheetExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -43070,10 +43070,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DifferentialFormats), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DifferentialFormats), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SlicerStyles), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.DifferentialFormats), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelineStyles), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -44650,17 +44650,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotCaches" /> <c>&lt;x14:pivotCaches></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotCaches" /> <c>&lt;x15:pivotCaches></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches" /> <c>&lt;x15:timelineCachePivotCaches></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DefinedNames" /> <c>&lt;x14:definedNames></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches" /> <c>&lt;x14:slicerCaches></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches" /> <c>&lt;x15:slicerCaches></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties" /> <c>&lt;x14:workbookPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DataModel" /> <c>&lt;x15:dataModel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences" /> <c>&lt;x15:pivotTableReferences></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences" /> <c>&lt;x15:timelineCacheRefs></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties" /> <c>&lt;x15:workbookPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotCaches" /> <c>&lt;x14:pivotCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotCaches" /> <c>&lt;x15:pivotCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelineCachePivotCaches" /> <c>&lt;x15:timelineCachePivotCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DefinedNames" /> <c>&lt;x14:definedNames></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SlicerCaches" /> <c>&lt;x14:slicerCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.SlicerCaches" /> <c>&lt;x15:slicerCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.WorkbookProperties" /> <c>&lt;x14:workbookPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.DataModel" /> <c>&lt;x15:dataModel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotTableReferences" /> <c>&lt;x15:pivotTableReferences></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelineCacheReferences" /> <c>&lt;x15:timelineCacheRefs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.WorkbookProperties" /> <c>&lt;x15:workbookPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class WorkbookExtension : TypedOpenXmlCompositeElement
@@ -44710,17 +44710,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotCaches>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCaches>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DefinedNames>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DataModel>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelineCachePivotCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DefinedNames>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SlicerCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.SlicerCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.WorkbookProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.DataModel>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotTableReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelineCacheReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.WorkbookProperties>();
             builder.AddElement<WorkbookExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -44729,17 +44729,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCaches), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCaches), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataModel), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DefinedNames), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotCaches), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SlicerCaches), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.SlicerCaches), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.WorkbookProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotCaches), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotTableReferences), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelineCachePivotCaches), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelineCacheReferences), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.WorkbookProperties), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.DataModel), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -46004,9 +46004,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition" /> <c>&lt;x14:pivotTableDefinition></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableData" /> <c>&lt;x15:pivotTableData></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings" /> <c>&lt;x15:pivotTableUISettings></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotTableDefinition" /> <c>&lt;x14:pivotTableDefinition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotTableData" /> <c>&lt;x15:pivotTableData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotTableUISettings" /> <c>&lt;x15:pivotTableUISettings></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.PivotVersionInfo" /> <c>&lt;xxpvi:pivotVersionInfo></c></description></item>
     /// </list>
     /// </remark>
@@ -46057,9 +46057,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableData>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotTableDefinition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotTableData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotTableUISettings>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.PivotVersionInfo>();
             builder.AddElement<PivotTableDefinitionExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -46069,9 +46069,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableData), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotTableDefinition), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotTableData), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotTableUISettings), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.PivotVersionInfo), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
@@ -46984,10 +46984,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition" /> <c>&lt;x14:pivotCacheDefinition></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled" /> <c>&lt;x15:pivotCacheDecoupled></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion" /> <c>&lt;x15:pivotCacheIdVersion></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition" /> <c>&lt;x15:timelinePivotCacheDefinition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotCacheDefinition" /> <c>&lt;x14:pivotCacheDefinition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotCacheDecoupled" /> <c>&lt;x15:pivotCacheDecoupled></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotCacheIdVersion" /> <c>&lt;x15:pivotCacheIdVersion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelinePivotCacheDefinition" /> <c>&lt;x15:timelinePivotCacheDefinition></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RichDataPivotCacheGuid" /> <c>&lt;x:richInfo></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.PivotNov2020.Xsdboolean" /> <c>&lt;xxpim:implicitMeasureSupport></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo" /> <c>&lt;xxpvi:cacheVersionInfo></c></description></item>
@@ -47040,10 +47040,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotCacheDefinition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotCacheDecoupled>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotCacheIdVersion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelinePivotCacheDefinition>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RichDataPivotCacheGuid>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.PivotNov2020.Xsdboolean>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo>();
@@ -47055,10 +47055,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotCacheDefinition), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotCacheDecoupled), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.TimelinePivotCacheDefinition), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main.PivotCacheIdVersion), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.PivotNov2020.Xsdboolean), 1, 1, version: FileFormatVersions.Office2021),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RichDataPivotCacheGuid), 1, 1, version: FileFormatVersions.Microsoft365),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo), 1, 1, version: FileFormatVersions.Microsoft365),

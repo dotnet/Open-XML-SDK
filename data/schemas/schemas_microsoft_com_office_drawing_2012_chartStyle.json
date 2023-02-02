@@ -2318,7 +2318,7 @@
         {
           "QName": ":visible",
           "PropertyName": "Visible",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "visible",
           "Validators": [
@@ -2338,7 +2338,7 @@
         {
           "QName": ":majorTick",
           "PropertyName": "MajorTick",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.TickMarkNinch\u003E",
           "Version": "Office2013",
           "PropertyComments": "majorTick",
           "Validators": [
@@ -2358,7 +2358,7 @@
         {
           "QName": ":minorTick",
           "PropertyName": "MinorTickProp",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.TickMarkNinch\u003E",
           "Version": "Office2013",
           "PropertyComments": "minorTick",
           "Validators": [
@@ -2378,7 +2378,7 @@
         {
           "QName": ":labelPosition",
           "PropertyName": "LabelPosition",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.TickLabelPositionNinch\u003E",
           "Version": "Office2013",
           "PropertyComments": "labelPosition",
           "Validators": [
@@ -2398,7 +2398,7 @@
         {
           "QName": ":majorGridlines",
           "PropertyName": "MajorGridlines",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "majorGridlines",
           "Validators": [
@@ -2418,7 +2418,7 @@
         {
           "QName": ":minorGridlines",
           "PropertyName": "MinorGridlinesProp",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "minorGridlines",
           "Validators": [
@@ -2438,7 +2438,7 @@
         {
           "QName": ":title",
           "PropertyName": "TitleProp",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "title",
           "Validators": [
@@ -2568,7 +2568,7 @@
         {
           "QName": ":markerVisible",
           "PropertyName": "MarkerVisible",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "markerVisible",
           "Validators": [
@@ -2588,7 +2588,7 @@
         {
           "QName": ":hiloLines",
           "PropertyName": "HiloLines",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "hiloLines",
           "Validators": [
@@ -2608,7 +2608,7 @@
         {
           "QName": ":dropLines",
           "PropertyName": "DropLines",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "dropLines",
           "Validators": [
@@ -2628,7 +2628,7 @@
         {
           "QName": ":seriesLines",
           "PropertyName": "SeriesLines",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "seriesLines",
           "Validators": [
@@ -2658,7 +2658,7 @@
         {
           "QName": ":position",
           "PropertyName": "Position",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.DataLabelsPosition\u003E",
           "Version": "Office2013",
           "PropertyComments": "position",
           "Validators": [
@@ -2678,7 +2678,7 @@
         {
           "QName": ":value",
           "PropertyName": "Value",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "value",
           "Validators": [
@@ -2698,7 +2698,7 @@
         {
           "QName": ":seriesName",
           "PropertyName": "SeriesName",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "seriesName",
           "Validators": [
@@ -2718,7 +2718,7 @@
         {
           "QName": ":categoryName",
           "PropertyName": "CategoryName",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "categoryName",
           "Validators": [
@@ -2738,7 +2738,7 @@
         {
           "QName": ":legendKey",
           "PropertyName": "LegendKey",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "legendKey",
           "Validators": [
@@ -2758,7 +2758,7 @@
         {
           "QName": ":percentage",
           "PropertyName": "Percentage",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "percentage",
           "Validators": [
@@ -2788,7 +2788,7 @@
         {
           "QName": ":legendKeys",
           "PropertyName": "LegendKeys",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "legendKeys",
           "Validators": [
@@ -2808,7 +2808,7 @@
         {
           "QName": ":horizontalBorder",
           "PropertyName": "HorizontalBorder",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "horizontalBorder",
           "Validators": [
@@ -2828,7 +2828,7 @@
         {
           "QName": ":verticalBorder",
           "PropertyName": "VerticalBorder",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "verticalBorder",
           "Validators": [
@@ -2848,7 +2848,7 @@
         {
           "QName": ":outlineBorder",
           "PropertyName": "OutlineBorder",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "outlineBorder",
           "Validators": [
@@ -2878,7 +2878,7 @@
         {
           "QName": ":visible",
           "PropertyName": "Visible",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "visible",
           "Validators": [
@@ -2898,7 +2898,7 @@
         {
           "QName": ":includeInLayout",
           "PropertyName": "IncludeInLayout",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "includeInLayout",
           "Validators": [
@@ -2918,7 +2918,7 @@
         {
           "QName": ":position",
           "PropertyName": "Position",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.LegendPosition\u003E",
           "Version": "Office2013",
           "PropertyComments": "position",
           "Validators": [
@@ -2948,7 +2948,7 @@
         {
           "QName": ":position",
           "PropertyName": "Position",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.TitlePosition\u003E",
           "Version": "Office2013",
           "PropertyComments": "position",
           "Validators": [
@@ -2978,7 +2978,7 @@
         {
           "QName": ":add",
           "PropertyName": "Add",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "add",
           "Validators": [
@@ -2998,7 +2998,7 @@
         {
           "QName": ":equation",
           "PropertyName": "Equation",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "equation",
           "Validators": [
@@ -3018,7 +3018,7 @@
         {
           "QName": ":rsquared",
           "PropertyName": "RSquared",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "rsquared",
           "Validators": [
@@ -3098,7 +3098,7 @@
         {
           "QName": ":rAngAx",
           "PropertyName": "RightAngleAxes",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.Boolean\u003E",
           "Version": "Office2013",
           "PropertyComments": "rAngAx",
           "Validators": [
@@ -6660,7 +6660,7 @@
         {
           "QName": ":symbol",
           "PropertyName": "Symbol",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle.MarkerStyle\u003E",
           "Version": "Office2013",
           "PropertyComments": "symbol",
           "Validators": [

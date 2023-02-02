@@ -439,7 +439,7 @@
         {
           "QName": ":pivotShowAs",
           "PropertyName": "PivotShowAs",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.PivotShowAsValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotShowAsValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "pivotShowAs"
         },
@@ -543,7 +543,7 @@
         {
           "QName": ":allocationMethod",
           "PropertyName": "AllocationMethod",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.AllocationMethodValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "allocationMethod"
         },
@@ -925,7 +925,7 @@
         {
           "QName": ":iconSet",
           "PropertyName": "IconSet",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSetTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "iconSet",
           "Validators": [
@@ -1052,7 +1052,7 @@
         {
           "QName": ":iconSet",
           "PropertyName": "IconSet",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSetTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "iconSet"
         },
@@ -1141,7 +1141,7 @@
         {
           "QName": ":objectType",
           "PropertyName": "ObjectType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.ObjectTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ObjectTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "objectType",
           "Validators": [
@@ -1161,7 +1161,7 @@
         {
           "QName": ":checked",
           "PropertyName": "Checked",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.CheckedValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CheckedValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "checked",
           "Validators": [
@@ -1195,7 +1195,7 @@
         {
           "QName": ":dropStyle",
           "PropertyName": "DropStyle",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.DropStyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DropStyleValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "dropStyle",
           "Validators": [
@@ -1334,7 +1334,7 @@
         {
           "QName": ":seltype",
           "PropertyName": "SelectionType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SelectionTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SelectionTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "seltype",
           "Validators": [
@@ -1354,14 +1354,14 @@
         {
           "QName": ":textHAlign",
           "PropertyName": "TextHorizontalAlign",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.TextHorizontalAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.TextHorizontalAlignmentValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "textHAlign"
         },
         {
           "QName": ":textVAlign",
           "PropertyName": "TextVerticalAlign",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.TextVerticalAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.TextVerticalAlignmentValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "textVAlign"
         },
@@ -1382,7 +1382,7 @@
         {
           "QName": ":editVal",
           "PropertyName": "EditVal",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.EditValidationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.EditValidationValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "editVal",
           "Validators": [
@@ -2090,7 +2090,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SparklineTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "type"
         },
@@ -2104,7 +2104,7 @@
         {
           "QName": ":displayEmptyCellsAs",
           "PropertyName": "DisplayEmptyCellsAs",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DisplayBlanksAsValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "displayEmptyCellsAs"
         },
@@ -2167,14 +2167,14 @@
         {
           "QName": ":minAxisType",
           "PropertyName": "MinAxisType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SparklineAxisMinMaxValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "minAxisType"
         },
         {
           "QName": ":maxAxisType",
           "PropertyName": "MaxAxisType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SparklineAxisMinMaxValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "maxAxisType"
         },
@@ -3013,7 +3013,7 @@
         {
           "QName": ":direction",
           "PropertyName": "Direction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.DataBarDirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataBarDirectionValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "direction"
         },
@@ -3034,7 +3034,7 @@
         {
           "QName": ":axisPosition",
           "PropertyName": "AxisPosition",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.DataBarAxisPositionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataBarAxisPositionValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "axisPosition"
         }
@@ -3130,7 +3130,7 @@
         {
           "QName": ":iconSet",
           "PropertyName": "IconSetTypes",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSetTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "iconSet"
         },
@@ -3312,7 +3312,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObjectTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ConditionalFormattingValueObjectTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "type",
           "Validators": [
@@ -3373,7 +3373,7 @@
         {
           "QName": ":iconSet",
           "PropertyName": "IconSet",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSetTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "iconSet",
           "Validators": [
@@ -3750,7 +3750,7 @@
         {
           "QName": ":allocationMethod",
           "PropertyName": "AllocationMethod",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.AllocationMethodValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "allocationMethod"
         },
@@ -3810,7 +3810,7 @@
         {
           "QName": ":valueType",
           "PropertyName": "ValueType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.PivotEditValueTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotEditValueTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "valueType",
           "Validators": [
@@ -4070,7 +4070,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SlicerStyleTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SlicerStyleTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "type",
           "Validators": [
@@ -4543,7 +4543,7 @@
         {
           "QName": ":sortOrder",
           "PropertyName": "SortOrder",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.TabularSlicerCacheSortOrderValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "sortOrder"
         },
@@ -4564,7 +4564,7 @@
         {
           "QName": ":crossFilter",
           "PropertyName": "CrossFilter",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SlicerCacheCrossFilterValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "crossFilter"
         }
@@ -4811,14 +4811,14 @@
         {
           "QName": ":sortOrder",
           "PropertyName": "SortOrder",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSortOrderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.OlapSlicerCacheSortOrderValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "sortOrder"
         },
         {
           "QName": ":crossFilter",
           "PropertyName": "CrossFilter",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.SlicerCacheCrossFilterValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "crossFilter"
         }

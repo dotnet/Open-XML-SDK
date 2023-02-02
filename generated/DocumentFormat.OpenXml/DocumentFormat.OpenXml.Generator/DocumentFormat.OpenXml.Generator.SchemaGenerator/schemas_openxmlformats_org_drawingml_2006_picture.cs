@@ -27,9 +27,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.BlipFill" /> <c>&lt;pic:blipFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList" /> <c>&lt;pic14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Picture.OfficeArtExtensionList" /> <c>&lt;pic14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties" /> <c>&lt;pic:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle" /> <c>&lt;pic14:style></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Picture.ShapeStyle" /> <c>&lt;pic14:style></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties" /> <c>&lt;pic:nvPicPr></c></description></item>
     /// </list>
     /// </remark>
@@ -71,17 +71,17 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
             base.ConfigureMetadata(builder);
             builder.SetSchema("pic:pic");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Picture.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Picture.ShapeStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Pictures.BlipFill), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Picture.ShapeStyle), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Picture.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -131,9 +131,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <remark>
         /// xmlns:pic14 = http://schemas.microsoft.com/office/drawing/2010/picture
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle? ShapeStyle
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Picture.ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Picture.ShapeStyle>();
             set => SetElement(value);
         }
 
@@ -144,9 +144,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <remark>
         /// xmlns:pic14 = http://schemas.microsoft.com/office/drawing/2010/picture
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2010.Picture.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2010.Picture.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

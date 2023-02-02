@@ -7,17 +7,17 @@ using System.IO;
 using System.Xml;
 
 using A = DocumentFormat.OpenXml.Drawing;
-using A14 = DocumentFormat.OpenXml.Office2010.Drawing;
+using A14 = DocumentFormat.OpenXml.Office.Drawing.Y2010.Main;
 using Ap = DocumentFormat.OpenXml.ExtendedProperties;
 using C = DocumentFormat.OpenXml.Drawing.Charts;
-using C14 = DocumentFormat.OpenXml.Office2010.Drawing.Charts;
-using Cs = DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle;
+using C14 = DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart;
+using Cs = DocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle;
 using Dgm = DocumentFormat.OpenXml.Drawing.Diagrams;
-using Dsp = DocumentFormat.OpenXml.Office.Drawing;
+using Dsp = DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram;
 using S = DocumentFormat.OpenXml.Spreadsheet;
 using Vt = DocumentFormat.OpenXml.VariantTypes;
-using X14 = DocumentFormat.OpenXml.Office2010.Excel;
-using X15 = DocumentFormat.OpenXml.Office2013.Excel;
+using X14 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main;
+using X15 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
 using Xdr = DocumentFormat.OpenXml.Drawing.Spreadsheet;
 
 namespace DocumentFormat.OpenXml.Tests

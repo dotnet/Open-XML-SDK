@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.webextension+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/webextension";
-        private DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension? _rootElement;
+        private DocumentFormat.OpenXml.Office.WebExtensions.WebExtensions.Y2010.M11.WebExtension? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WebExtensionPart OpenXmlType
@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension;
+                _rootElement = value as DocumentFormat.OpenXml.Office.WebExtensions.WebExtensions.Y2010.M11.WebExtension;
             }
         }
 
@@ -57,13 +57,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension WebExtension
+        public DocumentFormat.OpenXml.Office.WebExtensions.WebExtensions.Y2010.M11.WebExtension WebExtension
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.WebExtensions.WebExtensions.Y2010.M11.WebExtension>();
                 }
 
                 return _rootElement!;

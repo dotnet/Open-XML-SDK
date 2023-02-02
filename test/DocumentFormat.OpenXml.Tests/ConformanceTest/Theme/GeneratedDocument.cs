@@ -8,8 +8,8 @@ using System.IO;
 using A = DocumentFormat.OpenXml.Drawing;
 using Ap = DocumentFormat.OpenXml.ExtendedProperties;
 using P = DocumentFormat.OpenXml.Presentation;
-using P14 = DocumentFormat.OpenXml.Office2010.PowerPoint;
-using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
+using P14 = DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main;
+using P15 = DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main;
 using Vt = DocumentFormat.OpenXml.VariantTypes;
 
 namespace DocumentFormat.OpenXml.Tests.ThemeClass

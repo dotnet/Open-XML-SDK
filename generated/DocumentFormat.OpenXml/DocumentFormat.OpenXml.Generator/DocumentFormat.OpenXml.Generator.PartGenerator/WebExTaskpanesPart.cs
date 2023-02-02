@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.webextensiontaskpanes+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes";
-        private DocumentFormat.OpenXml.Office2013.WebExtentionPane.Taskpanes? _rootElement;
+        private DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.Taskpanes? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WebExTaskpanesPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office2013.WebExtentionPane.Taskpanes;
+                _rootElement = value as DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.Taskpanes;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2013.WebExtentionPane.Taskpanes Taskpanes
+        public DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.Taskpanes Taskpanes
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2013.WebExtentionPane.Taskpanes>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11.Taskpanes>();
                 }
 
                 return _rootElement!;

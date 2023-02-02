@@ -7,11 +7,11 @@ using System.IO;
 
 using A = DocumentFormat.OpenXml.Drawing;
 using Ap = DocumentFormat.OpenXml.ExtendedProperties;
-using Thm15 = DocumentFormat.OpenXml.Office2013.Theme;
+using Thm15 = DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main;
 using Vt = DocumentFormat.OpenXml.VariantTypes;
-using X14 = DocumentFormat.OpenXml.Office2010.Excel;
-using X15 = DocumentFormat.OpenXml.Office2013.Excel;
-using X15ac = DocumentFormat.OpenXml.Office2013.ExcelAc;
+using X14 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main;
+using X15 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
+using X15ac = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac;
 
 namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
 {

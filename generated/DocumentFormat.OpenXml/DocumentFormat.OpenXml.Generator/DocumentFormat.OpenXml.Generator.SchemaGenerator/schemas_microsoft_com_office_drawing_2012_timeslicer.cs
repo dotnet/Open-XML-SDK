@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
+namespace DocumentFormat.OpenXml.Office.Drawing.Y2012.TimeSlicer
 {
     /// <summary>
     /// <para>Defines the TimeSlicer Class.</para>
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList" /> <c>&lt;tsle:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2012.TimeSlicer.OfficeArtExtensionList" /> <c>&lt;tsle:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class TimeSlicer : TypedOpenXmlCompositeElement
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
             base.ConfigureMetadata(builder);
             builder.SetSchema("tsle:timeslicer");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2012.TimeSlicer.OfficeArtExtensionList>();
             builder.AddElement<TimeSlicer>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2012.TimeSlicer.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -95,9 +95,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
         /// <remark>
         /// xmlns:tsle = http://schemas.microsoft.com/office/drawing/2012/timeslicer
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office.Drawing.Y2012.TimeSlicer.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2012.TimeSlicer.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

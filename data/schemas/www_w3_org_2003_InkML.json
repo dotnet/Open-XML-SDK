@@ -164,13 +164,13 @@
         {
           "QName": ":apply",
           "PropertyName": "Apply",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.TableApplyValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.InkML.TableApplyValues\u003E",
           "PropertyComments": "apply"
         },
         {
           "QName": ":interpolation",
           "PropertyName": "Interpolation",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.TableInterpolationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.InkML.TableInterpolationValues\u003E",
           "PropertyComments": "interpolation"
         }
       ]
@@ -205,7 +205,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.MappingTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.InkML.MappingTypeValues\u003E",
           "PropertyComments": "type"
         },
         {
@@ -323,7 +323,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.ChannelDataTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.InkML.ChannelDataTypeValues\u003E",
           "PropertyComments": "type"
         },
         {
@@ -361,7 +361,7 @@
         {
           "QName": ":orientation",
           "PropertyName": "Orientation",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.ChannelValueOrientationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.InkML.ChannelValueOrientationValues\u003E",
           "PropertyComments": "orientation"
         },
         {
@@ -1559,13 +1559,13 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.TraceTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.InkML.TraceTypeValues\u003E",
           "PropertyComments": "type"
         },
         {
           "QName": ":continuation",
           "PropertyName": "Continuation",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.InkML.TraceContinuationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Y2003.InkML.TraceContinuationValues\u003E",
           "PropertyComments": "continuation"
         },
         {

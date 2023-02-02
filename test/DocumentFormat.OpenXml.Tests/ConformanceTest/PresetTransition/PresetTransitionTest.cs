@@ -6,7 +6,7 @@ using DocumentFormat.OpenXml.Tests.PresetTransitionClass;
 using Xunit;
 using Xunit.Abstractions;
 
-using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
+using P15 = DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main;
 
 namespace DocumentFormat.OpenXml.Tests.PresetTransition
 {
