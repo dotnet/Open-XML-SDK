@@ -31,16 +31,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed obsoleted methods from 2.x
 - Removed mutable properties on OpenXmlAttribute and marked as `readonly`
 
-### Fixed
-- Fixed incorrect file extensions for vbaProject files (#1292)
-
 ## [2.20.0]
 
 ### Changed
 - Marked all obsoleted APIs as compile as error. These will be removed in the next release
-
-### Fixed
-- Fixed incorrect file extensions for vbaProject files (#1292)
 
 ## [2.19.0] - 2022-12-14
 
@@ -380,3 +374,36 @@ Thanks to the following for their contributions:
 ## [2.6.0] - 2015-06-29
 ### Added
 - Incorporated a replacement `System.IO.Packaging` that fixes some serious (but exceptional) bugs found in the WindowsBase implementation
+
+[3.0.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.20.0...v3.0.0
+[2.20.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.19.0...v2.20.0
+[2.19.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.18.0...v2.19.0
+[2.18.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.17.1...v2.18.0
+[2.17.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.17.0...v2.17.1
+[2.17.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.16.0...v2.17.0
+[2.16.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.15.0...v2.16.0
+[2.15.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.14.0...v2.15.0
+[2.14.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.14.0-beta1...v2.14.0
+[2.14.0-beta1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.13.1...v2.14.0-beta1
+[2.13.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.13.0...v2.13.1
+[2.13.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.13.0...v2.13.0
+[2.13.0-beta2]: https://github.com/dotnet/Open-XML-SDK/compare/v2.13.0-beta2...v2.13.0-beta2
+[2.13.0-beta1]: https://github.com/dotnet/Open-XML-SDK/compare/2.12.3...v2.13.0-beta1
+[2.12.3]: https://github.com/dotnet/Open-XML-SDK/compare/v2.12.3...v2.12.1
+[2.12.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.12.1...v2.12.0
+[2.12.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.12.0...v2.11.3
+[2.11.3]: https://github.com/dotnet/Open-XML-SDK/compare/v2.11.3...v2.11.2
+[2.11.2]: https://github.com/dotnet/Open-XML-SDK/compare/v2.11.2...v2.11.1
+[2.11.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.11.1...v2.11.0
+[2.11.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.11.0...v2.10.1
+[2.10.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.10.1...v2.10.0
+[2.10.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.10.0...v2.9.1
+[2.9.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.9.1...v2.9.0
+[2.9.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.9.0...v2.8.1
+[2.8.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.8.1...v2.8.0
+[2.8.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.8.0...v2.7.2
+[2.7.2]: https://github.com/dotnet/Open-XML-SDK/compare/v2.7.1...v2.7.2
+[2.7.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.7.0...v2.7.1
+[2.7.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.6.1...v2.7.0
+[2.6.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.6.0...v2.6.1
+[2.6.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.5.0...v2.6.0
