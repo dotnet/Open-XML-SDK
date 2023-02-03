@@ -3,6 +3,9 @@
 
 using DocumentFormat.OpenXml.Features;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
@@ -13,13 +16,17 @@ internal partial class PackageFeatureCollection :
     IApplicationTypeFeature,
     IDisposableFeature,
     IContainerDisposableFeature,
-    ISaveFeature
+    ISaveFeature,
+    IDataPartsFeature,
+    IPartsFeature
 {
     private readonly IFeatureCollection? _parent;
 
     private Action<OpenXmlPartContainer>? _save;
     private Action? _disposable;
     private FeatureContainer _container;
+    private LinkedList<DataPart>? _dataParts;
+    private Dictionary<Uri, OpenXmlPart>? _parts;
 
     public PackageFeatureCollection(OpenXmlPackage package, IFeatureCollection? parent)
     {
@@ -65,10 +72,7 @@ internal partial class PackageFeatureCollection :
     [KnownFeature(typeof(IPartUriFeature), Factory = nameof(CreatePartUri))]
     [KnownFeature(typeof(AnnotationsFeature))]
     [KnownFeature(typeof(IPartExtensionFeature), typeof(PartExtensionProvider))]
-    [KnownFeature(typeof(IChildRelationshipPartFeatures), Factory = nameof(CreateChildParts))]
     private partial T? GetInternal<T>();
-
-    private IChildRelationshipPartFeatures CreateChildParts() => new PartDictionary(this);
 
     private IPartUriFeature CreatePartUri() => new PackagePartUriHelper(this.GetRequired<IPackageFeature>().Package);
 
@@ -86,4 +90,56 @@ internal partial class PackageFeatureCollection :
 
     void ISaveFeature.Register(Action<OpenXmlPartContainer> container)
         => _save += container;
+
+    bool IDataPartsFeature.TryGetDataPart(Uri uri, [MaybeNullWhen(false)] out DataPart dataPart)
+    {
+        if (_dataParts is not null)
+        {
+            foreach (var part in _dataParts)
+            {
+                if (part.Uri == uri)
+                {
+                    dataPart = part;
+                    return true;
+                }
+            }
+        }
+
+        dataPart = null;
+        return false;
+    }
+
+    IEnumerable<DataPart> IDataPartsFeature.Parts => _dataParts ?? Enumerable.Empty<DataPart>();
+
+    int IDataPartsFeature.Count => _dataParts?.Count ?? 0;
+
+    void IDataPartsFeature.Add(DataPart dataPart)
+        => (_dataParts ??= new()).AddLast(dataPart);
+
+    bool IPartsFeature.TryGetPart(Uri uri, [MaybeNullWhen(false)] out OpenXmlPart part)
+    {
+        if (_parts is null)
+        {
+            part = null;
+            return false;
+        }
+
+        return _parts.TryGetValue(uri, out part);
+    }
+
+    void IPartsFeature.Add(Uri uri, OpenXmlPart part)
+        => (_parts ??= new()).Add(uri, part);
+
+    bool IDataPartsFeature.Remove(DataPart dataPart)
+    {
+        if (_dataParts is null)
+        {
+            return false;
+        }
+
+        return _dataParts.Remove(dataPart);
+    }
+
+    bool IPartsFeature.Contains(Uri uri)
+        => _parts?.ContainsKey(uri) ?? false;
 }

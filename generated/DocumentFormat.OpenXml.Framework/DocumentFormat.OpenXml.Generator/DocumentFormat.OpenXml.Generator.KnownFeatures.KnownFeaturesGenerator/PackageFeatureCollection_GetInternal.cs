@@ -12,7 +12,6 @@ internal partial class PackageFeatureCollection
     private global::DocumentFormat.OpenXml.Features.IPartUriFeature? _CreatePartUri;
     private global::DocumentFormat.OpenXml.Features.AnnotationsFeature? _AnnotationsFeature;
     private global::DocumentFormat.OpenXml.Features.IPartExtensionFeature? _PartExtensionProvider;
-    private global::DocumentFormat.OpenXml.Features.IChildRelationshipPartFeatures? _CreateChildParts;
 
     private partial T? GetInternal<T>()
     {
@@ -44,16 +43,6 @@ internal partial class PackageFeatureCollection
             }
 
             return (T)_PartExtensionProvider;
-        }
-
-        if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IChildRelationshipPartFeatures))
-        {
-            if (_CreateChildParts is null)
-            {
-                _CreateChildParts = CreateChildParts();
-            }
-
-            return (T)_CreateChildParts;
         }
 
         return default;

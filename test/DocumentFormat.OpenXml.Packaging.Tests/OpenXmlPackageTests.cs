@@ -2,9 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Presentation;
-using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
-using NSubstitute.ExceptionExtensions;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -310,10 +308,10 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         [Fact]
         public void ThrowWithMissingCalcChainPart()
         {
-            Stream stmSpd = GetStream(TestFiles.MissingCalcChainPart, false);
-            InvalidOperationException exception = Assert.Throws<InvalidOperationException>(() => { SpreadsheetDocument.Open(stmSpd, false); });
+            using var stmSpd = GetStream(TestFiles.MissingCalcChainPart, false);
+            using var doc = SpreadsheetDocument.Open(stmSpd, false);
 
-            Assert.NotNull(exception);
+            Assert.Throws<InvalidOperationException>(() => doc.GetAllParts().ToList());
         }
 
         // When opening a workbook (SpreadsheetDocument.Open) with a missing calcChain part and OpenSettings

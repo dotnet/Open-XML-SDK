@@ -8,6 +8,9 @@ namespace DocumentFormat.OpenXml.Packaging.Builder;
 
 internal static class SavePackageExtensions
 {
+    public static void EnableSavePackage(this OpenXmlPackage package)
+        => package.Features.EnableSavePackage();
+
     internal static IFeatureCollection EnableSavePackage(this IFeatureCollection features)
     {
         var feature = features.GetRequired<IPackageFeature>();

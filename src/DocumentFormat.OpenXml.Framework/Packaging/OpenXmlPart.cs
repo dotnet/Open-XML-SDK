@@ -59,9 +59,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
             // add the _uri to be reserved
             Features.GetRequired<IPartUriFeature>().ReserveUri(ContentType, Uri);
-
-            // load recursively
-            LoadReferencedPartsAndRelationships(_openXmlPackage, this);
         }
 
         internal void CreateInternal(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, string contentType, string? targetExt)
@@ -514,11 +511,8 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             OpenXmlPackage.Package.DeletePart(Uri);
 
-            ChildrenRelationshipParts.Clear();
-            ReferenceRelationshipList.Clear();
             _openXmlPackage = null;
 
-            // this._ownerPart = null;
             if (InternalRootElement is not null)
             {
                 InternalRootElement.OpenXmlPart = null;

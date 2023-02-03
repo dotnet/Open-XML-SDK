@@ -84,8 +84,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 .WithAutosave(autoSave)
                 .WithStorage(path, PackageOpenMode.Create)
                 .AddAction(p => p.DocumentType = type)
-                .InitializePackage()
-                .DefaultInitialize();
+                .UseDefaultBehavior();
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the IO stream.
@@ -101,8 +100,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 .WithAutosave(autoSave)
                 .WithStorage(stream, PackageOpenMode.Create)
                 .AddAction(p => p.DocumentType = type)
-                .InitializePackage()
-                .DefaultInitialize();
+                .UseDefaultBehavior();
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the specified package.
@@ -118,8 +116,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 .WithAutosave(autoSave)
                 .WithStorage(package)
                 .AddAction(p => p.DocumentType = type)
-                .InitializePackage()
-                .DefaultInitialize();
+                .UseDefaultBehavior();
 
         /// <summary>
         /// Creates an editable PresentationDocument from a template, opened on
@@ -211,8 +208,7 @@ namespace DocumentFormat.OpenXml.Packaging
             => new PresentationDocument()
                 .WithSettings(openSettings)
                 .WithStorage(path, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read)
-                .InitializePackage()
-                .DefaultInitialize();
+                .UseDefaultBehavior();
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the IO stream.
@@ -229,8 +225,7 @@ namespace DocumentFormat.OpenXml.Packaging
             => new PresentationDocument()
                 .WithSettings(openSettings)
                 .WithStorage(stream, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read)
-                .InitializePackage()
-                .DefaultInitialize();
+                .UseDefaultBehavior();
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the specified package.
@@ -246,8 +241,7 @@ namespace DocumentFormat.OpenXml.Packaging
             => new PresentationDocument()
                 .WithSettings(openSettings)
                 .WithStorage(package)
-                .InitializePackage()
-                .DefaultInitialize();
+                .UseDefaultBehavior();
 
         /// <summary>
         /// Changes the document type.
